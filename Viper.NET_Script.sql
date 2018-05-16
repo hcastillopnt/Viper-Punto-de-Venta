@@ -173,7 +173,7 @@ INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Descrip
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (38, 159, 5, N'05', N'006', N'Castaños', N'0001', N'Castaños', N'25892', N'12945', N'12947', N'6858');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (39, 159, 5, N'05', N'007', N'Cuatro Ciénegas', N'0001', N'Cuatro Ciénegas de Carranza', N'13013', N'6565', N'6448', N'3605');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (40, 159, 5, N'05', N'008', N'Escobedo', N'0001', N'Escobedo', N'2901', N'1475', N'1426', N'810');
-INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (41, 159, 5, N'05', N'009', N'Francisco I. Madero', N'0001', N'Francisco I. Madero (Chávez);', N'55676', N'27739', N'27937', N'13976');
+INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (41, 159, 5, N'05', N'009', N'Francisco I. Madero', N'0001', N'Francisco I. Madero (Chávez)', N'55676', N'27739', N'27937', N'13976');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (42, 159, 5, N'05', N'010', N'Frontera', N'0001', N'Frontera', N'75215', N'37561', N'37654', N'19468');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (43, 159, 5, N'05', N'011', N'General Cepeda', N'0001', N'General Cepeda', N'11682', N'6071', N'5611', N'3103');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (44, 159, 5, N'05', N'012', N'Guerrero', N'0001', N'Guerrero', N'2091', N'1115', N'976', N'619');
@@ -2089,7 +2089,7 @@ INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Descrip
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1954, 159, 26, N'26', N'065', N'Tubutama', N'0001', N'Tubutama', N'1735', N'904', N'831', N'511');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1955, 159, 26, N'26', N'066', N'Ures', N'0001', N'Heroica Ciudad de Ures', N'9185', N'4711', N'4474', N'2741');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1956, 159, 26, N'26', N'067', N'Villa Hidal', N'0001', N'Villa Hidal', N'1738', N'893', N'845', N'537');
-INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1957, 159, 26, N'26', N'068', N'Villa Pesqueira', N'0001', N'Villa Pesqueira (Mátape);', N'1254', N'688', N'566', N'390');
+INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1957, 159, 26, N'26', N'068', N'Villa Pesqueira', N'0001', N'Villa Pesqueira (Mátape)', N'1254', N'688', N'566', N'390');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1958, 159, 26, N'26', N'069', N'Yécora', N'0001', N'Yécora', N'6046', N'3064', N'2982', N'1661');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1959, 159, 26, N'26', N'070', N'General Plutarco Elías Calles', N'0001', N'Sonoita', N'15652', N'8104', N'7548', N'4040');
 INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Description, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (1960, 159, 26, N'26', N'071', N'Benito Juárez', N'0001', N'Villa Juárez', N'22009', N'11088', N'10921', N'5643');
@@ -2594,3 +2594,470 @@ INSERT INTO City (Id, CountryRegionId, StateProvinceId, CveEnt, CveCity, Descrip
 UPDATE StateProvince SET Description = UPPER(Description), Abrev = UPPER(Abrev), NameCab = UPPER(NameCab) WHERE CountryRegionId = 159;
 UPDATE StateProvince SET Abrev = REPLACE(Abrev, '.', '') WHERE CountryRegionId = 159;
 UPDATE City SET Description = UPPER(Description), NameCab = UPPER(NameCab) WHERE CountryRegionId = 159;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `RoadType`
+--
+
+CREATE TABLE `RoadType`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+	`Name` varchar(100) NOT NULL,
+    
+    -- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL
+    -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los tipos de Vialidad';
+
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('ANDADOR', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('AUTOPISTA', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('AVENIDA (AV.)', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('BOULEVARD (BLVD.)', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('CALLE', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('CALLEJON (CJON.)', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('CALZADA (CALZ.)', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('CAMINO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('CARRETERA (CARR.)', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('CERRADA (CDA) O PRIVADA (PRIV.)', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO RoadType (Name, CreatedDate, CreateBy) VALUES('PASAJE', CURRENT_TIMESTAMP, 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `AddressType`
+--
+
+CREATE TABLE `AddressType`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+	`Name` varchar(30) NOT NULL,
+	
+    -- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL
+    -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los tipos de direccion';
+
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('BODEGA', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('CASA HABITACION', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('ESCUELA Y BIBLIOTECA', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('HOSPITALES Y ATENCION MEDICA', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('INDUSTRIAS, FABRICAS Y TALLERES', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('INFRAE. TURISTICA Y DE ESPARCIMIENTO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('LOCAL COMERCIAL', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('LOTE BALDIO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('OFICINA', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO AddressType (Name, CreatedDate, CreateBy) VALUES('TERRENOS AGROPECUARIOS', CURRENT_TIMESTAMP, 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Address`
+--
+
+CREATE TABLE `Address`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+	`RoadTypeId` INT NOT NULL,
+    `AddressTypeId` INT NOT NULL,
+	`AddressLine1` varchar(20) NOT NULL,
+	`AddressLine2` varchar(20) NOT NULL,
+    `CountryRegionId` INT NOT NULL,
+    `StateProvinceId` INT NOT NULL,
+    `CityId` INT NOT NULL,
+    `PostalCode` VARCHAR(5) NULL,
+    
+    -- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+    
+    FOREIGN KEY (RoadTypeId) REFERENCES RoadType(Id),
+    FOREIGN KEY (AddressTypeId) REFERENCES AddressType(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las direcciones de las sucursales/empresas';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `AddressSAT`
+--
+
+CREATE TABLE `AddressSAT`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+	`RoadTypeId` INT NOT NULL,
+    `AddressTypeId` INT NOT NULL,
+	`AddressLine1` varchar(20) NOT NULL,
+	`AddressLine2` varchar(20) NOT NULL,
+    `CountryRegionId` INT NOT NULL,
+    `StateProvinceId` INT NOT NULL,
+    `CityId` INT NOT NULL,
+    `PostalCode` VARCHAR(5) NULL,
+    
+    -- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+    
+	FOREIGN KEY (RoadTypeId) REFERENCES RoadType(Id),
+    FOREIGN KEY (AddressTypeId) REFERENCES AddressType(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el domicilio fiscal registrado ante el SAT';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Gender`
+--
+
+CREATE TABLE `Gender` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Abrev` varchar(1) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los departamentos disponibles';
+
+INSERT INTO Gender (Abrev, Name, CreatedDate, CreateBy) VALUES('M', 'MASCULINO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO Gender (Abrev, Name, CreatedDate, CreateBy) VALUES('F', 'FEMENINO', CURRENT_TIMESTAMP, 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `MaritalStatus`
+--
+
+CREATE TABLE `MaritalStatus` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` varchar(30) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los estados civiles disponibles';
+
+INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('SOLTERO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('CASADO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('VIUDO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO maritalstatus (Name, CreatedDate, CreateBy) VALUES('DIVORCIADO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('SEPARADO', CURRENT_TIMESTAMP, 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Bank`
+--
+
+CREATE TABLE `Bank` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` varchar(30) NOT NULL,
+  `Logo` longblob NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los bancos';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `AccountBank`
+--
+
+CREATE TABLE `AccountBank` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Account` varchar(30) NOT NULL,
+  `BankBranch` varchar(30) NULL,
+  `Key` int(11) NOT NULL,
+  `BankId` int(11) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+    FOREIGN KEY (BankId) REFERENCES Bank(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las cuentas bancarias de la compañia';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `RegimenFiscal`
+--
+
+CREATE TABLE `RegimenFiscal` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Key` varchar(5) NOT NULL,
+  `Description` varchar(30) NULL,
+  `Fisica` tinyint NOT NULL,
+  `Moral` tinyint NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los regimenes fiscales';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Company`
+--
+
+CREATE TABLE `Company` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `CompanyName` varchar(30) NOT NULL,
+  `CompanyKey` varchar(30) NULL,
+  `AddressId` int(11) NOT NULL,
+  `PhoneNumber` varchar(10) NULL,
+  `CellphoneNumber` varchar(13) NULL,
+  `EmailAddress` varchar(30) NULL,
+  `FiscalName` varchar(30) NULL,
+  `AddressSATId` int(11) NOT NULL,
+  `RegimenFiscalId` int(11) NOT NULL,
+  `AccountBankId` int(11) NOT NULL,
+  `RFC` varchar(13) NOT NULL,
+  `CURP` varchar(25) NOT NULL,
+  `ApiKey` varchar(100) NULL,
+  `BusinessActivity` varchar(30) NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+	FOREIGN KEY (AddressId) REFERENCES Address(Id),
+    FOREIGN KEY (AddressSATId) REFERENCES AddressSAT(Id),
+    FOREIGN KEY (RegimenFiscalId) REFERENCES RegimenFiscal(Id),
+    FOREIGN KEY (AccountBankId) REFERENCES AccountBank(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los datos fiscales de un cliente';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Employee`
+--
+
+CREATE TABLE `Employee` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `EmployeeIDNumber` VARCHAR(100) NOT NULL,
+  `IS` varchar(5) NOT NULL,
+  `FirstName` varchar(30) NOT NULL,
+  `MiddleName` varchar(30) NOT NULL,
+  `LastName` varchar(30) NOT NULL,
+  `FullName` varchar(50) NOT NULL,
+  `PhoneNumber` varchar(10) NULL,
+  `CellphoneNumber` varchar(13) NULL,
+  `LoginID` VARCHAR(256) NOT NULL,
+  `JobTitle` VARCHAR(50) NOT NULL,
+  `BirthDate` VARCHAR(10) NOT NULL,
+  `MaritalStatusId` INT NOT NULL COMMENT 'Llave foranea de Estado Civil',
+  `GenderId` INT NOT NULL COMMENT 'Llave foranea de Genero',
+  `RFC` varchar(13) NULL,
+  `CURP` varchar(18) NULL,
+  `NSS` varchar(16) NULL,
+  `ProfilePhoto` longblob NULL,
+  `FingerPrint` longblob NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+  FOREIGN KEY (MaritalStatusId) REFERENCES MaritalStatus(Id),
+  FOREIGN KEY (GenderId) REFERENCES Gender(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los usuarios (empleados) registrados';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Site`
+--
+
+CREATE TABLE `Site`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    `CompanyId` INT NOT NULL,
+	`Name` varchar(100) NOT NULL,
+    `UniquePhysicalID` varchar(100) NOT NULL,
+    
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+  
+    FOREIGN KEY (CompanyId) REFERENCES Company(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las sucursales';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Role`
+--
+CREATE TABLE `Role` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` VARCHAR(50) NOT NULL,
+  `Description` VARCHAR(100) NOT NULL,
+  
+  	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL
+    -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los roles de la aplicacion';
+
+INSERT INTO Role (Name, Description, CreatedDate, CreateBy) VALUES('ADMINISTRADOR', 'God Mode allows us, among other things to control users, products, managae credentials, ...', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO Role (Name, Description, CreatedDate, CreateBy) VALUES('BASIC', 'The employee can make sales, consult reports, make cash cuts', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO Role (Name, Description, CreatedDate, CreateBy) VALUES('DOCTOR', 'The employee can access module Medical', CURRENT_TIMESTAMP, 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `UserRole`
+--
+CREATE TABLE `UserRole` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `EmployeeId` INT NOT NULL,
+  `RoleId` INT NOT NULL,
+  
+    	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+  
+  FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
+  FOREIGN KEY (RoleId) REFERENCES Role(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la asignacion de roles a cada entidad';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Shift`
+--
+
+CREATE TABLE `Shift`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+	`Name` varchar(50) NOT NULL,
+    `StartTime` TIME NOT NULL,
+    `EndTime` TIME NOT NULL,
+    
+        	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL
+    -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los turnos que se manejan';
+
+INSERT INTO Shift(Name, StartTime, EndTime, CreatedDate, CreateBy) VALUES('DAY', '07:00:00', '15:00:00',CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO Shift(Name, StartTime, EndTime, CreatedDate, CreateBy) VALUES('EVENING', '15:00:00', '23:00:00',CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO Shift(Name, StartTime, EndTime, CreatedDate, CreateBy) VALUES('NIGHT', '23:00:00', '07:00:00',CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO Shift(Name, StartTime, EndTime, CreatedDate, CreateBy) VALUES('ALL DAY', '07:00:00', '23:00:00', CURRENT_TIMESTAMP, 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `EmployeeDepartmentHistory`
+--
+
+CREATE TABLE `EmployeeDepartmentHistory`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    `EmployeeId` INT NOT NULL,
+    `SiteId` INT NOT NULL,
+    `ShiftId` INT NOT NULL,
+    `StartDate` DATE NOT NULL,
+    `EndDate` DATE NULL,
+    `ModifiedDate` DATETIME NOT NULL,
+    FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
+    FOREIGN KEY (SiteId) REFERENCES Site(Id),
+    FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar datos';
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Membership`
+--
+
+CREATE TABLE `Membership` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `EmployeeId` INT NOT NULL,
+  `Password` varchar(30) NOT NULL,
+  `PasswordSHA1` varchar(30) NOT NULL,
+  `PasswordTripleDES` varchar(30) NOT NULL,
+  `MobilePIN` varchar(50) NOT NULL,
+  `EmailAddress` varchar(50) NOT NULL,
+  `PasswordQuestion` varchar(100) NOT NULL,
+  `PasswordAnswer` varchar(100) NOT NULL,
+  `AccessFailed` INT NOT NULL,
+  `IsWelcome` tinyint(1) NOT NULL,
+  `IsApproved` tinyint(1) NOT NULL,
+  `IsActive` tinyint(1) NOT NULL,
+  `IsEnabled` tinyint(1) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+	FOREIGN KEY (EmployeeId) REFERENCES Employee(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la informacion de las credenciales de usuario';
+  
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `UserSite`
+--
+
+CREATE TABLE `UserSite` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `EmployeeId` int(11) NOT NULL,
+  `SiteId` int(11) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+  	FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
+    FOREIGN KEY (SiteId) REFERENCES Site(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la relacion de usuarios asignados en la compañia';
