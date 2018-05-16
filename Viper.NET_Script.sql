@@ -2966,6 +2966,46 @@ CREATE TABLE `UserRole` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla `Permission`
+--
+CREATE TABLE `Permission` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` VARCHAR(50) NOT NULL,
+  
+  
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL
+    -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los permisos que tiene el usuario';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `RolePermission`
+--
+CREATE TABLE `RolePermission` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `RoleId` INT NOT NULL,
+  `PermissionId` INT NOT NULL,
+  
+  
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+    
+	FOREIGN KEY (RoleId) REFERENCES Role(Id),
+	FOREIGN KEY (PermissionId) REFERENCES Permission(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la asignacion de permisos para el rol seleccionado';
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla `Shift`
 --
 
