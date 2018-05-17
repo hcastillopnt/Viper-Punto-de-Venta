@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inicio de Sesion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body style="background-image: url(../../img/1.jpg)";>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+    
+    <div class="mx-auto" style="width: 300px;">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="~/img/2.png" width="200px" class="img-responsive ">
+                </div>
+                <div class="mx-auto" style="width: 400px;">
+                    <div class="panel-body">
+                        <br>
+                       
+                            <div class="form-horizontal">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Usuario</label>
+                                <div class="input-group margin-bottom-sm">
+                                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                    <div class="RadAjaxPanel" id="txtEmailPanel" style="display: block;">
+                                        <input name="txtEmail" id="txtEmail" class="form-control" style="border-color:#ABC1DE;border-width:1px;border-style:Solid;text-transform: lowercase" type="text">
+                                    </div>
+                                    <span id="rfvEmail" style="color:Red;display:none;"></span>
+
+                                    <span id="revMail" style="color:Red;display:none;"></span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-horizontal">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Contraseña</label>
+                                <div class="input-group margin-bottom-sm">
+                                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                    <div class="RadAjaxPanel" id="txtPasswordPanel" style="display: block;">
+                                        <input name="txtPassword" id="txtPassword" class="form-control" onkeypress="KeyPress(event);" value="" style="border-color:#ABC1DE;border-width:1px;border-style:Solid;" type="password">
+                                    </div>
+                                    <span id="rfvPassword" style="color:Red;display:none;"></span>
+
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <!--
+                <div class="checkbox">
+                    <label class="">
+                        <input id="ChkRemember" type="checkbox" name="ChkRemember" />
+                        Remember me
+                    </label>
+                </div>
+                -->
+                                    <a id="link" href="javascript:__doPostBack('link','')">¿Olvidaste tu contraseña?</a>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group last">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <input name="btnValidar" value="" id="btnValidar" style="display:none" type="submit">
+                                    <input name="btnSubmit" value="Iniciar Sesión" class="btn btn-sm btn-success" type="button">
+                                    <input name="btnReset" value="Cancelar" id="btnReset" class="btn btn-sm btn-default" type="button">
+                                </div>
+                            </div>
+                            <br>
+                        
+                    <div class="panel-footer">
+                        <h6>
+                            <i class="fa fa-group"></i>
+                            Copyright | <span class="hidden-xs">Sistema de </span>Owaltek Innovation Solutions
+                            <br>
+                            <br>
+                        </h6>
+                        </div>
+                    </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+
+</body>
+</html>
