@@ -84,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
+    <Folder Include="images\drugstore_pictures\" />
+    <Folder Include="images\product_pictures\" />
+    <Folder Include="images\profile_pictures\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
