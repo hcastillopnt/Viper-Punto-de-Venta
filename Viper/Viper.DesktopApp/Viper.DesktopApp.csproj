@@ -45,17 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,6 +101,21 @@
       <Project>{7f90ddb8-c1d5-4561-ab68-e3fafd99f672}</Project>
       <Name>Viper.BusinessLogicLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\company_logo\farmanyl.jpg" />
+    <Content Include="images\icon\cerrar_sesion.png" />
+    <Content Include="images\icon\configuracion.png" />
+    <Content Include="images\icon\corte.png" />
+    <Content Include="images\icon\doctor.png" />
+    <Content Include="images\icon\estadisticas.png" />
+    <Content Include="images\icon\inventario.png" />
+    <Content Include="images\icon\medico.png" />
+    <Content Include="images\icon\procesos.png" />
+    <Content Include="images\icon\productos.png" />
+    <Content Include="images\icon\reloj.png" />
+    <Content Include="images\icon\reportes.png" />
+    <Content Include="images\icon\ventas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
