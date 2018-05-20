@@ -2757,7 +2757,7 @@ CREATE TABLE `MaritalStatus` (
 INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('SOLTERO', CURRENT_TIMESTAMP, 'HECP');
 INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('CASADO', CURRENT_TIMESTAMP, 'HECP');
 INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('VIUDO', CURRENT_TIMESTAMP, 'HECP');
-INSERT INTO maritalstatus (Name, CreatedDate, CreateBy) VALUES('DIVORCIADO', CURRENT_TIMESTAMP, 'HECP');
+INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('DIVORCIADO', CURRENT_TIMESTAMP, 'HECP');
 INSERT INTO MaritalStatus (Name, CreatedDate, CreateBy) VALUES('SEPARADO', CURRENT_TIMESTAMP, 'HECP');
 
 -- --------------------------------------------------------
@@ -2971,6 +2971,9 @@ CREATE TABLE `UserRole` (
 CREATE TABLE `Permission` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `Name` VARCHAR(50) NOT NULL,
+  `ControlName` VARCHAR(30) NOT NULL,
+  `ControlText` VARCHAR(30) NOT NULL,
+  `ControlImage` VARCHAR(100) NOT NULL,
   
   
 	-- START: AuditableEntity --
@@ -2980,6 +2983,16 @@ CREATE TABLE `Permission` (
     `ModifiedBy` VARCHAR(6) NULL
     -- END: AuditableEntity --
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los permisos que tiene el usuario';
+
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Ventas', 'btnVentas', 'F1 Ventas', 'ventas.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Productos', 'btnProductos', 'F2 Productos', 'productos.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Inventario', 'btnInventario', 'F3 Inventario', 'inventario.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Operaciones', 'btnOperaciones', 'F4 Operaciones', 'procesos.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Configuracion', 'btnConfiguracion', 'F5 Configuracion', 'configuracion.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Corte', 'btnCorte', 'F6 Corte', 'corte.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Reportes', 'btnReportes', 'F7 Reportes', 'reportes.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Estadisticas', 'btnEstadisticas', 'F8 estadisticas', 'ventas.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Medico', 'btnMedico', 'F9 Medico', 'doctor.png', CURRENT_TIMESTAMP(), 'HECP');
 
 -- --------------------------------------------------------
 
@@ -3002,6 +3015,16 @@ CREATE TABLE `RolePermission` (
 	FOREIGN KEY (RoleId) REFERENCES Role(Id),
 	FOREIGN KEY (PermissionId) REFERENCES Permission(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la asignacion de permisos para el rol seleccionado';
+
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 1, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 2, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 3, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 4, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 5, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 6, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 7, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 8, CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO RolePermission (RoleId, PermissionId, CreatedDate, CreateBy) VALUES(1, 9, CURRENT_TIMESTAMP(), 'HECP');
 
 -- --------------------------------------------------------
 
@@ -3032,6 +3055,22 @@ INSERT INTO Shift(Name, StartTime, EndTime, CreatedDate, CreateBy) VALUES('ALL D
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla `Department`
+--
+
+CREATE TABLE `Department`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+	`Name` varchar(100) NOT NULL,
+    `GroupName` varchar(100) NOT NULL,
+    `ModifiedDate` DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los departamentos de la compañia';
+
+INSERT INTO Department (Name, GroupName, ModifiedDate) VALUES('CEO', 'Executive General and Administration', CURRENT_TIMESTAMP());
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla `EmployeeDepartmentHistory`
 --
 
@@ -3039,15 +3078,17 @@ CREATE TABLE `EmployeeDepartmentHistory`
 (
 	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
     `EmployeeId` INT NOT NULL,
+    `DepartmentId` INT NOT NULL,
     `SiteId` INT NOT NULL,
     `ShiftId` INT NOT NULL,
     `StartDate` DATE NOT NULL,
     `EndDate` DATE NULL,
     `ModifiedDate` DATETIME NOT NULL,
     FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
+    FOREIGN KEY (DepartmentId) REFERENCES Department(Id),
     FOREIGN KEY (SiteId) REFERENCES Site(Id),
     FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar datos';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el horario, departamento e informacion de donde ha estado un empleado';
 -- --------------------------------------------------------
 
 --
