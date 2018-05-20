@@ -2992,7 +2992,7 @@ INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDat
 INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Corte', 'btnCorte', 'F6 Corte', 'corte.png', CURRENT_TIMESTAMP(), 'HECP');
 INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Reportes', 'btnReportes', 'F7 Reportes', 'reportes.png', CURRENT_TIMESTAMP(), 'HECP');
 INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Estadisticas', 'btnEstadisticas', 'F8 estadisticas', 'ventas.png', CURRENT_TIMESTAMP(), 'HECP');
-INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Medico', 'btnMedico', 'F9 Medico', 'doctor.png', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Medico', 'btnMedico', 'F9 Medico', 'medico.png', CURRENT_TIMESTAMP(), 'HECP');
 
 -- --------------------------------------------------------
 
