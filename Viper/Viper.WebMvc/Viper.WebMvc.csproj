@@ -215,6 +215,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\SistemaAutenticacion\Autenticacion.cshtml" />
     <Content Include="Views\SistemaAutenticacion\InicioSesion.cshtml" />
+    <Content Include="Views\SistemaAutenticacion\MenuOp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
