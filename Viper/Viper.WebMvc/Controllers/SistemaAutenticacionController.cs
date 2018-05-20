@@ -18,5 +18,10 @@ namespace Viper.WebMvc.Controllers
         {
             return View();
         }
+
+        public ActionResult MenuOp()
+        {
+            return View();
+        }
     }
 }
