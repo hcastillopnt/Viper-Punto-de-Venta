@@ -16,7 +16,7 @@ namespace Viper.DesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrarSucursales());
+            Application.Run(new frmLogin());
         }
     }
 }
