@@ -139,9 +139,10 @@
             this.panelRegistroSucursal.Controls.Add(this.tableLayoutPanel3);
             this.panelRegistroSucursal.Controls.Add(this.tableLayoutPanel19);
             this.panelRegistroSucursal.Controls.Add(this.tableLayoutPanel2);
-            this.panelRegistroSucursal.Location = new System.Drawing.Point(227, -1);
+            this.panelRegistroSucursal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRegistroSucursal.Location = new System.Drawing.Point(232, 0);
             this.panelRegistroSucursal.Name = "panelRegistroSucursal";
-            this.panelRegistroSucursal.Size = new System.Drawing.Size(912, 749);
+            this.panelRegistroSucursal.Size = new System.Drawing.Size(885, 749);
             this.panelRegistroSucursal.TabIndex = 32;
             // 
             // btnRegisterCompany
@@ -201,7 +202,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.31461F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.68539F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
             this.tableLayoutPanel11.Controls.Add(this.Representante, 3, 1);
             this.tableLayoutPanel11.Controls.Add(this.lblRepresentante, 2, 1);
             this.tableLayoutPanel11.Controls.Add(this.lblSucursal, 2, 0);
@@ -224,7 +225,7 @@
             // 
             // Representante
             // 
-            this.Representante.Location = new System.Drawing.Point(460, 32);
+            this.Representante.Location = new System.Drawing.Point(459, 32);
             this.Representante.Name = "Representante";
             this.Representante.Size = new System.Drawing.Size(233, 20);
             this.Representante.TabIndex = 1;
@@ -233,7 +234,7 @@
             // 
             this.lblRepresentante.AutoSize = true;
             this.lblRepresentante.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRepresentante.Location = new System.Drawing.Point(355, 29);
+            this.lblRepresentante.Location = new System.Drawing.Point(354, 29);
             this.lblRepresentante.Name = "lblRepresentante";
             this.lblRepresentante.Size = new System.Drawing.Size(99, 17);
             this.lblRepresentante.TabIndex = 4;
@@ -243,7 +244,7 @@
             // 
             this.lblSucursal.AutoSize = true;
             this.lblSucursal.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSucursal.Location = new System.Drawing.Point(355, 0);
+            this.lblSucursal.Location = new System.Drawing.Point(354, 0);
             this.lblSucursal.Name = "lblSucursal";
             this.lblSucursal.Size = new System.Drawing.Size(61, 17);
             this.lblSucursal.TabIndex = 4;
@@ -258,7 +259,7 @@
             // 
             // Sucursal
             // 
-            this.Sucursal.Location = new System.Drawing.Point(460, 3);
+            this.Sucursal.Location = new System.Drawing.Point(459, 3);
             this.Sucursal.Name = "Sucursal";
             this.Sucursal.Size = new System.Drawing.Size(233, 20);
             this.Sucursal.TabIndex = 1;
@@ -295,7 +296,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.84277F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.15723F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
             this.tableLayoutPanel8.Controls.Add(this.btnCambiarStatus, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.lblSucursalVigente, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.chkSucursalVigente, 1, 0);
@@ -312,7 +313,7 @@
             this.btnCambiarStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
             this.btnCambiarStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarStatus.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarStatus.Location = new System.Drawing.Point(169, 3);
+            this.btnCambiarStatus.Location = new System.Drawing.Point(168, 3);
             this.btnCambiarStatus.Name = "btnCambiarStatus";
             this.btnCambiarStatus.Size = new System.Drawing.Size(175, 19);
             this.btnCambiarStatus.TabIndex = 8;
@@ -356,7 +357,7 @@
             this.lblCelular.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.Location = new System.Drawing.Point(3, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(53, 17);
+            this.lblCelular.Size = new System.Drawing.Size(52, 17);
             this.lblCelular.TabIndex = 4;
             this.lblCelular.Text = "Celular:";
             // 
@@ -414,7 +415,7 @@
             // picSucursal
             // 
             this.picSucursal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picSucursal.Location = new System.Drawing.Point(747, 111);
+            this.picSucursal.Location = new System.Drawing.Point(737, 111);
             this.picSucursal.Name = "picSucursal";
             this.picSucursal.Size = new System.Drawing.Size(139, 91);
             this.picSucursal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -442,7 +443,7 @@
             this.lblTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(3, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(62, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(63, 17);
             this.lblTelefono.TabIndex = 4;
             this.lblTelefono.Text = "Teléfono:";
             // 
@@ -461,7 +462,7 @@
             this.tableLayoutPanel20.Controls.Add(this.rutaLogo, 1, 0);
             this.tableLayoutPanel20.Controls.Add(this.btnExaminar, 1, 1);
             this.tableLayoutPanel20.Controls.Add(this.lblRuta, 0, 0);
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(747, 208);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(737, 208);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 2;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -691,16 +692,18 @@
             // 
             // radPanel1
             // 
-            this.radPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
-            this.radPanel1.Location = new System.Drawing.Point(-5, -1);
+            this.radPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.radPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radPanel1.Location = new System.Drawing.Point(0, 0);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(232, 751);
+            this.radPanel1.Size = new System.Drawing.Size(232, 749);
             this.radPanel1.TabIndex = 33;
             // 
             // radPanel2
             // 
-            this.radPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
-            this.radPanel2.Location = new System.Drawing.Point(1123, -1);
+            this.radPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.radPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radPanel2.Location = new System.Drawing.Point(1117, 0);
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(253, 749);
             this.radPanel2.TabIndex = 34;

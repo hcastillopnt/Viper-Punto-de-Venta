@@ -122,27 +122,27 @@ namespace Viper.DesktopApp
                 // 
                 // pnlOption
                 // 
-                pnlOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-                pnlOption.Dock = System.Windows.Forms.DockStyle.Fill;
-                pnlOption.Location = new System.Drawing.Point(3, 3);
+                pnlOption.BackColor = Color.FromArgb(0,80,200);
+                pnlOption.Dock = DockStyle.Fill;
+                pnlOption.Location = new Point(3, 3);
                 pnlOption.Name = "pnl" + item.Name;
-                pnlOption.Size = new System.Drawing.Size(4, 47);
+                pnlOption.Size = new Size(4, 47);
                 tlpOption.TabIndex = 0;
                 // 
                 // btnOption
                 // 
-                btnOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-                btnOption.Dock = System.Windows.Forms.DockStyle.Fill;
+                btnOption.BackColor = Color.FromArgb(26,32,40);
+                btnOption.Dock = DockStyle.Fill;
                 btnOption.FlatAppearance.BorderSize = 0;
-                btnOption.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-                btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                btnOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                btnOption.ForeColor = System.Drawing.Color.White;
+                btnOption.FlatAppearance.MouseOverBackColor = Color.FromArgb(52,58,64);
+                btnOption.FlatStyle = FlatStyle.Flat;
+                btnOption.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                btnOption.ForeColor = Color.White;
                 btnOption.Image = Image.FromFile(folderPath + item.ControlImage);
-                btnOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-                btnOption.Location = new System.Drawing.Point(13, 3);
+                btnOption.ImageAlign = ContentAlignment.MiddleLeft;
+                btnOption.Location = new Point(13, 3);
                 btnOption.Name = item.ControlName;
-                btnOption.Size = new System.Drawing.Size(192, 47);
+                btnOption.Size = new Size(192, 47);
                 btnOption.TabIndex = i;
                 btnOption.Text = item.ControlText;
                 btnOption.UseVisualStyleBackColor = false;
@@ -152,16 +152,16 @@ namespace Viper.DesktopApp
                 // tlpOption
                 // 
                 tlpOption.ColumnCount = 2;
-                tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-                tlpOption.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
+                tlpOption.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5F));
+                tlpOption.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
                 tlpOption.Controls.Add(pnlOption, 0, 0);
                 tlpOption.Controls.Add(btnOption, 1, 0);
-                tlpOption.Dock = System.Windows.Forms.DockStyle.Fill;
-                tlpOption.Location = new System.Drawing.Point(3, 3);
+                tlpOption.Dock = DockStyle.Fill;
+                tlpOption.Location = new Point(3, 3);
                 tlpOption.Name = "tlpBoton" + item.Name;
                 tlpOption.RowCount = 1;
-                tlpOption.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-                tlpOption.Size = new System.Drawing.Size(208, 53);
+                tlpOption.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+                tlpOption.Size = new Size(208, 53);
                 tlpOption.TabIndex = 0;
 
                 //Añadir los controles a los contenedores correspondientes
