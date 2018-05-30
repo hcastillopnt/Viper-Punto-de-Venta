@@ -13,8 +13,8 @@ namespace Viper.BusinessEntities
         /// Campo Id
         /// </summary>
         [Required(ErrorMessage = "Campo obligatorio")]
-        [StringLength(11, MinimumLength = 11)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int Id { get; set; }
 
 
@@ -43,7 +43,7 @@ namespace Viper.BusinessEntities
         /// Campo CreatedDate
         /// </summary>
         [Required(ErrorMessage = "Campo obligatorio")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date)]   
         public DateTime CreatedDate { get; set; }
 
 
