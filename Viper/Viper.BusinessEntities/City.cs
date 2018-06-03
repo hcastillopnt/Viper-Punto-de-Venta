@@ -12,7 +12,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo Id es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]+
         public int Id { get; set; }
@@ -20,7 +20,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CountryRegionId
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CountryRegionId es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int CountryRegionId { get; set; }
@@ -28,7 +28,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo StateProvinceId
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo StateProvinceId es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int StateProvinceId { get; set; }
@@ -36,7 +36,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CveEnt
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CveEnt es obligatorio")]
         [StringLength(2, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string CveEnt { get; set; }
@@ -44,7 +44,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CveCity
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CveCity es obligatorio")]
         [StringLength(3, MinimumLength = 3)]
         [DataType(DataType.Text)]
         public string CveCity { get; set; }
@@ -52,7 +52,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Descripcion
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo Description es obligatorio")]
         [StringLength(500, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Description { get; set; }
@@ -60,7 +60,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CveCab
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CveCab es obligatorio")]
         [StringLength(4, MinimumLength = 4)]
         [DataType(DataType.Text)]
         public string CveCab { get; set; }
@@ -68,7 +68,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo NameCab
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo NameCab es obligatorio")]
         [StringLength(100, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string NameCab { get; set; }
@@ -76,7 +76,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo PTOT
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo PTOT es obligatorio")]
         [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string PTOT { get; set; }
@@ -84,7 +84,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo PMAS
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo PMAS es obligatorio")]
         [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string PMAS { get; set; }
@@ -92,7 +92,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo PFEM
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo PFEM es obligatorio")]
         [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string PFEM { get; set; }
@@ -100,7 +100,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo VTOT
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo VTOT es obligatorio")]
         [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string VTOT { get; set; }

@@ -12,7 +12,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo ID
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo ID obligatorio")]
         [StringLength(11, MinimumLength = 11)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
         public int Id { get; set; }
@@ -20,7 +20,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Name
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo Name es obligatorio")]
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Name { get; set; }
@@ -38,34 +38,38 @@ namespace Viper.BusinessEntities
 
 
         /// <summary>
-        /// Cammpo CreatedDate
+        /// Campo CreatedDate
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
-        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
+
+
 
         /// <summary>
         /// Campo CreateBy
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
-        [StringLength(6, MinimumLength = 6)]
+        [Required(ErrorMessage = "El campo CreateBy es obligatorio")]
+        [StringLength(6, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
+
 
 
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
-        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
+
 
 
         /// <summary>
         /// Campo ModifiedBy
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
-        [StringLength(6, MinimumLength = 6)]
+        [Required(ErrorMessage = "El campo ModifiedBy es obligatorio")]
+        [StringLength(6, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string ModifiedBy { get; set; }
     }

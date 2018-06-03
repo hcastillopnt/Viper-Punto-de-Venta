@@ -12,7 +12,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo Id obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int Id { get; set; }
@@ -20,7 +20,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CompanyName
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CompanyName es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string CompanyName { get; set; }
@@ -28,7 +28,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CompanyKey
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CompanyKey es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string CompanyKey { get; set; }
@@ -36,7 +36,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo AddressId
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo AddressId es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AddressId { get; set; }
@@ -44,7 +44,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo PhoneNumber
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo PhoneNumber es obligatorio")]
         [StringLength(10, MinimumLength = 10)]
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
@@ -52,7 +52,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CellphoneNumber
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CellphoneNumber es obligatorio")]
         [StringLength(13, MinimumLength = 13)]
         [DataType(DataType.Text)]
         public string CellphoneNumber { get; set; }
@@ -60,7 +60,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo EmailAddress
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo EmailAddress es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string EmailAddress { get; set; }
@@ -68,7 +68,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo FiscalName
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo FiscalName es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string FiscalName { get; set; }
@@ -76,7 +76,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo AddressSATId
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo AddressSATId es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AddressSATId { get; set; }
@@ -84,7 +84,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo RegimenFiscalId
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo RegimenFiscalId es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int RegimenFiscalId { get; set; }
@@ -92,7 +92,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo AccountBankId
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo AccountBankId es obligatorio")]
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AccountBankId { get; set; }
@@ -100,7 +100,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo RFC
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo RFC es obligatorio")]
         [StringLength(13, MinimumLength = 13)]
         [DataType(DataType.Text)]
         public string RFC { get; set; }
@@ -108,7 +108,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CURP
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CURP es obligatorio")]
         [StringLength(25, MinimumLength = 25)]
         [DataType(DataType.Text)]
         public string CURP { get; set; }
@@ -116,7 +116,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo ApiKey
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo ApiKey es obligatorio")]
         [StringLength(100, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string ApiKey { get; set; }
@@ -124,7 +124,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo BusinessActivity
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo BusinessActivity es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string BusinessActivity { get; set; }
@@ -132,32 +132,35 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CreatedDate
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
-        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
+
 
 
         /// <summary>
         /// Campo CreateBy
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo CreateBy es obligatorio")]
         [StringLength(6, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
 
+
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
-        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
+
 
 
         /// <summary>
         /// Campo ModifiedBy
         /// </summary>
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "El campo ModifiedBy es obligatorio")]
         [StringLength(6, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string ModifiedBy { get; set; }
