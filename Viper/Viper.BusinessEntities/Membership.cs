@@ -9,61 +9,149 @@ namespace Viper.BusinessEntities
 {
     public class Membership
     {
+        /// <summary>
+        /// Campo Id
+        /// </summary>
+        [Required(ErrorMessage = "El campo ID es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int Id { get; set; }
 
-        
+        /// <summary>
+        /// Campo EmployeeId
+        /// </summary>
+        [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int EmployeeId { get; set; }
 
-
+        /// <summary>
+        /// Campo Password
+        /// </summary>
+        [Required(ErrorMessage = "El campo Password es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string Password { get; set; }
 
-
+        /// <summary>
+        /// Campo PasswordSHA1
+        /// </summary>
+        [Required(ErrorMessage = "El campo PasswordSHA1 es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string PasswordSHA1 { get; set; }
 
-
+        /// <summary>
+        /// Campo PasswordTripleDES
+        /// </summary>
+        [Required(ErrorMessage = "El campo PasswordTripleDES es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string PasswordTripleDES { get; set; }
 
 
-
+        /// <summary>
+        /// Campo MobilePin
+        /// </summary>
+        [Required(ErrorMessage = "El campo MobilePins es obligatorio")]
+        [StringLength(50, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string MobilePIN { get; set; }
 
-
+        /// <summary>
+        /// Campo EmailAddress
+        /// </summary>
+        [Required(ErrorMessage = "El campo EmailAddress es obligatorio")]
+        [StringLength(50, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string EmailAddress { get; set; }
 
-
+        /// <summary>
+        /// Campo PasswordQuestion
+        /// </summary>
+        [Required(ErrorMessage = "El campo PasswordQuestion es obligatorio")]
+        [StringLength(100, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string PasswordQuestion { get; set; }
 
-
+        /// <summary>
+        /// Campo PasswordAnswer
+        /// </summary>
+        [Required(ErrorMessage = "El campo PasswordAnswer es obligatorio")]
+        [StringLength(100, MinimumLength = 2)]
+        [DataType(DataType.Text)]
         public string PasswordAnswer { get; set; }
 
-
+        /// <summary>
+        /// Campo AccessFailed
+        /// </summary>
+        [Required(ErrorMessage = "El campo AccessFailed es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AccessFailed { get; set; }
 
-
+        /// <summary>
+        /// Campo IsWelcome
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsWelcome es obligatorio")]
+        [StringLength(1, MinimumLength = 1)]
         public byte IsWelcome { get; set; }
 
-
+        /// <summary>
+        /// Campo IsApproved
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsApproved es obligatorio")]
+        [StringLength(1, MinimumLength = 1)]
         public byte IsApproved { get; set; }
 
-
+        /// <summary>
+        /// Campo IsActive
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsActive es obligatorio")]
+        [StringLength(1, MinimumLength = 1)]
         public byte IsActive { get; set; }
 
-
+        /// <summary>
+        /// Campo IsEnabled
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsEnabled es obligatorio")]
+        [StringLength(1, MinimumLength = 1)]
         public byte IsEnabled { get; set; }
 
-
+        /// <summary>
+        /// Campo CreatedDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
 
 
 
+        /// <summary>
+        /// Campo CreateBy
+        /// </summary>
+        [Required(ErrorMessage = "El campo CreateBy es obligatorio")]
+        [StringLength(6, MinimumLength = 1)]
+        [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
 
 
+        /// <summary>
+        /// Campo ModifiedDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
 
 
 
+        /// <summary>
+        /// Campo ModifiedBy
+        /// </summary>
+        [Required(ErrorMessage = "El campo ModifiedBy es obligatorio")]
+        [StringLength(6, MinimumLength = 1)]
+        [DataType(DataType.Text)]
         public string ModifiedBy { get; set; }
     }
 }
