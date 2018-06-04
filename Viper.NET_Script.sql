@@ -2845,6 +2845,7 @@ CREATE TABLE `Company` (
   `CURP` varchar(25) NOT NULL,
   `ApiKey` varchar(100) NULL,
   `BusinessActivity` varchar(30) NULL,
+  `Logo` longblob NULL,
   
   -- START: AuditableEntity --
   `CreatedDate` DATETIME NULL,
@@ -2880,6 +2881,7 @@ CREATE TABLE `Employee` (
   `BirthDate` VARCHAR(10) NOT NULL,
   `MaritalStatusId` INT NOT NULL COMMENT 'Llave foranea de Estado Civil',
   `GenderId` INT NOT NULL COMMENT 'Llave foranea de Genero',
+  `AddressId` int(11) NOT NULL,
   `RFC` varchar(13) NULL,
   `CURP` varchar(18) NULL,
   `NSS` varchar(16) NULL,
@@ -2893,6 +2895,7 @@ CREATE TABLE `Employee` (
   `ModifiedBy` VARCHAR(6) NULL,
   -- END: AuditableEntity --
   
+  FOREIGN KEY (AddressId) REFERENCES Address(Id),
   FOREIGN KEY (MaritalStatusId) REFERENCES MaritalStatus(Id),
   FOREIGN KEY (GenderId) REFERENCES Gender(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los usuarios (empleados) registrados';
@@ -2909,6 +2912,10 @@ CREATE TABLE `Site`
     `CompanyId` INT NOT NULL,
 	`Name` varchar(100) NOT NULL,
     `UniquePhysicalID` varchar(100) NOT NULL,
+    `AddressId` int(11) NOT NULL,
+    `RepresentativeName` varchar(100) NULL,
+    `IsValid` tinyint(1) NOT NULL,
+    `Photo` longblob NULL,
     
 	-- START: AuditableEntity --
     `CreatedDate` DATETIME NULL,
@@ -2917,6 +2924,7 @@ CREATE TABLE `Site`
     `ModifiedBy` VARCHAR(6) NULL,
     -- END: AuditableEntity --
   
+    FOREIGN KEY (AddressId) REFERENCES Address(Id),
     FOREIGN KEY (CompanyId) REFERENCES Company(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las sucursales';
 
@@ -2930,12 +2938,12 @@ CREATE TABLE `Role` (
   `Name` VARCHAR(50) NOT NULL,
   `Description` VARCHAR(100) NOT NULL,
   
-  	-- START: AuditableEntity --
-    `CreatedDate` DATETIME NULL,
-    `CreateBy` VARCHAR(6) NULL,
-    `ModifiedDate` DATETIME NULL,
-    `ModifiedBy` VARCHAR(6) NULL
-    -- END: AuditableEntity --
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+   -- END: AuditableEntity --
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los roles de la aplicacion';
 
 INSERT INTO Role (Name, Description, CreatedDate, CreateBy) VALUES('ADMINISTRADOR', 'God Mode allows us, among other things to control users, products, managae credentials, ...', CURRENT_TIMESTAMP, 'HECP');
@@ -2952,12 +2960,12 @@ CREATE TABLE `UserRole` (
   `EmployeeId` INT NOT NULL,
   `RoleId` INT NOT NULL,
   
-    	-- START: AuditableEntity --
-    `CreatedDate` DATETIME NULL,
-    `CreateBy` VARCHAR(6) NULL,
-    `ModifiedDate` DATETIME NULL,
-    `ModifiedBy` VARCHAR(6) NULL,
-    -- END: AuditableEntity --
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
   
   FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
   FOREIGN KEY (RoleId) REFERENCES Role(Id)
@@ -2976,12 +2984,12 @@ CREATE TABLE `Permission` (
   `ControlImage` VARCHAR(100) NOT NULL,
   
   
-	-- START: AuditableEntity --
-    `CreatedDate` DATETIME NULL,
-    `CreateBy` VARCHAR(6) NULL,
-    `ModifiedDate` DATETIME NULL,
-    `ModifiedBy` VARCHAR(6) NULL
-    -- END: AuditableEntity --
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los permisos que tiene el usuario';
 
 INSERT INTO Permission (Name, ControlName, ControlText, ControlImage, CreatedDate, CreateBy) VALUES('Ventas', 'btnVentas', 'F1 Ventas', 'ventas.png', CURRENT_TIMESTAMP(), 'HECP');
@@ -3005,12 +3013,12 @@ CREATE TABLE `RolePermission` (
   `PermissionId` INT NOT NULL,
   
   
-	-- START: AuditableEntity --
-    `CreatedDate` DATETIME NULL,
-    `CreateBy` VARCHAR(6) NULL,
-    `ModifiedDate` DATETIME NULL,
-    `ModifiedBy` VARCHAR(6) NULL,
-    -- END: AuditableEntity --
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
     
 	FOREIGN KEY (RoleId) REFERENCES Role(Id),
 	FOREIGN KEY (PermissionId) REFERENCES Permission(Id)
@@ -3039,7 +3047,7 @@ CREATE TABLE `Shift`
     `StartTime` TIME NOT NULL,
     `EndTime` TIME NOT NULL,
     
-        	-- START: AuditableEntity --
+	-- START: AuditableEntity --
     `CreatedDate` DATETIME NULL,
     `CreateBy` VARCHAR(6) NULL,
     `ModifiedDate` DATETIME NULL,
@@ -3063,10 +3071,28 @@ CREATE TABLE `Department`
 	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
 	`Name` varchar(100) NOT NULL,
     `GroupName` varchar(100) NOT NULL,
-    `ModifiedDate` DATETIME NOT NULL
+    
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL
+    -- END: AuditableEntity --
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los departamentos de la compañia';
 
-INSERT INTO Department (Name, GroupName, ModifiedDate) VALUES('CEO', 'Executive General and Administration', CURRENT_TIMESTAMP());
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Executive', 'Executive General and Administration', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Pharmacy Manager', 'Executive General and Administration', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Administration Management', 'Executive General and Administration', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Finance', 'Executive General and Administration', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Human Resources', 'Executive General and Administration', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Document Control', 'Quality Assurance', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Engineering', 'Research and Development', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Marketing', 'Sales and Marketing', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Sales', 'Sales and Marketing', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Purchasing', 'Inventory Management', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO Department (Name, GroupName, CreatedDate, CreateBy) VALUES('Shipping and Receiving', 'Inventory Management', CURRENT_TIMESTAMP(), 'HECP');
+
+UPDATE Department SET Name = UPPER(Name), GroupName = UPPER(GroupName) WHERE Id > 0;
 
 -- --------------------------------------------------------
 
@@ -3083,7 +3109,14 @@ CREATE TABLE `EmployeeDepartmentHistory`
     `ShiftId` INT NOT NULL,
     `StartDate` DATE NOT NULL,
     `EndDate` DATE NULL,
-    `ModifiedDate` DATETIME NOT NULL,
+    
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+    
     FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
     FOREIGN KEY (DepartmentId) REFERENCES Department(Id),
     FOREIGN KEY (SiteId) REFERENCES Site(Id),
@@ -3098,9 +3131,7 @@ CREATE TABLE `EmployeeDepartmentHistory`
 CREATE TABLE `Membership` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `EmployeeId` INT NOT NULL,
-  `Password` varchar(30) NOT NULL,
-  `PasswordSHA1` varchar(30) NOT NULL,
-  `PasswordTripleDES` varchar(30) NOT NULL,
+  `PasswordEncrypted` varchar(30) NOT NULL,
   `MobilePIN` varchar(50) NOT NULL,
   `EmailAddress` varchar(50) NOT NULL,
   `PasswordQuestion` varchar(100) NOT NULL,
@@ -3120,17 +3151,38 @@ CREATE TABLE `Membership` (
   
 	FOREIGN KEY (EmployeeId) REFERENCES Employee(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la informacion de las credenciales de usuario';
-  
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla `UserSite`
+-- Estructura de tabla `ProductCategory`
 --
 
-CREATE TABLE `UserSite` (
+CREATE TABLE `ProductCategory` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `EmployeeId` int(11) NOT NULL,
-  `SiteId` int(11) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las categorias de los productos';
+
+INSERT INTO ProductCategory (Name, CreatedDate, CreateBy) VALUES('FARMACIA', CURRENT_TIMESTAMP(), 'HECP');
+INSERT INTO ProductCategory (Name, CreatedDate, CreateBy) VALUES('SERVICIOS', CURRENT_TIMESTAMP(), 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `ProductSubCategory`
+--
+
+CREATE TABLE `ProductSubCategory` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `ProductCategoryId` INT NOT NULL COMMENT 'Llave foranea de Categoria de Producto',
+  `Name` varchar(100) NOT NULL,
   
   -- START: AuditableEntity --
   `CreatedDate` DATETIME NULL,
@@ -3139,6 +3191,133 @@ CREATE TABLE `UserSite` (
   `ModifiedBy` VARCHAR(6) NULL,
   -- END: AuditableEntity --
   
-  	FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
-    FOREIGN KEY (SiteId) REFERENCES Site(Id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la relacion de usuarios asignados en la compañia';
+  FOREIGN KEY (ProductCategoryId) REFERENCES ProductCategory(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las subcategorias de los productos';
+
+INSERT INTO ProductSubCategory (ProductCategoryId, Name, CreatedDate, CreateBy) VALUES(1, 'N/A', CURRENT_TIMESTAMP(), 'HECP');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Product`
+--
+
+CREATE TABLE `Product` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `BarCode` varchar(20) NOT NULL,
+  `Description` varchar(200) NOT NULL,
+  `ActiveSubstance` varchar(200) NULL,
+  `ProductSubCategoryId` INT NULL COMMENT 'Llave foranea de SubCategoria de Producto',
+  `QuantityPerUnit` int(11) NOT NULL DEFAULT '0',
+  /*`StandardCost` decimal(16,2) NOT NULL DEFAULT '0.00',*/
+  /*`ListPrice` decimal(16,2) NOT NULL DEFAULT '0.00',*/
+  `IVA` decimal(16,2) NOT NULL DEFAULT '0.00',
+  `IsUseInStock` tinyint(1) NOT NULL,
+  /*`UnitsInStock` int(11) NOT NULL DEFAULT '0',*/
+  `IsDiscontinued` tinyint(1) NOT NULL DEFAULT '0',
+  `DiscontinuedDate` DATE NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los productos del inventario';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `ProductInventory`
+--
+
+CREATE TABLE `ProductInventory` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
+  `SiteId` INT NOT NULL COMMENT 'Llave foranea de Sucursal',
+  `UnitsInStock` int(11) NOT NULL DEFAULT '0',
+  
+    -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+  FOREIGN KEY (ProductId) REFERENCES Product(Id),
+  FOREIGN KEY (SiteId) REFERENCES Site(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el inventario de los productos';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `ProductCostHistory`
+--
+
+CREATE TABLE `ProductCostHistory` (
+   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+   `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
+   `StartDate` DATETIME NOT NULL,
+   `EndDate` DATETIME NOT NULL,
+   `StandardCost` decimal(16,2) NOT NULL DEFAULT '0.00',
+   
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+   FOREIGN KEY (ProductId) REFERENCES Product(Id)
+ ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el historial de los costos de un producto en especifico';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `ProductListPriceHistory`
+--
+
+ CREATE TABLE `ProductListPriceHistory` (
+   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+   `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
+   `StartDate` DATETIME NOT NULL,
+   `EndDate` DATETIME NOT NULL,
+   `ListPrice` decimal(16,2) NOT NULL DEFAULT '0.00',
+
+    -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+   FOREIGN KEY (ProductId) REFERENCES Product(Id)
+ ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el historial de los precios de un producto en especifico';
+ 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `AWBuildVersion`
+--
+
+CREATE TABLE `AWBuildVersion` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `DataBaseVersion` VARCHAR(100) NOT NULL,
+  `VersionDate` DATETIME NOT NULL,
+  
+   -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la version de la base de datos';
+
+INSERT INTO AWBuildVersion (DataBaseVersion, VersionDate, CreatedDate, CreateBy) VALUES ('1.0.0.0', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), 'HECP');
+
+-- 
+-- --------------------------------------------------------
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
