@@ -35,7 +35,6 @@ namespace Viper.BusinessEntities
         /// Campo Key
         /// </summary>
         [Required(ErrorMessage = "El campo Key es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int Key { get; set; }
 
@@ -43,7 +42,6 @@ namespace Viper.BusinessEntities
         /// Campo BankId
         /// </summary>
         [Required(ErrorMessage = "El campo BankId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int BankId { get; set; }
 

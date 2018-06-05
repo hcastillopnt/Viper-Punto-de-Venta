@@ -35,7 +35,6 @@ namespace Viper.BusinessEntities
         /// Campo AddressId
         /// </summary>
         [Required(ErrorMessage = "El campo AddressId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AddressId { get; set; }
 
@@ -75,7 +74,6 @@ namespace Viper.BusinessEntities
         /// Campo AddressSATId
         /// </summary>
         [Required(ErrorMessage = "El campo AddressSATId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AddressSATId { get; set; }
 
@@ -83,7 +81,6 @@ namespace Viper.BusinessEntities
         /// Campo RegimenFiscalId
         /// </summary>
         [Required(ErrorMessage = "El campo RegimenFiscalId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int RegimenFiscalId { get; set; }
 
@@ -91,7 +88,6 @@ namespace Viper.BusinessEntities
         /// Campo AccountBankId
         /// </summary>
         [Required(ErrorMessage = "El campo AccountBankId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AccountBankId { get; set; }
 

@@ -35,14 +35,12 @@ namespace Viper.BusinessEntities
         /// Campo Fisica
         /// </summary>
         [Required(ErrorMessage = "El campo Fisica es obligatorio")]
-        [StringLength(4, MinimumLength = 1)]
         public byte Fisica { get; set; }
 
         /// <summary>
         /// Campo Moral
         /// </summary>
         [Required(ErrorMessage = "El campo Moral es obligatorio")]
-        [StringLength(4, MinimumLength = 1)]
         public byte Moral { get; set; }
 
         /// <summary>

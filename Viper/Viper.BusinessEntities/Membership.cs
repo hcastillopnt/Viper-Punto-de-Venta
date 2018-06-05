@@ -19,7 +19,6 @@ namespace Viper.BusinessEntities
         /// Campo EmployeeId
         /// </summary>
         [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int EmployeeId { get; set; }
 
@@ -67,7 +66,6 @@ namespace Viper.BusinessEntities
         /// Campo AccessFailed
         /// </summary>
         [Required(ErrorMessage = "El campo AccessFailed es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AccessFailed { get; set; }
 
@@ -75,28 +73,24 @@ namespace Viper.BusinessEntities
         /// Campo IsWelcome
         /// </summary>
         [Required(ErrorMessage = "El campo IsWelcome es obligatorio")]
-        [StringLength(1, MinimumLength = 1)]
         public byte IsWelcome { get; set; }
 
         /// <summary>
         /// Campo IsApproved
         /// </summary>
         [Required(ErrorMessage = "El campo IsApproved es obligatorio")]
-        [StringLength(1, MinimumLength = 1)]
         public byte IsApproved { get; set; }
 
         /// <summary>
         /// Campo IsActive
         /// </summary>
         [Required(ErrorMessage = "El campo IsActive es obligatorio")]
-        [StringLength(1, MinimumLength = 1)]
         public byte IsActive { get; set; }
 
         /// <summary>
         /// Campo IsEnabled
         /// </summary>
         [Required(ErrorMessage = "El campo IsEnabled es obligatorio")]
-        [StringLength(1, MinimumLength = 1)]
         public byte IsEnabled { get; set; }
 
         /// <summary>

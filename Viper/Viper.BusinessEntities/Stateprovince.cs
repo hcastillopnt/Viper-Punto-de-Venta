@@ -19,7 +19,6 @@ namespace Viper.BusinessEntities
         /// Campo CountryRegionId
         /// </summary>
         [Required(ErrorMessage = "El campo CountryRegionId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int CountryRegionId { get; set; }
 

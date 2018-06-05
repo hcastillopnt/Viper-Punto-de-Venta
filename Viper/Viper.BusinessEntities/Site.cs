@@ -19,7 +19,6 @@ namespace Viper.BusinessEntities
         /// Campo CompanyId
         /// </summary>
         [Required(ErrorMessage = "El campo CompanyId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int CompanyId { get; set; }
 
