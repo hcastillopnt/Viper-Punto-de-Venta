@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmRegistrarSucursales : Form
+    public partial class frmRegisterSite : Form
     {
-        public frmRegistrarSucursales()
+        public frmRegisterSite()
         {
             InitializeComponent();
         }
@@ -22,6 +22,21 @@ namespace Viper.DesktopApp
             frmRegisterCompany frm = new frmRegisterCompany();
             frm.Show();
             this.Hide();
+        }
+
+        private void lblIdSucursal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel13_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
