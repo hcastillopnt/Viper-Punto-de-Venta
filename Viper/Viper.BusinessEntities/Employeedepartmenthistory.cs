@@ -7,14 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Employeedepartmenthistory
+    public class EmployeeDepartmentHistory
     {
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -56,11 +54,33 @@ namespace Viper.BusinessEntities
         public DateTime EndDate { get; set; }
 
         /// <summary>
+        /// Campo CreatedDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
+        [DataType(DataType.DateTime)]
+        public DateTime CreatedDate { get; set; }
+
+        /// <summary>
+        /// Campo CreateBy
+        /// </summary>
+        [Required(ErrorMessage = "El campo CreateBy es obligatorio")]
+        [StringLength(6, MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        public string CreateBy { get; set; }
+
+        /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
 
+        /// <summary>
+        /// Campo ModifiedBy
+        /// </summary>
+        [Required(ErrorMessage = "El campo ModifiedBy es obligatorio")]
+        [StringLength(6, MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        public string ModifiedBy { get; set; }
     }
 }

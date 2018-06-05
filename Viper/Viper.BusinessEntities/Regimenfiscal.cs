@@ -7,14 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Regimenfiscal
+    public class RegimenFiscal
     {
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -47,15 +45,12 @@ namespace Viper.BusinessEntities
         [StringLength(4, MinimumLength = 1)]
         public byte Moral { get; set; }
 
-
         /// <summary>
         /// Campo CreatedDate
         /// </summary>
         [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo CreateBy
@@ -65,16 +60,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
-
-
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo ModifiedBy

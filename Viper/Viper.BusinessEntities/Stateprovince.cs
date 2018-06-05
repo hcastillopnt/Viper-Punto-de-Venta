@@ -7,17 +7,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Stateprovince
+    public class StateProvince
     {
-
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
-
 
         /// <summary>
         /// Campo CountryRegionId
@@ -27,7 +23,6 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int CountryRegionId { get; set; }
 
-
         /// <summary>
         /// Campo CveEnt
         /// </summary>
@@ -35,7 +30,6 @@ namespace Viper.BusinessEntities
         [StringLength(2, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string CveEnt { get; set; }
-
 
         /// <summary>
         /// Campo Description
@@ -45,7 +39,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string Description { get; set; }
 
-
         /// <summary>
         /// Campo Abrev
         /// </summary>
@@ -53,7 +46,6 @@ namespace Viper.BusinessEntities
         [StringLength(10, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string Abrev { get; set; }
-
 
         /// <summary>
         /// Campo CveCab
@@ -63,7 +55,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CveCab { get; set; }
 
-
         /// <summary>
         /// Campo NameCab
         /// </summary>
@@ -71,7 +62,6 @@ namespace Viper.BusinessEntities
         [StringLength(100, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string NameCab { get; set; }
-
 
         /// <summary>
         /// Campo PTOT
@@ -81,7 +71,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string PTOT { get; set; }
 
-
         /// <summary>
         /// Campo PMAS
         /// </summary>
@@ -90,7 +79,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string PMAS { get; set; }
 
-
         /// <summary>
         /// Campo PFEM
         /// </summary>
@@ -98,7 +86,6 @@ namespace Viper.BusinessEntities
         [StringLength(10, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string PFEM { get; set; }
-
 
         /// <summary>
         /// Campo VTOT

@@ -12,9 +12,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -40,8 +38,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
 
-
-
         /// <summary>
         /// Campo CreateBy
         /// </summary>
@@ -50,16 +46,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
-
-
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo ModifiedBy

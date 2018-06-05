@@ -10,11 +10,9 @@ namespace Viper.BusinessEntities
     public class Permission
     {
         /// <summary>
-        /// Campo ID
+        /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID obligatorio")]
-        [StringLength(11, MinimumLength = 11)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -25,26 +23,26 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string Name { get; set; }
 
-
-        /*
+        /// <summary>
+        /// Campo ControlName
+        /// </summary>
         public string ControlName { get; set; }
 
-
+        /// <summary>
+        /// Campo ControlText
+        /// </summary>
         public string ControlText { get; set; }
 
-
+        /// <summary>
+        /// Campo ControlImage
+        /// </summary>
         public string ControlImage { get; set; }
-        */
-
-
         /// <summary>
         /// Campo CreatedDate
         /// </summary>
         [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo CreateBy
@@ -54,16 +52,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
-
-
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo ModifiedBy

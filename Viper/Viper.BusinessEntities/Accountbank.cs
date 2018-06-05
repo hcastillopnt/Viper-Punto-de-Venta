@@ -7,16 +7,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Accountbank
+    public class AccountBank
     {
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
-
 
         /// <summary>
         /// Campo Account
@@ -26,7 +23,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string Account { get; set; }
 
-
         /// <summary>
         /// Campo BankBranch
         /// </summary>
@@ -34,7 +30,6 @@ namespace Viper.BusinessEntities
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string BankBranch { get; set; }
-
 
         /// <summary>
         /// Campo Key
@@ -44,7 +39,6 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int Key { get; set; }
 
-
         /// <summary>
         /// Campo BankId
         /// </summary>
@@ -53,16 +47,12 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int BankId { get; set; }
 
-
-
         /// <summary>
         /// Campo CreatedDate
         /// </summary>
         [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo CreateBy
@@ -72,16 +62,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
-
-
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo ModifiedBy

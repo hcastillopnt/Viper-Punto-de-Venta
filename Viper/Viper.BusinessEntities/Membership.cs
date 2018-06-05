@@ -12,9 +12,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -26,29 +24,12 @@ namespace Viper.BusinessEntities
         public int EmployeeId { get; set; }
 
         /// <summary>
-        /// Campo Password
+        /// Campo PasswordEncrypted
         /// </summary>
-        [Required(ErrorMessage = "El campo Password es obligatorio")]
+        [Required(ErrorMessage = "El campo PasswordEncrypted es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Campo PasswordSHA1
-        /// </summary>
-        [Required(ErrorMessage = "El campo PasswordSHA1 es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string PasswordSHA1 { get; set; }
-
-        /// <summary>
-        /// Campo PasswordTripleDES
-        /// </summary>
-        [Required(ErrorMessage = "El campo PasswordTripleDES es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string PasswordTripleDES { get; set; }
-
+        public string PasswordEncrypted { get; set; }
 
         /// <summary>
         /// Campo MobilePin
@@ -125,8 +106,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
 
-
-
         /// <summary>
         /// Campo CreateBy
         /// </summary>
@@ -135,16 +114,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
-
-
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo ModifiedBy

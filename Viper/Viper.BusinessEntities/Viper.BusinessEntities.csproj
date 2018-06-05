@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accountbank.cs" />
+    <Compile Include="AccountBank.cs" />
     <Compile Include="Address.cs" />
-    <Compile Include="Addresssat.cs" />
-    <Compile Include="Addresstype.cs" />
+    <Compile Include="AddressSAT.cs" />
+    <Compile Include="AddressType.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Common\AuditableEntity.cs" />
@@ -64,26 +64,26 @@
     <Compile Include="Common\IAuditableEntity.cs" />
     <Compile Include="Common\IEntity.cs" />
     <Compile Include="Company.cs" />
-    <Compile Include="Countryregion.cs" />
+    <Compile Include="CountryRegion.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Employeedepartmenthistory.cs" />
+    <Compile Include="EmployeeDepartmentHistory.cs" />
     <Compile Include="Gender.cs" />
-    <Compile Include="Maritalstatus.cs" />
+    <Compile Include="MaritalStatus.cs" />
     <Compile Include="Membership.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Permission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Regimenfiscal.cs" />
-    <Compile Include="Roadtype.cs" />
+    <Compile Include="RegimenFiscal.cs" />
+    <Compile Include="RoadType.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="RolePermission.cs" />
     <Compile Include="Shift.cs" />
     <Compile Include="Site.cs" />
-    <Compile Include="Stateprovince.cs" />
-    <Compile Include="Userrole.cs" />
-    <Compile Include="Usersite.cs" />
+    <Compile Include="StateProvince.cs" />
+    <Compile Include="UserRole.cs" />
+    <Compile Include="UserSite.cs" />
     <Compile Include="ViperContext.cs" />
   </ItemGroup>
   <ItemGroup>

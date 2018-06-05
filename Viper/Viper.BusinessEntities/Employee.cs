@@ -12,11 +12,8 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int id { get; set; }
-
+        [Key]
+        public int Id { get; set; }
 
         /// <summary>
         /// Campo EmployeeIDNumber
@@ -26,7 +23,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string EmployeeIDNumber { get; set; }
 
-
         /// <summary>
         /// Campo IS
         /// </summary>
@@ -34,7 +30,6 @@ namespace Viper.BusinessEntities
         [StringLength(5, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string IS { get; set; }
-
 
         /// <summary>
         /// Campo FisrtName
@@ -44,7 +39,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string FirstName { get; set; }
 
-
         /// <summary>
         /// Campo MiddleName
         /// </summary>
@@ -52,7 +46,6 @@ namespace Viper.BusinessEntities
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string MiddleName { get; set; }
-
 
         /// <summary>
         /// Campo LastName
@@ -62,7 +55,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string LastName { get; set; }
 
-
         /// <summary>
         /// Campo FullName
         /// </summary>
@@ -70,7 +62,6 @@ namespace Viper.BusinessEntities
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string FullName { get; set; }
-
 
         /// <summary>
         /// Campo PhoneNumber
@@ -80,7 +71,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
 
-
         /// <summary>
         /// Campo CellphoneNumber
         /// </summary>
@@ -88,7 +78,6 @@ namespace Viper.BusinessEntities
         [StringLength(13, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string CellphoneNumber { get; set; }
-
 
         /// <summary>
         /// Campo LoginID
@@ -98,7 +87,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string LoginID { get; set; }
 
-
         /// <summary>
         /// Campo JobTitle
         /// </summary>
@@ -106,7 +94,6 @@ namespace Viper.BusinessEntities
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string JobTitle { get; set; }
-
 
         /// <summary>
         /// Campo BirthDate
@@ -116,7 +103,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string BirthDate { get; set; }
 
-
         /// <summary>
         /// Campo MaritalStatusID
         /// </summary>
@@ -124,7 +110,6 @@ namespace Viper.BusinessEntities
         [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int MaritalStatusId { get; set; }
-
 
         /// <summary>
         /// Campo GenderID
@@ -134,7 +119,6 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int GenderId { get; set; }
 
-
         /// <summary>
         /// Campo RFC
         /// </summary>
@@ -142,7 +126,6 @@ namespace Viper.BusinessEntities
         [StringLength(13, MinimumLength = 13)]
         [DataType(DataType.Text)]
         public string RFC { get; set; }
-
 
         /// <summary>
         /// Campo CURP
@@ -152,7 +135,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CURP { get; set; }
 
-
         /// <summary>
         /// Campo NSS
         /// </summary>
@@ -161,14 +143,15 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string NSS { get; set; }
 
+        /// <summary>
+        /// Campo ProfilePhoto
+        /// </summary>
+        public byte[] ProfilePhoto { get; set; }
 
-        /*
-        public longblob ProfilePhoto { get; set; }
-
-
-
-        public longblob FingerPrint { get; set; }
-        */
+        /// <summary>
+        /// Campo FingerPrint
+        /// </summary>
+        public byte[] FingerPrint { get; set; }
 
         /// <summary>
         /// Campo CreatedDate
@@ -176,8 +159,6 @@ namespace Viper.BusinessEntities
         [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo CreateBy
@@ -187,16 +168,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
-
-
         /// <summary>
         /// Campo ModifiedDate
         /// </summary>
         [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
         [DataType(DataType.DateTime)]
         public DateTime ModifiedDate { get; set; }
-
-
 
         /// <summary>
         /// Campo ModifiedBy

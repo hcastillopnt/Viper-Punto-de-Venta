@@ -7,14 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Countryregion
+    public class CountryRegion
     {
         /// <summary>
         /// Campo Id
         /// </summary>
-        [Required(ErrorMessage = "El campo Id es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        [Key]
         public int Id { get; set; }
 
         /// <summary>
@@ -25,7 +23,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string Descripcion { get; set; }
 
-
         /// <summary>
         /// Campo FIPS104
         /// </summary>
@@ -33,7 +30,6 @@ namespace Viper.BusinessEntities
         [StringLength(2, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string FIPS104 { get; set; }
-
 
         /// <summary>
         /// Campo ISO2
@@ -43,7 +39,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string ISO2 { get; set; }
 
-
         /// <summary>
         /// Campo ISO3
         /// </summary>
@@ -51,7 +46,6 @@ namespace Viper.BusinessEntities
         [StringLength(3, MinimumLength = 3)]
         [DataType(DataType.Text)]
         public string ISO3 { get; set; }
-
 
         /// <summary>
         /// Campo ISON
@@ -61,7 +55,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string ISON { get; set; }
 
-
         /// <summary>
         /// Campo Internet
         /// </summary>
@@ -69,7 +62,6 @@ namespace Viper.BusinessEntities
         [StringLength(2, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Internet { get; set; }
-
 
         /// <summary>
         /// Campo Capital
@@ -79,7 +71,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string Capital { get; set; }
 
-
         /// <summary>
         /// Campo MapReference
         /// </summary>
@@ -87,7 +78,6 @@ namespace Viper.BusinessEntities
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string MapReference { get; set; }
-
 
         /// <summary>
         /// Campo NationalitySingular
@@ -97,7 +87,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string NationalitySingular { get; set; }
 
-
         /// <summary>
         /// Campo NationalityPlural
         /// </summary>
@@ -105,7 +94,6 @@ namespace Viper.BusinessEntities
         [StringLength(35, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string NationalityPlural { get; set; }
-
 
         /// <summary>
         /// Campo Currency
@@ -115,7 +103,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string Currency { get; set; }
 
-
         /// <summary>
         /// Campo CurrencyCode
         /// </summary>
@@ -124,14 +111,12 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text)]
         public string CurrencyCode { get; set; }
 
-
         /// <summary>
         /// Campo Population
         /// </summary>
         [Required(ErrorMessage = "El campo Population es obligatorio")]
         [StringLength(20, MinimumLength = 1)]
         public long Population { get; set; }
-
 
         /// <summary>
         /// Campo Title
@@ -140,7 +125,6 @@ namespace Viper.BusinessEntities
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Title { get; set; }
-
 
         /// <summary>
         /// Campo Comment
