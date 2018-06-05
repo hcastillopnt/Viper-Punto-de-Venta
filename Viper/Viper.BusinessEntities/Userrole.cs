@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Role
+    public class UserRole
     {
         /// <summary>
         /// Campo Id
@@ -16,20 +16,20 @@ namespace Viper.BusinessEntities
         public int Id { get; set; }
 
         /// <summary>
-        /// Campo Name
+        /// Campo EmployeeId
         /// </summary>
-        [Required(ErrorMessage = "El campo Name es obligatorio")]
-        [StringLength(50, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "El campo EmployeeId es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int EmployeeId { get; set; }
 
         /// <summary>
-        /// Campo Description
+        /// Campo RoleId
         /// </summary>
-        [Required(ErrorMessage = "El campo Description es obligatorio")]
-        [StringLength(100, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string Description { get; set; }
+        [Required(ErrorMessage = "El campo RoleId es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int RoleId { get; set; }
 
         /// <summary>
         /// Campo CreatedDate

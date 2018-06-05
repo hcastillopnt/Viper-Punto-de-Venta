@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Role
+    public class Shift
     {
         /// <summary>
         /// Campo Id
@@ -24,12 +24,18 @@ namespace Viper.BusinessEntities
         public string Name { get; set; }
 
         /// <summary>
-        /// Campo Description
+        /// Campo StartTime
         /// </summary>
-        [Required(ErrorMessage = "El campo Description es obligatorio")]
-        [StringLength(100, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string Description { get; set; }
+        [Required(ErrorMessage = "El campo StartTime es obligatorio")]
+        [DataType(DataType.Time)]
+        public TimeSpan StartTime { get; set; }
+
+        /// <summary>
+        /// Campo EndTime
+        /// </summary>
+        [Required(ErrorMessage = "El campo EndTime es obligatorio")]
+        [DataType(DataType.Time)]
+        public TimeSpan EndTime { get; set; }
 
         /// <summary>
         /// Campo CreatedDate

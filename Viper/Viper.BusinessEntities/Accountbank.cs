@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Role
+    public class AccountBank
     {
         /// <summary>
         /// Campo Id
@@ -16,20 +16,36 @@ namespace Viper.BusinessEntities
         public int Id { get; set; }
 
         /// <summary>
-        /// Campo Name
+        /// Campo Account
         /// </summary>
-        [Required(ErrorMessage = "El campo Name es obligatorio")]
-        [StringLength(50, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo Account es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string Name { get; set; }
+        public string Account { get; set; }
 
         /// <summary>
-        /// Campo Description
+        /// Campo BankBranch
         /// </summary>
-        [Required(ErrorMessage = "El campo Description es obligatorio")]
-        [StringLength(100, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo BankBranch es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string Description { get; set; }
+        public string BankBranch { get; set; }
+
+        /// <summary>
+        /// Campo Key
+        /// </summary>
+        [Required(ErrorMessage = "El campo Key es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int Key { get; set; }
+
+        /// <summary>
+        /// Campo BankId
+        /// </summary>
+        [Required(ErrorMessage = "El campo BankId es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int BankId { get; set; }
 
         /// <summary>
         /// Campo CreatedDate

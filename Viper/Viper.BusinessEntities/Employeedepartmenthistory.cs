@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class RolePermission
+    public class EmployeeDepartmentHistory
     {
         /// <summary>
         /// Campo Id
@@ -16,20 +16,42 @@ namespace Viper.BusinessEntities
         public int Id { get; set; }
 
         /// <summary>
-        /// Campo RoleId
+        /// Campo EmployeeId
         /// </summary>
-        [Required(ErrorMessage = "El campo RoleId es obligatorio")]
-        [StringLength(11, MinimumLength = 11)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
-        public int RoleId { get; set; }
+        [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int EmployeeId { get; set; }
 
         /// <summary>
-        /// Campo PermissionId
+        /// Campo SiteId
         /// </summary>
-        [Required(ErrorMessage = "El campo PermissionId es obligatorio")]
-        [StringLength(11, MinimumLength = 11)]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
-        public int PermissionId { get; set; }
+        [Required(ErrorMessage = "El campo SiteId es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int SiteId { get; set; }
+
+        /// <summary>
+        /// Campo ShiftId
+        /// </summary>
+        [Required(ErrorMessage = "El campo ShiftID es obligatorio")]
+        [StringLength(11, MinimumLength = 1)]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int ShiftId { get; set; }
+
+        /// <summary>
+        /// Campo StartDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo StartDate es obligatorio")]
+        [DataType(DataType.Date)]
+        public DateTime StartDate { get; set; }
+
+        /// <summary>
+        /// Campo EndDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo EndDate es obligatorio")]
+        [DataType(DataType.Date)]
+        public DateTime EndDate { get; set; }
 
         /// <summary>
         /// Campo CreatedDate
