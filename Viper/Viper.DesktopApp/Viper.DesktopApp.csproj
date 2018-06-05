@@ -175,19 +175,6 @@
     <Content Include="images\icon\tiempo.png" />
     <Content Include="images\icon\ventas.png" />
     <Content Include="images\other\wallpaper_login1.jpg" />
-    <Content Include="Resources\agregar.png" />
-    <Content Include="Resources\buscar.png" />
-    <Content Include="Resources\buscar1.png" />
-    <Content Include="Resources\guardar.png" />
-    <Content Include="Resources\guardar1.png" />
-    <Content Include="Resources\guardar2.png" />
-    <Content Include="Resources\menu.png" />
-    <Content Include="Resources\password.png" />
-    <Content Include="Resources\pluma.png" />
-    <Content Include="Resources\plumilla.png" />
-    <Content Include="Resources\punto de venta.png" />
-    <Content Include="Resources\user.png" />
-    <Content Include="Resources\VIPER.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

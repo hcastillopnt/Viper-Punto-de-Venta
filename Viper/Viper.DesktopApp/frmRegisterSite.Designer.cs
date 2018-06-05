@@ -159,7 +159,6 @@
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Image = global::Viper.DesktopApp.Properties.Resources.guardar2;
             this.btnGuardar.Location = new System.Drawing.Point(759, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(181, 36);

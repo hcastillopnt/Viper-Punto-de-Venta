@@ -272,7 +272,6 @@
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Image = global::Viper.DesktopApp.Properties.Resources.guardar2;
             this.btnGuardar.Location = new System.Drawing.Point(3, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(220, 39);
@@ -657,7 +656,6 @@
             // btnRegimenFiscal
             // 
             this.btnRegimenFiscal.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnRegimenFiscal.Image = global::Viper.DesktopApp.Properties.Resources.plumilla;
             this.btnRegimenFiscal.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegimenFiscal.Location = new System.Drawing.Point(814, 3);
             this.btnRegimenFiscal.Name = "btnRegimenFiscal";
