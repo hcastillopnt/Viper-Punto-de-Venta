@@ -19,7 +19,7 @@ namespace Viper.BusinessEntities
         /// Campo Key
         /// </summary>
         [Required(ErrorMessage = "El campo Key es obligatorio")]
-        [StringLength(5, MinimumLength = 1)]
+        [StringLength(6, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string Key { get; set; }
 
@@ -27,7 +27,7 @@ namespace Viper.BusinessEntities
         /// Campo Description
         /// </summary>
         [Required(ErrorMessage = "El campo Description es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
+        [StringLength(200, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Description { get; set; }
 
