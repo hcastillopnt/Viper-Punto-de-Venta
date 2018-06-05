@@ -26,16 +26,25 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo ControlName
         /// </summary>
+        [Required(ErrorMessage = "El campo ControlName es obligatorio")]
+        [StringLength(30, MinimumLength = 1)]
+        [DataType(DataType.Text)]
         public string ControlName { get; set; }
 
         /// <summary>
         /// Campo ControlText
         /// </summary>
+        [Required(ErrorMessage = "El campo ControlText es obligatorio")]
+        [StringLength(30, MinimumLength = 1)]
+        [DataType(DataType.Text)]
         public string ControlText { get; set; }
 
         /// <summary>
         /// Campo ControlImage
         /// </summary>
+        [Required(ErrorMessage = "El campo ControlImage es obligatorio")]
+        [StringLength(100, MinimumLength = 1)]
+        [DataType(DataType.Text)]
         public string ControlImage { get; set; }
         /// <summary>
         /// Campo CreatedDate
