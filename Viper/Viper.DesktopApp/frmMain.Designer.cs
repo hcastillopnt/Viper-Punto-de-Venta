@@ -74,7 +74,7 @@
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(75, 20);
             this.lblPuesto.TabIndex = 0;
-            this.lblPuesto.Text = "[Puesto]";
+            this.lblPuesto.Text = puest.ToUpper();
             // 
             // lblNombre
             // 
@@ -85,7 +85,7 @@
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(81, 20);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "[Nombre]";
+            this.lblNombre.Text = nomcomp.ToUpper();
             // 
             // picFotoPerfil
             // 

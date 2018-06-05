@@ -107,7 +107,6 @@ namespace Viper.BusinessEntities
         /// Campo MaritalStatusID
         /// </summary>
         [Required(ErrorMessage = "El campo ID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int MaritalStatusId { get; set; }
 
@@ -115,7 +114,6 @@ namespace Viper.BusinessEntities
         /// Campo GenderID
         /// </summary>
         [Required(ErrorMessage = "El campo GenderID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int GenderId { get; set; }
 

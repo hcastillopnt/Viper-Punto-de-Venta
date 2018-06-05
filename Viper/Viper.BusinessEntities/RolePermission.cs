@@ -19,7 +19,6 @@ namespace Viper.BusinessEntities
         /// Campo RoleId
         /// </summary>
         [Required(ErrorMessage = "El campo RoleId es obligatorio")]
-        [StringLength(11, MinimumLength = 11)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
         public int RoleId { get; set; }
 
@@ -27,7 +26,6 @@ namespace Viper.BusinessEntities
         /// Campo PermissionId
         /// </summary>
         [Required(ErrorMessage = "El campo PermissionId es obligatorio")]
-        [StringLength(11, MinimumLength = 11)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favro ingresa un numero entero valido")]
         public int PermissionId { get; set; }
 

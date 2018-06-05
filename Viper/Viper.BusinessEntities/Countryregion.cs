@@ -115,7 +115,6 @@ namespace Viper.BusinessEntities
         /// Campo Population
         /// </summary>
         [Required(ErrorMessage = "El campo Population es obligatorio")]
-        [StringLength(20, MinimumLength = 1)]
         public long Population { get; set; }
 
         /// <summary>

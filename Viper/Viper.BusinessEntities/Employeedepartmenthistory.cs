@@ -19,7 +19,6 @@ namespace Viper.BusinessEntities
         /// Campo EmployeeId
         /// </summary>
         [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int EmployeeId { get; set; }
 
@@ -27,7 +26,6 @@ namespace Viper.BusinessEntities
         /// Campo SiteId
         /// </summary>
         [Required(ErrorMessage = "El campo SiteId es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int SiteId { get; set; }
 
@@ -35,7 +33,6 @@ namespace Viper.BusinessEntities
         /// Campo ShiftId
         /// </summary>
         [Required(ErrorMessage = "El campo ShiftID es obligatorio")]
-        [StringLength(11, MinimumLength = 1)]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int ShiftId { get; set; }
 

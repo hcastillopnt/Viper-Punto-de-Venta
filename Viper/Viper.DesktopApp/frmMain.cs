@@ -16,9 +16,14 @@ namespace Viper.DesktopApp
     public partial class frmMain : Form
     {
         private Button objButton = null;
-
-        public frmMain()
+        public string rol;
+        public string nomcomp;
+        public string puest;
+        public frmMain(string rol, string fullname, string puesto)
         {
+            this.rol = rol;
+            this.nomcomp = fullname;
+            this.puest = puesto;
             //Inicializar la interfaz grafica
             InitializeComponent();
 
@@ -27,6 +32,9 @@ namespace Viper.DesktopApp
 
             //Cargar menu de opciones
             CargarMenuVertical();
+
+            //this.nom = nombre;
+
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
