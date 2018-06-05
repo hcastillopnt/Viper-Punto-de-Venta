@@ -60,16 +60,16 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.RFC = new Telerik.WinControls.UI.RadTextBox();
             this.Curp = new Telerik.WinControls.UI.RadTextBox();
+            this._NombreFiscal = new Telerik.WinControls.UI.RadTextBox();
             this.lblRFC = new System.Windows.Forms.Label();
             this.lblNombreFiscal = new System.Windows.Forms.Label();
             this.lblCURP = new System.Windows.Forms.Label();
-            this._NombreFiscal = new Telerik.WinControls.UI.RadTextBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.lblColoniaFiscal = new System.Windows.Forms.Label();
             this.Colonia = new Telerik.WinControls.UI.RadTextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblRegimenFiscal = new System.Windows.Forms.Label();
             this.radTextBox3 = new Telerik.WinControls.UI.RadTextBox();
+            this.lblRegimenFiscal = new System.Windows.Forms.Label();
             this.btnRegimenFiscal = new Telerik.WinControls.UI.RadButton();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.Numero_Interior = new Telerik.WinControls.UI.RadTextBox();
@@ -79,6 +79,7 @@
             this.Domicilio_Fiscal = new Telerik.WinControls.UI.RadTextBox();
             this.panelRegistrodeCompañia = new Telerik.WinControls.UI.RadPanel();
             this.tblDatosCorporativos = new System.Windows.Forms.TableLayoutPanel();
+            this.gbDatosCorporativos = new Telerik.WinControls.UI.RadGroupBox();
             this.gbDatosGenerales = new Telerik.WinControls.UI.RadGroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -92,6 +93,8 @@
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.radTextBox5 = new Telerik.WinControls.UI.RadTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.Email = new Telerik.WinControls.UI.RadTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -106,11 +109,8 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.Numero_Exterior = new Telerik.WinControls.UI.RadTextBox();
             this.lblNumeroExterior = new System.Windows.Forms.Label();
-            this.gbDatosCorporativos = new Telerik.WinControls.UI.RadGroupBox();
             this.panelIzquierdo = new Telerik.WinControls.UI.RadPanel();
             this.panelDerecho = new Telerik.WinControls.UI.RadPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radTextBox5 = new Telerik.WinControls.UI.RadTextBox();
             this.tableLayoutPanel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboGiro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Nombre)).BeginInit();
@@ -145,6 +145,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelRegistrodeCompañia)).BeginInit();
             this.panelRegistrodeCompañia.SuspendLayout();
             this.tblDatosCorporativos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).BeginInit();
+            this.gbDatosCorporativos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosGenerales)).BeginInit();
             this.gbDatosGenerales.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -156,6 +158,7 @@
             this.tableLayoutPanel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox5)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Email)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
@@ -167,11 +170,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numero_Exterior)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).BeginInit();
-            this.gbDatosCorporativos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzquierdo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDerecho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel19
@@ -236,7 +236,7 @@
             // 
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudad.Location = new System.Drawing.Point(391, 0);
+            this.lblCiudad.Location = new System.Drawing.Point(390, 0);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(70, 20);
             this.lblCiudad.TabIndex = 0;
@@ -246,7 +246,7 @@
             // 
             this.cboCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cboCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCiudad.Location = new System.Drawing.Point(484, 3);
+            this.cboCiudad.Location = new System.Drawing.Point(483, 3);
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.NullText = "Ciudad";
             this.cboCiudad.Size = new System.Drawing.Size(238, 24);
@@ -294,7 +294,7 @@
             // 
             this.cboEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado.Location = new System.Drawing.Point(161, 3);
+            this.cboEstado.Location = new System.Drawing.Point(160, 3);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.NullText = "Estado";
             this.cboEstado.Size = new System.Drawing.Size(224, 24);
@@ -329,7 +329,7 @@
             // 
             this.cboPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cboPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboPais.Location = new System.Drawing.Point(161, 3);
+            this.cboPais.Location = new System.Drawing.Point(160, 3);
             this.cboPais.Name = "cboPais";
             this.cboPais.NullText = "País";
             this.cboPais.Size = new System.Drawing.Size(327, 24);
@@ -349,7 +349,7 @@
             // 
             this.Codigo_Postal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Codigo_Postal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Postal.Location = new System.Drawing.Point(161, 33);
+            this.Codigo_Postal.Location = new System.Drawing.Point(160, 33);
             this.Codigo_Postal.Name = "Codigo_Postal";
             this.Codigo_Postal.NullText = "Código Postal";
             this.Codigo_Postal.Size = new System.Drawing.Size(224, 24);
@@ -394,7 +394,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(391, 30);
+            this.lblTelefono.Location = new System.Drawing.Point(390, 30);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(84, 20);
             this.lblTelefono.TabIndex = 0;
@@ -404,7 +404,7 @@
             // 
             this.Telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(484, 33);
+            this.Telefono.Location = new System.Drawing.Point(483, 33);
             this.Telefono.Name = "Telefono";
             this.Telefono.NullText = "Teléfono";
             this.Telefono.Size = new System.Drawing.Size(238, 24);
@@ -449,7 +449,7 @@
             // 
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.Location = new System.Drawing.Point(391, 60);
+            this.lblCelular.Location = new System.Drawing.Point(390, 60);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(70, 20);
             this.lblCelular.TabIndex = 0;
@@ -459,7 +459,7 @@
             // 
             this.Celular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Celular.Location = new System.Drawing.Point(484, 63);
+            this.Celular.Location = new System.Drawing.Point(483, 63);
             this.Celular.Name = "Celular";
             this.Celular.NullText = "Celular";
             this.Celular.Size = new System.Drawing.Size(238, 24);
@@ -494,7 +494,7 @@
             // 
             this.Codigo_Postal_.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Codigo_Postal_.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Postal_.Location = new System.Drawing.Point(162, 3);
+            this.Codigo_Postal_.Location = new System.Drawing.Point(161, 3);
             this.Codigo_Postal_.Name = "Codigo_Postal_";
             this.Codigo_Postal_.NullText = "Código Postal";
             this.Codigo_Postal_.Size = new System.Drawing.Size(327, 24);
@@ -541,6 +541,16 @@
             this.Curp.Size = new System.Drawing.Size(719, 24);
             this.Curp.TabIndex = 3;
             // 
+            // _NombreFiscal
+            // 
+            this._NombreFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this._NombreFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._NombreFiscal.Location = new System.Drawing.Point(162, 3);
+            this._NombreFiscal.Name = "_NombreFiscal";
+            this._NombreFiscal.NullText = "Nombre";
+            this._NombreFiscal.Size = new System.Drawing.Size(719, 24);
+            this._NombreFiscal.TabIndex = 1;
+            // 
             // lblRFC
             // 
             this.lblRFC.AutoSize = true;
@@ -570,16 +580,6 @@
             this.lblCURP.Size = new System.Drawing.Size(63, 20);
             this.lblCURP.TabIndex = 0;
             this.lblCURP.Text = "CURP:";
-            // 
-            // _NombreFiscal
-            // 
-            this._NombreFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this._NombreFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._NombreFiscal.Location = new System.Drawing.Point(162, 3);
-            this._NombreFiscal.Name = "_NombreFiscal";
-            this._NombreFiscal.NullText = "Nombre";
-            this._NombreFiscal.Size = new System.Drawing.Size(719, 24);
-            this._NombreFiscal.TabIndex = 1;
             // 
             // tableLayoutPanel13
             // 
@@ -621,7 +621,7 @@
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.60542F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.39458F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
             this.tableLayoutPanel9.Controls.Add(this.radTextBox3, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.lblRegimenFiscal, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnRegimenFiscal, 2, 0);
@@ -633,6 +633,16 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(884, 41);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
+            // radTextBox3
+            // 
+            this.radTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.radTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radTextBox3.Location = new System.Drawing.Point(161, 3);
+            this.radTextBox3.Name = "radTextBox3";
+            this.radTextBox3.NullText = "Régimen Fiscal";
+            this.radTextBox3.Size = new System.Drawing.Size(646, 24);
+            this.radTextBox3.TabIndex = 1;
+            // 
             // lblRegimenFiscal
             // 
             this.lblRegimenFiscal.AutoSize = true;
@@ -643,21 +653,11 @@
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal:";
             // 
-            // radTextBox3
-            // 
-            this.radTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.radTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radTextBox3.Location = new System.Drawing.Point(162, 3);
-            this.radTextBox3.Name = "radTextBox3";
-            this.radTextBox3.NullText = "Régimen Fiscal";
-            this.radTextBox3.Size = new System.Drawing.Size(646, 24);
-            this.radTextBox3.TabIndex = 1;
-            // 
             // btnRegimenFiscal
             // 
             this.btnRegimenFiscal.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnRegimenFiscal.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegimenFiscal.Location = new System.Drawing.Point(814, 3);
+            this.btnRegimenFiscal.Location = new System.Drawing.Point(813, 3);
             this.btnRegimenFiscal.Name = "btnRegimenFiscal";
             this.btnRegimenFiscal.Size = new System.Drawing.Size(66, 22);
             this.btnRegimenFiscal.TabIndex = 0;
@@ -760,6 +760,20 @@
             this.tblDatosCorporativos.Size = new System.Drawing.Size(914, 715);
             this.tblDatosCorporativos.TabIndex = 0;
             // 
+            // gbDatosCorporativos
+            // 
+            this.gbDatosCorporativos.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbDatosCorporativos.Controls.Add(this.tableLayoutPanel8);
+            this.gbDatosCorporativos.Controls.Add(this.tableLayoutPanel9);
+            this.gbDatosCorporativos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosCorporativos.HeaderText = "Datos Corporativos";
+            this.gbDatosCorporativos.Location = new System.Drawing.Point(3, 258);
+            this.gbDatosCorporativos.Name = "gbDatosCorporativos";
+            this.gbDatosCorporativos.Size = new System.Drawing.Size(908, 160);
+            this.gbDatosCorporativos.TabIndex = 2;
+            this.gbDatosCorporativos.TabStop = false;
+            this.gbDatosCorporativos.Text = "Datos Corporativos";
+            // 
             // gbDatosGenerales
             // 
             this.gbDatosGenerales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -835,10 +849,10 @@
             // 
             this.radTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.radTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radTextBox4.Location = new System.Drawing.Point(72, 3);
+            this.radTextBox4.Location = new System.Drawing.Point(73, 3);
             this.radTextBox4.Name = "radTextBox4";
             this.radTextBox4.NullText = "No Interior";
-            this.radTextBox4.Size = new System.Drawing.Size(82, 24);
+            this.radTextBox4.Size = new System.Drawing.Size(81, 24);
             this.radTextBox4.TabIndex = 1;
             // 
             // label2
@@ -925,13 +939,33 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(167, 32);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
+            // radTextBox5
+            // 
+            this.radTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.radTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radTextBox5.Location = new System.Drawing.Point(77, 3);
+            this.radTextBox5.Name = "radTextBox5";
+            this.radTextBox5.NullText = "No Exterior";
+            this.radTextBox5.Size = new System.Drawing.Size(87, 24);
+            this.radTextBox5.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "No Ext:";
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 4;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.72165F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.27835F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.tableLayoutPanel7.Controls.Add(this.Celular, 3, 2);
             this.tableLayoutPanel7.Controls.Add(this.Telefono, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.cboCiudad, 3, 0);
@@ -957,7 +991,7 @@
             // 
             this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(161, 63);
+            this.Email.Location = new System.Drawing.Point(160, 63);
             this.Email.Name = "Email";
             this.Email.NullText = "Email";
             this.Email.Size = new System.Drawing.Size(224, 24);
@@ -1029,7 +1063,7 @@
             this.radDropDownList2.Location = new System.Drawing.Point(148, 3);
             this.radDropDownList2.Name = "radDropDownList2";
             this.radDropDownList2.NullText = "Tipo de vialidad";
-            this.radDropDownList2.Size = new System.Drawing.Size(228, 24);
+            this.radDropDownList2.Size = new System.Drawing.Size(228, 23);
             this.radDropDownList2.TabIndex = 1;
             // 
             // label4
@@ -1064,7 +1098,7 @@
             this.radDropDownList1.Location = new System.Drawing.Point(162, 3);
             this.radDropDownList1.Name = "radDropDownList1";
             this.radDropDownList1.NullText = "Tpo de inmueble";
-            this.radDropDownList1.Size = new System.Drawing.Size(327, 24);
+            this.radDropDownList1.Size = new System.Drawing.Size(327, 23);
             this.radDropDownList1.TabIndex = 1;
             // 
             // label3
@@ -1112,23 +1146,9 @@
             this.lblNumeroExterior.TabIndex = 0;
             this.lblNumeroExterior.Text = "No Ext:";
             // 
-            // gbDatosCorporativos
-            // 
-            this.gbDatosCorporativos.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbDatosCorporativos.Controls.Add(this.tableLayoutPanel8);
-            this.gbDatosCorporativos.Controls.Add(this.tableLayoutPanel9);
-            this.gbDatosCorporativos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosCorporativos.HeaderText = "Datos Corporativos";
-            this.gbDatosCorporativos.Location = new System.Drawing.Point(3, 258);
-            this.gbDatosCorporativos.Name = "gbDatosCorporativos";
-            this.gbDatosCorporativos.Size = new System.Drawing.Size(908, 160);
-            this.gbDatosCorporativos.TabIndex = 2;
-            this.gbDatosCorporativos.TabStop = false;
-            this.gbDatosCorporativos.Text = "Datos Corporativos";
-            // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Enabled = false;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
@@ -1139,7 +1159,7 @@
             // 
             // panelDerecho
             // 
-            this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDerecho.Enabled = false;
             this.panelDerecho.Location = new System.Drawing.Point(1152, 0);
@@ -1147,26 +1167,6 @@
             this.panelDerecho.Size = new System.Drawing.Size(218, 749);
             this.panelDerecho.TabIndex = 0;
             this.panelDerecho.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "No Ext:";
-            // 
-            // radTextBox5
-            // 
-            this.radTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.radTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radTextBox5.Location = new System.Drawing.Point(77, 3);
-            this.radTextBox5.Name = "radTextBox5";
-            this.radTextBox5.NullText = "No Exterior";
-            this.radTextBox5.Size = new System.Drawing.Size(87, 24);
-            this.radTextBox5.TabIndex = 1;
             // 
             // frmRegisterCompany
             // 
@@ -1224,6 +1224,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelRegistrodeCompañia)).EndInit();
             this.panelRegistrodeCompañia.ResumeLayout(false);
             this.tblDatosCorporativos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).EndInit();
+            this.gbDatosCorporativos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosGenerales)).EndInit();
             this.gbDatosGenerales.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1239,6 +1241,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox5)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Email)).EndInit();
@@ -1254,11 +1257,8 @@
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numero_Exterior)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).EndInit();
-            this.gbDatosCorporativos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelIzquierdo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDerecho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
