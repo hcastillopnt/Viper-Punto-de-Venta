@@ -46,5 +46,15 @@ namespace Viper.DesktopApp
                 }
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            Nombre_de_Usuario.Focus();
+        }
     }
 }
