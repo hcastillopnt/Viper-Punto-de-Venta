@@ -19,12 +19,22 @@ namespace Viper.DesktopApp
 
         private void btnRegistrarSucursal_Click(object sender, EventArgs e)
         {
-            frmRegistrarSucursales frm = new frmRegistrarSucursales();
+            frmRegisterSite frm = new frmRegisterSite();
             frm.Show();
             this.Hide();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel26_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radTextBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
