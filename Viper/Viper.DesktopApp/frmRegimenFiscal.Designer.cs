@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegimenFiscal));
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.btnAceptar = new Telerik.WinControls.UI.RadButton();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.lblRegimenFiscal = new Telerik.WinControls.UI.RadLabel();
+            this.gvRegimenFiscal = new Telerik.WinControls.UI.RadGridView();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picEmpresa = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblRegimenFiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -54,38 +54,38 @@
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.ThemeName = "VisualStudio2012Light";
             // 
-            // radLabel1
+            // lblRegimenFiscal
             // 
-            this.radLabel1.BackColor = System.Drawing.SystemColors.Control;
-            this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(286, 53);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(260, 44);
-            this.radLabel1.TabIndex = 0;
-            this.radLabel1.Text = "Régimen Fiscal";
+            this.lblRegimenFiscal.BackColor = System.Drawing.SystemColors.Control;
+            this.lblRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegimenFiscal.Location = new System.Drawing.Point(286, 53);
+            this.lblRegimenFiscal.Name = "lblRegimenFiscal";
+            this.lblRegimenFiscal.Size = new System.Drawing.Size(260, 44);
+            this.lblRegimenFiscal.TabIndex = 0;
+            this.lblRegimenFiscal.Text = "Régimen Fiscal";
             // 
-            // radGridView1
+            // gvRegimenFiscal
             // 
-            this.radGridView1.Location = new System.Drawing.Point(12, 124);
+            this.gvRegimenFiscal.Location = new System.Drawing.Point(12, 124);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(760, 372);
-            this.radGridView1.TabIndex = 0;
-            this.radGridView1.Text = "radGridView1";
-            this.radGridView1.ThemeName = "VisualStudio2012Light";
+            this.gvRegimenFiscal.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gvRegimenFiscal.Name = "gvRegimenFiscal";
+            this.gvRegimenFiscal.Size = new System.Drawing.Size(760, 372);
+            this.gvRegimenFiscal.TabIndex = 0;
+            this.gvRegimenFiscal.Text = "radGridView1";
+            this.gvRegimenFiscal.ThemeName = "VisualStudio2012Light";
             // 
-            // pictureBox1
+            // picEmpresa
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(161, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.picEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("picEmpresa.Image")));
+            this.picEmpresa.Location = new System.Drawing.Point(161, 22);
+            this.picEmpresa.Name = "picEmpresa";
+            this.picEmpresa.Size = new System.Drawing.Size(98, 75);
+            this.picEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picEmpresa.TabIndex = 7;
+            this.picEmpresa.TabStop = false;
             // 
             // frmRegimenFiscal
             // 
@@ -93,10 +93,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.radLabel1);
+            this.Controls.Add(this.picEmpresa);
+            this.Controls.Add(this.lblRegimenFiscal);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.radGridView1);
+            this.Controls.Add(this.gvRegimenFiscal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -105,10 +105,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblRegimenFiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,9 +116,9 @@
 
         #endregion
         private Telerik.WinControls.UI.RadButton btnAceptar;
-        private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadLabel lblRegimenFiscal;
+        private Telerik.WinControls.UI.RadGridView gvRegimenFiscal;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picEmpresa;
     }
 }
