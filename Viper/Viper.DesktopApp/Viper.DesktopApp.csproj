@@ -112,6 +112,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterCompany.resx">
       <DependentUpon>frmRegisterCompany.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterSite.resx">
       <DependentUpon>frmRegisterSite.cs</DependentUpon>
@@ -164,12 +165,17 @@
   <ItemGroup>
     <Content Include="images\company_logo\farmanyl.jpg" />
     <Content Include="images\company_logo\OwalTek.jpg" />
+    <Content Include="images\icon\cancelar.png" />
     <Content Include="images\icon\cerrar_sesion.png" />
+    <Content Include="images\icon\comprobado.png" />
     <Content Include="images\icon\configuracion.png" />
     <Content Include="images\icon\corte.png" />
     <Content Include="images\icon\doctor.png" />
     <Content Include="images\icon\estadisticas.png" />
+    <Content Include="images\icon\examinar.png" />
+    <Content Include="images\icon\hospital.png" />
     <Content Include="images\icon\inventario.png" />
+    <Content Include="images\icon\lupa.png" />
     <Content Include="images\icon\medico.png" />
     <Content Include="images\icon\procesos.png" />
     <Content Include="images\icon\productos.png" />
