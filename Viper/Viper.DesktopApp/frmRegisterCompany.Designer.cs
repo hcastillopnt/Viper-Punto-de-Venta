@@ -770,7 +770,7 @@
             this.panelRegistrodeCompañia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRegistrodeCompañia.Location = new System.Drawing.Point(0, 0);
             this.panelRegistrodeCompañia.Name = "panelRegistrodeCompañia";
-            this.panelRegistrodeCompañia.Size = new System.Drawing.Size(1370, 749);
+            this.panelRegistrodeCompañia.Size = new System.Drawing.Size(1350, 730);
             this.panelRegistrodeCompañia.TabIndex = 0;
             this.panelRegistrodeCompañia.TabStop = false;
             // 
@@ -1179,7 +1179,7 @@
             this.panelIzquierdo.Enabled = false;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(200, 749);
+            this.panelIzquierdo.Size = new System.Drawing.Size(200, 730);
             this.panelIzquierdo.TabIndex = 0;
             this.panelIzquierdo.TabStop = false;
             // 
@@ -1188,9 +1188,9 @@
             this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDerecho.Enabled = false;
-            this.panelDerecho.Location = new System.Drawing.Point(1152, 0);
+            this.panelDerecho.Location = new System.Drawing.Point(1132, 0);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(218, 749);
+            this.panelDerecho.Size = new System.Drawing.Size(218, 730);
             this.panelDerecho.TabIndex = 0;
             this.panelDerecho.TabStop = false;
             // 
@@ -1214,11 +1214,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1350, 730);
             this.ControlBox = false;
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelIzquierdo);
             this.Controls.Add(this.panelRegistrodeCompañia);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRegisterCompany";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
