@@ -5190,6 +5190,7 @@ CREATE TABLE `Site`
     `UniquePhysicalID` varchar(100) NOT NULL,
     `AddressId` int(11) NOT NULL,
     `RepresentativeName` varchar(100) NULL,
+    `PhoneNumber` varchar(10) NULL,
     `IsValid` tinyint(1) NOT NULL,
     `Photo` longblob NULL,
     
@@ -5533,6 +5534,7 @@ CREATE TABLE `ProductInventory` (
 CREATE TABLE `ProductCostHistory` (
    `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
    `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
+   `SiteId` INT NOT NULL COMMENT 'Llave foranea de Sucursal',
    `StartDate` DATETIME NOT NULL,
    `EndDate` DATETIME NOT NULL,
    `StandardCost` decimal(16,2) NOT NULL DEFAULT '0.00',
@@ -5544,7 +5546,8 @@ CREATE TABLE `ProductCostHistory` (
   `ModifiedBy` VARCHAR(6) NULL,
   -- END: AuditableEntity --
   
-   FOREIGN KEY (ProductId) REFERENCES Product(Id)
+   FOREIGN KEY (ProductId) REFERENCES Product(Id),
+   FOREIGN KEY (SiteId) REFERENCES Site(Id)
  ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el historial de los costos de un producto en especifico';
 
 -- --------------------------------------------------------
@@ -5556,6 +5559,7 @@ CREATE TABLE `ProductCostHistory` (
  CREATE TABLE `ProductListPriceHistory` (
    `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
    `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
+   `SiteId` INT NOT NULL COMMENT 'Llave foranea de Sucursal',
    `StartDate` DATETIME NOT NULL,
    `EndDate` DATETIME NOT NULL,
    `ListPrice` decimal(16,2) NOT NULL DEFAULT '0.00',
@@ -5567,7 +5571,8 @@ CREATE TABLE `ProductCostHistory` (
   `ModifiedBy` VARCHAR(6) NULL,
   -- END: AuditableEntity --
   
-   FOREIGN KEY (ProductId) REFERENCES Product(Id)
+   FOREIGN KEY (ProductId) REFERENCES Product(Id),
+   FOREIGN KEY (SiteId) REFERENCES Site(Id)
  ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el historial de los precios de un producto en especifico';
  
 -- --------------------------------------------------------
