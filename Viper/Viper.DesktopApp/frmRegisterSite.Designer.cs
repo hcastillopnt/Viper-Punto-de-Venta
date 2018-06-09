@@ -68,7 +68,6 @@
             this.No_Ext_Fiscal = new Telerik.WinControls.UI.RadTextBox();
             this.lblNoExtFiscal = new System.Windows.Forms.Label();
             this.lblCodigoPostalFiscal = new System.Windows.Forms.Label();
-            this.Codigo_Postal_Fiscal = new Telerik.WinControls.UI.RadTextBox();
             this.lblEstadoFiscal = new System.Windows.Forms.Label();
             this.cboEstadoFiscal = new Telerik.WinControls.UI.RadDropDownList();
             this.tlpDF_03 = new System.Windows.Forms.TableLayoutPanel();
@@ -80,6 +79,7 @@
             this.btnFinalizar = new Telerik.WinControls.UI.RadButton();
             this.btnGuardarSucursal = new Telerik.WinControls.UI.RadButton();
             this.panelCentral = new Telerik.WinControls.UI.RadPanel();
+            this.Codigo_Postal = new Telerik.WinControls.UI.RadMaskedEditBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzquierdo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSucursales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSucursales.MasterTemplate)).BeginInit();
@@ -108,7 +108,6 @@
             this.tlpDF_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.No_Int_Fiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.No_Ext_Fiscal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Postal_Fiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboEstadoFiscal)).BeginInit();
             this.tlpDF_03.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboLocalidadFiscal)).BeginInit();
@@ -119,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardarSucursal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCentral)).BeginInit();
             this.panelCentral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Postal)).BeginInit();
             this.SuspendLayout();
             // 
             // panelIzquierdo
@@ -232,7 +232,7 @@
             this.Empresa.Location = new System.Drawing.Point(140, 59);
             this.Empresa.Name = "Empresa";
             this.Empresa.NullText = "EMPRESA";
-            this.Empresa.Size = new System.Drawing.Size(210, 24);
+            this.Empresa.Size = new System.Drawing.Size(210, 50);
             this.Empresa.TabIndex = 3;
             this.Empresa.ThemeName = "VisualStudio2012Light";
             // 
@@ -242,7 +242,7 @@
             this.Id_Sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Id_Sucursal.Location = new System.Drawing.Point(140, 3);
             this.Id_Sucursal.Name = "Id_Sucursal";
-            this.Id_Sucursal.Size = new System.Drawing.Size(210, 24);
+            this.Id_Sucursal.Size = new System.Drawing.Size(210, 50);
             this.Id_Sucursal.TabIndex = 1;
             this.Id_Sucursal.ThemeName = "VisualStudio2012Light";
             // 
@@ -286,7 +286,7 @@
             this.Representante.Location = new System.Drawing.Point(478, 59);
             this.Representante.Name = "Representante";
             this.Representante.NullText = "REPRESENTANTE DE LA SUCURSAL";
-            this.Representante.Size = new System.Drawing.Size(232, 24);
+            this.Representante.Size = new System.Drawing.Size(232, 50);
             this.Representante.TabIndex = 4;
             this.Representante.ThemeName = "VisualStudio2012Light";
             // 
@@ -297,7 +297,7 @@
             this.Nombre_Sucursal.Location = new System.Drawing.Point(478, 3);
             this.Nombre_Sucursal.Name = "Nombre_Sucursal";
             this.Nombre_Sucursal.NullText = "NOMBRE DE SUCURSAL";
-            this.Nombre_Sucursal.Size = new System.Drawing.Size(232, 24);
+            this.Nombre_Sucursal.Size = new System.Drawing.Size(232, 50);
             this.Nombre_Sucursal.TabIndex = 2;
             this.Nombre_Sucursal.ThemeName = "VisualStudio2012Light";
             // 
@@ -413,10 +413,10 @@
             this.tlpDatosFiscales.Controls.Add(this.tlpDF_02, 2, 1);
             this.tlpDatosFiscales.Controls.Add(this.tlpDF_01, 2, 2);
             this.tlpDatosFiscales.Controls.Add(this.lblCodigoPostalFiscal, 0, 2);
-            this.tlpDatosFiscales.Controls.Add(this.Codigo_Postal_Fiscal, 1, 2);
             this.tlpDatosFiscales.Controls.Add(this.lblEstadoFiscal, 0, 4);
             this.tlpDatosFiscales.Controls.Add(this.cboEstadoFiscal, 1, 4);
             this.tlpDatosFiscales.Controls.Add(this.tlpDF_03, 2, 4);
+            this.tlpDatosFiscales.Controls.Add(this.Codigo_Postal, 1, 2);
             this.tlpDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDatosFiscales.Location = new System.Drawing.Point(2, 18);
             this.tlpDatosFiscales.Name = "tlpDatosFiscales";
@@ -449,7 +449,7 @@
             this.Colonia_Fiscal.Location = new System.Drawing.Point(157, 138);
             this.Colonia_Fiscal.Name = "Colonia_Fiscal";
             this.Colonia_Fiscal.NullText = "COLONIA";
-            this.Colonia_Fiscal.Size = new System.Drawing.Size(772, 39);
+            this.Colonia_Fiscal.Size = new System.Drawing.Size(772, 24);
             this.Colonia_Fiscal.TabIndex = 1;
             this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -520,7 +520,7 @@
             this.Vialidad_Fiscal.Location = new System.Drawing.Point(164, 3);
             this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
             this.Vialidad_Fiscal.NullText = "VIALIDAD";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(298, 33);
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(298, 24);
             this.Vialidad_Fiscal.TabIndex = 1;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -583,7 +583,7 @@
             this.No_Ext_Fiscal.Location = new System.Drawing.Point(119, 3);
             this.No_Ext_Fiscal.Name = "No_Ext_Fiscal";
             this.No_Ext_Fiscal.NullText = "NO. EXT";
-            this.No_Ext_Fiscal.Size = new System.Drawing.Size(110, 33);
+            this.No_Ext_Fiscal.Size = new System.Drawing.Size(110, 24);
             this.No_Ext_Fiscal.TabIndex = 8;
             this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -608,17 +608,6 @@
             this.lblCodigoPostalFiscal.Size = new System.Drawing.Size(148, 45);
             this.lblCodigoPostalFiscal.TabIndex = 0;
             this.lblCodigoPostalFiscal.Text = "Código Postal:";
-            // 
-            // Codigo_Postal_Fiscal
-            // 
-            this.Codigo_Postal_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Codigo_Postal_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Postal_Fiscal.Location = new System.Drawing.Point(157, 93);
-            this.Codigo_Postal_Fiscal.Name = "Codigo_Postal_Fiscal";
-            this.Codigo_Postal_Fiscal.NullText = "CODIGO POSTAL";
-            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(301, 39);
-            this.Codigo_Postal_Fiscal.TabIndex = 3;
-            this.Codigo_Postal_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
             // lblEstadoFiscal
             // 
@@ -666,7 +655,7 @@
             this.cboLocalidadFiscal.Location = new System.Drawing.Point(119, 3);
             this.cboLocalidadFiscal.Name = "cboLocalidadFiscal";
             this.cboLocalidadFiscal.NullText = "--SELECCIONE--";
-            this.cboLocalidadFiscal.Size = new System.Drawing.Size(343, 34);
+            this.cboLocalidadFiscal.Size = new System.Drawing.Size(343, 28);
             this.cboLocalidadFiscal.TabIndex = 2;
             this.cboLocalidadFiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -760,6 +749,20 @@
             this.panelCentral.Size = new System.Drawing.Size(942, 730);
             this.panelCentral.TabIndex = 1;
             // 
+            // Codigo_Postal
+            // 
+            this.Codigo_Postal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Codigo_Postal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Codigo_Postal.Location = new System.Drawing.Point(157, 93);
+            this.Codigo_Postal.Mask = "00000";
+            this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
+            this.Codigo_Postal.Name = "Codigo_Postal";
+            this.Codigo_Postal.Size = new System.Drawing.Size(301, 24);
+            this.Codigo_Postal.TabIndex = 13;
+            this.Codigo_Postal.TabStop = false;
+            this.Codigo_Postal.Text = "_____";
+            this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
+            // 
             // frmRegisterSite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,7 +807,6 @@
             this.tlpDF_01.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.No_Int_Fiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.No_Ext_Fiscal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Postal_Fiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboEstadoFiscal)).EndInit();
             this.tlpDF_03.ResumeLayout(false);
             this.tlpDF_03.PerformLayout();
@@ -816,6 +818,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardarSucursal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCentral)).EndInit();
             this.panelCentral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Postal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -860,7 +863,6 @@
         private Telerik.WinControls.UI.RadTextBox No_Ext_Fiscal;
         private System.Windows.Forms.Label lblNoExtFiscal;
         private System.Windows.Forms.Label lblCodigoPostalFiscal;
-        private Telerik.WinControls.UI.RadTextBox Codigo_Postal_Fiscal;
         private System.Windows.Forms.Label lblEstadoFiscal;
         private Telerik.WinControls.UI.RadDropDownList cboEstadoFiscal;
         private System.Windows.Forms.TableLayoutPanel tlpDF_03;
@@ -871,5 +873,6 @@
         private Telerik.WinControls.UI.RadButton btnFinalizar;
         private Telerik.WinControls.UI.RadButton btnCancelar;
         private Telerik.WinControls.UI.RadButton btnGuardarSucursal;
+        private Telerik.WinControls.UI.RadMaskedEditBox Codigo_Postal;
     }
 }
