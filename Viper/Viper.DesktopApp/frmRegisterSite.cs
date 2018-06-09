@@ -16,27 +16,5 @@ namespace Viper.DesktopApp
         {
             InitializeComponent();
         }
-
-        private void btnRegisterCompany_Click(object sender, EventArgs e)
-        {
-            frmRegisterCompany frm = new frmRegisterCompany();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void lblIdSucursal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel13_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

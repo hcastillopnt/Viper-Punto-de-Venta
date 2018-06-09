@@ -173,10 +173,12 @@
     <Content Include="images\icon\doctor.png" />
     <Content Include="images\icon\estadisticas.png" />
     <Content Include="images\icon\examinar.png" />
+    <Content Include="images\icon\guardar.png" />
     <Content Include="images\icon\hospital.png" />
     <Content Include="images\icon\inventario.png" />
     <Content Include="images\icon\lupa.png" />
     <Content Include="images\icon\medico.png" />
+    <Content Include="images\icon\nuevo.png" />
     <Content Include="images\icon\procesos.png" />
     <Content Include="images\icon\productos.png" />
     <Content Include="images\icon\reportes.png" />

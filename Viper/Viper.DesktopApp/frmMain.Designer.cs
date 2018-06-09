@@ -62,7 +62,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1366, 54);
+            this.BarraTitulo.Size = new System.Drawing.Size(1360, 54);
             this.BarraTitulo.TabIndex = 0;
             // 
             // lblPuesto
@@ -72,9 +72,8 @@
             this.lblPuesto.ForeColor = System.Drawing.SystemColors.Window;
             this.lblPuesto.Location = new System.Drawing.Point(86, 28);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(75, 20);
+            this.lblPuesto.Size = new System.Drawing.Size(0, 20);
             this.lblPuesto.TabIndex = 0;
-            this.lblPuesto.Text = puest.ToUpper();
             // 
             // lblNombre
             // 
@@ -83,9 +82,8 @@
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Window;
             this.lblNombre.Location = new System.Drawing.Point(86, 4);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 20);
+            this.lblNombre.Size = new System.Drawing.Size(0, 20);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = nomcomp.ToUpper();
             // 
             // picFotoPerfil
             // 
@@ -202,7 +200,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(220, 54);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1146, 714);
+            this.pnlContenedor.Size = new System.Drawing.Size(1140, 714);
             this.pnlContenedor.TabIndex = 2;
             // 
             // timer
@@ -214,7 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1360, 768);
             this.ControlBox = false;
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.MenuVertical);

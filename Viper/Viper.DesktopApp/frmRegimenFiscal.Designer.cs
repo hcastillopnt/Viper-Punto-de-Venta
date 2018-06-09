@@ -46,7 +46,7 @@
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.Location = new System.Drawing.Point(286, 502);
+            this.btnAceptar.Location = new System.Drawing.Point(286, 402);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(230, 48);
             this.btnAceptar.TabIndex = 6;
@@ -66,15 +66,15 @@
             // 
             // gvRegimenFiscal
             // 
+            this.gvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.gvRegimenFiscal.Location = new System.Drawing.Point(12, 124);
             // 
             // 
             // 
             this.gvRegimenFiscal.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gvRegimenFiscal.Name = "gvRegimenFiscal";
-            this.gvRegimenFiscal.Size = new System.Drawing.Size(760, 372);
+            this.gvRegimenFiscal.Size = new System.Drawing.Size(760, 266);
             this.gvRegimenFiscal.TabIndex = 0;
-            this.gvRegimenFiscal.Text = "radGridView1";
             this.gvRegimenFiscal.ThemeName = "VisualStudio2012Light";
             // 
             // picEmpresa
@@ -92,7 +92,7 @@
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(784, 462);
             this.Controls.Add(this.picEmpresa);
             this.Controls.Add(this.lblRegimenFiscal);
             this.Controls.Add(this.btnAceptar);

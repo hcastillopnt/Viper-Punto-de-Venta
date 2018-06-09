@@ -24,6 +24,7 @@ namespace Viper.DesktopApp
             this.rol = rol;
             this.nomcomp = fullname;
             this.puest = puesto;
+
             //Inicializar la interfaz grafica
             InitializeComponent();
 
@@ -33,7 +34,11 @@ namespace Viper.DesktopApp
             //Cargar menu de opciones
             CargarMenuVertical();
 
-            //this.nom = nombre;
+            //Colocar nombre del puesto
+            lblPuesto.Text = puest.ToUpper();
+
+            //Colocar nombre de la persona
+            lblNombre.Text = nomcomp.ToUpper();
 
         }
 
