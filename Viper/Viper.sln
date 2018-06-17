@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viper.BusinessLogicLayer", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viper.WebAPI", "Viper.WebAPI\Viper.WebAPI.csproj", "{106C9593-8BD0-4292-9822-E0BAE2C326A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viper.WebMvc", "Viper.WebMvc\Viper.WebMvc.csproj", "{D2D63F63-84CC-4D6C-A866-2908CDB5DBFA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viper.AndroidApp", "Viper.AndroidApp\Viper.AndroidApp.csproj", "{E04C5547-9157-4254-A30B-9C77A5BCAD1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viper.WebAspx", "Viper.WebAspx\Viper.WebAspx.csproj", "{EC356367-4564-4963-B433-029A5DB7D6E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,16 +43,16 @@ Global
 		{106C9593-8BD0-4292-9822-E0BAE2C326A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{106C9593-8BD0-4292-9822-E0BAE2C326A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{106C9593-8BD0-4292-9822-E0BAE2C326A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2D63F63-84CC-4D6C-A866-2908CDB5DBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2D63F63-84CC-4D6C-A866-2908CDB5DBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2D63F63-84CC-4D6C-A866-2908CDB5DBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2D63F63-84CC-4D6C-A866-2908CDB5DBFA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E04C5547-9157-4254-A30B-9C77A5BCAD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E04C5547-9157-4254-A30B-9C77A5BCAD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04C5547-9157-4254-A30B-9C77A5BCAD1E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{E04C5547-9157-4254-A30B-9C77A5BCAD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04C5547-9157-4254-A30B-9C77A5BCAD1E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E04C5547-9157-4254-A30B-9C77A5BCAD1E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EC356367-4564-4963-B433-029A5DB7D6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC356367-4564-4963-B433-029A5DB7D6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC356367-4564-4963-B433-029A5DB7D6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC356367-4564-4963-B433-029A5DB7D6E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
