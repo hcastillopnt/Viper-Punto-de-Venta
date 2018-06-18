@@ -5118,7 +5118,7 @@ CREATE TABLE `Company` (
   `RegimenFiscalId` int(11) NOT NULL,
   `AccountBankId` int(11) NOT NULL,
   `RFC` varchar(13) NOT NULL,
-  `CURP` varchar(25) NOT NULL,
+  `CURP` varchar(25) NULL,
   `ApiKey` varchar(100) NULL,
   `BusinessActivity` varchar(30) NULL,
   `Logo` longblob NULL,
@@ -5145,19 +5145,19 @@ CREATE TABLE `Company` (
 CREATE TABLE `Employee` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `EmployeeIDNumber` VARCHAR(100) NOT NULL,
-  `IS` varchar(5) NOT NULL,
-  `FirstName` varchar(30) NOT NULL,
-  `MiddleName` varchar(30) NOT NULL,
-  `LastName` varchar(30) NOT NULL,
-  `FullName` varchar(50) NOT NULL,
+  `IS` varchar(5) NULL,
+  `FirstName` varchar(30) NULL,
+  `MiddleName` varchar(30) NULL,
+  `LastName` varchar(30) NULL,
+  `FullName` varchar(50) NULL,
   `PhoneNumber` varchar(10) NULL,
   `CellphoneNumber` varchar(13) NULL,
   `LoginID` VARCHAR(256) NOT NULL,
-  `JobTitle` VARCHAR(50) NOT NULL,
-  `BirthDate` VARCHAR(10) NOT NULL,
-  `MaritalStatusId` INT NOT NULL COMMENT 'Llave foranea de Estado Civil',
-  `GenderId` INT NOT NULL COMMENT 'Llave foranea de Genero',
-  `AddressId` int(11) NOT NULL,
+  `JobTitle` VARCHAR(50) NULL,
+  `BirthDate` VARCHAR(10) NULL,
+  `MaritalStatusId` INT NULL COMMENT 'Llave foranea de Estado Civil',
+  `GenderId` INT NULL COMMENT 'Llave foranea de Genero',
+  `AddressId` int(11) NULL,
   `RFC` varchar(13) NULL,
   `CURP` varchar(18) NULL,
   `NSS` varchar(16) NULL,
@@ -5481,8 +5481,11 @@ INSERT INTO ProductSubCategory (ProductCategoryId, Name, CreatedDate, CreateBy) 
 
 CREATE TABLE `Product` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `BarCode` varchar(20) NOT NULL,
-  `Description` varchar(200) NOT NULL,
+  `BarCode` varchar(45) NOT NULL,
+  `AlternateKey` varchar(45) NULL,
+  `Description` varchar(200) NULL,
+  `IsService` tinyint(1) NOT NULL,
+  `Location` varchar(10) NULL,
   `ActiveSubstance` varchar(200) NULL,
   `ProductSubCategoryId` INT NULL COMMENT 'Llave foranea de SubCategoria de Producto',
   `QuantityPerUnit` int(11) NOT NULL DEFAULT '0',
@@ -5493,6 +5496,10 @@ CREATE TABLE `Product` (
   -- `UnitsInStock` int(11) NOT NULL DEFAULT '0',
   `IsDiscontinued` tinyint(1) NOT NULL DEFAULT '0',
   `DiscontinuedDate` DATE NULL,
+  `InvMin` int(11) NOT NULL DEFAULT '0',
+  `InvMax` int(11) NOT NULL DEFAULT '0',
+  `IsLot` tinyint(1) NOT NULL,
+  `IsRecipe` tinyint(1) NOT NULL,
   
   -- START: AuditableEntity --
   `CreatedDate` DATETIME NULL,
@@ -5501,6 +5508,46 @@ CREATE TABLE `Product` (
   `ModifiedBy` VARCHAR(6) NULL
   -- END: AuditableEntity --
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los productos del inventario';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `Image`
+--
+
+CREATE TABLE `Image` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Image` longblob NOT NULL,
+  
+    -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las imagenes';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla `ProductImage`
+--
+
+CREATE TABLE `ProductImage` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
+  `ImageId` INT NOT NULL COMMENT 'Llave foranea de Image',
+  
+    -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+  FOREIGN KEY (ProductId) REFERENCES Product(Id),
+  FOREIGN KEY (ImageId) REFERENCES Image(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las imagenes de un producto';
 
 -- --------------------------------------------------------
 
@@ -5536,7 +5583,7 @@ CREATE TABLE `ProductCostHistory` (
    `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
    `SiteId` INT NOT NULL COMMENT 'Llave foranea de Sucursal',
    `StartDate` DATETIME NOT NULL,
-   `EndDate` DATETIME NOT NULL,
+   `EndDate` DATETIME NULL,
    `StandardCost` decimal(16,2) NOT NULL DEFAULT '0.00',
    
   -- START: AuditableEntity --
@@ -5561,7 +5608,7 @@ CREATE TABLE `ProductCostHistory` (
    `ProductId` INT NOT NULL COMMENT 'Llave foranea de Producto',
    `SiteId` INT NOT NULL COMMENT 'Llave foranea de Sucursal',
    `StartDate` DATETIME NOT NULL,
-   `EndDate` DATETIME NOT NULL,
+   `EndDate` DATETIME NULL,
    `ListPrice` decimal(16,2) NOT NULL DEFAULT '0.00',
 
     -- START: AuditableEntity --
