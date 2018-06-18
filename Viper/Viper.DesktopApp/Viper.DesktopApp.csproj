@@ -66,6 +66,24 @@
     <Reference Include="TelerikCommon, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProductToInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProductToInventory.Designer.cs">
+      <DependentUpon>frmAddProductToInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrudProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrudProduct.Designer.cs">
+      <DependentUpon>frmCrudProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,15 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProductToInventory.resx">
+      <DependentUpon>frmAddProductToInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrudProduct.resx">
+      <DependentUpon>frmCrudProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
