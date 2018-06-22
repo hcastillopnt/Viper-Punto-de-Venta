@@ -17,8 +17,6 @@ namespace Viper.DesktopApp
             InitializeComponent();
         }
 
-
-
         #region CONTROLAR TAB ORDER
         // TAB DE CODIGO POSTAL A NUMERO EXTERIOR 
         private void Codigo_Postal_Leave(object sender, EventArgs e)

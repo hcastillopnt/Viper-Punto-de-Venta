@@ -33,7 +33,11 @@ namespace Viper.DesktopApp
         {
             Codigo_de_barras.Focus();
         }
-       #endregion
+        #endregion
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

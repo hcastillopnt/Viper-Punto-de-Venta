@@ -11,11 +11,11 @@ using Telerik.WinControls.UI;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmRegisterCompany : Form
+    public partial class frmAdminProducts : Form
     {
         RadButton objButton = null;
 
-        public frmRegisterCompany()
+        public frmAdminProducts()
         {
             InitializeComponent();
         }
@@ -26,17 +26,12 @@ namespace Viper.DesktopApp
 
             switch(objButton.Name)
             {
-                case "btnRegimenFiscal":
-                    frmRegimenFiscal form = new frmRegimenFiscal();
+                case "btnAgregar":
+                    frmAddProduct form = new frmAddProduct();
                     form.ShowDialog();
                     form.TopMost = true;
                     break;
             }
-        }
-
-        private void frmRegisterCompany_Load(object sender, EventArgs e)
-        {
-            btnRegimenFiscal.Click += Button_Click;
         }
     }
 }

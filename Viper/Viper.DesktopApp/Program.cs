@@ -16,7 +16,8 @@ namespace Viper.DesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin ());
+            Application.Run(new frmMain ("ADMINISTRADOR", "HORACIO ENRIQUE CASTILLO PUENTE", "GERENTE GENERAL"));
+            //Application.Run(new frmLogin());
         }
     }
 }
