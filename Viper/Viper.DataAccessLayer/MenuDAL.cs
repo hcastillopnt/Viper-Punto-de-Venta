@@ -45,16 +45,16 @@ namespace Viper.DataAccessLayer
                                       select new
                                       {
                                           p.Name,
+                                          p.Menu,
                                           p.ControlName,
-                                          p.ControlText,
                                           p.ControlImage
                                       }).ToList();
 
                         //Crear las columnas del DataTable
                         dt.Columns.AddRange(new DataColumn[]{
                                 new DataColumn("Name", typeof(string)),
+                                new DataColumn("Menu", typeof(string)),
                                 new DataColumn("ControlName", typeof(string)),
-                                new DataColumn("ControlText", typeof(string)),
                                 new DataColumn("ControlImage", typeof(string))
                             });
 
@@ -66,8 +66,8 @@ namespace Viper.DataAccessLayer
 
                             //Cargar los datos de la fila
                             row["Name"] = x.Name;
+                            row["Menu"] = x.Menu;
                             row["ControlName"] = x.ControlName;
-                            row["ControlText"] = x.ControlText;
                             row["ControlImage"] = x.ControlImage;
 
                             //Añadir fila al DataTable

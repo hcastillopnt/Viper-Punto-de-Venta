@@ -24,6 +24,22 @@ namespace Viper.BusinessEntities
         public string Name { get; set; }
 
         /// <summary>
+        /// Campo Menu
+        /// </summary>
+        [Required(ErrorMessage = "El campo Menu es obligatorio")]
+        [StringLength(50, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string Menu { get; set; }
+
+        /// <summary>
+        /// Campo SubMenu
+        /// </summary>
+        [Required(ErrorMessage = "El campo SubMenu es obligatorio")]
+        [StringLength(50, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string SubMenu { get; set; }
+
+        /// <summary>
         /// Campo ControlName
         /// </summary>
         [Required(ErrorMessage = "El campo ControlName es obligatorio")]
@@ -32,12 +48,11 @@ namespace Viper.BusinessEntities
         public string ControlName { get; set; }
 
         /// <summary>
-        /// Campo ControlText
+        /// Campo SubControlName
         /// </summary>
-        [Required(ErrorMessage = "El campo ControlText es obligatorio")]
         [StringLength(30, MinimumLength = 1)]
         [DataType(DataType.Text)]
-        public string ControlText { get; set; }
+        public string SubControlName { get; set; }
 
         /// <summary>
         /// Campo ControlImage
@@ -46,34 +61,12 @@ namespace Viper.BusinessEntities
         [StringLength(100, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string ControlImage { get; set; }
-        /// <summary>
-        /// Campo CreatedDate
-        /// </summary>
-        [Required(ErrorMessage = "El campo CreatedDate es obligatorio")]
-        [DataType(DataType.DateTime)]
-        public DateTime CreatedDate { get; set; }
 
         /// <summary>
-        /// Campo CreateBy
+        /// Campo SubControlImage
         /// </summary>
-        [Required(ErrorMessage = "El campo CreateBy es obligatorio")]
-        [StringLength(6, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 1)]
         [DataType(DataType.Text)]
-        public string CreateBy { get; set; }
-
-        /// <summary>
-        /// Campo ModifiedDate
-        /// </summary>
-        [Required(ErrorMessage = "El campo ModifiedDate es obligatorio")]
-        [DataType(DataType.DateTime)]
-        public DateTime ModifiedDate { get; set; }
-
-        /// <summary>
-        /// Campo ModifiedBy
-        /// </summary>
-        [Required(ErrorMessage = "El campo ModifiedBy es obligatorio")]
-        [StringLength(6, MinimumLength = 1)]
-        [DataType(DataType.Text)]
-        public string ModifiedBy { get; set; }
+        public string SubControlImage { get; set; }
     }
 }
