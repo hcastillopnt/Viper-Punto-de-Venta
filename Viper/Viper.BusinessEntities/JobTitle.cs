@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class RoadType
+    public class JobTitle
     {
         /// <summary>
         /// Campo Id
@@ -19,10 +19,15 @@ namespace Viper.BusinessEntities
         /// Campo Name
         /// </summary>
         [Required(ErrorMessage = "El campo Name es obligatorio")]
-        [StringLength(100, MinimumLength = 2)]
+        [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Name { get; set; }
 
-       
+        /// <summary>
+        /// Campo RoleId
+        /// </summary>
+        [Required(ErrorMessage = "El campo DepartmentId es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int DepartmentId { get; set; }
     }
 }

@@ -193,7 +193,7 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 54);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(286, 714);
+            this.MenuVertical.Size = new System.Drawing.Size(286, 695);
             this.MenuVertical.TabIndex = 1;
             // 
             // tlpContenedorVertical
@@ -210,7 +210,7 @@
             this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.26611F));
             this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.63025F));
             this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.243697F));
-            this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 714);
+            this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 695);
             this.tlpContenedorVertical.TabIndex = 0;
             // 
             // btnCerrarSesion
@@ -225,9 +225,9 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 650);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 632);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 61);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 60);
             this.btnCerrarSesion.TabIndex = 10;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,7 +239,7 @@
             this.tlpMenuVertical.ColumnCount = 1;
             this.tlpMenuVertical.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMenuVertical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMenuVertical.Location = new System.Drawing.Point(3, 111);
+            this.tlpMenuVertical.Location = new System.Drawing.Point(3, 108);
             this.tlpMenuVertical.Name = "tlpMenuVertical";
             this.tlpMenuVertical.RowCount = 9;
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -251,7 +251,7 @@
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tlpMenuVertical.Size = new System.Drawing.Size(280, 533);
+            this.tlpMenuVertical.Size = new System.Drawing.Size(280, 518);
             this.tlpMenuVertical.TabIndex = 17;
             // 
             // picLogotipo
@@ -261,7 +261,7 @@
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picLogotipo.Location = new System.Drawing.Point(3, 3);
             this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(280, 102);
+            this.picLogotipo.Size = new System.Drawing.Size(280, 99);
             this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
@@ -272,7 +272,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(286, 54);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1080, 714);
+            this.pnlContenedor.Size = new System.Drawing.Size(1080, 695);
             this.pnlContenedor.TabIndex = 2;
             // 
             // timer
@@ -283,26 +283,24 @@
             // 
             this.AutoSize = true;
             this.CancelButton = this.btnCerrarSesion;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1366, 749);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlContenedor);
+            this.Controls.Add(this.MenuVertical);
+            this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
             this.TopMost = true;
-
-            this.Controls.Add(this.pnlContenedor);
-            this.Controls.Add(this.MenuVertical);
-            this.Controls.Add(this.BarraTitulo);
-            this.KeyPreview = true;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.BarraTitulo.ResumeLayout(false);
             this.tlp01.ResumeLayout(false);
             this.tlp02.ResumeLayout(false);
             this.tlp02.PerformLayout();
-
             ((System.ComponentModel.ISupportInitialize)(this.picReloj)).EndInit();
             this.tlp03.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picFotoPerfil)).EndInit();

@@ -7,13 +7,21 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Membership
+    public class User
     {
         /// <summary>
         /// Campo Id
         /// </summary>
         [Key]
         public int Id { get; set; }
+
+        /// <summary>
+        /// Campo LoginID
+        /// </summary>
+        [Required(ErrorMessage = "El campo LoginID es obligatorio")]
+        [StringLength(256, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string LoginID { get; set; }
 
         /// <summary>
         /// Campo EmployeeId
@@ -92,6 +100,13 @@ namespace Viper.BusinessEntities
         /// </summary>
         [Required(ErrorMessage = "El campo IsEnabled es obligatorio")]
         public byte IsEnabled { get; set; }
+
+        /// <summary>
+        /// Campo EmployeeId
+        /// </summary>
+        [Required(ErrorMessage = "El campo RoleID es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int RoleId { get; set; }
 
         /// <summary>
         /// Campo CreatedDate

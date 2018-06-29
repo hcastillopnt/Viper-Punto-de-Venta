@@ -66,7 +66,6 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo PhoneNumber
         /// </summary>
-        [Required(ErrorMessage = "El campo PhoneNumber es obligatorio")]
         [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
@@ -74,31 +73,20 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CellphoneNumber
         /// </summary>
-        [Required(ErrorMessage = "El campo CellphoneNumber es obligatorio")]
         [StringLength(13, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string CellphoneNumber { get; set; }
 
+        
         /// <summary>
-        /// Campo LoginID
+        /// Campo JobTitleId
         /// </summary>
-        [Required(ErrorMessage = "El campo LoginID es obligatorio")]
-        [StringLength(256, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string LoginID { get; set; }
-
-        /// <summary>
-        /// Campo JobTitle
-        /// </summary>
-        [Required(ErrorMessage = "El campo JobTitle es obligatorio")]
-        [StringLength(50, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string JobTitle { get; set; }
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int JobTitleId { get; set; }
 
         /// <summary>
         /// Campo BirthDate
         /// </summary>
-        [Required(ErrorMessage = "El campo BirthDate es obligatorio")]
         [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string BirthDate { get; set; }
@@ -106,16 +94,21 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo MaritalStatusID
         /// </summary>
-        [Required(ErrorMessage = "El campo ID es obligatorio")]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int MaritalStatusId { get; set; }
 
         /// <summary>
         /// Campo GenderID
         /// </summary>
-        [Required(ErrorMessage = "El campo GenderID es obligatorio")]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int GenderId { get; set; }
+
+        /// <summary>
+        /// Campo EmployeeId
+        /// </summary>
+        [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int AddressId { get; set; }
 
         /// <summary>
         /// Campo RFC
@@ -151,6 +144,34 @@ namespace Viper.BusinessEntities
         /// </summary>
         public byte[] FingerPrint { get; set; }
 
+        /// <summary>
+        /// Campo ShiftId
+        /// </summary>
+        [Required(ErrorMessage = "El campo ShiftID es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int ShiftId { get; set; }
+
+        /// <summary>
+        /// Campo StartDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo StartDate es obligatorio")]
+        [DataType(DataType.DateTime)]
+        public DateTime StartDate { get; set; }
+
+        /// <summary>
+        /// Campo StartDate
+        /// </summary>
+        [Required(ErrorMessage = "El campo EndDate es obligatorio")]
+        [DataType(DataType.DateTime)]
+        public DateTime EndDate { get; set; }
+
+
+        /// <summary>
+        /// Campo IsActive
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsActive es obligatorio")]
+        public byte IsActive { get; set; }
+        
         /// <summary>
         /// Campo CreatedDate
         /// </summary>
