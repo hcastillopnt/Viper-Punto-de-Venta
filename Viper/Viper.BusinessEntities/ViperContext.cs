@@ -27,6 +27,7 @@ namespace Viper.BusinessEntities
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
         public DbSet<Gender> Genders { get; set; }
+        public DbSet<MaritalStatus> MaritalStatuses { get; set; }
         public DbSet<User> Memberships { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<RegimenFiscal> RegimenesFiscal { get; set; }

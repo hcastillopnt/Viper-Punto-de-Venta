@@ -22,6 +22,5 @@ namespace Viper.BusinessEntities
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string Name { get; set; }
-
     }
 }

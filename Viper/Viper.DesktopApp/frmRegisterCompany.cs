@@ -25,7 +25,7 @@ namespace Viper.DesktopApp
         {
             objButton = (RadButton)sender;
 
-            switch(objButton.Name)
+            switch (objButton.Name)
             {
                 case "btnRegimenFiscal":
                     frmRegimenFiscal form = new frmRegimenFiscal();
@@ -134,7 +134,7 @@ namespace Viper.DesktopApp
             mem.RoleId = 1;
             #endregion
 
-        
+
 
             string message = BusinessLogicLayer.CRUDCompanyBLL.sp_insert_company(ad, c, ads, emp, mem);
 
@@ -156,25 +156,26 @@ namespace Viper.DesktopApp
             cboTipoInmueble.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
             cboTipoInmueble.DisplayMember = "Name";
             cboTipoInmueble.ValueMember = "Id";
+
             cboTipoInmuebleFiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
             cboTipoInmuebleFiscal.DisplayMember = "Name";
             cboTipoInmuebleFiscal.ValueMember = "Id";
-
-            //cargar en combobox los estados por medio del metodo correspondiente
-            cboEstado.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList(); ;
-            cboEstado.DisplayMember = "Description";
-            cboEstado.ValueMember = "Id";
 
             //cargar en combobo los tipos de vialidad
             //NOTA: POR ALGUNA RAZON NO FUNCIONA EL METODO SI HAY UN CAMPO NULO
             cboTipoVialidad.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
             cboTipoVialidad.DisplayMember = "Name";
             cboTipoVialidad.ValueMember = "Id";
+
             cboTipoVialidadFiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
             cboTipoVialidadFiscal.DisplayMember = "Name";
             cboTipoVialidadFiscal.ValueMember = "Id";
 
-            //cargar en combobox los estados para el estado fiscal
+            //cargar en combobox los estados por medio del metodo correspondiente
+            cboEstado.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList(); ;
+            cboEstado.DisplayMember = "Description";
+            cboEstado.ValueMember = "Id";
+
             cboEstadoFiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList();
             cboEstadoFiscal.DisplayMember = "Description";
             cboEstadoFiscal.ValueMember = "Id";
@@ -184,7 +185,6 @@ namespace Viper.DesktopApp
             cboTipoVialidad.SelectedIndex = 0;
             cboEstado.SelectedIndex = 0;
             cboLocalidad.SelectedIndex = 0;
-
             cboEstadoFiscal.SelectedIndex = 0;
             cboLocalidad.SelectedIndex = 0;
         }
