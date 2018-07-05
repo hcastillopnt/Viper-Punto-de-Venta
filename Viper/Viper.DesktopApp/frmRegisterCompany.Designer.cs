@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterCompany));
             this.tlpDatosGenerales_1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNombreEmpresa = new System.Windows.Forms.Label();
@@ -196,10 +199,16 @@
             this.cboGiro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboGiro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cboGiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radListDataItem1.Text = "ListItem 1";
+            radListDataItem2.Text = "ListItem 2";
+            radListDataItem3.Text = "ListItem 3";
+            this.cboGiro.Items.Add(radListDataItem1);
+            this.cboGiro.Items.Add(radListDataItem2);
+            this.cboGiro.Items.Add(radListDataItem3);
             this.cboGiro.Location = new System.Drawing.Point(152, 3);
             this.cboGiro.Name = "cboGiro";
             this.cboGiro.NullText = "--SELECCIONE--";
-            this.cboGiro.Size = new System.Drawing.Size(588, 28);
+            this.cboGiro.Size = new System.Drawing.Size(588, 32);
             this.cboGiro.TabIndex = 1;
             this.cboGiro.ThemeName = "VisualStudio2012Light";
             // 
@@ -362,7 +371,7 @@
             this.Colonia.Location = new System.Drawing.Point(151, 105);
             this.Colonia.Name = "Colonia";
             this.Colonia.NullText = "COLONIA";
-            this.Colonia.Size = new System.Drawing.Size(589, 24);
+            this.Colonia.Size = new System.Drawing.Size(589, 28);
             this.Colonia.TabIndex = 1;
             this.Colonia.ThemeName = "VisualStudio2012Light";
             // 
@@ -433,7 +442,7 @@
             this.Vialidad.Location = new System.Drawing.Point(183, 3);
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "VIALIDAD";
-            this.Vialidad.Size = new System.Drawing.Size(161, 24);
+            this.Vialidad.Size = new System.Drawing.Size(161, 22);
             this.Vialidad.TabIndex = 1;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -474,7 +483,7 @@
             this.No_Int.Location = new System.Drawing.Point(262, 3);
             this.No_Int.Name = "No_Int";
             this.No_Int.NullText = "NO. INT";
-            this.No_Int.Size = new System.Drawing.Size(82, 24);
+            this.No_Int.Size = new System.Drawing.Size(82, 22);
             this.No_Int.TabIndex = 9;
             this.No_Int.ThemeName = "VisualStudio2012Light";
             // 
@@ -496,7 +505,7 @@
             this.No_Ext.Location = new System.Drawing.Point(96, 3);
             this.No_Ext.Name = "No_Ext";
             this.No_Ext.NullText = "NO. EXT";
-            this.No_Ext.Size = new System.Drawing.Size(80, 24);
+            this.No_Ext.Size = new System.Drawing.Size(80, 22);
             this.No_Ext.TabIndex = 8;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
             // 
@@ -541,7 +550,7 @@
             this.cboEstado.Location = new System.Drawing.Point(151, 139);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.NullText = "--SELECCIONE--";
-            this.cboEstado.Size = new System.Drawing.Size(236, 28);
+            this.cboEstado.Size = new System.Drawing.Size(236, 31);
             this.cboEstado.TabIndex = 1;
             this.cboEstado.ThemeName = "VisualStudio2012Light";
             this.cboEstado.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstado_SelectedIndexChanged);
@@ -569,7 +578,7 @@
             this.cboLocalidad.Location = new System.Drawing.Point(96, 3);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.NullText = "--SELECCIONE--";
-            this.cboLocalidad.Size = new System.Drawing.Size(248, 28);
+            this.cboLocalidad.Size = new System.Drawing.Size(248, 25);
             this.cboLocalidad.TabIndex = 2;
             this.cboLocalidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -592,7 +601,7 @@
             this.Codigo_Postal.Mask = "00000";
             this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
-            this.Codigo_Postal.Size = new System.Drawing.Size(236, 24);
+            this.Codigo_Postal.Size = new System.Drawing.Size(236, 28);
             this.Codigo_Postal.TabIndex = 13;
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
@@ -719,7 +728,7 @@
             this.cboTipoInmuebleFiscal.Location = new System.Drawing.Point(161, 3);
             this.cboTipoInmuebleFiscal.Name = "cboTipoInmuebleFiscal";
             this.cboTipoInmuebleFiscal.NullText = "--SELECCIONE--";
-            this.cboTipoInmuebleFiscal.Size = new System.Drawing.Size(295, 28);
+            this.cboTipoInmuebleFiscal.Size = new System.Drawing.Size(295, 31);
             this.cboTipoInmuebleFiscal.TabIndex = 7;
             this.cboTipoInmuebleFiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -731,7 +740,7 @@
             this.Colonia_Fiscal.Location = new System.Drawing.Point(161, 114);
             this.Colonia_Fiscal.Name = "Colonia_Fiscal";
             this.Colonia_Fiscal.NullText = "COLONIA (FISCAL)";
-            this.Colonia_Fiscal.Size = new System.Drawing.Size(765, 24);
+            this.Colonia_Fiscal.Size = new System.Drawing.Size(765, 31);
             this.Colonia_Fiscal.TabIndex = 1;
             this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -776,7 +785,7 @@
             this.cboTipoVialidadFiscal.Location = new System.Drawing.Point(161, 40);
             this.cboTipoVialidadFiscal.Name = "cboTipoVialidadFiscal";
             this.cboTipoVialidadFiscal.NullText = "--SELECCIONE--";
-            this.cboTipoVialidadFiscal.Size = new System.Drawing.Size(295, 28);
+            this.cboTipoVialidadFiscal.Size = new System.Drawing.Size(295, 31);
             this.cboTipoVialidadFiscal.TabIndex = 2;
             this.cboTipoVialidadFiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -802,7 +811,7 @@
             this.Vialidad_Fiscal.Location = new System.Drawing.Point(163, 3);
             this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
             this.Vialidad_Fiscal.NullText = "VIALIDAD (FISCAL)";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(298, 24);
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(298, 25);
             this.Vialidad_Fiscal.TabIndex = 1;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -843,7 +852,7 @@
             this.No_Int_Fiscal.Location = new System.Drawing.Point(351, 3);
             this.No_Int_Fiscal.Name = "No_Int_Fiscal";
             this.No_Int_Fiscal.NullText = "NO. INT";
-            this.No_Int_Fiscal.Size = new System.Drawing.Size(110, 24);
+            this.No_Int_Fiscal.Size = new System.Drawing.Size(110, 25);
             this.No_Int_Fiscal.TabIndex = 9;
             this.No_Int_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -865,7 +874,7 @@
             this.No_Ext_Fiscal.Location = new System.Drawing.Point(119, 3);
             this.No_Ext_Fiscal.Name = "No_Ext_Fiscal";
             this.No_Ext_Fiscal.NullText = "NO. EXT";
-            this.No_Ext_Fiscal.Size = new System.Drawing.Size(110, 24);
+            this.No_Ext_Fiscal.Size = new System.Drawing.Size(110, 25);
             this.No_Ext_Fiscal.TabIndex = 8;
             this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -910,7 +919,7 @@
             this.cboEstadoFiscal.Location = new System.Drawing.Point(161, 151);
             this.cboEstadoFiscal.Name = "cboEstadoFiscal";
             this.cboEstadoFiscal.NullText = "--SELECCIONE--";
-            this.cboEstadoFiscal.Size = new System.Drawing.Size(295, 28);
+            this.cboEstadoFiscal.Size = new System.Drawing.Size(295, 35);
             this.cboEstadoFiscal.TabIndex = 1;
             this.cboEstadoFiscal.ThemeName = "VisualStudio2012Light";
             this.cboEstadoFiscal.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstadoFiscal_SelectedIndexChanged);
@@ -938,7 +947,7 @@
             this.cboLocalidadFiscal.Location = new System.Drawing.Point(119, 3);
             this.cboLocalidadFiscal.Name = "cboLocalidadFiscal";
             this.cboLocalidadFiscal.NullText = "--SELECCIONE--";
-            this.cboLocalidadFiscal.Size = new System.Drawing.Size(342, 28);
+            this.cboLocalidadFiscal.Size = new System.Drawing.Size(342, 29);
             this.cboLocalidadFiscal.TabIndex = 2;
             this.cboLocalidadFiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -961,7 +970,7 @@
             this.Codigo_Postal_Fiscal.Mask = "00000";
             this.Codigo_Postal_Fiscal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal_Fiscal.Name = "Codigo_Postal_Fiscal";
-            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(295, 24);
+            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(295, 31);
             this.Codigo_Postal_Fiscal.TabIndex = 13;
             this.Codigo_Postal_Fiscal.TabStop = false;
             this.Codigo_Postal_Fiscal.Text = "_____";
@@ -1054,7 +1063,7 @@
             this.RFC.Location = new System.Drawing.Point(158, 37);
             this.RFC.Name = "RFC";
             this.RFC.NullText = "R.F.C.  (FISCAL)";
-            this.RFC.Size = new System.Drawing.Size(768, 24);
+            this.RFC.Size = new System.Drawing.Size(768, 28);
             this.RFC.TabIndex = 2;
             this.RFC.ThemeName = "VisualStudio2012Light";
             // 
@@ -1076,7 +1085,7 @@
             this.CURP.Location = new System.Drawing.Point(158, 71);
             this.CURP.Name = "CURP";
             this.CURP.NullText = "C.U.R.P.  (FISCAL)";
-            this.CURP.Size = new System.Drawing.Size(768, 24);
+            this.CURP.Size = new System.Drawing.Size(768, 28);
             this.CURP.TabIndex = 3;
             this.CURP.ThemeName = "VisualStudio2012Light";
             // 
@@ -1087,7 +1096,7 @@
             this.Nombre_Fiscal.Location = new System.Drawing.Point(158, 3);
             this.Nombre_Fiscal.Name = "Nombre_Fiscal";
             this.Nombre_Fiscal.NullText = "NOMBRE FISCAL";
-            this.Nombre_Fiscal.Size = new System.Drawing.Size(768, 24);
+            this.Nombre_Fiscal.Size = new System.Drawing.Size(768, 28);
             this.Nombre_Fiscal.TabIndex = 1;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
             // 

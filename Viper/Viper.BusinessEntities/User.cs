@@ -49,7 +49,6 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo EmailAddress
         /// </summary>
-        [Required(ErrorMessage = "El campo EmailAddress es obligatorio")]
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string EmailAddress { get; set; }

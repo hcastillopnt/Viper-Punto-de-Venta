@@ -142,6 +142,29 @@ namespace Viper.DataAccessLayer
         }
         #endregion
 
+        public static string checkCompanyName()
+        {
+            string nombre=null;
+            bool isComp = db.Companies.ToList().Count() > 0;
+            if (isComp)
+            {
+                nombre = db.Companies.ToList().Last().CompanyName.ToUpper();
+
+            }
+            
+            return nombre;
+        }
+
+        public static int checkIdCompany()
+        {
+            int Cid=0;
+            bool isComp = db.Companies.ToList().Count() > 0;
+            if (isComp)
+            {
+                Cid = db.Companies.ToList().Last().Id;
+            }
+            return Cid;
+        }
         public static string checkEmployeeNumber()
         {
             int inc = 0;
@@ -270,6 +293,41 @@ namespace Viper.DataAccessLayer
             }
 
             return companies;
+        }
+
+        public static List<Site> getSites(int id_comp)
+        {
+            List<Site> Sites= new List<Site>();
+
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Site'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            Sites = ctx.Sites.Where(x=>x.CompanyId==id_comp).OrderBy(x => x.Name).ToList();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return Sites;
         }
 
         #region HandleDbUpdateException

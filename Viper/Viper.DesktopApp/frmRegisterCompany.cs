@@ -113,6 +113,11 @@ namespace Viper.DesktopApp
             emp.RFC = RFC.Text;
             emp.ShiftId = 4;
             emp.StartDate = f;
+            emp.JobTitleId = 1;
+            //agregar en base de datos, informacion por defecto sobre los siguientes dos campos
+            emp.GenderId = 3;
+            emp.MaritalStatusId = 6;
+            //---------------
             #endregion
 
             #region Usuario
@@ -120,6 +125,7 @@ namespace Viper.DesktopApp
             mem.LoginID = "admin.viper.1";
             mem.AccessFailed = 0;
             mem.CreateBy = "admin";
+            mem.EmailAddress = "NA";
             mem.CreatedDate = f;
             mem.IsActive = 1;
             mem.IsApproved = 1;
@@ -145,6 +151,12 @@ namespace Viper.DesktopApp
             else
             {
                 MessageBox.Show("Sucursal registrada exitosamente");
+                string nom=BusinessLogicLayer.CRUDCompanyBLL.checkCompanyName();
+                int cId = BusinessLogicLayer.CRUDCompanyBLL.checkIdCompany();
+                frmRegisterSite form = new frmRegisterSite(nom,cId);
+                form.ShowDialog();
+                form.TopMost = true;
+                this.Hide();
             }
 
         }

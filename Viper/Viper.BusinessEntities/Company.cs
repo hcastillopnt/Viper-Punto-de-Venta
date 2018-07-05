@@ -41,7 +41,6 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo PhoneNumber
         /// </summary>
-        [Required(ErrorMessage = "El campo PhoneNumber es obligatorio")]
         [StringLength(10, MinimumLength = 10)]
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
@@ -49,7 +48,6 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo CellphoneNumber
         /// </summary>
-        [Required(ErrorMessage = "El campo CellphoneNumber es obligatorio")]
         [StringLength(13, MinimumLength = 13)]
         [DataType(DataType.Text)]
         public string CellphoneNumber { get; set; }
@@ -57,7 +55,6 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo EmailAddress
         /// </summary>
-        [Required(ErrorMessage = "El campo EmailAddress es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string EmailAddress { get; set; }
@@ -103,14 +100,13 @@ namespace Viper.BusinessEntities
         /// Campo CURP
         /// </summary>
         [Required(ErrorMessage = "El campo CURP es obligatorio")]
-        [StringLength(25, MinimumLength = 25)]
+        [StringLength(18, MinimumLength = 18)]
         [DataType(DataType.Text)]
         public string CURP { get; set; }
 
         /// <summary>
         /// Campo ApiKey
         /// </summary>
-        [Required(ErrorMessage = "El campo ApiKey es obligatorio")]
         [StringLength(100, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string ApiKey { get; set; }

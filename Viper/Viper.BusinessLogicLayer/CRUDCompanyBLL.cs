@@ -64,6 +64,16 @@ namespace Viper.BusinessLogicLayer
         }
         #endregion
 
+        public static string checkCompanyName()
+        {
+            return DataAccessLayer.CRUDCompanyDAL.checkCompanyName();
+        }
+
+        public static int checkIdCompany()
+        {
+            return DataAccessLayer.CRUDCompanyDAL.checkIdCompany();
+        }
+
         public static string checkEmpId()
         {
             return DataAccessLayer.CRUDCompanyDAL.checkEmployeeNumber();
@@ -95,6 +105,15 @@ namespace Viper.BusinessLogicLayer
             companies = DataAccessLayer.CRUDCompanyDAL.getCompanies();
 
             return companies;
+        }
+
+        public static List<Site> getSites(int comp_id)
+        {
+            List<Site> sites= new List<Site>();
+
+            sites = DataAccessLayer.CRUDCompanyDAL.getSites(comp_id);
+
+            return sites;
         }
 
         #region Validate<T>

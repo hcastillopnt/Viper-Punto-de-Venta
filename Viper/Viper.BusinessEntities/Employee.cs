@@ -26,7 +26,6 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo IS
         /// </summary>
-        [Required(ErrorMessage = "El campo IS es obligatorio")]
         [StringLength(5, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string IS { get; set; }
@@ -34,7 +33,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo FisrtName
         /// </summary>
-        [Required(ErrorMessage = "El campo FirstName es obligatorio")]
+
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string FirstName { get; set; }
@@ -42,7 +41,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo MiddleName
         /// </summary>
-        [Required(ErrorMessage = "El campo MiddleName es obligatorio")]
+
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string MiddleName { get; set; }
@@ -50,7 +49,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo LastName
         /// </summary>
-        [Required(ErrorMessage = "El campo LastName es obligatorio")]
+
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string LastName { get; set; }
@@ -58,7 +57,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo FullName
         /// </summary>
-        [Required(ErrorMessage = "El campo FullName es obligatorio")]
+
         [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string FullName { get; set; }
@@ -129,7 +128,7 @@ namespace Viper.BusinessEntities
         /// <summary>
         /// Campo NSS
         /// </summary>
-        [Required(ErrorMessage = "El campo NSS es obligatorio")]
+
         [StringLength(16, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string NSS { get; set; }
