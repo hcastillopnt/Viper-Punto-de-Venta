@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -114,6 +115,36 @@ namespace Viper.BusinessLogicLayer
             sites = DataAccessLayer.CRUDCompanyDAL.getSites(comp_id);
 
             return sites;
+        }
+
+        public static DataTable getProducts()
+        {
+            return DataAccessLayer.CRUDCompanyDAL.getProducts();
+        }
+
+        public static DataTable getProduct(string barcode)
+        {
+            return DataAccessLayer.CRUDCompanyDAL.getProduct(barcode);
+        }
+
+        public static DataTable getSuppliers()
+        {
+            return DataAccessLayer.CRUDCompanyDAL.getSuppliers();
+        }
+
+        public static DataTable getSupplier(string supplierkey)
+        {
+            return DataAccessLayer.CRUDCompanyDAL.getSupplier(supplierkey);
+        }
+
+        public static DataTable getCustomers()
+        {
+            return DataAccessLayer.CRUDCompanyDAL.getCustomers();
+        }
+
+        public static DataTable getCustomer(string customerkey)
+        {
+            return DataAccessLayer.CRUDCompanyDAL.getCustomer(customerkey);
         }
 
         #region Validate<T>

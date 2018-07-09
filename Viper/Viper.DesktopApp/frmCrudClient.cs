@@ -16,5 +16,23 @@ namespace Viper.DesktopApp
         {
             InitializeComponent();
         }
+
+        private void frmCrudClient_Load(object sender, EventArgs e)
+        {
+            dgvCrudClient.DataSource = null;
+            dgvCrudClient.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getCustomers();
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            dgvCrudClient.DataSource = null;
+            dgvCrudClient.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getCustomers();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvCrudClient.DataSource = null;
+            dgvCrudClient.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getCustomer(Clave_cliente.Text);
+        }
     }
 }

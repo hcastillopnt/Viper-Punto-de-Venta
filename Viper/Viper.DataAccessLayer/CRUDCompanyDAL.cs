@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
+using System.Data;
 
 namespace Viper.DataAccessLayer
 {
@@ -328,6 +329,487 @@ namespace Viper.DataAccessLayer
             }
 
             return Sites;
+        }
+
+        public static DataTable getProducts()
+        {
+            List<Product> Products = new List<Product>();
+            DataTable dt = new DataTable();
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Product'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            //Recuperar el menu de opciones
+                            var result = (from pr in ctx.Products
+               
+                                          select new
+                                          {
+                                              pr.BarCode,
+                                              pr.Description,
+                                              pr.Location,
+                                              pr.ActiveSubstance,
+                                              pr.QuantityPerUnit,
+                                              pr.StandardCost,
+                                              pr.ListPrice,
+                                              pr.IVA
+                                          }).ToList();
+
+                            //Crear las columnas del DataTable
+                            dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("BarCode", typeof(string)),
+                                new DataColumn("Description", typeof(string)),
+                                new DataColumn("Location", typeof(string)),
+                                new DataColumn("ActiveSubstance", typeof(string)),
+                                new DataColumn("QuantityPerUnit", typeof(string)),
+                                new DataColumn("StandardCost", typeof(string)),
+                                new DataColumn("ListPrice", typeof(string)),
+                                new DataColumn("IVA", typeof(string))
+                            });
+
+                            //Guardar los datos recuperados en una fila del DataTable
+                            result.ToList().ForEach(x =>
+                            {
+                                //Crear una fila nueva
+                                var row = dt.NewRow();
+
+                                //Cargar los datos de la fila
+                                row["BarCode"] = x.BarCode;
+                                row["Description"] = x.Description;
+                                row["Location"] = x.Location;
+                                row["ActiveSubstance"] = x.ActiveSubstance;
+                                row["QuantityPerUnit"] = x.QuantityPerUnit;
+                                row["StandardCost"] = x.StandardCost;
+                                row["ListPrice"] = x.ListPrice;
+                                row["IVA"] = x.IVA;
+
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(row);
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return dt;
+        }
+
+        public static DataTable getProduct(string BarCode)
+        {
+            List<Product> Products = new List<Product>();
+            DataTable dt = new DataTable();
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Product'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            //Recuperar el menu de opciones
+                            var result = (from pr in ctx.Products
+                                          where pr.BarCode==BarCode
+                                          select new
+                                          {
+                                              pr.BarCode,
+                                              pr.Description,
+                                              pr.Location,
+                                              pr.ActiveSubstance,
+                                              pr.QuantityPerUnit,
+                                              pr.StandardCost,
+                                              pr.ListPrice,
+                                              pr.IVA
+                                          }).ToList();
+
+                            //Crear las columnas del DataTable
+                            dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("BarCode", typeof(string)),
+                                new DataColumn("Description", typeof(string)),
+                                new DataColumn("Location", typeof(string)),
+                                new DataColumn("ActiveSubstance", typeof(string)),
+                                new DataColumn("QuantityPerUnit", typeof(string)),
+                                new DataColumn("StandardCost", typeof(string)),
+                                new DataColumn("ListPrice", typeof(string)),
+                                new DataColumn("IVA", typeof(string))
+                            });
+
+                            //Guardar los datos recuperados en una fila del DataTable
+                            result.ToList().ForEach(x =>
+                            {
+                                //Crear una fila nueva
+                                var row = dt.NewRow();
+
+                                //Cargar los datos de la fila
+                                row["BarCode"] = x.BarCode;
+                                row["Description"] = x.Description;
+                                row["Location"] = x.Location;
+                                row["ActiveSubstance"] = x.ActiveSubstance;
+                                row["QuantityPerUnit"] = x.QuantityPerUnit;
+                                row["StandardCost"] = x.StandardCost;
+                                row["ListPrice"] = x.ListPrice;
+                                row["IVA"] = x.IVA;
+
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(row);
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return dt;
+        }
+
+        public static DataTable getSuppliers()
+        {
+            List<Supplier> Supplier = new List<Supplier>();
+            DataTable dt = new DataTable();
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Supplier'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            //Recuperar el menu de opciones
+                            var result = (from sp in ctx.Suppliers
+
+                                          select new
+                                          {
+                                              sp.SupplierKey,
+                                              sp.CompanyName,
+                                              sp.ContactName,
+                                              sp.PhoneNumber,
+                                              sp.CellphoneNumber,
+                                              sp.EmailAddress,
+                                              sp.Comment,
+                                              sp.DaysCredit
+                                                                                        
+                                          }).ToList();
+
+                            //Crear las columnas del DataTable
+                            dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("SupplierKey", typeof(string)),
+                                new DataColumn("CompanyName", typeof(string)),
+                                new DataColumn("ContactName", typeof(string)),
+                                new DataColumn("PhoneNumber", typeof(string)),
+                                new DataColumn("CellphoneNumber", typeof(string)),
+                                new DataColumn("EmailAddress", typeof(string)),
+                                new DataColumn("Comment", typeof(string)),
+                                new DataColumn("DaysCredit", typeof(string))
+                            });
+
+                            //Guardar los datos recuperados en una fila del DataTable
+                            result.ToList().ForEach(x =>
+                            {
+                                //Crear una fila nueva
+                                var row = dt.NewRow();
+
+                                //Cargar los datos de la fila
+                                row["SupplierKey"] = x.SupplierKey;
+                                row["CompanyName"] = x.CompanyName;
+                                row["ContactName"] = x.ContactName;
+                                row["PhoneNumber"] = x.PhoneNumber;
+                                row["CellphoneNumber"] = x.CellphoneNumber;
+                                row["EmailAddress"] = x.EmailAddress;
+                                row["Comment"] = x.Comment;
+                                row["DaysCredit"] = x.DaysCredit;
+
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(row);
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return dt;
+        }  
+        public static DataTable getSupplier(string supplierkey)
+        {
+            List<Supplier> Supplier = new List<Supplier>();
+            DataTable dt = new DataTable();
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Supplier'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            //Recuperar el menu de opciones
+                            var result = (from sp in ctx.Suppliers
+                                          where sp.SupplierKey == supplierkey
+                                          select new
+                                          {
+                                              sp.SupplierKey,
+                                              sp.CompanyName,
+                                              sp.ContactName,
+                                              sp.PhoneNumber,
+                                              sp.CellphoneNumber,
+                                              sp.EmailAddress,
+                                              sp.Comment,
+                                              sp.DaysCredit
+
+                                          }).ToList();
+
+                            //Crear las columnas del DataTable
+                            dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("SupplierKey", typeof(string)),
+                                new DataColumn("CompanyName", typeof(string)),
+                                new DataColumn("ContactName", typeof(string)),
+                                new DataColumn("PhoneNumber", typeof(string)),
+                                new DataColumn("CellphoneNumber", typeof(string)),
+                                new DataColumn("EmailAddress", typeof(string)),
+                                new DataColumn("Comment", typeof(string)),
+                                new DataColumn("DaysCredit", typeof(string))
+                            });
+
+                            //Guardar los datos recuperados en una fila del DataTable
+                            result.ToList().ForEach(x =>
+                            {
+                                //Crear una fila nueva
+                                var row = dt.NewRow();
+
+                                //Cargar los datos de la fila
+                                row["SupplierKey"] = x.SupplierKey;
+                                row["CompanyName"] = x.CompanyName;
+                                row["ContactName"] = x.ContactName;
+                                row["PhoneNumber"] = x.PhoneNumber;
+                                row["CellphoneNumber"] = x.CellphoneNumber;
+                                row["EmailAddress"] = x.EmailAddress;
+                                row["Comment"] = x.Comment;
+                                row["DaysCredit"] = x.DaysCredit;
+
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(row);
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return dt;
+        }
+        public static DataTable getCustomers()
+        {
+            List<Customer> Customer = new List<Customer>();
+            DataTable dt = new DataTable();
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Customer'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            //Recuperar el menu de opciones
+                            var result = (from sp in ctx.customers
+
+                                          select new
+                                          {
+                                              sp.CustomerKey,
+                                              sp.FullName,
+                                              sp.ContactName,
+                                              sp.PhoneNumber,
+                                              sp.CellphoneNumber,
+                                              sp.EmailAddress,
+                                              sp.Comment,
+                                              sp.DaysCredit
+
+                                          }).ToList();
+
+                            //Crear las columnas del DataTable
+                            dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("CustomerKey", typeof(string)),
+                                new DataColumn("FullName", typeof(string)),
+                                new DataColumn("ContactName", typeof(string)),
+                                new DataColumn("PhoneNumber", typeof(string)),
+                                new DataColumn("CellphoneNumber", typeof(string)),
+                                new DataColumn("EmailAddress", typeof(string)),
+                                new DataColumn("Comment", typeof(string)),
+                                new DataColumn("DaysCredit", typeof(string))
+                            });
+
+                            //Guardar los datos recuperados en una fila del DataTable
+                            result.ToList().ForEach(x =>
+                            {
+                                //Crear una fila nueva
+                                var row = dt.NewRow();
+
+                                //Cargar los datos de la fila
+                                row["CustomerKey"] = x.CustomerKey;
+                                row["FullName"] = x.FullName;
+                                row["ContactName"] = x.ContactName;
+                                row["PhoneNumber"] = x.PhoneNumber;
+                                row["CellphoneNumber"] = x.CellphoneNumber;
+                                row["EmailAddress"] = x.EmailAddress;
+                                row["Comment"] = x.Comment;
+                                row["DaysCredit"] = x.DaysCredit;
+
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(row);
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return dt;
+        }
+        public static DataTable getCustomer(string customerkey)
+        {
+            List<Customer> Customer = new List<Customer>();
+            DataTable dt = new DataTable();
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Customer'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            //Recuperar el menu de opciones
+                            var result = (from sp in ctx.customers
+                                          where sp.CustomerKey==customerkey
+                                          select new
+                                          {
+                                              sp.CustomerKey,
+                                              sp.FullName,
+                                              sp.ContactName,
+                                              sp.PhoneNumber,
+                                              sp.CellphoneNumber,
+                                              sp.EmailAddress,
+                                              sp.Comment,
+                                              sp.DaysCredit
+
+                                          }).ToList();
+
+                            //Crear las columnas del DataTable
+                            dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("CustomerKey", typeof(string)),
+                                new DataColumn("FullName", typeof(string)),
+                                new DataColumn("ContactName", typeof(string)),
+                                new DataColumn("PhoneNumber", typeof(string)),
+                                new DataColumn("CellphoneNumber", typeof(string)),
+                                new DataColumn("EmailAddress", typeof(string)),
+                                new DataColumn("Comment", typeof(string)),
+                                new DataColumn("DaysCredit", typeof(string))
+                            });
+
+                            //Guardar los datos recuperados en una fila del DataTable
+                            result.ToList().ForEach(x =>
+                            {
+                                //Crear una fila nueva
+                                var row = dt.NewRow();
+
+                                //Cargar los datos de la fila
+                                row["CustomerKey"] = x.CustomerKey;
+                                row["FullName"] = x.FullName;
+                                row["ContactName"] = x.ContactName;
+                                row["PhoneNumber"] = x.PhoneNumber;
+                                row["CellphoneNumber"] = x.CellphoneNumber;
+                                row["EmailAddress"] = x.EmailAddress;
+                                row["Comment"] = x.Comment;
+                                row["DaysCredit"] = x.DaysCredit;
+
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(row);
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return dt;
         }
 
         #region HandleDbUpdateException
