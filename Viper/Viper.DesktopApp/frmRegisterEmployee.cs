@@ -24,13 +24,13 @@ namespace Viper.DesktopApp
         // TAB DE CODIGO POSTAL FISCAL A NUMERO EXTERIOR
         private void Codigo_Postal_Leave(object sender, EventArgs e)
         {
-            No_Ext.Focus();
+            Numero_Exterior.Focus();
         }
 
         // TAB DE NUMERO EXTERIOR A NUMERO INTERIOR
         private void No_Ext_Leave(object sender, EventArgs e)
         {
-            No_Int.Focus();
+            Numero_Interior.Focus();
         }
 
         // TAB DE NUMERO INTERIOR A COLONIA
@@ -57,7 +57,9 @@ namespace Viper.DesktopApp
         {
             Tipo_de_Telefono.Focus();
         }
-  #endregion
 
+        #endregion
+
+       
     }
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace Viper.BusinessEntities
 {
-    public class Company
+    public class Customer
     {
         /// <summary>
         /// Campo Id
@@ -15,21 +15,30 @@ namespace Viper.BusinessEntities
         [Key]
         public int Id { get; set; }
 
-        /// <summary>
-        /// Campo CompanyName
-        /// </summary>
-        [Required(ErrorMessage = "El campo CompanyName es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string CompanyName { get; set; }
 
         /// <summary>
-        /// Campo CompanyKey
+        /// Campo CustomerKey
         /// </summary>
-        [Required(ErrorMessage = "El campo CompanyKey es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo CustomerKey es obligatorio")]
+        [StringLength(120, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string CompanyKey { get; set; }
+        public string CustomerKey { get; set; }
+
+        /// <summary>
+        /// Campo FullName 
+        /// </summary>
+        [Required(ErrorMessage = "El campo FullName es obligatorio")]
+        [StringLength(50, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string FullName { get; set; }
+
+        /// <summary>
+        /// Campo ContactName
+        /// </summary>
+        [Required(ErrorMessage = "El campo ContactName es obligatorio")]
+        [StringLength(120, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string ContactName { get; set; }
 
         /// <summary>
         /// Campo AddressId
@@ -39,54 +48,11 @@ namespace Viper.BusinessEntities
         public int AddressId { get; set; }
 
         /// <summary>
-        /// Campo PhoneNumber
-        /// </summary>
-        [StringLength(10, MinimumLength = 10)]
-        [DataType(DataType.Text)]
-        public string PhoneNumber { get; set; }
-
-        /// <summary>
-        /// Campo CellphoneNumber
-        /// </summary>
-        [StringLength(13, MinimumLength = 13)]
-        [DataType(DataType.Text)]
-        public string CellphoneNumber { get; set; }
-
-        /// <summary>
-        /// Campo EmailAddress
-        /// </summary>
-        [StringLength(30, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string EmailAddress { get; set; }
-
-        /// <summary>
-        /// Campo FiscalName
-        /// </summary>
-        [Required(ErrorMessage = "El campo FiscalName es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string FiscalName { get; set; }
-
-        /// <summary>
         /// Campo AddressSATId
         /// </summary>
         [Required(ErrorMessage = "El campo AddressSATId es obligatorio")]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
         public int AddressSATId { get; set; }
-
-        /// <summary>
-        /// Campo RegimenFiscalId
-        /// </summary>
-        [Required(ErrorMessage = "El campo RegimenFiscalId es obligatorio")]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int RegimenFiscalId { get; set; }
-
-        /// <summary>
-        /// Campo AccountBankId
-        /// </summary>
-        [Required(ErrorMessage = "El campo AccountBankId es obligatorio")]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int AccountBankId { get; set; }
 
         /// <summary>
         /// Campo RFC
@@ -105,19 +71,68 @@ namespace Viper.BusinessEntities
         public string CURP { get; set; }
 
         /// <summary>
-        /// Campo ApiKey
+        /// Campo PhoneNumber
         /// </summary>
-        [StringLength(100, MinimumLength = 2)]
+        [StringLength(10, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string ApiKey { get; set; }
+        public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Campo BusinessActivity
+        /// Campo CellphoneNumber
         /// </summary>
-        [Required(ErrorMessage = "El campo BusinessActivity es obligatorio")]
-        [StringLength(30, MinimumLength = 2)]
+        [StringLength(13, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string BusinessActivity { get; set; }
+        public string CellphoneNumber { get; set; }
+
+        /// <summary>
+        /// Campo EmailAddress
+        /// </summary>
+        [StringLength(50, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string EmailAddress { get; set; }
+
+        /// <summary>
+        /// Campo Comment
+        /// </summary>
+        [StringLength(255, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string Comment { get; set; }
+
+
+        /// <summary>
+        /// Campo IsActive
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsActive es obligatorio")]
+        public byte IsActive { get; set; }
+
+        /// <summary>
+        /// Campo CreditLimit
+        /// </summary>
+        [Required(ErrorMessage = "El campo CreditLimit es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero valido")]
+        public double CreditLimit { get; set; }
+
+        /// <summary>
+        /// Campo DaysCredit
+        /// </summary>
+        [Required(ErrorMessage = "El campo DaysCredit es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int DaysCredit { get; set; }
+
+
+        /// <summary>
+        /// Campo ProfilePhoto
+        /// </summary>
+        public byte[] Photo { get; set; }
+
+        /// <summary>
+        /// Campo Comment
+        /// </summary>
+        [StringLength(10, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string UseCFDI { get; set; }
+
+
 
         /// <summary>
         /// Campo CreatedDate

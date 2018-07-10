@@ -30,22 +30,22 @@ namespace Viper.DataAccessLayer
                     //Validar si la tabla utilizada existe
                     isExistente = db.Database
                  .SqlQuery<int?>(@"
-                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Userrole' 
-                            OR table_name = 'Role' OR table_name = 'Employee' OR table_name = 'Membership'")
+                         SELECT COUNT(*) FROM information_schema.tables WHERE 
+                            table_name = 'Role' OR table_name = 'Employee' OR table_name = 'User'")
                  .SingleOrDefault() != null;
 
                     if (isExistente)
                     {
                         var result = (from e in db.Employees
                                       join m in db.Memberships on e.Id equals m.EmployeeId
-                                      join ur in db.UserRoles on e.Id equals ur.EmployeeId
-                                      join r in db.Roles on ur.RoleId equals r.Id
-                                      where e.LoginID == us && m.PasswordEncrypted == pwd
+                                      join r in db.Roles on m.RoleId equals r.Id
+                                      join jt in db.jobtitles on e.JobTitleId equals jt.Id
+                                      where m.LoginID == us && m.PasswordEncrypted == pwd
                                       select new
                                       {
-                                          e.LoginID,
+                                          m.LoginID,
                                           r.Name,
-                                          e.JobTitle,
+                                          //jt.Name,
                                           e.FullName
 
                                       }).ToList();
@@ -67,7 +67,7 @@ namespace Viper.DataAccessLayer
                             //Cargar los datos de la fila
                             row["Usuario"] = x.LoginID;
                             row["Rol"] = x.Name;
-                            row["Puesto"] = x.JobTitle;
+                            row["Puesto"] = x.Name;
                             row["NombreCompleto"] = x.FullName;
 
                             //Añadir fila al DataTable

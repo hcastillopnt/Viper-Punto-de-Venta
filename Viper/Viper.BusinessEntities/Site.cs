@@ -31,6 +31,22 @@ namespace Viper.BusinessEntities
         public string Name { get; set; }
 
         /// <summary>
+        /// Campo ContactName
+        /// </summary>
+        [Required(ErrorMessage = "El campo ContactName es obligatorio")]
+        [StringLength(100, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string ContactName { get; set; }
+
+        /// <summary>
+        /// Campo PhoneNumber
+        /// </summary>
+        [Required(ErrorMessage = "El campo PhoneNumber es obligatorio")]
+        [StringLength(100, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
         /// Campo UniquePhysicalID
         /// </summary>
         [Required(ErrorMessage = "El campo UniquePhysicalID es obligatorio")]

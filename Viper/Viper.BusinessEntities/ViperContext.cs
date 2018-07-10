@@ -27,16 +27,20 @@ namespace Viper.BusinessEntities
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
         public DbSet<Gender> Genders { get; set; }
-        public DbSet<Membership> Memberships { get; set; }
+        public DbSet<MaritalStatus> MaritalStatuses { get; set; }
+        public DbSet<User> Memberships { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<RegimenFiscal> RegimenesFiscal { get; set; }
         public DbSet<RoadType> RoadTypes { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<RolePermission> RolePermissions { get; set; }
+        public DbSet<JobTitle> jobtitles { get; set; }
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<Site> Sites { get; set; }
         public DbSet<StateProvince> StateProvinces { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Customer> customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

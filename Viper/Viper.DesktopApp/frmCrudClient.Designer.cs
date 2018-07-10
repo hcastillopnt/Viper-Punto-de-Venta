@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tplCentro = new System.Windows.Forms.TableLayoutPanel();
             this.tpl2 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,7 +101,7 @@
             this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.23457F));
             this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.76543F));
             this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
-            this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 251F));
+            this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tpl2.Controls.Add(this.Clave_cliente, 1, 0);
             this.tpl2.Controls.Add(this.btnBuscar, 2, 0);
             this.tpl2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,7 +119,7 @@
             this.Clave_cliente.Location = new System.Drawing.Point(34, 20);
             this.Clave_cliente.Name = "Clave_cliente";
             this.Clave_cliente.NullText = "CLAVE DEL CLIENTE";
-            this.Clave_cliente.Size = new System.Drawing.Size(245, 27);
+            this.Clave_cliente.Size = new System.Drawing.Size(244, 27);
             this.Clave_cliente.TabIndex = 1;
             // 
             // btnBuscar
@@ -127,11 +127,12 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.btnBuscar.Location = new System.Drawing.Point(285, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(284, 3);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(239, 44);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // tpl1
             // 
@@ -140,7 +141,7 @@
             this.tpl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.58848F));
             this.tpl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.41152F));
             this.tpl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
-            this.tpl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 251F));
+            this.tpl1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tpl1.Controls.Add(this.btnEliminar, 3, 0);
             this.tpl1.Controls.Add(this.btnAgregar, 0, 0);
             this.tpl1.Controls.Add(this.btnRecargar, 2, 0);
@@ -158,9 +159,9 @@
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.btnEliminar.Location = new System.Drawing.Point(530, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(529, 3);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(246, 48);
+            this.btnEliminar.Size = new System.Drawing.Size(247, 48);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             // 
@@ -180,11 +181,12 @@
             this.btnRecargar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRecargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.btnRecargar.Location = new System.Drawing.Point(286, 3);
+            this.btnRecargar.Location = new System.Drawing.Point(285, 3);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(238, 48);
             this.btnRecargar.TabIndex = 3;
             this.btnRecargar.Text = "Recargar";
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnEditar
             // 
@@ -193,7 +195,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
             this.btnEditar.Location = new System.Drawing.Point(143, 3);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(137, 48);
+            this.btnEditar.Size = new System.Drawing.Size(136, 48);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             // 
@@ -221,7 +223,7 @@
             // 
             // 
             // 
-            this.dgvCrudClient.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgvCrudClient.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dgvCrudClient.Name = "dgvCrudClient";
             this.dgvCrudClient.Size = new System.Drawing.Size(753, 387);
             this.dgvCrudClient.TabIndex = 0;
@@ -258,6 +260,7 @@
             this.Name = "frmCrudClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A de C.V.";
+            this.Load += new System.EventHandler(this.frmCrudClient_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tplCentro.ResumeLayout(false);
             this.tpl2.ResumeLayout(false);

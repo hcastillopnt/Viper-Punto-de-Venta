@@ -50,7 +50,7 @@ namespace Viper.DesktopApp
 
         private void frmAddClient_Load(object sender, EventArgs e)
         {
-            this.Razón_Social.Focus();
+            this.Razón_Social_Fiscal.Focus();
         }
     }
 }
