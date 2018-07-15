@@ -65,6 +65,11 @@ namespace Viper.BusinessLogicLayer
         }
         #endregion
 
+        public static string insertarSucursal(Site s, Address a)
+        {
+            return DataAccessLayer.CRUDCompanyDAL.sp_insert_sucursal(s, a);
+        }
+
         public static string checkCompanyName()
         {
             return DataAccessLayer.CRUDCompanyDAL.checkCompanyName();

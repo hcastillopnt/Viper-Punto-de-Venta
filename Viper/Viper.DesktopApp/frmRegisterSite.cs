@@ -92,7 +92,17 @@ namespace Viper.DesktopApp
             ad.PostalCode = Codigo_Postal.Text.Trim();
             ad.CreatedDate = f;
             ad.ModifiedDate = f;
+            string message = BusinessLogicLayer.CRUDCompanyBLL.insertarSucursal(s,ad);
 
+            if (message != "")
+            {
+                MessageBox.Show(message);
+            }
+            else
+            {
+                MessageBox.Show("Sucursal registrada exitosamente");
+                btnFinalizar.Enabled = true;
+            }
             gvSucursales.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getSites(companyId);
         }
 
@@ -154,6 +164,37 @@ namespace Viper.DesktopApp
                 Id_Sucursal.Text = "SUC-" + Colonia_Fiscal.Text.ToUpper().Trim().Replace(" ","_") + "-" + cboLocalidadFiscal.Text;
 
             }
+        }
+
+        private void btnNuevaSucursal_Click(object sender, EventArgs e)
+        {
+            Telefono.Enabled = true;
+            Nombre_Sucursal.Enabled = true;
+            Representante.Enabled = true;
+            cboTipoInmuebleFiscal.Enabled = true;
+            cboTipoVialidadFiscal.Enabled = true;
+            Vialidad_Fiscal.Enabled = true;
+            Codigo_Postal.Enabled = true;
+            No_Ext_Fiscal.Enabled = true;
+            No_Int_Fiscal.Enabled = true;
+            Colonia_Fiscal.Enabled = true;
+            cboEstadoFiscal.Enabled = true;
+            cboLocalidadFiscal.Enabled = true;
+            gvSucursales.Enabled = true;
+            btnGuardarSucursal.Enabled = true;
+            btnCancelar.Enabled = true;
+            //poner el indice cero por defecto en los combobox
+            cboTipoInmuebleFiscal.SelectedIndex = 0;
+            cboTipoVialidadFiscal.SelectedIndex = 0;
+            cboLocalidadFiscal.SelectedIndex = 0;
+            cboEstadoFiscal.SelectedIndex = 0;
+            Id_Sucursal.Clear();
+            gvSucursales.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getSites(companyId);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

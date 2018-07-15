@@ -143,6 +143,113 @@ namespace Viper.DataAccessLayer
         }
         #endregion
 
+        #region insertarSite
+        public static string sp_insert_sucursal(Site s, Address a)
+        {
+            string message = string.Empty;
+            bool isInserted = false;
+
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                using (var ctxTran = ctx.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        //Validar si la base de datos existe
+                        bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                        if (isDataBaseExist)
+                        {
+                            //Validar si la tabla utilizada existe
+                            bool isTableExist = ctx.Database
+                         .SqlQuery<int?>(@"
+                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Site' OR table_name='Address'")
+                         .SingleOrDefault() != null;
+
+                            if (isTableExist)
+                            {
+                                ctx.Addresses.Add(a);
+                                isInserted = ctx.SaveChanges() > 0;
+
+                                if (isInserted)
+                                {
+                                    isInserted = false;
+
+                                    var addressID = ctx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                    if (addressID > 0)
+                                    {
+                                        isInserted = false;
+                                        ctx.Sites.Add(s);
+                                        isInserted = ctx.SaveChanges() > 0;
+
+                                        
+                                            if (isInserted)
+                                            {
+                                                isInserted = false;
+
+                                                s.AddressId= addressID;
+                                                ctx.Sites.Add(s);
+                                                isInserted = ctx.SaveChanges() > 0;
+
+                                                var siteId = ctx.Sites.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                                                if (siteId > 0)
+                                                {
+                                                    if (isInserted)
+                                                    {
+                                                        if (isInserted == true && string.IsNullOrEmpty(message))
+                                                        {
+
+                                                            ctxTran.Commit();
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (DbEntityValidationException ex)
+                    {
+                        var errorMessages = ex.EntityValidationErrors
+                                .SelectMany(x => x.ValidationErrors)
+                                .Select(x => x.ErrorMessage);
+                        var fullErrorMessage = string.Join("; ", errorMessages);
+                        var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                        message = exceptionMessage + "\n" + ex.EntityValidationErrors;
+
+                        ctxTran.Rollback();
+                    }
+                    catch (DbUpdateConcurrencyException ex)
+                    {
+                        var entity = ex.Entries.Single().GetDatabaseValues();
+
+                        if (entity == null)
+                            message = "The entity being updated is already deleted by another user";
+                        else
+                            message = "The entity being updated has already been updated by another user";
+
+                        ctxTran.Rollback();
+                    }
+                    catch (DbUpdateException ex)
+                    {
+                        var exception = HandleDbUpdateException(ex);
+                        message = exception.Message;
+
+                        ctxTran.Rollback();
+                    }
+                }
+            }
+
+            return message;
+        }
+
+        #endregion
+
         public static string checkCompanyName()
         {
             string nombre=null;
