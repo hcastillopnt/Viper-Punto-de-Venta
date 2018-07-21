@@ -5070,7 +5070,7 @@ CREATE TABLE `Company` (
   `AddressSATId` int(11) NOT NULL,
   `RegimenFiscalId` int(11) NOT NULL,
   `RFC` varchar(13) NOT NULL,
-  `CURP` varchar(25) NULL,
+  `CURP` varchar(18) NULL,
   `LoginID` VARCHAR(256) NOT NULL,
   `PasswordEncrypted` varchar(256) NOT NULL,
   `ApiKey` varchar(100) NULL,
