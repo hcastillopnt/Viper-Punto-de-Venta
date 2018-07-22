@@ -165,6 +165,12 @@
     <EmbeddedResource Include="frmAdminProducts.resx">
       <DependentUpon>frmAdminProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCrudClient.resx">
+      <DependentUpon>frmCrudClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrudProvider.resx">
+      <DependentUpon>frmCrudProvider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

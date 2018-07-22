@@ -4,21 +4,26 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
+using Viper.WebAPI.Models;
 
 namespace Viper.WebAPI.Controllers
 {
     public class AccountController : ApiController
     {
-        // GET: api/Account
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
-        // GET: api/Account/5
-        public string Get(int id)
+        // GET: api/Account
+
+        public List<Company> GetLogin(string usr, string pwd, string compk)
         {
-            return "value";
+            using (ViperContext db = new ViperContext())
+            {
+                var query = db.Companies
+                    .Where(c => c.LoginID == usr && c.PasswordEncrypted == pwd && c.CompanyKey == compk)
+                .ToList();
+
+                return query;
+            }
         }
 
         // POST: api/Account

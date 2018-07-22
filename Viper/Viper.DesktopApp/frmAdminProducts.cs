@@ -33,5 +33,23 @@ namespace Viper.DesktopApp
                     break;
             }
         }
+
+        private void frmAdminProducts_Load(object sender, EventArgs e)
+        {
+            gvProducts.DataSource = null;
+            gvProducts.DataSource= BusinessLogicLayer.CRUDCompanyBLL.getProducts();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            gvProducts.DataSource = null;
+            gvProducts.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getProduct(Código_de_barras.Text);
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            gvProducts.DataSource = null;
+            gvProducts.DataSource = BusinessLogicLayer.CRUDCompanyBLL.getProducts();
+        }
     }
 }

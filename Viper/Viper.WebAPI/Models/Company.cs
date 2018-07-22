@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace Viper.BusinessEntities
+namespace Viper.WebAPI.Models
 {
-    public class Employee
+    public class Company
     {
         /// <summary>
         /// Campo Id
@@ -16,98 +16,80 @@ namespace Viper.BusinessEntities
         public int Id { get; set; }
 
         /// <summary>
-        /// Campo EmployeeIDNumber
+        /// Campo CompanyName
         /// </summary>
-        [Required(ErrorMessage = "El campo EmployeeIDNumer es obligatorio")]
-        [StringLength(100, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string EmployeeIDNumber { get; set; }
-
-        /// <summary>
-        /// Campo IS
-        /// </summary>
-        [StringLength(5, MinimumLength = 1)]
-        [DataType(DataType.Text)]
-        public string IS { get; set; }
-
-        /// <summary>
-        /// Campo FisrtName
-        /// </summary>
-
+        [Required(ErrorMessage = "El campo CompanyName es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string FirstName { get; set; }
+        public string CompanyName { get; set; }
 
         /// <summary>
-        /// Campo MiddleName
+        /// Campo CompanyKey
         /// </summary>
-
+        [Required(ErrorMessage = "El campo CompanyKey es obligatorio")]
         [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string MiddleName { get; set; }
+        public string CompanyKey { get; set; }
 
         /// <summary>
-        /// Campo LastName
+        /// Campo AddressId
         /// </summary>
-
-        [StringLength(30, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string LastName { get; set; }
-
-        /// <summary>
-        /// Campo FullName
-        /// </summary>
-
-        [StringLength(50, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string FullName { get; set; }
+        [Required(ErrorMessage = "El campo AddressId es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int AddressId { get; set; }
 
         /// <summary>
         /// Campo PhoneNumber
         /// </summary>
-        [StringLength(10, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo PhoneNumber es obligatorio")]
+        [StringLength(10, MinimumLength = 10)]
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Campo CellphoneNumber
         /// </summary>
-        [StringLength(13, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo CellphoneNumber es obligatorio")]
+        [StringLength(13, MinimumLength = 13)]
         [DataType(DataType.Text)]
         public string CellphoneNumber { get; set; }
 
-        
         /// <summary>
-        /// Campo JobTitleId
+        /// Campo EmailAddress
         /// </summary>
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int JobTitleId { get; set; }
-
-        /// <summary>
-        /// Campo BirthDate
-        /// </summary>
-        [StringLength(10, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo EmailAddress es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string BirthDate { get; set; }
+        public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Campo MaritalStatusID
+        /// Campo FiscalName
         /// </summary>
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int MaritalStatusId { get; set; }
+        [Required(ErrorMessage = "El campo FiscalName es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string FiscalName { get; set; }
 
         /// <summary>
-        /// Campo GenderID
+        /// Campo AddressSATId
         /// </summary>
+        [Required(ErrorMessage = "El campo AddressSATId es obligatorio")]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int GenderId { get; set; }
+        public int AddressSATId { get; set; }
 
         /// <summary>
-        /// Campo EmployeeId
+        /// Campo RegimenFiscalId
         /// </summary>
-        [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
+        [Required(ErrorMessage = "El campo RegimenFiscalId es obligatorio")]
         [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int AddressId { get; set; }
+        public int RegimenFiscalId { get; set; }
+
+        /// <summary>
+        /// Campo AccountBankId
+        /// </summary>
+        [Required(ErrorMessage = "El campo AccountBankId es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int AccountBankId { get; set; }
 
         /// <summary>
         /// Campo RFC
@@ -121,56 +103,26 @@ namespace Viper.BusinessEntities
         /// Campo CURP
         /// </summary>
         [Required(ErrorMessage = "El campo CURP es obligatorio")]
-        [StringLength(18, MinimumLength = 18)]
+        [StringLength(25, MinimumLength = 25)]
         [DataType(DataType.Text)]
         public string CURP { get; set; }
 
         /// <summary>
-        /// Campo NSS
+        /// Campo ApiKey
         /// </summary>
-
-        [StringLength(16, MinimumLength = 2)]
+        [Required(ErrorMessage = "El campo ApiKey es obligatorio")]
+        [StringLength(100, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string NSS { get; set; }
+        public string ApiKey { get; set; }
 
         /// <summary>
-        /// Campo ProfilePhoto
+        /// Campo BusinessActivity
         /// </summary>
-        public byte[] ProfilePhoto { get; set; }
+        [Required(ErrorMessage = "El campo BusinessActivity es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string BusinessActivity { get; set; }
 
-        /// <summary>
-        /// Campo FingerPrint
-        /// </summary>
-        public byte[] FingerPrint { get; set; }
-
-        /// <summary>
-        /// Campo ShiftId
-        /// </summary>
-        [Required(ErrorMessage = "El campo ShiftID es obligatorio")]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int ShiftId { get; set; }
-
-        /// <summary>
-        /// Campo StartDate
-        /// </summary>
-        [Required(ErrorMessage = "El campo StartDate es obligatorio")]
-        [DataType(DataType.DateTime)]
-        public DateTime StartDate { get; set; }
-
-        /// <summary>
-        /// Campo StartDate
-        /// </summary>
-        [Required(ErrorMessage = "El campo EndDate es obligatorio")]
-        [DataType(DataType.DateTime)]
-        public DateTime EndDate { get; set; }
-
-
-        /// <summary>
-        /// Campo IsActive
-        /// </summary>
-        [Required(ErrorMessage = "El campo IsActive es obligatorio")]
-        public byte IsActive { get; set; }
-        
         /// <summary>
         /// Campo CreatedDate
         /// </summary>
@@ -200,5 +152,22 @@ namespace Viper.BusinessEntities
         [StringLength(6, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string ModifiedBy { get; set; }
+
+        /// <summary>
+        /// Campo LoginID
+        /// </summary>
+        [Required(ErrorMessage = "El campo LoginID es obligatorio")]
+        [StringLength(256, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string LoginID { get; set; }
+
+        /// <summary>
+        /// Campo PasswordEncrypted
+        /// </summary>
+        [Required(ErrorMessage = "El campo PasswordEncrypted es obligatorio")]
+        [StringLength(30, MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        public string PasswordEncrypted { get; set; }
+
     }
 }

@@ -65,11 +65,14 @@
     <Compile Include="Common\IEntity.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CountryRegion.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDepartmentHistory.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="MaritalStatus.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Supplier.cs" />
     <Compile Include="User.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />

@@ -38,6 +38,9 @@ namespace Viper.BusinessEntities
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<Site> Sites { get; set; }
         public DbSet<StateProvince> StateProvinces { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Customer> customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
