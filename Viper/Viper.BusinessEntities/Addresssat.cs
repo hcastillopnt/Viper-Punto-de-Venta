@@ -33,7 +33,7 @@ namespace Viper.BusinessEntities
         /// Campo AddressLine1
         /// </summary>
         [Required(ErrorMessage = "El campo AddressLine1 es obligatorio")]
-        [StringLength(20, MinimumLength = 2)]
+        [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string AddressLine1 { get; set; }
 
@@ -41,7 +41,7 @@ namespace Viper.BusinessEntities
         /// Campo AddressLine2
         /// </summary>
         [Required(ErrorMessage = "El campo AddressLine2 es obligatorio")]
-        [StringLength(20, MinimumLength = 2)]
+        [StringLength(50, MinimumLength = 2)]
         [DataType(DataType.Text)]
         public string AddressLine2 { get; set; }
 

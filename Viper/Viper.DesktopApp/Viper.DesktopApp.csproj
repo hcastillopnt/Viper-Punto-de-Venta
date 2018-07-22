@@ -144,6 +144,7 @@
     <Compile Include="frmRegisterSite.Designer.cs">
       <DependentUpon>frmRegisterSite.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperGrid.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -229,8 +230,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\company_logo\farmanyl.jpg" />
     <Content Include="images\company_logo\OwalTek.jpg" />
+    <Content Include="images\icon\banco.png" />
     <Content Include="images\icon\basura.png" />
     <Content Include="images\icon\camara.png" />
     <Content Include="images\icon\cancelar.png" />
@@ -238,6 +239,7 @@
     <Content Include="images\icon\comprobado.png" />
     <Content Include="images\icon\configuracion.png" />
     <Content Include="images\icon\corte.png" />
+    <Content Include="images\icon\descargar.png" />
     <Content Include="images\icon\empleado.png" />
     <Content Include="images\icon\estadisticas.png" />
     <Content Include="images\icon\examinar.png" />
