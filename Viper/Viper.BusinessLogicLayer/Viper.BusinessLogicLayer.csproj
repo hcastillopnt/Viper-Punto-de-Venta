@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompanyBLL.cs" />
+    <Compile Include="AccesoBDBLL.cs" />
     <Compile Include="DropDownListHelperBLL.cs" />
     <Compile Include="EncryptionDecryption.cs" />
     <Compile Include="LoginBLL.cs" />

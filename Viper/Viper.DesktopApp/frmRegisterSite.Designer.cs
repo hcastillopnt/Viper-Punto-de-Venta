@@ -742,7 +742,6 @@
             this.btnNuevaSucursal.Text = "Nueva Sucursal";
             this.btnNuevaSucursal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaSucursal.ThemeName = "VisualStudio2012Light";
-            this.btnNuevaSucursal.Click += new System.EventHandler(this.btnNuevaSucursal_Click);
             // 
             // btnCancelar
             // 
@@ -758,7 +757,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.ThemeName = "VisualStudio2012Light";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnFinalizar
             // 
@@ -786,7 +784,6 @@
             this.btnGuardarSucursal.TabIndex = 2;
             this.btnGuardarSucursal.Text = "Guardar Sucursal";
             this.btnGuardarSucursal.ThemeName = "VisualStudio2012Light";
-            this.btnGuardarSucursal.Click += new System.EventHandler(this.btnGuardarSucursal_Click);
             // 
             // panelCentral
             // 
