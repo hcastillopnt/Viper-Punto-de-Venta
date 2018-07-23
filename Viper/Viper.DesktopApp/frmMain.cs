@@ -63,7 +63,7 @@ namespace Viper.DesktopApp
                     break;
 
                 case Keys.F2:
-                    AgregarFormularioEnPanel(new frmAdminProducts());
+                    //AgregarFormularioEnPanel(new frmAdminProducts());
                     break;
 
                 case Keys.Escape:
@@ -87,7 +87,7 @@ namespace Viper.DesktopApp
 
                 //Productos
                 case "btnProductos":
-                    AgregarFormularioEnPanel(new frmAdminProducts());
+                    //AgregarFormularioEnPanel(new frmAdminProducts());
                     break;
                 case "btnCerrarSesion":
                     Application.Exit();
@@ -112,28 +112,28 @@ namespace Viper.DesktopApp
 
         private void CargarMenuVertical()
         {
-            List<Permission> permissions = new List<Permission>();
-            DataTable dtPermissions = new DataTable();
-            Permission permission = null;
+            List<Module> modules = new List<Module>();
+            DataTable dtModules = new DataTable();
+            Module module = null;
 
-            dtPermissions = BusinessLogicLayer.MenuBLL.CargarMenuPorRol("ADMINISTRADOR");
+            dtModules = BusinessLogicLayer.MenuBLL.CargarMenuPorRol("ADMINISTRADOR");
 
-            foreach (DataRow row in dtPermissions.Rows)
+            foreach (DataRow row in dtModules.Rows)
             {
-                permission = new Permission();
+                module = new Module();
 
-                permission.Name = row["Name"].ToString();
-                permission.Menu = row["Menu"].ToString();
-                permission.ControlName = row["ControlName"].ToString();
-                permission.ControlImage = row["ControlImage"].ToString();
+                module.Name = row["Name"].ToString();
+                module.Menu = row["Menu"].ToString();
+                module.ControlName = row["ControlName"].ToString();
+                module.ControlImage = row["ControlImage"].ToString();
 
-                permissions.Add(permission);
+                modules.Add(module);
             }
 
-            int rows = dtPermissions.Rows.Count;
+            int rows = dtModules.Rows.Count;
             int i = 1;
 
-            foreach (var item in permissions)
+            foreach (var item in modules)
             {
                 Button btnOption = new Button();
                 Panel pnlOption = new Panel();

@@ -71,6 +71,7 @@
     <Compile Include="Gender.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="MaritalStatus.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Supplier.cs" />
     <Compile Include="User.cs" />
@@ -82,7 +83,6 @@
     <Compile Include="RegimenFiscal.cs" />
     <Compile Include="RoadType.cs" />
     <Compile Include="Role.cs" />
-    <Compile Include="RolePermission.cs" />
     <Compile Include="Shift.cs" />
     <Compile Include="Site.cs" />
     <Compile Include="StateProvince.cs" />
