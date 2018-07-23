@@ -31,23 +31,23 @@ namespace Viper.DataAccessLayer
                     //Validar si la tabla utilizada existe
                     isExistente = ctx.Database
                  .SqlQuery<int?>(@"
-                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'RolePermission' 
-                            OR table_name = 'Role' OR table_name = 'Permission'")
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Permission' 
+                            OR table_name = 'Role' OR table_name = 'Module'")
                  .SingleOrDefault() != null;
 
                     if (isExistente)
                     {
                         //Recuperar el menu de opciones
-                        var result = (from rp in ctx.RolePermissions
-                                      join r in ctx.Roles on rp.RoleId equals r.Id
-                                      join p in ctx.Permissions on rp.PermissionId equals p.Id
-                                      where r.Name == "ADMINISTRADOR"
+                        var result = (from p in ctx.Permissions
+                                      join r in ctx.Roles on p.RoleId equals r.Id
+                                      join m in ctx.Modules on p.ModuleId equals m.Id
+                                      where r.Name == "ADMINISTRADOR" && m.SubMenu == "NULL"
                                       select new
                                       {
-                                          p.Name,
-                                          p.Menu,
-                                          p.ControlName,
-                                          p.ControlImage
+                                          m.Name,
+                                          m.Menu,
+                                          m.ControlName,
+                                          m.ControlImage
                                       }).ToList();
 
                         //Crear las columnas del DataTable

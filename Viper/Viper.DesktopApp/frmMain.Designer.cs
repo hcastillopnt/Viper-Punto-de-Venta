@@ -72,8 +72,8 @@
             // tlp01
             // 
             this.tlp01.ColumnCount = 2;
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.42899F));
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.57101F));
+            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.03514F));
+            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.96486F));
             this.tlp01.Controls.Add(this.tlp02, 1, 0);
             this.tlp01.Controls.Add(this.tlp03, 0, 0);
             this.tlp01.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,11 +92,11 @@
             this.tlp02.Controls.Add(this.picReloj, 0, 0);
             this.tlp02.Controls.Add(this.lblFechaActual, 1, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp02.Location = new System.Drawing.Point(1088, 3);
+            this.tlp02.Location = new System.Drawing.Point(987, 3);
             this.tlp02.Name = "tlp02";
             this.tlp02.RowCount = 1;
             this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp02.Size = new System.Drawing.Size(275, 48);
+            this.tlp02.Size = new System.Drawing.Size(376, 48);
             this.tlp02.TabIndex = 0;
             // 
             // picReloj
@@ -105,7 +105,7 @@
             this.picReloj.Image = ((System.Drawing.Image)(resources.GetObject("picReloj.Image")));
             this.picReloj.Location = new System.Drawing.Point(3, 3);
             this.picReloj.Name = "picReloj";
-            this.picReloj.Size = new System.Drawing.Size(70, 42);
+            this.picReloj.Size = new System.Drawing.Size(97, 42);
             this.picReloj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picReloj.TabIndex = 1;
             this.picReloj.TabStop = false;
@@ -116,9 +116,9 @@
             this.lblFechaActual.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaActual.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFechaActual.Location = new System.Drawing.Point(79, 0);
+            this.lblFechaActual.Location = new System.Drawing.Point(106, 0);
             this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(193, 48);
+            this.lblFechaActual.Size = new System.Drawing.Size(267, 48);
             this.lblFechaActual.TabIndex = 0;
             this.lblFechaActual.Text = "[Fecha]";
             // 

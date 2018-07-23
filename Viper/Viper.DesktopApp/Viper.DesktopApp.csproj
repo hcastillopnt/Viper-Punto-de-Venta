@@ -90,24 +90,6 @@
     <Compile Include="frmAddProvider.Designer.cs">
       <DependentUpon>frmAddProvider.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdminProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminProducts.Designer.cs">
-      <DependentUpon>frmAdminProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCrudClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCrudClient.Designer.cs">
-      <DependentUpon>frmCrudClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCrudProvider.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCrudProvider.Designer.cs">
-      <DependentUpon>frmCrudProvider.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,12 +120,6 @@
     <Compile Include="frmRegisterEmployee.Designer.cs">
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegisterSite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegisterSite.Designer.cs">
-      <DependentUpon>frmRegisterSite.cs</DependentUpon>
-    </Compile>
     <Compile Include="HelperGrid.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -163,15 +139,6 @@
     <EmbeddedResource Include="frmAddProvider.resx">
       <DependentUpon>frmAddProvider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminProducts.resx">
-      <DependentUpon>frmAdminProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCrudClient.resx">
-      <DependentUpon>frmCrudClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCrudProvider.resx">
-      <DependentUpon>frmCrudProvider.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterEmployee.resx">
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterSite.resx">
-      <DependentUpon>frmRegisterSite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
