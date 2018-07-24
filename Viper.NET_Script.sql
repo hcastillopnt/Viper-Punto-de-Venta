@@ -5360,6 +5360,112 @@ CREATE TABLE `User` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Module`;
+
+--
+-- Estructura de tabla `Module`
+--
+CREATE TABLE `Module` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` VARCHAR(50) NOT NULL,
+  `Menu` VARCHAR(50) NOT NULL,
+  `Submenu` VARCHAR(50) NULL,
+  `ControlName` VARCHAR(50) NOT NULL,
+  `ControlImage` VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los modulos que tendra el sistema';
+
+/* MENU: VENTAS*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Ventas', 'F1 Ventas', NULL, 'btnVentas', 'ventas.png');
+/* MENU: VENTAS*/
+
+/* MENU: PRODUCTOS*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Productos', 'F2 Productos', NULL, 'btnProductos', 'productos.png');
+/* MENU: PRODUCTOS*/
+
+/* MENU: INVENTARIO*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Inventario', 'F3 Inventario', NULL, 'btnInventario', 'inventario.png');
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Inventario Inicial', 'F3 Inventario', 'Inventario', 'btnInventarioInicial', 'inv_inicial.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Ajuste Inventario', 'F3 Inventario', 'Ajustar Inventario', 'btnAjusteInventario', 'aju_inv.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Reemplazo Inventario', 'F3 Inventario', 'Reemplazo Inventario', 'btnReemplazoInventario', 'remp_inv.png');
+/* MENU: INVENTARIO*/
+
+/* MENU: OPERACIONES*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Operaciones', 'F4 Operaciones', NULL, 'btnOperaciones', 'procesos.png');
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Compras', 'F4 Operaciones', 'Compras', 'btnCompras', 'compras.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Clientes', 'F4 Operaciones', 'Clientes', 'btnClientes', 'clientes.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Proveedores', 'F4 Operaciones', 'Proveedores', 'btnProveedores', 'proveedores.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Traspasos Sal', 'F4 Operaciones', 'Traspasos Sal', 'btnTraspasosSal', 'trasp_sal.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Traspasos Ent', 'F4 Operaciones', 'Traspasos Ent', 'btnTraspasosEnt', 'trasp_ent.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Traspasos', 'F4 Operaciones', 'Traspasos', 'btnTraspasos', 'traspasos.png');
+/* MENU: OPERACIONES*/
+
+/* MENU: CONFIGURACION*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Configuracion', 'F5 Configuracion', NULL, 'btnConfiguracion', 'configuracion.png');
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Empresa', 'F5 Configuracion', 'Empresa', 'btnEmpresa', 'empresa.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Roles', 'F5 Configuracion', 'Roles', 'btnRoles', 'roles.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Usuarios', 'F5 Configuracion', 'Usuarios', 'btnUsuarios', 'usuarios.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Empleados', 'F5 Configuracion', 'Empleados', 'btnEmpleados', 'empleados.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Cajas', 'F5 Configuracion', 'Cajas', 'btnCajas', 'cajas.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Servicios', 'F5 Configuracion', 'Servicios', 'btnServicios', 'servicios.png');
+/* MENU: CONFIGURACION*/
+
+/* MENU: CORTE*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Corte', 'F6 Corte', NULL, 'btnCorte', 'corte.png');
+/* MENU: CORTE*/
+
+/* MENU: REPORTES*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Reportes', 'F7 Reportes', NULL, 'btnReportes', 'reportes.png');
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Global', 'F7 Reportes', 'Global', 'btnGlobal', 'global.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Ventas', 'F7 Reportes', 'Ventas', 'btnVentas', 'ventas.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Utilidad', 'F7 Reportes', 'Utilidad', 'btnUtilidad', 'utilidad.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Compras', 'F7 Reportes', 'Compras', 'btnCompras', 'compras.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Clientes (Catalogo)', 'F7 Reportes', 'Clientes (Catalogo)', 'btnClientesCatalogo', 'clie_cat.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Proveedores (Catalogo)', 'F7 Reportes', 'Proveedores (Catalogo)', 'btnProveedoresCatalogo', 'prov_cat.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Productos (Catalogo))', 'F7 Reportes', 'Productos (Catalogo)', 'btnProductosCatalogo', 'prod_cat.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Movimientos de Caja', 'F7 Reportes', 'Movimientos de Caja', 'btnMovimientosCaja', 'mov_caj.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Clientes (Creditos)', 'F7 Reportes', 'Clientes (Credito)', 'btnClientesCreditos', 'clie_cred.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Proveedores (Creditos)', 'F7 Reportes', 'Proveedores (Credito)', 'btnProveedoresCreditos', 'prov_cred.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Cortes de Caja', 'F7 Reportes', 'Cortes de Caja', 'btnCortesCaja', 'cort_caja.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Farmacia (Sucursales)', 'F7 Reportes', 'Farmacia (Sucursales)', 'btnFarmacias', 'farm_suc.png');
+/* MENU: REPORTES*/
+
+/* MENU: ESTADISTICAS*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Estadisticas', 'F7 Estadisticas', NULL, 'btnEstadisticas', 'estadisticas.png');
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Ventas', 'F7 Estadisticas', 'Ventas', 'btnVentas', 'ventas.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Compras', 'F7 Estadisticas', 'Compras', 'btnCompras', 'compras.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Utilidad', 'F7 Estadisticas', 'Utilidad', 'btnUtilidad', 'utilidad.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Productos', 'F7 Estadisticas', 'Productos', 'btnProductos', 'productos.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Clientes', 'F7 Estadisticas', 'Clientes', 'btnClientes', 'clientes.png');
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Proveedores', 'F7 Estadisticas', 'Proveedores', 'btnProveedores', 'proveedores.png');
+/* MENU: ESTADISTICAS*/
+
+/* MENU: MEDICO*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Medico', 'F9 Medico', NULL, 'btnMedico', 'medico.png');	
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Inicio', 'F9 Medico', 'Inicio', 'btnInicio', 'inicio.png');	
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Calendario', 'F9 Medico', 'Calendario', 'btnCalendario', 'calendario.png');	
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Expedientes', 'F9 Medico', 'Expedientes', 'btnExpedientes', 'expedientes.png');	
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage) VALUES('Recetas', 'F9 Medico', 'Recetas', 'btnRecetas', 'recetas.png');	
+/* MENU: MEDICO*/
+
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '1');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '2');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '3');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '7');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '14');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '21');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '22');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '35');
+UPDATE Module SET Submenu = 'NULL' WHERE (Id = '42');
+
+
+-- --------------------------------------------------------
+
 DROP TABLE IF EXISTS `Permission`;
 
 --
@@ -5367,50 +5473,60 @@ DROP TABLE IF EXISTS `Permission`;
 --
 CREATE TABLE `Permission` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `Name` VARCHAR(50) NOT NULL,
-  `Menu` VARCHAR(50) NOT NULL,
-  `Submenu` VARCHAR(50) NULL,
-  `ControlName` VARCHAR(30) NOT NULL,
-  `SubControlName` VARCHAR(30) NULL,
-  `ControlImage` VARCHAR(100) NOT NULL,
-  `SubControlImage` VARCHAR(100) NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los permisos que tiene el usuario';
-
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Ventas', 'F1 Ventas', NULL, 'btnVentas', NULL, 'ventas.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Productos', 'F2 Productos', NULL, 'btnProductos', NULL, 'productos.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Inventario', 'F3 Inventario', NULL, 'btnInventario', NULL, 'inventario.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Operaciones', 'F4 Operaciones', NULL, 'btnOperaciones', NULL, 'procesos.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Configuracion', 'F5 Configuracion', NULL, 'btnConfiguracion', NULL, 'configuracion.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Corte', 'F6 Corte', NULL, 'btnCorte', NULL, 'corte.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Reportes', 'F7 Reportes', NULL, 'btnReportes', NULL, 'reportes.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Estadisticas', 'F7 Estadisticas', NULL, 'btnEstadisticas', NULL, 'estadisticas.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Medico', 'F9 Medico', NULL, 'btnMedico', NULL, 'medico.png', NULL);
-
--- --------------------------------------------------------
-
-DROP TABLE IF EXISTS `RolePermission`;
-
---
--- Estructura de tabla `RolePermission`
---
-CREATE TABLE `RolePermission` (
-  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `RoleId` INT NOT NULL,
-  `PermissionId` INT NOT NULL,
+  `ModuleId` INT NOT NULL,
   
   FOREIGN KEY (RoleId) REFERENCES Role(Id),
-  FOREIGN KEY (PermissionId) REFERENCES Permission(Id)
+  FOREIGN KEY (ModuleId) REFERENCES Module(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la asignacion de permisos para el rol seleccionado';
 
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 1);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 2);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 3);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 4);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 5);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 6);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 7);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 8);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 9);
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '1');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '2');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '3');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '4');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '5');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '6');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '7');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '8');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '9');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '10');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '11');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '12');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '13');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '14');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '15');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '16');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '17');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '18');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '19');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '20');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '21');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '22');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '23');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '24');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '25');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '26');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '27');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '28');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '29');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '30');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '31');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '32');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '33');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '34');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '35');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '36');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '37');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '38');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '39');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '40');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '41');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '42');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '43');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '44');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '45');
+INSERT INTO Permission (RoleId, ModuleId) VALUES ('1', '46');
+
 
 -- --------------------------------------------------------
 
