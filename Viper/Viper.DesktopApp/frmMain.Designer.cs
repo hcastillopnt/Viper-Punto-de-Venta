@@ -232,7 +232,6 @@
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // tlpMenuVertical
             // 

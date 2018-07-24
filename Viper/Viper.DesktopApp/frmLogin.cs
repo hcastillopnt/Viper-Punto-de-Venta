@@ -13,11 +13,14 @@ namespace Viper.DesktopApp
 {
     public partial class frmLogin : Form
     {
+        #region Constructor
         public frmLogin()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Events of the controls
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
@@ -56,5 +59,6 @@ namespace Viper.DesktopApp
         {
             Nombre_de_Usuario.Focus();
         }
+        #endregion
     }
 }

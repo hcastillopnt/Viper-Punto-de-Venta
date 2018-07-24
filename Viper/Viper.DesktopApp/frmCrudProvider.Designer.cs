@@ -132,7 +132,6 @@
             this.btnBuscar.Size = new System.Drawing.Size(239, 44);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // tpl1
             // 
@@ -186,7 +185,6 @@
             this.btnRecargar.Size = new System.Drawing.Size(238, 48);
             this.btnRecargar.TabIndex = 3;
             this.btnRecargar.Text = "Recargar";
-            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnEditar
             // 

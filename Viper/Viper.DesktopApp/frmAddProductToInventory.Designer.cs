@@ -69,17 +69,17 @@
             this.gpoAjustarInventario = new Telerik.WinControls.UI.RadGroupBox();
             this.tpl15 = new System.Windows.Forms.TableLayoutPanel();
             this.tlp16 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCodigoDelProducto2 = new Telerik.WinControls.UI.RadLabel();
             this.Codigo_de_barras_Remplazar = new Telerik.WinControls.UI.RadTextBox();
             this.tlp17 = new System.Windows.Forms.TableLayoutPanel();
             this.Diferencia = new Telerik.WinControls.UI.RadTextBox();
+            this.lblCantidadActual2 = new Telerik.WinControls.UI.RadLabel();
             this.lblDiferencia = new Telerik.WinControls.UI.RadLabel();
             this.Nueva_Cantidad = new System.Windows.Forms.NumericUpDown();
             this.lblNuevaCantidad = new Telerik.WinControls.UI.RadLabel();
             this.Cantidad_Actual_Remplazar = new Telerik.WinControls.UI.RadTextBox();
             this.tlp11 = new System.Windows.Forms.TableLayoutPanel();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.lblCodigoDelProducto2 = new Telerik.WinControls.UI.RadLabel();
-            this.lblCantidadActual2 = new Telerik.WinControls.UI.RadLabel();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDerecho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).BeginInit();
@@ -127,15 +127,15 @@
             this.gpoAjustarInventario.SuspendLayout();
             this.tpl15.SuspendLayout();
             this.tlp16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCodigoDelProducto2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Codigo_de_barras_Remplazar)).BeginInit();
             this.tlp17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Diferencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCantidadActual2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDiferencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nueva_Cantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblNuevaCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cantidad_Actual_Remplazar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblCodigoDelProducto2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblCantidadActual2)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -253,7 +253,7 @@
             this.lblAgregarInventario.ForeColor = System.Drawing.Color.White;
             this.lblAgregarInventario.Location = new System.Drawing.Point(272, 3);
             this.lblAgregarInventario.Name = "lblAgregarInventario";
-            this.lblAgregarInventario.Size = new System.Drawing.Size(176, 26);
+            this.lblAgregarInventario.Size = new System.Drawing.Size(177, 31);
             this.lblAgregarInventario.TabIndex = 0;
             this.lblAgregarInventario.Text = "Agregar Inventario";
             // 
@@ -387,7 +387,7 @@
             this.tlp8.ColumnCount = 3;
             this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.36871F));
             this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.63129F));
-            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385F));
+            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 387F));
             this.tlp8.Controls.Add(this.lblCantidad, 0, 0);
             this.tlp8.Controls.Add(this.Cantidad, 1, 0);
             this.tlp8.Controls.Add(this.lblCantidadActual, 0, 1);
@@ -407,7 +407,7 @@
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(3, 3);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(78, 22);
+            this.lblCantidad.Size = new System.Drawing.Size(159, 37);
             this.lblCantidad.TabIndex = 12;
             this.lblCantidad.Text = "Cantidad:";
             this.lblCantidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -418,7 +418,7 @@
             this.Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cantidad.Location = new System.Drawing.Point(168, 3);
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Size = new System.Drawing.Size(186, 29);
+            this.Cantidad.Size = new System.Drawing.Size(184, 29);
             this.Cantidad.TabIndex = 1;
             // 
             // lblCantidadActual
@@ -427,7 +427,7 @@
             this.lblCantidadActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadActual.Location = new System.Drawing.Point(3, 46);
             this.lblCantidadActual.Name = "lblCantidadActual";
-            this.lblCantidadActual.Size = new System.Drawing.Size(129, 22);
+            this.lblCantidadActual.Size = new System.Drawing.Size(159, 36);
             this.lblCantidadActual.TabIndex = 8;
             this.lblCantidadActual.Text = "Cantidad Actual:";
             this.lblCantidadActual.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -439,7 +439,7 @@
             this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(168, 46);
             this.Cantidad_ActuaL_A.Name = "Cantidad_ActuaL_A";
             this.Cantidad_ActuaL_A.NullText = "CANTIDAD ACTUAL";
-            this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(186, 24);
+            this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(184, 24);
             this.Cantidad_ActuaL_A.TabIndex = 2;
             this.Cantidad_ActuaL_A.ThemeName = "VisualStudio2012Light";
             // 
@@ -448,7 +448,7 @@
             this.tlp7.ColumnCount = 3;
             this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.22535F));
             this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.77465F));
-            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tlp7.Controls.Add(this.Codigo_de_barras_A, 1, 0);
             this.tlp7.Controls.Add(this.lblCodigoDelProducto, 0, 0);
             this.tlp7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -466,7 +466,7 @@
             this.Codigo_de_barras_A.Location = new System.Drawing.Point(168, 3);
             this.Codigo_de_barras_A.Name = "Codigo_de_barras_A";
             this.Codigo_de_barras_A.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_A.Size = new System.Drawing.Size(396, 24);
+            this.Codigo_de_barras_A.Size = new System.Drawing.Size(394, 24);
             this.Codigo_de_barras_A.TabIndex = 1;
             this.Codigo_de_barras_A.ThemeName = "VisualStudio2012Light";
             // 
@@ -476,7 +476,7 @@
             this.lblCodigoDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoDelProducto.Location = new System.Drawing.Point(3, 3);
             this.lblCodigoDelProducto.Name = "lblCodigoDelProducto";
-            this.lblCodigoDelProducto.Size = new System.Drawing.Size(162, 22);
+            this.lblCodigoDelProducto.Size = new System.Drawing.Size(159, 27);
             this.lblCodigoDelProducto.TabIndex = 2;
             this.lblCodigoDelProducto.Text = "Código del Producto:";
             this.lblCodigoDelProducto.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -492,7 +492,7 @@
             this.tlp2.Name = "tlp2";
             this.tlp2.RowCount = 1;
             this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tlp2.Size = new System.Drawing.Size(763, 28);
             this.tlp2.TabIndex = 0;
             // 
@@ -678,7 +678,7 @@
             this.tlp16.ColumnCount = 3;
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.16901F));
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.83099F));
-            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tlp16.Controls.Add(this.lblCodigoDelProducto2, 0, 1);
             this.tlp16.Controls.Add(this.Codigo_de_barras_Remplazar, 1, 1);
             this.tlp16.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -690,6 +690,17 @@
             this.tlp16.Size = new System.Drawing.Size(743, 42);
             this.tlp16.TabIndex = 1;
             // 
+            // lblCodigoDelProducto2
+            // 
+            this.lblCodigoDelProducto2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCodigoDelProducto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoDelProducto2.Location = new System.Drawing.Point(3, 7);
+            this.lblCodigoDelProducto2.Name = "lblCodigoDelProducto2";
+            this.lblCodigoDelProducto2.Size = new System.Drawing.Size(153, 32);
+            this.lblCodigoDelProducto2.TabIndex = 3;
+            this.lblCodigoDelProducto2.Text = "Código del Producto:";
+            this.lblCodigoDelProducto2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
             // Codigo_de_barras_Remplazar
             // 
             this.Codigo_de_barras_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -697,7 +708,7 @@
             this.Codigo_de_barras_Remplazar.Location = new System.Drawing.Point(162, 7);
             this.Codigo_de_barras_Remplazar.Name = "Codigo_de_barras_Remplazar";
             this.Codigo_de_barras_Remplazar.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_Remplazar.Size = new System.Drawing.Size(402, 32);
+            this.Codigo_de_barras_Remplazar.Size = new System.Drawing.Size(400, 32);
             this.Codigo_de_barras_Remplazar.TabIndex = 1;
             this.Codigo_de_barras_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -706,7 +717,7 @@
             this.tlp17.ColumnCount = 3;
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.66667F));
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.33333F));
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 368F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
             this.tlp17.Controls.Add(this.Diferencia, 1, 2);
             this.tlp17.Controls.Add(this.lblCantidadActual2, 0, 0);
             this.tlp17.Controls.Add(this.lblDiferencia, 0, 2);
@@ -727,12 +738,23 @@
             // 
             this.Diferencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Diferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Diferencia.Location = new System.Drawing.Point(163, 79);
+            this.Diferencia.Location = new System.Drawing.Point(162, 79);
             this.Diferencia.Name = "Diferencia";
             this.Diferencia.NullText = "DIFERENCIA";
-            this.Diferencia.Size = new System.Drawing.Size(208, 29);
+            this.Diferencia.Size = new System.Drawing.Size(207, 29);
             this.Diferencia.TabIndex = 3;
             this.Diferencia.ThemeName = "VisualStudio2012Light";
+            // 
+            // lblCantidadActual2
+            // 
+            this.lblCantidadActual2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCantidadActual2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadActual2.Location = new System.Drawing.Point(3, 3);
+            this.lblCantidadActual2.Name = "lblCantidadActual2";
+            this.lblCantidadActual2.Size = new System.Drawing.Size(153, 31);
+            this.lblCantidadActual2.TabIndex = 9;
+            this.lblCantidadActual2.Text = "Cantidad Actual:";
+            this.lblCantidadActual2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
             // lblDiferencia
             // 
@@ -740,7 +762,7 @@
             this.lblDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiferencia.Location = new System.Drawing.Point(3, 79);
             this.lblDiferencia.Name = "lblDiferencia";
-            this.lblDiferencia.Size = new System.Drawing.Size(154, 29);
+            this.lblDiferencia.Size = new System.Drawing.Size(153, 29);
             this.lblDiferencia.TabIndex = 14;
             this.lblDiferencia.Text = "Diferencia:";
             this.lblDiferencia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -749,9 +771,9 @@
             // 
             this.Nueva_Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nueva_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nueva_Cantidad.Location = new System.Drawing.Point(163, 40);
+            this.Nueva_Cantidad.Location = new System.Drawing.Point(162, 40);
             this.Nueva_Cantidad.Name = "Nueva_Cantidad";
-            this.Nueva_Cantidad.Size = new System.Drawing.Size(208, 29);
+            this.Nueva_Cantidad.Size = new System.Drawing.Size(207, 29);
             this.Nueva_Cantidad.TabIndex = 2;
             // 
             // lblNuevaCantidad
@@ -760,7 +782,7 @@
             this.lblNuevaCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevaCantidad.Location = new System.Drawing.Point(3, 40);
             this.lblNuevaCantidad.Name = "lblNuevaCantidad";
-            this.lblNuevaCantidad.Size = new System.Drawing.Size(154, 33);
+            this.lblNuevaCantidad.Size = new System.Drawing.Size(153, 33);
             this.lblNuevaCantidad.TabIndex = 13;
             this.lblNuevaCantidad.Text = "Nueva Cantidad:";
             this.lblNuevaCantidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -769,10 +791,10 @@
             // 
             this.Cantidad_Actual_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad_Actual_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(163, 3);
+            this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(162, 3);
             this.Cantidad_Actual_Remplazar.Name = "Cantidad_Actual_Remplazar";
             this.Cantidad_Actual_Remplazar.NullText = "CANTIDAD ACTUAL";
-            this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(208, 31);
+            this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(207, 31);
             this.Cantidad_Actual_Remplazar.TabIndex = 1;
             this.Cantidad_Actual_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -791,28 +813,6 @@
             this.tlp11.Size = new System.Drawing.Size(763, 25);
             this.tlp11.TabIndex = 0;
             // 
-            // lblCodigoDelProducto2
-            // 
-            this.lblCodigoDelProducto2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCodigoDelProducto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoDelProducto2.Location = new System.Drawing.Point(3, 7);
-            this.lblCodigoDelProducto2.Name = "lblCodigoDelProducto2";
-            this.lblCodigoDelProducto2.Size = new System.Drawing.Size(153, 32);
-            this.lblCodigoDelProducto2.TabIndex = 3;
-            this.lblCodigoDelProducto2.Text = "Código del Producto:";
-            this.lblCodigoDelProducto2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // lblCantidadActual2
-            // 
-            this.lblCantidadActual2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCantidadActual2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadActual2.Location = new System.Drawing.Point(3, 3);
-            this.lblCantidadActual2.Name = "lblCantidadActual2";
-            this.lblCantidadActual2.Size = new System.Drawing.Size(154, 31);
-            this.lblCantidadActual2.TabIndex = 9;
-            this.lblCantidadActual2.Text = "Cantidad Actual:";
-            this.lblCantidadActual2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
             // frmAddProductToInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,6 +822,7 @@
             this.Controls.Add(this.tlpPrincipal);
             this.Name = "frmAddProductToInventory";
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A de C.V.";
+            this.Load += new System.EventHandler(this.frmAddProductToInventory_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDerecho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).EndInit();
@@ -874,16 +875,16 @@
             this.tpl15.ResumeLayout(false);
             this.tlp16.ResumeLayout(false);
             this.tlp16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCodigoDelProducto2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Codigo_de_barras_Remplazar)).EndInit();
             this.tlp17.ResumeLayout(false);
             this.tlp17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Diferencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCantidadActual2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblDiferencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nueva_Cantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblNuevaCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cantidad_Actual_Remplazar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblCodigoDelProducto2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblCantidadActual2)).EndInit();
             this.ResumeLayout(false);
 
         }

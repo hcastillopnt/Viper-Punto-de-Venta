@@ -177,7 +177,6 @@
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.ThemeName = "VisualStudio2012Light";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // picArticulo
             // 
@@ -245,7 +244,6 @@
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRecargar.ThemeName = "VisualStudio2012Light";
-            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnEditar
             // 

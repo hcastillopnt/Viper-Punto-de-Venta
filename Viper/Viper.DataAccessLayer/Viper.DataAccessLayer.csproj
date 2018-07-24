@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompanyDAL.cs" />
+    <Compile Include="AccesoBDDAL.cs" />
     <Compile Include="DropDownListHelperDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="MenuDAL.cs" />

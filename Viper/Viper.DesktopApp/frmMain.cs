@@ -15,10 +15,14 @@ namespace Viper.DesktopApp
 {
     public partial class frmMain : Form
     {
+        #region Variables and Objects of Class
         private Button objButton = null;
         public string rol;
         public string nomcomp;
         public string puest;
+        #endregion
+
+        #region Constructor
         public frmMain(string rol, string fullname, string puesto)
         {
             //Inicializar variables del constructor
@@ -42,7 +46,9 @@ namespace Viper.DesktopApp
             lblNombre.Text = nomcomp.ToUpper();
 
         }
+        #endregion
 
+        #region Events of the controls
         private void timer_Tick(object sender, EventArgs e)
         {
             lblFechaActual.Text = DateTime.Now.ToLongTimeString();
@@ -73,9 +79,14 @@ namespace Viper.DesktopApp
                 case "btnConfiguracion":
                     AgregarFormularioEnPanel(new frmMenuConfiguration());
                     break;
+                case "btnCerrarSesion":
+                    Application.Exit();
+                    break;
             }
         }
+        #endregion
 
+        #region Methods of the class
         private void AgregarFormularioEnPanel(object _frmHijo)
         {
             if (this.pnlContenedor.Controls.Count > 0)
@@ -174,10 +185,7 @@ namespace Viper.DesktopApp
                 i++;
             }
         }
+        #endregion
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
