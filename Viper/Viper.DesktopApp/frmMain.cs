@@ -52,12 +52,8 @@ namespace Viper.DesktopApp
         {
             switch (e.KeyCode)
             {
-                case Keys.F1:
-                    //AgregarFormularioEnPanel(new frmPointSale());
-                    break;
-
-                case Keys.F2:
-                    //AgregarFormularioEnPanel(new frmAdminProducts());
+                case Keys.F5:
+                    AgregarFormularioEnPanel(new frmMenuConfiguration());
                     break;
 
                 case Keys.Escape:
@@ -74,14 +70,8 @@ namespace Viper.DesktopApp
 
             switch (name)
             {
-                //Ventas
-                case "btnVentas":
-                    //AgregarFormularioEnPanel(new frmPointSale());
-                    break;
-
-                //Productos
-                case "btnProductos":
-                    //AgregarFormularioEnPanel(new frmAdminProducts());
+                case "btnConfiguracion":
+                    AgregarFormularioEnPanel(new frmMenuConfiguration());
                     break;
             }
         }

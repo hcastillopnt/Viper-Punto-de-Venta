@@ -66,7 +66,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1366, 54);
+            this.BarraTitulo.Size = new System.Drawing.Size(1350, 54);
             this.BarraTitulo.TabIndex = 0;
             // 
             // tlp01
@@ -81,7 +81,7 @@
             this.tlp01.Name = "tlp01";
             this.tlp01.RowCount = 1;
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp01.Size = new System.Drawing.Size(1366, 54);
+            this.tlp01.Size = new System.Drawing.Size(1350, 54);
             this.tlp01.TabIndex = 0;
             // 
             // tlp02
@@ -92,11 +92,11 @@
             this.tlp02.Controls.Add(this.picReloj, 0, 0);
             this.tlp02.Controls.Add(this.lblFechaActual, 1, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp02.Location = new System.Drawing.Point(987, 3);
+            this.tlp02.Location = new System.Drawing.Point(975, 3);
             this.tlp02.Name = "tlp02";
             this.tlp02.RowCount = 1;
             this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp02.Size = new System.Drawing.Size(376, 48);
+            this.tlp02.Size = new System.Drawing.Size(372, 48);
             this.tlp02.TabIndex = 0;
             // 
             // picReloj
@@ -105,7 +105,7 @@
             this.picReloj.Image = ((System.Drawing.Image)(resources.GetObject("picReloj.Image")));
             this.picReloj.Location = new System.Drawing.Point(3, 3);
             this.picReloj.Name = "picReloj";
-            this.picReloj.Size = new System.Drawing.Size(97, 42);
+            this.picReloj.Size = new System.Drawing.Size(96, 42);
             this.picReloj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picReloj.TabIndex = 1;
             this.picReloj.TabStop = false;
@@ -116,9 +116,9 @@
             this.lblFechaActual.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaActual.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFechaActual.Location = new System.Drawing.Point(106, 0);
+            this.lblFechaActual.Location = new System.Drawing.Point(105, 0);
             this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(267, 48);
+            this.lblFechaActual.Size = new System.Drawing.Size(264, 48);
             this.lblFechaActual.TabIndex = 0;
             this.lblFechaActual.Text = "[Fecha]";
             // 
@@ -193,7 +193,7 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 54);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(286, 695);
+            this.MenuVertical.Size = new System.Drawing.Size(286, 676);
             this.MenuVertical.TabIndex = 1;
             // 
             // tlpContenedorVertical
@@ -210,7 +210,7 @@
             this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.26611F));
             this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.63025F));
             this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.243697F));
-            this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 695);
+            this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 676);
             this.tlpContenedorVertical.TabIndex = 0;
             // 
             // btnCerrarSesion
@@ -225,9 +225,9 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 632);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 616);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 60);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 57);
             this.btnCerrarSesion.TabIndex = 10;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,7 +239,7 @@
             this.tlpMenuVertical.ColumnCount = 1;
             this.tlpMenuVertical.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMenuVertical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMenuVertical.Location = new System.Drawing.Point(3, 108);
+            this.tlpMenuVertical.Location = new System.Drawing.Point(3, 106);
             this.tlpMenuVertical.Name = "tlpMenuVertical";
             this.tlpMenuVertical.RowCount = 9;
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -251,7 +251,7 @@
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tlpMenuVertical.Size = new System.Drawing.Size(280, 518);
+            this.tlpMenuVertical.Size = new System.Drawing.Size(280, 504);
             this.tlpMenuVertical.TabIndex = 17;
             // 
             // picLogotipo
@@ -261,7 +261,7 @@
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picLogotipo.Location = new System.Drawing.Point(3, 3);
             this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(280, 99);
+            this.picLogotipo.Size = new System.Drawing.Size(280, 97);
             this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
@@ -272,7 +272,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(286, 54);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1080, 695);
+            this.pnlContenedor.Size = new System.Drawing.Size(1064, 676);
             this.pnlContenedor.TabIndex = 2;
             // 
             // timer
@@ -283,12 +283,13 @@
             // 
             this.AutoSize = true;
             this.CancelButton = this.btnCerrarSesion;
-            this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.ClientSize = new System.Drawing.Size(1350, 730);
             this.ControlBox = false;
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -43,7 +43,6 @@
             this.Nombre_de_Usuario = new Telerik.WinControls.UI.RadTextBox();
             this.Contraseña = new Telerik.WinControls.UI.RadTextBox();
             this.tlp01 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNombreSistema = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.tlpLayout.SuspendLayout();
@@ -244,40 +243,26 @@
             // 
             // tlp01
             // 
-            this.tlp01.ColumnCount = 2;
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.41722F));
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.58278F));
-            this.tlp01.Controls.Add(this.lblNombreSistema, 0, 0);
-            this.tlp01.Controls.Add(this.pictureBox1, 1, 0);
+            this.tlp01.ColumnCount = 1;
+            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp01.Controls.Add(this.pictureBox1, 0, 0);
             this.tlp01.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp01.Location = new System.Drawing.Point(3, 3);
             this.tlp01.Name = "tlp01";
             this.tlp01.RowCount = 1;
-            this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp01.Size = new System.Drawing.Size(342, 120);
             this.tlp01.TabIndex = 2;
-            // 
-            // lblNombreSistema
-            // 
-            this.lblNombreSistema.AutoSize = true;
-            this.lblNombreSistema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreSistema.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.lblNombreSistema.Location = new System.Drawing.Point(3, 0);
-            this.lblNombreSistema.Name = "lblNombreSistema";
-            this.lblNombreSistema.Size = new System.Drawing.Size(121, 120);
-            this.lblNombreSistema.TabIndex = 0;
-            this.lblNombreSistema.Text = "VIPER 1.0\r\nPUNTO DE VENTA";
-            this.lblNombreSistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(130, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 114);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(336, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -292,6 +277,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tlpLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -310,7 +296,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Nombre_de_Usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Contraseña)).EndInit();
             this.tlp01.ResumeLayout(false);
-            this.tlp01.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -332,7 +317,6 @@
         private Telerik.WinControls.UI.RadTextBox Nombre_de_Usuario;
         private Telerik.WinControls.UI.RadTextBox Contraseña;
         private System.Windows.Forms.TableLayoutPanel tlp01;
-        private System.Windows.Forms.Label lblNombreSistema;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
