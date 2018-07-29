@@ -5217,7 +5217,7 @@ CREATE TABLE `Employee` (
   `FullName` varchar(50) NULL,
   `PhoneNumber` varchar(10) NULL,
   `CellphoneNumber` varchar(13) NULL,
-  `JobTitleId` INT NULL COMMENT 'Llave foranea de Puesto de Trabajo',
+  -- `JobTitleId` INT NULL COMMENT 'Llave foranea de Puesto de Trabajo',
   `BirthDate` VARCHAR(10) NULL,
   `MaritalStatusId` INT NULL COMMENT 'Llave foranea de Estado Civil',
   `GenderId` INT NULL COMMENT 'Llave foranea de Genero',
@@ -5227,7 +5227,7 @@ CREATE TABLE `Employee` (
   `NSS` varchar(16) NULL,
   `ProfilePhoto` longblob NULL,
   `FingerPrint` longblob NULL,
-  `ShiftId` INT NOT NULL COMMENT 'Llave foranea de Turno',
+  -- `ShiftId` INT NOT NULL COMMENT 'Llave foranea de Turno',
   `StartDate` DATE NOT NULL,
   `EndDate` DATE NULL,
   `IsActive` tinyint(1) NOT NULL,
@@ -5239,10 +5239,10 @@ CREATE TABLE `Employee` (
   `ModifiedBy` VARCHAR(6) NULL,
   -- END: AuditableEntity --
   
-  FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
+  -- FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
   FOREIGN KEY (AddressId) REFERENCES Address(Id),
   FOREIGN KEY (MaritalStatusId) REFERENCES MaritalStatus(Id),
-  FOREIGN KEY (ShiftId) REFERENCES Shift(Id),
+  -- FOREIGN KEY (ShiftId) REFERENCES Shift(Id),
   FOREIGN KEY (GenderId) REFERENCES Gender(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los usuarios (empleados) registrados';
 
@@ -5283,28 +5283,28 @@ CREATE TABLE `Site`
 -- Estructura de tabla `EmployeeDepartmentHistory`
 --
 
--- CREATE TABLE `EmployeeDepartmentHistory`
--- (
--- 	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
---     `EmployeeId` INT NOT NULL,
---     `JobTitleId` INT NOT NULL,
---     `DepartmentId` INT NOT NULL,
---     `SiteId` INT NOT NULL,
---     `ShiftId` INT NOT NULL,
---     
--- 	-- START: AuditableEntity --
---     `CreatedDate` DATETIME NULL,
---     `CreateBy` VARCHAR(6) NULL,
---     `ModifiedDate` DATETIME NULL,
---     `ModifiedBy` VARCHAR(6) NULL,
---     -- END: AuditableEntity --
---     
---     FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
---     FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
---     FOREIGN KEY (DepartmentId) REFERENCES Department(Id),
---     FOREIGN KEY (SiteId) REFERENCES Site(Id),
---     FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
--- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el horario, departamento e informacion de donde ha estado un empleado';
+CREATE TABLE `EmployeeDepartmentHistory`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    `EmployeeId` INT NOT NULL,
+    `JobTitleId` INT NOT NULL,
+    `DepartmentId` INT NOT NULL,
+    `SiteId` INT NOT NULL,
+    `ShiftId` INT NOT NULL,
+    
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+    
+    FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
+    FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
+    FOREIGN KEY (DepartmentId) REFERENCES Department(Id),
+    FOREIGN KEY (SiteId) REFERENCES Site(Id),
+    FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el horario, departamento e informacion de donde ha estado un empleado';
 
 -- --------------------------------------------------------
 
@@ -5335,13 +5335,12 @@ CREATE TABLE `User` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `LoginID` VARCHAR(256) NOT NULL,
   `PasswordEncrypted` varchar(256) NOT NULL,
-  `MobilePIN` varchar(50) NOT NULL,
+  `MobilePIN` varchar(50) NULL,
   `EmailAddress` varchar(50) NOT NULL,
   `PasswordQuestion` varchar(100) NOT NULL,
   `PasswordAnswer` varchar(100) NOT NULL,
   `AccessFailed` INT NOT NULL,
   `IsWelcome` tinyint(1) NOT NULL,
-  `IsApproved` tinyint(1) NOT NULL,
   `IsActive` tinyint(1) NOT NULL,
   `IsEnabled` tinyint(1) NOT NULL,
   `EmployeeId` INT NOT NULL,
