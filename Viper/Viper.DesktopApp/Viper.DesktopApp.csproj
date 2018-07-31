@@ -78,6 +78,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.ChartView, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.GridView, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -126,6 +127,12 @@
     <Compile Include="frmCrudProvider.Designer.cs">
       <DependentUpon>frmCrudProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,11 +145,11 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuConfiguration.cs">
+    <Compile Include="frmPanelButtons.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuConfiguration.Designer.cs">
-      <DependentUpon>frmMenuConfiguration.cs</DependentUpon>
+    <Compile Include="frmPanelButtons.Designer.cs">
+      <DependentUpon>frmPanelButtons.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegimenFiscal.cs">
       <SubType>Form</SubType>
@@ -191,14 +198,17 @@
     <EmbeddedResource Include="frmCrudProvider.resx">
       <DependentUpon>frmCrudProvider.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuConfiguration.resx">
-      <DependentUpon>frmMenuConfiguration.cs</DependentUpon>
+    <EmbeddedResource Include="frmPanelButtons.resx">
+      <DependentUpon>frmPanelButtons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegimenFiscal.resx">
       <DependentUpon>frmRegimenFiscal.cs</DependentUpon>
@@ -262,6 +272,7 @@
     <Content Include="images\icon\basura.png" />
     <Content Include="images\icon\camara.png" />
     <Content Include="images\icon\cancelar.png" />
+    <Content Include="images\icon\dinero.png" />
     <Content Include="images\icon\cerrar_sesion.png" />
     <Content Include="images\icon\comprobado.png" />
     <Content Include="images\icon\configuracion.png" />

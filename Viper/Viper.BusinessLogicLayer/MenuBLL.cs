@@ -22,5 +22,20 @@ namespace Viper.BusinessLogicLayer
 
             return dt;
         }
+
+        /// <summary>
+        /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
+        /// </summary>
+        /// <param name="RolName">Nombre del Rol</param>
+        /// <param name="Menu">Nombre del Menu</param>
+        /// <returns>DataTable</returns>
+        public static DataTable CargarSubmenuPorRol(string RolName, string Menu)
+        {
+            DataTable dt = new DataTable();
+
+            dt = DataAccessLayer.MenuDAL.CargarSubmenuPorRol(RolName, Menu);
+
+            return dt;
+        }
     }
 }
