@@ -23,23 +23,22 @@ namespace Viper.DesktopApp
         #region Events of the controls
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string username = Nombre_de_Usuario.Text.Trim().ToString();
+            string password = Contraseña.Text.Trim().ToString();
 
-            if (Nombre_de_Usuario.Text == "" || Contraseña.Text == "")
+            if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Favor de no dejar espacios en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 DataTable dt = new DataTable();
-                dt = BusinessLogicLayer.LoginBLL.iniciarSesion(Nombre_de_Usuario.Text, Contraseña.Text);
 
+                dt = BusinessLogicLayer.LoginBLL.authorize_by_credentials(username, password);
 
                 if (dt != null)
                 {
-                    string rol = dt.Rows[0].ItemArray[1].ToString();
-                    string puesto = dt.Rows[0].ItemArray[2].ToString();
-                    string nomcomp = dt.Rows[0].ItemArray[3].ToString();
-                    frmMain frm = new frmMain(rol, nomcomp, puesto);
+                    frmMain frm = new frmMain("ADMINISTRADOR", "HORACIO ENRIQUE CASTILLO PUENTE", "DUEÑO DE NEGOCIO");
                     frm.Show();
                     this.Hide();
                 }

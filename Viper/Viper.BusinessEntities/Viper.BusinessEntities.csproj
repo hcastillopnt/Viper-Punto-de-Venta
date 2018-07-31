@@ -66,6 +66,7 @@
     <Compile Include="Company.cs" />
     <Compile Include="CountryRegion.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDepartmentHistory.cs" />
     <Compile Include="Gender.cs" />

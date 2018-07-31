@@ -68,26 +68,6 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
-        #region obtainLoginIDGeneratedAutomatic
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static string obtainLoginIDGeneratedAutomatic()
-        {
-            //Variable to recover the LoginID of the company
-            string LoginID = String.Empty;
-
-            //To obtain the LoginID of the company by means of the layer DataAccess
-            LoginID = DataAccessLayer.CompanyDAL.obtainLoginIDGeneratedAutomatic();
-
-            //To return the value of the variable LoginID
-            return LoginID;
-        }
-
-        #endregion
-
         #region getCatalogOfRegimenFiscal
 
         /// <summary>

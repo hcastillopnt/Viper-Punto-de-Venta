@@ -449,13 +449,12 @@ namespace Viper.DesktopApp
             this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
             this.Tipo_Vialidad_Fiscal.SelectedIndex = 0;
             this.Vialidad_Fiscal.Text = String.Empty;
-            this.Codigo_Postal_Fiscal.Text = String.Empty;
+            this.Codigo_Postal_Fiscal.Text = "_____";
             this.No_Ext_Fiscal.Text = String.Empty;
             this.No_Int_Fiscal.Text = String.Empty;
             this.Colonia_Fiscal.Text = String.Empty;
             this.Entidad_Federativa_Fiscal.SelectedIndex = 0;
             this.Municipio_Fiscal.SelectedIndex = 0;
-
             this.Tipo_Inmueble_Fiscal.Enabled = true;
             this.Tipo_Vialidad_Fiscal.Enabled = true;
             this.Vialidad_Fiscal.Enabled = true;
@@ -560,7 +559,7 @@ namespace Viper.DesktopApp
             company.FiscalName = Nombre_Fiscal.Text.Trim().ToUpper();
             company.RFC = RFC.Text.Trim().ToUpper();
             company.CURP = CURP.Text.Trim().ToUpper();
-            company.LoginID = BusinessLogicLayer.CompanyBLL.obtainLoginIDGeneratedAutomatic();
+            company.LoginID = company.RFC;
             company.PasswordEncrypted = "admin";
             if(!string.IsNullOrEmpty(Regimen_Fiscal.Text.Trim().ToString()))
                 company.RegimenFiscalId = BusinessLogicLayer.CompanyBLL.getRegimenIdByName(Regimen_Fiscal.Text.Trim().ToString());

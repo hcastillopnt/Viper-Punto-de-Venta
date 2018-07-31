@@ -68,6 +68,7 @@ namespace Viper.DataAccessLayer
                                     isInserted = false;
                                     dbCtx.AddressesSAT.Add(addressSAT);
                                     isInserted = dbCtx.SaveChanges() > 0;
+
                                     var addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
                                     if (addressSATID > 0)
@@ -78,10 +79,12 @@ namespace Viper.DataAccessLayer
 
                                             company.AddressSATId = addressSATID;
                                             company.AddressId = addressID;
+                                            company.RoleId = dbCtx.Roles.Where(x => x.Name == "ADMINISTRADOR").FirstOrDefault().Id;
                                             dbCtx.Companies.Add(company);
                                             isInserted = dbCtx.SaveChanges() > 0;
 
                                             var companyId = dbCtx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
                                             if (companyId > 0)
                                             {
                                                 if (isInserted == true && string.IsNullOrEmpty(message))
@@ -132,6 +135,27 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region obtainCompanyName
+        /// <summary>
+        /// Method to get company name
+        /// </summary>
+        /// <param name="usr">LoginID</param>
+        /// <param name="pwd">Password Encrypted SHA1</param>
+        /// <returns></returns>
+        public static string obtainCompanyName(string usr, string pwd)
+        {
+            using (ViperContext dbCtx = new ViperContext())
+            {
+                var result = dbCtx.Companies
+                    .Where(x => x.LoginID == usr && x.PasswordEncrypted == pwd)
+                    .FirstOrDefault()
+                    .CompanyName;
+
+                return result;
+            }
+        }
+        #endregion
+
         #region obtainCompanyKeyGeneratedAutomatic
 
         /// <summary>
@@ -160,42 +184,6 @@ namespace Viper.DataAccessLayer
             }
 
             return string.Format("EMPOWTK{0:0000}", inc);
-        }
-
-        #endregion
-
-        #region obtainLoginIDGeneratedAutomatic
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static string obtainLoginIDGeneratedAutomatic()
-        {
-            int inc = 0;
-
-            bool isEN = dbCtx.Employees.ToList().Count() > 0;//verificar si hay empleados
-
-            if (isEN)
-            {
-                //traer ultimo codigo de empleado registrado
-                string clave = dbCtx.Employees.ToList().Last().EmployeeIDNumber;
-
-                //usar metodo substring para sacar numeros del codigo para incrementar
-                string numero = clave.Substring(clave.Length - 4, 4);
-                int numcl = Convert.ToInt32(numero);
-
-                //incrementar
-                inc = numcl + 1;
-            }
-            else
-            {
-                //igualar a uno en caso de que sea el primero
-                inc = 1;
-            }
-
-            //return string.Format("VIPER-EMP-{0:0000}", inc);
-            return string.Format("VIPER-ADMIN-{0:0000}", inc);
         }
 
         #endregion

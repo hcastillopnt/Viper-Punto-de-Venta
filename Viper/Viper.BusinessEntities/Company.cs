@@ -133,6 +133,9 @@ namespace Viper.BusinessEntities
         /// </summary>
         public byte[] Logo { get; set; }
 
+        [Required(ErrorMessage = "El campo RoleId es obligatorio")]
+        public int RoleId { get; set; }
+
         /// <summary>
         /// Campo CreatedDate
         /// </summary>

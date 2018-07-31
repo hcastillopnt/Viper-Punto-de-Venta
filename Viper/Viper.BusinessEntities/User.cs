@@ -24,13 +24,6 @@ namespace Viper.BusinessEntities
         public string LoginID { get; set; }
 
         /// <summary>
-        /// Campo EmployeeId
-        /// </summary>
-        [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
-        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
-        public int EmployeeId { get; set; }
-
-        /// <summary>
         /// Campo PasswordEncrypted
         /// </summary>
         [Required(ErrorMessage = "El campo PasswordEncrypted es obligatorio")]
@@ -99,6 +92,13 @@ namespace Viper.BusinessEntities
         /// </summary>
         [Required(ErrorMessage = "El campo IsEnabled es obligatorio")]
         public byte IsEnabled { get; set; }
+
+        /// <summary>
+        /// Campo EmployeeId
+        /// </summary>
+        [Required(ErrorMessage = "El campo EmployeeID es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int EmployeeId { get; set; }
 
         /// <summary>
         /// Campo EmployeeId
