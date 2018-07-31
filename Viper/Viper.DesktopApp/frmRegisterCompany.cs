@@ -124,6 +124,29 @@ namespace Viper.DesktopApp
             toolTip1.SetToolTip(this.btnImportarDatosFiscales, "Para copiar los datos proporcionado en la parte superior como fiscales, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnRegimenFiscal, "Para seleccionar el regimen fiscal correspondiente a su giro de negocio, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnExaminar, "Para buscar el logotipo de su negocio almacenado en su pc, favor de dar clic en este boton");
+
+            // Set up the ToolTip text for the TextBox and ComboBox Control.
+            toolTip1.SetToolTip(this.Giro_Comercial, UtilMessages.GIRO_COMPAÑIA);
+            toolTip1.SetToolTip(this.eMail, UtilMessages.EMAIL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Tipo_Inmueble, UtilMessages.TIPO_INMUEBLE_COMPAÑIA);
+            toolTip1.SetToolTip(this.lblTipoInmuebleFiscal, UtilMessages.TIPO_DE_INMUEBLE_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Vialidad, UtilMessages.NOMBRE_VIALIDAD_COMPAÑIA);
+            toolTip1.SetToolTip(this.Vialidad_Fiscal, UtilMessages.NOMBRE_VIALIDAD_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Entidad_Federativa, UtilMessages.ESTADO_COMPAÑIA);
+            toolTip1.SetToolTip(this.Entidad_Federativa_Fiscal, UtilMessages.ESTADO_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Municipio, UtilMessages.LOCALIDAD_COMPAÑIA);
+            toolTip1.SetToolTip(this.Municipio_Fiscal, UtilMessages.LOCALIDAD_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Colonia, UtilMessages.COLONIA_COMPAÑIA);
+            toolTip1.SetToolTip(this.Colonia_Fiscal, UtilMessages.COLONIA_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Codigo_Postal, UtilMessages.CODIGO_POSTAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.Codigo_Postal_Fiscal, UtilMessages.CODIGO_POSTAL_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.No_Int, UtilMessages.NUMERO_INTERIOR_COMPAÑIA);
+            toolTip1.SetToolTip(this.No_Int_Fiscal, UtilMessages.NUMERO_INTERIOR_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.No_Ext, UtilMessages.NUMERO_EXTERIOR_COMPAÑIA);
+            toolTip1.SetToolTip(this.No_Ext_Fiscal, UtilMessages.NUMERO_EXTERIOR_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.RFC, UtilMessages.RFC_FISCAL_COMPAÑIA);
+            toolTip1.SetToolTip(this.CURP, UtilMessages.CURP_FISCAL_COMPAÑIA);
+
         }
 
         public void Button_Click(Object sender, EventArgs args)
@@ -642,5 +665,10 @@ namespace Viper.DesktopApp
         }
 
         #endregion
+
+        private void RFC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.rpvFarmacopea = new Telerik.WinControls.UI.RadPageViewPage();
             this.rpvImagen = new Telerik.WinControls.UI.RadPageViewPage();
             this.tlp19 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnEliminar = new Telerik.WinControls.UI.RadButton();
+            this.btnExaminar = new Telerik.WinControls.UI.RadButton();
             this.btnAgregarImagen = new Telerik.WinControls.UI.RadButton();
             this.gpoAgregarImagen = new Telerik.WinControls.UI.RadGroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -100,7 +100,7 @@
             this.pvAddProduct.SuspendLayout();
             this.rpvImagen.SuspendLayout();
             this.tlp19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpoAgregarImagen)).BeginInit();
             this.gpoAgregarImagen.SuspendLayout();
@@ -199,7 +199,7 @@
             this.pvAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pvAddProduct.Location = new System.Drawing.Point(207, 3);
             this.pvAddProduct.Name = "pvAddProduct";
-            this.pvAddProduct.SelectedPage = this.rpvDatosBasicos;
+            this.pvAddProduct.SelectedPage = this.rpvImagen;
             this.pvAddProduct.Size = new System.Drawing.Size(950, 743);
             this.pvAddProduct.TabIndex = 0;
             this.pvAddProduct.TabStop = false;
@@ -232,7 +232,7 @@
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 343F));
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
-            this.tlp19.Controls.Add(this.btnEliminar, 0, 1);
+            this.tlp19.Controls.Add(this.btnExaminar, 0, 1);
             this.tlp19.Controls.Add(this.btnAgregarImagen, 2, 1);
             this.tlp19.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlp19.Location = new System.Drawing.Point(0, 510);
@@ -243,19 +243,21 @@
             this.tlp19.Size = new System.Drawing.Size(911, 81);
             this.tlp19.TabIndex = 2;
             // 
-            // btnEliminar
+            // btnExaminar
             // 
-            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEliminar.Location = new System.Drawing.Point(3, 34);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(255, 44);
-            this.btnEliminar.TabIndex = 1;
-            this.btnEliminar.ThemeName = "VisualStudio2012Light";
+            this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExaminar.Location = new System.Drawing.Point(3, 34);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(255, 44);
+            this.btnExaminar.TabIndex = 1;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.ThemeName = "VisualStudio2012Light";
             // 
             // btnAgregarImagen
             // 
             this.btnAgregarImagen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAgregarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarImagen.Location = new System.Drawing.Point(607, 34);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(301, 44);
@@ -348,9 +350,11 @@
             // 
             this.Caracteristicas.AutoSize = false;
             this.Caracteristicas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Caracteristicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Caracteristicas.Location = new System.Drawing.Point(2, 18);
             this.Caracteristicas.Multiline = true;
             this.Caracteristicas.Name = "Caracteristicas";
+            this.Caracteristicas.NullText = "Características";
             this.Caracteristicas.Size = new System.Drawing.Size(548, 103);
             this.Caracteristicas.TabIndex = 1;
             this.Caracteristicas.ThemeName = "VisualStudio2012Light";
@@ -1033,7 +1037,7 @@
             this.pvAddProduct.ResumeLayout(false);
             this.rpvImagen.ResumeLayout(false);
             this.tlp19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpoAgregarImagen)).EndInit();
             this.gpoAgregarImagen.ResumeLayout(false);
@@ -1111,7 +1115,7 @@
         private Telerik.WinControls.UI.RadPageViewPage rpvFarmacopea;
         private Telerik.WinControls.UI.RadPageViewPage rpvImagen;
         private System.Windows.Forms.TableLayoutPanel tlp19;
-        private Telerik.WinControls.UI.RadButton btnEliminar;
+        private Telerik.WinControls.UI.RadButton btnExaminar;
         private Telerik.WinControls.UI.RadButton btnAgregarImagen;
         private Telerik.WinControls.UI.RadGroupBox gpoAgregarImagen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;

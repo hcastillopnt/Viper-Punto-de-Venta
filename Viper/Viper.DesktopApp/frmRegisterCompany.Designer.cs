@@ -1167,6 +1167,7 @@
             this.RFC.Size = new System.Drawing.Size(768, 26);
             this.RFC.TabIndex = 16;
             this.RFC.ThemeName = "VisualStudio2012Light";
+            this.RFC.TextChanged += new System.EventHandler(this.RFC_TextChanged);
             // 
             // lblRegimenFiscal
             // 

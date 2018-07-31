@@ -1697,6 +1697,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmRegisterEmployee_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
             this.tlpCentro.ResumeLayout(false);

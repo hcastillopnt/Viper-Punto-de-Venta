@@ -65,6 +65,27 @@ namespace Viper.DesktopApp
             this.btnRecargar.Click += Button_Click;
             dgvCrudClient.DataSource = null;
             dgvCrudClient.DataSource = BusinessLogicLayer.AccesoBDBLL.getCustomers();
+
+
+            // Create the ToolTip and associate with the Form container.
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.btnAgregar, "Para poder agregar a un nuevo cliente, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnEditar, "Para editar los datos de un cliente, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnBuscar, "Para buscar los datos de un cliente, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnEliminar, "Para eliminar los datos de un cliente, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnRecargar, "Para racargar los datos, favor de dar clic en este boton");
+
+            // Set up the ToolTip text for the TextBox and ComboBox Control.
+            toolTip1.SetToolTip(this.Clave_cliente , UtilMessages.BUSCAR_CLAVE_CLIENTE);
         }
         #endregion
     }
