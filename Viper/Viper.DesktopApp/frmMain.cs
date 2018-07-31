@@ -76,12 +76,40 @@ namespace Viper.DesktopApp
         {
             switch (e.KeyCode)
             {
+                case Keys.F1:
+                    //AgregarFormularioEnPanel(new frmShoppingCart());
+                    break;
+
+                case Keys.F2:
+                    AgregarFormularioEnPanel(new frmAdminProducts());
+                    break;
+
+                case Keys.F3:
+                    AgregarFormularioEnPanel(new frmAddProductToInventory());
+                    break;
+
+                case Keys.F4:
+                    //AgregarFormularioEnPanel(new frmOperations());
+                    break;
+
                 case Keys.F5:
                     AgregarFormularioEnPanel(new frmMenuConfiguration());
                     break;
 
-                case Keys.Escape:
-                    Application.Exit();
+                case Keys.F6:
+                    //AgregarFormularioEnPanel(new frmCutCash());
+                    break;
+
+                case Keys.F7:
+                    //AgregarFormularioEnPanel(new frmReports());
+                    break;
+
+                case Keys.F8:
+                    //AgregarFormularioEnPanel(new frmStadistics());
+                    break;
+
+                case Keys.F9:
+                    //AgregarFormularioEnPanel(new frmDoctor());
                     break;
             }
         }
@@ -94,11 +122,40 @@ namespace Viper.DesktopApp
 
             switch (name)
             {
+                case "btnVentas":
+                    //AgregarFormularioEnPanel(new frmShoppingCart());
+                    break;
+
+                case "btnProductos":
+                    AgregarFormularioEnPanel(new frmAdminProducts());
+                    break;
+
+                case "btnInventario":
+                    AgregarFormularioEnPanel(new frmAddProductToInventory());
+                    break;
+
+                case "btnOperaciones":
+                    //AgregarFormularioEnPanel(new frmOperations());
+                    break;
+
                 case "btnConfiguracion":
                     AgregarFormularioEnPanel(new frmMenuConfiguration());
                     break;
-                case "btnCerrarSesion":
-                    Application.Exit();
+
+                case "btnCorte":
+                    //AgregarFormularioEnPanel(new frmCutCash());
+                    break;
+
+                case "btnReportes":
+                    //AgregarFormularioEnPanel(new frmReports());
+                    break;
+
+                case "btnEstadisticas":
+                    //AgregarFormularioEnPanel(new frmStadistics());
+                    break;
+
+                case "btnMedico":
+                    //AgregarFormularioEnPanel(new frmDoctor());
                     break;
             }
         }
