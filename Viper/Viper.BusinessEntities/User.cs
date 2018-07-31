@@ -73,25 +73,25 @@ namespace Viper.BusinessEntities
         /// Campo IsWelcome
         /// </summary>
         [Required(ErrorMessage = "El campo IsWelcome es obligatorio")]
-        public byte IsWelcome { get; set; }
+        public bool IsWelcome { get; set; }
 
         /// <summary>
         /// Campo IsApproved
         /// </summary>
         [Required(ErrorMessage = "El campo IsApproved es obligatorio")]
-        public byte IsApproved { get; set; }
+        public bool IsApproved { get; set; }
 
         /// <summary>
         /// Campo IsActive
         /// </summary>
         [Required(ErrorMessage = "El campo IsActive es obligatorio")]
-        public byte IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         /// <summary>
         /// Campo IsEnabled
         /// </summary>
         [Required(ErrorMessage = "El campo IsEnabled es obligatorio")]
-        public byte IsEnabled { get; set; }
+        public bool IsEnabled { get; set; }
 
         /// <summary>
         /// Campo EmployeeId
