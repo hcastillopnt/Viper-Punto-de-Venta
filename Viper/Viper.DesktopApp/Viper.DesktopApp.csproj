@@ -163,6 +163,7 @@
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperGrid.cs" />
+    <Compile Include="InputBox.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -267,20 +268,24 @@
     <Content Include="images\icon\corte.png" />
     <Content Include="images\icon\descargar.png" />
     <Content Include="images\icon\empleado.png" />
+    <Content Include="images\icon\error.png" />
     <Content Include="images\icon\estadisticas.png" />
     <Content Include="images\icon\examinar.png" />
     <Content Include="images\icon\guardar.png" />
     <Content Include="images\icon\hospital.png" />
     <Content Include="images\icon\huella_dactilar.png" />
+    <Content Include="images\icon\info.png" />
     <Content Include="images\icon\inventario.png" />
     <Content Include="images\icon\lupa.png" />
     <Content Include="images\icon\medico.png" />
     <Content Include="images\icon\nuevo.png" />
     <Content Include="images\icon\procesos.png" />
     <Content Include="images\icon\productos.png" />
+    <Content Include="images\icon\question.png" />
     <Content Include="images\icon\reportes.png" />
     <Content Include="images\icon\tiempo.png" />
     <Content Include="images\icon\ventas.png" />
+    <Content Include="images\icon\warning.png" />
     <Content Include="images\other\application_icon.ico" />
     <Content Include="images\other\application_logo.png" />
     <Content Include="images\other\wallpaper_login1.jpg" />

@@ -44,6 +44,7 @@
     <Compile Include="CompanyBLL.cs" />
     <Compile Include="AccesoBDBLL.cs" />
     <Compile Include="DropDownListHelperBLL.cs" />
+    <Compile Include="EmployeeBLL.cs" />
     <Compile Include="EncryptionDecryption.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="MenuBLL.cs" />

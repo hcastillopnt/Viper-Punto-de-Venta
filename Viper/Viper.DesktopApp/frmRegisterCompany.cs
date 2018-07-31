@@ -66,8 +66,16 @@ namespace Viper.DesktopApp
 
         #region Events of the controls 
 
+        public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
+        {
+            args.Cancel = args.CloseReason == CloseReason.UserClosing;
+        }
+
         private void frmRegisterCompany_Load(object sender, EventArgs e)
         {
+            //Set Event to form
+            this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
+
             //Establecer los eventos a los controles
             this.btnRegimenFiscal.Click += Button_Click;
             this.btnExaminar.Click += Button_Click;
@@ -665,10 +673,5 @@ namespace Viper.DesktopApp
         }
 
         #endregion
-
-        private void RFC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

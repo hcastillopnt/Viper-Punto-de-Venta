@@ -48,6 +48,55 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
+        #region updatePassword
+        /// <summary>
+        /// Update password form oompany administrator
+        /// </summary>
+        /// <param name="pwd">Password</param>
+        /// <param name="entityID">Entity ID</param>
+        /// <returns>Message</returns>
+        public static string updatePassword(string pwd, int entityID)
+        {
+            //Variable to recover the messages of mistake produced in the layer of BusinessLogic
+            string message = string.Empty;
+
+            if (string.IsNullOrEmpty(pwd) && entityID == 0)
+            {
+                message = "Favor de introducir la contraseña a actualizar";
+            }
+            else
+            {
+                //To encrypt the password by means of the algorithm SHA1
+                string PasswordEncrypted = EncryptionDecryption.EncriptarSHA1(pwd);
+
+                //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
+                message = DataAccessLayer.CompanyDAL.updatePassword(PasswordEncrypted, entityID);
+            }
+
+            //To return the value of the variable message
+            return message;
+        }
+        #endregion
+
+        #region getPasswordSaved
+        /// <summary>
+        /// Get password saved in database
+        /// </summary>
+        /// <param name="EntityID">Entity ID</param>
+        /// <returns>Password Encrypted</returns>
+        public static string getPasswordSaved(int EntityID)
+        {
+            string Password = String.Empty;
+            string EncryptedPassword = String.Empty;
+
+            EncryptedPassword = DataAccessLayer.CompanyDAL.getPasswordSaved(EntityID);
+
+            Password = EncryptionDecryption.DesencriptarSHA1(EncryptedPassword);
+
+            return Password;
+        }
+        #endregion
+
         #region obtainCompanyKeyGeneratedAutomatic
 
         /// <summary>

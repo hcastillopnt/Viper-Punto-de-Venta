@@ -54,6 +54,24 @@ namespace Viper.DesktopApp
             lblFechaActual.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            //Set Event to form
+            this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
+        }
+
+        public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
+        {
+            args.Cancel = args.CloseReason == CloseReason.UserClosing;
+        }
+
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -186,6 +204,5 @@ namespace Viper.DesktopApp
             }
         }
         #endregion
-
     }
 }

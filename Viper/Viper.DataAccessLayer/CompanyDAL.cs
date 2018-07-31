@@ -135,6 +135,102 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region updatePassword
+        /// <summary>
+        /// Update password form oompany administrator
+        /// </summary>
+        /// <param name="pwd">Password</param>
+        /// <param name="entityID">Entity ID</param>
+        /// <returns>Message</returns>
+        public static string updatePassword(string pwd, int entityID)
+        {
+            string message = string.Empty;
+            bool isUpdate = false;
+
+            using (var dbCtxTran = dbCtx.Database.BeginTransaction())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = dbCtx.Database
+                     .SqlQuery<int?>(@"
+                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Company'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            var entity = dbCtx.Companies.Where(x => x.Id == entityID).FirstOrDefault();
+
+                            entity.PasswordEncrypted = pwd;
+
+                            dbCtx.Companies.Attach(entity);
+                            dbCtx.Entry(entity).State = EntityState.Modified;
+
+                            isUpdate = dbCtx.SaveChanges() > 0;
+
+                            if (isUpdate == true && string.IsNullOrEmpty(message))
+                            {
+                                dbCtxTran.Commit();
+                            }
+                        }
+                    }
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    var errorMessages = ex.EntityValidationErrors
+                            .SelectMany(x => x.ValidationErrors)
+                            .Select(x => x.ErrorMessage);
+                    var fullErrorMessage = string.Join("; ", errorMessages);
+                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                    message = exceptionMessage + "\n" + ex.EntityValidationErrors;
+
+                    dbCtxTran.Rollback();
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    var entity = ex.Entries.Single().GetDatabaseValues();
+
+                    if (entity == null)
+                        message = "The entity being updated is already deleted by another user";
+                    else
+                        message = "The entity being updated has already been updated by another user";
+
+                    dbCtxTran.Rollback();
+                }
+                catch (DbUpdateException ex)
+                {
+                    var exception = HandleDbUpdateException(ex);
+                    message = exception.Message;
+
+                    dbCtxTran.Rollback();
+                }
+            }
+
+            return message;
+        }
+        #endregion
+
+        #region getPasswordSaved
+        /// <summary>
+        /// Get password saved in database
+        /// </summary>
+        /// <param name="EntityID">Entity ID</param>
+        /// <returns>Password Encrypted</returns>
+        public static string getPasswordSaved(int EntityID)
+        {
+            string EncryptedPassword = String.Empty;
+
+            EncryptedPassword = dbCtx.Companies.Where(x => x.Id == EntityID).FirstOrDefault().PasswordEncrypted;
+
+            return EncryptedPassword;
+        }
+        #endregion
+
         #region obtainCompanyName
         /// <summary>
         /// Method to get company name
