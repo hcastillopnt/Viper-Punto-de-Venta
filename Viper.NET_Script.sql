@@ -5052,6 +5052,23 @@ SET SQL_SAFE_UPDATES = 1;
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Role`;
+
+--
+-- Estructura de tabla `Role`
+--
+CREATE TABLE `Role` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` VARCHAR(50) NOT NULL,
+  `Description` VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los roles de la aplicacion';
+
+INSERT INTO Role (Name, Description) VALUES('ADMINISTRADOR', 'God Mode allows us, among other things to control users, products, managae credentials, ...');
+INSERT INTO Role (Name, Description) VALUES('BASICO', 'The employee can make sales, consult reports, make cash cuts');
+INSERT INTO Role (Name, Description) VALUES('DOCTOR', 'The employee can access module Medical');
+
+-- --------------------------------------------------------
+
 DROP TABLE IF EXISTS `Company`;
 
 --
@@ -5076,6 +5093,7 @@ CREATE TABLE `Company` (
   `ApiKey` varchar(100) NULL,
   `BusinessActivity` varchar(30) NULL,
   `Logo` longblob NULL,
+  `RoleId` INT NULL COMMENT 'Llave foranea de Rol',
   
   -- START: AuditableEntity --
   `CreatedDate` DATETIME NULL,
@@ -5086,7 +5104,8 @@ CREATE TABLE `Company` (
   
 	FOREIGN KEY (AddressId) REFERENCES Address(Id),
     FOREIGN KEY (AddressSATId) REFERENCES AddressSAT(Id),
-    FOREIGN KEY (RegimenFiscalId) REFERENCES RegimenFiscal(Id)
+    FOREIGN KEY (RegimenFiscalId) REFERENCES RegimenFiscal(Id),
+    FOREIGN KEY (RoleId) REFERENCES Role(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los datos fiscales de un cliente';
 
 -- --------------------------------------------------------
@@ -5177,6 +5196,7 @@ INSERT INTO Department (Name, GroupName) VALUES('Executive', 'Executive General 
 INSERT INTO Department (Name, GroupName) VALUES('Pharmacy Manager', 'Executive General and Administration');
 INSERT INTO Department (Name, GroupName) VALUES('Administration Management', 'Executive General and Administration');
 INSERT INTO Department (Name, GroupName) VALUES('Sales', 'Sales & Marketing');
+INSERT INTO Department (Name, GroupName) VALUES('Responsible Health', 'Health Services');
 
 UPDATE Department SET Name = UPPER(Name), GroupName = UPPER(GroupName) WHERE Id > 0;
 
@@ -5196,8 +5216,11 @@ CREATE TABLE `JobTitle` (
   FOREIGN KEY (DepartmentId) REFERENCES Department(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los usuarios (empleados) registrados';
 
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('DUEÑO DE NEGOCIO',1);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('RESPONSABLE DE SUCURSAL',2);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('ADMINISTRADOR DE FINANZAS',3);
 INSERT INTO JobTitle (Name, DepartmentId) VALUES('VENDEDOR',4);
--- INSERT INTO JobTitle (Name) VALUES('DOCTOR',5);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('DOCTOR',5);
 
 -- --------------------------------------------------------
 
@@ -5305,23 +5328,6 @@ CREATE TABLE `EmployeeDepartmentHistory`
     FOREIGN KEY (SiteId) REFERENCES Site(Id),
     FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el horario, departamento e informacion de donde ha estado un empleado';
-
--- --------------------------------------------------------
-
-DROP TABLE IF EXISTS `Role`;
-
---
--- Estructura de tabla `Role`
---
-CREATE TABLE `Role` (
-  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `Name` VARCHAR(50) NOT NULL,
-  `Description` VARCHAR(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los roles de la aplicacion';
-
-INSERT INTO Role (Name, Description) VALUES('ADMINISTRADOR', 'God Mode allows us, among other things to control users, products, managae credentials, ...');
-INSERT INTO Role (Name, Description) VALUES('BASIC', 'The employee can make sales, consult reports, make cash cuts');
-INSERT INTO Role (Name, Description) VALUES('DOCTOR', 'The employee can access module Medical');
 
 -- --------------------------------------------------------
 
