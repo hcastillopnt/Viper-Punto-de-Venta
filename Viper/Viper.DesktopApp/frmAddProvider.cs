@@ -84,6 +84,50 @@ namespace Viper.DesktopApp
             this.Colonia.KeyPress += OnlyLettersAndNumbers_KeyPress;
             this.Codigo_Postal_Fiscal.KeyPress += OnlyNumbers_KeyPress;
 
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.btnAceptar, "Para poder guardar los datos del del proveedor, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnAceptarFiscal, "Para poder guardar los datos fiscales del del proveedor, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnExaminar, "Para buscar una imagen almacenada en su pc, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnBuscar, "Para buscar el registro de un provedor, favor de dar cli a este boton");
+
+
+
+            // Set up the ToolTip text for the TextBox and ComboBox Control.
+            //Datos generales (SE PUSIERON LOS MÁS IMPORTANTES)
+            toolTip1.SetToolTip(this.Web, UtilMessages.WEB_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Correo, UtilMessages.EMAIL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.lblCodigoPostal, UtilMessages.CODIGO_POSTAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboTipoDeInmueble, UtilMessages.TIPO_INMUEBLE_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboTipDeVialidad, UtilMessages.TIPO_VIALIDAD_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Vialidad, UtilMessages.TIPO_VIALIDAD_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.lblNoInt, UtilMessages.NUMERO_INTERIOR_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.No_Exterior, UtilMessages.NUMERO_EXTERIOR_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Colonia, UtilMessages.COLONIA_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboLocalidad, UtilMessages.LOCALIDAD_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboEstado, UtilMessages.ESTADO_AGREGAR_PROVEEDOR);
+            //Datos de facturación
+            toolTip1.SetToolTip(this.Razón_Social_Fiscal, UtilMessages.RAZON_SOCIAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Número_Interior_Fiscal, UtilMessages.NUMERO_INTERIOR_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.lblNumeroExteriorFiscal, UtilMessages.NUMERO_EXTERIOR_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Codigo_Postal_Fiscal, UtilMessages.CODIGO_POSTAL_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.CURP_Fiscal, UtilMessages.CURP_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Calle_Fiscal, UtilMessages.CALLE_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.RFC_Fiscal, UtilMessages.RFC_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.Colonia_Fiscal, UtilMessages.COLONIA_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboPaís_Fiscal, UtilMessages.PAIS_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboEstado_Fiscal, UtilMessages.PAIS_FISCAL_AGREGAR_PROVEEDOR);
+            toolTip1.SetToolTip(this.cboMunicipio_Fiscal, UtilMessages.MUNICIPIO_FISCAL_AGREGAR_PROVEEDOR);
+
+
         }
 
         private void OnlyNumbers_KeyPress(object sender, KeyPressEventArgs e)

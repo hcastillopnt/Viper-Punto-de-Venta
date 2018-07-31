@@ -58,6 +58,21 @@ namespace Viper.DesktopApp
         private void frmLogin_Load(object sender, EventArgs e)
         {
             Nombre_de_Usuario.Focus();
+
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.btnIngresar, "Para ingresar , favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnSalir, "Para salir, favor de dar clic a este boton");
+
+
         }
         #endregion
     }

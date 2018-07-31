@@ -197,7 +197,7 @@
             this.rpvInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rpvInventario.Location = new System.Drawing.Point(3, 3);
             this.rpvInventario.Name = "rpvInventario";
-            this.rpvInventario.SelectedPage = this.rpvRemplazarProducto;
+            this.rpvInventario.SelectedPage = this.rpvAgregarProducto;
             this.rpvInventario.Size = new System.Drawing.Size(779, 683);
             this.rpvInventario.TabIndex = 1;
             this.rpvInventario.TabStop = false;
@@ -387,7 +387,7 @@
             this.tlp8.ColumnCount = 3;
             this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.36871F));
             this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.63129F));
-            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 387F));
+            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 388F));
             this.tlp8.Controls.Add(this.lblCantidad, 0, 0);
             this.tlp8.Controls.Add(this.Cantidad, 1, 0);
             this.tlp8.Controls.Add(this.lblCantidadActual, 0, 1);
@@ -407,7 +407,7 @@
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(3, 3);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(159, 37);
+            this.lblCantidad.Size = new System.Drawing.Size(78, 22);
             this.lblCantidad.TabIndex = 12;
             this.lblCantidad.Text = "Cantidad:";
             this.lblCantidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -416,7 +416,7 @@
             // 
             this.Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad.Location = new System.Drawing.Point(168, 3);
+            this.Cantidad.Location = new System.Drawing.Point(167, 3);
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.Size = new System.Drawing.Size(184, 29);
             this.Cantidad.TabIndex = 1;
@@ -427,7 +427,7 @@
             this.lblCantidadActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadActual.Location = new System.Drawing.Point(3, 46);
             this.lblCantidadActual.Name = "lblCantidadActual";
-            this.lblCantidadActual.Size = new System.Drawing.Size(159, 36);
+            this.lblCantidadActual.Size = new System.Drawing.Size(129, 22);
             this.lblCantidadActual.TabIndex = 8;
             this.lblCantidadActual.Text = "Cantidad Actual:";
             this.lblCantidadActual.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -436,7 +436,7 @@
             // 
             this.Cantidad_ActuaL_A.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad_ActuaL_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(168, 46);
+            this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(167, 46);
             this.Cantidad_ActuaL_A.Name = "Cantidad_ActuaL_A";
             this.Cantidad_ActuaL_A.NullText = "CANTIDAD ACTUAL";
             this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(184, 24);
@@ -448,7 +448,7 @@
             this.tlp7.ColumnCount = 3;
             this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.22535F));
             this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.77465F));
-            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
+            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
             this.tlp7.Controls.Add(this.Codigo_de_barras_A, 1, 0);
             this.tlp7.Controls.Add(this.lblCodigoDelProducto, 0, 0);
             this.tlp7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -466,7 +466,7 @@
             this.Codigo_de_barras_A.Location = new System.Drawing.Point(168, 3);
             this.Codigo_de_barras_A.Name = "Codigo_de_barras_A";
             this.Codigo_de_barras_A.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_A.Size = new System.Drawing.Size(394, 24);
+            this.Codigo_de_barras_A.Size = new System.Drawing.Size(393, 24);
             this.Codigo_de_barras_A.TabIndex = 1;
             this.Codigo_de_barras_A.ThemeName = "VisualStudio2012Light";
             // 
@@ -678,7 +678,7 @@
             this.tlp16.ColumnCount = 3;
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.16901F));
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.83099F));
-            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
+            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
             this.tlp16.Controls.Add(this.lblCodigoDelProducto2, 0, 1);
             this.tlp16.Controls.Add(this.Codigo_de_barras_Remplazar, 1, 1);
             this.tlp16.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -708,7 +708,7 @@
             this.Codigo_de_barras_Remplazar.Location = new System.Drawing.Point(162, 7);
             this.Codigo_de_barras_Remplazar.Name = "Codigo_de_barras_Remplazar";
             this.Codigo_de_barras_Remplazar.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_Remplazar.Size = new System.Drawing.Size(400, 32);
+            this.Codigo_de_barras_Remplazar.Size = new System.Drawing.Size(399, 32);
             this.Codigo_de_barras_Remplazar.TabIndex = 1;
             this.Codigo_de_barras_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -717,7 +717,7 @@
             this.tlp17.ColumnCount = 3;
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.66667F));
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.33333F));
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 371F));
             this.tlp17.Controls.Add(this.Diferencia, 1, 2);
             this.tlp17.Controls.Add(this.lblCantidadActual2, 0, 0);
             this.tlp17.Controls.Add(this.lblDiferencia, 0, 2);
@@ -738,7 +738,7 @@
             // 
             this.Diferencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Diferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Diferencia.Location = new System.Drawing.Point(162, 79);
+            this.Diferencia.Location = new System.Drawing.Point(161, 79);
             this.Diferencia.Name = "Diferencia";
             this.Diferencia.NullText = "DIFERENCIA";
             this.Diferencia.Size = new System.Drawing.Size(207, 29);
@@ -751,7 +751,7 @@
             this.lblCantidadActual2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadActual2.Location = new System.Drawing.Point(3, 3);
             this.lblCantidadActual2.Name = "lblCantidadActual2";
-            this.lblCantidadActual2.Size = new System.Drawing.Size(153, 31);
+            this.lblCantidadActual2.Size = new System.Drawing.Size(152, 31);
             this.lblCantidadActual2.TabIndex = 9;
             this.lblCantidadActual2.Text = "Cantidad Actual:";
             this.lblCantidadActual2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -762,7 +762,7 @@
             this.lblDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiferencia.Location = new System.Drawing.Point(3, 79);
             this.lblDiferencia.Name = "lblDiferencia";
-            this.lblDiferencia.Size = new System.Drawing.Size(153, 29);
+            this.lblDiferencia.Size = new System.Drawing.Size(152, 29);
             this.lblDiferencia.TabIndex = 14;
             this.lblDiferencia.Text = "Diferencia:";
             this.lblDiferencia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -771,7 +771,7 @@
             // 
             this.Nueva_Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nueva_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nueva_Cantidad.Location = new System.Drawing.Point(162, 40);
+            this.Nueva_Cantidad.Location = new System.Drawing.Point(161, 40);
             this.Nueva_Cantidad.Name = "Nueva_Cantidad";
             this.Nueva_Cantidad.Size = new System.Drawing.Size(207, 29);
             this.Nueva_Cantidad.TabIndex = 2;
@@ -782,7 +782,7 @@
             this.lblNuevaCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevaCantidad.Location = new System.Drawing.Point(3, 40);
             this.lblNuevaCantidad.Name = "lblNuevaCantidad";
-            this.lblNuevaCantidad.Size = new System.Drawing.Size(153, 33);
+            this.lblNuevaCantidad.Size = new System.Drawing.Size(152, 33);
             this.lblNuevaCantidad.TabIndex = 13;
             this.lblNuevaCantidad.Text = "Nueva Cantidad:";
             this.lblNuevaCantidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -791,7 +791,7 @@
             // 
             this.Cantidad_Actual_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad_Actual_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(162, 3);
+            this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(161, 3);
             this.Cantidad_Actual_Remplazar.Name = "Cantidad_Actual_Remplazar";
             this.Cantidad_Actual_Remplazar.NullText = "CANTIDAD ACTUAL";
             this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(207, 31);

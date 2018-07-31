@@ -38,6 +38,30 @@ namespace Viper.DesktopApp
             this.Descripcion_Remplazar.KeyPress += OnlyLettersAndNumbers_KeyPress;
             this.Nueva_Cantidad.KeyPress += OnlyNumbers_KeyPress;
             this.Diferencia.KeyPress += OnlyNumbers_KeyPress;
+
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.btnAgregarAlInventario, "Para poder agregar un producto al inventario, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnAgregarAlInventario, "Para poder remplazar un producto en el inventario, favor de dar clic en este boton");
+
+            // Set up the ToolTip text for the TextBox and ComboBox Control.
+            //Agregar producto al invetario
+            toolTip1.SetToolTip(this.Codigo_de_barras_A, UtilMessages.CODIGO_DE_BARRAS_AGREGAR_PRODUCTO_INVENTARIO);
+            toolTip1.SetToolTip(this.Cantidad, UtilMessages.CANTIDAD_AGREGAR_PRODUCTO_INVENTARIO);
+            toolTip1.SetToolTip(this.Descripcion_A, UtilMessages.DESCRIPCION_AGREGAR_PRODUCTO_INVENTARIO);
+            //Remplazar producto al invetario
+            toolTip1.SetToolTip(this.Codigo_de_barras_Remplazar, UtilMessages.CODIGO_DE_BARRAS_REMPLAZAR_PRODUCTO);
+            toolTip1.SetToolTip(this.Nueva_Cantidad, UtilMessages.NUEVA_CANTIDAD_REMPLAZAR_PRODUCTO);
+            toolTip1.SetToolTip(this.Descripcion_Remplazar, UtilMessages.DESCRIPCION_REMPLAZAR_PRODUCTO);
+
         }
 
         public void Button_Click(Object sender, EventArgs args)
