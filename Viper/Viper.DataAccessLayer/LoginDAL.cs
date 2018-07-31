@@ -17,17 +17,19 @@ namespace Viper.DataAccessLayer
         /// </summary>
         /// <param name="us">parametro para el nombre de usuario</param>
         /// <param name="pwd">parametro para la contraseña</param>
-        /// <returns>true o false</returns>
+        /// <returns>DataTable</returns>
         public static DataTable authorize_by_credentials(string usr, string pwd)
         {
             bool isExistente = false;
             int RoleID = 0;
+            int EntityID = 0;
 
             //Se crea el DataTable
             DataTable dt = new DataTable();
 
             //Crear las columnas del DataTable
             dt.Columns.AddRange(new DataColumn[]{
+                                new DataColumn("EntityID", typeof(int)),
                                 new DataColumn("EmployeeIDNumber", typeof(string)),
                                 new DataColumn("FullName", typeof(string)),
                                 new DataColumn("Department", typeof(string)),
@@ -38,8 +40,7 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("CompanyName",typeof(string)),
                                 new DataColumn("Role",typeof(string)),
                                 new DataColumn("IsWelcome",typeof(bool)),
-                                new DataColumn("IsEnabled",typeof(bool)),
-                                new DataColumn("AccessFailed",typeof(bool)),
+                                new DataColumn("AccessFailed",typeof(int)),
                             });
 
             using (ViperContext dbCtx = new ViperContext())
@@ -52,6 +53,7 @@ namespace Viper.DataAccessLayer
                                    where u.LoginID == usr && u.PasswordEncrypted == pwd
                                    select new
                                    {
+                                       u.Id,
                                        u.LoginID,
                                        u.PasswordEncrypted,
                                        u.RoleId
@@ -60,6 +62,7 @@ namespace Viper.DataAccessLayer
                                         where c.LoginID == usr && c.PasswordEncrypted == pwd
                                         select new
                                         {
+                                            c.Id,
                                             c.LoginID,
                                             c.PasswordEncrypted,
                                             c.RoleId
@@ -67,8 +70,11 @@ namespace Viper.DataAccessLayer
 
                     if (result1.Count() > 0)
                     {
-                        //Get Role
+                        //Get RoleID
                         RoleID = result1.FirstOrDefault().RoleId;
+
+                        //Get EntityID
+                        EntityID = result1.FirstOrDefault().Id;
 
                         switch (RoleID)
                         {
@@ -80,6 +86,7 @@ namespace Viper.DataAccessLayer
                                 var rowAdmin = dt.NewRow();
 
                                 //Cargar los datos de la fila
+                                rowAdmin["EntityID"] = EntityID;
                                 rowAdmin["EmployeeIDNumber"] = "XXXXXXXXXXXXX";
                                 rowAdmin["FullName"] = "N/A";
                                 rowAdmin["Department"] = "EXECUTIVE";
@@ -89,8 +96,7 @@ namespace Viper.DataAccessLayer
                                 rowAdmin["Subsidiary"] = "N/A";
                                 rowAdmin["CompanyName"] = CompanyDAL.obtainCompanyName(usr, pwd);
                                 rowAdmin["Role"] = dbCtx.Roles.Where(r => r.Id == RoleID).FirstOrDefault().Name;
-                                rowAdmin["IsWelcome"] = false;
-                                rowAdmin["IsEnabled"] = true;
+                                rowAdmin["IsWelcome"] = true;
                                 rowAdmin["AccessFailed"] = 0;
 
                                 //Añadir fila al DataTable
@@ -110,8 +116,14 @@ namespace Viper.DataAccessLayer
                                                join c in dbCtx.Companies on st.CompanyId equals c.Id
                                                join u in dbCtx.Users on edh.EmployeeId equals u.EmployeeId
                                                join r in dbCtx.Roles on u.RoleId equals r.Id
+                                               where 
+                                                u.LoginID == usr 
+                                                && u.PasswordEncrypted == pwd
+                                                && u.IsEnabled == true
+                                                && u.IsApproved == true
                                                select new
                                                {
+                                                   u.Id,
                                                    e.EmployeeIDNumber,
                                                    e.FullName,
                                                    Department = d.Name,
@@ -122,7 +134,6 @@ namespace Viper.DataAccessLayer
                                                    c.CompanyName,
                                                    Role = r.Name,
                                                    u.IsWelcome,
-                                                   u.IsEnabled,
                                                    u.AccessFailed
                                                }).ToList();
 
@@ -133,6 +144,7 @@ namespace Viper.DataAccessLayer
                                     var row = dt.NewRow();
 
                                     //Cargar los datos de la fila
+                                    row["EntityID"] = x.Id;
                                     row["EmployeeIDNumber"] = x.EmployeeIDNumber;
                                     row["FullName"] = x.FullName;
                                     row["Department"] = x.Department;
@@ -143,7 +155,6 @@ namespace Viper.DataAccessLayer
                                     row["CompanyName"] = x.CompanyName;
                                     row["Role"] = x.Role;
                                     row["IsWelcome"] = x.IsWelcome;
-                                    row["IsEnabled"] = x.IsEnabled;
                                     row["AccessFailed"] = x.AccessFailed;
 
                                     //Añadir fila al DataTable
