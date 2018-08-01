@@ -5396,23 +5396,23 @@ INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VA
 /* MENU: OPERACIONES*/
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Operaciones', 'F4 Operaciones', 'NULL', 'btnOperaciones', 'procesos.png', TRUE);
 
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Compras', 'F4 Operaciones', 'Compras', 'btnCompras', 'sub_compras.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Compras', 'F4 Operaciones', 'Compras', 'btnCompras', 'sub_compras.png', FALSE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes', 'F4 Operaciones', 'Clientes', 'btnClientes', 'sub_client.png', TRUE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Proveedores', 'F4 Operaciones', 'Proveedores', 'btnProveedores', 'sub_proveedor.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Sal', 'F4 Operaciones', 'Traspasos Sal', 'btnTraspasosSal', 'sub_tras_sal.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Ent', 'F4 Operaciones', 'Traspasos Ent', 'btnTraspasosEnt', 'sub_tras_ent.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos', 'F4 Operaciones', 'Traspasos', 'btnTraspasos', 'sub_traspasos.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Sal', 'F4 Operaciones', 'Traspasos Sal', 'btnTraspasosSal', 'sub_tras_sal.png', FALSE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Ent', 'F4 Operaciones', 'Traspasos Ent', 'btnTraspasosEnt', 'sub_tras_ent.png', FALSE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos', 'F4 Operaciones', 'Traspasos', 'btnTraspasos', 'sub_traspasos.png', FALSE);
 /* MENU: OPERACIONES*/
 
 /* MENU: CONFIGURACION*/
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Configuracion', 'F5 Configuracion', 'NULL', 'btnConfiguracion', 'configuracion.png', TRUE);
 
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Empresa', 'F5 Configuracion', 'Empresa', 'btnEmpresa', 'sub_empresa.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Roles', 'F5 Configuracion', 'Roles', 'btnRoles', 'sub_roles.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Usuarios', 'F5 Configuracion', 'Usuarios', 'btnUsuarios', 'sub_usuarios.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Roles', 'F5 Configuracion', 'Roles', 'btnRoles', 'sub_roles.png', FALSE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Usuarios', 'F5 Configuracion', 'Usuarios', 'btnUsuarios', 'sub_usuarios.png', FALSE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Empleados', 'F5 Configuracion', 'Empleados', 'btnEmpleados', 'sub_empleado.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Cajas', 'F5 Configuracion', 'Cajas', 'btnCajas', 'sub_cajas.png', TRUE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Servicios', 'F5 Configuracion', 'Servicios', 'btnServicios', 'sub_servicios.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Cajas', 'F5 Configuracion', 'Cajas', 'btnCajas', 'sub_cajas.png', FALSE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Servicios', 'F5 Configuracion', 'Servicios', 'btnServicios', 'sub_servicios.png', FALSE);
 /* MENU: CONFIGURACION*/
 
 /* MENU: CORTE*/
