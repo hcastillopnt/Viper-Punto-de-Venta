@@ -15,11 +15,9 @@ namespace Viper.WebAPI.Models
 
         }
 
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Membership> Memberships { get; set; }
+       
         public DbSet<Product> products { get; set; }
         public DbSet<Productinventory> productinventories { get; set; }
-        public DbSet<EmployeeDepartmentHistory> EmployeeDepartmentHistories { get; set; }
         public DbSet<Company> Companies { get; set; }
 
 

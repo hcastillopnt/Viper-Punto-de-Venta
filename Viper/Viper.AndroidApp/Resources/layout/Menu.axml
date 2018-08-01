@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="343.0dp"
+        android:layout_height="183.0dp"
+        android:id="@+id/linearLayout1"
+        android:layout_marginTop="43.0dp"
+        android:layout_marginRight="41.0dp"
+        android:layout_marginLeft="0.0dp">
+        <ImageButton
+            android:background="@drawable/carrito_iconos"
+            android:layout_width="111.5dp"
+            android:layout_height="97.5dp"
+            android:id="@+id/btnCarrito"
+            android:layout_marginLeft="61.0dp"
+            android:layout_marginTop="38.5dp"
+            android:layout_marginRight="33.5dp" />
+        <ImageButton
+            android:background="@drawable/inventario_iconos"
+            android:layout_width="117.5dp"
+            android:layout_height="99.0dp"
+            android:id="@+id/btnInventario"
+            android:layout_marginTop="36.5dp"
+            android:layout_marginLeft="3.5dp"
+            android:layout_marginRight="210.5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="349.0dp"
+        android:layout_height="183.0dp"
+        android:id="@+id/linearLayout1"
+        android:layout_marginTop="41.0dp"
+        android:layout_marginRight="0.0dp"
+        android:layout_marginLeft="0.0dp">
+        <ImageButton
+            android:background="@drawable/estadistica_iconos"
+            android:layout_width="111.5dp"
+            android:layout_height="97.5dp"
+            android:id="@+id/btnEstadistica"
+            android:layout_marginLeft="62.5dp"
+            android:layout_marginTop="38.5dp"
+            android:layout_marginRight="20.0dp" />
+        <ImageButton
+            android:background="@drawable/reporte_iconos"
+            android:layout_width="117.5dp"
+            android:layout_height="99.0dp"
+            android:id="@+id/btnReporte"
+            android:layout_marginTop="36.5dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginRight="60.5dp" />
+    </LinearLayout>
+</LinearLayout>

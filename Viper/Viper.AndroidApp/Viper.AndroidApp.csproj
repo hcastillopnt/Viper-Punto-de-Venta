@@ -48,20 +48,44 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjusteActivity.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="CompanyData.cs" />
+    <Compile Include="ConnectionApiREST.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MenuActivity.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="obj\Debug\build.props" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -72,6 +96,9 @@
     <None Include="obj\Debug\R.cs.flag" />
     <None Include="obj\Debug\Viper.AndroidApp.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\Viper.AndroidApp.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -84,9 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
+    <Folder Include="ingresar\" />
     <Folder Include="obj\Debug\lp\0\jl\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\mipmap-hdpi\" />
     <Folder Include="Resources\mipmap-mdpi\" />
     <Folder Include="Resources\mipmap-xhdpi\" />
@@ -95,8 +122,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="obj\Debug\android\viper\androidapp\viper\androidapp\R.java" />
-    <Content Include="obj\Debug\res\layout\main.xml" />
-    <Content Include="obj\Debug\res\values\strings.xml" />
+    <Content Include="obj\Debug\res\layout\main.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Debug\res\values\strings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\layout\Menu.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\agregar_icono.png" />
+    <AndroidResource Include="Resources\drawable\carrito_iconos.png" />
+    <AndroidResource Include="Resources\drawable\estadistica_iconos.png" />
+    <AndroidResource Include="Resources\drawable\inventario_iconos.png" />
+    <AndroidResource Include="Resources\drawable\reporte_iconos.png" />
+    <AndroidResource Include="Resources\drawable\fondo.png" />
+    <AndroidResource Include="Resources\layout\Ajuste.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\user.png" />
+    <AndroidResource Include="Resources\drawable\logomovil3.png" />
+    <AndroidResource Include="Resources\drawable\psw.png" />
+    <AndroidResource Include="Resources\drawable\edificio.png" />
+    <AndroidResource Include="Resources\drawable\almacen.png" />
+    <AndroidResource Include="Resources\drawable\barras.png" />
+    <AndroidResource Include="Resources\drawable\alamacen12.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
