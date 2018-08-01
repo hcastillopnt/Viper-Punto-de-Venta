@@ -14,6 +14,7 @@ namespace Viper.DesktopApp
 {
     public partial class frmPanelButtons : Form
     {
+        private Button objButton = null;
         string menuSeleccionado = String.Empty;
 
         public frmPanelButtons(string menu, string rol)
@@ -28,7 +29,48 @@ namespace Viper.DesktopApp
             uploadSubmenuItemsToPanel();
         }
 
-        private void uploadSubmenuItemsToPanel()
+        private void AgregarFormularioEnPanel(object _frmHijo)
+        {
+            if (this.pnlContenedor.Controls.Count > 0)
+                this.pnlContenedor.Controls.RemoveAt(0);
+            Form fh = _frmHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.pnlContenedor.Controls.Add(fh);
+            this.pnlContenedor.Tag = _frmHijo;
+            fh.Show();
+        }
+
+        public void Menu_Click(object sender, EventArgs e)
+        {
+            objButton = (Button)sender;
+
+            string name = objButton.Name;
+
+            switch(name)
+            {
+                //F4 Operaciones
+                case "btnClientes":
+                    AgregarFormularioEnPanel(new frmAdminCustomers());
+                    break;
+
+                case "btnProveedores":
+                    AgregarFormularioEnPanel(new frmAdminSuppliers());
+                    break;
+
+                //F5 Configuracion
+                case "btnEmpresa":
+                    AgregarFormularioEnPanel(new frmRegisterCompany());
+                    break;
+
+                case "btnEmpleados":
+                    AgregarFormularioEnPanel(new frmAdminEmployees());
+                    break;
+            }
+        }
+
+            private void uploadSubmenuItemsToPanel()
         {
             List<Module> modules = new List<Module>();
             DataTable dtModules = new DataTable();
@@ -75,6 +117,7 @@ namespace Viper.DesktopApp
                     btnOption.TextAlign = ContentAlignment.BottomCenter;
                     btnOption.TextImageRelation = TextImageRelation.ImageAboveText;
                     btnOption.Enabled = item.IsActive;
+                    btnOption.Click += Menu_Click;
 
                     //Añadir los controles a los contenedores correspondientes
                     tlpCentro.Controls.Add(btnOption);
