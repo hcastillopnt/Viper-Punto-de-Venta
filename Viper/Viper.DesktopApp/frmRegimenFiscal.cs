@@ -46,7 +46,7 @@ namespace Viper.DesktopApp
             this.TopMost = true;
             this.Size = new Size(800, 600);
             this.WindowState = FormWindowState.Maximized;
-            this.Icon = new Icon("Resources/application_icon.ico");
+            //this.Icon = new Icon("Resources/application_icon.ico");
 
             btnAceptar.Click += btnAceptar_Click;
             txtRegimen.TextChanged += txtRegimen_TextChanged;

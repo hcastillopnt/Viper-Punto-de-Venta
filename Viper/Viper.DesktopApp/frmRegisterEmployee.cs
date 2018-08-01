@@ -75,7 +75,7 @@ namespace Viper.DesktopApp
             this.TopMost = true;
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
-            this.Icon = new Icon("Resources/application_icon.ico");
+            //this.Icon = new Icon("Resources/application_icon.ico");
 
             ToolTip toolTip1 = new ToolTip();
 
