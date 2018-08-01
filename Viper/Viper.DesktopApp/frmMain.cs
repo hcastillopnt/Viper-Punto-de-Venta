@@ -257,6 +257,7 @@ namespace Viper.DesktopApp
                 btnOption.Text = item.Menu;
                 btnOption.UseVisualStyleBackColor = false;
                 btnOption.TextImageRelation = TextImageRelation.ImageBeforeText;
+                btnOption.Enabled = item.IsActive;
                 btnOption.Click += Menu_Click;
                 // 
                 // tlpOption

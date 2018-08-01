@@ -54,5 +54,11 @@ namespace Viper.BusinessEntities
         [StringLength(100, MinimumLength = 1)]
         [DataType(DataType.Text)]
         public string ControlImage { get; set; }
+
+        /// <summary>
+        /// Campo IsActive
+        /// </summary>
+        [Required(ErrorMessage = "El campo IsActive es obligatorio")]
+        public bool IsActive { get; set; }
     }
 }

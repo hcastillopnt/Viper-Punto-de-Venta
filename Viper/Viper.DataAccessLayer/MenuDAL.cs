@@ -47,7 +47,8 @@ namespace Viper.DataAccessLayer
                                           m.Name,
                                           m.Menu,
                                           m.ControlName,
-                                          m.ControlImage
+                                          m.ControlImage,
+                                          m.IsActive
                                       }).ToList();
 
                         //Crear las columnas del DataTable
@@ -55,7 +56,8 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("Name", typeof(string)),
                                 new DataColumn("Menu", typeof(string)),
                                 new DataColumn("ControlName", typeof(string)),
-                                new DataColumn("ControlImage", typeof(string))
+                                new DataColumn("ControlImage", typeof(string)),
+                                new DataColumn("IsActive", typeof(string))
                             });
 
                         //Guardar los datos recuperados en una fila del DataTable
@@ -69,6 +71,7 @@ namespace Viper.DataAccessLayer
                             row["Menu"] = x.Menu;
                             row["ControlName"] = x.ControlName;
                             row["ControlImage"] = x.ControlImage;
+                            row["IsActive"] = x.IsActive;
 
                             //Añadir fila al DataTable
                             dt.Rows.Add(row);
@@ -117,7 +120,8 @@ namespace Viper.DataAccessLayer
                                           m.Name,
                                           m.SubMenu,
                                           m.ControlName,
-                                          m.ControlImage
+                                          m.ControlImage,
+                                          m.IsActive
                                       }).ToList();
 
                         //Crear las columnas del DataTable
@@ -125,7 +129,8 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("Name", typeof(string)),
                                 new DataColumn("SubMenu", typeof(string)),
                                 new DataColumn("ControlName", typeof(string)),
-                                new DataColumn("ControlImage", typeof(string))
+                                new DataColumn("ControlImage", typeof(string)),
+                                new DataColumn("IsActive", typeof(string))
                             });
 
                         //Guardar los datos recuperados en una fila del DataTable
@@ -139,6 +144,7 @@ namespace Viper.DataAccessLayer
                             row["SubMenu"] = x.SubMenu;
                             row["ControlName"] = x.ControlName;
                             row["ControlImage"] = x.ControlImage;
+                            row["IsActive"] = x.IsActive;
 
                             //Añadir fila al DataTable
                             dt.Rows.Add(row);

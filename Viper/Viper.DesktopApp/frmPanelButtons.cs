@@ -73,6 +73,7 @@ namespace Viper.DesktopApp
                     btnOption.Text = item.SubMenu;
                     btnOption.TextAlign = ContentAlignment.BottomCenter;
                     btnOption.TextImageRelation = TextImageRelation.ImageAboveText;
+                    btnOption.Enabled = item.IsActive;
 
                     //Añadir los controles a los contenedores correspondientes
                     tlpCentro.Controls.Add(btnOption);
