@@ -153,7 +153,7 @@
             this.Name = "frmRegimenFiscal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            this.TopMost = true;
+            //this.TopMost = true;
             this.Load += new System.EventHandler(this.frmRegimenFiscal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRegimenFiscal)).EndInit();

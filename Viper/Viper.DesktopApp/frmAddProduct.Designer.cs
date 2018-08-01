@@ -1029,7 +1029,7 @@
             this.Name = "frmAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            this.TopMost = true;
+            //this.TopMost = true;
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
