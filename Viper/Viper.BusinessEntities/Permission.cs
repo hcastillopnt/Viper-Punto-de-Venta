@@ -16,57 +16,15 @@ namespace Viper.BusinessEntities
         public int Id { get; set; }
 
         /// <summary>
-        /// Campo Name
+        /// Campo RoleId
         /// </summary>
-        [Required(ErrorMessage = "El campo Name es obligatorio")]
-        [StringLength(50, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "El campo RoleId es obligatorio")]
+        public int RoleId { get; set; }
 
         /// <summary>
-        /// Campo Menu
+        /// Campo ModuleId
         /// </summary>
-        [Required(ErrorMessage = "El campo Menu es obligatorio")]
-        [StringLength(50, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string Menu { get; set; }
-
-        /// <summary>
-        /// Campo SubMenu
-        /// </summary>
-        [Required(ErrorMessage = "El campo SubMenu es obligatorio")]
-        [StringLength(50, MinimumLength = 2)]
-        [DataType(DataType.Text)]
-        public string SubMenu { get; set; }
-
-        /// <summary>
-        /// Campo ControlName
-        /// </summary>
-        [Required(ErrorMessage = "El campo ControlName es obligatorio")]
-        [StringLength(30, MinimumLength = 1)]
-        [DataType(DataType.Text)]
-        public string ControlName { get; set; }
-
-        /// <summary>
-        /// Campo SubControlName
-        /// </summary>
-        [StringLength(30, MinimumLength = 1)]
-        [DataType(DataType.Text)]
-        public string SubControlName { get; set; }
-
-        /// <summary>
-        /// Campo ControlImage
-        /// </summary>
-        [Required(ErrorMessage = "El campo ControlImage es obligatorio")]
-        [StringLength(100, MinimumLength = 1)]
-        [DataType(DataType.Text)]
-        public string ControlImage { get; set; }
-
-        /// <summary>
-        /// Campo SubControlImage
-        /// </summary>
-        [StringLength(100, MinimumLength = 1)]
-        [DataType(DataType.Text)]
-        public string SubControlImage { get; set; }
+        [Required(ErrorMessage = "El campo ModuleId es obligatorio")]
+        public int ModuleId { get; set; }
     }
 }

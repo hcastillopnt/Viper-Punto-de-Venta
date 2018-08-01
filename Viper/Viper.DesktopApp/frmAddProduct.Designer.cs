@@ -35,7 +35,7 @@
             this.rpvFarmacopea = new Telerik.WinControls.UI.RadPageViewPage();
             this.rpvImagen = new Telerik.WinControls.UI.RadPageViewPage();
             this.tlp19 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnEliminar = new Telerik.WinControls.UI.RadButton();
+            this.btnExaminar = new Telerik.WinControls.UI.RadButton();
             this.btnAgregarImagen = new Telerik.WinControls.UI.RadButton();
             this.gpoAgregarImagen = new Telerik.WinControls.UI.RadGroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -100,7 +100,7 @@
             this.pvAddProduct.SuspendLayout();
             this.rpvImagen.SuspendLayout();
             this.tlp19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpoAgregarImagen)).BeginInit();
             this.gpoAgregarImagen.SuspendLayout();
@@ -176,7 +176,7 @@
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 1;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1366, 768);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1366, 749);
             this.tlpPrincipal.TabIndex = 1;
             // 
             // panelDer
@@ -185,7 +185,7 @@
             this.panelDer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDer.Location = new System.Drawing.Point(1163, 3);
             this.panelDer.Name = "panelDer";
-            this.panelDer.Size = new System.Drawing.Size(200, 762);
+            this.panelDer.Size = new System.Drawing.Size(200, 743);
             this.panelDer.TabIndex = 0;
             this.panelDer.TabStop = false;
             // 
@@ -199,8 +199,8 @@
             this.pvAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pvAddProduct.Location = new System.Drawing.Point(207, 3);
             this.pvAddProduct.Name = "pvAddProduct";
-            this.pvAddProduct.SelectedPage = this.rpvDatosBasicos;
-            this.pvAddProduct.Size = new System.Drawing.Size(950, 762);
+            this.pvAddProduct.SelectedPage = this.rpvImagen;
+            this.pvAddProduct.Size = new System.Drawing.Size(950, 743);
             this.pvAddProduct.TabIndex = 0;
             this.pvAddProduct.TabStop = false;
             this.pvAddProduct.ThemeName = "VisualStudio2012Light";
@@ -212,7 +212,7 @@
             this.rpvFarmacopea.ItemSize = new System.Drawing.SizeF(28F, 110F);
             this.rpvFarmacopea.Location = new System.Drawing.Point(34, 5);
             this.rpvFarmacopea.Name = "rpvFarmacopea";
-            this.rpvFarmacopea.Size = new System.Drawing.Size(988, 733);
+            this.rpvFarmacopea.Size = new System.Drawing.Size(911, 733);
             this.rpvFarmacopea.Text = "Farmacopea";
             // 
             // rpvImagen
@@ -223,7 +223,7 @@
             this.rpvImagen.ItemSize = new System.Drawing.SizeF(28F, 71F);
             this.rpvImagen.Location = new System.Drawing.Point(34, 5);
             this.rpvImagen.Name = "rpvImagen";
-            this.rpvImagen.Size = new System.Drawing.Size(988, 733);
+            this.rpvImagen.Size = new System.Drawing.Size(911, 733);
             this.rpvImagen.Text = "Imagen";
             // 
             // tlp19
@@ -232,7 +232,7 @@
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 343F));
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
-            this.tlp19.Controls.Add(this.btnEliminar, 0, 1);
+            this.tlp19.Controls.Add(this.btnExaminar, 0, 1);
             this.tlp19.Controls.Add(this.btnAgregarImagen, 2, 1);
             this.tlp19.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlp19.Location = new System.Drawing.Point(0, 510);
@@ -240,23 +240,25 @@
             this.tlp19.RowCount = 2;
             this.tlp19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlp19.Size = new System.Drawing.Size(988, 81);
+            this.tlp19.Size = new System.Drawing.Size(911, 81);
             this.tlp19.TabIndex = 2;
             // 
-            // btnEliminar
+            // btnExaminar
             // 
-            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEliminar.Location = new System.Drawing.Point(3, 34);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(332, 44);
-            this.btnEliminar.TabIndex = 1;
-            this.btnEliminar.ThemeName = "VisualStudio2012Light";
+            this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExaminar.Location = new System.Drawing.Point(3, 34);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(255, 44);
+            this.btnExaminar.TabIndex = 1;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.ThemeName = "VisualStudio2012Light";
             // 
             // btnAgregarImagen
             // 
             this.btnAgregarImagen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAgregarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarImagen.Location = new System.Drawing.Point(684, 34);
+            this.btnAgregarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarImagen.Location = new System.Drawing.Point(607, 34);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(301, 44);
             this.btnAgregarImagen.TabIndex = 2;
@@ -271,7 +273,7 @@
             this.gpoAgregarImagen.HeaderText = "";
             this.gpoAgregarImagen.Location = new System.Drawing.Point(0, 36);
             this.gpoAgregarImagen.Name = "gpoAgregarImagen";
-            this.gpoAgregarImagen.Size = new System.Drawing.Size(988, 474);
+            this.gpoAgregarImagen.Size = new System.Drawing.Size(911, 474);
             this.gpoAgregarImagen.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -286,7 +288,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.48458F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.51542F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(984, 454);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(907, 454);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // tlp17
@@ -301,14 +303,14 @@
             this.tlp17.Name = "tlp17";
             this.tlp17.RowCount = 1;
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp17.Size = new System.Drawing.Size(978, 313);
+            this.tlp17.Size = new System.Drawing.Size(901, 313);
             this.tlp17.TabIndex = 0;
             // 
             // picImagenProducto
             // 
             this.picImagenProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picImagenProducto.Location = new System.Drawing.Point(258, 3);
+            this.picImagenProducto.Location = new System.Drawing.Point(181, 3);
             this.picImagenProducto.Name = "picImagenProducto";
             this.picImagenProducto.Size = new System.Drawing.Size(477, 307);
             this.picImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +329,7 @@
             this.tlp18.Name = "tlp18";
             this.tlp18.RowCount = 1;
             this.tlp18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp18.Size = new System.Drawing.Size(978, 129);
+            this.tlp18.Size = new System.Drawing.Size(901, 129);
             this.tlp18.TabIndex = 1;
             // 
             // gpoCaracteristicas
@@ -337,9 +339,9 @@
             this.gpoCaracteristicas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoCaracteristicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoCaracteristicas.HeaderText = "Características";
-            this.gpoCaracteristicas.Location = new System.Drawing.Point(180, 3);
+            this.gpoCaracteristicas.Location = new System.Drawing.Point(163, 3);
             this.gpoCaracteristicas.Name = "gpoCaracteristicas";
-            this.gpoCaracteristicas.Size = new System.Drawing.Size(612, 123);
+            this.gpoCaracteristicas.Size = new System.Drawing.Size(552, 123);
             this.gpoCaracteristicas.TabIndex = 1;
             this.gpoCaracteristicas.Text = "Características";
             this.gpoCaracteristicas.ThemeName = "VisualStudio2012Light";
@@ -348,10 +350,12 @@
             // 
             this.Caracteristicas.AutoSize = false;
             this.Caracteristicas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Caracteristicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Caracteristicas.Location = new System.Drawing.Point(2, 18);
             this.Caracteristicas.Multiline = true;
             this.Caracteristicas.Name = "Caracteristicas";
-            this.Caracteristicas.Size = new System.Drawing.Size(608, 103);
+            this.Caracteristicas.NullText = "Características";
+            this.Caracteristicas.Size = new System.Drawing.Size(548, 103);
             this.Caracteristicas.TabIndex = 1;
             this.Caracteristicas.ThemeName = "VisualStudio2012Light";
             // 
@@ -365,7 +369,7 @@
             this.tlp16.Name = "tlp16";
             this.tlp16.RowCount = 1;
             this.tlp16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp16.Size = new System.Drawing.Size(988, 36);
+            this.tlp16.Size = new System.Drawing.Size(911, 36);
             this.tlp16.TabIndex = 1;
             // 
             // rpvDatosBasicos
@@ -375,7 +379,7 @@
             this.rpvDatosBasicos.ItemSize = new System.Drawing.SizeF(28F, 123F);
             this.rpvDatosBasicos.Location = new System.Drawing.Point(34, 5);
             this.rpvDatosBasicos.Name = "rpvDatosBasicos";
-            this.rpvDatosBasicos.Size = new System.Drawing.Size(911, 752);
+            this.rpvDatosBasicos.Size = new System.Drawing.Size(911, 733);
             this.rpvDatosBasicos.Text = "Datos Basicos";
             // 
             // tlpAgregarProducto
@@ -394,7 +398,7 @@
             this.tlpAgregarProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.65136F));
             this.tlpAgregarProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.36012F));
             this.tlpAgregarProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpAgregarProducto.Size = new System.Drawing.Size(911, 716);
+            this.tlpAgregarProducto.Size = new System.Drawing.Size(911, 697);
             this.tlpAgregarProducto.TabIndex = 4;
             // 
             // gpoInventario
@@ -404,9 +408,9 @@
             this.gpoInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoInventario.HeaderText = "Inventario";
-            this.gpoInventario.Location = new System.Drawing.Point(3, 517);
+            this.gpoInventario.Location = new System.Drawing.Point(3, 501);
             this.gpoInventario.Name = "gpoInventario";
-            this.gpoInventario.Size = new System.Drawing.Size(905, 135);
+            this.gpoInventario.Size = new System.Drawing.Size(905, 131);
             this.gpoInventario.TabIndex = 8;
             this.gpoInventario.TabStop = false;
             this.gpoInventario.Text = "Inventario";
@@ -435,7 +439,7 @@
             this.tlp14.RowCount = 2;
             this.tlp14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp14.Size = new System.Drawing.Size(901, 115);
+            this.tlp14.Size = new System.Drawing.Size(901, 111);
             this.tlp14.TabIndex = 9;
             // 
             // Receta
@@ -443,9 +447,9 @@
             this.Receta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Receta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Receta.ForeColor = System.Drawing.Color.Black;
-            this.Receta.Location = new System.Drawing.Point(723, 60);
+            this.Receta.Location = new System.Drawing.Point(723, 58);
             this.Receta.Name = "Receta";
-            this.Receta.Size = new System.Drawing.Size(77, 22);
+            this.Receta.Size = new System.Drawing.Size(175, 50);
             this.Receta.TabIndex = 5;
             this.Receta.Text = "Receta";
             this.Receta.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -457,9 +461,9 @@
             this.lblInventarioMaximo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblInventarioMaximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventarioMaximo.ForeColor = System.Drawing.Color.Black;
-            this.lblInventarioMaximo.Location = new System.Drawing.Point(3, 60);
+            this.lblInventarioMaximo.Location = new System.Drawing.Point(3, 58);
             this.lblInventarioMaximo.Name = "lblInventarioMaximo";
-            this.lblInventarioMaximo.Size = new System.Drawing.Size(147, 22);
+            this.lblInventarioMaximo.Size = new System.Drawing.Size(174, 50);
             this.lblInventarioMaximo.TabIndex = 0;
             this.lblInventarioMaximo.Text = "Inventario Máximo:";
             // 
@@ -470,7 +474,7 @@
             this.lblInventarioMinimo.ForeColor = System.Drawing.Color.Black;
             this.lblInventarioMinimo.Location = new System.Drawing.Point(3, 3);
             this.lblInventarioMinimo.Name = "lblInventarioMinimo";
-            this.lblInventarioMinimo.Size = new System.Drawing.Size(138, 22);
+            this.lblInventarioMinimo.Size = new System.Drawing.Size(174, 49);
             this.lblInventarioMinimo.TabIndex = 0;
             this.lblInventarioMinimo.Text = "InventarioMínimo:";
             // 
@@ -481,7 +485,7 @@
             this.lblHay.ForeColor = System.Drawing.Color.Black;
             this.lblHay.Location = new System.Drawing.Point(495, 3);
             this.lblHay.Name = "lblHay";
-            this.lblHay.Size = new System.Drawing.Size(42, 22);
+            this.lblHay.Size = new System.Drawing.Size(42, 49);
             this.lblHay.TabIndex = 0;
             this.lblHay.Text = "Hay:";
             this.lblHay.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -493,7 +497,7 @@
             this.lblEnEsteMomento.ForeColor = System.Drawing.Color.Black;
             this.lblEnEsteMomento.Location = new System.Drawing.Point(723, 3);
             this.lblEnEsteMomento.Name = "lblEnEsteMomento";
-            this.lblEnEsteMomento.Size = new System.Drawing.Size(135, 22);
+            this.lblEnEsteMomento.Size = new System.Drawing.Size(175, 49);
             this.lblEnEsteMomento.TabIndex = 0;
             this.lblEnEsteMomento.Text = "en este momento";
             this.lblEnEsteMomento.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -503,10 +507,10 @@
             this.Lote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lote.ForeColor = System.Drawing.Color.Black;
-            this.Lote.Location = new System.Drawing.Point(550, 60);
+            this.Lote.Location = new System.Drawing.Point(550, 58);
             this.Lote.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.Lote.Name = "Lote";
-            this.Lote.Size = new System.Drawing.Size(57, 22);
+            this.Lote.Size = new System.Drawing.Size(167, 50);
             this.Lote.TabIndex = 4;
             this.Lote.Text = "Lote";
             this.Lote.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -519,7 +523,7 @@
             this.Inv_Minimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inv_Minimo.Location = new System.Drawing.Point(183, 3);
             this.Inv_Minimo.Name = "Inv_Minimo";
-            this.Inv_Minimo.Size = new System.Drawing.Size(174, 24);
+            this.Inv_Minimo.Size = new System.Drawing.Size(174, 49);
             this.Inv_Minimo.TabIndex = 6;
             this.Inv_Minimo.TabStop = false;
             this.Inv_Minimo.ThemeName = "VisualStudio2012Light";
@@ -528,9 +532,9 @@
             // 
             this.Inv_Maximo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Inv_Maximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Inv_Maximo.Location = new System.Drawing.Point(183, 60);
+            this.Inv_Maximo.Location = new System.Drawing.Point(183, 58);
             this.Inv_Maximo.Name = "Inv_Maximo";
-            this.Inv_Maximo.Size = new System.Drawing.Size(174, 24);
+            this.Inv_Maximo.Size = new System.Drawing.Size(174, 50);
             this.Inv_Maximo.TabIndex = 7;
             this.Inv_Maximo.TabStop = false;
             this.Inv_Maximo.ThemeName = "VisualStudio2012Light";
@@ -541,7 +545,7 @@
             this.Existencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Existencia.Location = new System.Drawing.Point(543, 3);
             this.Existencia.Name = "Existencia";
-            this.Existencia.Size = new System.Drawing.Size(174, 24);
+            this.Existencia.Size = new System.Drawing.Size(174, 49);
             this.Existencia.TabIndex = 8;
             this.Existencia.TabStop = false;
             this.Existencia.ThemeName = "VisualStudio2012Light";
@@ -553,9 +557,9 @@
             this.gpoPrecios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoPrecios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoPrecios.HeaderText = "Precios";
-            this.gpoPrecios.Location = new System.Drawing.Point(3, 365);
+            this.gpoPrecios.Location = new System.Drawing.Point(3, 354);
             this.gpoPrecios.Name = "gpoPrecios";
-            this.gpoPrecios.Size = new System.Drawing.Size(905, 146);
+            this.gpoPrecios.Size = new System.Drawing.Size(905, 141);
             this.gpoPrecios.TabIndex = 4;
             this.gpoPrecios.TabStop = false;
             this.gpoPrecios.Text = "Precios";
@@ -581,7 +585,7 @@
             this.tlp10.RowCount = 2;
             this.tlp10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp10.Size = new System.Drawing.Size(901, 126);
+            this.tlp10.Size = new System.Drawing.Size(901, 121);
             this.tlp10.TabIndex = 5;
             // 
             // chkIVA
@@ -589,9 +593,9 @@
             this.chkIVA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIVA.ForeColor = System.Drawing.Color.Black;
-            this.chkIVA.Location = new System.Drawing.Point(587, 66);
+            this.chkIVA.Location = new System.Drawing.Point(587, 63);
             this.chkIVA.Name = "chkIVA";
-            this.chkIVA.Size = new System.Drawing.Size(197, 22);
+            this.chkIVA.Size = new System.Drawing.Size(311, 55);
             this.chkIVA.TabIndex = 2;
             this.chkIVA.Text = "Este producto tiene IVA";
             this.chkIVA.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -605,7 +609,7 @@
             this.lblPrecioCosto.ForeColor = System.Drawing.Color.Black;
             this.lblPrecioCosto.Location = new System.Drawing.Point(3, 3);
             this.lblPrecioCosto.Name = "lblPrecioCosto";
-            this.lblPrecioCosto.Size = new System.Drawing.Size(103, 22);
+            this.lblPrecioCosto.Size = new System.Drawing.Size(136, 54);
             this.lblPrecioCosto.TabIndex = 4;
             this.lblPrecioCosto.Text = "Precio costo:";
             // 
@@ -613,10 +617,10 @@
             // 
             this.Localización.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Localización.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Localización.Location = new System.Drawing.Point(145, 66);
+            this.Localización.Location = new System.Drawing.Point(145, 63);
             this.Localización.Name = "Localización";
             this.Localización.NullText = "LOCALIZACIÓN";
-            this.Localización.Size = new System.Drawing.Size(290, 24);
+            this.Localización.Size = new System.Drawing.Size(290, 55);
             this.Localización.TabIndex = 1;
             this.Localización.ThemeName = "VisualStudio2012Light";
             // 
@@ -625,9 +629,9 @@
             this.lblLocalizacion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalizacion.ForeColor = System.Drawing.Color.Black;
-            this.lblLocalizacion.Location = new System.Drawing.Point(3, 66);
+            this.lblLocalizacion.Location = new System.Drawing.Point(3, 63);
             this.lblLocalizacion.Name = "lblLocalizacion";
-            this.lblLocalizacion.Size = new System.Drawing.Size(103, 22);
+            this.lblLocalizacion.Size = new System.Drawing.Size(136, 55);
             this.lblLocalizacion.TabIndex = 0;
             this.lblLocalizacion.Text = "Localización:";
             // 
@@ -638,7 +642,7 @@
             this.Precio_Venta.Location = new System.Drawing.Point(587, 3);
             this.Precio_Venta.Name = "Precio_Venta";
             this.Precio_Venta.NullText = "PRECIO VENTA";
-            this.Precio_Venta.Size = new System.Drawing.Size(311, 24);
+            this.Precio_Venta.Size = new System.Drawing.Size(311, 54);
             this.Precio_Venta.TabIndex = 2;
             this.Precio_Venta.ThemeName = "VisualStudio2012Light";
             // 
@@ -649,7 +653,7 @@
             this.lblPrecioVenta.ForeColor = System.Drawing.Color.Black;
             this.lblPrecioVenta.Location = new System.Drawing.Point(441, 3);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(104, 22);
+            this.lblPrecioVenta.Size = new System.Drawing.Size(140, 54);
             this.lblPrecioVenta.TabIndex = 0;
             this.lblPrecioVenta.Text = "Precio venta:";
             // 
@@ -660,7 +664,7 @@
             this.radTextBox1.Location = new System.Drawing.Point(145, 3);
             this.radTextBox1.Name = "radTextBox1";
             this.radTextBox1.NullText = "PRECIO COSTO";
-            this.radTextBox1.Size = new System.Drawing.Size(290, 24);
+            this.radTextBox1.Size = new System.Drawing.Size(290, 54);
             this.radTextBox1.TabIndex = 1;
             this.radTextBox1.ThemeName = "VisualStudio2012Light";
             // 
@@ -673,7 +677,7 @@
             this.gpoProducto.HeaderText = "Producto";
             this.gpoProducto.Location = new System.Drawing.Point(3, 3);
             this.gpoProducto.Name = "gpoProducto";
-            this.gpoProducto.Size = new System.Drawing.Size(905, 356);
+            this.gpoProducto.Size = new System.Drawing.Size(905, 345);
             this.gpoProducto.TabIndex = 1;
             this.gpoProducto.TabStop = false;
             this.gpoProducto.Text = "Producto";
@@ -695,7 +699,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(901, 336);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(901, 325);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // tlp6
@@ -714,17 +718,17 @@
             this.tlp6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.57534F));
             this.tlp6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.42466F));
             this.tlp6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp6.Size = new System.Drawing.Size(895, 78);
+            this.tlp6.Size = new System.Drawing.Size(895, 75);
             this.tlp6.TabIndex = 1;
             // 
             // Clave_Alterna
             // 
             this.Clave_Alterna.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Clave_Alterna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clave_Alterna.Location = new System.Drawing.Point(439, 39);
+            this.Clave_Alterna.Location = new System.Drawing.Point(439, 37);
             this.Clave_Alterna.Name = "Clave_Alterna";
             this.Clave_Alterna.NullText = "CLAVE ALTERNA";
-            this.Clave_Alterna.Size = new System.Drawing.Size(453, 24);
+            this.Clave_Alterna.Size = new System.Drawing.Size(453, 35);
             this.Clave_Alterna.TabIndex = 2;
             this.Clave_Alterna.ThemeName = "VisualStudio2012Light";
             // 
@@ -735,7 +739,7 @@
             this.lblClaveAlterna.ForeColor = System.Drawing.Color.Black;
             this.lblClaveAlterna.Location = new System.Drawing.Point(439, 3);
             this.lblClaveAlterna.Name = "lblClaveAlterna";
-            this.lblClaveAlterna.Size = new System.Drawing.Size(109, 22);
+            this.lblClaveAlterna.Size = new System.Drawing.Size(453, 28);
             this.lblClaveAlterna.TabIndex = 1;
             this.lblClaveAlterna.Text = "Clave alterna:";
             // 
@@ -743,10 +747,10 @@
             // 
             this.Codigo_de_barras.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_de_barras.Location = new System.Drawing.Point(3, 39);
+            this.Codigo_de_barras.Location = new System.Drawing.Point(3, 37);
             this.Codigo_de_barras.Name = "Codigo_de_barras";
             this.Codigo_de_barras.NullText = "CÓDIGO DE BARRAS";
-            this.Codigo_de_barras.Size = new System.Drawing.Size(430, 24);
+            this.Codigo_de_barras.Size = new System.Drawing.Size(430, 35);
             this.Codigo_de_barras.TabIndex = 1;
             this.Codigo_de_barras.ThemeName = "VisualStudio2012Light";
             // 
@@ -757,7 +761,7 @@
             this.lblCodigoDeBarras.ForeColor = System.Drawing.Color.Black;
             this.lblCodigoDeBarras.Location = new System.Drawing.Point(3, 3);
             this.lblCodigoDeBarras.Name = "lblCodigoDeBarras";
-            this.lblCodigoDeBarras.Size = new System.Drawing.Size(139, 22);
+            this.lblCodigoDeBarras.Size = new System.Drawing.Size(430, 28);
             this.lblCodigoDeBarras.TabIndex = 0;
             this.lblCodigoDeBarras.Text = "Código de barras:";
             // 
@@ -771,12 +775,12 @@
             this.tlp8.Controls.Add(this.lblDepartamento, 0, 0);
             this.tlp8.Controls.Add(this.Categoría, 1, 1);
             this.tlp8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp8.Location = new System.Drawing.Point(3, 171);
+            this.tlp8.Location = new System.Drawing.Point(3, 165);
             this.tlp8.Name = "tlp8";
             this.tlp8.RowCount = 2;
             this.tlp8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.47887F));
             this.tlp8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.52113F));
-            this.tlp8.Size = new System.Drawing.Size(895, 78);
+            this.tlp8.Size = new System.Drawing.Size(895, 75);
             this.tlp8.TabIndex = 3;
             // 
             // Departamento
@@ -784,10 +788,10 @@
             this.Departamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Departamento.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Departamento.Location = new System.Drawing.Point(3, 39);
+            this.Departamento.Location = new System.Drawing.Point(3, 37);
             this.Departamento.Name = "Departamento";
             this.Departamento.NullText = "--SELECCIONE--";
-            this.Departamento.Size = new System.Drawing.Size(430, 28);
+            this.Departamento.Size = new System.Drawing.Size(430, 35);
             this.Departamento.TabIndex = 3;
             this.Departamento.ThemeName = "VisualStudio2012Light";
             // 
@@ -798,7 +802,7 @@
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
             this.lblCategoria.Location = new System.Drawing.Point(439, 3);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(84, 22);
+            this.lblCategoria.Size = new System.Drawing.Size(453, 28);
             this.lblCategoria.TabIndex = 0;
             this.lblCategoria.Text = "Categoría:";
             // 
@@ -809,7 +813,7 @@
             this.lblDepartamento.ForeColor = System.Drawing.Color.Black;
             this.lblDepartamento.Location = new System.Drawing.Point(3, 3);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(117, 22);
+            this.lblDepartamento.Size = new System.Drawing.Size(430, 28);
             this.lblDepartamento.TabIndex = 0;
             this.lblDepartamento.Text = "Departamento:";
             // 
@@ -818,10 +822,10 @@
             this.Categoría.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Categoría.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Categoría.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Categoría.Location = new System.Drawing.Point(439, 39);
+            this.Categoría.Location = new System.Drawing.Point(439, 37);
             this.Categoría.Name = "Categoría";
             this.Categoría.NullText = "--SELECCIONE--";
-            this.Categoría.Size = new System.Drawing.Size(453, 28);
+            this.Categoría.Size = new System.Drawing.Size(453, 35);
             this.Categoría.TabIndex = 2;
             this.Categoría.ThemeName = "VisualStudio2012Light";
             // 
@@ -838,22 +842,22 @@
             this.tlp7.Controls.Add(this.Medicamento, 2, 1);
             this.tlp7.Controls.Add(this.radCheckBox1, 3, 1);
             this.tlp7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp7.Location = new System.Drawing.Point(3, 87);
+            this.tlp7.Location = new System.Drawing.Point(3, 84);
             this.tlp7.Name = "tlp7";
             this.tlp7.RowCount = 2;
             this.tlp7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp7.Size = new System.Drawing.Size(895, 78);
+            this.tlp7.Size = new System.Drawing.Size(895, 75);
             this.tlp7.TabIndex = 2;
             // 
             // Sustancia_Activa
             // 
             this.Sustancia_Activa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Sustancia_Activa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sustancia_Activa.Location = new System.Drawing.Point(3, 42);
+            this.Sustancia_Activa.Location = new System.Drawing.Point(3, 40);
             this.Sustancia_Activa.Name = "Sustancia_Activa";
             this.Sustancia_Activa.NullText = "SUSTANCIA ACTIVA";
-            this.Sustancia_Activa.Size = new System.Drawing.Size(434, 24);
+            this.Sustancia_Activa.Size = new System.Drawing.Size(434, 32);
             this.Sustancia_Activa.TabIndex = 1;
             this.Sustancia_Activa.ThemeName = "VisualStudio2012Light";
             // 
@@ -864,7 +868,7 @@
             this.lblSustanciaActiva.ForeColor = System.Drawing.Color.Black;
             this.lblSustanciaActiva.Location = new System.Drawing.Point(3, 3);
             this.lblSustanciaActiva.Name = "lblSustanciaActiva";
-            this.lblSustanciaActiva.Size = new System.Drawing.Size(134, 22);
+            this.lblSustanciaActiva.Size = new System.Drawing.Size(434, 31);
             this.lblSustanciaActiva.TabIndex = 0;
             this.lblSustanciaActiva.Text = "Sustancia Activa:";
             // 
@@ -873,9 +877,9 @@
             this.Servicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Servicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Servicio.ForeColor = System.Drawing.Color.Black;
-            this.Servicio.Location = new System.Drawing.Point(443, 42);
+            this.Servicio.Location = new System.Drawing.Point(443, 40);
             this.Servicio.Name = "Servicio";
-            this.Servicio.Size = new System.Drawing.Size(84, 22);
+            this.Servicio.Size = new System.Drawing.Size(145, 32);
             this.Servicio.TabIndex = 2;
             this.Servicio.Text = "Servicio";
             this.Servicio.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -887,9 +891,9 @@
             this.Medicamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Medicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Medicamento.ForeColor = System.Drawing.Color.Black;
-            this.Medicamento.Location = new System.Drawing.Point(594, 42);
+            this.Medicamento.Location = new System.Drawing.Point(594, 40);
             this.Medicamento.Name = "Medicamento";
-            this.Medicamento.Size = new System.Drawing.Size(124, 22);
+            this.Medicamento.Size = new System.Drawing.Size(145, 32);
             this.Medicamento.TabIndex = 3;
             this.Medicamento.Text = "Medicamento";
             this.Medicamento.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -900,9 +904,9 @@
             // 
             this.radCheckBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radCheckBox1.Location = new System.Drawing.Point(745, 42);
+            this.radCheckBox1.Location = new System.Drawing.Point(745, 40);
             this.radCheckBox1.Name = "radCheckBox1";
-            this.radCheckBox1.Size = new System.Drawing.Size(80, 22);
+            this.radCheckBox1.Size = new System.Drawing.Size(147, 32);
             this.radCheckBox1.TabIndex = 4;
             this.radCheckBox1.Text = "Articulo";
             this.radCheckBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -916,22 +920,22 @@
             this.tableLayoutPanel3.Controls.Add(this.Descripcion, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblDescripcion, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 255);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 246);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 78);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 76);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // Descripcion
             // 
             this.Descripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(3, 42);
+            this.Descripcion.Location = new System.Drawing.Point(3, 41);
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.NullText = "DESCRIPCIÓN";
-            this.Descripcion.Size = new System.Drawing.Size(889, 24);
+            this.Descripcion.Size = new System.Drawing.Size(889, 32);
             this.Descripcion.TabIndex = 2;
             this.Descripcion.ThemeName = "VisualStudio2012Light";
             // 
@@ -941,7 +945,7 @@
             this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDescripcion.Location = new System.Drawing.Point(3, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(889, 39);
+            this.lblDescripcion.Size = new System.Drawing.Size(889, 38);
             this.lblDescripcion.TabIndex = 3;
             this.lblDescripcion.Text = "Descripcion del Producto:";
             // 
@@ -954,11 +958,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnAgregarProducto, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCancelar, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 658);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 638);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(905, 55);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(905, 56);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // btnAgregarProducto
@@ -968,7 +972,7 @@
             this.btnAgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.Image")));
             this.btnAgregarProducto.Location = new System.Drawing.Point(546, 3);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(175, 49);
+            this.btnAgregarProducto.Size = new System.Drawing.Size(175, 50);
             this.btnAgregarProducto.TabIndex = 0;
             this.btnAgregarProducto.Text = "Agregar Producto";
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -982,12 +986,11 @@
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(727, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(175, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(175, 50);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.ThemeName = "VisualStudio2012Light";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // tlp2
             // 
@@ -1008,7 +1011,7 @@
             this.paneIzq.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneIzq.Location = new System.Drawing.Point(3, 3);
             this.paneIzq.Name = "paneIzq";
-            this.paneIzq.Size = new System.Drawing.Size(198, 762);
+            this.paneIzq.Size = new System.Drawing.Size(198, 743);
             this.paneIzq.TabIndex = 0;
             this.paneIzq.TabStop = false;
             // 
@@ -1017,7 +1020,7 @@
             this.AcceptButton = this.btnAgregarProducto;
             this.AutoSize = true;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1366, 749);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -1025,15 +1028,16 @@
             this.MinimizeBox = false;
             this.Name = "frmAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
-            this.TopMost = true;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            //this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvAddProduct)).EndInit();
             this.pvAddProduct.ResumeLayout(false);
             this.rpvImagen.ResumeLayout(false);
             this.tlp19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpoAgregarImagen)).EndInit();
             this.gpoAgregarImagen.ResumeLayout(false);
@@ -1111,7 +1115,7 @@
         private Telerik.WinControls.UI.RadPageViewPage rpvFarmacopea;
         private Telerik.WinControls.UI.RadPageViewPage rpvImagen;
         private System.Windows.Forms.TableLayoutPanel tlp19;
-        private Telerik.WinControls.UI.RadButton btnEliminar;
+        private Telerik.WinControls.UI.RadButton btnExaminar;
         private Telerik.WinControls.UI.RadButton btnAgregarImagen;
         private Telerik.WinControls.UI.RadGroupBox gpoAgregarImagen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;

@@ -58,8 +58,62 @@ namespace Viper.DesktopApp
             Tipo_de_Telefono.Focus();
         }
 
+
         #endregion
 
-       
+        private void frmRegisterEmployee_Load(object sender, EventArgs e)
+        {
+            //Set default configuration to UI
+            this.AcceptButton = btnAceptar;
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            //this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            //this.Icon = new Icon("Resources/application_icon.ico");
+
+            ToolTip toolTip1 = new ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.btnAceptar, "Para poder guardar los datos del empleado, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnCaptura, "Para iniciar la camara, favor de dar clic a este boton");
+            toolTip1.SetToolTip(this.btnExaminar, "Para buscar el logotipo de su negocio almacenado en su pc, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnEliminarIE, "Para eliminar, favor de dar cli a este boton");
+
+
+
+            // Set up the ToolTip text for the TextBox and ComboBox Control.
+            //Datos generales
+            toolTip1.SetToolTip(this.NSS, UtilMessages.NSS_EMPLEADO);
+            toolTip1.SetToolTip(this.Correo_Electronico, UtilMessages.EMAIL_EMPLEADO);
+            toolTip1.SetToolTip(this.Clave_Lada, UtilMessages.LADA_EMPLEADO);
+            toolTip1.SetToolTip(this.cboTipoInmueble, UtilMessages.TIPO_INMUEBLE_EMPLEADO);
+            toolTip1.SetToolTip(this.cboTipoVialidad, UtilMessages.TIPO_VIALIDAD_EMPLEADO);
+            toolTip1.SetToolTip(this.Vialidad, UtilMessages.NOMBRE_VIALIDAD_EMPLEADO);
+            toolTip1.SetToolTip(this.cboLocalidad, UtilMessages.LOCALIDAD_EMPLEADO);
+            //Acceso al sistema
+            toolTip1.SetToolTip(this.Usuario, UtilMessages.USUARIO);
+            toolTip1.SetToolTip(this.Password, UtilMessages.CONTRASEÑA);
+            toolTip1.SetToolTip(this.ConfirmarPassword, UtilMessages.CONFIRMAR_CONTRASEÑA);
+            toolTip1.SetToolTip(this.cboRol, UtilMessages.ROL_EMPLEADO);
+            //Información del empleado
+            toolTip1.SetToolTip(this.ID_Checador, UtilMessages.ID_CHECADOR);
+            toolTip1.SetToolTip(this.cboTurno, UtilMessages.TURNO);
+            toolTip1.SetToolTip(this.dtpFechaInicioLabores, UtilMessages.INICIO_DE_LABORES);
+            toolTip1.SetToolTip(this.cboVacaciones, UtilMessages.VACACIONES);
+
+        }
     }
 }

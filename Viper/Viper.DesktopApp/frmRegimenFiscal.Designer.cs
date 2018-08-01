@@ -32,14 +32,17 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.btnAceptar = new Telerik.WinControls.UI.RadButton();
             this.lblRegimenFiscal = new Telerik.WinControls.UI.RadLabel();
-            this.gvRegimenFiscal = new Telerik.WinControls.UI.RadGridView();
+            this.dgvRegimenFiscal = new Telerik.WinControls.UI.RadGridView();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.picEmpresa = new System.Windows.Forms.PictureBox();
+            this.lblRegimen = new System.Windows.Forms.Label();
+            this.txtRegimen = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRegimenFiscal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegimenFiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegimenFiscal.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRegimen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -64,18 +67,41 @@
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal";
             // 
-            // gvRegimenFiscal
+            // dgvRegimenFiscal
             // 
-            this.gvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gvRegimenFiscal.Location = new System.Drawing.Point(12, 124);
+            this.dgvRegimenFiscal.AutoScroll = true;
+            this.dgvRegimenFiscal.AutoSizeRows = true;
+            this.dgvRegimenFiscal.EnableCustomFiltering = true;
+            this.dgvRegimenFiscal.EnableHotTracking = false;
+            this.dgvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dgvRegimenFiscal.Location = new System.Drawing.Point(12, 174);
             // 
             // 
             // 
-            this.gvRegimenFiscal.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.gvRegimenFiscal.Name = "gvRegimenFiscal";
-            this.gvRegimenFiscal.Size = new System.Drawing.Size(760, 266);
-            this.gvRegimenFiscal.TabIndex = 0;
-            this.gvRegimenFiscal.ThemeName = "VisualStudio2012Light";
+            this.dgvRegimenFiscal.MasterTemplate.AllowAddNewRow = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowCellContextMenu = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowColumnChooser = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowColumnHeaderContextMenu = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowColumnReorder = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowColumnResize = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowDeleteRow = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowDragToGroup = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowEditRow = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowRowHeaderContextMenu = false;
+            this.dgvRegimenFiscal.MasterTemplate.AllowRowResize = false;
+            this.dgvRegimenFiscal.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.dgvRegimenFiscal.MasterTemplate.EnableCustomFiltering = true;
+            this.dgvRegimenFiscal.MasterTemplate.EnableFiltering = true;
+            this.dgvRegimenFiscal.MasterTemplate.EnableGrouping = false;
+            this.dgvRegimenFiscal.MasterTemplate.EnableSorting = false;
+            this.dgvRegimenFiscal.MasterTemplate.ShowFilteringRow = false;
+            this.dgvRegimenFiscal.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgvRegimenFiscal.Name = "dgvRegimenFiscal";
+            this.dgvRegimenFiscal.ShowGroupPanel = false;
+            this.dgvRegimenFiscal.ShowGroupPanelScrollbars = false;
+            this.dgvRegimenFiscal.Size = new System.Drawing.Size(760, 216);
+            this.dgvRegimenFiscal.TabIndex = 0;
+            this.dgvRegimenFiscal.ThemeName = "VisualStudio2012Light";
             // 
             // picEmpresa
             // 
@@ -87,28 +113,54 @@
             this.picEmpresa.TabIndex = 7;
             this.picEmpresa.TabStop = false;
             // 
+            // lblRegimen
+            // 
+            this.lblRegimen.AutoSize = true;
+            this.lblRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegimen.Location = new System.Drawing.Point(12, 136);
+            this.lblRegimen.Name = "lblRegimen";
+            this.lblRegimen.Size = new System.Drawing.Size(146, 24);
+            this.lblRegimen.TabIndex = 8;
+            this.lblRegimen.Text = "Regimen Fiscal:";
+            // 
+            // txtRegimen
+            // 
+            this.txtRegimen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegimen.Location = new System.Drawing.Point(164, 136);
+            this.txtRegimen.Name = "txtRegimen";
+            this.txtRegimen.NullText = "Escribe la actividad que deseas buscar";
+            this.txtRegimen.Size = new System.Drawing.Size(608, 27);
+            this.txtRegimen.TabIndex = 9;
+            this.txtRegimen.ThemeName = "VisualStudio2012Light";
+            // 
             // frmRegimenFiscal
             // 
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 462);
+            this.Controls.Add(this.txtRegimen);
+            this.Controls.Add(this.lblRegimen);
             this.Controls.Add(this.picEmpresa);
             this.Controls.Add(this.lblRegimenFiscal);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.gvRegimenFiscal);
+            this.Controls.Add(this.dgvRegimenFiscal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRegimenFiscal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            //this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmRegimenFiscal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRegimenFiscal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRegimenFiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegimenFiscal.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegimenFiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRegimen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,8 +169,10 @@
         #endregion
         private Telerik.WinControls.UI.RadButton btnAceptar;
         private Telerik.WinControls.UI.RadLabel lblRegimenFiscal;
-        private Telerik.WinControls.UI.RadGridView gvRegimenFiscal;
+        private Telerik.WinControls.UI.RadGridView dgvRegimenFiscal;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.PictureBox picEmpresa;
+        private System.Windows.Forms.Label lblRegimen;
+        private Telerik.WinControls.UI.RadTextBox txtRegimen;
     }
 }

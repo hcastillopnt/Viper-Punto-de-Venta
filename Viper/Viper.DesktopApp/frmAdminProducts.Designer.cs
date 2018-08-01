@@ -177,7 +177,6 @@
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.ThemeName = "VisualStudio2012Light";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // picArticulo
             // 
@@ -245,7 +244,6 @@
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRecargar.ThemeName = "VisualStudio2012Light";
-            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnEditar
             // 
@@ -270,8 +268,8 @@
             this.MinimizeBox = false;
             this.Name = "frmAdminProducts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
-            this.TopMost = true;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            //this.TopMost = true;
             this.Load += new System.EventHandler(this.frmAdminProducts_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).EndInit();

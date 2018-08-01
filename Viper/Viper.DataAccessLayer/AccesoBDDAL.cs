@@ -12,12 +12,12 @@ using System.Data;
 
 namespace Viper.DataAccessLayer
 {
-    public class CRUDCompanyDAL
+    public class AccesoBDDAL
     {
         public static ViperContext db = new ViperContext();
 
-        #region insertarEmpresa
-        public static string sp_insert_company(Company c, Address a, AddressSAT ads, Employee e, User m)
+        #region insertarSite
+        public static string sp_insert_sucursal(Site s, Address a)
         {
             string message = string.Empty;
             bool isInserted = false;
@@ -37,7 +37,7 @@ namespace Viper.DataAccessLayer
                             //Validar si la tabla utilizada existe
                             bool isTableExist = ctx.Database
                          .SqlQuery<int?>(@"
-                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Company' OR table_name='Address' OR table_name='AddressSAT'")
+                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Site' OR table_name='Address'")
                          .SingleOrDefault() != null;
 
                             if (isTableExist)
@@ -54,54 +54,33 @@ namespace Viper.DataAccessLayer
                                     if (addressID > 0)
                                     {
                                         isInserted = false;
-                                        ctx.AddressesSAT.Add(ads);
+                                        ctx.Sites.Add(s);
                                         isInserted = ctx.SaveChanges() > 0;
-                                        var addressSATID = ctx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                        if (addressSATID > 0)
-                                        {
+                                        
                                             if (isInserted)
                                             {
                                                 isInserted = false;
 
-                                                c.AddressSATId = addressSATID;
-                                                c.AddressId = addressID;
-                                                ctx.Companies.Add(c);
+                                                s.AddressId= addressID;
+                                                ctx.Sites.Add(s);
                                                 isInserted = ctx.SaveChanges() > 0;
 
-                                                var companyId = ctx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-                                                if (companyId > 0)
+                                                var siteId = ctx.Sites.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                                                if (siteId > 0)
                                                 {
                                                     if (isInserted)
                                                     {
-                                                        e.AddressId = addressID;
-                                                        ctx.Employees.Add(e);
-                                                        isInserted = ctx.SaveChanges() > 0;
-
-                                                        var employeeId = ctx.Employees.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-                                                        if (companyId > 0)
+                                                        if (isInserted == true && string.IsNullOrEmpty(message))
                                                         {
-                                                            if (isInserted)
-                                                            {
-                                                                isInserted = false;
-                                                                m.EmployeeId = employeeId;
-                                                                ctx.Memberships.Add(m);
-                                                                isInserted = ctx.SaveChanges() > 0;
 
-                                            
-                                                                    if (isInserted == true && string.IsNullOrEmpty(message))
-                                                                    {
+                                                            ctxTran.Commit();
 
-                                                                        ctxTran.Commit();
-
-                                                                    }
-                                                                
-                                                            }
                                                         }
                                                     }
                                                 }
                                             }
-                                        }
+                                        
                                     }
                                 }
                             }
@@ -141,6 +120,7 @@ namespace Viper.DataAccessLayer
 
             return message;
         }
+
         #endregion
 
         public static string checkCompanyName()
@@ -238,7 +218,6 @@ namespace Viper.DataAccessLayer
             var comp = db.Companies.FirstOrDefault(x => x.Id == c.Id);
             #region ActualizandoConObjeto
             comp.Id = c.Id;
-            comp.AccountBankId = c.AccountBankId;
             comp.AddressId = c.AddressId;
             comp.AddressSATId = c.AddressSATId;
             comp.ApiKey = c.ApiKey;
@@ -330,7 +309,80 @@ namespace Viper.DataAccessLayer
 
             return Sites;
         }
+        public static string insertProduct(Product p)
+        {
+            string message = string.Empty;
+            bool isInserted = false;
 
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                using (var ctxTran = ctx.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        //Validar si la base de datos existe
+                        bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                        if (isDataBaseExist)
+                        {
+                            //Validar si la tabla utilizada existe
+                            bool isTableExist = ctx.Database
+                         .SqlQuery<int?>(@"
+                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Product'")
+                         .SingleOrDefault() != null;
+
+                            if (isTableExist)
+                            {
+                                ctx.Products.Add(p);
+                                isInserted = ctx.SaveChanges() > 0;
+
+                                if (isInserted)
+                                {
+                                    if (isInserted == true && string.IsNullOrEmpty(message))
+                                    {
+
+                                        ctxTran.Commit();
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (DbEntityValidationException ex)
+                    {
+                        var errorMessages = ex.EntityValidationErrors
+                                .SelectMany(x => x.ValidationErrors)
+                                .Select(x => x.ErrorMessage);
+                        var fullErrorMessage = string.Join("; ", errorMessages);
+                        var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                        message = exceptionMessage + "\n" + ex.EntityValidationErrors;
+
+                        ctxTran.Rollback();
+                    }
+                    catch (DbUpdateConcurrencyException ex)
+                    {
+                        var entity = ex.Entries.Single().GetDatabaseValues();
+
+                        if (entity == null)
+                            message = "The entity being updated is already deleted by another user";
+                        else
+                            message = "The entity being updated has already been updated by another user";
+
+                        ctxTran.Rollback();
+                    }
+                    catch (DbUpdateException ex)
+                    {
+                        var exception = HandleDbUpdateException(ex);
+                        message = exception.Message;
+
+                        ctxTran.Rollback();
+                    }
+                }
+            }
+
+            return message;
+        }
         public static DataTable getProducts()
         {
             List<Product> Products = new List<Product>();
@@ -410,7 +462,6 @@ namespace Viper.DataAccessLayer
 
             return dt;
         }
-
         public static DataTable getProduct(string BarCode)
         {
             List<Product> Products = new List<Product>();
@@ -489,8 +540,7 @@ namespace Viper.DataAccessLayer
             }
 
             return dt;
-        }
-
+        }     
         public static DataTable getSuppliers()
         {
             List<Supplier> Supplier = new List<Supplier>();
@@ -651,6 +701,146 @@ namespace Viper.DataAccessLayer
 
             return dt;
         }
+
+        public static List<Supplier> getSupList(int id)
+        {
+            List<Supplier> lista = new List<Supplier>();
+            using (ViperContext ctx = new ViperContext())
+            {
+                try
+                {
+                    //Validar si la base de datos existe
+                    bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        //Validar si la tabla utilizada existe
+                        bool isTableExist = ctx.Database
+                     .SqlQuery<int?>(@"
+                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Supplier'")
+                     .SingleOrDefault() != null;
+
+                        if (isTableExist)
+                        {
+                            lista = ctx.Suppliers.Where(x => x.Id == id).OrderBy(x => x.SupplierKey).ToList();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            return lista;
+
+        }
+
+        public static string sp_insert_supplier(Supplier sup, Address a, AddressSAT ads)
+        {
+            string message = string.Empty;
+            bool isInserted = false;
+
+            //Utilizar el contexto para acceder a la base de datos
+            using (ViperContext ctx = new ViperContext())
+            {
+                using (var ctxTran = ctx.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        //Validar si la base de datos existe
+                        bool isDataBaseExist = Database.Exists(ctx.Database.Connection);
+
+                        if (isDataBaseExist)
+                        {
+                            //Validar si la tabla utilizada existe
+                            bool isTableExist = ctx.Database
+                         .SqlQuery<int?>(@"
+                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Supplier' OR table_name='Address' OR table_name='AddressSAT'")
+                         .SingleOrDefault() != null;
+
+                            if (isTableExist)
+                            {
+                                ctx.Addresses.Add(a);
+                                isInserted = ctx.SaveChanges() > 0;
+
+                                if (isInserted)
+                                {
+                                    isInserted = false;
+
+                                    var addressID = ctx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                    if (addressID > 0)
+                                    {
+                                        isInserted = false;
+                                        ctx.AddressesSAT.Add(ads);
+                                        isInserted = ctx.SaveChanges() > 0;
+                                        var addressSATID = ctx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                        if (addressSATID > 0)
+                                        {
+                                            if (isInserted)
+                                            {
+                                                isInserted = false;
+
+                                                sup.AddressSATId = addressSATID;
+                                                sup.AddressId = addressID;
+                                                ctx.Suppliers.Add(sup);
+                                                isInserted = ctx.SaveChanges() > 0;
+
+                                                var supId = ctx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                                                if (supId > 0)
+                                                {
+
+                                                    if (isInserted == true && string.IsNullOrEmpty(message))
+                                                    {
+
+                                                        ctxTran.Commit();
+
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (DbEntityValidationException ex)
+                    {
+                        var errorMessages = ex.EntityValidationErrors
+                                .SelectMany(x => x.ValidationErrors)
+                                .Select(x => x.ErrorMessage);
+                        var fullErrorMessage = string.Join("; ", errorMessages);
+                        var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                        message = exceptionMessage + "\n" + ex.EntityValidationErrors;
+
+                        ctxTran.Rollback();
+                    }
+                    catch (DbUpdateConcurrencyException ex)
+                    {
+                        var entity = ex.Entries.Single().GetDatabaseValues();
+
+                        if (entity == null)
+                            message = "The entity being updated is already deleted by another user";
+                        else
+                            message = "The entity being updated has already been updated by another user";
+
+                        ctxTran.Rollback();
+                    }
+                    catch (DbUpdateException ex)
+                    {
+                        var exception = HandleDbUpdateException(ex);
+                        message = exception.Message;
+
+                        ctxTran.Rollback();
+                    }
+                }
+            }
+
+            return message;
+        }
+
+
         public static DataTable getCustomers()
         {
             List<Customer> Customer = new List<Customer>();

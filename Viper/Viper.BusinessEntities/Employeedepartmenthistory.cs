@@ -23,6 +23,20 @@ namespace Viper.BusinessEntities
         public int EmployeeId { get; set; }
 
         /// <summary>
+        /// Campo JobTitleId
+        /// </summary>
+        [Required(ErrorMessage = "El campo JobTitleId es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int JobTitleId { get; set; }
+
+        /// <summary>
+        /// Campo DepartmentId
+        /// </summary>
+        [Required(ErrorMessage = "El campo DepartmentId es obligatorio")]
+        [Range(0, int.MaxValue, ErrorMessage = "Por favor ingresa un numero entero valido")]
+        public int DepartmentId { get; set; }
+
+        /// <summary>
         /// Campo SiteId
         /// </summary>
         [Required(ErrorMessage = "El campo SiteId es obligatorio")]

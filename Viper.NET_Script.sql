@@ -18,6 +18,8 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+DROP DATABASE IF EXISTS `viper_developments`;
+
 --
 -- Base de datos: viper_developments`
 --
@@ -27,6 +29,8 @@ CREATE DATABASE `viper_developments`;
 USE `viper_developments`;
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `CountryRegion`;
 
 --
 -- Estructura de tabla `CountryRegion`
@@ -55,6 +59,8 @@ CREATE TABLE `CountryRegion`
 INSERT INTO CountryRegion (Id, Description, FIPS104, ISO2, ISO3, ISON, Internet, Capital, MapReference, NationalitySingular, NationalityPlural, Currency, CurrencyCode, Population, Title, Comment) VALUES (159, N'MEXICO', N'MX', N'MX', N'MEX', N'484', N'MX', N'Mexico ', N'North America ', N'Mexican', N'Mexicans', N'Mexican Peso', N'MXN', 101879171, N'Mexico', N'');
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `StateProvince`;
 
 --
 -- Estructura de tabla `StateProvince`
@@ -98,7 +104,7 @@ INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveC
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (20, 159, N'20', N'Oaxaca', N'Oax.', N'0670001', N'Oaxaca de Juárez', N'3801962', N'1819008', N'1982954', N'941814');
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (21, 159, N'21', N'Puebla', N'Pue.', N'1140001', N'Heróica Puebla de Zaraza', N'5779829', N'2769855', N'3009974', N'1392053');
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (22, 159, N'22', N'Queretaro', N'Qro.', N'0140001', N'Santia de Querétaro', N'1827937', N'887188', N'940749', N'454392');
-INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (23, 159, N'23', N'QQuintana Roo', N'Q. Roo', N'0040001', N'Chetumal', N'1325578', N'673220', N'652358', N'369326');
+INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (23, 159, N'23', N'Quintana Roo', N'Q. Roo', N'0040001', N'Chetumal', N'1325578', N'673220', N'652358', N'369326');
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (24, 159, N'24', N'San Luis Potosi', N'SLP', N'0280001', N'San Luis Potosí', N'2585518', N'1260366', N'1325152', N'639265');
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (25, 159, N'25', N'Sinaloa', N'Sin.', N'0060001', N'Culiacán Rosales', N'2767761', N'1376201', N'1391560', N'713296');
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (26, 159, N'26', N'Sonora', N'Son.', N'0300001', N'Hermosillo', N'2662480', N'1339612', N'1322868', N'712402');
@@ -110,6 +116,8 @@ INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveC
 INSERT INTO StateProvince (Id, CountryRegionId, CveEnt, Description, Abrev, CveCab, NameCab, PTOT, PMAS, PFEM, VTOT) VALUES (32, 159, N'32', N'Zacatecas', N'Zac.', N'0560001', N'Zacatecas', N'1490668', N'726897', N'763771', N'377018');
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `City`;
 
 --
 -- Estructura de tabla `City`
@@ -2597,6 +2605,8 @@ UPDATE City SET Description = UPPER(Description), NameCab = UPPER(NameCab) WHERE
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `RoadType`;
+
 --
 -- Estructura de tabla `RoadType`
 --
@@ -2621,6 +2631,8 @@ INSERT INTO RoadType (Name) VALUES('PASAJE');
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `AddressType`;
+
 --
 -- Estructura de tabla `AddressType`
 --
@@ -2644,6 +2656,8 @@ INSERT INTO AddressType (Name) VALUES('TERRENOS AGROPECUARIOS');
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Address`;
+
 --
 -- Estructura de tabla `Address`
 --
@@ -2653,8 +2667,8 @@ CREATE TABLE `Address`
 	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
 	`RoadTypeId` INT NOT NULL,
     `AddressTypeId` INT NOT NULL,
-	`AddressLine1` varchar(20) NOT NULL,
-	`AddressLine2` varchar(20) NOT NULL,
+	`AddressLine1` varchar(50) NOT NULL,
+	`AddressLine2` varchar(50) NOT NULL,
     `CountryRegionId` INT NOT NULL,
     `StateProvinceId` INT NOT NULL,
     `CityId` INT NOT NULL,
@@ -2673,6 +2687,8 @@ CREATE TABLE `Address`
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `AddressSAT`;
+
 --
 -- Estructura de tabla `AddressSAT`
 --
@@ -2682,8 +2698,8 @@ CREATE TABLE `AddressSAT`
 	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
 	`RoadTypeId` INT NOT NULL,
     `AddressTypeId` INT NOT NULL,
-	`AddressLine1` varchar(20) NOT NULL,
-	`AddressLine2` varchar(20) NOT NULL,
+	`AddressLine1` varchar(50) NOT NULL,
+	`AddressLine2` varchar(50) NOT NULL,
     `CountryRegionId` INT NOT NULL,
     `StateProvinceId` INT NOT NULL,
     `CityId` INT NOT NULL,
@@ -2702,6 +2718,8 @@ CREATE TABLE `AddressSAT`
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Gender`;
+
 --
 -- Estructura de tabla `Gender`
 --
@@ -2716,6 +2734,8 @@ INSERT INTO Gender (Abrev, Name) VALUES('M', 'MASCULINO');
 INSERT INTO Gender (Abrev, Name) VALUES('F', 'FEMENINO');
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `MaritalStatus`;
 
 --
 -- Estructura de tabla `MaritalStatus`
@@ -2734,47 +2754,7 @@ INSERT INTO MaritalStatus (Name) VALUES('SEPARADO');
 
 -- --------------------------------------------------------
 
---
--- Estructura de tabla `Bank`
---
-
-CREATE TABLE `Bank` (
-  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `Name` varchar(30) NOT NULL,
-  `Logo` longblob NULL,
-  
-  -- START: AuditableEntity --
-  `CreatedDate` DATETIME NULL,
-  `CreateBy` VARCHAR(6) NULL,
-  `ModifiedDate` DATETIME NULL,
-  `ModifiedBy` VARCHAR(6) NULL
-  -- END: AuditableEntity --
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los bancos';
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla `AccountBank`
---
-
-CREATE TABLE `AccountBank` (
-  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `Account` varchar(30) NOT NULL,
-  `BankBranch` varchar(30) NULL,
-  `Key` int(11) NOT NULL,
-  `BankId` int(11) NOT NULL,
-  
-  -- START: AuditableEntity --
-  `CreatedDate` DATETIME NULL,
-  `CreateBy` VARCHAR(6) NULL,
-  `ModifiedDate` DATETIME NULL,
-  `ModifiedBy` VARCHAR(6) NULL,
-  -- END: AuditableEntity --
-  
-    FOREIGN KEY (BankId) REFERENCES Bank(Id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las cuentas bancarias de la compañia';
-
--- --------------------------------------------------------
+DROP TABLE IF EXISTS `RegimenFiscal`;
 
 --
 -- Estructura de tabla `RegimenFiscal`
@@ -5064,7 +5044,32 @@ INSERT INTO RegimenFiscal(`Key`, Description, Fisica, Moral) VALUES('932120','Se
 
 UPDATE RegimenFiscal SET Description = UPPER(Description) WHERE Id > 0;
 
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE n1 FROM RegimenFiscal n1, RegimenFiscal n2 WHERE n1.`Description` = n2.`Description` AND n1.`Id` < n2.`Id`;
+
+SET SQL_SAFE_UPDATES = 1;
+
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Role`;
+
+--
+-- Estructura de tabla `Role`
+--
+CREATE TABLE `Role` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` VARCHAR(50) NOT NULL,
+  `Description` VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los roles de la aplicacion';
+
+INSERT INTO Role (Name, Description) VALUES('ADMINISTRADOR', 'God Mode allows us, among other things to control users, products, managae credentials, ...');
+INSERT INTO Role (Name, Description) VALUES('BASICO', 'The employee can make sales, consult reports, make cash cuts');
+INSERT INTO Role (Name, Description) VALUES('DOCTOR', 'The employee can access module Medical');
+
+-- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Company`;
 
 --
 -- Estructura de tabla `Company`
@@ -5072,23 +5077,23 @@ UPDATE RegimenFiscal SET Description = UPPER(Description) WHERE Id > 0;
 
 CREATE TABLE `Company` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `CompanyName` varchar(30) NOT NULL,
+  `CompanyName` varchar(50) NOT NULL,
   `CompanyKey` varchar(30) NULL,
   `AddressId` int(11) NOT NULL,
-  `PhoneNumber` varchar(10) NULL,
-  `CellphoneNumber` varchar(13) NULL,
-  `EmailAddress` varchar(30) NULL,
-  `FiscalName` varchar(30) NULL,
+  `PhoneNumber` varchar(13) NULL,
+  `CellphoneNumber` varchar(17) NULL,
+  `EmailAddress` varchar(50) NULL,
+  `FiscalName` varchar(50) NULL,
   `AddressSATId` int(11) NOT NULL,
   `RegimenFiscalId` int(11) NOT NULL,
-  `AccountBankId` int(11) NOT NULL,
   `RFC` varchar(13) NOT NULL,
-  `CURP` varchar(25) NULL,
+  `CURP` varchar(18) NULL,
   `LoginID` VARCHAR(256) NOT NULL,
   `PasswordEncrypted` varchar(256) NOT NULL,
   `ApiKey` varchar(100) NULL,
   `BusinessActivity` varchar(30) NULL,
   `Logo` longblob NULL,
+  `RoleId` INT NULL COMMENT 'Llave foranea de Rol',
   
   -- START: AuditableEntity --
   `CreatedDate` DATETIME NULL,
@@ -5100,12 +5105,60 @@ CREATE TABLE `Company` (
 	FOREIGN KEY (AddressId) REFERENCES Address(Id),
     FOREIGN KEY (AddressSATId) REFERENCES AddressSAT(Id),
     FOREIGN KEY (RegimenFiscalId) REFERENCES RegimenFiscal(Id),
-    FOREIGN KEY (AccountBankId) REFERENCES AccountBank(Id)
+    FOREIGN KEY (RoleId) REFERENCES Role(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los datos fiscales de un cliente';
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Bank`;
+
+--
+-- Estructura de tabla `Bank`
+--
+
+CREATE TABLE `Bank` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` varchar(30) NOT NULL,
+  `Logo` longblob NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL
+  -- END: AuditableEntity --
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los bancos';
+
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `AccountBank`;
+
+--
+-- Estructura de tabla `AccountBank`
+--
+
+CREATE TABLE `AccountBank` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Account` varchar(30) NOT NULL,
+  `BankBranch` varchar(30) NULL,
+  `Key` int(11) NOT NULL,
+  `BankId` int(11) NOT NULL,
+  `CompanyId` int(11) NOT NULL,
+  
+  -- START: AuditableEntity --
+  `CreatedDate` DATETIME NULL,
+  `CreateBy` VARCHAR(6) NULL,
+  `ModifiedDate` DATETIME NULL,
+  `ModifiedBy` VARCHAR(6) NULL,
+  -- END: AuditableEntity --
+  
+    FOREIGN KEY (BankId) REFERENCES Bank(Id),
+    FOREIGN KEY (CompanyId) REFERENCES Company(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las cuentas bancarias de la compañia';
+
+-- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Shift`;
 
 --
 -- Estructura de tabla `Shift`
@@ -5126,6 +5179,8 @@ INSERT INTO Shift(Name, StartTime, EndTime) VALUES('ALL DAY', '07:00:00', '23:00
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Department`;
+
 --
 -- Estructura de tabla `Department`
 --
@@ -5141,10 +5196,13 @@ INSERT INTO Department (Name, GroupName) VALUES('Executive', 'Executive General 
 INSERT INTO Department (Name, GroupName) VALUES('Pharmacy Manager', 'Executive General and Administration');
 INSERT INTO Department (Name, GroupName) VALUES('Administration Management', 'Executive General and Administration');
 INSERT INTO Department (Name, GroupName) VALUES('Sales', 'Sales & Marketing');
+INSERT INTO Department (Name, GroupName) VALUES('Responsible Health', 'Health Services');
 
 UPDATE Department SET Name = UPPER(Name), GroupName = UPPER(GroupName) WHERE Id > 0;
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `JobTitle`;
 
 --
 -- Estructura de tabla `JobTitle`
@@ -5158,10 +5216,15 @@ CREATE TABLE `JobTitle` (
   FOREIGN KEY (DepartmentId) REFERENCES Department(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los usuarios (empleados) registrados';
 
-INSERT INTO JobTitle (Name) VALUES('VENDEDOR',4);
--- INSERT INTO JobTitle (Name) VALUES('DOCTOR',5);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('DUEÑO DE NEGOCIO',1);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('RESPONSABLE DE SUCURSAL',2);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('ADMINISTRADOR DE FINANZAS',3);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('VENDEDOR',4);
+INSERT INTO JobTitle (Name, DepartmentId) VALUES('DOCTOR',5);
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Employee`;
 
 --
 -- Estructura de tabla `Employee`
@@ -5177,7 +5240,7 @@ CREATE TABLE `Employee` (
   `FullName` varchar(50) NULL,
   `PhoneNumber` varchar(10) NULL,
   `CellphoneNumber` varchar(13) NULL,
-  `JobTitleId` INT NULL COMMENT 'Llave foranea de Puesto de Trabajo',
+  -- `JobTitleId` INT NULL COMMENT 'Llave foranea de Puesto de Trabajo',
   `BirthDate` VARCHAR(10) NULL,
   `MaritalStatusId` INT NULL COMMENT 'Llave foranea de Estado Civil',
   `GenderId` INT NULL COMMENT 'Llave foranea de Genero',
@@ -5187,7 +5250,7 @@ CREATE TABLE `Employee` (
   `NSS` varchar(16) NULL,
   `ProfilePhoto` longblob NULL,
   `FingerPrint` longblob NULL,
-  `ShiftId` INT NOT NULL COMMENT 'Llave foranea de Turno',
+  -- `ShiftId` INT NOT NULL COMMENT 'Llave foranea de Turno',
   `StartDate` DATE NOT NULL,
   `EndDate` DATE NULL,
   `IsActive` tinyint(1) NOT NULL,
@@ -5199,14 +5262,16 @@ CREATE TABLE `Employee` (
   `ModifiedBy` VARCHAR(6) NULL,
   -- END: AuditableEntity --
   
-  FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
+  -- FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
   FOREIGN KEY (AddressId) REFERENCES Address(Id),
   FOREIGN KEY (MaritalStatusId) REFERENCES MaritalStatus(Id),
-  FOREIGN KEY (ShiftId) REFERENCES Shift(Id),
+  -- FOREIGN KEY (ShiftId) REFERENCES Shift(Id),
   FOREIGN KEY (GenderId) REFERENCES Gender(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los usuarios (empleados) registrados';
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Site`;
 
 --
 -- Estructura de tabla `Site`
@@ -5241,45 +5306,32 @@ CREATE TABLE `Site`
 -- Estructura de tabla `EmployeeDepartmentHistory`
 --
 
--- CREATE TABLE `EmployeeDepartmentHistory`
--- (
--- 	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
---     `EmployeeId` INT NOT NULL,
---     `JobTitleId` INT NOT NULL,
---     `DepartmentId` INT NOT NULL,
---     `SiteId` INT NOT NULL,
---     `ShiftId` INT NOT NULL,
---     
--- 	-- START: AuditableEntity --
---     `CreatedDate` DATETIME NULL,
---     `CreateBy` VARCHAR(6) NULL,
---     `ModifiedDate` DATETIME NULL,
---     `ModifiedBy` VARCHAR(6) NULL,
---     -- END: AuditableEntity --
---     
---     FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
---     FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
---     FOREIGN KEY (DepartmentId) REFERENCES Department(Id),
---     FOREIGN KEY (SiteId) REFERENCES Site(Id),
---     FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
--- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el horario, departamento e informacion de donde ha estado un empleado';
+CREATE TABLE `EmployeeDepartmentHistory`
+(
+	`Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    `EmployeeId` INT NOT NULL,
+    `JobTitleId` INT NOT NULL,
+    `DepartmentId` INT NOT NULL,
+    `SiteId` INT NOT NULL,
+    `ShiftId` INT NOT NULL,
+    
+	-- START: AuditableEntity --
+    `CreatedDate` DATETIME NULL,
+    `CreateBy` VARCHAR(6) NULL,
+    `ModifiedDate` DATETIME NULL,
+    `ModifiedBy` VARCHAR(6) NULL,
+    -- END: AuditableEntity --
+    
+    FOREIGN KEY (EmployeeId) REFERENCES Employee(Id),
+    FOREIGN KEY (JobTitleId) REFERENCES JobTitle(Id),
+    FOREIGN KEY (DepartmentId) REFERENCES Department(Id),
+    FOREIGN KEY (SiteId) REFERENCES Site(Id),
+    FOREIGN KEY (ShiftId) REFERENCES Shift(Id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el horario, departamento e informacion de donde ha estado un empleado';
 
 -- --------------------------------------------------------
 
---
--- Estructura de tabla `Role`
---
-CREATE TABLE `Role` (
-  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `Name` VARCHAR(50) NOT NULL,
-  `Description` VARCHAR(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los roles de la aplicacion';
-
-INSERT INTO Role (Name, Description) VALUES('ADMINISTRADOR', 'God Mode allows us, among other things to control users, products, managae credentials, ...');
-INSERT INTO Role (Name, Description) VALUES('BASIC', 'The employee can make sales, consult reports, make cash cuts');
-INSERT INTO Role (Name, Description) VALUES('DOCTOR', 'The employee can access module Medical');
-
--- --------------------------------------------------------
+DROP TABLE IF EXISTS `User`;
 
 --
 -- Estructura de tabla `User`
@@ -5289,13 +5341,12 @@ CREATE TABLE `User` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `LoginID` VARCHAR(256) NOT NULL,
   `PasswordEncrypted` varchar(256) NOT NULL,
-  `MobilePIN` varchar(50) NOT NULL,
+  `MobilePIN` varchar(50) NULL,
   `EmailAddress` varchar(50) NOT NULL,
   `PasswordQuestion` varchar(100) NOT NULL,
   `PasswordAnswer` varchar(100) NOT NULL,
   `AccessFailed` INT NOT NULL,
   `IsWelcome` tinyint(1) NOT NULL,
-  `IsApproved` tinyint(1) NOT NULL,
   `IsActive` tinyint(1) NOT NULL,
   `IsEnabled` tinyint(1) NOT NULL,
   `EmployeeId` INT NOT NULL,
@@ -5314,55 +5365,118 @@ CREATE TABLE `User` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Module`;
+
+--
+-- Estructura de tabla `Module`
+--
+CREATE TABLE `Module` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+  `Name` VARCHAR(50) NOT NULL,
+  `Menu` VARCHAR(50) NOT NULL,
+  `Submenu` VARCHAR(50) NULL,
+  `ControlName` VARCHAR(50) NOT NULL,
+  `ControlImage` VARCHAR(50) NOT NULL,
+  `IsActive` TINYINT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los modulos que tendra el sistema';
+
+/* MENU: VENTAS*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Ventas', 'F1 Ventas', 'NULL', 'btnVentas', 'ventas.png', TRUE);
+/* MENU: VENTAS*/
+
+/* MENU: PRODUCTOS*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Productos', 'F2 Productos', 'NULL', 'btnProductos', 'productos.png', TRUE);
+/* MENU: PRODUCTOS*/
+
+/* MENU: INVENTARIO*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Inventario', 'F3 Inventario', 'NULL', 'btnInventario', 'inventario.png', TRUE);
+
+/* MENU: INVENTARIO*/
+
+/* MENU: OPERACIONES*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Operaciones', 'F4 Operaciones', 'NULL', 'btnOperaciones', 'procesos.png', TRUE);
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Compras', 'F4 Operaciones', 'Compras', 'btnCompras', 'sub_compras.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes', 'F4 Operaciones', 'Clientes', 'btnClientes', 'sub_client.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Proveedores', 'F4 Operaciones', 'Proveedores', 'btnProveedores', 'sub_proveedor.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Sal', 'F4 Operaciones', 'Traspasos Sal', 'btnTraspasosSal', 'sub_tras_sal.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Ent', 'F4 Operaciones', 'Traspasos Ent', 'btnTraspasosEnt', 'sub_tras_ent.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos', 'F4 Operaciones', 'Traspasos', 'btnTraspasos', 'sub_traspasos.png', TRUE);
+/* MENU: OPERACIONES*/
+
+/* MENU: CONFIGURACION*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Configuracion', 'F5 Configuracion', 'NULL', 'btnConfiguracion', 'configuracion.png', TRUE);
+
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Empresa', 'F5 Configuracion', 'Empresa', 'btnEmpresa', 'sub_empresa.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Roles', 'F5 Configuracion', 'Roles', 'btnRoles', 'sub_roles.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Usuarios', 'F5 Configuracion', 'Usuarios', 'btnUsuarios', 'sub_usuarios.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Empleados', 'F5 Configuracion', 'Empleados', 'btnEmpleados', 'sub_empleado.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Cajas', 'F5 Configuracion', 'Cajas', 'btnCajas', 'sub_cajas.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Servicios', 'F5 Configuracion', 'Servicios', 'btnServicios', 'sub_servicios.png', TRUE);
+/* MENU: CONFIGURACION*/
+
+/* MENU: CORTE*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Corte', 'F6 Corte', 'NULL', 'btnCorte', 'corte.png', TRUE);
+/* MENU: CORTE*/
+
+/* MENU: REPORTES*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Reportes', 'F7 Reportes', 'NULL', 'btnReportes', 'reportes.png', FALSE);
+
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Global', 'F7 Reportes', 'Global', 'btnGlobal', 'global.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Ventas', 'F7 Reportes', 'Ventas', 'btnVentas', 'ventas.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Utilidad', 'F7 Reportes', 'Utilidad', 'btnUtilidad', 'utilidad.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Compras', 'F7 Reportes', 'Compras', 'btnCompras', 'compras.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes (Catalogo)', 'F7 Reportes', 'Clientes (Catalogo)', 'btnClientesCatalogo', 'clie_cat.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Proveedores (Catalogo)', 'F7 Reportes', 'Proveedores (Catalogo)', 'btnProveedoresCatalogo', 'prov_cat.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Productos (Catalogo))', 'F7 Reportes', 'Productos (Catalogo)', 'btnProductosCatalogo', 'prod_cat.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Movimientos de Caja', 'F7 Reportes', 'Movimientos de Caja', 'btnMovimientosCaja', 'mov_caj.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes (Creditos)', 'F7 Reportes', 'Clientes (Credito)', 'btnClientesCreditos', 'clie_cred.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Proveedores (Creditos)', 'F7 Reportes', 'Proveedores (Credito)', 'btnProveedoresCreditos', 'prov_cred.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Cortes de Caja', 'F7 Reportes', 'Cortes de Caja', 'btnCortesCaja', 'cort_caja.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Farmacia (Sucursales)', 'F7 Reportes', 'Farmacia (Sucursales)', 'btnFarmacias', 'farm_suc.png');
+/* MENU: REPORTES*/
+
+/* MENU: ESTADISTICAS*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Estadisticas', 'F7 Estadisticas', 'NULL', 'btnEstadisticas', 'estadisticas.png', FALSE);
+
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Ventas', 'F7 Estadisticas', 'Ventas', 'btnVentas', 'ventas.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Compras', 'F7 Estadisticas', 'Compras', 'btnCompras', 'compras.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Utilidad', 'F7 Estadisticas', 'Utilidad', 'btnUtilidad', 'utilidad.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Productos', 'F7 Estadisticas', 'Productos', 'btnProductos', 'productos.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes', 'F7 Estadisticas', 'Clientes', 'btnClientes', 'clientes.png');
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Proveedores', 'F7 Estadisticas', 'Proveedores', 'btnProveedores', 'proveedores.png');
+/* MENU: ESTADISTICAS*/
+
+/* MENU: MEDICO*/
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Medico', 'F9 Medico', 'NULL', 'btnMedico', 'medico.png', FALSE);
+
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Inicio', 'F9 Medico', 'Inicio', 'btnInicio', 'inicio.png');	
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Calendario', 'F9 Medico', 'Calendario', 'btnCalendario', 'calendario.png');	
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Expedientes', 'F9 Medico', 'Expedientes', 'btnExpedientes', 'expedientes.png');	
+-- INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Recetas', 'F9 Medico', 'Recetas', 'btnRecetas', 'recetas.png');	
+/* MENU: MEDICO*/
+
+INSERT INTO Permission (RoleId, ModuleId) SELECT 1, Id FROM Module;
+
+-- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Permission`;
+
 --
 -- Estructura de tabla `Permission`
 --
 CREATE TABLE `Permission` (
   `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-  `Name` VARCHAR(50) NOT NULL,
-  `Menu` VARCHAR(50) NOT NULL,
-  `Submenu` VARCHAR(50) NULL,
-  `ControlName` VARCHAR(30) NOT NULL,
-  `SubControlName` VARCHAR(30) NULL,
-  `ControlImage` VARCHAR(100) NOT NULL,
-  `SubControlImage` VARCHAR(100) NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los permisos que tiene el usuario';
-
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Ventas', 'F1 Ventas', NULL, 'btnVentas', NULL, 'ventas.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Productos', 'F2 Productos', NULL, 'btnProductos', NULL, 'productos.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Inventario', 'F3 Inventario', NULL, 'btnInventario', NULL, 'inventario.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Operaciones', 'F4 Operaciones', NULL, 'btnOperaciones', NULL, 'procesos.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Configuracion', 'F5 Configuracion', NULL, 'btnConfiguracion', NULL, 'configuracion.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Corte', 'F6 Corte', NULL, 'btnCorte', NULL, 'corte.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Reportes', 'F7 Reportes', NULL, 'btnReportes', NULL, 'reportes.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Estadisticas', 'F7 Estadisticas', NULL, 'btnEstadisticas', NULL, 'estadisticas.png', NULL);
-INSERT INTO Permission (Name, Menu, Submenu, ControlName, SubControlName, ControlImage, SubControlImage) VALUES('Medico', 'F9 Medico', NULL, 'btnMedico', NULL, 'medico.png', NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla `RolePermission`
---
-CREATE TABLE `RolePermission` (
-  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `RoleId` INT NOT NULL,
-  `PermissionId` INT NOT NULL,
+  `ModuleId` INT NOT NULL,
   
   FOREIGN KEY (RoleId) REFERENCES Role(Id),
-  FOREIGN KEY (PermissionId) REFERENCES Permission(Id)
+  FOREIGN KEY (ModuleId) REFERENCES Module(Id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar la asignacion de permisos para el rol seleccionado';
 
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 1);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 2);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 3);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 4);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 5);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 6);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 7);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 8);
-INSERT INTO RolePermission (RoleId, PermissionId) VALUES(1, 9);
-
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `ProductCategory`;
 
 --
 -- Estructura de tabla `ProductCategory`
@@ -5378,6 +5492,8 @@ INSERT INTO ProductCategory (Name) VALUES('SERVICIOS');
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `ProductSubCategory`;
+
 --
 -- Estructura de tabla `ProductSubCategory`
 --
@@ -5392,6 +5508,8 @@ CREATE TABLE `ProductSubCategory` (
 INSERT INTO ProductSubCategory (ProductCategoryId, Name) VALUES(1, 'N/A');
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Supplier`;
 
 --
 -- Estructura de tabla `Supplier`
@@ -5427,6 +5545,8 @@ CREATE TABLE `Supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los proveedores';
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Product`;
 
 --
 -- Estructura de tabla `Product`
@@ -5469,6 +5589,8 @@ CREATE TABLE `Product` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `SupplierProduct`;
+
 --
 -- Estructura de tabla `SupplierProduct`
 --
@@ -5493,6 +5615,8 @@ CREATE TABLE `SupplierProduct` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `Image`;
+
 --
 -- Estructura de tabla `Image`
 --
@@ -5510,6 +5634,8 @@ CREATE TABLE `Image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar las imagenes';
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `ProductImage`;
 
 --
 -- Estructura de tabla `ProductImage`
@@ -5533,6 +5659,8 @@ CREATE TABLE `ProductImage` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `ProductInventory`;
+
 --
 -- Estructura de tabla `ProductInventory`
 --
@@ -5555,6 +5683,8 @@ CREATE TABLE `ProductInventory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el inventario de los productos';
 
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `ProductCostHistory`;
 
 --
 -- Estructura de tabla `ProductCostHistory`
@@ -5581,6 +5711,8 @@ CREATE TABLE `ProductCostHistory` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `ProductListPriceHistory`;
+
 --
 -- Estructura de tabla `ProductListPriceHistory`
 --
@@ -5605,6 +5737,8 @@ CREATE TABLE `ProductCostHistory` (
  ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar el historial de los precios de un producto en especifico';
  
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `Customer`;
 
 --
 -- Estructura de tabla `Customer`
@@ -5642,6 +5776,8 @@ CREATE TABLE `Customer` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `ControlEmployeeAsistance`;
+
 --
 -- Estructura de tabla `ControlEmployeeAsistance`
 --
@@ -5666,6 +5802,8 @@ CREATE TABLE `ControlEmployeeAsistance` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los proveedores';
  
 -- --------------------------------------------------------
+
+DROP TABLE IF EXISTS `AWBuildVersion`;
 
 --
 -- Estructura de tabla para la tabla `AWBuildVersion`

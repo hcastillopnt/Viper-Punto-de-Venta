@@ -15,10 +15,14 @@ namespace Viper.DesktopApp
 {
     public partial class frmMain : Form
     {
+        #region Variables and Objects of Class
         private Button objButton = null;
-        public string rol;
-        public string nomcomp;
-        public string puest;
+        string rol;
+        string nomcomp;
+        string puest;
+        #endregion
+
+        #region Constructor
         public frmMain(string rol, string fullname, string puesto)
         {
             //Inicializar variables del constructor
@@ -33,7 +37,7 @@ namespace Viper.DesktopApp
             timer.Start();
 
             //Cargar menu de opciones
-            CargarMenuVertical();
+            CargarMenuVertical(rol);
 
             //Colocar nombre del puesto
             lblPuesto.Text = puest.ToUpper();
@@ -42,50 +46,143 @@ namespace Viper.DesktopApp
             lblNombre.Text = nomcomp.ToUpper();
 
         }
+        #endregion
 
+        #region Events of the controls
         private void timer_Tick(object sender, EventArgs e)
         {
-            lblFechaActual.Text = DateTime.Now.ToLongTimeString();
+            lblReloj.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void frmMain_KeyDown(object sender, KeyEventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.F1:
-                    //AgregarFormularioEnPanel(new frmPointSale());
-                    break;
-
-                case Keys.F2:
-                    AgregarFormularioEnPanel(new frmAdminProducts());
-                    break;
-
-                case Keys.Escape:
-                    Application.Exit();
-                    break;
-            }
+            this.Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
+
+        private void picLogotipo_Click(object sender, EventArgs e)
+        {
+            AgregarFormularioEnPanel(new frmDashboard());
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            //Set default configuration to UI
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            //this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            //this.Icon = new Icon("Resources/application_icon.ico");
+
+            //Set Event to form
+            this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
+
+            AgregarFormularioEnPanel(new frmDashboard());
+        }
+
+        public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
+        {
+            args.Cancel = args.CloseReason == CloseReason.UserClosing;
+        }
+
+        //private void frmMain_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    switch (e.KeyCode)
+        //    {
+        //        case Keys.F1:
+        //            //AgregarFormularioEnPanel(new frmShoppingCart());
+        //            break;
+
+        //        case Keys.F2:
+        //            AgregarFormularioEnPanel(new frmAdminProducts());
+        //            break;
+
+        //        case Keys.F3:
+        //            AgregarFormularioEnPanel(new frmAddProductToInventory());
+        //            break;
+
+        //        case Keys.F4:
+        //            AgregarFormularioEnPanel(new frmPanelButtons());
+        //            break;
+
+        //        case Keys.F5:
+        //            AgregarFormularioEnPanel(new frmPanelButtons());
+        //            break;
+
+        //        case Keys.F6:
+        //            //AgregarFormularioEnPanel(new frmCutCash());
+        //            break;
+
+        //        case Keys.F7:
+        //            AgregarFormularioEnPanel(new frmPanelButtons());
+        //            break;
+
+        //        case Keys.F8:
+        //            AgregarFormularioEnPanel(new frmPanelButtons());
+        //            break;
+
+        //        case Keys.F9:
+        //            //AgregarFormularioEnPanel(new frmDoctor());
+        //            break;
+        //    }
+        //}
 
         public void Menu_Click(object sender, EventArgs e)
         {
             objButton = (Button)sender;
 
             string name = objButton.Name;
+            string text = objButton.Text;
 
             switch (name)
             {
-                //Ventas
                 case "btnVentas":
-                    //AgregarFormularioEnPanel(new frmPointSale());
+                    //AgregarFormularioEnPanel(new frmShoppingCart());
                     break;
 
-                //Productos
                 case "btnProductos":
                     AgregarFormularioEnPanel(new frmAdminProducts());
                     break;
+
+                case "btnInventario":
+                    AgregarFormularioEnPanel(new frmAddProductToInventory());
+                    break;
+
+                case "btnOperaciones":
+                    AgregarFormularioEnPanel(new frmPanelButtons(text, rol));
+                    break;
+
+                case "btnConfiguracion":
+                    AgregarFormularioEnPanel(new frmPanelButtons(text, rol));
+                    break;
+
+                case "btnCorte":
+                    //AgregarFormularioEnPanel(new frmCutCash());
+                    break;
+
+                case "btnReportes":
+                    AgregarFormularioEnPanel(new frmPanelButtons(text, rol));
+                    break;
+
+                case "btnEstadisticas":
+                    AgregarFormularioEnPanel(new frmPanelButtons(text, rol));
+                    break;
+
+                case "btnMedico":
+                    //AgregarFormularioEnPanel(new frmDoctor());
+                    break;
             }
         }
+        #endregion
 
+        #region Methods of the class
         private void AgregarFormularioEnPanel(object _frmHijo)
         {
             if (this.pnlContenedor.Controls.Count > 0)
@@ -99,30 +196,31 @@ namespace Viper.DesktopApp
             fh.Show();
         }
 
-        private void CargarMenuVertical()
+        private void CargarMenuVertical(string role)
         {
-            List<Permission> permissions = new List<Permission>();
-            DataTable dtPermissions = new DataTable();
-            Permission permission = null;
+            List<Module> modules = new List<Module>();
+            DataTable dtModules = new DataTable();
+            Module module = null;
 
-            dtPermissions = BusinessLogicLayer.MenuBLL.CargarMenuPorRol("ADMINISTRADOR");
+            dtModules = BusinessLogicLayer.MenuBLL.CargarMenuPorRol(role);
 
-            foreach (DataRow row in dtPermissions.Rows)
+            foreach (DataRow row in dtModules.Rows)
             {
-                permission = new Permission();
+                module = new Module();
 
-                permission.Name = row["Name"].ToString();
-                permission.Menu = row["Menu"].ToString();
-                permission.ControlName = row["ControlName"].ToString();
-                permission.ControlImage = row["ControlImage"].ToString();
+                module.Name = row["Name"].ToString();
+                module.Menu = row["Menu"].ToString();
+                module.ControlName = row["ControlName"].ToString();
+                module.ControlImage = row["ControlImage"].ToString();
+                module.IsActive = Convert.ToBoolean(row["IsActive"].ToString());
 
-                permissions.Add(permission);
+                modules.Add(module);
             }
 
-            int rows = dtPermissions.Rows.Count;
+            int rows = dtModules.Rows.Count;
             int i = 1;
 
-            foreach (var item in permissions)
+            foreach (var item in modules)
             {
                 Button btnOption = new Button();
                 Panel pnlOption = new Panel();
@@ -143,7 +241,7 @@ namespace Viper.DesktopApp
                 tlpOption.TabIndex = 0;
                 // 
                 // btnOption
-                // 
+                //
                 btnOption.BackColor = Color.FromArgb(26, 32, 40);
                 btnOption.Dock = DockStyle.Fill;
                 btnOption.FlatAppearance.BorderSize = 0;
@@ -160,6 +258,7 @@ namespace Viper.DesktopApp
                 btnOption.Text = item.Menu;
                 btnOption.UseVisualStyleBackColor = false;
                 btnOption.TextImageRelation = TextImageRelation.ImageBeforeText;
+                btnOption.Enabled = item.IsActive;
                 btnOption.Click += Menu_Click;
                 // 
                 // tlpOption
@@ -184,10 +283,6 @@ namespace Viper.DesktopApp
                 i++;
             }
         }
-
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        #endregion
     }
 }

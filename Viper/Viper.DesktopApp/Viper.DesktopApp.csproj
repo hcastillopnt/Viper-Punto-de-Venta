@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Viper.DesktopApp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>application_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -59,11 +77,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.WinControls, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.GridView, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.UI, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.ChartView, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmAddClient.cs">
@@ -108,6 +127,12 @@
     <Compile Include="frmCrudProvider.Designer.cs">
       <DependentUpon>frmCrudProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +144,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPanelButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPanelButtons.Designer.cs">
+      <DependentUpon>frmPanelButtons.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegimenFiscal.cs">
       <SubType>Form</SubType>
@@ -144,11 +175,14 @@
     <Compile Include="frmRegisterSite.Designer.cs">
       <DependentUpon>frmRegisterSite.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperGrid.cs" />
+    <Compile Include="InputBox.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilMessages.cs" />
     <EmbeddedResource Include="frmAddClient.resx">
       <DependentUpon>frmAddClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,11 +204,17 @@
     <EmbeddedResource Include="frmCrudProvider.resx">
       <DependentUpon>frmCrudProvider.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPanelButtons.resx">
+      <DependentUpon>frmPanelButtons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegimenFiscal.resx">
       <DependentUpon>frmRegimenFiscal.cs</DependentUpon>
@@ -235,31 +275,64 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\company_logo\farmanyl.jpg" />
+    <Content Include="application_icon.ico" />
     <Content Include="images\company_logo\OwalTek.jpg" />
+    <Content Include="images\icon\banco.png" />
     <Content Include="images\icon\basura.png" />
     <Content Include="images\icon\camara.png" />
     <Content Include="images\icon\cancelar.png" />
+    <Content Include="images\icon\dinero.png" />
     <Content Include="images\icon\cerrar_sesion.png" />
     <Content Include="images\icon\comprobado.png" />
     <Content Include="images\icon\configuracion.png" />
     <Content Include="images\icon\corte.png" />
+    <Content Include="images\icon\descargar.png" />
     <Content Include="images\icon\empleado.png" />
+    <Content Include="images\icon\error.png" />
     <Content Include="images\icon\estadisticas.png" />
     <Content Include="images\icon\examinar.png" />
     <Content Include="images\icon\guardar.png" />
     <Content Include="images\icon\hospital.png" />
     <Content Include="images\icon\huella_dactilar.png" />
+    <Content Include="images\icon\info.png" />
     <Content Include="images\icon\inventario.png" />
     <Content Include="images\icon\lupa.png" />
     <Content Include="images\icon\medico.png" />
     <Content Include="images\icon\nuevo.png" />
     <Content Include="images\icon\procesos.png" />
     <Content Include="images\icon\productos.png" />
+    <Content Include="images\icon\question.png" />
     <Content Include="images\icon\reportes.png" />
+    <Content Include="images\icon\sub_cajas.png" />
+    <Content Include="images\icon\sub_cliente.png" />
+    <Content Include="images\icon\sub_compras.png" />
+    <Content Include="images\icon\sub_empleado.png" />
+    <Content Include="images\icon\sub_empresa.png" />
+    <Content Include="images\icon\sub_proveedor.png" />
+    <Content Include="images\icon\sub_roles.png" />
+    <Content Include="images\icon\sub_servicios.png" />
+    <Content Include="images\icon\sub_traspasos.png" />
+    <Content Include="images\icon\sub_tras_ent.png" />
+    <Content Include="images\icon\sub_tras_sal.png" />
+    <Content Include="images\icon\sub_usuarios.png" />
     <Content Include="images\icon\tiempo.png" />
     <Content Include="images\icon\ventas.png" />
+    <Content Include="images\icon\warning.png" />
+    <Content Include="images\other\application_icon.ico" />
+    <Content Include="images\other\application_logo.png" />
     <Content Include="images\other\wallpaper_login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
