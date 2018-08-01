@@ -49,9 +49,10 @@
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.Location = new System.Drawing.Point(286, 402);
+            this.btnAceptar.Location = new System.Drawing.Point(329, 488);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(230, 48);
+            this.btnAceptar.Size = new System.Drawing.Size(307, 59);
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -61,9 +62,10 @@
             // 
             this.lblRegimenFiscal.BackColor = System.Drawing.SystemColors.Control;
             this.lblRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegimenFiscal.Location = new System.Drawing.Point(286, 53);
+            this.lblRegimenFiscal.Location = new System.Drawing.Point(339, 65);
+            this.lblRegimenFiscal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblRegimenFiscal.Name = "lblRegimenFiscal";
-            this.lblRegimenFiscal.Size = new System.Drawing.Size(260, 44);
+            this.lblRegimenFiscal.Size = new System.Drawing.Size(319, 54);
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal";
             // 
@@ -74,7 +76,8 @@
             this.dgvRegimenFiscal.EnableCustomFiltering = true;
             this.dgvRegimenFiscal.EnableHotTracking = false;
             this.dgvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dgvRegimenFiscal.Location = new System.Drawing.Point(12, 174);
+            this.dgvRegimenFiscal.Location = new System.Drawing.Point(16, 214);
+            this.dgvRegimenFiscal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             // 
             // 
             // 
@@ -99,16 +102,17 @@
             this.dgvRegimenFiscal.Name = "dgvRegimenFiscal";
             this.dgvRegimenFiscal.ShowGroupPanel = false;
             this.dgvRegimenFiscal.ShowGroupPanelScrollbars = false;
-            this.dgvRegimenFiscal.Size = new System.Drawing.Size(760, 216);
+            this.dgvRegimenFiscal.Size = new System.Drawing.Size(953, 266);
             this.dgvRegimenFiscal.TabIndex = 0;
             this.dgvRegimenFiscal.ThemeName = "VisualStudio2012Light";
             // 
             // picEmpresa
             // 
             this.picEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("picEmpresa.Image")));
-            this.picEmpresa.Location = new System.Drawing.Point(161, 22);
+            this.picEmpresa.Location = new System.Drawing.Point(158, 27);
+            this.picEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picEmpresa.Name = "picEmpresa";
-            this.picEmpresa.Size = new System.Drawing.Size(98, 75);
+            this.picEmpresa.Size = new System.Drawing.Size(131, 92);
             this.picEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picEmpresa.TabIndex = 7;
             this.picEmpresa.TabStop = false;
@@ -117,9 +121,10 @@
             // 
             this.lblRegimen.AutoSize = true;
             this.lblRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegimen.Location = new System.Drawing.Point(12, 136);
+            this.lblRegimen.Location = new System.Drawing.Point(16, 167);
+            this.lblRegimen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegimen.Name = "lblRegimen";
-            this.lblRegimen.Size = new System.Drawing.Size(146, 24);
+            this.lblRegimen.Size = new System.Drawing.Size(187, 29);
             this.lblRegimen.TabIndex = 8;
             this.lblRegimen.Text = "Regimen Fiscal:";
             // 
@@ -127,19 +132,20 @@
             // 
             this.txtRegimen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegimen.Location = new System.Drawing.Point(164, 136);
+            this.txtRegimen.Location = new System.Drawing.Point(219, 167);
+            this.txtRegimen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRegimen.Name = "txtRegimen";
             this.txtRegimen.NullText = "Escribe la actividad que deseas buscar";
-            this.txtRegimen.Size = new System.Drawing.Size(608, 27);
+            this.txtRegimen.Size = new System.Drawing.Size(750, 32);
             this.txtRegimen.TabIndex = 9;
             this.txtRegimen.ThemeName = "VisualStudio2012Light";
             // 
             // frmRegimenFiscal
             // 
             this.AcceptButton = this.btnAceptar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 462);
+            this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.txtRegimen);
             this.Controls.Add(this.lblRegimen);
             this.Controls.Add(this.picEmpresa);
@@ -148,12 +154,12 @@
             this.Controls.Add(this.dgvRegimenFiscal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRegimenFiscal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            //this.TopMost = true;
             this.Load += new System.EventHandler(this.frmRegimenFiscal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRegimenFiscal)).EndInit();
