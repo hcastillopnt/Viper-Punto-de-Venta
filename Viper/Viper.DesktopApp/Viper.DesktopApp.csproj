@@ -277,6 +277,7 @@
   <ItemGroup>
     <Content Include="application_icon.ico" />
     <Content Include="images\company_logo\OwalTek.jpg" />
+    <Content Include="images\company_logo\SUPER FARMACIA FARMANYL.jpg" />
     <Content Include="images\icon\banco.png" />
     <Content Include="images\icon\basura.png" />
     <Content Include="images\icon\camara.png" />
