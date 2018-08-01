@@ -5381,7 +5381,7 @@ CREATE TABLE `Module` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla para almacenar los modulos que tendra el sistema';
 
 /* MENU: VENTAS*/
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Ventas', 'F1 Ventas', 'NULL', 'btnVentas', 'ventas.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Ventas', 'F1 Ventas', 'NULL', 'btnVentas', 'ventas.png', FALSE);
 /* MENU: VENTAS*/
 
 /* MENU: PRODUCTOS*/
@@ -5416,7 +5416,7 @@ INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VA
 /* MENU: CONFIGURACION*/
 
 /* MENU: CORTE*/
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Corte', 'F6 Corte', 'NULL', 'btnCorte', 'corte.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Corte', 'F6 Corte', 'NULL', 'btnCorte', 'corte.png', FALSE);
 /* MENU: CORTE*/
 
 /* MENU: REPORTES*/
