@@ -24,6 +24,12 @@ namespace Viper.DesktopApp
             //Value of menu parameter
             this.menuSeleccionado = menu;
 
+            //Upload submenu items
+            uploadSubmenuItemsToPanel();
+        }
+
+        private void uploadSubmenuItemsToPanel()
+        {
             List<Module> modules = new List<Module>();
             DataTable dtModules = new DataTable();
             Module module = null;
@@ -60,7 +66,7 @@ namespace Viper.DesktopApp
                     // 
                     btnOption.Dock = DockStyle.Fill;
                     btnOption.Image = Image.FromFile(folderPath + item.ControlImage);
-                    btnOption.ImageAlign = ContentAlignment.TopCenter;
+                    //btnOption.ImageAlign = ContentAlignment.TopCenter;
                     btnOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
                     btnOption.Name = item.ControlName;
                     btnOption.TabIndex = i;
