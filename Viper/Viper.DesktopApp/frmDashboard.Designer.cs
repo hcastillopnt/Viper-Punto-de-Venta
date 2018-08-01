@@ -83,6 +83,7 @@
             this.Text = "frmDashboard";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cvTotalVentasMes)).EndInit();
             this.ResumeLayout(false);

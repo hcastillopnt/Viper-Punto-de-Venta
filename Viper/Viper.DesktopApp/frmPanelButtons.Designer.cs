@@ -123,6 +123,7 @@
             this.Text = "frmMenuConfiguration";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPanelButtons_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpCenter.ResumeLayout(false);
             this.tlpCenter.PerformLayout();

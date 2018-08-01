@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -103,6 +104,21 @@ namespace Viper.DesktopApp
 
         private void frmRegisterSite_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AcceptButton = btnFinalizar;
+            this.CancelButton = btnCancelar;
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            this.Icon= new Icon("Resources/application_icon.ico");
+
             Empresa.Text = nom;
             
             //poner el indice cero por defecto en los combobox

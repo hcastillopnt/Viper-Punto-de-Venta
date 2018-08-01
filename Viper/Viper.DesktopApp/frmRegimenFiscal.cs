@@ -34,6 +34,20 @@ namespace Viper.DesktopApp
 
         private void frmRegimenFiscal_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AcceptButton = btnAceptar;
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.TopMost = true;
+            this.Size = new Size(800, 600);
+            this.WindowState = FormWindowState.Maximized;
+            this.Icon = new Icon("Resources/application_icon.ico");
+
             btnAceptar.Click += btnAceptar_Click;
             txtRegimen.TextChanged += txtRegimen_TextChanged;
             dgvRegimenFiscal.CellClick += dgvRegimenFiscal_CellClick;
@@ -75,7 +89,7 @@ namespace Viper.DesktopApp
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, "No se ha seleccionado un regimen fiscal, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(new Form { TopMost = true }, "No se ha seleccionado un regimen fiscal, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 this.ActiveControl = txtRegimen;
                 this.txtRegimen.Focus();

@@ -56,6 +56,19 @@ namespace Viper.DesktopApp
 
         private void frmAdminProducts_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            this.Icon = new Icon("Resources/application_icon.ico");
+
             this.btnAgregar.KeyPress += Button_Click;
             this.btnEditar.KeyPress += Button_Click;
             this.btnRecargar.KeyPress += Button_Click;
@@ -63,7 +76,6 @@ namespace Viper.DesktopApp
             this.btnBuscar.KeyPress += Button_Click;
             gvProducts.DataSource = null;
             gvProducts.DataSource= BusinessLogicLayer.AccesoBDBLL.getProducts();
-
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();

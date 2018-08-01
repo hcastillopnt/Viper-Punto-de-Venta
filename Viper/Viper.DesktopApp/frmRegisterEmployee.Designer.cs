@@ -314,7 +314,6 @@
             this.pvMenuOpciones.Size = new System.Drawing.Size(779, 495);
             this.pvMenuOpciones.TabIndex = 0;
             this.pvMenuOpciones.TabStop = false;
-            this.pvMenuOpciones.Text = "radPageView1";
             this.pvMenuOpciones.ThemeName = "VisualStudio2012Light";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pvMenuOpciones.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             // 
@@ -492,7 +491,6 @@
             this.tlp13.SetRowSpan(this.lstTelefonos, 3);
             this.lstTelefonos.Size = new System.Drawing.Size(222, 71);
             this.lstTelefonos.TabIndex = 0;
-            this.lstTelefonos.Text = "radListView1";
             this.lstTelefonos.ThemeName = "VisualStudio2012Light";
             this.lstTelefonos.ViewType = Telerik.WinControls.UI.ListViewType.DetailsView;
             // 
@@ -789,7 +787,7 @@
             this.cboLocalidad.Location = new System.Drawing.Point(102, 3);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.NullText = "--SELECCIONE--";
-            this.cboLocalidad.Size = new System.Drawing.Size(266, 28);
+            this.cboLocalidad.Size = new System.Drawing.Size(266, 37);
             this.cboLocalidad.TabIndex = 9;
             this.cboLocalidad.ThemeName = "VisualStudio2012Light";
             this.cboLocalidad.Leave += new System.EventHandler(this.cboLocalidad_Leave);
@@ -1695,7 +1693,7 @@
             this.MinimizeBox = false;
             this.Name = "frmRegisterEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmRegisterEmployee_Load);
             this.tlpPrincipal.ResumeLayout(false);

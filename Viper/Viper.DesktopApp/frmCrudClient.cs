@@ -58,6 +58,19 @@ namespace Viper.DesktopApp
         }
         private void frmCrudClient_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            this.Icon = new Icon("Resources/application_icon.ico");
+
             this.btnAgregar.Click += Button_Click;
             this.btnBuscar.Click += Button_Click;
             this.btnEditar.Click += Button_Click;
@@ -65,7 +78,6 @@ namespace Viper.DesktopApp
             this.btnRecargar.Click += Button_Click;
             dgvCrudClient.DataSource = null;
             dgvCrudClient.DataSource = BusinessLogicLayer.AccesoBDBLL.getCustomers();
-
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();

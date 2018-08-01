@@ -823,7 +823,7 @@
             this.MinimizeBox = false;
             this.Name = "frmRegisterSite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmRegisterSite_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelIzquierdo)).EndInit();

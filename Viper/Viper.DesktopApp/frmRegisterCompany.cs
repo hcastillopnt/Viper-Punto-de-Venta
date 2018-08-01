@@ -73,6 +73,20 @@ namespace Viper.DesktopApp
 
         private void frmRegisterCompany_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AcceptButton = btnAceptar;
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            this.Icon = new Icon("Resources/application_icon.ico");
+
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
@@ -436,7 +450,7 @@ namespace Viper.DesktopApp
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, "El sistema no puede importar la informacion, favor de completar los campos anteriores", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(new Form { TopMost = true }, "El sistema no puede importar la informacion, favor de completar los campos anteriores", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -519,13 +533,13 @@ namespace Viper.DesktopApp
             {
                 savePicture();
 
-                MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 setToDefaultFields();
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -623,7 +637,7 @@ namespace Viper.DesktopApp
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, "El logotipo no se ha podido almacenar correctamente", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(new Form { TopMost = true }, "El logotipo no se ha podido almacenar correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

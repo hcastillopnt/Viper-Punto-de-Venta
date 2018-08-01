@@ -42,7 +42,7 @@ namespace Viper.DesktopApp
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show(new Form { TopMost = true }, "Existen campos vacios, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(new Form { TopMost = true }, "Existen campos vacios, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -75,7 +75,7 @@ namespace Viper.DesktopApp
 
                                 //Save the DialogResult as res
                                 DialogResult res = InputBox.ShowDialog("Favor de actualizar la contraseña para mayor seguridad, introduzca la nueva contraseña:",
-                                "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.",   //Text message (mandatory), Title (optional)
+                                "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions",   //Text message (mandatory), Title (optional)
                                     InputBox.Icon.Information, //Set icon type (default info)
                                     InputBox.Buttons.OkCancel, //Set buttons (default ok)
                                     InputBox.Type.TextBox //Set type (default nothing)
@@ -101,12 +101,12 @@ namespace Viper.DesktopApp
 
                                     if (string.IsNullOrEmpty(msgError))
                                     {
-                                        MessageBox.Show(new Form { TopMost = true }, "Contraseña actualizada correctamente", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show(new Form { TopMost = true }, "Contraseña actualizada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         bandera = true;
                                     }
                                     else
                                     {
-                                        MessageBox.Show(new Form { TopMost = true }, msgError, "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        MessageBox.Show(new Form { TopMost = true }, msgError, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     }
                                 }
                             } while (!bandera);
@@ -132,12 +132,12 @@ namespace Viper.DesktopApp
                     }
                     else
                     {
-                        MessageBox.Show(new Form { TopMost = true }, "Usuario bloqueado, favor de reportarse con el administrador", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(new Form { TopMost = true }, "Usuario bloqueado, favor de reportarse con el administrador", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(new Form { TopMost = true }, "Usuario y/o contraseña no validos, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(new Form { TopMost = true }, "Usuario y/o contraseña no validos, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -149,6 +149,21 @@ namespace Viper.DesktopApp
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AcceptButton = btnIngresar;
+            this.CancelButton = btnSalir;
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
+            this.Icon = new Icon("Resources/application_icon.ico");
+
             //Establecer el foco en el primer campo
             this.ActiveControl = Nombre_de_Usuario;
             this.Nombre_de_Usuario.Focus();

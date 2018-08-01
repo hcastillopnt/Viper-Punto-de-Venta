@@ -268,7 +268,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAdminProducts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A. de C.V.";
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmAdminProducts_Load);
             this.tlpPrincipal.ResumeLayout(false);

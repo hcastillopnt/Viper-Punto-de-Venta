@@ -149,19 +149,21 @@
             this.tlpPrincipal.Controls.Add(this.tplCentro, 1, 0);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 1;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1130, 695);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1695, 1069);
             this.tlpPrincipal.TabIndex = 1;
             // 
             // panelDerecho
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDerecho.Location = new System.Drawing.Point(963, 3);
+            this.panelDerecho.Location = new System.Drawing.Point(1444, 5);
+            this.panelDerecho.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(164, 689);
+            this.panelDerecho.Size = new System.Drawing.Size(247, 1059);
             this.panelDerecho.TabIndex = 0;
             this.panelDerecho.TabStop = false;
             // 
@@ -169,9 +171,10 @@
             // 
             this.panelIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelIzq.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelIzq.Location = new System.Drawing.Point(3, 3);
+            this.panelIzq.Location = new System.Drawing.Point(4, 5);
+            this.panelIzq.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelIzq.Name = "panelIzq";
-            this.panelIzq.Size = new System.Drawing.Size(163, 689);
+            this.panelIzq.Size = new System.Drawing.Size(246, 1059);
             this.panelIzq.TabIndex = 0;
             this.panelIzq.TabStop = false;
             // 
@@ -181,11 +184,12 @@
             this.tplCentro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tplCentro.Controls.Add(this.rpvInventario, 0, 0);
             this.tplCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tplCentro.Location = new System.Drawing.Point(172, 3);
+            this.tplCentro.Location = new System.Drawing.Point(258, 5);
+            this.tplCentro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tplCentro.Name = "tplCentro";
             this.tplCentro.RowCount = 1;
             this.tplCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tplCentro.Size = new System.Drawing.Size(785, 689);
+            this.tplCentro.Size = new System.Drawing.Size(1178, 1059);
             this.tplCentro.TabIndex = 1;
             // 
             // rpvInventario
@@ -195,10 +199,11 @@
             this.rpvInventario.DefaultPage = this.rpvAgregarProducto;
             this.rpvInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpvInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rpvInventario.Location = new System.Drawing.Point(3, 3);
+            this.rpvInventario.Location = new System.Drawing.Point(4, 5);
+            this.rpvInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rpvInventario.Name = "rpvInventario";
             this.rpvInventario.SelectedPage = this.rpvAgregarProducto;
-            this.rpvInventario.Size = new System.Drawing.Size(779, 683);
+            this.rpvInventario.Size = new System.Drawing.Size(1170, 1049);
             this.rpvInventario.TabIndex = 1;
             this.rpvInventario.TabStop = false;
             this.rpvInventario.ThemeName = "VisualStudio2012Light";
@@ -209,8 +214,9 @@
             this.rpvAgregarProducto.Controls.Add(this.tpl17);
             this.rpvAgregarProducto.ItemSize = new System.Drawing.SizeF(234F, 28F);
             this.rpvAgregarProducto.Location = new System.Drawing.Point(5, 34);
+            this.rpvAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rpvAgregarProducto.Name = "rpvAgregarProducto";
-            this.rpvAgregarProducto.Size = new System.Drawing.Size(769, 644);
+            this.rpvAgregarProducto.Size = new System.Drawing.Size(1160, 1010);
             this.rpvAgregarProducto.Text = "Agregar producto al inventario";
             // 
             // tpl17
@@ -222,12 +228,13 @@
             this.tpl17.Controls.Add(this.tlp2, 0, 0);
             this.tpl17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl17.Location = new System.Drawing.Point(0, 0);
+            this.tpl17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpl17.Name = "tpl17";
             this.tpl17.RowCount = 3;
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.64286F));
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.35714F));
-            this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 566F));
-            this.tpl17.Size = new System.Drawing.Size(769, 644);
+            this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 871F));
+            this.tpl17.Size = new System.Drawing.Size(1160, 1010);
             this.tpl17.TabIndex = 5;
             // 
             // tlp3
@@ -235,15 +242,16 @@
             this.tlp3.BackColor = System.Drawing.Color.SlateGray;
             this.tlp3.ColumnCount = 3;
             this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
-            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311F));
+            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 274F));
+            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 466F));
             this.tlp3.Controls.Add(this.lblAgregarInventario, 1, 0);
             this.tlp3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp3.Location = new System.Drawing.Point(3, 37);
+            this.tlp3.Location = new System.Drawing.Point(4, 67);
+            this.tlp3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp3.Name = "tlp3";
             this.tlp3.RowCount = 1;
             this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp3.Size = new System.Drawing.Size(763, 37);
+            this.tlp3.Size = new System.Drawing.Size(1152, 66);
             this.tlp3.TabIndex = 0;
             // 
             // lblAgregarInventario
@@ -251,9 +259,10 @@
             this.lblAgregarInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAgregarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarInventario.ForeColor = System.Drawing.Color.White;
-            this.lblAgregarInventario.Location = new System.Drawing.Point(272, 3);
+            this.lblAgregarInventario.Location = new System.Drawing.Point(416, 5);
+            this.lblAgregarInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblAgregarInventario.Name = "lblAgregarInventario";
-            this.lblAgregarInventario.Size = new System.Drawing.Size(177, 31);
+            this.lblAgregarInventario.Size = new System.Drawing.Size(176, 26);
             this.lblAgregarInventario.TabIndex = 0;
             this.lblAgregarInventario.Text = "Agregar Inventario";
             // 
@@ -264,9 +273,11 @@
             this.gpoAgregarProducto.Controls.Add(this.tlp6);
             this.gpoAgregarProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoAgregarProducto.HeaderText = "";
-            this.gpoAgregarProducto.Location = new System.Drawing.Point(3, 80);
+            this.gpoAgregarProducto.Location = new System.Drawing.Point(4, 143);
+            this.gpoAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpoAgregarProducto.Name = "gpoAgregarProducto";
-            this.gpoAgregarProducto.Size = new System.Drawing.Size(763, 561);
+            this.gpoAgregarProducto.Padding = new System.Windows.Forms.Padding(3, 28, 3, 3);
+            this.gpoAgregarProducto.Size = new System.Drawing.Size(1152, 862);
             this.gpoAgregarProducto.TabIndex = 2;
             this.gpoAgregarProducto.TabStop = false;
             // 
@@ -277,14 +288,15 @@
             this.tlp9.Controls.Add(this.gpoDescripcion, 0, 0);
             this.tlp9.Controls.Add(this.tlp10, 0, 2);
             this.tlp9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp9.Location = new System.Drawing.Point(2, 174);
+            this.tlp9.Location = new System.Drawing.Point(3, 268);
+            this.tlp9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp9.Name = "tlp9";
             this.tlp9.RowCount = 3;
             this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.72414F));
-            this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176F));
-            this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp9.Size = new System.Drawing.Size(759, 385);
+            this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 271F));
+            this.tlp9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tlp9.Size = new System.Drawing.Size(1146, 591);
             this.tlp9.TabIndex = 3;
             // 
             // gpoDescripcion
@@ -294,9 +306,11 @@
             this.gpoDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoDescripcion.HeaderText = "Descripción del producto";
-            this.gpoDescripcion.Location = new System.Drawing.Point(3, 3);
+            this.gpoDescripcion.Location = new System.Drawing.Point(4, 5);
+            this.gpoDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpoDescripcion.Name = "gpoDescripcion";
-            this.gpoDescripcion.Size = new System.Drawing.Size(753, 159);
+            this.gpoDescripcion.Padding = new System.Windows.Forms.Padding(3, 28, 3, 3);
+            this.gpoDescripcion.Size = new System.Drawing.Size(1138, 242);
             this.gpoDescripcion.TabIndex = 0;
             this.gpoDescripcion.TabStop = false;
             this.gpoDescripcion.Text = "Descripción del producto";
@@ -307,12 +321,13 @@
             this.Descripcion_A.AutoSize = false;
             this.Descripcion_A.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Descripcion_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion_A.Location = new System.Drawing.Point(2, 18);
+            this.Descripcion_A.Location = new System.Drawing.Point(3, 28);
+            this.Descripcion_A.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Descripcion_A.Multiline = true;
             this.Descripcion_A.Name = "Descripcion_A";
             this.Descripcion_A.NullText = "DESCRIPCION DEL PRODUCTO";
             this.Descripcion_A.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Descripcion_A.Size = new System.Drawing.Size(749, 139);
+            this.Descripcion_A.Size = new System.Drawing.Size(1132, 211);
             this.Descripcion_A.TabIndex = 1;
             this.Descripcion_A.ThemeName = "VisualStudio2012Light";
             // 
@@ -323,21 +338,23 @@
             this.tlp10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.69587F));
             this.tlp10.Controls.Add(this.btnAgregarAlInventario, 1, 0);
             this.tlp10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp10.Location = new System.Drawing.Point(3, 212);
+            this.tlp10.Location = new System.Drawing.Point(4, 325);
+            this.tlp10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp10.Name = "tlp10";
             this.tlp10.RowCount = 2;
             this.tlp10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 109F));
-            this.tlp10.Size = new System.Drawing.Size(753, 170);
+            this.tlp10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+            this.tlp10.Size = new System.Drawing.Size(1138, 261);
             this.tlp10.TabIndex = 4;
             // 
             // btnAgregarAlInventario
             // 
             this.btnAgregarAlInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAgregarAlInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarAlInventario.Location = new System.Drawing.Point(329, 3);
+            this.btnAgregarAlInventario.Location = new System.Drawing.Point(496, 5);
+            this.btnAgregarAlInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarAlInventario.Name = "btnAgregarAlInventario";
-            this.btnAgregarAlInventario.Size = new System.Drawing.Size(421, 55);
+            this.btnAgregarAlInventario.Size = new System.Drawing.Size(638, 83);
             this.btnAgregarAlInventario.TabIndex = 1;
             this.btnAgregarAlInventario.Text = "Agregar al inventario";
             this.btnAgregarAlInventario.ThemeName = "VisualStudio2012Light";
@@ -348,11 +365,12 @@
             this.tlp6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp6.Controls.Add(this.gpoAddProduct, 0, 0);
             this.tlp6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp6.Location = new System.Drawing.Point(2, 18);
+            this.tlp6.Location = new System.Drawing.Point(3, 28);
+            this.tlp6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp6.Name = "tlp6";
             this.tlp6.RowCount = 1;
             this.tlp6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp6.Size = new System.Drawing.Size(759, 156);
+            this.tlp6.Size = new System.Drawing.Size(1146, 240);
             this.tlp6.TabIndex = 0;
             // 
             // gpoAddProduct
@@ -361,9 +379,11 @@
             this.gpoAddProduct.Controls.Add(this.tpl13);
             this.gpoAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoAddProduct.HeaderText = "";
-            this.gpoAddProduct.Location = new System.Drawing.Point(3, 3);
+            this.gpoAddProduct.Location = new System.Drawing.Point(4, 5);
+            this.gpoAddProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpoAddProduct.Name = "gpoAddProduct";
-            this.gpoAddProduct.Size = new System.Drawing.Size(753, 150);
+            this.gpoAddProduct.Padding = new System.Windows.Forms.Padding(3, 28, 3, 3);
+            this.gpoAddProduct.Size = new System.Drawing.Size(1138, 230);
             this.gpoAddProduct.TabIndex = 1;
             this.gpoAddProduct.TabStop = false;
             // 
@@ -374,12 +394,13 @@
             this.tpl13.Controls.Add(this.tlp8, 0, 1);
             this.tpl13.Controls.Add(this.tlp7, 0, 0);
             this.tpl13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tpl13.Location = new System.Drawing.Point(2, 18);
+            this.tpl13.Location = new System.Drawing.Point(3, 28);
+            this.tpl13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpl13.Name = "tpl13";
             this.tpl13.RowCount = 2;
             this.tpl13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tpl13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tpl13.Size = new System.Drawing.Size(749, 130);
+            this.tpl13.Size = new System.Drawing.Size(1132, 199);
             this.tpl13.TabIndex = 2;
             // 
             // tlp8
@@ -387,25 +408,27 @@
             this.tlp8.ColumnCount = 3;
             this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.36871F));
             this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.63129F));
-            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 388F));
+            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 585F));
             this.tlp8.Controls.Add(this.lblCantidad, 0, 0);
             this.tlp8.Controls.Add(this.Cantidad, 1, 0);
             this.tlp8.Controls.Add(this.lblCantidadActual, 0, 1);
             this.tlp8.Controls.Add(this.Cantidad_ActuaL_A, 1, 1);
             this.tlp8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp8.Location = new System.Drawing.Point(3, 42);
+            this.tlp8.Location = new System.Drawing.Point(4, 64);
+            this.tlp8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp8.Name = "tlp8";
             this.tlp8.RowCount = 2;
             this.tlp8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.68493F));
             this.tlp8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.31507F));
-            this.tlp8.Size = new System.Drawing.Size(743, 85);
+            this.tlp8.Size = new System.Drawing.Size(1124, 130);
             this.tlp8.TabIndex = 3;
             // 
             // lblCantidad
             // 
             this.lblCantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(3, 3);
+            this.lblCantidad.Location = new System.Drawing.Point(4, 5);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(78, 22);
             this.lblCantidad.TabIndex = 12;
@@ -416,16 +439,18 @@
             // 
             this.Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad.Location = new System.Drawing.Point(167, 3);
+            this.Cantidad.Location = new System.Drawing.Point(253, 5);
+            this.Cantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Size = new System.Drawing.Size(184, 29);
+            this.Cantidad.Size = new System.Drawing.Size(281, 40);
             this.Cantidad.TabIndex = 1;
             // 
             // lblCantidadActual
             // 
             this.lblCantidadActual.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCantidadActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadActual.Location = new System.Drawing.Point(3, 46);
+            this.lblCantidadActual.Location = new System.Drawing.Point(4, 70);
+            this.lblCantidadActual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCantidadActual.Name = "lblCantidadActual";
             this.lblCantidadActual.Size = new System.Drawing.Size(129, 22);
             this.lblCantidadActual.TabIndex = 8;
@@ -436,10 +461,11 @@
             // 
             this.Cantidad_ActuaL_A.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad_ActuaL_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(167, 46);
+            this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(253, 70);
+            this.Cantidad_ActuaL_A.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Cantidad_ActuaL_A.Name = "Cantidad_ActuaL_A";
             this.Cantidad_ActuaL_A.NullText = "CANTIDAD ACTUAL";
-            this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(184, 24);
+            this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(281, 24);
             this.Cantidad_ActuaL_A.TabIndex = 2;
             this.Cantidad_ActuaL_A.ThemeName = "VisualStudio2012Light";
             // 
@@ -448,25 +474,27 @@
             this.tlp7.ColumnCount = 3;
             this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.22535F));
             this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.77465F));
-            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
             this.tlp7.Controls.Add(this.Codigo_de_barras_A, 1, 0);
             this.tlp7.Controls.Add(this.lblCodigoDelProducto, 0, 0);
             this.tlp7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp7.Location = new System.Drawing.Point(3, 3);
+            this.tlp7.Location = new System.Drawing.Point(4, 5);
+            this.tlp7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp7.Name = "tlp7";
             this.tlp7.RowCount = 1;
             this.tlp7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
-            this.tlp7.Size = new System.Drawing.Size(743, 33);
+            this.tlp7.Size = new System.Drawing.Size(1124, 49);
             this.tlp7.TabIndex = 1;
             // 
             // Codigo_de_barras_A
             // 
             this.Codigo_de_barras_A.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_de_barras_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_de_barras_A.Location = new System.Drawing.Point(168, 3);
+            this.Codigo_de_barras_A.Location = new System.Drawing.Point(253, 5);
+            this.Codigo_de_barras_A.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Codigo_de_barras_A.Name = "Codigo_de_barras_A";
             this.Codigo_de_barras_A.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_A.Size = new System.Drawing.Size(393, 24);
+            this.Codigo_de_barras_A.Size = new System.Drawing.Size(597, 24);
             this.Codigo_de_barras_A.TabIndex = 1;
             this.Codigo_de_barras_A.ThemeName = "VisualStudio2012Light";
             // 
@@ -474,9 +502,10 @@
             // 
             this.lblCodigoDelProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCodigoDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoDelProducto.Location = new System.Drawing.Point(3, 3);
+            this.lblCodigoDelProducto.Location = new System.Drawing.Point(4, 5);
+            this.lblCodigoDelProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCodigoDelProducto.Name = "lblCodigoDelProducto";
-            this.lblCodigoDelProducto.Size = new System.Drawing.Size(159, 27);
+            this.lblCodigoDelProducto.Size = new System.Drawing.Size(162, 22);
             this.lblCodigoDelProducto.TabIndex = 2;
             this.lblCodigoDelProducto.Text = "Código del Producto:";
             this.lblCodigoDelProducto.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -485,24 +514,26 @@
             // 
             this.tlp2.ColumnCount = 3;
             this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.14504F));
-            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
-            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 312F));
+            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 468F));
             this.tlp2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp2.Location = new System.Drawing.Point(3, 3);
+            this.tlp2.Location = new System.Drawing.Point(4, 5);
+            this.tlp2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp2.Name = "tlp2";
             this.tlp2.RowCount = 1;
             this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tlp2.Size = new System.Drawing.Size(763, 28);
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tlp2.Size = new System.Drawing.Size(1152, 52);
             this.tlp2.TabIndex = 0;
             // 
             // rpvRemplazarProducto
             // 
             this.rpvRemplazarProducto.Controls.Add(this.tpl20);
             this.rpvRemplazarProducto.ItemSize = new System.Drawing.SizeF(278F, 28F);
-            this.rpvRemplazarProducto.Location = new System.Drawing.Point(5, 34);
+            this.rpvRemplazarProducto.Location = new System.Drawing.Point(10, 55);
+            this.rpvRemplazarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rpvRemplazarProducto.Name = "rpvRemplazarProducto";
-            this.rpvRemplazarProducto.Size = new System.Drawing.Size(769, 644);
+            this.rpvRemplazarProducto.Size = new System.Drawing.Size(1148, 985);
             this.rpvRemplazarProducto.Text = "Remplazar producto en el inventario";
             // 
             // tpl20
@@ -514,13 +545,14 @@
             this.tpl20.Controls.Add(this.tlp11, 0, 0);
             this.tpl20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl20.Location = new System.Drawing.Point(0, 0);
+            this.tpl20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpl20.Name = "tpl20";
             this.tpl20.RowCount = 3;
             this.tpl20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
             this.tpl20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
-            this.tpl20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 568F));
-            this.tpl20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpl20.Size = new System.Drawing.Size(769, 644);
+            this.tpl20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 874F));
+            this.tpl20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tpl20.Size = new System.Drawing.Size(1148, 985);
             this.tpl20.TabIndex = 7;
             // 
             // tlp12
@@ -528,15 +560,16 @@
             this.tlp12.BackColor = System.Drawing.Color.SlateGray;
             this.tlp12.ColumnCount = 3;
             this.tlp12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
-            this.tlp12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 333F));
+            this.tlp12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
+            this.tlp12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.tlp12.Controls.Add(this.lblAjustarInventario, 1, 0);
             this.tlp12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp12.Location = new System.Drawing.Point(3, 34);
+            this.tlp12.Location = new System.Drawing.Point(4, 51);
+            this.tlp12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp12.Name = "tlp12";
             this.tlp12.RowCount = 1;
             this.tlp12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp12.Size = new System.Drawing.Size(763, 38);
+            this.tlp12.Size = new System.Drawing.Size(1140, 54);
             this.tlp12.TabIndex = 0;
             // 
             // lblAjustarInventario
@@ -544,9 +577,10 @@
             this.lblAjustarInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAjustarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAjustarInventario.ForeColor = System.Drawing.Color.White;
-            this.lblAjustarInventario.Location = new System.Drawing.Point(259, 3);
+            this.lblAjustarInventario.Location = new System.Drawing.Point(383, 5);
+            this.lblAjustarInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblAjustarInventario.Name = "lblAjustarInventario";
-            this.lblAjustarInventario.Size = new System.Drawing.Size(168, 32);
+            this.lblAjustarInventario.Size = new System.Drawing.Size(253, 44);
             this.lblAjustarInventario.TabIndex = 1;
             this.lblAjustarInventario.Text = "Ajustar Inventario";
             // 
@@ -557,9 +591,11 @@
             this.gpo2.Controls.Add(this.tlp15);
             this.gpo2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpo2.HeaderText = "";
-            this.gpo2.Location = new System.Drawing.Point(3, 78);
+            this.gpo2.Location = new System.Drawing.Point(4, 115);
+            this.gpo2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpo2.Name = "gpo2";
-            this.gpo2.Size = new System.Drawing.Size(763, 563);
+            this.gpo2.Padding = new System.Windows.Forms.Padding(3, 28, 3, 3);
+            this.gpo2.Size = new System.Drawing.Size(1140, 865);
             this.gpo2.TabIndex = 10;
             // 
             // tpl14
@@ -569,13 +605,14 @@
             this.tpl14.Controls.Add(this.tpl21, 0, 2);
             this.tpl14.Controls.Add(this.gpoDescripcion2, 0, 0);
             this.tpl14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tpl14.Location = new System.Drawing.Point(2, 209);
+            this.tpl14.Location = new System.Drawing.Point(3, 322);
+            this.tpl14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpl14.Name = "tpl14";
             this.tpl14.RowCount = 3;
             this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.90698F));
-            this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tpl14.Size = new System.Drawing.Size(759, 352);
+            this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tpl14.Size = new System.Drawing.Size(1134, 540);
             this.tpl14.TabIndex = 3;
             // 
             // tpl21
@@ -585,21 +622,23 @@
             this.tpl21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.61845F));
             this.tpl21.Controls.Add(this.btnRemplazarInventario, 1, 0);
             this.tpl21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tpl21.Location = new System.Drawing.Point(3, 186);
+            this.tpl21.Location = new System.Drawing.Point(4, 285);
+            this.tpl21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpl21.Name = "tpl21";
             this.tpl21.RowCount = 2;
             this.tpl21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tpl21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tpl21.Size = new System.Drawing.Size(753, 163);
+            this.tpl21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tpl21.Size = new System.Drawing.Size(1126, 250);
             this.tpl21.TabIndex = 4;
             // 
             // btnRemplazarInventario
             // 
             this.btnRemplazarInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRemplazarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemplazarInventario.Location = new System.Drawing.Point(359, 3);
+            this.btnRemplazarInventario.Location = new System.Drawing.Point(537, 5);
+            this.btnRemplazarInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRemplazarInventario.Name = "btnRemplazarInventario";
-            this.btnRemplazarInventario.Size = new System.Drawing.Size(391, 45);
+            this.btnRemplazarInventario.Size = new System.Drawing.Size(585, 68);
             this.btnRemplazarInventario.TabIndex = 1;
             this.btnRemplazarInventario.Text = "Remplazar inventario";
             this.btnRemplazarInventario.ThemeName = "VisualStudio2012Light";
@@ -611,9 +650,11 @@
             this.gpoDescripcion2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoDescripcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoDescripcion2.HeaderText = "Descripción del producto";
-            this.gpoDescripcion2.Location = new System.Drawing.Point(3, 3);
+            this.gpoDescripcion2.Location = new System.Drawing.Point(4, 5);
+            this.gpoDescripcion2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpoDescripcion2.Name = "gpoDescripcion2";
-            this.gpoDescripcion2.Size = new System.Drawing.Size(753, 116);
+            this.gpoDescripcion2.Padding = new System.Windows.Forms.Padding(3, 28, 3, 3);
+            this.gpoDescripcion2.Size = new System.Drawing.Size(1126, 176);
             this.gpoDescripcion2.TabIndex = 0;
             this.gpoDescripcion2.TabStop = false;
             this.gpoDescripcion2.Text = "Descripción del producto";
@@ -624,12 +665,13 @@
             this.Descripcion_Remplazar.AutoSize = false;
             this.Descripcion_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Descripcion_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion_Remplazar.Location = new System.Drawing.Point(2, 18);
+            this.Descripcion_Remplazar.Location = new System.Drawing.Point(3, 28);
+            this.Descripcion_Remplazar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Descripcion_Remplazar.Multiline = true;
             this.Descripcion_Remplazar.Name = "Descripcion_Remplazar";
             this.Descripcion_Remplazar.NullText = "DESCRIPCION DEL PRODUCTO";
             this.Descripcion_Remplazar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Descripcion_Remplazar.Size = new System.Drawing.Size(749, 96);
+            this.Descripcion_Remplazar.Size = new System.Drawing.Size(1120, 145);
             this.Descripcion_Remplazar.TabIndex = 1;
             this.Descripcion_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -639,11 +681,12 @@
             this.tlp15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp15.Controls.Add(this.gpoAjustarInventario, 0, 0);
             this.tlp15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp15.Location = new System.Drawing.Point(2, 18);
+            this.tlp15.Location = new System.Drawing.Point(3, 28);
+            this.tlp15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp15.Name = "tlp15";
             this.tlp15.RowCount = 1;
             this.tlp15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp15.Size = new System.Drawing.Size(759, 191);
+            this.tlp15.Size = new System.Drawing.Size(1134, 294);
             this.tlp15.TabIndex = 0;
             // 
             // gpoAjustarInventario
@@ -652,9 +695,11 @@
             this.gpoAjustarInventario.Controls.Add(this.tpl15);
             this.gpoAjustarInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoAjustarInventario.HeaderText = "";
-            this.gpoAjustarInventario.Location = new System.Drawing.Point(3, 3);
+            this.gpoAjustarInventario.Location = new System.Drawing.Point(4, 5);
+            this.gpoAjustarInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpoAjustarInventario.Name = "gpoAjustarInventario";
-            this.gpoAjustarInventario.Size = new System.Drawing.Size(753, 185);
+            this.gpoAjustarInventario.Padding = new System.Windows.Forms.Padding(3, 28, 3, 3);
+            this.gpoAjustarInventario.Size = new System.Drawing.Size(1126, 284);
             this.gpoAjustarInventario.TabIndex = 0;
             this.gpoAjustarInventario.TabStop = false;
             // 
@@ -665,12 +710,13 @@
             this.tpl15.Controls.Add(this.tlp16, 0, 0);
             this.tpl15.Controls.Add(this.tlp17, 0, 1);
             this.tpl15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tpl15.Location = new System.Drawing.Point(2, 18);
+            this.tpl15.Location = new System.Drawing.Point(3, 28);
+            this.tpl15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpl15.Name = "tpl15";
             this.tpl15.RowCount = 2;
             this.tpl15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.09091F));
             this.tpl15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.90909F));
-            this.tpl15.Size = new System.Drawing.Size(749, 165);
+            this.tpl15.Size = new System.Drawing.Size(1120, 253);
             this.tpl15.TabIndex = 2;
             // 
             // tlp16
@@ -678,25 +724,27 @@
             this.tlp16.ColumnCount = 3;
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.16901F));
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.83099F));
-            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
             this.tlp16.Controls.Add(this.lblCodigoDelProducto2, 0, 1);
             this.tlp16.Controls.Add(this.Codigo_de_barras_Remplazar, 1, 1);
             this.tlp16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp16.Location = new System.Drawing.Point(3, 3);
+            this.tlp16.Location = new System.Drawing.Point(4, 5);
+            this.tlp16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp16.Name = "tlp16";
             this.tlp16.RowCount = 2;
             this.tlp16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.9589F));
             this.tlp16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.0411F));
-            this.tlp16.Size = new System.Drawing.Size(743, 42);
+            this.tlp16.Size = new System.Drawing.Size(1112, 63);
             this.tlp16.TabIndex = 1;
             // 
             // lblCodigoDelProducto2
             // 
             this.lblCodigoDelProducto2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCodigoDelProducto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoDelProducto2.Location = new System.Drawing.Point(3, 7);
+            this.lblCodigoDelProducto2.Location = new System.Drawing.Point(4, 11);
+            this.lblCodigoDelProducto2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCodigoDelProducto2.Name = "lblCodigoDelProducto2";
-            this.lblCodigoDelProducto2.Size = new System.Drawing.Size(153, 32);
+            this.lblCodigoDelProducto2.Size = new System.Drawing.Size(229, 47);
             this.lblCodigoDelProducto2.TabIndex = 3;
             this.lblCodigoDelProducto2.Text = "Código del Producto:";
             this.lblCodigoDelProducto2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -705,10 +753,11 @@
             // 
             this.Codigo_de_barras_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_de_barras_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_de_barras_Remplazar.Location = new System.Drawing.Point(162, 7);
+            this.Codigo_de_barras_Remplazar.Location = new System.Drawing.Point(241, 11);
+            this.Codigo_de_barras_Remplazar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Codigo_de_barras_Remplazar.Name = "Codigo_de_barras_Remplazar";
             this.Codigo_de_barras_Remplazar.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_Remplazar.Size = new System.Drawing.Size(399, 32);
+            this.Codigo_de_barras_Remplazar.Size = new System.Drawing.Size(597, 47);
             this.Codigo_de_barras_Remplazar.TabIndex = 1;
             this.Codigo_de_barras_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -717,7 +766,7 @@
             this.tlp17.ColumnCount = 3;
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.66667F));
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.33333F));
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 371F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 559F));
             this.tlp17.Controls.Add(this.Diferencia, 1, 2);
             this.tlp17.Controls.Add(this.lblCantidadActual2, 0, 0);
             this.tlp17.Controls.Add(this.lblDiferencia, 0, 2);
@@ -725,23 +774,25 @@
             this.tlp17.Controls.Add(this.lblNuevaCantidad, 0, 1);
             this.tlp17.Controls.Add(this.Cantidad_Actual_Remplazar, 1, 0);
             this.tlp17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp17.Location = new System.Drawing.Point(3, 51);
+            this.tlp17.Location = new System.Drawing.Point(4, 78);
+            this.tlp17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp17.Name = "tlp17";
             this.tlp17.RowCount = 3;
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.57143F));
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.42857F));
-            this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tlp17.Size = new System.Drawing.Size(743, 111);
+            this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlp17.Size = new System.Drawing.Size(1112, 170);
             this.tlp17.TabIndex = 3;
             // 
             // Diferencia
             // 
             this.Diferencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Diferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Diferencia.Location = new System.Drawing.Point(161, 79);
+            this.Diferencia.Location = new System.Drawing.Point(239, 122);
+            this.Diferencia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Diferencia.Name = "Diferencia";
             this.Diferencia.NullText = "DIFERENCIA";
-            this.Diferencia.Size = new System.Drawing.Size(207, 29);
+            this.Diferencia.Size = new System.Drawing.Size(309, 43);
             this.Diferencia.TabIndex = 3;
             this.Diferencia.ThemeName = "VisualStudio2012Light";
             // 
@@ -749,9 +800,10 @@
             // 
             this.lblCantidadActual2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCantidadActual2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadActual2.Location = new System.Drawing.Point(3, 3);
+            this.lblCantidadActual2.Location = new System.Drawing.Point(4, 5);
+            this.lblCantidadActual2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblCantidadActual2.Name = "lblCantidadActual2";
-            this.lblCantidadActual2.Size = new System.Drawing.Size(152, 31);
+            this.lblCantidadActual2.Size = new System.Drawing.Size(227, 47);
             this.lblCantidadActual2.TabIndex = 9;
             this.lblCantidadActual2.Text = "Cantidad Actual:";
             this.lblCantidadActual2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -760,9 +812,10 @@
             // 
             this.lblDiferencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiferencia.Location = new System.Drawing.Point(3, 79);
+            this.lblDiferencia.Location = new System.Drawing.Point(4, 122);
+            this.lblDiferencia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblDiferencia.Name = "lblDiferencia";
-            this.lblDiferencia.Size = new System.Drawing.Size(152, 29);
+            this.lblDiferencia.Size = new System.Drawing.Size(227, 43);
             this.lblDiferencia.TabIndex = 14;
             this.lblDiferencia.Text = "Diferencia:";
             this.lblDiferencia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -771,18 +824,20 @@
             // 
             this.Nueva_Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nueva_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nueva_Cantidad.Location = new System.Drawing.Point(161, 40);
+            this.Nueva_Cantidad.Location = new System.Drawing.Point(239, 62);
+            this.Nueva_Cantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Nueva_Cantidad.Name = "Nueva_Cantidad";
-            this.Nueva_Cantidad.Size = new System.Drawing.Size(207, 29);
+            this.Nueva_Cantidad.Size = new System.Drawing.Size(309, 40);
             this.Nueva_Cantidad.TabIndex = 2;
             // 
             // lblNuevaCantidad
             // 
             this.lblNuevaCantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNuevaCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNuevaCantidad.Location = new System.Drawing.Point(3, 40);
+            this.lblNuevaCantidad.Location = new System.Drawing.Point(4, 62);
+            this.lblNuevaCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblNuevaCantidad.Name = "lblNuevaCantidad";
-            this.lblNuevaCantidad.Size = new System.Drawing.Size(152, 33);
+            this.lblNuevaCantidad.Size = new System.Drawing.Size(227, 50);
             this.lblNuevaCantidad.TabIndex = 13;
             this.lblNuevaCantidad.Text = "Nueva Cantidad:";
             this.lblNuevaCantidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -791,10 +846,11 @@
             // 
             this.Cantidad_Actual_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad_Actual_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(161, 3);
+            this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(239, 5);
+            this.Cantidad_Actual_Remplazar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Cantidad_Actual_Remplazar.Name = "Cantidad_Actual_Remplazar";
             this.Cantidad_Actual_Remplazar.NullText = "CANTIDAD ACTUAL";
-            this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(207, 31);
+            this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(309, 47);
             this.Cantidad_Actual_Remplazar.TabIndex = 1;
             this.Cantidad_Actual_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -802,24 +858,26 @@
             // 
             this.tlp11.ColumnCount = 3;
             this.tlp11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.14504F));
-            this.tlp11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
-            this.tlp11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 334F));
+            this.tlp11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tlp11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 501F));
             this.tlp11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp11.Location = new System.Drawing.Point(3, 3);
+            this.tlp11.Location = new System.Drawing.Point(4, 5);
+            this.tlp11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlp11.Name = "tlp11";
             this.tlp11.RowCount = 1;
             this.tlp11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tlp11.Size = new System.Drawing.Size(763, 25);
+            this.tlp11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tlp11.Size = new System.Drawing.Size(1140, 36);
             this.tlp11.TabIndex = 0;
             // 
             // frmAddProductToInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 695);
+            this.ClientSize = new System.Drawing.Size(1695, 1069);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAddProductToInventory";
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A de C.V.";
             this.Load += new System.EventHandler(this.frmAddProductToInventory_Load);
