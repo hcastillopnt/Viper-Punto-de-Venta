@@ -32,7 +32,7 @@ namespace Viper.DesktopApp
             switch(objButton.Name)
             {
                 case "btnAgregar":
-                    frmAddProduct form = new frmAddProduct();
+                    frmRegisterProduct form = new frmRegisterProduct();
                     form.ShowDialog();
                     form.TopMost = true;
                     break;

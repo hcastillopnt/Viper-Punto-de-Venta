@@ -11,14 +11,14 @@ using Telerik.WinControls.UI;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmCrudProvider : Form
+    public partial class frmAdminSuppliers : Form
     {
         #region Variables and Objects of Class
         RadButton objButton = null;
         #endregion
 
         #region Constructor
-        public frmCrudProvider()
+        public frmAdminSuppliers()
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace Viper.DesktopApp
 
                     break;
                 case "btnAgregar":
-                    frmAddProvider add = new frmAddProvider();
+                    frmRegisterSupplier add = new frmRegisterSupplier();
                     add.ShowDialog();
                     add.TopMost = true;
                     break;

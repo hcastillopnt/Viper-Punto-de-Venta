@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmAddProduct
+    partial class frmRegisterProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProduct));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterProduct));
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelDer = new Telerik.WinControls.UI.RadPanel();
             this.pvAddProduct = new Telerik.WinControls.UI.RadPageView();

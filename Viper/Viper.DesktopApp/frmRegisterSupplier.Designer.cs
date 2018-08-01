@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmAddProvider
+    partial class frmRegisterSupplier
     {
         /// <summary>
         /// Required designer variable.

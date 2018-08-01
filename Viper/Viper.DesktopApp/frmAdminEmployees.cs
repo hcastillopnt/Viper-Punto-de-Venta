@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmRegisterEmployee : Form
+    public partial class frmAdminEmployees : Form
     {
-        public frmRegisterEmployee()
+        public frmAdminEmployees()
         {
             InitializeComponent();
         }

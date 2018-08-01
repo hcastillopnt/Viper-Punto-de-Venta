@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmAddClient
+    partial class frmRegisterCustomer
     {
         /// <summary>
         /// Required designer variable.

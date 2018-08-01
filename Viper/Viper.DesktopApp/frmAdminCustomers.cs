@@ -11,14 +11,14 @@ using Telerik.WinControls.UI;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmCrudClient : Form
+    public partial class frmAdminCustomers : Form
     {
         #region Variables and Objects of Class
         RadButton objButton = null;
         #endregion
 
         #region Constructor
-        public frmCrudClient()
+        public frmAdminCustomers()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace Viper.DesktopApp
                     dgvCrudClient.DataSource = BusinessLogicLayer.AccesoBDBLL.getCustomer(Clave_cliente.Text);
                     break;
                 case "btnAgregar":
-                    frmAddClient ad = new frmAddClient();
+                    frmRegisterCustomer ad = new frmRegisterCustomer();
                     ad.ShowDialog();
                     ad.TopMost = true;
                     break;

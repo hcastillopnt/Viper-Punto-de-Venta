@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmRegisterEmployee
+    partial class frmAdminEmployees
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterEmployee));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminEmployees));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelDer = new Telerik.WinControls.UI.RadPanel();

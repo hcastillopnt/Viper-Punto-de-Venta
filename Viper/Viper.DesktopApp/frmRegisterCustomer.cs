@@ -11,7 +11,7 @@ using Telerik.WinControls.UI;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmAddClient : Form
+    public partial class frmRegisterCustomer : Form
     {
         #region Variables and Objects of the class
         RadButton objButton = null;
@@ -20,7 +20,7 @@ namespace Viper.DesktopApp
         #endregion
 
         #region Constructor
-        public frmAddClient()
+        public frmRegisterCustomer()
         {
             InitializeComponent();
         }

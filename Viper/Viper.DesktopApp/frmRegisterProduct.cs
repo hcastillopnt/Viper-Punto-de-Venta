@@ -12,7 +12,7 @@ using Viper.BusinessEntities;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmAddProduct : Form
+    public partial class frmRegisterProduct : Form
     {
         #region Variables and objects of class
         RadButton objButton = null;
@@ -21,7 +21,7 @@ namespace Viper.DesktopApp
         #endregion
 
         #region Constructor
-        public frmAddProduct()
+        public frmRegisterProduct()
         {
             InitializeComponent();
         }

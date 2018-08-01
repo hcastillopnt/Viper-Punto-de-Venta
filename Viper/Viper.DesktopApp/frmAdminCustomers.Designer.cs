@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmCrudProvider
+    partial class frmAdminCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tplCentro = new System.Windows.Forms.TableLayoutPanel();
             this.tpl2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Clave_Proveedor = new Telerik.WinControls.UI.RadTextBox();
+            this.Clave_cliente = new Telerik.WinControls.UI.RadTextBox();
             this.btnBuscar = new Telerik.WinControls.UI.RadButton();
             this.tpl1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEliminar = new Telerik.WinControls.UI.RadButton();
@@ -40,13 +40,13 @@
             this.btnRecargar = new Telerik.WinControls.UI.RadButton();
             this.btnEditar = new Telerik.WinControls.UI.RadButton();
             this.tpl3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvCrudProvider = new Telerik.WinControls.UI.RadGridView();
+            this.dgvCrudClient = new Telerik.WinControls.UI.RadGridView();
             this.panelIzq = new Telerik.WinControls.UI.RadPanel();
             this.panelDer = new Telerik.WinControls.UI.RadPanel();
             this.tlpPrincipal.SuspendLayout();
             this.tplCentro.SuspendLayout();
             this.tpl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Clave_Proveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Clave_cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.tpl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
@@ -54,8 +54,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.tpl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudProvider.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudClient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudClient.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             this.tlpPrincipal.RowCount = 1;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPrincipal.Size = new System.Drawing.Size(1130, 695);
-            this.tlpPrincipal.TabIndex = 1;
+            this.tlpPrincipal.TabIndex = 0;
             // 
             // tplCentro
             // 
@@ -102,7 +102,7 @@
             this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.76543F));
             this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tpl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
-            this.tpl2.Controls.Add(this.Clave_Proveedor, 1, 0);
+            this.tpl2.Controls.Add(this.Clave_cliente, 1, 0);
             this.tpl2.Controls.Add(this.btnBuscar, 2, 0);
             this.tpl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl2.Location = new System.Drawing.Point(3, 69);
@@ -112,15 +112,15 @@
             this.tpl2.Size = new System.Drawing.Size(779, 50);
             this.tpl2.TabIndex = 1;
             // 
-            // Clave_Proveedor
+            // Clave_cliente
             // 
-            this.Clave_Proveedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Clave_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clave_Proveedor.Location = new System.Drawing.Point(34, 20);
-            this.Clave_Proveedor.Name = "Clave_Proveedor";
-            this.Clave_Proveedor.NullText = "CLAVE DEL PROVEEDOR";
-            this.Clave_Proveedor.Size = new System.Drawing.Size(244, 27);
-            this.Clave_Proveedor.TabIndex = 1;
+            this.Clave_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Clave_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clave_cliente.Location = new System.Drawing.Point(34, 20);
+            this.Clave_cliente.Name = "Clave_cliente";
+            this.Clave_cliente.NullText = "CLAVE DEL CLIENTE";
+            this.Clave_cliente.Size = new System.Drawing.Size(244, 27);
+            this.Clave_cliente.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -203,7 +203,7 @@
             this.tpl3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8547009F));
             this.tpl3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 99.1453F));
             this.tpl3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tpl3.Controls.Add(this.dgvCrudProvider, 1, 1);
+            this.tpl3.Controls.Add(this.dgvCrudClient, 1, 1);
             this.tpl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl3.Location = new System.Drawing.Point(3, 125);
             this.tpl3.Name = "tpl3";
@@ -214,22 +214,19 @@
             this.tpl3.Size = new System.Drawing.Size(779, 561);
             this.tpl3.TabIndex = 0;
             // 
-            // dgvCrudProvider
+            // dgvCrudClient
             // 
-            this.dgvCrudProvider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCrudProvider.Location = new System.Drawing.Point(9, 40);
+            this.dgvCrudClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCrudClient.Location = new System.Drawing.Point(9, 40);
             // 
             // 
             // 
-            this.dgvCrudProvider.MasterTemplate.AllowAddNewRow = false;
-            this.dgvCrudProvider.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dgvCrudProvider.MasterTemplate.ViewDefinition = tableViewDefinition4;
-            this.dgvCrudProvider.Name = "dgvCrudProvider";
-            this.dgvCrudProvider.ReadOnly = true;
-            this.dgvCrudProvider.Size = new System.Drawing.Size(753, 387);
-            this.dgvCrudProvider.TabIndex = 0;
-            this.dgvCrudProvider.TabStop = false;
-            this.dgvCrudProvider.Text = "radGridView1";
+            this.dgvCrudClient.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.dgvCrudClient.Name = "dgvCrudClient";
+            this.dgvCrudClient.Size = new System.Drawing.Size(753, 387);
+            this.dgvCrudClient.TabIndex = 0;
+            this.dgvCrudClient.TabStop = false;
+            this.dgvCrudClient.Text = "radGridView1";
             // 
             // panelIzq
             // 
@@ -251,22 +248,22 @@
             this.panelDer.TabIndex = 0;
             this.panelDer.TabStop = false;
             // 
-            // frmCrudProvider
+            // frmCrudClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 695);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
-            this.Name = "frmCrudProvider";
+            this.Name = "frmCrudClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-Owaltek S.A de C.V.";
-            this.Load += new System.EventHandler(this.frmCrudProvider_Load);
+            this.Load += new System.EventHandler(this.frmCrudClient_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tplCentro.ResumeLayout(false);
             this.tpl2.ResumeLayout(false);
             this.tpl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Clave_Proveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Clave_cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.tpl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
@@ -274,8 +271,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.tpl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudProvider.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudClient.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCrudClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
             this.ResumeLayout(false);
@@ -287,7 +284,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel tplCentro;
         private System.Windows.Forms.TableLayoutPanel tpl2;
-        private Telerik.WinControls.UI.RadTextBox Clave_Proveedor;
+        private Telerik.WinControls.UI.RadTextBox Clave_cliente;
         private Telerik.WinControls.UI.RadButton btnBuscar;
         private System.Windows.Forms.TableLayoutPanel tpl1;
         private Telerik.WinControls.UI.RadButton btnEliminar;
@@ -295,7 +292,7 @@
         private Telerik.WinControls.UI.RadButton btnRecargar;
         private Telerik.WinControls.UI.RadButton btnEditar;
         private System.Windows.Forms.TableLayoutPanel tpl3;
-        private Telerik.WinControls.UI.RadGridView dgvCrudProvider;
+        private Telerik.WinControls.UI.RadGridView dgvCrudClient;
         private Telerik.WinControls.UI.RadPanel panelIzq;
         private Telerik.WinControls.UI.RadPanel panelDer;
     }
