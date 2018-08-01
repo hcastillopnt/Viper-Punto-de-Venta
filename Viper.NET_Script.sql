@@ -5458,6 +5458,20 @@ INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VA
 
 INSERT INTO Permission (RoleId, ModuleId) SELECT 1, Id FROM Module;
 
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_compras.png' WHERE (`Id` = '5');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_cliente.png' WHERE (`Id` = '6');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_proveedor.png' WHERE (`Id` = '7');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_tras_sal.png' WHERE (`Id` = '8');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_tras_ent.png' WHERE (`Id` = '9');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_traspasos.png' WHERE (`Id` = '10');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_cajas.png' WHERE (`Id` = '16');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_empleado.png' WHERE (`Id` = '15');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_servicios.png' WHERE (`Id` = '17');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_roles.png' WHERE (`Id` = '13');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_usuarios.png' WHERE (`Id` = '14');
+UPDATE `viper_developments`.`module` SET `ControlImage` = 'sub_empresa.png' WHERE (`Id` = '12');
+
+
 -- --------------------------------------------------------
 
 DROP TABLE IF EXISTS `Permission`;
