@@ -128,6 +128,10 @@ namespace Viper.DataAccessLayer
 
                     dbCtxTran.Rollback();
                 }
+                finally
+                {
+                    Console.WriteLine("Ocurrio un error inesperado");
+                }
             }
 
             return message;
@@ -208,6 +212,10 @@ namespace Viper.DataAccessLayer
                     message = exception.Message;
 
                     dbCtxTran.Rollback();
+                }
+                finally
+                {
+                    Console.WriteLine("Ocurrio un error inesperado");
                 }
             }
 

@@ -485,8 +485,8 @@ namespace Viper.DesktopApp
             this.Entidad_Federativa.SelectedIndex = 0;
             this.Municipio.SelectedIndex = 0;
             this.eMail.Text = String.Empty;
-            this.Telefono.Text = String.Empty;
-            this.Celular.Text = String.Empty;
+            this.Telefono.Text = "(__)___-_____";
+            this.Celular.Text = "(___)___-___-____";
             this.Nombre_Fiscal.Text = String.Empty;
             this.RFC.Text = String.Empty;
             this.CURP.Text = String.Empty;
@@ -590,15 +590,15 @@ namespace Viper.DesktopApp
             company.CompanyName = Nombre_Empresa.Text.Trim().ToUpper();
             company.CompanyKey = BusinessLogicLayer.CompanyBLL.obtainCompanyKeyGeneratedAutomatic();
 
-            if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()))
-                company.PhoneNumber = Telefono.Text.Trim();
-            else
+            if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
                 company.PhoneNumber = null;
-
-            if (string.IsNullOrEmpty(Celular.Text.Trim().ToString()))
-                company.CellphoneNumber = Celular.Text.Trim();
             else
+                company.PhoneNumber = Telefono.Text.Trim();
+
+            if (string.IsNullOrEmpty(Celular.Text.Trim().ToString()) || Celular.Text.Contains("(___)___-___-____"))
                 company.CellphoneNumber = null;
+            else
+                company.CellphoneNumber = Celular.Text.Trim();
 
             company.EmailAddress = eMail.Text.Trim();
             company.FiscalName = Nombre_Fiscal.Text.Trim().ToUpper();
@@ -606,9 +606,11 @@ namespace Viper.DesktopApp
             company.CURP = CURP.Text.Trim().ToUpper();
             company.LoginID = company.RFC;
             company.PasswordEncrypted = "admin";
-            if(!string.IsNullOrEmpty(Regimen_Fiscal.Text.Trim().ToString()))
+
+            if (!string.IsNullOrEmpty(Regimen_Fiscal.Text.Trim().ToString()))
                 company.RegimenFiscalId = BusinessLogicLayer.CompanyBLL.getRegimenIdByName(Regimen_Fiscal.Text.Trim().ToString());
-            company.Logo = ImageToByte(picLogotipo.Image);
+
+            //company.Logo = ImageToByte(picLogotipo.Image);
             company.CreatedDate = f;
             company.CreateBy = "HECP";
             company.ModifiedDate = f;

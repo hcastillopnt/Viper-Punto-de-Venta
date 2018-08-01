@@ -212,6 +212,7 @@ namespace Viper.DesktopApp
                 module.Menu = row["Menu"].ToString();
                 module.ControlName = row["ControlName"].ToString();
                 module.ControlImage = row["ControlImage"].ToString();
+                module.IsActive = Convert.ToBoolean(row["IsActive"].ToString());
 
                 modules.Add(module);
             }
