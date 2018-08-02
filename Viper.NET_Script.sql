@@ -5397,7 +5397,7 @@ INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VA
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Operaciones', 'F4 Operaciones', 'NULL', 'btnOperaciones', 'procesos.png', TRUE);
 
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Compras', 'F4 Operaciones', 'Compras', 'btnCompras', 'sub_compras.png', FALSE);
-INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes', 'F4 Operaciones', 'Clientes', 'btnClientes', 'sub_client.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Clientes', 'F4 Operaciones', 'Clientes', 'btnClientes', 'sub_cliente.png', TRUE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Proveedores', 'F4 Operaciones', 'Proveedores', 'btnProveedores', 'sub_proveedor.png', TRUE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Sal', 'F4 Operaciones', 'Traspasos Sal', 'btnTraspasosSal', 'sub_tras_sal.png', FALSE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Traspasos Ent', 'F4 Operaciones', 'Traspasos Ent', 'btnTraspasosEnt', 'sub_tras_ent.png', FALSE);
