@@ -84,6 +84,32 @@ namespace Viper.DesktopApp
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
+            if(rol == "ADMINISTRADOR")
+            {
+                //Obtenemos el nombre de la compañia
+                string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+
+                //Si el usuario logueado es un administrador, mostramos todas las sucursales
+                cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.getSitesByCompany(companyName);
+                cboSucursales.ValueMember = "Id";
+                cboSucursales.DisplayMember = "Site";
+            }
+            else
+            {
+                //Obtenemos el nombre de la sucursal
+                string siteName = frmLogin.dt.Rows[0].Field<String>("Subsidiary");
+
+                //Si el usuario logueado es un empleado, mostramos la sucursal en la que se encuentra registrado
+                cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.findSiteBySiteName(siteName);
+                cboSucursales.ValueMember = "Id";
+                cboSucursales.DisplayMember = "Site";
+
+                cboSucursales.SelectedIndex = 0;
+
+                //Bloqueamos la sucursal
+                cboSucursales.Enabled = false;
+            }
+
             AgregarFormularioEnPanel(new frmDashboard());
         }
 

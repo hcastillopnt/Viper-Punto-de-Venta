@@ -87,7 +87,6 @@
     <Compile Include="Shift.cs" />
     <Compile Include="Site.cs" />
     <Compile Include="StateProvince.cs" />
-    <Compile Include="UserSite.cs" />
     <Compile Include="ViperContext.cs" />
   </ItemGroup>
   <ItemGroup>

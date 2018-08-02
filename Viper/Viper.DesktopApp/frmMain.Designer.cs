@@ -49,6 +49,9 @@
             this.picLogotipo = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cboSucursales = new Telerik.WinControls.UI.RadDropDownList();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.BarraTitulo.SuspendLayout();
             this.tlp01.SuspendLayout();
             this.tlp02.SuspendLayout();
@@ -60,6 +63,8 @@
             this.MenuVertical.SuspendLayout();
             this.tlpContenedorVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -110,9 +115,9 @@
             // 
             this.picReloj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picReloj.Image = ((System.Drawing.Image)(resources.GetObject("picReloj.Image")));
-            this.picReloj.Location = new System.Drawing.Point(335, 3);
+            this.picReloj.Location = new System.Drawing.Point(328, 3);
             this.picReloj.Name = "picReloj";
-            this.picReloj.Size = new System.Drawing.Size(68, 42);
+            this.picReloj.Size = new System.Drawing.Size(106, 42);
             this.picReloj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picReloj.TabIndex = 1;
             this.picReloj.TabStop = false;
@@ -123,9 +128,9 @@
             this.lblReloj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReloj.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblReloj.Location = new System.Drawing.Point(409, 0);
+            this.lblReloj.Location = new System.Drawing.Point(440, 0);
             this.lblReloj.Name = "lblReloj";
-            this.lblReloj.Size = new System.Drawing.Size(185, 48);
+            this.lblReloj.Size = new System.Drawing.Size(154, 48);
             this.lblReloj.TabIndex = 0;
             this.lblReloj.Text = "[Fecha]";
             this.lblReloj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,9 +141,9 @@
             this.lblDinero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDinero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDinero.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDinero.Location = new System.Drawing.Point(77, 0);
+            this.lblDinero.Location = new System.Drawing.Point(115, 0);
             this.lblDinero.Name = "lblDinero";
-            this.lblDinero.Size = new System.Drawing.Size(252, 48);
+            this.lblDinero.Size = new System.Drawing.Size(207, 48);
             this.lblDinero.TabIndex = 2;
             this.lblDinero.Text = "$ 1,000.00";
             this.lblDinero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +154,7 @@
             this.picDinero.Image = ((System.Drawing.Image)(resources.GetObject("picDinero.Image")));
             this.picDinero.Location = new System.Drawing.Point(3, 3);
             this.picDinero.Name = "picDinero";
-            this.picDinero.Size = new System.Drawing.Size(68, 42);
+            this.picDinero.Size = new System.Drawing.Size(106, 42);
             this.picDinero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDinero.TabIndex = 3;
             this.picDinero.TabStop = false;
@@ -232,16 +237,16 @@
             // 
             this.tlpContenedorVertical.ColumnCount = 1;
             this.tlpContenedorVertical.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpContenedorVertical.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tlpContenedorVertical.Controls.Add(this.btnCerrarSesion, 0, 2);
             this.tlpContenedorVertical.Controls.Add(this.tlpMenuVertical, 0, 1);
-            this.tlpContenedorVertical.Controls.Add(this.picLogotipo, 0, 0);
             this.tlpContenedorVertical.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpContenedorVertical.Location = new System.Drawing.Point(0, 0);
             this.tlpContenedorVertical.Name = "tlpContenedorVertical";
             this.tlpContenedorVertical.RowCount = 3;
-            this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.26611F));
-            this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.63025F));
-            this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.243697F));
+            this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07051F));
+            this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.32523F));
+            this.tlpContenedorVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.67781F));
             this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 658);
             this.tlpContenedorVertical.TabIndex = 0;
             // 
@@ -253,13 +258,13 @@
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 599);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 570);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 56);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 85);
             this.btnCerrarSesion.TabIndex = 10;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -271,7 +276,7 @@
             this.tlpMenuVertical.ColumnCount = 1;
             this.tlpMenuVertical.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMenuVertical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMenuVertical.Location = new System.Drawing.Point(3, 103);
+            this.tlpMenuVertical.Location = new System.Drawing.Point(3, 128);
             this.tlpMenuVertical.Name = "tlpMenuVertical";
             this.tlpMenuVertical.RowCount = 9;
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -283,7 +288,7 @@
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlpMenuVertical.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tlpMenuVertical.Size = new System.Drawing.Size(280, 490);
+            this.tlpMenuVertical.Size = new System.Drawing.Size(280, 436);
             this.tlpMenuVertical.TabIndex = 17;
             // 
             // picLogotipo
@@ -293,7 +298,7 @@
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picLogotipo.Location = new System.Drawing.Point(3, 3);
             this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(280, 94);
+            this.picLogotipo.Size = new System.Drawing.Size(274, 83);
             this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
@@ -311,6 +316,34 @@
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.picLogotipo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cboSucursales, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.53191F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.46808F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 119);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // cboSucursales
+            // 
+            this.cboSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboSucursales.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSucursales.Location = new System.Drawing.Point(3, 92);
+            this.cboSucursales.Name = "cboSucursales";
+            this.cboSucursales.NullText = "--Seleccione--";
+            this.cboSucursales.Size = new System.Drawing.Size(274, 23);
+            this.cboSucursales.TabIndex = 1;
+            this.cboSucursales.ThemeName = "VisualStudio2012Light";
             // 
             // frmMain
             // 
@@ -344,6 +377,9 @@
             this.MenuVertical.ResumeLayout(false);
             this.tlpContenedorVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,6 +405,9 @@
         private System.Windows.Forms.TableLayoutPanel tlp04;
         private System.Windows.Forms.Label lblDinero;
         private System.Windows.Forms.PictureBox picDinero;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Telerik.WinControls.UI.RadDropDownList cboSucursales;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }
 

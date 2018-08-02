@@ -291,7 +291,7 @@ namespace Viper.DesktopApp
             Address a = new Address();
 
             s.CompanyId = CID;
-            s.Name = Nombre_Sucursal.Text;
+            s.CompanyName = Nombre_Sucursal.Text;
             s.UniquePhysicalID = Id_Sucursal.Text;
             s.ContactName = Representante.Text;
             s.PhoneNumber = Telefono.Text;
