@@ -97,7 +97,7 @@ namespace Viper.DesktopApp
                 case "btnExaminar":
                     uploadLogotipo();
                     break;
-                case "btnFinalizar":
+                case "btnAceptar":
                     this.Close();
                     break;
             }
@@ -106,7 +106,7 @@ namespace Viper.DesktopApp
         private void frmRegisterSite_Load(object sender, EventArgs e)
         {
             //Set default configuration to UI
-            this.AcceptButton = btnFinalizar;
+            this.AcceptButton = btnAceptar;
             this.CancelButton = btnCancelar;
             this.AutoSize = true;
             this.ControlBox = false;
@@ -133,7 +133,7 @@ namespace Viper.DesktopApp
             //Establecer los eventos a los controles
             this.btnGuardarSucursal.Click += Button_Click;
             this.btnNuevaSucursal.Click += Button_Click;
-            this.btnFinalizar.Click += Button_Click;
+            this.btnAceptar.Click += Button_Click;
             this.btnExaminar.Click += Button_Click;
             this.btnCancelar.Click += Button_Click;
             this.Id_Sucursal.KeyPress += OnlyLettersAndNumbers_KeyPress;
@@ -168,7 +168,7 @@ namespace Viper.DesktopApp
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(this.btnGuardarSucursal, "Para poder guardar los datos de la sucursal registrada y sus datos fiscales, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnCancelar, "Para limpiar el formulario, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnFinalizar, "Para finalizar, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnAceptar, "Para finalizar, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnNuevaSucursal, "Para empezar a registrar una nueva sucursal, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnExaminar, "Para buscar el logotipo de su negocio almacenado en su pc, favor de dar clic en este boton");
 
@@ -321,7 +321,7 @@ namespace Viper.DesktopApp
             else
             {
                 MessageBox.Show("Sucursal registrada exitosamente");
-                btnFinalizar.Enabled = true;
+                btnAceptar.Enabled = true;
             }
             gvSucursales.DataSource = BusinessLogicLayer.AccesoBDBLL.getSites(companyId);
         }

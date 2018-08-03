@@ -213,7 +213,7 @@
             this.Giro_Comercial.Location = new System.Drawing.Point(154, 3);
             this.Giro_Comercial.Name = "Giro_Comercial";
             this.Giro_Comercial.NullText = "--SELECCIONE--";
-            this.Giro_Comercial.Size = new System.Drawing.Size(595, 26);
+            this.Giro_Comercial.Size = new System.Drawing.Size(595, 28);
             this.Giro_Comercial.TabIndex = 1;
             this.Giro_Comercial.ThemeName = "VisualStudio2012Light";
             // 
@@ -245,7 +245,7 @@
             this.gbDatosGenerales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gbDatosGenerales.Controls.Add(this.tlpDatosGenerales);
             this.gbDatosGenerales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosGenerales.HeaderText = "Datos Generales";
             this.gbDatosGenerales.Location = new System.Drawing.Point(3, 3);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
@@ -299,7 +299,7 @@
             // 
             // btnExaminar
             // 
-            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
             this.btnExaminar.Location = new System.Drawing.Point(3, 162);
             this.btnExaminar.Name = "btnExaminar";
@@ -371,7 +371,7 @@
             this.Tipo_Inmueble.Location = new System.Drawing.Point(153, 3);
             this.Tipo_Inmueble.Name = "Tipo_Inmueble";
             this.Tipo_Inmueble.NullText = "--SELECCIONE--";
-            this.Tipo_Inmueble.Size = new System.Drawing.Size(239, 26);
+            this.Tipo_Inmueble.Size = new System.Drawing.Size(239, 27);
             this.Tipo_Inmueble.TabIndex = 3;
             this.Tipo_Inmueble.ThemeName = "VisualStudio2012Light";
             // 
@@ -429,7 +429,7 @@
             this.Tipo_Vialidad.Location = new System.Drawing.Point(153, 36);
             this.Tipo_Vialidad.Name = "Tipo_Vialidad";
             this.Tipo_Vialidad.NullText = "--SELECCIONE--";
-            this.Tipo_Vialidad.Size = new System.Drawing.Size(239, 26);
+            this.Tipo_Vialidad.Size = new System.Drawing.Size(239, 27);
             this.Tipo_Vialidad.TabIndex = 4;
             this.Tipo_Vialidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -566,7 +566,7 @@
             this.Entidad_Federativa.Location = new System.Drawing.Point(153, 135);
             this.Entidad_Federativa.Name = "Entidad_Federativa";
             this.Entidad_Federativa.NullText = "--SELECCIONE--";
-            this.Entidad_Federativa.Size = new System.Drawing.Size(239, 26);
+            this.Entidad_Federativa.Size = new System.Drawing.Size(239, 27);
             this.Entidad_Federativa.TabIndex = 10;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
             // 
@@ -787,7 +787,7 @@
             this.gbDatosFiscales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gbDatosFiscales.Controls.Add(this.tlpDatosFiscales);
             this.gbDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbDatosFiscales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosFiscales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosFiscales.HeaderText = "Datos Fiscales";
             this.gbDatosFiscales.Location = new System.Drawing.Point(3, 507);
             this.gbDatosFiscales.Name = "gbDatosFiscales";
@@ -837,7 +837,7 @@
             this.Tipo_Inmueble_Fiscal.Location = new System.Drawing.Point(163, 3);
             this.Tipo_Inmueble_Fiscal.Name = "Tipo_Inmueble_Fiscal";
             this.Tipo_Inmueble_Fiscal.NullText = "--SELECCIONE--";
-            this.Tipo_Inmueble_Fiscal.Size = new System.Drawing.Size(299, 26);
+            this.Tipo_Inmueble_Fiscal.Size = new System.Drawing.Size(299, 27);
             this.Tipo_Inmueble_Fiscal.TabIndex = 20;
             this.Tipo_Inmueble_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -895,7 +895,7 @@
             this.Tipo_Vialidad_Fiscal.Location = new System.Drawing.Point(163, 36);
             this.Tipo_Vialidad_Fiscal.Name = "Tipo_Vialidad_Fiscal";
             this.Tipo_Vialidad_Fiscal.NullText = "--SELECCIONE--";
-            this.Tipo_Vialidad_Fiscal.Size = new System.Drawing.Size(299, 26);
+            this.Tipo_Vialidad_Fiscal.Size = new System.Drawing.Size(299, 27);
             this.Tipo_Vialidad_Fiscal.TabIndex = 21;
             this.Tipo_Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1032,7 +1032,7 @@
             this.Entidad_Federativa_Fiscal.Location = new System.Drawing.Point(163, 135);
             this.Entidad_Federativa_Fiscal.Name = "Entidad_Federativa_Fiscal";
             this.Entidad_Federativa_Fiscal.NullText = "--SELECCIONE--";
-            this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(299, 26);
+            this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(299, 32);
             this.Entidad_Federativa_Fiscal.TabIndex = 27;
             this.Entidad_Federativa_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1059,7 +1059,7 @@
             this.Municipio_Fiscal.Location = new System.Drawing.Point(120, 3);
             this.Municipio_Fiscal.Name = "Municipio_Fiscal";
             this.Municipio_Fiscal.NullText = "--SELECCIONE--";
-            this.Municipio_Fiscal.Size = new System.Drawing.Size(346, 23);
+            this.Municipio_Fiscal.Size = new System.Drawing.Size(346, 26);
             this.Municipio_Fiscal.TabIndex = 28;
             this.Municipio_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1094,7 +1094,7 @@
             this.gbDatosCorporativos.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gbDatosCorporativos.Controls.Add(this.tlpDatosCorporativos);
             this.gbDatosCorporativos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbDatosCorporativos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosCorporativos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosCorporativos.HeaderText = "Datos Corporativos";
             this.gbDatosCorporativos.Location = new System.Drawing.Point(3, 345);
             this.gbDatosCorporativos.Name = "gbDatosCorporativos";
@@ -1266,7 +1266,7 @@
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(230, 50);
             this.btnAceptar.TabIndex = 32;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "Finalizar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.ThemeName = "VisualStudio2012Light";
             // 

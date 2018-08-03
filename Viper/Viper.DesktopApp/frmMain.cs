@@ -231,7 +231,7 @@ namespace Viper.DesktopApp
                 btnOption.FlatAppearance.BorderSize = 0;
                 btnOption.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 58, 64);
                 btnOption.FlatStyle = FlatStyle.Flat;
-                btnOption.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                btnOption.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 btnOption.ForeColor = Color.White;
                 btnOption.Image = Image.FromFile(folderPath + item.ControlImage);
                 btnOption.ImageAlign = ContentAlignment.MiddleLeft;

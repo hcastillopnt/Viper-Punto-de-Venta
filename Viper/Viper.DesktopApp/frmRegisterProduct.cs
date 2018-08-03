@@ -32,13 +32,12 @@ namespace Viper.DesktopApp
         //TAB DE INVENTARIO MAXIMO AL BOTON AGREGAR PRODUCTO
         private void Inventario_Maximo_Leave(object sender, EventArgs e)
         {
-            btnAgregarProducto.Focus();
+            btnAceptar.Focus();
         }
-        
 
         //TAB DE BOTON AGREGAR PRODUCTO A CODIGO DE BARRAS
 
-        private void btnAgregarProducto_Leave(object sender, EventArgs e)
+        private void btnAceptar_Leave(object sender, EventArgs e)
         {
             Codigo_de_barras.Focus();
         }
@@ -51,27 +50,25 @@ namespace Viper.DesktopApp
 
             switch (objButton.Name)
             {
-                case "btnAgregarProducto":
+                case "btnAceptar":
                     agregarProducto();
                     break;
                 case "btnCancelar":
                     this.Hide();
                     break;
                 case "btnEliminar":
-
                     break;
+
                 case "btnAgregarImagen":
                     examinar();
                     break;
-
-
             }
         }
 
         private void frmAddProduct_Load(object sender, EventArgs e)
         {
             //Set default configuration to UI
-            this.AcceptButton = btnAgregarProducto;
+            this.AcceptButton = btnAceptar;
             this.CancelButton = btnCancelar;
             this.AutoSize = true;
             this.ControlBox = true;
@@ -84,7 +81,7 @@ namespace Viper.DesktopApp
             this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
 
-            this.btnAgregarProducto.Click += Button_Click;
+            this.btnAceptar.Click += Button_Click;
             this.btnCancelar.Click += Button_Click;
             this.btnExaminar.Click += Button_Click;
             this.btnAgregarImagen.Click += Button_Click;
@@ -109,7 +106,7 @@ namespace Viper.DesktopApp
             toolTip1.ShowAlways = true;
 
             // Set up the ToolTip text for the Button and Checkbox.
-            toolTip1.SetToolTip(this.btnAgregarProducto, "Para poder agregar un producto , favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnAceptar, "Para poder agregar un producto , favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnCancelar, "Para poder cancelar el proceso, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnAgregarImagen, "Para agregar la imagen, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnExaminar, "Para seleccionar una imagen del equipo, favor de dar clic en este boton");

@@ -297,12 +297,14 @@
     <Content Include="images\icon\huella_dactilar.png" />
     <Content Include="images\icon\info.png" />
     <Content Include="images\icon\inventario.png" />
+    <Content Include="images\icon\lapiz.png" />
     <Content Include="images\icon\lupa.png" />
     <Content Include="images\icon\medico.png" />
     <Content Include="images\icon\nuevo.png" />
     <Content Include="images\icon\procesos.png" />
     <Content Include="images\icon\productos.png" />
     <Content Include="images\icon\question.png" />
+    <Content Include="images\icon\refrescar.png" />
     <Content Include="images\icon\reportes.png" />
     <Content Include="images\icon\sub_cajas.png" />
     <Content Include="images\icon\sub_cliente.png" />

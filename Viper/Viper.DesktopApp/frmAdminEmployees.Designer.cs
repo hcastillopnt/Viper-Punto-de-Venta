@@ -307,7 +307,7 @@
             this.pvMenuOpciones.Controls.Add(this.pvpInformacionEmpleado);
             this.pvMenuOpciones.DefaultPage = this.pvpDatosGenerales;
             this.pvMenuOpciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pvMenuOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.pvMenuOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.pvMenuOpciones.Location = new System.Drawing.Point(3, 137);
             this.pvMenuOpciones.Name = "pvMenuOpciones";
             this.pvMenuOpciones.SelectedPage = this.pvpDatosGenerales;
@@ -320,10 +320,10 @@
             // pvpDatosGenerales
             // 
             this.pvpDatosGenerales.Controls.Add(this.tlp15);
-            this.pvpDatosGenerales.ItemSize = new System.Drawing.SizeF(142F, 28F);
-            this.pvpDatosGenerales.Location = new System.Drawing.Point(5, 34);
+            this.pvpDatosGenerales.ItemSize = new System.Drawing.SizeF(120F, 25F);
+            this.pvpDatosGenerales.Location = new System.Drawing.Point(5, 31);
             this.pvpDatosGenerales.Name = "pvpDatosGenerales";
-            this.pvpDatosGenerales.Size = new System.Drawing.Size(934, 509);
+            this.pvpDatosGenerales.Size = new System.Drawing.Size(934, 512);
             this.pvpDatosGenerales.Text = "Datos Generales";
             // 
             // tlp15
@@ -340,7 +340,7 @@
             this.tlp15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.4F));
             this.tlp15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.75758F));
             this.tlp15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.0404F));
-            this.tlp15.Size = new System.Drawing.Size(934, 509);
+            this.tlp15.Size = new System.Drawing.Size(934, 512);
             this.tlp15.TabIndex = 0;
             // 
             // tlp13
@@ -365,24 +365,24 @@
             this.tlp13.Controls.Add(this.btnEliminarTelefono, 4, 3);
             this.tlp13.Controls.Add(this.lblMensaje, 0, 3);
             this.tlp13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp13.Location = new System.Drawing.Point(3, 389);
+            this.tlp13.Location = new System.Drawing.Point(3, 391);
             this.tlp13.Name = "tlp13";
             this.tlp13.RowCount = 4;
             this.tlp13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.16807F));
             this.tlp13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
             this.tlp13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp13.Size = new System.Drawing.Size(928, 117);
+            this.tlp13.Size = new System.Drawing.Size(928, 118);
             this.tlp13.TabIndex = 4;
             // 
             // lblTpoTelefono
             // 
             this.lblTpoTelefono.AutoSize = true;
             this.lblTpoTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTpoTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTpoTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTpoTelefono.Location = new System.Drawing.Point(3, 0);
             this.lblTpoTelefono.Name = "lblTpoTelefono";
-            this.lblTpoTelefono.Size = new System.Drawing.Size(198, 23);
+            this.lblTpoTelefono.Size = new System.Drawing.Size(198, 24);
             this.lblTpoTelefono.TabIndex = 0;
             this.lblTpoTelefono.Text = "Tipo de Telefono:";
             // 
@@ -390,11 +390,11 @@
             // 
             this.Tipo_de_Telefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tipo_de_Telefono.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Tipo_de_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_de_Telefono.Location = new System.Drawing.Point(3, 26);
+            this.Tipo_de_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo_de_Telefono.Location = new System.Drawing.Point(3, 27);
             this.Tipo_de_Telefono.Name = "Tipo_de_Telefono";
             this.Tipo_de_Telefono.NullText = "--SELECCIONE--";
-            this.Tipo_de_Telefono.Size = new System.Drawing.Size(198, 27);
+            this.Tipo_de_Telefono.Size = new System.Drawing.Size(198, 28);
             this.Tipo_de_Telefono.TabIndex = 1;
             this.Tipo_de_Telefono.ThemeName = "VisualStudio2012Light";
             // 
@@ -402,10 +402,10 @@
             // 
             this.lblCveLada.AutoSize = true;
             this.lblCveLada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCveLada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCveLada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCveLada.Location = new System.Drawing.Point(207, 0);
             this.lblCveLada.Name = "lblCveLada";
-            this.lblCveLada.Size = new System.Drawing.Size(90, 23);
+            this.lblCveLada.Size = new System.Drawing.Size(90, 24);
             this.lblCveLada.TabIndex = 0;
             this.lblCveLada.Text = "Clave Lada:";
             // 
@@ -413,45 +413,45 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(303, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(190, 23);
+            this.lblTelefono.Size = new System.Drawing.Size(190, 24);
             this.lblTelefono.TabIndex = 0;
             this.lblTelefono.Text = "Telefono:";
             // 
             // Clave_Lada
             // 
             this.Clave_Lada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Clave_Lada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clave_Lada.Location = new System.Drawing.Point(207, 26);
+            this.Clave_Lada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clave_Lada.Location = new System.Drawing.Point(207, 27);
             this.Clave_Lada.MaxLength = 3;
             this.Clave_Lada.Name = "Clave_Lada";
             this.Clave_Lada.NullText = "LADA";
-            this.Clave_Lada.Size = new System.Drawing.Size(90, 27);
+            this.Clave_Lada.Size = new System.Drawing.Size(90, 28);
             this.Clave_Lada.TabIndex = 2;
             this.Clave_Lada.ThemeName = "VisualStudio2012Light";
             // 
             // Telefono
             // 
             this.Telefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(303, 26);
+            this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefono.Location = new System.Drawing.Point(303, 27);
             this.Telefono.MaxLength = 10;
             this.Telefono.Name = "Telefono";
             this.Telefono.NullText = "TELÉFONO";
-            this.Telefono.Size = new System.Drawing.Size(190, 27);
+            this.Telefono.Size = new System.Drawing.Size(190, 28);
             this.Telefono.TabIndex = 3;
             this.Telefono.ThemeName = "VisualStudio2012Light";
             // 
             // btnAgregarTelefono
             // 
             this.btnAgregarTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAgregarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarTelefono.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTelefono.Image")));
-            this.btnAgregarTelefono.Location = new System.Drawing.Point(499, 26);
+            this.btnAgregarTelefono.Location = new System.Drawing.Point(499, 27);
             this.btnAgregarTelefono.Name = "btnAgregarTelefono";
-            this.btnAgregarTelefono.Size = new System.Drawing.Size(148, 27);
+            this.btnAgregarTelefono.Size = new System.Drawing.Size(148, 28);
             this.btnAgregarTelefono.TabIndex = 4;
             this.btnAgregarTelefono.Text = "Agregar";
             this.btnAgregarTelefono.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -461,8 +461,8 @@
             // 
             this.lblCorreoElectronico.AutoSize = true;
             this.lblCorreoElectronico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreoElectronico.Location = new System.Drawing.Point(3, 56);
+            this.lblCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoElectronico.Location = new System.Drawing.Point(3, 58);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
             this.lblCorreoElectronico.Size = new System.Drawing.Size(198, 29);
             this.lblCorreoElectronico.TabIndex = 0;
@@ -472,8 +472,8 @@
             // 
             this.tlp13.SetColumnSpan(this.Correo_Electronico, 3);
             this.Correo_Electronico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Correo_Electronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo_Electronico.Location = new System.Drawing.Point(207, 59);
+            this.Correo_Electronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Correo_Electronico.Location = new System.Drawing.Point(207, 61);
             this.Correo_Electronico.Name = "Correo_Electronico";
             this.Correo_Electronico.Size = new System.Drawing.Size(440, 23);
             this.Correo_Electronico.TabIndex = 5;
@@ -484,12 +484,12 @@
             this.lstTelefonos.AllowDrop = true;
             this.lstTelefonos.AllowEdit = false;
             this.lstTelefonos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstTelefonos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstTelefonos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstTelefonos.ItemSpacing = -1;
             this.lstTelefonos.Location = new System.Drawing.Point(653, 3);
             this.lstTelefonos.Name = "lstTelefonos";
             this.tlp13.SetRowSpan(this.lstTelefonos, 3);
-            this.lstTelefonos.Size = new System.Drawing.Size(272, 79);
+            this.lstTelefonos.Size = new System.Drawing.Size(272, 81);
             this.lstTelefonos.TabIndex = 0;
             this.lstTelefonos.ThemeName = "VisualStudio2012Light";
             this.lstTelefonos.ViewType = Telerik.WinControls.UI.ListViewType.DetailsView;
@@ -498,11 +498,11 @@
             // 
             this.btnEliminarTelefono.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminarTelefono.Enabled = false;
-            this.btnEliminarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarTelefono.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarTelefono.Image")));
-            this.btnEliminarTelefono.Location = new System.Drawing.Point(792, 88);
+            this.btnEliminarTelefono.Location = new System.Drawing.Point(792, 90);
             this.btnEliminarTelefono.Name = "btnEliminarTelefono";
-            this.btnEliminarTelefono.Size = new System.Drawing.Size(133, 26);
+            this.btnEliminarTelefono.Size = new System.Drawing.Size(133, 25);
             this.btnEliminarTelefono.TabIndex = 6;
             this.btnEliminarTelefono.Text = "Eliminar";
             this.btnEliminarTelefono.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -514,11 +514,11 @@
             this.lblMensaje.AutoSize = true;
             this.tlp13.SetColumnSpan(this.lblMensaje, 4);
             this.lblMensaje.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje.Location = new System.Drawing.Point(3, 85);
+            this.lblMensaje.Location = new System.Drawing.Point(3, 87);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(644, 32);
+            this.lblMensaje.Size = new System.Drawing.Size(644, 31);
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "***Para eliminar un telefono añadido, debera seleccionar uno de la lista, y dar c" +
     "lic en el boton Eliminar";
@@ -545,7 +545,7 @@
             this.tlp18.Controls.Add(this.tlp10, 2, 4);
             this.tlp18.Controls.Add(this.Codigo_Postal, 1, 2);
             this.tlp18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp18.Location = new System.Drawing.Point(3, 208);
+            this.tlp18.Location = new System.Drawing.Point(3, 209);
             this.tlp18.Name = "tlp18";
             this.tlp18.RowCount = 5;
             this.tlp18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -553,14 +553,14 @@
             this.tlp18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlp18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.23529F));
             this.tlp18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.76471F));
-            this.tlp18.Size = new System.Drawing.Size(928, 175);
+            this.tlp18.Size = new System.Drawing.Size(928, 176);
             this.tlp18.TabIndex = 3;
             // 
             // cboTipoInmueble
             // 
             this.cboTipoInmueble.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboTipoInmueble.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboTipoInmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoInmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoInmueble.Location = new System.Drawing.Point(177, 3);
             this.cboTipoInmueble.Name = "cboTipoInmueble";
             this.cboTipoInmueble.NullText = "--SELECCIONE--";
@@ -572,11 +572,11 @@
             // 
             this.tlp18.SetColumnSpan(this.Colonia, 2);
             this.Colonia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Colonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Colonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Colonia.Location = new System.Drawing.Point(177, 108);
             this.Colonia.Name = "Colonia";
             this.Colonia.NullText = "COLONIA";
-            this.Colonia.Size = new System.Drawing.Size(748, 25);
+            this.Colonia.Size = new System.Drawing.Size(748, 26);
             this.Colonia.TabIndex = 7;
             this.Colonia.ThemeName = "VisualStudio2012Light";
             // 
@@ -584,7 +584,7 @@
             // 
             this.lblTipoInmueble.AutoSize = true;
             this.lblTipoInmueble.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTipoInmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoInmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoInmueble.Location = new System.Drawing.Point(3, 0);
             this.lblTipoInmueble.Name = "lblTipoInmueble";
             this.lblTipoInmueble.Size = new System.Drawing.Size(168, 35);
@@ -595,10 +595,10 @@
             // 
             this.lblColonia.AutoSize = true;
             this.lblColonia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColonia.Location = new System.Drawing.Point(3, 105);
             this.lblColonia.Name = "lblColonia";
-            this.lblColonia.Size = new System.Drawing.Size(168, 31);
+            this.lblColonia.Size = new System.Drawing.Size(168, 32);
             this.lblColonia.TabIndex = 0;
             this.lblColonia.Text = "Colonia:";
             // 
@@ -606,7 +606,7 @@
             // 
             this.lblTipoVialidad.AutoSize = true;
             this.lblTipoVialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTipoVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoVialidad.Location = new System.Drawing.Point(3, 35);
             this.lblTipoVialidad.Name = "lblTipoVialidad";
             this.lblTipoVialidad.Size = new System.Drawing.Size(168, 35);
@@ -617,7 +617,7 @@
             // 
             this.cboTipoVialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboTipoVialidad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboTipoVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoVialidad.Location = new System.Drawing.Point(177, 38);
             this.cboTipoVialidad.Name = "cboTipoVialidad";
             this.cboTipoVialidad.NullText = "--SELECCIONE--";
@@ -643,7 +643,7 @@
             // Vialidad
             // 
             this.Vialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Vialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Vialidad.Location = new System.Drawing.Point(157, 3);
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "VIALIDAD";
@@ -656,7 +656,7 @@
             // 
             this.lblNombreVialidad.AutoSize = true;
             this.lblNombreVialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreVialidad.Location = new System.Drawing.Point(3, 0);
             this.lblNombreVialidad.Name = "lblNombreVialidad";
             this.lblNombreVialidad.Size = new System.Drawing.Size(148, 29);
@@ -686,7 +686,7 @@
             // Numero_Interior
             // 
             this.Numero_Interior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Numero_Interior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Numero_Interior.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Numero_Interior.Location = new System.Drawing.Point(299, 3);
             this.Numero_Interior.Name = "Numero_Interior";
             this.Numero_Interior.NullText = "NO. INT";
@@ -699,7 +699,7 @@
             // 
             this.lblNoInt.AutoSize = true;
             this.lblNoInt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNoInt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoInt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoInt.Location = new System.Drawing.Point(231, 0);
             this.lblNoInt.Name = "lblNoInt";
             this.lblNoInt.Size = new System.Drawing.Size(62, 29);
@@ -709,7 +709,7 @@
             // Numero_Exterior
             // 
             this.Numero_Exterior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Numero_Exterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Numero_Exterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Numero_Exterior.Location = new System.Drawing.Point(81, 3);
             this.Numero_Exterior.Name = "Numero_Exterior";
             this.Numero_Exterior.NullText = "NO. EXT";
@@ -722,7 +722,7 @@
             // 
             this.lblNoExt.AutoSize = true;
             this.lblNoExt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNoExt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoExt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoExt.Location = new System.Drawing.Point(3, 0);
             this.lblNoExt.Name = "lblNoExt";
             this.lblNoExt.Size = new System.Drawing.Size(72, 29);
@@ -733,7 +733,7 @@
             // 
             this.lblCodigoPostal.AutoSize = true;
             this.lblCodigoPostal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCodigoPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoPostal.Location = new System.Drawing.Point(3, 70);
             this.lblCodigoPostal.Name = "lblCodigoPostal";
             this.lblCodigoPostal.Size = new System.Drawing.Size(168, 35);
@@ -744,8 +744,8 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(3, 136);
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(3, 137);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(168, 39);
             this.lblEstado.TabIndex = 0;
@@ -755,8 +755,8 @@
             // 
             this.cboEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado.Location = new System.Drawing.Point(177, 139);
+            this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.Location = new System.Drawing.Point(177, 140);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.NullText = "--SELECCIONE--";
             this.cboEstado.Size = new System.Drawing.Size(290, 33);
@@ -772,7 +772,7 @@
             this.tlp10.Controls.Add(this.cboLocalidad, 1, 0);
             this.tlp10.Controls.Add(this.lblLocalidad, 0, 0);
             this.tlp10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp10.Location = new System.Drawing.Point(473, 139);
+            this.tlp10.Location = new System.Drawing.Point(473, 140);
             this.tlp10.Name = "tlp10";
             this.tlp10.RowCount = 1;
             this.tlp10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -783,11 +783,11 @@
             // 
             this.cboLocalidad.Dock = System.Windows.Forms.DockStyle.Top;
             this.cboLocalidad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLocalidad.Location = new System.Drawing.Point(124, 3);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.NullText = "--SELECCIONE--";
-            this.cboLocalidad.Size = new System.Drawing.Size(325, 32);
+            this.cboLocalidad.Size = new System.Drawing.Size(325, 28);
             this.cboLocalidad.TabIndex = 9;
             this.cboLocalidad.ThemeName = "VisualStudio2012Light";
             this.cboLocalidad.Leave += new System.EventHandler(this.cboLocalidad_Leave);
@@ -796,7 +796,7 @@
             // 
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.Location = new System.Drawing.Point(3, 0);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(115, 33);
@@ -831,7 +831,7 @@
             this.tlp16.Name = "tlp16";
             this.tlp16.RowCount = 1;
             this.tlp16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp16.Size = new System.Drawing.Size(928, 199);
+            this.tlp16.Size = new System.Drawing.Size(928, 200);
             this.tlp16.TabIndex = 1;
             // 
             // tlp17
@@ -868,14 +868,14 @@
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.9992F));
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.9992F));
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0032F));
-            this.tlp17.Size = new System.Drawing.Size(673, 193);
+            this.tlp17.Size = new System.Drawing.Size(673, 194);
             this.tlp17.TabIndex = 2;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(3, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(119, 38);
@@ -886,7 +886,7 @@
             // 
             this.lblFecNac.AutoSize = true;
             this.lblFecNac.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFecNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecNac.Location = new System.Drawing.Point(337, 0);
             this.lblFecNac.Name = "lblFecNac";
             this.lblFecNac.Size = new System.Drawing.Size(118, 38);
@@ -897,7 +897,7 @@
             // 
             this.lblApellidoPaterno.AutoSize = true;
             this.lblApellidoPaterno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoPaterno.Location = new System.Drawing.Point(3, 38);
             this.lblApellidoPaterno.Name = "lblApellidoPaterno";
             this.lblApellidoPaterno.Size = new System.Drawing.Size(119, 38);
@@ -908,7 +908,7 @@
             // 
             this.lblApellidoMaterno.AutoSize = true;
             this.lblApellidoMaterno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoMaterno.Location = new System.Drawing.Point(337, 38);
             this.lblApellidoMaterno.Name = "lblApellidoMaterno";
             this.lblApellidoMaterno.Size = new System.Drawing.Size(118, 38);
@@ -919,7 +919,7 @@
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.Location = new System.Drawing.Point(3, 76);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(119, 38);
@@ -930,7 +930,7 @@
             // 
             this.lblEstadoCivil.AutoSize = true;
             this.lblEstadoCivil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoCivil.Location = new System.Drawing.Point(337, 76);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
             this.lblEstadoCivil.Size = new System.Drawing.Size(118, 38);
@@ -941,7 +941,7 @@
             // 
             this.lblRFC.AutoSize = true;
             this.lblRFC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRFC.Location = new System.Drawing.Point(3, 114);
             this.lblRFC.Name = "lblRFC";
             this.lblRFC.Size = new System.Drawing.Size(119, 38);
@@ -952,7 +952,7 @@
             // 
             this.lblCURP.AutoSize = true;
             this.lblCURP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCURP.Location = new System.Drawing.Point(337, 114);
             this.lblCURP.Name = "lblCURP";
             this.lblCURP.Size = new System.Drawing.Size(118, 38);
@@ -963,7 +963,7 @@
             // 
             this.Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(128, 3);
             this.Nombre.Name = "Nombre";
             this.Nombre.NullText = "NOMBRE";
@@ -975,7 +975,7 @@
             // 
             this.Apellido_Paterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Apellido_Paterno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Apellido_Paterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellido_Paterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Apellido_Paterno.Location = new System.Drawing.Point(128, 41);
             this.Apellido_Paterno.Name = "Apellido_Paterno";
             this.Apellido_Paterno.NullText = "APELLIDO PATERNO";
@@ -987,7 +987,7 @@
             // 
             this.Apellido_Materno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Apellido_Materno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Apellido_Materno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellido_Materno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Apellido_Materno.Location = new System.Drawing.Point(461, 41);
             this.Apellido_Materno.Name = "Apellido_Materno";
             this.Apellido_Materno.NullText = "APELLIDO MATERNO";
@@ -998,7 +998,7 @@
             // Fecha_de_Nacimiento
             // 
             this.Fecha_de_Nacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fecha_de_Nacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha_de_Nacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_de_Nacimiento.Location = new System.Drawing.Point(461, 3);
             this.Fecha_de_Nacimiento.Mask = "00/00/0000";
             this.Fecha_de_Nacimiento.MaskType = Telerik.WinControls.UI.MaskType.Standard;
@@ -1013,7 +1013,7 @@
             // 
             this.Genero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Genero.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Genero.Location = new System.Drawing.Point(128, 79);
             this.Genero.Name = "Genero";
             this.Genero.NullText = "--SELECCIONE--";
@@ -1025,7 +1025,7 @@
             // 
             this.Estado_Civil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Estado_Civil.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Estado_Civil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado_Civil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Estado_Civil.Location = new System.Drawing.Point(461, 79);
             this.Estado_Civil.Name = "Estado_Civil";
             this.Estado_Civil.NullText = "--SELECCIONE--";
@@ -1037,7 +1037,7 @@
             // 
             this.RFC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.RFC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RFC.Location = new System.Drawing.Point(128, 117);
             this.RFC.MaxLength = 13;
             this.RFC.Name = "RFC";
@@ -1050,7 +1050,7 @@
             // 
             this.CURP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CURP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CURP.Location = new System.Drawing.Point(461, 117);
             this.CURP.MaxLength = 18;
             this.CURP.Name = "CURP";
@@ -1063,10 +1063,10 @@
             // 
             this.lblNSS.AutoSize = true;
             this.lblNSS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNSS.Location = new System.Drawing.Point(3, 152);
             this.lblNSS.Name = "lblNSS";
-            this.lblNSS.Size = new System.Drawing.Size(119, 41);
+            this.lblNSS.Size = new System.Drawing.Size(119, 42);
             this.lblNSS.TabIndex = 0;
             this.lblNSS.Text = "N.S.S.";
             // 
@@ -1074,13 +1074,13 @@
             // 
             this.NSS.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NSS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NSS.Location = new System.Drawing.Point(128, 155);
             this.NSS.Mask = "000-00-000000";
             this.NSS.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.NSS.Name = "NSS";
             this.NSS.NullText = "NSS";
-            this.NSS.Size = new System.Drawing.Size(203, 35);
+            this.NSS.Size = new System.Drawing.Size(203, 36);
             this.NSS.TabIndex = 9;
             this.NSS.TabStop = false;
             this.NSS.Text = "___-__-______";
@@ -1100,7 +1100,7 @@
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.57746F));
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.42253F));
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tlp01.Size = new System.Drawing.Size(243, 193);
+            this.tlp01.Size = new System.Drawing.Size(243, 194);
             this.tlp01.TabIndex = 2;
             // 
             // picEmpleado
@@ -1122,7 +1122,7 @@
             this.tlp12.Controls.Add(this.btnCaptura, 0, 0);
             this.tlp12.Controls.Add(this.btnExaminar, 1, 0);
             this.tlp12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp12.Location = new System.Drawing.Point(3, 148);
+            this.tlp12.Location = new System.Drawing.Point(3, 149);
             this.tlp12.Name = "tlp12";
             this.tlp12.RowCount = 1;
             this.tlp12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1159,18 +1159,18 @@
             // 
             this.cboCamara.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboCamara.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboCamara.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCamara.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCamara.Location = new System.Drawing.Point(3, 119);
             this.cboCamara.Name = "cboCamara";
             this.cboCamara.NullText = "--SELECCIONE--";
-            this.cboCamara.Size = new System.Drawing.Size(237, 23);
+            this.cboCamara.Size = new System.Drawing.Size(237, 24);
             this.cboCamara.TabIndex = 1;
             this.cboCamara.ThemeName = "VisualStudio2012Light";
             // 
             // pvpAccesoSistema
             // 
             this.pvpAccesoSistema.Controls.Add(this.tlp11);
-            this.pvpAccesoSistema.ItemSize = new System.Drawing.SizeF(154F, 28F);
+            this.pvpAccesoSistema.ItemSize = new System.Drawing.SizeF(130F, 25F);
             this.pvpAccesoSistema.Location = new System.Drawing.Point(5, 34);
             this.pvpAccesoSistema.Name = "pvpAccesoSistema";
             this.pvpAccesoSistema.Size = new System.Drawing.Size(769, 456);
@@ -1402,7 +1402,7 @@
             // pvpControlAsistencia
             // 
             this.pvpControlAsistencia.Enabled = false;
-            this.pvpControlAsistencia.ItemSize = new System.Drawing.SizeF(176F, 28F);
+            this.pvpControlAsistencia.ItemSize = new System.Drawing.SizeF(148F, 25F);
             this.pvpControlAsistencia.Location = new System.Drawing.Point(5, 34);
             this.pvpControlAsistencia.Name = "pvpControlAsistencia";
             this.pvpControlAsistencia.Size = new System.Drawing.Size(769, 456);
@@ -1411,7 +1411,7 @@
             // pvpInformacionEmpleado
             // 
             this.pvpInformacionEmpleado.Controls.Add(this.tlp06);
-            this.pvpInformacionEmpleado.ItemSize = new System.Drawing.SizeF(208F, 28F);
+            this.pvpInformacionEmpleado.ItemSize = new System.Drawing.SizeF(175F, 25F);
             this.pvpInformacionEmpleado.Location = new System.Drawing.Point(5, 34);
             this.pvpInformacionEmpleado.Name = "pvpInformacionEmpleado";
             this.pvpInformacionEmpleado.Size = new System.Drawing.Size(769, 456);

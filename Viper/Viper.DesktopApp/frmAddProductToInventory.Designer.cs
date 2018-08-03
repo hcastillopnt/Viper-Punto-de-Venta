@@ -202,7 +202,7 @@
             this.rpvInventario.Location = new System.Drawing.Point(4, 4);
             this.rpvInventario.Margin = new System.Windows.Forms.Padding(4);
             this.rpvInventario.Name = "rpvInventario";
-            this.rpvInventario.SelectedPage = this.rpvAgregarProducto;
+            this.rpvInventario.SelectedPage = this.rpvRemplazarProducto;
             this.rpvInventario.Size = new System.Drawing.Size(927, 705);
             this.rpvInventario.TabIndex = 1;
             this.rpvInventario.TabStop = false;
@@ -213,10 +213,10 @@
             // 
             this.rpvAgregarProducto.Controls.Add(this.tpl17);
             this.rpvAgregarProducto.ItemSize = new System.Drawing.SizeF(234F, 28F);
-            this.rpvAgregarProducto.Location = new System.Drawing.Point(5, 34);
+            this.rpvAgregarProducto.Location = new System.Drawing.Point(5, 31);
             this.rpvAgregarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.rpvAgregarProducto.Name = "rpvAgregarProducto";
-            this.rpvAgregarProducto.Size = new System.Drawing.Size(917, 666);
+            this.rpvAgregarProducto.Size = new System.Drawing.Size(917, 669);
             this.rpvAgregarProducto.Text = "Agregar producto al inventario";
             // 
             // tpl17
@@ -234,7 +234,7 @@
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.64286F));
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.35714F));
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 697F));
-            this.tpl17.Size = new System.Drawing.Size(917, 666);
+            this.tpl17.Size = new System.Drawing.Size(917, 669);
             this.tpl17.TabIndex = 5;
             // 
             // tlp3
@@ -245,7 +245,7 @@
             this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tlp3.Controls.Add(this.lblAgregarInventario, 1, 0);
             this.tlp3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp3.Location = new System.Drawing.Point(4, -9);
+            this.tlp3.Location = new System.Drawing.Point(4, -8);
             this.tlp3.Margin = new System.Windows.Forms.Padding(4);
             this.tlp3.Name = "tlp3";
             this.tlp3.RowCount = 1;
@@ -261,7 +261,7 @@
             this.lblAgregarInventario.Location = new System.Drawing.Point(255, 4);
             this.lblAgregarInventario.Margin = new System.Windows.Forms.Padding(4);
             this.lblAgregarInventario.Name = "lblAgregarInventario";
-            this.lblAgregarInventario.Size = new System.Drawing.Size(176, 26);
+            this.lblAgregarInventario.Size = new System.Drawing.Size(236, 1);
             this.lblAgregarInventario.TabIndex = 0;
             this.lblAgregarInventario.Text = "Agregar Inventario";
             // 
@@ -272,7 +272,7 @@
             this.gpoAgregarProducto.Controls.Add(this.tlp6);
             this.gpoAgregarProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoAgregarProducto.HeaderText = "";
-            this.gpoAgregarProducto.Location = new System.Drawing.Point(4, -26);
+            this.gpoAgregarProducto.Location = new System.Drawing.Point(4, -23);
             this.gpoAgregarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.gpoAgregarProducto.Name = "gpoAgregarProducto";
             this.gpoAgregarProducto.Padding = new System.Windows.Forms.Padding(3, 22, 3, 2);
@@ -303,7 +303,7 @@
             this.gpoDescripcion.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gpoDescripcion.Controls.Add(this.Descripcion_A);
             this.gpoDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gpoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoDescripcion.HeaderText = "Descripción del producto";
             this.gpoDescripcion.Location = new System.Drawing.Point(4, 4);
             this.gpoDescripcion.Margin = new System.Windows.Forms.Padding(4);
@@ -319,7 +319,7 @@
             // 
             this.Descripcion_A.AutoSize = false;
             this.Descripcion_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Descripcion_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descripcion_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion_A.Location = new System.Drawing.Point(3, 22);
             this.Descripcion_A.Margin = new System.Windows.Forms.Padding(4);
             this.Descripcion_A.Multiline = true;
@@ -405,9 +405,9 @@
             // tlp8
             // 
             this.tlp8.ColumnCount = 3;
-            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.36871F));
-            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.63129F));
-            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 522F));
+            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.38095F));
+            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.61905F));
+            this.tlp8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 523F));
             this.tlp8.Controls.Add(this.lblCantidad, 0, 0);
             this.tlp8.Controls.Add(this.Cantidad, 1, 0);
             this.tlp8.Controls.Add(this.lblCantidadActual, 0, 1);
@@ -425,11 +425,11 @@
             // lblCantidad
             // 
             this.lblCantidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(4, 4);
             this.lblCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(78, 22);
+            this.lblCantidad.Size = new System.Drawing.Size(67, 19);
             this.lblCantidad.TabIndex = 12;
             this.lblCantidad.Text = "Cantidad:";
             this.lblCantidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -437,21 +437,21 @@
             // Cantidad
             // 
             this.Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad.Location = new System.Drawing.Point(170, 4);
+            this.Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cantidad.Location = new System.Drawing.Point(191, 4);
             this.Cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Size = new System.Drawing.Size(184, 34);
+            this.Cantidad.Size = new System.Drawing.Size(162, 27);
             this.Cantidad.TabIndex = 1;
             // 
             // lblCantidadActual
             // 
             this.lblCantidadActual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCantidadActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadActual.Location = new System.Drawing.Point(4, 56);
             this.lblCantidadActual.Margin = new System.Windows.Forms.Padding(4);
             this.lblCantidadActual.Name = "lblCantidadActual";
-            this.lblCantidadActual.Size = new System.Drawing.Size(129, 22);
+            this.lblCantidadActual.Size = new System.Drawing.Size(110, 19);
             this.lblCantidadActual.TabIndex = 8;
             this.lblCantidadActual.Text = "Cantidad Actual:";
             this.lblCantidadActual.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -459,21 +459,20 @@
             // Cantidad_ActuaL_A
             // 
             this.Cantidad_ActuaL_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cantidad_ActuaL_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(170, 56);
+            this.Cantidad_ActuaL_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cantidad_ActuaL_A.Location = new System.Drawing.Point(191, 56);
             this.Cantidad_ActuaL_A.Margin = new System.Windows.Forms.Padding(4);
             this.Cantidad_ActuaL_A.Name = "Cantidad_ActuaL_A";
             this.Cantidad_ActuaL_A.NullText = "CANTIDAD ACTUAL";
-            this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(184, 24);
+            this.Cantidad_ActuaL_A.Size = new System.Drawing.Size(162, 24);
             this.Cantidad_ActuaL_A.TabIndex = 2;
             this.Cantidad_ActuaL_A.ThemeName = "VisualStudio2012Light";
             // 
             // tlp7
             // 
-            this.tlp7.ColumnCount = 3;
-            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.22535F));
-            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.77465F));
-            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tlp7.ColumnCount = 2;
+            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.22588F));
+            this.tlp7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.77412F));
             this.tlp7.Controls.Add(this.Codigo_de_barras_A, 1, 0);
             this.tlp7.Controls.Add(this.lblCodigoDelProducto, 0, 0);
             this.tlp7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -488,23 +487,23 @@
             // Codigo_de_barras_A
             // 
             this.Codigo_de_barras_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Codigo_de_barras_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_de_barras_A.Location = new System.Drawing.Point(191, 4);
+            this.Codigo_de_barras_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codigo_de_barras_A.Location = new System.Drawing.Point(190, 4);
             this.Codigo_de_barras_A.Margin = new System.Windows.Forms.Padding(4);
             this.Codigo_de_barras_A.Name = "Codigo_de_barras_A";
             this.Codigo_de_barras_A.NullText = "CODIGO DE BARRAS";
-            this.Codigo_de_barras_A.Size = new System.Drawing.Size(444, 24);
+            this.Codigo_de_barras_A.Size = new System.Drawing.Size(687, 24);
             this.Codigo_de_barras_A.TabIndex = 1;
             this.Codigo_de_barras_A.ThemeName = "VisualStudio2012Light";
             // 
             // lblCodigoDelProducto
             // 
             this.lblCodigoDelProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCodigoDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoDelProducto.Location = new System.Drawing.Point(4, 4);
             this.lblCodigoDelProducto.Margin = new System.Windows.Forms.Padding(4);
             this.lblCodigoDelProducto.Name = "lblCodigoDelProducto";
-            this.lblCodigoDelProducto.Size = new System.Drawing.Size(179, 32);
+            this.lblCodigoDelProducto.Size = new System.Drawing.Size(138, 19);
             this.lblCodigoDelProducto.TabIndex = 2;
             this.lblCodigoDelProducto.Text = "Código del Producto:";
             this.lblCodigoDelProducto.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -646,7 +645,7 @@
             this.gpoDescripcion2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gpoDescripcion2.Controls.Add(this.Descripcion_Remplazar);
             this.gpoDescripcion2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gpoDescripcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpoDescripcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoDescripcion2.HeaderText = "Descripción del producto";
             this.gpoDescripcion2.Location = new System.Drawing.Point(4, 4);
             this.gpoDescripcion2.Margin = new System.Windows.Forms.Padding(4);
@@ -662,7 +661,7 @@
             // 
             this.Descripcion_Remplazar.AutoSize = false;
             this.Descripcion_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Descripcion_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descripcion_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion_Remplazar.Location = new System.Drawing.Point(3, 22);
             this.Descripcion_Remplazar.Margin = new System.Windows.Forms.Padding(4);
             this.Descripcion_Remplazar.Multiline = true;
@@ -722,7 +721,7 @@
             this.tlp16.ColumnCount = 3;
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.16901F));
             this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.83099F));
-            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tlp16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
             this.tlp16.Controls.Add(this.lblCodigoDelProducto2, 0, 1);
             this.tlp16.Controls.Add(this.Codigo_de_barras_Remplazar, 1, 1);
             this.tlp16.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -738,11 +737,11 @@
             // lblCodigoDelProducto2
             // 
             this.lblCodigoDelProducto2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCodigoDelProducto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoDelProducto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoDelProducto2.Location = new System.Drawing.Point(4, 9);
             this.lblCodigoDelProducto2.Margin = new System.Windows.Forms.Padding(4);
             this.lblCodigoDelProducto2.Name = "lblCodigoDelProducto2";
-            this.lblCodigoDelProducto2.Size = new System.Drawing.Size(172, 38);
+            this.lblCodigoDelProducto2.Size = new System.Drawing.Size(171, 38);
             this.lblCodigoDelProducto2.TabIndex = 3;
             this.lblCodigoDelProducto2.Text = "Código del Producto:";
             this.lblCodigoDelProducto2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -750,8 +749,8 @@
             // Codigo_de_barras_Remplazar
             // 
             this.Codigo_de_barras_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Codigo_de_barras_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_de_barras_Remplazar.Location = new System.Drawing.Point(184, 9);
+            this.Codigo_de_barras_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codigo_de_barras_Remplazar.Location = new System.Drawing.Point(183, 9);
             this.Codigo_de_barras_Remplazar.Margin = new System.Windows.Forms.Padding(4);
             this.Codigo_de_barras_Remplazar.Name = "Codigo_de_barras_Remplazar";
             this.Codigo_de_barras_Remplazar.NullText = "CODIGO DE BARRAS";
@@ -764,7 +763,7 @@
             this.tlp17.ColumnCount = 3;
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.66667F));
             this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.33333F));
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 499F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.tlp17.Controls.Add(this.Diferencia, 1, 2);
             this.tlp17.Controls.Add(this.lblCantidadActual2, 0, 0);
             this.tlp17.Controls.Add(this.lblDiferencia, 0, 2);
@@ -772,6 +771,7 @@
             this.tlp17.Controls.Add(this.lblNuevaCantidad, 0, 1);
             this.tlp17.Controls.Add(this.Cantidad_Actual_Remplazar, 1, 0);
             this.tlp17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlp17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlp17.Location = new System.Drawing.Point(4, 63);
             this.tlp17.Margin = new System.Windows.Forms.Padding(4);
             this.tlp17.Name = "tlp17";
@@ -785,19 +785,19 @@
             // Diferencia
             // 
             this.Diferencia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Diferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Diferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Diferencia.Location = new System.Drawing.Point(166, 97);
             this.Diferencia.Margin = new System.Windows.Forms.Padding(4);
             this.Diferencia.Name = "Diferencia";
             this.Diferencia.NullText = "DIFERENCIA";
-            this.Diferencia.Size = new System.Drawing.Size(211, 35);
+            this.Diferencia.Size = new System.Drawing.Size(210, 24);
             this.Diferencia.TabIndex = 3;
             this.Diferencia.ThemeName = "VisualStudio2012Light";
             // 
             // lblCantidadActual2
             // 
             this.lblCantidadActual2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCantidadActual2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadActual2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadActual2.Location = new System.Drawing.Point(4, 4);
             this.lblCantidadActual2.Margin = new System.Windows.Forms.Padding(4);
             this.lblCantidadActual2.Name = "lblCantidadActual2";
@@ -809,7 +809,7 @@
             // lblDiferencia
             // 
             this.lblDiferencia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiferencia.Location = new System.Drawing.Point(4, 97);
             this.lblDiferencia.Margin = new System.Windows.Forms.Padding(4);
             this.lblDiferencia.Name = "lblDiferencia";
@@ -821,17 +821,17 @@
             // Nueva_Cantidad
             // 
             this.Nueva_Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Nueva_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nueva_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nueva_Cantidad.Location = new System.Drawing.Point(166, 49);
             this.Nueva_Cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.Nueva_Cantidad.Name = "Nueva_Cantidad";
-            this.Nueva_Cantidad.Size = new System.Drawing.Size(211, 34);
+            this.Nueva_Cantidad.Size = new System.Drawing.Size(210, 27);
             this.Nueva_Cantidad.TabIndex = 2;
             // 
             // lblNuevaCantidad
             // 
             this.lblNuevaCantidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNuevaCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevaCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevaCantidad.Location = new System.Drawing.Point(4, 49);
             this.lblNuevaCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.lblNuevaCantidad.Name = "lblNuevaCantidad";
@@ -843,12 +843,12 @@
             // Cantidad_Actual_Remplazar
             // 
             this.Cantidad_Actual_Remplazar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cantidad_Actual_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cantidad_Actual_Remplazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cantidad_Actual_Remplazar.Location = new System.Drawing.Point(166, 4);
             this.Cantidad_Actual_Remplazar.Margin = new System.Windows.Forms.Padding(4);
             this.Cantidad_Actual_Remplazar.Name = "Cantidad_Actual_Remplazar";
             this.Cantidad_Actual_Remplazar.NullText = "CANTIDAD ACTUAL";
-            this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(211, 37);
+            this.Cantidad_Actual_Remplazar.Size = new System.Drawing.Size(210, 37);
             this.Cantidad_Actual_Remplazar.TabIndex = 1;
             this.Cantidad_Actual_Remplazar.ThemeName = "VisualStudio2012Light";
             // 
@@ -864,7 +864,7 @@
             this.tlp11.Name = "tlp11";
             this.tlp11.RowCount = 1;
             this.tlp11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tlp11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
             this.tlp11.Size = new System.Drawing.Size(909, 1);
             this.tlp11.TabIndex = 0;
             // 
