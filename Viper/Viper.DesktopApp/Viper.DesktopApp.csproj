@@ -169,11 +169,11 @@
     <Compile Include="frmAdminEmployees.Designer.cs">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegisterSite.cs">
+    <Compile Include="frmAdminSites.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegisterSite.Designer.cs">
-      <DependentUpon>frmRegisterSite.cs</DependentUpon>
+    <Compile Include="frmAdminSites.Designer.cs">
+      <DependentUpon>frmAdminSites.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperGrid.cs" />
     <Compile Include="InputBox.cs" />
@@ -226,8 +226,8 @@
     <EmbeddedResource Include="frmAdminEmployees.resx">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterSite.resx">
-      <DependentUpon>frmRegisterSite.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdminSites.resx">
+      <DependentUpon>frmAdminSites.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

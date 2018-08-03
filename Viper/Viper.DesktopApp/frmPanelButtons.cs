@@ -68,7 +68,7 @@ namespace Viper.DesktopApp
                     string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
                     int companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
 
-                    AgregarFormularioEnPanel(new frmRegisterSite(companyName, companyID));
+                    AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
                     break;
 
                 case "btnEmpleados":

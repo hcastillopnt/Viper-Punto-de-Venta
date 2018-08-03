@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmRegisterSite
+    partial class frmAdminSites
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterSite));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminSites));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.panelIzquierdo = new Telerik.WinControls.UI.RadPanel();
             this.gvSucursales = new Telerik.WinControls.UI.RadGridView();

@@ -12,7 +12,7 @@ using Viper.BusinessEntities;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmRegisterSite : Form
+    public partial class frmAdminSites : Form
     {
         #region Variables and Objects of class
         private Button objButton = null;
@@ -23,7 +23,7 @@ namespace Viper.DesktopApp
         #endregion
 
         #region Constructor
-        public frmRegisterSite(String nm,int cId)
+        public frmAdminSites(String nm,int cId)
         {
             this.nom = nm;
             this.companyId = cId;
