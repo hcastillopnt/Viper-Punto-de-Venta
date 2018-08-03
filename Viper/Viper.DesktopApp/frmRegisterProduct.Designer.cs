@@ -199,7 +199,7 @@
             this.pvAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pvAddProduct.Location = new System.Drawing.Point(205, 3);
             this.pvAddProduct.Name = "pvAddProduct";
-            this.pvAddProduct.SelectedPage = this.rpvImagen;
+            this.pvAddProduct.SelectedPage = this.rpvDatosBasicos;
             this.pvAddProduct.Size = new System.Drawing.Size(937, 715);
             this.pvAddProduct.TabIndex = 0;
             this.pvAddProduct.TabStop = false;
@@ -910,7 +910,7 @@
             // radCheckBox1
             // 
             this.radCheckBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.radCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radCheckBox1.Location = new System.Drawing.Point(736, 38);
             this.radCheckBox1.Name = "radCheckBox1";
             this.radCheckBox1.Size = new System.Drawing.Size(146, 30);
