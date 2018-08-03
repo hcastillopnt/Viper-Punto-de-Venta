@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 using Viper.BusinessEntities;
 
 namespace Viper.DesktopApp
@@ -15,7 +16,7 @@ namespace Viper.DesktopApp
     public partial class frmAdminSites : Form
     {
         #region Variables and Objects of class
-        private Button objButton = null;
+        private RadButton objButton = null;
         String rutaLogotipo = String.Empty;
         public string nom;
         public int companyId;
@@ -75,7 +76,7 @@ namespace Viper.DesktopApp
         #region Events of the controls
         public void Button_Click(object sender, EventArgs e)
         {
-            objButton = (Button)sender;
+            objButton = (RadButton)sender;
 
             string name = objButton.Name;
 
