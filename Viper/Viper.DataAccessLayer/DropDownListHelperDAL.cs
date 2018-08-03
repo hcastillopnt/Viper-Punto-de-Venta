@@ -102,7 +102,7 @@ namespace Viper.DataAccessLayer
             using (ViperContext db = new ViperContext())
             {
                 items = db.CountryRegions.ToList();
-                items.Add(new CountryRegion { Id = -1, Descripcion = "--SELECCIONE--" });
+                items.Add(new CountryRegion { Id = -1, Description = "--SELECCIONE--" });
 
                 return items.OrderBy(x => x.Id).ToList();
             }

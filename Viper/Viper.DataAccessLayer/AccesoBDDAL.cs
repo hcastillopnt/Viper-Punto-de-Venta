@@ -297,7 +297,7 @@ namespace Viper.DataAccessLayer
 
                         if (isTableExist)
                         {
-                            Sites = ctx.Sites.Where(x=>x.CompanyId==id_comp).OrderBy(x => x.Name).ToList();
+                            Sites = ctx.Sites.Where(x=>x.CompanyId==id_comp).OrderBy(x => x.CompanyName).ToList();
                         }
                     }
                 }

@@ -61,17 +61,17 @@ namespace Viper.DesktopApp
         private void frmAddProvider_Load(object sender, EventArgs e)
         {
             //Set default configuration to UI
+            this.AcceptButton = btnAceptar;
             this.AutoSize = true;
-            this.ControlBox = false;
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.ControlBox = true;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            //this.TopMost = true;
-            this.Size = new Size(1366, 768);
-            this.WindowState = FormWindowState.Maximized;
-            //this.Icon = new Icon("Resources/application_icon.ico");
+            this.Size = new Size(1000, 600);
+            this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
+            this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
 
             fillDropDownList();
 

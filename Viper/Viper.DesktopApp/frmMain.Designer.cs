@@ -44,13 +44,13 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.tlpContenedorVertical = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.picLogotipo = new System.Windows.Forms.PictureBox();
+            this.cboSucursales = new Telerik.WinControls.UI.RadDropDownList();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.tlpMenuVertical = new System.Windows.Forms.TableLayoutPanel();
-            this.picLogotipo = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cboSucursales = new Telerik.WinControls.UI.RadDropDownList();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.BarraTitulo.SuspendLayout();
             this.tlp01.SuspendLayout();
@@ -62,8 +62,8 @@
             this.tlp04.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.tlpContenedorVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,6 +250,47 @@
             this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 658);
             this.tlpContenedorVertical.TabIndex = 0;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.picLogotipo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cboSucursales, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.53191F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.46808F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 119);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // picLogotipo
+            // 
+            this.picLogotipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
+            this.picLogotipo.Location = new System.Drawing.Point(3, 3);
+            this.picLogotipo.Name = "picLogotipo";
+            this.picLogotipo.Size = new System.Drawing.Size(274, 83);
+            this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogotipo.TabIndex = 0;
+            this.picLogotipo.TabStop = false;
+            this.picLogotipo.Click += new System.EventHandler(this.picLogotipo_Click);
+            // 
+            // cboSucursales
+            // 
+            this.cboSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboSucursales.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSucursales.Location = new System.Drawing.Point(3, 92);
+            this.cboSucursales.Name = "cboSucursales";
+            this.cboSucursales.NullText = "--Seleccione--";
+            this.cboSucursales.Size = new System.Drawing.Size(274, 24);
+            this.cboSucursales.TabIndex = 1;
+            this.cboSucursales.ThemeName = "VisualStudio2012Light";
+            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -291,19 +332,6 @@
             this.tlpMenuVertical.Size = new System.Drawing.Size(280, 436);
             this.tlpMenuVertical.TabIndex = 17;
             // 
-            // picLogotipo
-            // 
-            this.picLogotipo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
-            this.picLogotipo.Location = new System.Drawing.Point(3, 3);
-            this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(274, 83);
-            this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogotipo.TabIndex = 0;
-            this.picLogotipo.TabStop = false;
-            this.picLogotipo.Click += new System.EventHandler(this.picLogotipo_Click);
-            // 
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
@@ -316,34 +344,6 @@
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.picLogotipo, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cboSucursales, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.53191F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.46808F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 119);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // cboSucursales
-            // 
-            this.cboSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboSucursales.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSucursales.Location = new System.Drawing.Point(3, 92);
-            this.cboSucursales.Name = "cboSucursales";
-            this.cboSucursales.NullText = "--Seleccione--";
-            this.cboSucursales.Size = new System.Drawing.Size(274, 23);
-            this.cboSucursales.TabIndex = 1;
-            this.cboSucursales.ThemeName = "VisualStudio2012Light";
             // 
             // frmMain
             // 
@@ -376,9 +376,9 @@
             this.tlp04.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             this.tlpContenedorVertical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).EndInit();
             this.ResumeLayout(false);
 

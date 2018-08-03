@@ -50,7 +50,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.Location = new System.Drawing.Point(329, 488);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(307, 59);
             this.btnAceptar.TabIndex = 6;
@@ -63,9 +63,9 @@
             this.lblRegimenFiscal.BackColor = System.Drawing.SystemColors.Control;
             this.lblRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegimenFiscal.Location = new System.Drawing.Point(339, 65);
-            this.lblRegimenFiscal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblRegimenFiscal.Margin = new System.Windows.Forms.Padding(4);
             this.lblRegimenFiscal.Name = "lblRegimenFiscal";
-            this.lblRegimenFiscal.Size = new System.Drawing.Size(319, 54);
+            this.lblRegimenFiscal.Size = new System.Drawing.Size(259, 44);
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal";
             // 
@@ -77,7 +77,7 @@
             this.dgvRegimenFiscal.EnableHotTracking = false;
             this.dgvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgvRegimenFiscal.Location = new System.Drawing.Point(16, 214);
-            this.dgvRegimenFiscal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRegimenFiscal.Margin = new System.Windows.Forms.Padding(4);
             // 
             // 
             // 
@@ -110,7 +110,7 @@
             // 
             this.picEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("picEmpresa.Image")));
             this.picEmpresa.Location = new System.Drawing.Point(158, 27);
-            this.picEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.picEmpresa.Name = "picEmpresa";
             this.picEmpresa.Size = new System.Drawing.Size(131, 92);
             this.picEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -133,7 +133,7 @@
             this.txtRegimen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegimen.Location = new System.Drawing.Point(219, 167);
-            this.txtRegimen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRegimen.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegimen.Name = "txtRegimen";
             this.txtRegimen.NullText = "Escribe la actividad que deseas buscar";
             this.txtRegimen.Size = new System.Drawing.Size(750, 32);
@@ -154,7 +154,7 @@
             this.Controls.Add(this.dgvRegimenFiscal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRegimenFiscal";

@@ -21,7 +21,7 @@ namespace Viper.BusinessEntities
         [Required(ErrorMessage = "El campo Description es obligatorio")]
         [StringLength(128, MinimumLength = 2)]
         [DataType(DataType.Text)]
-        public string Descripcion { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Campo FIPS104

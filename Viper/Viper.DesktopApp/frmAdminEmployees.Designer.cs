@@ -394,7 +394,7 @@
             this.Tipo_de_Telefono.Location = new System.Drawing.Point(3, 26);
             this.Tipo_de_Telefono.Name = "Tipo_de_Telefono";
             this.Tipo_de_Telefono.NullText = "--SELECCIONE--";
-            this.Tipo_de_Telefono.Size = new System.Drawing.Size(198, 32);
+            this.Tipo_de_Telefono.Size = new System.Drawing.Size(198, 27);
             this.Tipo_de_Telefono.TabIndex = 1;
             this.Tipo_de_Telefono.ThemeName = "VisualStudio2012Light";
             // 
@@ -428,7 +428,7 @@
             this.Clave_Lada.MaxLength = 3;
             this.Clave_Lada.Name = "Clave_Lada";
             this.Clave_Lada.NullText = "LADA";
-            this.Clave_Lada.Size = new System.Drawing.Size(90, 24);
+            this.Clave_Lada.Size = new System.Drawing.Size(90, 27);
             this.Clave_Lada.TabIndex = 2;
             this.Clave_Lada.ThemeName = "VisualStudio2012Light";
             // 
@@ -440,7 +440,7 @@
             this.Telefono.MaxLength = 10;
             this.Telefono.Name = "Telefono";
             this.Telefono.NullText = "TELÉFONO";
-            this.Telefono.Size = new System.Drawing.Size(190, 24);
+            this.Telefono.Size = new System.Drawing.Size(190, 27);
             this.Telefono.TabIndex = 3;
             this.Telefono.ThemeName = "VisualStudio2012Light";
             // 
@@ -475,7 +475,7 @@
             this.Correo_Electronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Correo_Electronico.Location = new System.Drawing.Point(207, 59);
             this.Correo_Electronico.Name = "Correo_Electronico";
-            this.Correo_Electronico.Size = new System.Drawing.Size(440, 24);
+            this.Correo_Electronico.Size = new System.Drawing.Size(440, 23);
             this.Correo_Electronico.TabIndex = 5;
             this.Correo_Electronico.ThemeName = "VisualStudio2012Light";
             // 
@@ -564,7 +564,7 @@
             this.cboTipoInmueble.Location = new System.Drawing.Point(177, 3);
             this.cboTipoInmueble.Name = "cboTipoInmueble";
             this.cboTipoInmueble.NullText = "--SELECCIONE--";
-            this.cboTipoInmueble.Size = new System.Drawing.Size(290, 32);
+            this.cboTipoInmueble.Size = new System.Drawing.Size(290, 29);
             this.cboTipoInmueble.TabIndex = 1;
             this.cboTipoInmueble.ThemeName = "VisualStudio2012Light";
             // 
@@ -576,7 +576,7 @@
             this.Colonia.Location = new System.Drawing.Point(177, 108);
             this.Colonia.Name = "Colonia";
             this.Colonia.NullText = "COLONIA";
-            this.Colonia.Size = new System.Drawing.Size(748, 24);
+            this.Colonia.Size = new System.Drawing.Size(748, 25);
             this.Colonia.TabIndex = 7;
             this.Colonia.ThemeName = "VisualStudio2012Light";
             // 
@@ -621,7 +621,7 @@
             this.cboTipoVialidad.Location = new System.Drawing.Point(177, 38);
             this.cboTipoVialidad.Name = "cboTipoVialidad";
             this.cboTipoVialidad.NullText = "--SELECCIONE--";
-            this.cboTipoVialidad.Size = new System.Drawing.Size(290, 32);
+            this.cboTipoVialidad.Size = new System.Drawing.Size(290, 29);
             this.cboTipoVialidad.TabIndex = 2;
             this.cboTipoVialidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -647,7 +647,7 @@
             this.Vialidad.Location = new System.Drawing.Point(157, 3);
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "VIALIDAD";
-            this.Vialidad.Size = new System.Drawing.Size(292, 24);
+            this.Vialidad.Size = new System.Drawing.Size(292, 23);
             this.Vialidad.TabIndex = 3;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
             this.Vialidad.Leave += new System.EventHandler(this.Vialidad_Leave);
@@ -690,7 +690,7 @@
             this.Numero_Interior.Location = new System.Drawing.Point(299, 3);
             this.Numero_Interior.Name = "Numero_Interior";
             this.Numero_Interior.NullText = "NO. INT";
-            this.Numero_Interior.Size = new System.Drawing.Size(150, 24);
+            this.Numero_Interior.Size = new System.Drawing.Size(150, 23);
             this.Numero_Interior.TabIndex = 6;
             this.Numero_Interior.ThemeName = "VisualStudio2012Light";
             this.Numero_Interior.Leave += new System.EventHandler(this.No_Int_Leave);
@@ -713,7 +713,7 @@
             this.Numero_Exterior.Location = new System.Drawing.Point(81, 3);
             this.Numero_Exterior.Name = "Numero_Exterior";
             this.Numero_Exterior.NullText = "NO. EXT";
-            this.Numero_Exterior.Size = new System.Drawing.Size(144, 24);
+            this.Numero_Exterior.Size = new System.Drawing.Size(144, 23);
             this.Numero_Exterior.TabIndex = 5;
             this.Numero_Exterior.ThemeName = "VisualStudio2012Light";
             this.Numero_Exterior.Leave += new System.EventHandler(this.No_Ext_Leave);
@@ -759,7 +759,7 @@
             this.cboEstado.Location = new System.Drawing.Point(177, 139);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.NullText = "--SELECCIONE--";
-            this.cboEstado.Size = new System.Drawing.Size(290, 32);
+            this.cboEstado.Size = new System.Drawing.Size(290, 33);
             this.cboEstado.TabIndex = 8;
             this.cboEstado.ThemeName = "VisualStudio2012Light";
             this.cboEstado.Leave += new System.EventHandler(this.cboEstado_Leave);
@@ -812,7 +812,7 @@
             this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
             this.Codigo_Postal.NullText = "CÓDIGO POSTAL";
-            this.Codigo_Postal.Size = new System.Drawing.Size(290, 24);
+            this.Codigo_Postal.Size = new System.Drawing.Size(290, 29);
             this.Codigo_Postal.TabIndex = 4;
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
@@ -967,7 +967,7 @@
             this.Nombre.Location = new System.Drawing.Point(128, 3);
             this.Nombre.Name = "Nombre";
             this.Nombre.NullText = "NOMBRE";
-            this.Nombre.Size = new System.Drawing.Size(203, 24);
+            this.Nombre.Size = new System.Drawing.Size(203, 32);
             this.Nombre.TabIndex = 1;
             this.Nombre.ThemeName = "VisualStudio2012Light";
             // 
@@ -979,7 +979,7 @@
             this.Apellido_Paterno.Location = new System.Drawing.Point(128, 41);
             this.Apellido_Paterno.Name = "Apellido_Paterno";
             this.Apellido_Paterno.NullText = "APELLIDO PATERNO";
-            this.Apellido_Paterno.Size = new System.Drawing.Size(203, 24);
+            this.Apellido_Paterno.Size = new System.Drawing.Size(203, 32);
             this.Apellido_Paterno.TabIndex = 3;
             this.Apellido_Paterno.ThemeName = "VisualStudio2012Light";
             // 
@@ -991,7 +991,7 @@
             this.Apellido_Materno.Location = new System.Drawing.Point(461, 41);
             this.Apellido_Materno.Name = "Apellido_Materno";
             this.Apellido_Materno.NullText = "APELLIDO MATERNO";
-            this.Apellido_Materno.Size = new System.Drawing.Size(209, 24);
+            this.Apellido_Materno.Size = new System.Drawing.Size(209, 32);
             this.Apellido_Materno.TabIndex = 4;
             this.Apellido_Materno.ThemeName = "VisualStudio2012Light";
             // 
@@ -1003,7 +1003,7 @@
             this.Fecha_de_Nacimiento.Mask = "00/00/0000";
             this.Fecha_de_Nacimiento.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Fecha_de_Nacimiento.Name = "Fecha_de_Nacimiento";
-            this.Fecha_de_Nacimiento.Size = new System.Drawing.Size(209, 24);
+            this.Fecha_de_Nacimiento.Size = new System.Drawing.Size(209, 32);
             this.Fecha_de_Nacimiento.TabIndex = 2;
             this.Fecha_de_Nacimiento.TabStop = false;
             this.Fecha_de_Nacimiento.Text = "__/__/____";
@@ -1042,7 +1042,7 @@
             this.RFC.MaxLength = 13;
             this.RFC.Name = "RFC";
             this.RFC.NullText = "RFC";
-            this.RFC.Size = new System.Drawing.Size(203, 24);
+            this.RFC.Size = new System.Drawing.Size(203, 32);
             this.RFC.TabIndex = 7;
             this.RFC.ThemeName = "VisualStudio2012Light";
             // 
@@ -1055,7 +1055,7 @@
             this.CURP.MaxLength = 18;
             this.CURP.Name = "CURP";
             this.CURP.NullText = "CURP";
-            this.CURP.Size = new System.Drawing.Size(209, 24);
+            this.CURP.Size = new System.Drawing.Size(209, 32);
             this.CURP.TabIndex = 8;
             this.CURP.ThemeName = "VisualStudio2012Light";
             // 
@@ -1080,7 +1080,7 @@
             this.NSS.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.NSS.Name = "NSS";
             this.NSS.NullText = "NSS";
-            this.NSS.Size = new System.Drawing.Size(203, 24);
+            this.NSS.Size = new System.Drawing.Size(203, 35);
             this.NSS.TabIndex = 9;
             this.NSS.TabStop = false;
             this.NSS.Text = "___-__-______";
@@ -1132,7 +1132,7 @@
             // btnCaptura
             // 
             this.btnCaptura.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCaptura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaptura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaptura.Image = ((System.Drawing.Image)(resources.GetObject("btnCaptura.Image")));
             this.btnCaptura.Location = new System.Drawing.Point(3, 3);
             this.btnCaptura.Name = "btnCaptura";
@@ -1145,7 +1145,7 @@
             // btnExaminar
             // 
             this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
             this.btnExaminar.Location = new System.Drawing.Point(121, 3);
             this.btnExaminar.Name = "btnExaminar";
@@ -1163,7 +1163,7 @@
             this.cboCamara.Location = new System.Drawing.Point(3, 119);
             this.cboCamara.Name = "cboCamara";
             this.cboCamara.NullText = "--SELECCIONE--";
-            this.cboCamara.Size = new System.Drawing.Size(237, 32);
+            this.cboCamara.Size = new System.Drawing.Size(237, 23);
             this.cboCamara.TabIndex = 1;
             this.cboCamara.ThemeName = "VisualStudio2012Light";
             // 
