@@ -483,7 +483,7 @@
             this.lblInventarioMinimo.Name = "lblInventarioMinimo";
             this.lblInventarioMinimo.Size = new System.Drawing.Size(172, 46);
             this.lblInventarioMinimo.TabIndex = 0;
-            this.lblInventarioMinimo.Text = "InventarioMínimo:";
+            this.lblInventarioMinimo.Text = "Inventario Mínimo:";
             // 
             // lblHay
             // 
