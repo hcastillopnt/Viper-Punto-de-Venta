@@ -380,6 +380,20 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region getCompanyIdByName
+        /// <summary>
+        /// Metodo para obtener el ID de la compañia por medio del nombre de la compañia
+        /// </summary>
+        /// <param name="companyName">Nombre de la Compañia</param>
+        /// <returns>ID</returns>
+        public static int getCompanyIdByName(string companyName)
+        {
+            var result = dbCtx.Companies.Where(x => x.CompanyName == companyName).FirstOrDefault().Id;
+
+            return result;
+        }
+        #endregion
+
         #region HandleDbUpdateException
         private static Exception HandleDbUpdateException(DbUpdateException dbu)
         {

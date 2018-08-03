@@ -117,8 +117,8 @@ namespace Viper.DesktopApp
             //this.TopMost = true;
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
-            this.Icon= new Icon("Resources/application_icon.ico");
 
+            //Colocar el nombre de la empresa
             Empresa.Text = nom;
             
             //poner el indice cero por defecto en los combobox

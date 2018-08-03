@@ -64,6 +64,13 @@ namespace Viper.DesktopApp
                     AgregarFormularioEnPanel(new frmRegisterCompany());
                     break;
 
+                case "btnSucursales":
+                    string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+                    int companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
+
+                    AgregarFormularioEnPanel(new frmRegisterSite(companyName, companyID));
+                    break;
+
                 case "btnEmpleados":
                     AgregarFormularioEnPanel(new frmAdminEmployees());
                     break;
@@ -141,7 +148,6 @@ namespace Viper.DesktopApp
             //this.TopMost = true;
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
-            //this.Icon = new Icon("Resources/application_icon.ico");
         }
     }
 }

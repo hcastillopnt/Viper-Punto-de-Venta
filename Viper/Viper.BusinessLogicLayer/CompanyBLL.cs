@@ -170,6 +170,22 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
+        #region getCompanyIdByName
+        /// <summary>
+        /// Metodo para obtener el ID de la compañia por medio del nombre de la compañia
+        /// </summary>
+        /// <param name="companyName">Nombre de la Compañia</param>
+        /// <returns>ID</returns>
+        public static int getCompanyIdByName(string companyName)
+        {
+            int CompanyID = 0;
+
+            CompanyID = DataAccessLayer.CompanyDAL.getCompanyIdByName(companyName);
+
+            return CompanyID;
+        }
+        #endregion
+
         #region validateWithDataAnnotations
 
         /// <summary>
