@@ -5408,6 +5408,7 @@ INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VA
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Configuracion', 'F5 Configuracion', 'NULL', 'btnConfiguracion', 'configuracion.png', TRUE);
 
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Empresa', 'F5 Configuracion', 'Empresa', 'btnEmpresa', 'sub_empresa.png', TRUE);
+INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Sucursales', 'F5 Configuracion', 'Sucursales', 'btnSucursales', 'sub_sucursal.png', TRUE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Roles', 'F5 Configuracion', 'Roles', 'btnRoles', 'sub_roles.png', FALSE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Usuarios', 'F5 Configuracion', 'Usuarios', 'btnUsuarios', 'sub_usuarios.png', FALSE);
 INSERT INTO Module (Name, Menu, Submenu, ControlName, ControlImage, IsActive) VALUES('Empleados', 'F5 Configuracion', 'Empleados', 'btnEmpleados', 'sub_empleado.png', TRUE);
