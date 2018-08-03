@@ -781,7 +781,7 @@
             this.btnGuardarSucursal.Name = "btnGuardarSucursal";
             this.btnGuardarSucursal.Size = new System.Drawing.Size(226, 47);
             this.btnGuardarSucursal.TabIndex = 2;
-            this.btnGuardarSucursal.Text = "Guardar Sucursal";
+            this.btnGuardarSucursal.Text = "Registrar";
             this.btnGuardarSucursal.ThemeName = "VisualStudio2012Light";
             // 
             // panelCentral
