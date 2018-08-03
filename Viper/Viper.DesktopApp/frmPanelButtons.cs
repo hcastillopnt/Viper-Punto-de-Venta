@@ -16,6 +16,8 @@ namespace Viper.DesktopApp
     {
         private Button objButton = null;
         string menuSeleccionado = String.Empty;
+        string companyName = String.Empty;
+        int companyID = 0;
 
         public frmPanelButtons(string menu, string rol)
         {
@@ -61,12 +63,15 @@ namespace Viper.DesktopApp
 
                 //F5 Configuracion
                 case "btnEmpresa":
-                    AgregarFormularioEnPanel(new frmRegisterCompany());
+                    companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+                    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
+
+                    AgregarFormularioEnPanel(new frmRegisterCompany(companyID));
                     break;
 
                 case "btnSucursales":
-                    string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-                    int companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
+                    companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+                    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
 
                     AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
                     break;

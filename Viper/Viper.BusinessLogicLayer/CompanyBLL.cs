@@ -117,6 +117,70 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
+        #region getRegimenFiscalByID
+        /// <summary>
+        /// Metodo para obtener el regimen fiscal en base al ID
+        /// </summary>
+        /// <param name="RegimenID">Regimen Fiscal ID</param>
+        /// <returns>RegimenFiscal Name</returns>
+        public static string getRegimenFiscalByID(int RegimenID)
+        {
+            string RegimenFiscal = String.Empty;
+
+            RegimenFiscal = DataAccessLayer.CompanyDAL.getRegimenFiscalByID(RegimenID);
+
+            return RegimenFiscal;
+        }
+        #endregion
+
+        #region getCompanyRegisteredByCompanyID
+        /// <summary>
+        /// Metodo para obtener la informacion de la compañia por medio del Id
+        /// </summary>
+        /// <param name="CompanyID">Company ID</param>
+        /// <returns>Entity</returns>
+        public static Company getCompanyRegisteredByCompanyID(int CompanyID)
+        {
+            Company company = null;
+
+            company = DataAccessLayer.CompanyDAL.getCompanyRegisteredByCompanyID(CompanyID);
+
+            return company;
+        }
+        #endregion
+
+        #region getCompanyAddressSATRegisteredByID
+        /// <summary>
+        /// Metodo para obtener la direccion de la compañia por medio del Id
+        /// </summary>
+        /// <param name="AddressID">Address ID</param>
+        /// <returns>Entity</returns>
+        public static Address getCompanyAddressRegisteredByCompanyID(int AddressID)
+        {
+            Address address = null;
+
+            address = DataAccessLayer.CompanyDAL.getCompanyAddressRegisteredByCompanyID(AddressID);
+
+            return address;
+        }
+        #endregion
+
+        #region getCompanyAddressSATRegisteredByID
+        /// <summary>
+        /// Metodo para obtener la direccion fiscal de la compañia por medio del Id
+        /// </summary>
+        /// <param name="AddressSATID">AddressSATID ID</param>
+        /// <returns>Entity</returns>
+        public static AddressSAT getCompanyAddressSATRegisteredByCompanyID(int AddressSATID)
+        {
+            AddressSAT addressSAT = null;
+
+            addressSAT = DataAccessLayer.CompanyDAL.getCompanyAddressSATRegisteredByCompanyID(AddressSATID);
+
+            return addressSAT;
+        }
+        #endregion
+
         #region getCatalogOfRegimenFiscal
 
         /// <summary>

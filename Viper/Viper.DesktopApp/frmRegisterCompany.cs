@@ -41,25 +41,18 @@ namespace Viper.DesktopApp
         {
             InitializeComponent();
 
-            //Create control RadTextBox to Regimen_Fiscal, because is static control to can receive value in TextBox of here
-            Regimen_Fiscal = new Telerik.WinControls.UI.RadTextBox();
+            uploadControlRegimenFiscalByCode();
 
-            ((System.ComponentModel.ISupportInitialize)(Regimen_Fiscal)).BeginInit();
+            fillDropDownList();
+        }
 
-            this.tlpDC_01.Controls.Add(Regimen_Fiscal, 0, 0);
+        public frmRegisterCompany(int CompanyID)
+        {
+            InitializeComponent();
 
-            Regimen_Fiscal.AutoSize = false;
-            Regimen_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            Regimen_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            Regimen_Fiscal.Enabled = false;
-            Regimen_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Regimen_Fiscal.Location = new System.Drawing.Point(3, 3);
-            Regimen_Fiscal.Name = "Regimen_Fiscal";
-            Regimen_Fiscal.NullText = "REGIMEN FISCAL";
-            Regimen_Fiscal.Size = new System.Drawing.Size(683, 20);
-            Regimen_Fiscal.ThemeName = "VisualStudio2012Light";
+            uploadControlRegimenFiscalByCode();
 
-            ((System.ComponentModel.ISupportInitialize)(Regimen_Fiscal)).EndInit();
+            uploadDataCompany(CompanyID);
         }
 
         #endregion
@@ -122,12 +115,6 @@ namespace Viper.DesktopApp
             //Establecer el foco en el primer campo
             this.ActiveControl = Nombre_Empresa;
             this.Nombre_Empresa.Focus();
-
-            //Cargar los dropdownlist con informacion
-            fillDropDownList();
-
-            //Asignar el tab index a cada control
-            assignTabIndexToControls();
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();
@@ -310,94 +297,184 @@ namespace Viper.DesktopApp
 
         #region Methods of class
 
-        private void assignTabIndexToControls()
+        private String extractValueOfString(String cadena, String stringInicial, String stringFinal)
         {
-            this.Giro_Comercial.TabIndex = 1;
-            this.Nombre_Empresa.TabIndex = 2;
-            this.Tipo_Inmueble.TabIndex = 3;
-            this.Tipo_Vialidad.TabIndex = 4;
-            this.Vialidad.TabIndex = 5;
-            this.Codigo_Postal.TabIndex = 6;
-            this.No_Ext.TabIndex = 7;
-            this.No_Int.TabIndex = 8;
-            this.Colonia.TabIndex = 9;
-            this.Entidad_Federativa.TabIndex = 10;
-            this.Municipio.TabIndex = 11;
-            this.eMail.TabIndex = 12;
-            this.Telefono.TabIndex = 13;
-            this.Celular.TabIndex = 14;
-            this.Nombre_Fiscal.TabIndex = 15;
-            this.RFC.TabIndex = 16;
-            this.CURP.TabIndex = 17;
-            Regimen_Fiscal.TabIndex = 18;
-            this.btnRegimenFiscal.TabIndex = 19;
-            this.Tipo_Inmueble_Fiscal.TabIndex = 20;
-            this.Tipo_Vialidad_Fiscal.TabIndex = 21;
-            this.Vialidad_Fiscal.TabIndex = 22;
-            this.Codigo_Postal_Fiscal.TabIndex = 23;
-            this.No_Ext_Fiscal.TabIndex = 24;
-            this.No_Int_Fiscal.TabIndex = 25;
-            this.Colonia_Fiscal.TabIndex = 26;
-            this.Entidad_Federativa_Fiscal.TabIndex = 27;
-            this.Municipio_Fiscal.TabIndex = 28;
-            this.btnExaminar.TabIndex = 29;
-            this.btnImportarDatosFiscales.TabIndex = 30;
-            this.btnCuentasBanco.TabIndex = 31;
-            this.btnAceptar.TabIndex = 32;
-            this.btnCancelar.TabIndex = 33;
+            int terminaString = cadena.LastIndexOf(stringFinal);
+            String nuevoString = cadena.Substring(0, terminaString);
+            int offset = stringInicial.Length;
+            int iniciaString = nuevoString.LastIndexOf(stringInicial) + offset;
+            int cortar = nuevoString.Length - iniciaString;
+            nuevoString = nuevoString.Substring(iniciaString, cortar);
+            return nuevoString;
+        }
 
-            this.tlpDatosGenerales_1.TabIndex = 0;
-            this.lblNombreEmpresa.TabIndex = 0;
-            this.lblGiro.TabIndex = 0;
-            this.gbDatosGenerales.TabIndex = 0;
-            this.tlpDatosGenerales.TabIndex = 0;
-            this.tlpDatosGenerales_Derecha.TabIndex = 0;
-            this.picLogotipo.TabIndex = 0;
-            this.tlpDatosGenerales_Izquierda.TabIndex = 0;
-            this.tlpDatosGenerales_2.TabIndex = 0;
-            this.lblTipoInmueble.TabIndex = 0;
-            this.lblColonia.TabIndex = 0;
-            this.lblTipoVialidad.TabIndex = 0;
-            this.tlpDG_01.TabIndex = 0;
-            this.lblNombreVialidad.TabIndex = 0;
-            this.tlpDG_02.TabIndex = 0;
-            this.lblNoInt.TabIndex = 0;
-            this.lblNoExt.TabIndex = 0;
-            this.lblCodigoPostal.TabIndex = 0;
-            this.lblEstado.TabIndex = 0;
-            this.tlpDG_03.TabIndex = 0;
-            this.lblLocalidad.TabIndex = 0;
-            this.lblEmail.TabIndex = 0;
-            this.lblTelefono.TabIndex = 0;
-            this.tlpDG_04.TabIndex = 0;
-            this.lblCelular.TabIndex = 0;
-            this.panelIzquierdo.TabIndex = 0;
-            this.panelDerecho.TabIndex = 0;
-            this.panelCentral.TabIndex = 0;
-            this.tlpPrincipal.TabIndex = 0;
-            this.tlpCentro.TabIndex = 0;
-            this.gbDatosFiscales.TabIndex = 0;
-            this.tlpDatosFiscales.TabIndex = 0;
-            this.lblTipoInmuebleFiscal.TabIndex = 0;
-            this.lblColoniaFiscal.TabIndex = 0;
-            this.lblTipoVialidadFiscal.TabIndex = 0;
-            this.tlpDF_02.TabIndex = 0;
-            this.lblNombreVialidadFiscal.TabIndex = 0;
-            this.tlpDF_01.TabIndex = 0;
-            this.lblNoIntFiscal.TabIndex = 0;
-            this.lblNoExtFiscal.TabIndex = 0;
-            this.lblCodigoPostalFiscal.TabIndex = 0;
-            this.lblEstadoFiscal.TabIndex = 0;
-            this.tlpDF_03.TabIndex = 0;
-            this.lblLocalidadFiscal.TabIndex = 0;
-            this.gbDatosCorporativos.TabIndex = 0;
-            this.tlpDatosCorporativos.TabIndex = 0;
-            this.tlpDC_01.TabIndex = 0;
-            this.lblRegimenFiscal.TabIndex = 0;
-            this.lblRFC.TabIndex = 0;
-            this.lblNombreFiscal.TabIndex = 0;
-            this.lblCURP.TabIndex = 0;
-            this.tlpBotones.TabIndex = 0;
+        private void uploadDataCompany(int CompanyID)
+        {
+            company = BusinessLogicLayer.CompanyBLL.getCompanyRegisteredByCompanyID(CompanyID);
+            address = BusinessLogicLayer.CompanyBLL.getCompanyAddressRegisteredByCompanyID(company.AddressId);
+            addressSAT = BusinessLogicLayer.CompanyBLL.getCompanyAddressSATRegisteredByCompanyID(company.AddressSATId);
+
+            this.Tipo_Inmueble.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
+            this.Tipo_Inmueble.DisplayMember = "Name";
+            this.Tipo_Inmueble.ValueMember = "Id";
+
+            this.Tipo_Vialidad.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
+            this.Tipo_Vialidad.DisplayMember = "Name";
+            this.Tipo_Vialidad.ValueMember = "Id";
+
+            this.Entidad_Federativa.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList(); ;
+            this.Entidad_Federativa.DisplayMember = "Description";
+            this.Entidad_Federativa.ValueMember = "Id";
+
+            this.Municipio.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetCityDropDownList(address.StateProvinceId);
+            this.Municipio.DisplayMember = "Description";
+            this.Municipio.ValueMember = "Id";
+
+            this.Giro_Comercial.Items.Add("FARMACIA");
+            this.Giro_Comercial.SelectedIndex = 1;
+
+            this.Nombre_Empresa.Text = company.CompanyName;
+            this.Tipo_Inmueble.SelectedValue = address.AddressTypeId;
+            this.Tipo_Vialidad.SelectedValue = address.RoadTypeId;
+            this.Codigo_Postal.Text = address.PostalCode;
+            if (address.AddressLine1.Contains("NO. INT: "))
+            {
+                this.Vialidad.Text = extractValueOfString(address.AddressLine1, "CALLE: ", ", NO. EXT:");
+                this.No_Ext.Text = extractValueOfString(address.AddressLine1, "NO. EXT: ", ",");
+                this.No_Int.Text = extractValueOfString(address.AddressLine1, "NO. INT: ", ";");
+            }
+            else
+            {
+                this.Vialidad.Text = extractValueOfString(address.AddressLine1, "CALLE: ", ",");
+                this.No_Ext.Text = extractValueOfString(address.AddressLine1, "NO. EXT: ", ";");
+            }
+            this.Colonia.Text = extractValueOfString(address.AddressLine2, "COLONIA: ", ";");
+            this.Entidad_Federativa.SelectedValue = address.StateProvinceId;
+            this.Municipio.SelectedValue = address.CityId;
+            this.eMail.Text = company.EmailAddress;
+            this.Telefono.Text = company.PhoneNumber;
+            this.Celular.Text = company.CellphoneNumber;
+            this.Nombre_Fiscal.Text = company.FiscalName;
+            this.RFC.Text = company.RFC;
+            this.CURP.Text = company.CURP;
+            Regimen_Fiscal.Text = BusinessLogicLayer.CompanyBLL.getRegimenFiscalByID(company.RegimenFiscalId);
+
+            this.Tipo_Vialidad_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
+            this.Tipo_Vialidad_Fiscal.DisplayMember = "Name";
+            this.Tipo_Vialidad_Fiscal.ValueMember = "Id";
+
+            this.Tipo_Inmueble_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
+            this.Tipo_Inmueble_Fiscal.DisplayMember = "Name";
+            this.Tipo_Inmueble_Fiscal.ValueMember = "Id";
+
+            this.Entidad_Federativa_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList();
+            this.Entidad_Federativa_Fiscal.DisplayMember = "Description";
+            this.Entidad_Federativa_Fiscal.ValueMember = "Id";
+
+            this.Municipio_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetCityDropDownList(addressSAT.StateProvinceId);
+            this.Municipio_Fiscal.DisplayMember = "Description";
+            this.Municipio_Fiscal.ValueMember = "Id";
+
+            this.Tipo_Inmueble_Fiscal.SelectedValue = addressSAT.AddressTypeId;
+            this.Tipo_Vialidad_Fiscal.SelectedValue = addressSAT.RoadTypeId;
+            this.Codigo_Postal_Fiscal.Text = addressSAT.PostalCode;
+            if (addressSAT.AddressLine1.Contains("NO. INT: "))
+            {
+                this.Vialidad_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "CALLE: ", ", NO. EXT:");
+                this.No_Ext_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "NO. EXT: ", ",");
+                this.No_Int_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "NO. INT: ", ";");
+            }
+            else
+            {
+                this.Vialidad_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "CALLE: ", ",");
+                this.No_Ext_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "NO. EXT: ", ";");
+            }
+            this.Colonia_Fiscal.Text = extractValueOfString(addressSAT.AddressLine2, "COLONIA: ", ";");
+            this.Entidad_Federativa_Fiscal.SelectedValue = addressSAT.StateProvinceId;
+            this.Municipio_Fiscal.SelectedValue = addressSAT.CityId;
+
+            this.btnCancelar.Enabled = false;
+            this.btnAceptar.Enabled = false;
+            this.btnExaminar.Enabled = false;
+            this.btnImportarDatosFiscales.Enabled = false;
+            this.btnRegimenFiscal.Enabled = false;
+
+            string folder = @"\images\company_logo\";
+            string appPath = Path.GetDirectoryName(Application.StartupPath);
+            string folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
+
+            if (Directory.Exists(folderToSave))
+            {
+                string companyName = Nombre_Empresa.Text.Trim().ToString();
+                string filename = companyName + ".jpg";
+                string curFile = folderToSave + filename;
+
+                if (File.Exists(curFile))
+                {
+                    this.picLogotipo.Image = Image.FromFile(folderToSave + filename);
+                    this.picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+
+            this.Giro_Comercial.Enabled = false;
+            this.Nombre_Empresa.Enabled = false;
+            this.Tipo_Inmueble.Enabled = false;
+            this.Tipo_Vialidad.Enabled = false;
+            this.Vialidad.Enabled = false;
+            this.Codigo_Postal.Enabled = false;
+            this.No_Ext.Enabled = false;
+            this.No_Int.Enabled = false;
+            this.Colonia.Enabled = false;
+            this.Entidad_Federativa.Enabled = false;
+            this.Municipio.Enabled = false;
+            this.eMail.Enabled = false;
+            this.Telefono.Enabled = false;
+            this.Celular.Enabled = false;
+            this.Nombre_Fiscal.Enabled = false;
+            this.RFC.Enabled = false;
+            this.CURP.Enabled = false;
+            Regimen_Fiscal.Enabled = false;
+            this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
+            this.Tipo_Vialidad_Fiscal.SelectedIndex = 0;
+            this.Vialidad_Fiscal.Enabled = false;
+            this.Codigo_Postal_Fiscal.Enabled = false;
+            this.No_Ext_Fiscal.Enabled = false;
+            this.No_Int_Fiscal.Enabled = false;
+            this.Colonia_Fiscal.Enabled = false;
+            this.Entidad_Federativa_Fiscal.Enabled = false;
+            this.Municipio_Fiscal.Enabled = false;
+            this.Tipo_Inmueble_Fiscal.Enabled = false;
+            this.Tipo_Vialidad_Fiscal.Enabled = false;
+            this.Vialidad_Fiscal.Enabled = false;
+            this.No_Ext_Fiscal.Enabled = false;
+            this.No_Int_Fiscal.Enabled = false;
+            this.Codigo_Postal_Fiscal.Enabled = false;
+            this.Colonia_Fiscal.Enabled = false;
+            this.Entidad_Federativa_Fiscal.Enabled = false;
+            this.Municipio_Fiscal.Enabled = false;
+        }
+
+        private void uploadControlRegimenFiscalByCode()
+        {
+            //Create control RadTextBox to Regimen_Fiscal, because is static control to can receive value in TextBox of here
+            Regimen_Fiscal = new Telerik.WinControls.UI.RadTextBox();
+
+            ((System.ComponentModel.ISupportInitialize)(Regimen_Fiscal)).BeginInit();
+
+            this.tlpDC_01.Controls.Add(Regimen_Fiscal, 0, 0);
+
+            Regimen_Fiscal.AutoSize = false;
+            Regimen_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            Regimen_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            Regimen_Fiscal.Enabled = false;
+            Regimen_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Regimen_Fiscal.Location = new System.Drawing.Point(3, 3);
+            Regimen_Fiscal.Name = "Regimen_Fiscal";
+            Regimen_Fiscal.NullText = "REGIMEN FISCAL";
+            Regimen_Fiscal.Size = new System.Drawing.Size(683, 20);
+            Regimen_Fiscal.ThemeName = "VisualStudio2012Light";
+
+            ((System.ComponentModel.ISupportInitialize)(Regimen_Fiscal)).EndInit();
         }
 
         private void importFiscalData()
@@ -410,10 +487,10 @@ namespace Viper.DesktopApp
             address.RoadTypeId = Convert.ToInt32(Tipo_Vialidad.SelectedValue);
             address.AddressTypeId = Convert.ToInt32(Tipo_Inmueble.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int.Text.Trim().ToString()))
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim();
+                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim() + ";";
             else
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim();
-            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim();
+                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
+            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
             address.CountryRegionId = 159;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
@@ -551,10 +628,10 @@ namespace Viper.DesktopApp
             address.RoadTypeId = Convert.ToInt32(Tipo_Vialidad.SelectedValue);
             address.AddressTypeId = Convert.ToInt32(Tipo_Inmueble.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int.Text.Trim().ToString()))
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim();
+                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim() + ";";
             else
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim();
-            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim();
+                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
+            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
             address.CountryRegionId = 159;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
@@ -570,10 +647,10 @@ namespace Viper.DesktopApp
             addressSAT.RoadTypeId = Convert.ToInt32(Tipo_Vialidad_Fiscal.SelectedValue);
             addressSAT.AddressTypeId = Convert.ToInt32(Tipo_Inmueble_Fiscal.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int_Fiscal.Text.Trim().ToString()))
-                addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim() + ", NO. INT:" + No_Int_Fiscal.Text.Trim();
+                addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim() + ", NO. INT:" + No_Int_Fiscal.Text.Trim() + ";";
             else
-                addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim();
-            addressSAT.AddressLine2 = "COLONIA: " + Colonia_Fiscal.Text.Trim();
+                addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim() + ";";
+            addressSAT.AddressLine2 = "COLONIA: " + Colonia_Fiscal.Text.Trim() + ";";
             addressSAT.CountryRegionId = 159;
             addressSAT.StateProvinceId = Convert.ToInt32(Entidad_Federativa_Fiscal.SelectedValue);
             addressSAT.CityId = Convert.ToInt32(Municipio_Fiscal.SelectedValue);

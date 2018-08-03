@@ -118,48 +118,6 @@ namespace Viper.DesktopApp
             args.Cancel = args.CloseReason == CloseReason.UserClosing;
         }
 
-        //private void frmMain_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    switch (e.KeyCode)
-        //    {
-        //        case Keys.F1:
-        //            //AgregarFormularioEnPanel(new frmShoppingCart());
-        //            break;
-
-        //        case Keys.F2:
-        //            AgregarFormularioEnPanel(new frmAdminProducts());
-        //            break;
-
-        //        case Keys.F3:
-        //            AgregarFormularioEnPanel(new frmAddProductToInventory());
-        //            break;
-
-        //        case Keys.F4:
-        //            AgregarFormularioEnPanel(new frmPanelButtons());
-        //            break;
-
-        //        case Keys.F5:
-        //            AgregarFormularioEnPanel(new frmPanelButtons());
-        //            break;
-
-        //        case Keys.F6:
-        //            //AgregarFormularioEnPanel(new frmCutCash());
-        //            break;
-
-        //        case Keys.F7:
-        //            AgregarFormularioEnPanel(new frmPanelButtons());
-        //            break;
-
-        //        case Keys.F8:
-        //            AgregarFormularioEnPanel(new frmPanelButtons());
-        //            break;
-
-        //        case Keys.F9:
-        //            //AgregarFormularioEnPanel(new frmDoctor());
-        //            break;
-        //    }
-        //}
-
         public void Menu_Click(object sender, EventArgs e)
         {
             objButton = (Button)sender;

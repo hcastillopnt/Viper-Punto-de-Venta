@@ -292,6 +292,62 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region getRegimenFiscalByID
+        /// <summary>
+        /// Metodo para obtener el regimen fiscal en base al ID
+        /// </summary>
+        /// <param name="RegimenID">Regimen Fiscal ID</param>
+        /// <returns>RegimenFiscal Name</returns>
+        public static string getRegimenFiscalByID(int RegimenID)
+        {
+            var result = dbCtx.RegimenesFiscal.Where(x => x.Id == RegimenID).FirstOrDefault().Description;
+
+            return result;
+        }
+        #endregion
+
+        #region getCompanyRegisteredByCompanyID
+        /// <summary>
+        /// Metodo para obtener la informacion de la compañia por medio del Id
+        /// </summary>
+        /// <param name="CompanyID">Company ID</param>
+        /// <returns>Entity</returns>
+        public static Company getCompanyRegisteredByCompanyID(int CompanyID)
+        {
+            var result = dbCtx.Companies.Where(x => x.Id == CompanyID).SingleOrDefault();
+
+            return result;
+        }
+        #endregion
+
+        #region getCompanyAddressSATRegisteredByID
+        /// <summary>
+        /// Metodo para obtener la direccion de la compañia por medio del Id
+        /// </summary>
+        /// <param name="AddressID">Address ID</param>
+        /// <returns>Entity</returns>
+        public static Address getCompanyAddressRegisteredByCompanyID(int AddressID)
+        {
+            var result = dbCtx.Addresses.Where(x => x.Id == AddressID).SingleOrDefault();
+
+            return result;
+        }
+        #endregion
+
+        #region getCompanyAddressSATRegisteredByID
+        /// <summary>
+        /// Metodo para obtener la direccion fiscal de la compañia por medio del Id
+        /// </summary>
+        /// <param name="AddressSATID">AddressSAT ID</param>
+        /// <returns>Entity</returns>
+        public static AddressSAT getCompanyAddressSATRegisteredByCompanyID(int AddressSATID)
+        {
+            var result = dbCtx.AddressesSAT.Where(x => x.Id == AddressSATID).SingleOrDefault();
+
+            return result;
+        }
+        #endregion
+
         #region getCatalogOfRegimenFiscal
 
         /// <summary>
