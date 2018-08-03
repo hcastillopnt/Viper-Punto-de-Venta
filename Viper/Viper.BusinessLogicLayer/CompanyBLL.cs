@@ -78,6 +78,23 @@ namespace Viper.BusinessLogicLayer
         }
         #endregion
 
+        #region isCompanyRegistered
+
+        /// <summary>
+        /// Metodo para saber si existen compañias registradas en la BD
+        /// </summary>
+        /// <returns>Existen o No Existen</returns>
+        public static bool isCompanyRegistered()
+        {
+            bool isExistsCompany = false;
+
+            isExistsCompany = DataAccessLayer.CompanyDAL.isCompanyRegistered();
+
+            return isExistsCompany;
+        }
+
+        #endregion
+
         #region getPasswordSaved
         /// <summary>
         /// Get password saved in database

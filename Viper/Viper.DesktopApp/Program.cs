@@ -16,8 +16,19 @@ namespace Viper.DesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
-            //Application.Run(new frmRegisterCompany());
+
+            bool isExistsCompany = false;
+
+            isExistsCompany = BusinessLogicLayer.CompanyBLL.isCompanyRegistered();
+
+            if (isExistsCompany)
+            {
+                Application.Run(new frmLogin());
+            }
+            else
+            {
+                Application.Run(new frmRegisterCompany());
+            }
         }
     }
 }
