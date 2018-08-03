@@ -34,11 +34,11 @@
             this.pvAddProduct = new Telerik.WinControls.UI.RadPageView();
             this.rpvFarmacopea = new Telerik.WinControls.UI.RadPageViewPage();
             this.rpvImagen = new Telerik.WinControls.UI.RadPageViewPage();
+            this.gpoAgregarImagen = new Telerik.WinControls.UI.RadGroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tlp19 = new System.Windows.Forms.TableLayoutPanel();
             this.btnExaminar = new Telerik.WinControls.UI.RadButton();
             this.btnAgregarImagen = new Telerik.WinControls.UI.RadButton();
-            this.gpoAgregarImagen = new Telerik.WinControls.UI.RadGroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tlp17 = new System.Windows.Forms.TableLayoutPanel();
             this.picImagenProducto = new System.Windows.Forms.PictureBox();
             this.tlp18 = new System.Windows.Forms.TableLayoutPanel();
@@ -99,12 +99,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pvAddProduct)).BeginInit();
             this.pvAddProduct.SuspendLayout();
             this.rpvImagen.SuspendLayout();
-            this.tlp19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpoAgregarImagen)).BeginInit();
             this.gpoAgregarImagen.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tlp19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).BeginInit();
             this.tlp17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenProducto)).BeginInit();
             this.tlp18.SuspendLayout();
@@ -199,7 +199,7 @@
             this.pvAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pvAddProduct.Location = new System.Drawing.Point(205, 3);
             this.pvAddProduct.Name = "pvAddProduct";
-            this.pvAddProduct.SelectedPage = this.rpvDatosBasicos;
+            this.pvAddProduct.SelectedPage = this.rpvImagen;
             this.pvAddProduct.Size = new System.Drawing.Size(937, 715);
             this.pvAddProduct.TabIndex = 0;
             this.pvAddProduct.TabStop = false;
@@ -217,7 +217,6 @@
             // 
             // rpvImagen
             // 
-            this.rpvImagen.Controls.Add(this.tlp19);
             this.rpvImagen.Controls.Add(this.gpoAgregarImagen);
             this.rpvImagen.Controls.Add(this.tlp16);
             this.rpvImagen.ItemSize = new System.Drawing.SizeF(25F, 60F);
@@ -226,110 +225,118 @@
             this.rpvImagen.Size = new System.Drawing.Size(901, 705);
             this.rpvImagen.Text = "Imagen";
             // 
+            // gpoAgregarImagen
+            // 
+            this.gpoAgregarImagen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gpoAgregarImagen.Controls.Add(this.tableLayoutPanel4);
+            this.gpoAgregarImagen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gpoAgregarImagen.HeaderText = "";
+            this.gpoAgregarImagen.Location = new System.Drawing.Point(0, 36);
+            this.gpoAgregarImagen.Name = "gpoAgregarImagen";
+            this.gpoAgregarImagen.Size = new System.Drawing.Size(901, 669);
+            this.gpoAgregarImagen.TabIndex = 2;
+            this.gpoAgregarImagen.ThemeName = "VisualStudio2012Light";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.tlp19, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.tlp17, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tlp18, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 18);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 649);
+            this.tableLayoutPanel4.TabIndex = 3;
+            // 
             // tlp19
             // 
             this.tlp19.ColumnCount = 3;
             this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp19.Controls.Add(this.btnExaminar, 0, 1);
-            this.tlp19.Controls.Add(this.btnAgregarImagen, 2, 1);
-            this.tlp19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp19.Location = new System.Drawing.Point(0, 510);
+            this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlp19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlp19.Controls.Add(this.btnExaminar, 0, 0);
+            this.tlp19.Controls.Add(this.btnAgregarImagen, 2, 0);
+            this.tlp19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlp19.Location = new System.Drawing.Point(3, 586);
             this.tlp19.Name = "tlp19";
-            this.tlp19.RowCount = 2;
+            this.tlp19.RowCount = 1;
             this.tlp19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlp19.Size = new System.Drawing.Size(901, 81);
+            this.tlp19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp19.Size = new System.Drawing.Size(891, 60);
             this.tlp19.TabIndex = 2;
             // 
             // btnExaminar
             // 
             this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExaminar.Location = new System.Drawing.Point(3, 34);
+            this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
+            this.btnExaminar.Location = new System.Drawing.Point(3, 3);
             this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(294, 44);
+            this.btnExaminar.Size = new System.Drawing.Size(290, 54);
             this.btnExaminar.TabIndex = 1;
             this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExaminar.ThemeName = "VisualStudio2012Light";
             // 
             // btnAgregarImagen
             // 
             this.btnAgregarImagen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAgregarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarImagen.Location = new System.Drawing.Point(603, 34);
+            this.btnAgregarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarImagen.Image")));
+            this.btnAgregarImagen.Location = new System.Drawing.Point(596, 3);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
-            this.btnAgregarImagen.Size = new System.Drawing.Size(295, 44);
+            this.btnAgregarImagen.Size = new System.Drawing.Size(292, 54);
             this.btnAgregarImagen.TabIndex = 2;
             this.btnAgregarImagen.Text = "Agregar";
+            this.btnAgregarImagen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarImagen.ThemeName = "VisualStudio2012Light";
-            // 
-            // gpoAgregarImagen
-            // 
-            this.gpoAgregarImagen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gpoAgregarImagen.Controls.Add(this.tableLayoutPanel4);
-            this.gpoAgregarImagen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gpoAgregarImagen.HeaderText = "";
-            this.gpoAgregarImagen.Location = new System.Drawing.Point(0, 36);
-            this.gpoAgregarImagen.Name = "gpoAgregarImagen";
-            this.gpoAgregarImagen.Size = new System.Drawing.Size(901, 474);
-            this.gpoAgregarImagen.TabIndex = 2;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.375F));
-            this.tableLayoutPanel4.Controls.Add(this.tlp17, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tlp18, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 18);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.48458F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.51542F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 454);
-            this.tableLayoutPanel4.TabIndex = 3;
             // 
             // tlp17
             // 
             this.tlp17.ColumnCount = 3;
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tlp17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlp17.Controls.Add(this.picImagenProducto, 1, 0);
             this.tlp17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp17.Location = new System.Drawing.Point(3, 3);
             this.tlp17.Name = "tlp17";
             this.tlp17.RowCount = 1;
             this.tlp17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp17.Size = new System.Drawing.Size(891, 313);
+            this.tlp17.Size = new System.Drawing.Size(891, 448);
             this.tlp17.TabIndex = 0;
             // 
             // picImagenProducto
             // 
             this.picImagenProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picImagenProducto.Location = new System.Drawing.Point(300, 3);
+            this.picImagenProducto.Image = ((System.Drawing.Image)(resources.GetObject("picImagenProducto.Image")));
+            this.picImagenProducto.Location = new System.Drawing.Point(136, 3);
             this.picImagenProducto.Name = "picImagenProducto";
-            this.picImagenProducto.Size = new System.Drawing.Size(291, 307);
-            this.picImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagenProducto.Size = new System.Drawing.Size(617, 442);
+            this.picImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImagenProducto.TabIndex = 0;
             this.picImagenProducto.TabStop = false;
             // 
             // tlp18
             // 
             this.tlp18.ColumnCount = 3;
-            this.tlp18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlp18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlp18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tlp18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tlp18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlp18.Controls.Add(this.gpoCaracteristicas, 1, 0);
             this.tlp18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp18.Location = new System.Drawing.Point(3, 322);
+            this.tlp18.Location = new System.Drawing.Point(3, 457);
             this.tlp18.Name = "tlp18";
             this.tlp18.RowCount = 1;
             this.tlp18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp18.Size = new System.Drawing.Size(891, 129);
+            this.tlp18.Size = new System.Drawing.Size(891, 123);
             this.tlp18.TabIndex = 1;
             // 
             // gpoCaracteristicas
@@ -339,9 +346,9 @@
             this.gpoCaracteristicas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpoCaracteristicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoCaracteristicas.HeaderText = "Características";
-            this.gpoCaracteristicas.Location = new System.Drawing.Point(300, 3);
+            this.gpoCaracteristicas.Location = new System.Drawing.Point(136, 3);
             this.gpoCaracteristicas.Name = "gpoCaracteristicas";
-            this.gpoCaracteristicas.Size = new System.Drawing.Size(291, 123);
+            this.gpoCaracteristicas.Size = new System.Drawing.Size(617, 117);
             this.gpoCaracteristicas.TabIndex = 1;
             this.gpoCaracteristicas.Text = "Características";
             this.gpoCaracteristicas.ThemeName = "VisualStudio2012Light";
@@ -355,7 +362,7 @@
             this.Caracteristicas.Multiline = true;
             this.Caracteristicas.Name = "Caracteristicas";
             this.Caracteristicas.NullText = "Características";
-            this.Caracteristicas.Size = new System.Drawing.Size(287, 103);
+            this.Caracteristicas.Size = new System.Drawing.Size(613, 97);
             this.Caracteristicas.TabIndex = 1;
             this.Caracteristicas.ThemeName = "VisualStudio2012Light";
             // 
@@ -1037,12 +1044,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pvAddProduct)).EndInit();
             this.pvAddProduct.ResumeLayout(false);
             this.rpvImagen.ResumeLayout(false);
-            this.tlp19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpoAgregarImagen)).EndInit();
             this.gpoAgregarImagen.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tlp19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarImagen)).EndInit();
             this.tlp17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picImagenProducto)).EndInit();
             this.tlp18.ResumeLayout(false);

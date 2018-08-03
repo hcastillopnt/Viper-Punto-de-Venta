@@ -249,6 +249,5 @@ namespace Viper.DesktopApp
             }
         }
         #endregion
-
     }
 }

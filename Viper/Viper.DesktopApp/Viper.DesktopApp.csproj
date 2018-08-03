@@ -301,6 +301,7 @@
     <Content Include="images\icon\lupa.png" />
     <Content Include="images\icon\medico.png" />
     <Content Include="images\icon\nuevo.png" />
+    <Content Include="images\icon\pastillas.png" />
     <Content Include="images\icon\procesos.png" />
     <Content Include="images\icon\productos.png" />
     <Content Include="images\icon\question.png" />
