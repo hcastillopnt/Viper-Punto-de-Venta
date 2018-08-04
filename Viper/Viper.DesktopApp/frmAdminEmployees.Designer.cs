@@ -787,7 +787,7 @@
             this.cboLocalidad.Location = new System.Drawing.Point(124, 3);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.NullText = "--SELECCIONE--";
-            this.cboLocalidad.Size = new System.Drawing.Size(325, 28);
+            this.cboLocalidad.Size = new System.Drawing.Size(325, 32);
             this.cboLocalidad.TabIndex = 9;
             this.cboLocalidad.ThemeName = "VisualStudio2012Light";
             this.cboLocalidad.Leave += new System.EventHandler(this.cboLocalidad_Leave);
