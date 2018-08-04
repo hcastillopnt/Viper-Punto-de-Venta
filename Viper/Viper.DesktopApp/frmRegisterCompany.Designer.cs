@@ -382,9 +382,10 @@
             this.Colonia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Colonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Colonia.Location = new System.Drawing.Point(153, 102);
+            this.Colonia.Margin = new System.Windows.Forms.Padding(3, 3, 4, 3);
             this.Colonia.Name = "Colonia";
             this.Colonia.NullText = "COLONIA";
-            this.Colonia.Size = new System.Drawing.Size(596, 27);
+            this.Colonia.Size = new System.Drawing.Size(595, 24);
             this.Colonia.TabIndex = 9;
             this.Colonia.ThemeName = "VisualStudio2012Light";
             // 
@@ -708,9 +709,10 @@
             this.eMail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eMail.Location = new System.Drawing.Point(153, 168);
+            this.eMail.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.eMail.Name = "eMail";
             this.eMail.NullText = "EMAIL@EXAMPLE.COM";
-            this.eMail.Size = new System.Drawing.Size(596, 27);
+            this.eMail.Size = new System.Drawing.Size(593, 24);
             this.eMail.TabIndex = 12;
             this.eMail.ThemeName = "VisualStudio2012Light";
             // 
