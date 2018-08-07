@@ -301,7 +301,7 @@ namespace Viper.DesktopApp
             int offset = stringInicial.Length;
             int iniciaString = nuevoString.LastIndexOf(stringInicial) + offset;
             int cortar = nuevoString.Length - iniciaString;
-            nuevoString = nuevoString.Substring(iniciaString, cortar);
+            nuevoString =  nuevoString.Substring(iniciaString, cortar);
             return nuevoString;
         }
 
