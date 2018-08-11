@@ -132,11 +132,11 @@ namespace Viper.DesktopApp
                     break;
 
                 case "btnProductos":
-                    AgregarFormularioEnPanel(new frmAdminProducts());
+                    //AgregarFormularioEnPanel(new frmAdminProducts());
                     break;
 
                 case "btnInventario":
-                    AgregarFormularioEnPanel(new frmAddProductToInventory());
+                    //AgregarFormularioEnPanel(new frmAddProductToInventory());
                     break;
 
                 case "btnOperaciones":

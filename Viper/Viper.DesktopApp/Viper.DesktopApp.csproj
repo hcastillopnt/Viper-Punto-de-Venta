@@ -85,47 +85,11 @@
     <Reference Include="TelerikCommon, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmRegisterCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegisterCustomer.Designer.cs">
-      <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRegisterProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRegisterProduct.Designer.cs">
       <DependentUpon>frmRegisterProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAddProductToInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddProductToInventory.Designer.cs">
-      <DependentUpon>frmAddProductToInventory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRegisterSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegisterSupplier.Designer.cs">
-      <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAdminProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminProducts.Designer.cs">
-      <DependentUpon>frmAdminProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAdminCustomers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminCustomers.Designer.cs">
-      <DependentUpon>frmAdminCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAdminSuppliers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminSuppliers.Designer.cs">
-      <DependentUpon>frmAdminSuppliers.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
@@ -183,26 +147,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilMessages.cs" />
-    <EmbeddedResource Include="frmRegisterCustomer.resx">
-      <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterProduct.resx">
       <DependentUpon>frmRegisterProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddProductToInventory.resx">
-      <DependentUpon>frmAddProductToInventory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterSupplier.resx">
-      <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminProducts.resx">
-      <DependentUpon>frmAdminProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminCustomers.resx">
-      <DependentUpon>frmAdminCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminSuppliers.resx">
-      <DependentUpon>frmAdminSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
