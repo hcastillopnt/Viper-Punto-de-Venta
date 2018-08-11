@@ -20,6 +20,10 @@ namespace Viper.BusinessEntities
             //    new CreateDatabaseIfNotExists<ViperDbContext>());
         }
 
+        public DbSet<CountryRegion> CountriesRegion { get; set; }
+        public DbSet<StateProvince> StatesProvince { get; set; }
+        public DbSet<City> Cities { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
