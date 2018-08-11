@@ -12,8 +12,8 @@ namespace Viper.BusinessEntities.Common
 
         string CreatedBy { get; set; }
 
-        DateTime UpdatedDate { get; set; }
+        DateTime LastUpdatedDate { get; set; }
 
-        string UpdatedBy { get; set; }
+        string LastUpdatedBy { get; set; }
     }
 }

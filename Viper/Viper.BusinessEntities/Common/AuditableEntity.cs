@@ -10,18 +10,19 @@ namespace Viper.BusinessEntities.Common
     public abstract class AuditableEntity<T> : Entity<T>, IAuditableEntity
     {
         [ScaffoldColumn(false)]
+        [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }
 
-
-        [MaxLength(256)]
         [ScaffoldColumn(false)]
+        [DataType(DataType.Text)]
         public string CreatedBy { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime UpdatedDate { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime LastUpdatedDate { get; set; }
 
-        [MaxLength(256)]
         [ScaffoldColumn(false)]
-        public string UpdatedBy { get; set; }
+        [DataType(DataType.Text)]
+        public string LastUpdatedBy { get; set; }
     }
 }
