@@ -272,7 +272,7 @@
             this.rpvAddCliente.Size = new System.Drawing.Size(625, 427);
             this.rpvAddCliente.TabIndex = 2;
             this.rpvAddCliente.TabStop = false;
-            this.rpvAddCliente.ThemeName = "EvalFormTheme";
+            this.rpvAddCliente.ThemeName = "VisualStudio2012Light";
             // 
             // pvDatosBasicos
             // 
@@ -289,7 +289,7 @@
             this.tlp3.ColumnCount = 3;
             this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.21489F));
             this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.78511F));
-            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tlp3.Controls.Add(this.tpl3, 1, 0);
             this.tlp3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp3.Location = new System.Drawing.Point(0, 0);
@@ -313,7 +313,7 @@
             this.tpl3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.90801F));
             this.tpl3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.09199F));
             this.tpl3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tpl3.Size = new System.Drawing.Size(580, 382);
+            this.tpl3.Size = new System.Drawing.Size(578, 382);
             this.tpl3.TabIndex = 0;
             // 
             // tpl9
@@ -323,7 +323,7 @@
             this.tpl9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.79781F));
             this.tpl9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tpl9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
-            this.tpl9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tpl9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tpl9.Controls.Add(this.btnAceptar_, 2, 1);
             this.tpl9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl9.Location = new System.Drawing.Point(3, 329);
@@ -331,7 +331,7 @@
             this.tpl9.RowCount = 2;
             this.tpl9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tpl9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tpl9.Size = new System.Drawing.Size(574, 50);
+            this.tpl9.Size = new System.Drawing.Size(572, 50);
             this.tpl9.TabIndex = 7;
             // 
             // btnAceptar_
@@ -339,7 +339,7 @@
             this.btnAceptar_.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAceptar_.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar_.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar_.Image")));
-            this.btnAceptar_.Location = new System.Drawing.Point(209, 12);
+            this.btnAceptar_.Location = new System.Drawing.Point(205, 12);
             this.btnAceptar_.Margin = new System.Windows.Forms.Padding(3, 33, 3, 3);
             this.btnAceptar_.Name = "btnAceptar_";
             this.btnAceptar_.Size = new System.Drawing.Size(141, 35);
@@ -358,7 +358,7 @@
             this.gpoDatosPersonales.Location = new System.Drawing.Point(3, 3);
             this.gpoDatosPersonales.Name = "gpoDatosPersonales";
             this.gpoDatosPersonales.Padding = new System.Windows.Forms.Padding(2, 18, 2, 1);
-            this.gpoDatosPersonales.Size = new System.Drawing.Size(574, 199);
+            this.gpoDatosPersonales.Size = new System.Drawing.Size(572, 199);
             this.gpoDatosPersonales.TabIndex = 3;
             this.gpoDatosPersonales.Text = "Datos personales";
             this.gpoDatosPersonales.ThemeName = "VisualStudio2012Light";
@@ -386,7 +386,7 @@
             this.tlp4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tlp4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tlp4.Size = new System.Drawing.Size(412, 180);
+            this.tlp4.Size = new System.Drawing.Size(410, 180);
             this.tlp4.TabIndex = 2;
             // 
             // tpl6
@@ -394,7 +394,7 @@
             this.tpl6.ColumnCount = 3;
             this.tpl6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.86957F));
             this.tpl6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.13043F));
-            this.tpl6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tpl6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tpl6.Controls.Add(this.lblTelefono, 0, 0);
             this.tpl6.Controls.Add(this.Telefono, 0, 1);
             this.tpl6.Controls.Add(this.Celular, 2, 1);
@@ -405,7 +405,7 @@
             this.tpl6.RowCount = 2;
             this.tpl6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tpl6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tpl6.Size = new System.Drawing.Size(389, 48);
+            this.tpl6.Size = new System.Drawing.Size(387, 48);
             this.tpl6.TabIndex = 4;
             // 
             // lblTelefono
@@ -425,7 +425,7 @@
             this.Telefono.Location = new System.Drawing.Point(3, 18);
             this.Telefono.Name = "Telefono";
             this.Telefono.NullText = "TELÉFONO";
-            this.Telefono.Size = new System.Drawing.Size(201, 24);
+            this.Telefono.Size = new System.Drawing.Size(197, 24);
             this.Telefono.TabIndex = 1;
             this.Telefono.ThemeName = "VisualStudio2012Light";
             // 
@@ -433,10 +433,10 @@
             // 
             this.Celular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Celular.Location = new System.Drawing.Point(258, 18);
+            this.Celular.Location = new System.Drawing.Point(254, 18);
             this.Celular.Name = "Celular";
             this.Celular.NullText = "CELULAR";
-            this.Celular.Size = new System.Drawing.Size(128, 24);
+            this.Celular.Size = new System.Drawing.Size(130, 24);
             this.Celular.TabIndex = 2;
             this.Celular.ThemeName = "VisualStudio2012Light";
             this.Celular.Leave += new System.EventHandler(this.Celular_Leave_1);
@@ -445,7 +445,7 @@
             // 
             this.lblCelular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.Location = new System.Drawing.Point(258, 3);
+            this.lblCelular.Location = new System.Drawing.Point(254, 3);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(51, 19);
             this.lblCelular.TabIndex = 0;
@@ -459,7 +459,7 @@
             this.Nombre.Margin = new System.Windows.Forms.Padding(7, 3, 5, 3);
             this.Nombre.Name = "Nombre";
             this.Nombre.NullText = "NOMRE";
-            this.Nombre.Size = new System.Drawing.Size(383, 24);
+            this.Nombre.Size = new System.Drawing.Size(381, 24);
             this.Nombre.TabIndex = 1;
             this.Nombre.ThemeName = "VisualStudio2012Light";
             // 
@@ -482,7 +482,7 @@
             this.Apellidos.Margin = new System.Windows.Forms.Padding(7, 3, 5, 3);
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.NullText = "APELLIDOS";
-            this.Apellidos.Size = new System.Drawing.Size(383, 24);
+            this.Apellidos.Size = new System.Drawing.Size(381, 24);
             this.Apellidos.TabIndex = 2;
             this.Apellidos.ThemeName = "VisualStudio2012Light";
             // 
@@ -505,7 +505,7 @@
             this.Email.Margin = new System.Windows.Forms.Padding(7, 3, 5, 3);
             this.Email.Name = "Email";
             this.Email.NullText = "EMAIL";
-            this.Email.Size = new System.Drawing.Size(383, 24);
+            this.Email.Size = new System.Drawing.Size(381, 24);
             this.Email.TabIndex = 3;
             this.Email.ThemeName = "VisualStudio2012Light";
             this.Email.Leave += new System.EventHandler(this.Email_Leave_1);
@@ -588,7 +588,7 @@
             this.lblRFC.Location = new System.Drawing.Point(19, 136);
             this.lblRFC.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.lblRFC.Name = "lblRFC";
-            this.lblRFC.Size = new System.Drawing.Size(35, 19);
+            this.lblRFC.Size = new System.Drawing.Size(111, 11);
             this.lblRFC.TabIndex = 0;
             this.lblRFC.Text = "RFC";
             // 
@@ -601,7 +601,7 @@
             this.gpo2.Location = new System.Drawing.Point(3, 208);
             this.gpo2.Name = "gpo2";
             this.gpo2.Padding = new System.Windows.Forms.Padding(2, 18, 2, 1);
-            this.gpo2.Size = new System.Drawing.Size(574, 115);
+            this.gpo2.Size = new System.Drawing.Size(572, 115);
             this.gpo2.TabIndex = 4;
             this.gpo2.ThemeName = "VisualStudio2012Light";
             // 
@@ -617,7 +617,7 @@
             this.tpl17.RowCount = 2;
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tpl17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tpl17.Size = new System.Drawing.Size(570, 96);
+            this.tpl17.Size = new System.Drawing.Size(568, 96);
             this.tpl17.TabIndex = 6;
             // 
             // tpl8
@@ -642,17 +642,17 @@
             this.tpl8.RowCount = 2;
             this.tpl8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tpl8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tpl8.Size = new System.Drawing.Size(564, 48);
+            this.tpl8.Size = new System.Drawing.Size(562, 48);
             this.tpl8.TabIndex = 6;
             // 
             // Saldo_Vencido
             // 
             this.Saldo_Vencido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Saldo_Vencido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Saldo_Vencido.Location = new System.Drawing.Point(199, 28);
+            this.Saldo_Vencido.Location = new System.Drawing.Point(198, 28);
             this.Saldo_Vencido.Name = "Saldo_Vencido";
             this.Saldo_Vencido.NullText = "SALDO VENCIDO";
-            this.Saldo_Vencido.Size = new System.Drawing.Size(149, 24);
+            this.Saldo_Vencido.Size = new System.Drawing.Size(148, 24);
             this.Saldo_Vencido.TabIndex = 2;
             this.Saldo_Vencido.ThemeName = "VisualStudio2012Light";
             // 
@@ -671,7 +671,7 @@
             // 
             this.lblSaldoVencido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSaldoVencido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldoVencido.Location = new System.Drawing.Point(199, 3);
+            this.lblSaldoVencido.Location = new System.Drawing.Point(198, 3);
             this.lblSaldoVencido.Name = "lblSaldoVencido";
             this.lblSaldoVencido.Size = new System.Drawing.Size(93, 19);
             this.lblSaldoVencido.TabIndex = 0;
@@ -685,7 +685,7 @@
             this.Saldo.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.Saldo.Name = "Saldo";
             this.Saldo.NullText = "SALDO";
-            this.Saldo.Size = new System.Drawing.Size(149, 24);
+            this.Saldo.Size = new System.Drawing.Size(148, 24);
             this.Saldo.TabIndex = 1;
             this.Saldo.ThemeName = "VisualStudio2012Light";
             // 
@@ -693,7 +693,7 @@
             // 
             this.lblFechaDeCaptura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFechaDeCaptura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDeCaptura.Location = new System.Drawing.Point(381, 3);
+            this.lblFechaDeCaptura.Location = new System.Drawing.Point(379, 3);
             this.lblFechaDeCaptura.Name = "lblFechaDeCaptura";
             this.lblFechaDeCaptura.Size = new System.Drawing.Size(113, 19);
             this.lblFechaDeCaptura.TabIndex = 0;
@@ -704,9 +704,9 @@
             this.Fecha_De_Captura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Fecha_De_Captura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_De_Captura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Fecha_De_Captura.Location = new System.Drawing.Point(381, 28);
+            this.Fecha_De_Captura.Location = new System.Drawing.Point(379, 28);
             this.Fecha_De_Captura.Name = "Fecha_De_Captura";
-            this.Fecha_De_Captura.Size = new System.Drawing.Size(164, 23);
+            this.Fecha_De_Captura.Size = new System.Drawing.Size(163, 23);
             this.Fecha_De_Captura.TabIndex = 3;
             // 
             // tpl7
@@ -727,7 +727,7 @@
             this.tpl7.RowCount = 2;
             this.tpl7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tpl7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tpl7.Size = new System.Drawing.Size(564, 36);
+            this.tpl7.Size = new System.Drawing.Size(562, 36);
             this.tpl7.TabIndex = 5;
             // 
             // lblLimiteDeCredito
@@ -737,7 +737,7 @@
             this.lblLimiteDeCredito.Location = new System.Drawing.Point(17, 3);
             this.lblLimiteDeCredito.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.lblLimiteDeCredito.Name = "lblLimiteDeCredito";
-            this.lblLimiteDeCredito.Size = new System.Drawing.Size(108, 19);
+            this.lblLimiteDeCredito.Size = new System.Drawing.Size(241, 2);
             this.lblLimiteDeCredito.TabIndex = 0;
             this.lblLimiteDeCredito.Text = "Límite de credito";
             // 
@@ -749,7 +749,7 @@
             this.Límite_De_Credito.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.Límite_De_Credito.Name = "Límite_De_Credito";
             this.Límite_De_Credito.NullText = "LÍMITE DE CREDITO";
-            this.Límite_De_Credito.Size = new System.Drawing.Size(242, 24);
+            this.Límite_De_Credito.Size = new System.Drawing.Size(241, 22);
             this.Límite_De_Credito.TabIndex = 1;
             this.Límite_De_Credito.ThemeName = "VisualStudio2012Light";
             // 
@@ -758,7 +758,7 @@
             this.lblModederoElectronico.Controls.Add(this.radTextBox2);
             this.lblModederoElectronico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblModederoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModederoElectronico.Location = new System.Drawing.Point(293, 3);
+            this.lblModederoElectronico.Location = new System.Drawing.Point(291, 3);
             this.lblModederoElectronico.Name = "lblModederoElectronico";
             this.lblModederoElectronico.Size = new System.Drawing.Size(139, 19);
             this.lblModederoElectronico.TabIndex = 0;
@@ -776,7 +776,7 @@
             // 
             this.Monedero_Electrónico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Monedero_Electrónico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monedero_Electrónico.Location = new System.Drawing.Point(293, 11);
+            this.Monedero_Electrónico.Location = new System.Drawing.Point(291, 11);
             this.Monedero_Electrónico.Name = "Monedero_Electrónico";
             this.Monedero_Electrónico.NullText = "MONEDERO ELECTRÓNICO";
             this.Monedero_Electrónico.Size = new System.Drawing.Size(250, 24);
@@ -797,7 +797,7 @@
             this.tpl10.ColumnCount = 3;
             this.tpl10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.243243F));
             this.tpl10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.75676F));
-            this.tpl10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tpl10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tpl10.Controls.Add(this.tpl19, 1, 0);
             this.tpl10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl10.Location = new System.Drawing.Point(0, 0);
@@ -822,7 +822,7 @@
             this.tpl19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
             this.tpl19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tpl19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tpl19.Size = new System.Drawing.Size(571, 369);
+            this.tpl19.Size = new System.Drawing.Size(569, 369);
             this.tpl19.TabIndex = 0;
             // 
             // gpoDireccion
@@ -836,7 +836,7 @@
             this.gpoDireccion.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
             this.gpoDireccion.Name = "gpoDireccion";
             this.gpoDireccion.Padding = new System.Windows.Forms.Padding(2, 18, 2, 1);
-            this.gpoDireccion.Size = new System.Drawing.Size(565, 244);
+            this.gpoDireccion.Size = new System.Drawing.Size(563, 244);
             this.gpoDireccion.TabIndex = 4;
             this.gpoDireccion.Text = "Dirección";
             this.gpoDireccion.ThemeName = "VisualStudio2012Light";
@@ -854,7 +854,7 @@
             this.tpl16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
             this.tpl16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tpl16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpl16.Size = new System.Drawing.Size(561, 225);
+            this.tpl16.Size = new System.Drawing.Size(559, 225);
             this.tpl16.TabIndex = 0;
             // 
             // tpl13
@@ -879,17 +879,17 @@
             this.tpl13.RowCount = 2;
             this.tpl13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.26984F));
             this.tpl13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.73016F));
-            this.tpl13.Size = new System.Drawing.Size(555, 50);
+            this.tpl13.Size = new System.Drawing.Size(553, 50);
             this.tpl13.TabIndex = 4;
             // 
             // Número_Exterior_Fiscal
             // 
             this.Número_Exterior_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Número_Exterior_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Número_Exterior_Fiscal.Location = new System.Drawing.Point(293, 23);
+            this.Número_Exterior_Fiscal.Location = new System.Drawing.Point(292, 23);
             this.Número_Exterior_Fiscal.Name = "Número_Exterior_Fiscal";
             this.Número_Exterior_Fiscal.NullText = "NÚMERO EXTERIOR";
-            this.Número_Exterior_Fiscal.Size = new System.Drawing.Size(109, 24);
+            this.Número_Exterior_Fiscal.Size = new System.Drawing.Size(108, 24);
             this.Número_Exterior_Fiscal.TabIndex = 2;
             this.Número_Exterior_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -900,7 +900,7 @@
             this.Calle_Fiscal.Location = new System.Drawing.Point(8, 23);
             this.Calle_Fiscal.Name = "Calle_Fiscal";
             this.Calle_Fiscal.NullText = "CALLE";
-            this.Calle_Fiscal.Size = new System.Drawing.Size(252, 24);
+            this.Calle_Fiscal.Size = new System.Drawing.Size(251, 24);
             this.Calle_Fiscal.TabIndex = 1;
             this.Calle_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -908,9 +908,9 @@
             // 
             this.lblNumeroInteriorFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNumeroInteriorFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroInteriorFiscal.Location = new System.Drawing.Point(435, 3);
+            this.lblNumeroInteriorFiscal.Location = new System.Drawing.Point(433, 3);
             this.lblNumeroInteriorFiscal.Name = "lblNumeroInteriorFiscal";
-            this.lblNumeroInteriorFiscal.Size = new System.Drawing.Size(109, 14);
+            this.lblNumeroInteriorFiscal.Size = new System.Drawing.Size(108, 14);
             this.lblNumeroInteriorFiscal.TabIndex = 0;
             this.lblNumeroInteriorFiscal.Text = "Número Interior";
             // 
@@ -918,9 +918,9 @@
             // 
             this.lblNumeroExteriorFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNumeroExteriorFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroExteriorFiscal.Location = new System.Drawing.Point(293, 3);
+            this.lblNumeroExteriorFiscal.Location = new System.Drawing.Point(292, 3);
             this.lblNumeroExteriorFiscal.Name = "lblNumeroExteriorFiscal";
-            this.lblNumeroExteriorFiscal.Size = new System.Drawing.Size(109, 14);
+            this.lblNumeroExteriorFiscal.Size = new System.Drawing.Size(108, 14);
             this.lblNumeroExteriorFiscal.TabIndex = 0;
             this.lblNumeroExteriorFiscal.Text = "Número Exterior";
             // 
@@ -928,10 +928,10 @@
             // 
             this.Número_Interior_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Número_Interior_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Número_Interior_Fiscal.Location = new System.Drawing.Point(435, 23);
+            this.Número_Interior_Fiscal.Location = new System.Drawing.Point(433, 23);
             this.Número_Interior_Fiscal.Name = "Número_Interior_Fiscal";
             this.Número_Interior_Fiscal.NullText = "NÚMERO INTERIOR";
-            this.Número_Interior_Fiscal.Size = new System.Drawing.Size(109, 24);
+            this.Número_Interior_Fiscal.Size = new System.Drawing.Size(108, 24);
             this.Número_Interior_Fiscal.TabIndex = 3;
             this.Número_Interior_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -941,7 +941,7 @@
             this.lblCalleFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalleFiscal.Location = new System.Drawing.Point(8, 3);
             this.lblCalleFiscal.Name = "lblCalleFiscal";
-            this.lblCalleFiscal.Size = new System.Drawing.Size(252, 14);
+            this.lblCalleFiscal.Size = new System.Drawing.Size(251, 14);
             this.lblCalleFiscal.TabIndex = 0;
             this.lblCalleFiscal.Text = "Calle";
             // 
@@ -973,7 +973,7 @@
             this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tpl14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tpl14.Size = new System.Drawing.Size(555, 163);
+            this.tpl14.Size = new System.Drawing.Size(553, 163);
             this.tpl14.TabIndex = 5;
             // 
             // lblMunicipioFiscal
@@ -982,7 +982,7 @@
             this.lblMunicipioFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMunicipioFiscal.Location = new System.Drawing.Point(8, 105);
             this.lblMunicipioFiscal.Name = "lblMunicipioFiscal";
-            this.lblMunicipioFiscal.Size = new System.Drawing.Size(252, 20);
+            this.lblMunicipioFiscal.Size = new System.Drawing.Size(251, 20);
             this.lblMunicipioFiscal.TabIndex = 0;
             this.lblMunicipioFiscal.Text = "Municipio";
             // 
@@ -990,9 +990,9 @@
             // 
             this.lblEstadoFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEstadoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoFiscal.Location = new System.Drawing.Point(293, 51);
+            this.lblEstadoFiscal.Location = new System.Drawing.Point(292, 51);
             this.lblEstadoFiscal.Name = "lblEstadoFiscal";
-            this.lblEstadoFiscal.Size = new System.Drawing.Size(252, 21);
+            this.lblEstadoFiscal.Size = new System.Drawing.Size(251, 21);
             this.lblEstadoFiscal.TabIndex = 0;
             this.lblEstadoFiscal.Text = "Estado";
             // 
@@ -1000,10 +1000,10 @@
             // 
             this.Código_Postal_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Código_Postal_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Código_Postal_Fiscal.Location = new System.Drawing.Point(293, 25);
+            this.Código_Postal_Fiscal.Location = new System.Drawing.Point(292, 25);
             this.Código_Postal_Fiscal.Name = "Código_Postal_Fiscal";
             this.Código_Postal_Fiscal.NullText = "CÓDIGO POSTAL";
-            this.Código_Postal_Fiscal.Size = new System.Drawing.Size(252, 24);
+            this.Código_Postal_Fiscal.Size = new System.Drawing.Size(251, 20);
             this.Código_Postal_Fiscal.TabIndex = 2;
             this.Código_Postal_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1013,7 +1013,7 @@
             this.lblColoniaFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColoniaFiscal.Location = new System.Drawing.Point(8, 3);
             this.lblColoniaFiscal.Name = "lblColoniaFiscal";
-            this.lblColoniaFiscal.Size = new System.Drawing.Size(54, 19);
+            this.lblColoniaFiscal.Size = new System.Drawing.Size(251, 16);
             this.lblColoniaFiscal.TabIndex = 0;
             this.lblColoniaFiscal.Text = "Colonia";
             // 
@@ -1021,9 +1021,9 @@
             // 
             this.lblCodigoPostalFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCodigoPostalFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPostalFiscal.Location = new System.Drawing.Point(293, 3);
+            this.lblCodigoPostalFiscal.Location = new System.Drawing.Point(292, 3);
             this.lblCodigoPostalFiscal.Name = "lblCodigoPostalFiscal";
-            this.lblCodigoPostalFiscal.Size = new System.Drawing.Size(92, 19);
+            this.lblCodigoPostalFiscal.Size = new System.Drawing.Size(251, 16);
             this.lblCodigoPostalFiscal.TabIndex = 0;
             this.lblCodigoPostalFiscal.Text = "Código Postal";
             // 
@@ -1034,7 +1034,7 @@
             this.Colonia_Fiscal.Location = new System.Drawing.Point(8, 25);
             this.Colonia_Fiscal.Name = "Colonia_Fiscal";
             this.Colonia_Fiscal.NullText = "COLONIA";
-            this.Colonia_Fiscal.Size = new System.Drawing.Size(252, 24);
+            this.Colonia_Fiscal.Size = new System.Drawing.Size(251, 20);
             this.Colonia_Fiscal.TabIndex = 1;
             this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1044,7 +1044,7 @@
             this.lblPaisFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaisFiscal.Location = new System.Drawing.Point(8, 51);
             this.lblPaisFiscal.Name = "lblPaisFiscal";
-            this.lblPaisFiscal.Size = new System.Drawing.Size(252, 21);
+            this.lblPaisFiscal.Size = new System.Drawing.Size(251, 21);
             this.lblPaisFiscal.TabIndex = 0;
             this.lblPaisFiscal.Text = "País";
             // 
@@ -1055,7 +1055,7 @@
             this.cboPais_Fiscal.Location = new System.Drawing.Point(8, 78);
             this.cboPais_Fiscal.Name = "cboPais_Fiscal";
             this.cboPais_Fiscal.NullText = "--SELECCIONE--";
-            this.cboPais_Fiscal.Size = new System.Drawing.Size(252, 25);
+            this.cboPais_Fiscal.Size = new System.Drawing.Size(251, 21);
             this.cboPais_Fiscal.TabIndex = 3;
             this.cboPais_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1063,10 +1063,10 @@
             // 
             this.cboEstado_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboEstado_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado_Fiscal.Location = new System.Drawing.Point(293, 78);
+            this.cboEstado_Fiscal.Location = new System.Drawing.Point(292, 78);
             this.cboEstado_Fiscal.Name = "cboEstado_Fiscal";
             this.cboEstado_Fiscal.NullText = "--SELECCIONE--";
-            this.cboEstado_Fiscal.Size = new System.Drawing.Size(252, 25);
+            this.cboEstado_Fiscal.Size = new System.Drawing.Size(251, 21);
             this.cboEstado_Fiscal.TabIndex = 4;
             this.cboEstado_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1077,7 +1077,7 @@
             this.cboMunicipio_Fiscal.Location = new System.Drawing.Point(8, 131);
             this.cboMunicipio_Fiscal.Name = "cboMunicipio_Fiscal";
             this.cboMunicipio_Fiscal.NullText = "--SELECCIONE--";
-            this.cboMunicipio_Fiscal.Size = new System.Drawing.Size(252, 25);
+            this.cboMunicipio_Fiscal.Size = new System.Drawing.Size(251, 29);
             this.cboMunicipio_Fiscal.TabIndex = 5;
             this.cboMunicipio_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1091,7 +1091,7 @@
             this.gpo1.Location = new System.Drawing.Point(3, 3);
             this.gpo1.Name = "gpo1";
             this.gpo1.Padding = new System.Windows.Forms.Padding(2, 18, 2, 1);
-            this.gpo1.Size = new System.Drawing.Size(565, 1);
+            this.gpo1.Size = new System.Drawing.Size(563, 1);
             this.gpo1.TabIndex = 3;
             this.gpo1.Text = "Razón social";
             // 
@@ -1107,7 +1107,7 @@
             this.tpl18.RowCount = 2;
             this.tpl18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.59349F));
             this.tpl18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.40651F));
-            this.tpl18.Size = new System.Drawing.Size(561, 0);
+            this.tpl18.Size = new System.Drawing.Size(559, 0);
             this.tpl18.TabIndex = 0;
             // 
             // tpl12
@@ -1128,7 +1128,7 @@
             this.tpl12.RowCount = 2;
             this.tpl12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.66667F));
             this.tpl12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.33333F));
-            this.tpl12.Size = new System.Drawing.Size(555, 1);
+            this.tpl12.Size = new System.Drawing.Size(553, 1);
             this.tpl12.TabIndex = 3;
             this.tpl12.TabStop = true;
             // 
@@ -1136,19 +1136,19 @@
             // 
             this.CURP_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CURP_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CURP_Fiscal.Location = new System.Drawing.Point(293, 3);
+            this.CURP_Fiscal.Location = new System.Drawing.Point(292, 3);
             this.CURP_Fiscal.Name = "CURP_Fiscal";
             this.CURP_Fiscal.NullText = "CURP";
-            this.CURP_Fiscal.Size = new System.Drawing.Size(252, 1);
+            this.CURP_Fiscal.Size = new System.Drawing.Size(251, 1);
             this.CURP_Fiscal.TabIndex = 2;
             // 
             // lblCURPfiscal
             // 
             this.lblCURPfiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCURPfiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCURPfiscal.Location = new System.Drawing.Point(293, 3);
+            this.lblCURPfiscal.Location = new System.Drawing.Point(292, 3);
             this.lblCURPfiscal.Name = "lblCURPfiscal";
-            this.lblCURPfiscal.Size = new System.Drawing.Size(252, 1);
+            this.lblCURPfiscal.Size = new System.Drawing.Size(251, 1);
             this.lblCURPfiscal.TabIndex = 0;
             this.lblCURPfiscal.Text = "CURP";
             // 
@@ -1158,7 +1158,7 @@
             this.lblRFCfiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRFCfiscal.Location = new System.Drawing.Point(8, 3);
             this.lblRFCfiscal.Name = "lblRFCfiscal";
-            this.lblRFCfiscal.Size = new System.Drawing.Size(252, 1);
+            this.lblRFCfiscal.Size = new System.Drawing.Size(251, 1);
             this.lblRFCfiscal.TabIndex = 0;
             this.lblRFCfiscal.Text = "RFC";
             // 
@@ -1169,7 +1169,7 @@
             this.RFC_Fiscal.Location = new System.Drawing.Point(8, 3);
             this.RFC_Fiscal.Name = "RFC_Fiscal";
             this.RFC_Fiscal.NullText = "RFC";
-            this.RFC_Fiscal.Size = new System.Drawing.Size(252, 1);
+            this.RFC_Fiscal.Size = new System.Drawing.Size(251, 1);
             this.RFC_Fiscal.TabIndex = 1;
             // 
             // tpl11
@@ -1186,7 +1186,7 @@
             this.tpl11.RowCount = 2;
             this.tpl11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tpl11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tpl11.Size = new System.Drawing.Size(555, 1);
+            this.tpl11.Size = new System.Drawing.Size(553, 1);
             this.tpl11.TabIndex = 2;
             this.tpl11.TabStop = true;
             // 
@@ -1208,7 +1208,7 @@
             this.Razón_Social_Fiscal.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.Razón_Social_Fiscal.Name = "Razón_Social_Fiscal";
             this.Razón_Social_Fiscal.NullText = "RAZÓN SOCIAL";
-            this.Razón_Social_Fiscal.Size = new System.Drawing.Size(536, 21);
+            this.Razón_Social_Fiscal.Size = new System.Drawing.Size(534, 0);
             this.Razón_Social_Fiscal.TabIndex = 1;
             // 
             // tpl15
@@ -1216,14 +1216,14 @@
             this.tpl15.ColumnCount = 3;
             this.tpl15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.56818F));
             this.tpl15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.43182F));
-            this.tpl15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tpl15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
             this.tpl15.Controls.Add(this.btnAceptarFiscal, 1, 0);
             this.tpl15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpl15.Location = new System.Drawing.Point(3, 261);
             this.tpl15.Name = "tpl15";
             this.tpl15.RowCount = 1;
             this.tpl15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tpl15.Size = new System.Drawing.Size(565, 40);
+            this.tpl15.Size = new System.Drawing.Size(563, 40);
             this.tpl15.TabIndex = 6;
             // 
             // btnAceptarFiscal
@@ -1231,9 +1231,9 @@
             this.btnAceptarFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAceptarFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarFiscal.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptarFiscal.Image")));
-            this.btnAceptarFiscal.Location = new System.Drawing.Point(189, 3);
+            this.btnAceptarFiscal.Location = new System.Drawing.Point(187, 3);
             this.btnAceptarFiscal.Name = "btnAceptarFiscal";
-            this.btnAceptarFiscal.Size = new System.Drawing.Size(175, 34);
+            this.btnAceptarFiscal.Size = new System.Drawing.Size(173, 34);
             this.btnAceptarFiscal.TabIndex = 1;
             this.btnAceptarFiscal.Text = "Aceptar";
             this.btnAceptarFiscal.ThemeName = "VisualStudio2012Light";
@@ -1271,7 +1271,7 @@
             this.tlp2.ColumnCount = 3;
             this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.51049F));
             this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.48951F));
-            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
             this.tlp2.Controls.Add(this.lblNumeroDeCliente, 0, 0);
             this.tlp2.Controls.Add(this.Numero_De_Cliente, 1, 0);
             this.tlp2.Controls.Add(this.btnBuscar, 2, 0);
@@ -1289,7 +1289,7 @@
             this.lblNumeroDeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroDeCliente.Location = new System.Drawing.Point(3, 3);
             this.lblNumeroDeCliente.Name = "lblNumeroDeCliente";
-            this.lblNumeroDeCliente.Size = new System.Drawing.Size(157, 23);
+            this.lblNumeroDeCliente.Size = new System.Drawing.Size(156, 23);
             this.lblNumeroDeCliente.TabIndex = 0;
             this.lblNumeroDeCliente.Text = "Número de cliente/Clave";
             // 
@@ -1298,11 +1298,11 @@
             this.Numero_De_Cliente.AutoSize = false;
             this.Numero_De_Cliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Numero_De_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numero_De_Cliente.Location = new System.Drawing.Point(166, 3);
+            this.Numero_De_Cliente.Location = new System.Drawing.Point(165, 3);
             this.Numero_De_Cliente.Multiline = true;
             this.Numero_De_Cliente.Name = "Numero_De_Cliente";
             this.Numero_De_Cliente.NullText = "NUMERO DE CLIENTE";
-            this.Numero_De_Cliente.Size = new System.Drawing.Size(243, 23);
+            this.Numero_De_Cliente.Size = new System.Drawing.Size(242, 23);
             this.Numero_De_Cliente.TabIndex = 1;
             this.Numero_De_Cliente.ThemeName = "VisualStudio2012Light";
             // 
@@ -1311,9 +1311,9 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(415, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(413, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(147, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(149, 23);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.ThemeName = "VisualStudio2012Light";
