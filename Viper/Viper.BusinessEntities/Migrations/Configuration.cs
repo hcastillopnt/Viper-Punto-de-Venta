@@ -21,13 +21,13 @@ namespace Viper.BusinessEntities.Migrations
 
             try
             {
+                //<--Migration initial-->
                 //Default values of CountryRegion Table
                 List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
 
                 defaultCountriesRegion.Add(new CountryRegion() { Description = "MEXICO", FIPS104 = "MX", ISO2 = "MX", ISO3 = "MEX", ISON = "484", Internet = "MX", Capital = "MEXICO", MapReference = "NORTH AMERICA", NationalitySingular = "MEXICAN", NationalityPlural = "MEXICANS", Currency = "MEXICAN PESO", CurrencyCode = "MXN", Population = 101879171, Title = "MEXICO", Comment = "" });
 
                 context.CountriesRegion.AddRange(defaultCountriesRegion);
-
                 context.SaveChanges();
 
                 //Default values of StateProvince Table
@@ -66,9 +66,7 @@ namespace Viper.BusinessEntities.Migrations
                 defaultStatesProvince.Add(new StateProvince() { CountryRegionId = 1, CveEnt = "31", Description = "YUCATAN", Abrev = "YUC", CveCab = "500001", NameCab = "MÉRIDA", PTOT = "1955577", PMAS = "963333", PFEM = "992244", VTOT = "507248" });
                 defaultStatesProvince.Add(new StateProvince() { CountryRegionId = 1, CveEnt = "32", Description = "ZACATECAS", Abrev = "ZAC", CveCab = "560001", NameCab = "ZACATECAS", PTOT = "1490668", PMAS = "726897", PFEM = "763771", VTOT = "377018" });
 
-
                 context.StatesProvince.AddRange(defaultStatesProvince);
-
                 context.SaveChanges();
 
                 //Default values of City Table
@@ -2531,9 +2529,111 @@ namespace Viper.BusinessEntities.Migrations
                 defaultCities.Add(new City() { StateProvinceId = 32, CveEnt = "32", CveCity = "57", Description = "TRANCOSO", CveCab = "1", NameCab = "TRANCOSO", PTOT = "16934", PMAS = "8358", PFEM = "8576", VTOT = "3699" });
                 defaultCities.Add(new City() { StateProvinceId = 32, CveEnt = "32", CveCity = "58", Description = "SANTA MARÍA DE LA PAZ", CveCab = "1", NameCab = "SANTA MARÍA DE LA PAZ", PTOT = "2821", PMAS = "1402", PFEM = "1419", VTOT = "761" });
 
-
                 context.Cities.AddRange(defaultCities);
+                context.SaveChanges();
 
+                //<--Migration ViperDbContext_v1-->
+                //Default values of RoadType Table
+                List<RoadType> defaultRoadsType = new List<RoadType>();
+
+                defaultRoadsType.Add(new RoadType() { Name = "ANDADOR" });
+                defaultRoadsType.Add(new RoadType() { Name = "AUTOPISTA" });
+                defaultRoadsType.Add(new RoadType() { Name = "AVENIDA (AV.)" });
+                defaultRoadsType.Add(new RoadType() { Name = "BOULEVARD (BLVD.)" });
+                defaultRoadsType.Add(new RoadType() { Name = "CALLE" });
+                defaultRoadsType.Add(new RoadType() { Name = "CALLEJON (CJON.)" });
+                defaultRoadsType.Add(new RoadType() { Name = "CALZADA (CALZ.)" });
+                defaultRoadsType.Add(new RoadType() { Name = "CAMINO" });
+                defaultRoadsType.Add(new RoadType() { Name = "CARRETERA" });
+                defaultRoadsType.Add(new RoadType() { Name = "CERRADA (CDA) O PRIVADA (PRIV.)" });
+                defaultRoadsType.Add(new RoadType() { Name = "PASAJE" });
+
+                context.RoadsType.AddRange(defaultRoadsType);
+                context.SaveChanges();
+
+                //Default values of AddressType Table
+                List<AddressType> defaultAddressesType = new List<AddressType>();
+
+                defaultAddressesType.Add(new AddressType() { Name = "BODEGA" });
+                defaultAddressesType.Add(new AddressType() { Name = "CASA HABITACION" });
+                defaultAddressesType.Add(new AddressType() { Name = "ESCUELA Y BIBLIOTECA" });
+                defaultAddressesType.Add(new AddressType() { Name = "HOSPITALES Y ATENCION MEDICA" });
+                defaultAddressesType.Add(new AddressType() { Name = "INDUSTRIAS, FABRICAS Y TALLERES" });
+                defaultAddressesType.Add(new AddressType() { Name = "INFRAE. TURISTICA Y DE ESPARCIMIENTO" });
+                defaultAddressesType.Add(new AddressType() { Name = "LOCAL COMERCIAL" });
+                defaultAddressesType.Add(new AddressType() { Name = "LOTE BALDIO" });
+                defaultAddressesType.Add(new AddressType() { Name = "OFICINA" });
+                defaultAddressesType.Add(new AddressType() { Name = "TERRENOS AGROPECUARIOS" });
+
+                context.AddressesType.AddRange(defaultAddressesType);
+                context.SaveChanges();
+
+                //Default values of Gender Table
+                List<Gender> defaultGenders = new List<Gender>();
+
+                defaultGenders.Add(new Gender() { Name = "MASCULINO" });
+                defaultGenders.Add(new Gender() { Name = "FEMENINO" });
+
+                context.Genders.AddRange(defaultGenders);
+                context.SaveChanges();
+
+                //Default values of MaritalStatus Table
+                List<MaritalStatus> defaultMaritalsStatus = new List<MaritalStatus>();
+
+                defaultMaritalsStatus.Add(new MaritalStatus() { Name = "SOLTERO"});
+                defaultMaritalsStatus.Add(new MaritalStatus() { Name = "CASADO" });
+                defaultMaritalsStatus.Add(new MaritalStatus() { Name = "VIUDO" });
+                defaultMaritalsStatus.Add(new MaritalStatus() { Name = "DIVORCIADO" });
+                defaultMaritalsStatus.Add(new MaritalStatus() { Name = "SEPARADO" });
+
+                context.MaritalsStatus.AddRange(defaultMaritalsStatus);
+                context.SaveChanges();
+
+                //Default values of Role Table
+                List<Role> defaultRoles = new List<Role>();
+
+                defaultRoles.Add(new Role() { Name = "ADMINISTRADOR SYSTEM", Description = "Allow all the system for testing"});
+                defaultRoles.Add(new Role() { Name = "ADMINISTRADOR COMPANY", Description = "Allow all, among other things to control users, products, managae credentials, ..." });
+                defaultRoles.Add(new Role() { Name = "BASICO", Description = "The employee can make sales, consult reports, make cash cuts" });
+                defaultRoles.Add(new Role() { Name = "DOCTOR", Description = "The employee can access module Medical" });
+
+                context.Roles.AddRange(defaultRoles);
+                context.SaveChanges();
+
+                //Default values of Shift Table
+                List<Shift> defaultShifts = new List<Shift>();
+
+                defaultShifts.Add(new Shift() { Name = "DAY", StartTime = Convert.ToDateTime("08:00:00"), EndTime = Convert.ToDateTime("15:00:00") });
+                defaultShifts.Add(new Shift() { Name = "EVENING", StartTime = Convert.ToDateTime("15:00:00"), EndTime = Convert.ToDateTime("22:00:00") });
+                defaultShifts.Add(new Shift() { Name = "ALL DAY", StartTime = Convert.ToDateTime("08:00:00"), EndTime = Convert.ToDateTime("22:00:00") });
+
+                context.Shifts.AddRange(defaultShifts);
+                context.SaveChanges();
+
+                //Default values of Department Table
+                List<Department> defaultDepartments = new List<Department>();
+
+                defaultDepartments.Add(new Department() { Name = "Executive", GroupName = "Executive General and Administration" });
+                defaultDepartments.Add(new Department() { Name = "Pharmacy", GroupName = "Executive General and Administration" });
+                defaultDepartments.Add(new Department() { Name = "Administration", GroupName = "Executive General and Administration" });
+                defaultDepartments.Add(new Department() { Name = "Sales", GroupName = "Sales & Marketing" });
+                defaultDepartments.Add(new Department() { Name = "Health", GroupName = "Health Services" });
+
+                context.Departments.AddRange(defaultDepartments);
+                context.SaveChanges();
+
+                //Default values of JobTitle Table
+                List<JobTitle> defaultJobsTitle = new List<JobTitle>();
+
+                defaultJobsTitle.Add(new JobTitle() { Name = "SOCIO FUNDADOR", DepartmentId = 1 });
+                defaultJobsTitle.Add(new JobTitle() { Name = "RESPONSABLE DE SUCURSAL", DepartmentId = 2 });
+                defaultJobsTitle.Add(new JobTitle() { Name = "ADMINISTRADOR DE FINANZAS", DepartmentId = 3 });
+                defaultJobsTitle.Add(new JobTitle() { Name = "AGENTE DE COMPRAS", DepartmentId = 4 });
+                defaultJobsTitle.Add(new JobTitle() { Name = "VENDEDOR", DepartmentId = 4 });
+                defaultJobsTitle.Add(new JobTitle() { Name = "DOCTOR", DepartmentId = 5 });
+                defaultJobsTitle.Add(new JobTitle() { Name = "ENFERMERO/A", DepartmentId = 5 });
+
+                context.JobsTitle.AddRange(defaultJobsTitle);
                 context.SaveChanges();
             }
             catch (DbEntityValidationException ex)

@@ -20,9 +20,20 @@ namespace Viper.BusinessEntities
             //    new CreateDatabaseIfNotExists<ViperDbContext>());
         }
 
+        //<--Migration initial-->
         public DbSet<CountryRegion> CountriesRegion { get; set; }
         public DbSet<StateProvince> StatesProvince { get; set; }
         public DbSet<City> Cities { get; set; }
+
+        //<--Migration ViperDbContext_v1-->
+        public DbSet<RoadType> RoadsType { get; set; }
+        public DbSet<AddressType> AddressesType { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<MaritalStatus> MaritalsStatus { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Shift> Shifts {get;set;}
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<JobTitle> JobsTitle { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
