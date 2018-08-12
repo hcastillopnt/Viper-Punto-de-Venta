@@ -53,6 +53,58 @@ namespace Viper.BusinessLogicLayer
         }
         #endregion
 
+        #region GetRolesDropDownList
+
+        /// <summary>
+        /// Metodo para obtener los roles para los usuarios
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<Role> GetRolesDropDownList()
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetRolesDropDownList();
+        }
+
+        #endregion
+
+        #region GetDepartmentDropDownList
+
+        /// <summary>
+        /// Metodo para obtener los departamentos donde se puede desempeñar un empleado
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<Department> GetDepartmentDropDownList()
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetDepartmentDropDownList();
+        }
+
+        #endregion
+
+        #region GetShiftDropDownList
+
+        /// <summary>
+        /// Metodo para obtener los horarios en los cuales puede trabajar un empleado
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<Shift> GetShiftDropDownList()
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetShiftDropDownList();
+        }
+
+        #endregion
+
+        #region GetJobTitleDropDownList
+
+        /// <summary>
+        /// Metodo para obtener los puestos que puede tener un empleado
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<JobTitle> GetJobTitleDropDownList()
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetJobTitleDropDownList();
+        }
+
+        #endregion
+
         #region GetCountryRegionDropDownList
         /// <summary>
         /// Metodo para obtener los estados de Mexico
