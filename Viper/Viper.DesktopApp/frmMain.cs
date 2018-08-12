@@ -84,7 +84,7 @@ namespace Viper.DesktopApp
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
-            if(rol == "ADMINISTRADOR")
+            if(rol == "ADMINISTRADOR COMPANY")
             {
                 //Obtenemos el nombre de la compañia
                 string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");

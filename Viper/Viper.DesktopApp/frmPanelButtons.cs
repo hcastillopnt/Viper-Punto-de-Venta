@@ -53,13 +53,13 @@ namespace Viper.DesktopApp
             switch(name)
             {
                 //F4 Operaciones
-                case "btnClientes":
-                    AgregarFormularioEnPanel(new frmAdminCustomers());
-                    break;
+                //case "btnClientes":
+                //    AgregarFormularioEnPanel(new frmAdminCustomers());
+                //    break;
 
-                case "btnProveedores":
-                    AgregarFormularioEnPanel(new frmAdminSuppliers());
-                    break;
+                //case "btnProveedores":
+                //    AgregarFormularioEnPanel(new frmAdminSuppliers());
+                //    break;
 
                 //F5 Configuracion
                 case "btnEmpresa":
@@ -69,12 +69,12 @@ namespace Viper.DesktopApp
                     AgregarFormularioEnPanel(new frmRegisterCompany(companyID));
                     break;
 
-                case "btnSucursales":
-                    companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-                    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
+                //case "btnSucursales":
+                //    companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+                //    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
 
-                    AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
-                    break;
+                //    AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
+                //    break;
 
                 case "btnEmpleados":
                     AgregarFormularioEnPanel(new frmAdminEmployees());
@@ -97,7 +97,7 @@ namespace Viper.DesktopApp
                     module = new Module();
 
                     module.Name = row["Name"].ToString();
-                    module.SubMenu = row["SubMenu"].ToString();
+                    module.Submenu = row["Submenu"].ToString();
                     module.ControlName = row["ControlName"].ToString();
                     module.ControlImage = row["ControlImage"].ToString();
                     module.IsActive = Convert.ToBoolean(row["IsActive"].ToString());
@@ -125,7 +125,7 @@ namespace Viper.DesktopApp
                     btnOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
                     btnOption.Name = item.ControlName;
                     btnOption.TabIndex = i;
-                    btnOption.Text = item.SubMenu;
+                    btnOption.Text = item.Submenu;
                     btnOption.TextAlign = ContentAlignment.BottomCenter;
                     btnOption.TextImageRelation = TextImageRelation.ImageAboveText;
                     btnOption.Enabled = item.IsActive;

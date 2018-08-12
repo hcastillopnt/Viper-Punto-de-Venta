@@ -10,6 +10,7 @@ namespace Viper.BusinessLogicLayer
     public class LoginBLL
     {
         #region authorize_by_credentials
+
         /// <summary>
         /// metodo para iniciar sesion
         /// </summary>
@@ -34,6 +35,7 @@ namespace Viper.BusinessLogicLayer
                 return dt;
             }
         }
+
         #endregion
     }
 }

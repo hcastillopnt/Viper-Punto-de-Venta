@@ -292,12 +292,12 @@ namespace Viper.DesktopApp
             Address a = new Address();
 
             s.CompanyId = CID;
-            s.CompanyName = Nombre_Sucursal.Text;
+            s.SiteName = Nombre_Sucursal.Text;
             s.UniquePhysicalID = Id_Sucursal.Text;
-            s.ContactName = Representante.Text;
+            s.ResponsibleName = Representante.Text;
             s.PhoneNumber = Telefono.Text;
             s.CreatedDate = f;
-            s.ModifiedDate = f;
+            s.LastUpdatedDate = f;
 
             Address ad = new Address();
             ad.RoadTypeId = Convert.ToInt32(cboTipoVialidadFiscal.SelectedValue);
@@ -311,7 +311,7 @@ namespace Viper.DesktopApp
             ad.CityId = Convert.ToInt32(cboLocalidadFiscal.SelectedValue);
             ad.PostalCode = Codigo_Postal.Text.Trim();
             ad.CreatedDate = f;
-            ad.ModifiedDate = f;
+            ad.LastUpdatedDate = f;
             string message = BusinessLogicLayer.AccesoBDBLL.insertarSucursal(s, ad);
 
             if (message != "")

@@ -12,6 +12,7 @@ namespace Viper.DataAccessLayer
     public class SiteDAL
     {
         #region getSitesByCompany
+
         /// <summary>
         /// Metodo para obtener todas las sucursales registradas de tal compañia
         /// </summary>
@@ -42,7 +43,7 @@ namespace Viper.DataAccessLayer
                                   select new
                                   {
                                       s.Id,
-                                      Site = s.UniquePhysicalID + " " +s.CompanyName
+                                      Site = s.UniquePhysicalID + " " + s.SiteName
                                   }).ToList();
 
                     //Crear una fila nueva
@@ -73,9 +74,11 @@ namespace Viper.DataAccessLayer
 
             return dt;
         }
+
         #endregion
 
         #region findSiteBySiteName
+
         /// <summary>
         /// Metodo para obtener la sucursal en la cual se encuentra logueado el usuario
         /// </summary>
@@ -93,12 +96,13 @@ namespace Viper.DataAccessLayer
 
                 if (isExistente)
                 {
-                    sites = dbCtx.Sites.Where(x => x.CompanyName == siteName).ToList();
+                    sites = dbCtx.Sites.Where(x => x.SiteName == siteName).ToList();
                 }
             }
 
             return sites;
         }
+
         #endregion
     }
 }
