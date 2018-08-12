@@ -23,7 +23,7 @@ namespace Viper.DesktopApp
 
             if (isExistsCompany)
             {
-                //Application.Run(new frmLogin());
+                Application.Run(new frmLogin());
             }
             else
             {
