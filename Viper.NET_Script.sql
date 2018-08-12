@@ -18,15 +18,15 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
-DROP DATABASE IF EXISTS `viper_developments`;
+DROP DATABASE IF EXISTS `viper_testing`;
 
 --
--- Base de datos: viper_developments`
+-- Base de datos: viper_testing`
 --
 
-CREATE DATABASE `viper_developments`;
+CREATE DATABASE `viper_testing`;
 
-USE `viper_developments`;
+USE `viper_testing`;
 
 -- --------------------------------------------------------
 

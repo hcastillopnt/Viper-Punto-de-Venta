@@ -1,4 +1,4 @@
-USE viper_developments;
+USE viper_testing;
 
 INSERT INTO CountryRegion (Id, Description, FIPS104, ISO2, ISO3, ISON, Internet, Capital, MapReference, NationalitySingular, NationalityPlural, Currency, CurrencyCode, Population, Title, Comment) VALUES (159, N'MEXICO', N'MX', N'MX', N'MEX', N'484', N'MX', N'Mexico ', N'North America ', N'Mexican', N'Mexicans', N'Mexican Peso', N'MXN', 101879171, N'Mexico', N'');
 
