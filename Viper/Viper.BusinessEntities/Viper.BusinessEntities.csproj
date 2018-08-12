@@ -67,23 +67,6 @@
     <Compile Include="Gender.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="MaritalStatus.cs" />
-    <Compile Include="Migrations\201808112223344_initial.cs" />
-    <Compile Include="Migrations\201808112223344_initial.Designer.cs">
-      <DependentUpon>201808112223344_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808112342262_ViperDbContext_v1.cs" />
-    <Compile Include="Migrations\201808112342262_ViperDbContext_v1.Designer.cs">
-      <DependentUpon>201808112342262_ViperDbContext_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808120617525_ViperDbContext_v2.cs" />
-    <Compile Include="Migrations\201808120617525_ViperDbContext_v2.Designer.cs">
-      <DependentUpon>201808120617525_ViperDbContext_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808121913134_ViperDbContext_v4.cs" />
-    <Compile Include="Migrations\201808121913134_ViperDbContext_v4.Designer.cs">
-      <DependentUpon>201808121913134_ViperDbContext_v4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -109,20 +92,6 @@
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
     <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808112223344_initial.resx">
-      <DependentUpon>201808112223344_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808112342262_ViperDbContext_v1.resx">
-      <DependentUpon>201808112342262_ViperDbContext_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808120617525_ViperDbContext_v2.resx">
-      <DependentUpon>201808120617525_ViperDbContext_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808121913134_ViperDbContext_v4.resx">
-      <DependentUpon>201808121913134_ViperDbContext_v4.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
