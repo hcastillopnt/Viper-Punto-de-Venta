@@ -72,11 +72,18 @@
     <Compile Include="Migrations\201808112342262_ViperDbContext_v1.Designer.cs">
       <DependentUpon>201808112342262_ViperDbContext_v1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808120617525_ViperDbContext_v2.cs" />
+    <Compile Include="Migrations\201808120617525_ViperDbContext_v2.Designer.cs">
+      <DependentUpon>201808120617525_ViperDbContext_v2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Permission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegimenFiscal.cs" />
     <Compile Include="RoadType.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Shift.cs" />
@@ -100,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808112342262_ViperDbContext_v1.resx">
       <DependentUpon>201808112342262_ViperDbContext_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808120617525_ViperDbContext_v2.resx">
+      <DependentUpon>201808120617525_ViperDbContext_v2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

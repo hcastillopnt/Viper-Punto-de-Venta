@@ -21,5 +21,7 @@ namespace Viper.BusinessEntities
         [StringLength(100, ErrorMessage = "The field Description must have max length of 100 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field Description must be a string")]
         public String Description { get; set; }
+
+        public virtual ICollection<Permission> Permissions { get; set; }
     }
 }

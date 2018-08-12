@@ -21,7 +21,7 @@ namespace Viper.DataAccessLayer
             DataTable dt = new DataTable();
             bool isExistente = false;
 
-            using (ViperContext ctx = new ViperContext())
+            using (ViperDbContext ctx = new ViperDbContext())
             {
                 //Validar si la base de datos existe
                 isExistente = Database.Exists(ctx.Database.Connection);
@@ -41,7 +41,7 @@ namespace Viper.DataAccessLayer
                         var result = (from p in ctx.Permissions
                                       join r in ctx.Roles on p.RoleId equals r.Id
                                       join m in ctx.Modules on p.ModuleId equals m.Id
-                                      where r.Name == "ADMINISTRADOR" && m.SubMenu == "NULL"
+                                      where r.Name == "ADMINISTRADOR" && m.Submenu == "NULL"
                                       select new
                                       {
                                           m.Name,
@@ -94,7 +94,7 @@ namespace Viper.DataAccessLayer
             DataTable dt = new DataTable();
             bool isExistente = false;
 
-            using (ViperContext ctx = new ViperContext())
+            using (ViperDbContext ctx = new ViperDbContext())
             {
                 //Validar si la base de datos existe
                 isExistente = Database.Exists(ctx.Database.Connection);
@@ -114,7 +114,7 @@ namespace Viper.DataAccessLayer
                         var result = (from p in ctx.Permissions
                                       join r in ctx.Roles on p.RoleId equals r.Id
                                       join m in ctx.Modules on p.ModuleId equals m.Id
-                                      where r.Name == "ADMINISTRADOR" && m.Menu == Menu && m.SubMenu != "NULL"
+                                      where r.Name == "ADMINISTRADOR" && m.Menu == Menu && m.Submenu != "NULL"
                                       select new
                                       {
                                           m.Name,

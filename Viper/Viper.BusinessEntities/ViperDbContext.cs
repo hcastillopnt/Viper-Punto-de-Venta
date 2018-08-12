@@ -35,6 +35,11 @@ namespace Viper.BusinessEntities
         public DbSet<Department> Departments { get; set; }
         public DbSet<JobTitle> JobsTitle { get; set; }
 
+        //<--Migration ViperDbContext_v2-->
+        public DbSet<RegimenFiscal> RegimenesFiscales { get; set; }
+        public DbSet<Module> Modules { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
