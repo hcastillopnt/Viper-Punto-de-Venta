@@ -23,5 +23,7 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "The field DepartmentId must be a number.")]
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
+
+        public virtual ICollection<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
     }
 }

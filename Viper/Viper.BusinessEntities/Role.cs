@@ -23,6 +23,6 @@ namespace Viper.BusinessEntities
         public String Description { get; set; }
 
         public virtual ICollection<Permission> Permissions { get; set; }
-        public virtual ICollection<Company> Companies { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

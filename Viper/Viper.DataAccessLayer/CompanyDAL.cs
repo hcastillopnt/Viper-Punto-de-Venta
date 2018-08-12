@@ -22,8 +22,9 @@ namespace Viper.DataAccessLayer
         /// <param name="company">Objeto Compañia</param>
         /// <param name="address">Objeto Direccion</param>
         /// <param name="addressSAT">Objeto Direccion Fiscal</param>
+        /// <param name="user">Objeto Usuario</param>
         /// <returns>Mensaje (String)</returns>
-        public static string sp_insert_company(Company company, Address address, AddressSAT addressSAT)
+        public static string sp_insert_company(Company company, Address address, AddressSAT addressSAT, User user)
         {
             string message = string.Empty;
             bool isInserted = false;
@@ -63,7 +64,6 @@ namespace Viper.DataAccessLayer
 
                                             company.AddressSATId = addressSATID;
                                             company.AddressId = addressID;
-                                            company.RoleId = dbCtx.Roles.Where(x => x.Name == "ADMINISTRADOR").FirstOrDefault().Id;
                                             dbCtx.Companies.Add(company);
                                             isInserted = dbCtx.SaveChanges() > 0;
 
@@ -71,6 +71,9 @@ namespace Viper.DataAccessLayer
 
                                             if (companyId > 0)
                                             {
+                                                dbCtx.Users.Add(user);
+                                                isInserted = dbCtx.SaveChanges() > 0;
+
                                                 if (isInserted == true && string.IsNullOrEmpty(message))
                                                 {
                                                     dbCtxTran.Commit();
@@ -129,9 +132,9 @@ namespace Viper.DataAccessLayer
         /// Metodo para actualizar el password de un cliente que adquirio Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
         /// <param name="pwd">Contraseña anterior</param>
-        /// <param name="entityID">ID Compañia</param>
+        /// <param name="loginID">Nombre de usuario</param>
         /// <returns>Mensaje (String)</returns>
-        public static string updatePassword(string pwd, int entityID)
+        public static string updatePassword(string pwd, string LoginID)
         {
             string message = string.Empty;
             bool isUpdate = false;
@@ -146,11 +149,11 @@ namespace Viper.DataAccessLayer
 
                         if (isDataBaseExist)
                         {
-                            var entity = dbCtx.Companies.Where(x => x.Id == entityID).FirstOrDefault();
+                            var entity = dbCtx.Users.Where(x => x.LoginID == LoginID).FirstOrDefault();
 
                             entity.PasswordEncrypted = pwd;
 
-                            dbCtx.Companies.Attach(entity);
+                            dbCtx.Users.Attach(entity);
                             dbCtx.Entry(entity).State = EntityState.Modified;
 
                             isUpdate = dbCtx.SaveChanges() > 0;
@@ -213,50 +216,6 @@ namespace Viper.DataAccessLayer
             using (ViperDbContext dbCtx = new ViperDbContext())
             {
                 var result = dbCtx.Companies.Count() > 0;
-
-                return result;
-            }
-        }
-
-        #endregion
-
-        #region getPasswordSaved
-
-        /// <summary>
-        /// Metodo para recuperar la contraseña guardada
-        /// </summary>
-        /// <param name="EntityID">ID Compañia</param>
-        /// <returns>Contraseña Encriptada</returns>
-        public static string getPasswordSaved(int EntityID)
-        {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                string EncryptedPassword = String.Empty;
-
-                EncryptedPassword = dbCtx.Companies.Where(x => x.Id == EntityID).FirstOrDefault().PasswordEncrypted;
-
-                return EncryptedPassword;
-            }
-        }
-
-        #endregion
-
-        #region obtainCompanyName
-
-        /// <summary>
-        /// Metodo para obtener el nombre de la compañia
-        /// </summary>
-        /// <param name="usr">LoginID</param>
-        /// <param name="pwd">Contraseña Encriptada con SHA1</param>
-        /// <returns>Nombre de Compañia</returns>
-        public static string obtainCompanyName(string usr, string pwd)
-        {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.Companies
-                    .Where(x => x.LoginID == usr && x.PasswordEncrypted == pwd)
-                    .FirstOrDefault()
-                    .CompanyName;
 
                 return result;
             }

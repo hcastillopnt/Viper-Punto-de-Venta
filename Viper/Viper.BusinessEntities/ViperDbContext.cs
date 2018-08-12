@@ -45,6 +45,12 @@ namespace Viper.BusinessEntities
         public DbSet<AddressSAT> AddressesSAT { get; set; }
         public DbSet<Company> Companies { get; set; }
 
+        //<--Migration ViperDbContext_v4-->
+        public DbSet<Site> Sites { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
+        public DbSet<User> Users { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

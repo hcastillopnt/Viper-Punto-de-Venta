@@ -39,16 +39,16 @@ namespace Viper.BusinessEntities
         public int RegimenFiscalId { get; set; }
         public RegimenFiscal RegimenFiscal { get; set; }
 
-        [StringLength(13, ErrorMessage = "The field PhoneNumber must have max length of 13 characters")]
-        [DataType(DataType.PhoneNumber, ErrorMessage = "The field PhoneNumber must be a valid")]
+        [StringLength(10, ErrorMessage = "The field PhoneNumber must have max length of 10 characters")]
+        [DataType(DataType.PhoneNumber, ErrorMessage = "The field PhoneNumber must be a PhoneNumber valid")]
         public String PhoneNumber { get; set; }
 
-        [StringLength(17, ErrorMessage = "The field CellphoneNumber must have max length of 17 characters")]
-        [DataType(DataType.PhoneNumber, ErrorMessage = "The field CellphoneNumber must be a valid")]
+        [StringLength(13, ErrorMessage = "The field CellphoneNumber must have max length of 13 characters")]
+        [DataType(DataType.PhoneNumber, ErrorMessage = "The field CellphoneNumber must be a CellphoneNumber valid")]
         public String CellphoneNumber { get; set; }
 
         [StringLength(50, ErrorMessage = "The field EmailAddress must have max length of 50 characters")]
-        [DataType(DataType.EmailAddress, ErrorMessage = "The field EmailAddress must be a valid")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "The field EmailAddress must be a Email valid")]
         public String EmailAddress { get; set; }
 
         [StringLength(50, ErrorMessage = "The field FiscalName must have max length of 50 characters")]
@@ -73,26 +73,14 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text, ErrorMessage = "The field BusinessActivity must be a string")]
         public String BusinessActivity { get; set; }
 
-        [Required(ErrorMessage = "The field LoginID is required")]
-        [StringLength(13, ErrorMessage = "The field LoginID must have max length of 13 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field LoginID must be a string")]
-        public String LoginID { get; set; }
-
-        [Required(ErrorMessage = "The field PasswordEncrypted is required")]
-        [StringLength(256, ErrorMessage = "The field PasswordEncrypted must have max length of 256 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field PasswordEncrypted must be a string")]
-        public String PasswordEncrypted { get; set; }
-
-        [StringLength(4, ErrorMessage = "The field MobilePIN must have max length of 4 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field MobilePIN must be a string")]
-        public String MobilePIN { get; set; }
-
-        [ForeignKey("Role")]
-        [Required(ErrorMessage = "The field RoleId is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field RoleId must be a number.")]
-        public int RoleId { get; set; }
-        public Role Role { get; set; }
+        [ForeignKey("User")]
+        [Required(ErrorMessage = "The field UserId is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field UserId must be a number.")]
+        public int UserId { get; set; }
+        public User User { get; set; }
 
         public byte[] Logo { get; set; }
+
+        public virtual ICollection<Site> Sites { get; set; }
     }
 }

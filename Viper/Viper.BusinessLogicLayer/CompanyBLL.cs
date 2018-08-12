@@ -25,17 +25,29 @@ namespace Viper.BusinessLogicLayer
             //Variable to recover the messages of mistake produced in the layer of BusinessLogic
             string message = string.Empty;
 
+            //Create instance of object user
+            User user = new User();
+
+            //Asign values to object user
+            user.LoginID = company.RFC;
+            user.PasswordEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
+            user.AccessFailedCount = 0;
+            user.IsWelcome = true;
+            user.IsActive = true;
+            user.RoleId = 2;
+            user.CreatedBy = "HECP";
+            user.CreatedDate = DateTime.Now;
+            user.LastUpdatedBy = "HECP";
+            user.LastUpdatedDate = DateTime.Now;
+
             //To validate the entities of the class by means of the DataAnnotations assigned in the layer of BusinessEntities
-            message = validateWithDataAnnotations(company, address, addressSAT);
+            message = validateWithDataAnnotations(company, address, addressSAT, user);
 
             //If it does not contain mistakes, we proceed to realize the following operation
             if (string.IsNullOrEmpty(message))
             {
-                //To encrypt the password by means of the algorithm SHA1
-                company.PasswordEncrypted = EncryptionDecryption.EncriptarSHA1(company.PasswordEncrypted);
-
                 //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
-                message = DataAccessLayer.CompanyDAL.sp_insert_company(company, address, addressSAT);
+                message = DataAccessLayer.CompanyDAL.sp_insert_company(company, address, addressSAT, user);
             }
 
             //To return the value of the variable message
@@ -50,14 +62,14 @@ namespace Viper.BusinessLogicLayer
         /// Metodo para actualizar el password de un cliente que adquirio Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
         /// <param name="pwd">Contraseña anterior</param>
-        /// <param name="entityID">ID Compañia</param>
+        /// <param name="loginID">Nombre de usuario</param>
         /// <returns>Mensaje (String)</returns>
-        public static string updatePassword(string pwd, int entityID)
+        public static string updatePassword(string pwd, string loginID)
         {
             //Variable to recover the messages of mistake produced in the layer of BusinessLogic
             string message = string.Empty;
 
-            if (string.IsNullOrEmpty(pwd) && entityID == 0)
+            if (string.IsNullOrEmpty(pwd) && string.IsNullOrEmpty(loginID))
             {
                 message = "Favor de introducir la contraseña a actualizar";
             }
@@ -67,7 +79,7 @@ namespace Viper.BusinessLogicLayer
                 string PasswordEncrypted = EncryptionDecryption.EncriptarSHA1(pwd);
 
                 //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
-                message = DataAccessLayer.CompanyDAL.updatePassword(PasswordEncrypted, entityID);
+                message = DataAccessLayer.CompanyDAL.updatePassword(PasswordEncrypted, loginID);
             }
 
             //To return the value of the variable message
@@ -89,27 +101,6 @@ namespace Viper.BusinessLogicLayer
             isExistsCompany = DataAccessLayer.CompanyDAL.isCompanyRegistered();
 
             return isExistsCompany;
-        }
-
-        #endregion
-
-        #region getPasswordSaved
-
-        /// <summary>
-        /// Metodo para recuperar la contraseña guardada
-        /// </summary>
-        /// <param name="EntityID">ID Compañia</param>
-        /// <returns>Contraseña Encriptada</returns>
-        public static string getPasswordSaved(int EntityID)
-        {
-            string Password = String.Empty;
-            string EncryptedPassword = String.Empty;
-
-            EncryptedPassword = DataAccessLayer.CompanyDAL.getPasswordSaved(EntityID);
-
-            Password = EncryptionDecryption.DesencriptarSHA1(EncryptedPassword);
-
-            return Password;
         }
 
         #endregion
@@ -286,7 +277,7 @@ namespace Viper.BusinessLogicLayer
         /// <param name="address"></param>
         /// <param name="addressSAT"></param>
         /// <returns></returns>
-        public static string validateWithDataAnnotations(Company company, Address address, AddressSAT addressSAT)
+        public static string validateWithDataAnnotations(Company company, Address address, AddressSAT addressSAT, User user)
         {
             ICollection<ValidationResult> results = null;
             string message = String.Empty;
@@ -306,6 +297,13 @@ namespace Viper.BusinessLogicLayer
                     if (!validate(addressSAT, out results))
                     {
                         message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                    }
+                    else
+                    {
+                        if (!validate(user, out results))
+                        {
+                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                        }
                     }
                 }
             }

@@ -62,6 +62,8 @@
     <Compile Include="Company.cs" />
     <Compile Include="CountryRegion.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeDepartmentHistory.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="MaritalStatus.cs" />
@@ -77,6 +79,10 @@
     <Compile Include="Migrations\201808120617525_ViperDbContext_v2.Designer.cs">
       <DependentUpon>201808120617525_ViperDbContext_v2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808121913134_ViperDbContext_v4.cs" />
+    <Compile Include="Migrations\201808121913134_ViperDbContext_v4.Designer.cs">
+      <DependentUpon>201808121913134_ViperDbContext_v4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -88,7 +94,9 @@
     <Compile Include="RoadType.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Shift.cs" />
+    <Compile Include="Site.cs" />
     <Compile Include="StateProvince.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="ViperDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808120617525_ViperDbContext_v2.resx">
       <DependentUpon>201808120617525_ViperDbContext_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808121913134_ViperDbContext_v4.resx">
+      <DependentUpon>201808121913134_ViperDbContext_v4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

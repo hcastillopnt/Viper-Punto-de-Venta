@@ -24,5 +24,6 @@ namespace Viper.BusinessEntities
         public String GroupName { get; set; }
 
         public virtual ICollection<JobTitle> JobsTitle { get; set; }
+        public virtual ICollection<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
     }
 }

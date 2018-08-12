@@ -24,5 +24,7 @@ namespace Viper.BusinessEntities
         [Required(ErrorMessage = "The field EndTime is required")]
         [DataType(DataType.Time)]
         public DateTime EndTime { get; set; }
+
+        public virtual ICollection<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
     }
 }

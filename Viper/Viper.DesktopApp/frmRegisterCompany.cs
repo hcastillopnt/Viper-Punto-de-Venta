@@ -678,8 +678,6 @@ namespace Viper.DesktopApp
             company.FiscalName = Nombre_Fiscal.Text.Trim().ToUpper();
             company.RFC = RFC.Text.Trim().ToUpper();
             company.CURP = CURP.Text.Trim().ToUpper();
-            company.LoginID = company.RFC;
-            company.PasswordEncrypted = "admin";
 
             if (!string.IsNullOrEmpty(Regimen_Fiscal.Text.Trim().ToString()))
                 company.RegimenFiscalId = BusinessLogicLayer.CompanyBLL.getRegimenIdByName(Regimen_Fiscal.Text.Trim().ToString());

@@ -53,7 +53,7 @@ namespace Viper.BusinessEntities
 
         [Required(ErrorMessage = "The field PostalCode is required")]
         [StringLength(5, ErrorMessage = "The field PostalCode must have max length of 5 characters")]
-        [DataType(DataType.PostalCode, ErrorMessage = "The field PostalCode must be a postal code valid")]
+        [DataType(DataType.PostalCode, ErrorMessage = "The field PostalCode must be a Postal Code valid")]
         public String PostalCode { get; set; }
 
         public virtual ICollection<Company> Companies { get; set; }
