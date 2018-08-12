@@ -5,6 +5,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Viper.BusinessEntities.Migrations;
 
 namespace Viper.BusinessEntities
 {
@@ -13,7 +14,7 @@ namespace Viper.BusinessEntities
     {
         public ViperDbContext() : base("ViperContext")
         {
-            //Database.SetInitializer<ViperDbContext>(new MigrateDatabaseToLatestVersion<ViperDbContext, Configuration>());
+            Database.SetInitializer<ViperDbContext>(new MigrateDatabaseToLatestVersion<ViperDbContext, Configuration>());
         }
 
         public DbSet<CountryRegion> CountriesRegion { get; set; }
