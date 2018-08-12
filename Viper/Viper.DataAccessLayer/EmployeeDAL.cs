@@ -15,7 +15,7 @@ namespace Viper.DataAccessLayer
         /// <summary>
         /// DbContext is an important class in Entity Framework API. It is a bridge between your domain or entity classes and the database.
         /// </summary>
-        public static ViperContext dbCtx = new ViperContext();
+        public static ViperDbContext dbCtx = new ViperDbContext();
 
         #region updatePassword
         /// <summary>

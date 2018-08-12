@@ -40,6 +40,11 @@ namespace Viper.BusinessEntities
         public DbSet<Module> Modules { get; set; }
         public DbSet<Permission> Permissions { get; set; }
 
+        //<--Migration ViperDbContext_v3-->
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<AddressSAT> AddressesSAT { get; set; }
+        public DbSet<Company> Companies { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

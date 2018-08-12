@@ -43,7 +43,7 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("AccessFailed",typeof(int)),
                             });
 
-            using (ViperContext dbCtx = new ViperContext())
+            using (ViperDbContext dbCtx = new ViperDbContext())
             {
                 isExistente = Database.Exists(dbCtx.Database.Connection);
 

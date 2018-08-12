@@ -27,5 +27,7 @@ namespace Viper.BusinessEntities
 
         [Required(ErrorMessage = "The field Moral is required")]
         public bool Moral { get; set; }
+
+        public virtual ICollection<Company> Companies { get; set; }
     }
 }

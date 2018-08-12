@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace Viper.BusinessEntities.Common
 {
-    public abstract class AuditableEntity<T> : Entity<T>, IAuditableEntity
+    public abstract class AuditableEntity<T> : IAuditableEntity
     {
+        [Key]
+        public int Id { get; set; }
+
         [ScaffoldColumn(false)]
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate { get; set; }

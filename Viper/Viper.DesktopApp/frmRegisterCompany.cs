@@ -493,9 +493,9 @@ namespace Viper.DesktopApp
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
             address.PostalCode = Codigo_Postal.Text.Trim();
             address.CreatedDate = f;
-            address.CreateBy = "HECP";
-            address.ModifiedDate = f;
-            address.ModifiedBy = "HECP";
+            address.CreatedBy = "HECP";
+            address.LastUpdatedDate = f;
+            address.LastUpdatedBy = "HECP";
 
             message = BusinessLogicLayer.CompanyBLL.validateAddressWithDataAnnotations(address);
 
@@ -634,9 +634,9 @@ namespace Viper.DesktopApp
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
             address.PostalCode = Codigo_Postal.Text.Trim();
             address.CreatedDate = f;
-            address.CreateBy = "HECP";
-            address.ModifiedDate = f;
-            address.ModifiedBy = "HECP";
+            address.CreatedBy = "HECP";
+            address.LastUpdatedDate = f;
+            address.LastUpdatedBy = "HECP";
 
             if (addressSAT == null)
                 addressSAT = new AddressSAT();
@@ -653,9 +653,9 @@ namespace Viper.DesktopApp
             addressSAT.CityId = Convert.ToInt32(Municipio_Fiscal.SelectedValue);
             addressSAT.PostalCode = Codigo_Postal_Fiscal.Text.Trim();
             addressSAT.CreatedDate = f;
-            addressSAT.CreateBy = "HECP";
-            addressSAT.ModifiedDate = f;
-            addressSAT.ModifiedBy = "HECP";
+            addressSAT.CreatedBy = "HECP";
+            addressSAT.LastUpdatedDate = f;
+            addressSAT.LastUpdatedBy = "HECP";
 
             if (company == null)
                 company = new Company();
@@ -686,9 +686,9 @@ namespace Viper.DesktopApp
 
             //company.Logo = ImageToByte(picLogotipo.Image);
             company.CreatedDate = f;
-            company.CreateBy = "HECP";
-            company.ModifiedDate = f;
-            company.ModifiedBy = "HECP";
+            company.CreatedBy = "HECP";
+            company.LastUpdatedDate = f;
+            company.LastUpdatedBy = "HECP";
         }
 
         private void savePicture()

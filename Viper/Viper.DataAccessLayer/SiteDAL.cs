@@ -30,7 +30,7 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("Site", typeof(string))
                             });
 
-            using (ViperContext dbCtx = new ViperContext())
+            using (ViperDbContext dbCtx = new ViperDbContext())
             {
                 isExistente = Database.Exists(dbCtx.Database.Connection);
 
@@ -87,7 +87,7 @@ namespace Viper.DataAccessLayer
 
             List<Site> sites = new List<Site>();
 
-            using (ViperContext dbCtx = new ViperContext())
+            using (ViperDbContext dbCtx = new ViperDbContext())
             {
                 isExistente = Database.Exists(dbCtx.Database.Connection);
 

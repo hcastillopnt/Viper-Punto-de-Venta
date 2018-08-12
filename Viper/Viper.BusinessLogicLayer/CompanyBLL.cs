@@ -1,6 +1,4 @@
-﻿#region using directives 
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
@@ -9,8 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Viper.BusinessEntities;
 
-#endregion
-
 namespace Viper.BusinessLogicLayer
 {
     public class CompanyBLL
@@ -18,12 +14,12 @@ namespace Viper.BusinessLogicLayer
         #region sp_insert_company
 
         /// <summary>
-        /// Method to realize the record of the information of the person who acquires a license with the company OwalTek Innovation Solutions, of the software Viper
+        /// Metodo para registrar los datos generales y fiscales, de los clientes que adquieran Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
-        /// <param name="company">Company Object</param>
-        /// <param name="address">Address Object</param>
-        /// <param name="addressSAT">Address SAT Object</param>
-        /// <returns>Message</returns>
+        /// <param name="company">Objeto Compañia</param>
+        /// <param name="address">Objeto Direccion</param>
+        /// <param name="addressSAT">Objeto Direccion Fiscal</param>
+        /// <returns>Mensaje (String)</returns>
         public static string sp_insert_company(Company company, Address address, AddressSAT addressSAT)
         {
             //Variable to recover the messages of mistake produced in the layer of BusinessLogic
@@ -49,12 +45,13 @@ namespace Viper.BusinessLogicLayer
         #endregion
 
         #region updatePassword
+
         /// <summary>
-        /// Update password form oompany administrator
+        /// Metodo para actualizar el password de un cliente que adquirio Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
-        /// <param name="pwd">Password</param>
-        /// <param name="entityID">Entity ID</param>
-        /// <returns>Message</returns>
+        /// <param name="pwd">Contraseña anterior</param>
+        /// <param name="entityID">ID Compañia</param>
+        /// <returns>Mensaje (String)</returns>
         public static string updatePassword(string pwd, int entityID)
         {
             //Variable to recover the messages of mistake produced in the layer of BusinessLogic
@@ -76,6 +73,7 @@ namespace Viper.BusinessLogicLayer
             //To return the value of the variable message
             return message;
         }
+
         #endregion
 
         #region isCompanyRegistered
@@ -96,11 +94,12 @@ namespace Viper.BusinessLogicLayer
         #endregion
 
         #region getPasswordSaved
+
         /// <summary>
-        /// Get password saved in database
+        /// Metodo para recuperar la contraseña guardada
         /// </summary>
-        /// <param name="EntityID">Entity ID</param>
-        /// <returns>Password Encrypted</returns>
+        /// <param name="EntityID">ID Compañia</param>
+        /// <returns>Contraseña Encriptada</returns>
         public static string getPasswordSaved(int EntityID)
         {
             string Password = String.Empty;
@@ -112,14 +111,15 @@ namespace Viper.BusinessLogicLayer
 
             return Password;
         }
+
         #endregion
 
         #region obtainCompanyKeyGeneratedAutomatic
 
         /// <summary>
-        /// Method to obtain the key generated automatic of the company
+        /// Metodo para obtener la clave de la compañia para poder loguearse en la app web/app movil
         /// </summary>
-        /// <returns>String (Key)</returns>
+        /// <returns>Clave</returns>
         public static string obtainCompanyKeyGeneratedAutomatic()
         {
             //Variable to recover the key of the company
@@ -135,11 +135,12 @@ namespace Viper.BusinessLogicLayer
         #endregion
 
         #region getRegimenFiscalByID
+
         /// <summary>
         /// Metodo para obtener el regimen fiscal en base al ID
         /// </summary>
         /// <param name="RegimenID">Regimen Fiscal ID</param>
-        /// <returns>RegimenFiscal Name</returns>
+        /// <returns>Regimen Fiscal</returns>
         public static string getRegimenFiscalByID(int RegimenID)
         {
             string RegimenFiscal = String.Empty;
@@ -148,14 +149,16 @@ namespace Viper.BusinessLogicLayer
 
             return RegimenFiscal;
         }
+
         #endregion
 
         #region getCompanyRegisteredByCompanyID
+
         /// <summary>
-        /// Metodo para obtener la informacion de la compañia por medio del Id
+        /// Metodo para obtener la informacion de la compañia
         /// </summary>
-        /// <param name="CompanyID">Company ID</param>
-        /// <returns>Entity</returns>
+        /// <param name="CompanyID">ID Compañia</param>
+        /// <returns>Objeto Compañia</returns>
         public static Company getCompanyRegisteredByCompanyID(int CompanyID)
         {
             Company company = null;
@@ -164,14 +167,16 @@ namespace Viper.BusinessLogicLayer
 
             return company;
         }
+
         #endregion
 
         #region getCompanyAddressSATRegisteredByID
+
         /// <summary>
         /// Metodo para obtener la direccion de la compañia por medio del Id
         /// </summary>
-        /// <param name="AddressID">Address ID</param>
-        /// <returns>Entity</returns>
+        /// <param name="AddressID">ID Direccion</param>
+        /// <returns>Objeto Direccion</returns>
         public static Address getCompanyAddressRegisteredByCompanyID(int AddressID)
         {
             Address address = null;
@@ -180,14 +185,16 @@ namespace Viper.BusinessLogicLayer
 
             return address;
         }
+
         #endregion
 
         #region getCompanyAddressSATRegisteredByID
+
         /// <summary>
-        /// Metodo para obtener la direccion fiscal de la compañia por medio del Id
+        /// Metodo para obtener la direccion fiscal de la compañia
         /// </summary>
-        /// <param name="AddressSATID">AddressSATID ID</param>
-        /// <returns>Entity</returns>
+        /// <param name="AddressSATID">ID Direccion Fiscal</param>
+        /// <returns>Objeto Direccion Fiscal</returns>
         public static AddressSAT getCompanyAddressSATRegisteredByCompanyID(int AddressSATID)
         {
             AddressSAT addressSAT = null;
@@ -196,14 +203,15 @@ namespace Viper.BusinessLogicLayer
 
             return addressSAT;
         }
+
         #endregion
 
         #region getCatalogOfRegimenFiscal
 
         /// <summary>
-        /// Method to obtain the available options of fiscal regime
+        /// Metodo para obtener los regimenes fiscales existentes en la base de datos
         /// </summary>
-        /// <returns>DataTable</returns>
+        /// <returns>Tabla con la informacion</returns>
         public static DataTable getCatalogOfRegimenFiscal()
         {
             DataTable dataTable = null;
@@ -218,10 +226,10 @@ namespace Viper.BusinessLogicLayer
         #region getCatalogOfRegimenFiscalByName
 
         /// <summary>
-        /// Method to obtain the available options of fiscal regime by name
+        /// Metodo para filtrar los regimenes fiscales existentes en la base de datos 
         /// </summary>
         /// <param name="filter">Regimen Fiscal</param>
-        /// <returns>DataTable</returns>
+        /// <returns>Tabla con la informacion</returns>
         public static DataTable getCatalogOfRegimenFiscalByName(string filter)
         {
             DataTable dataTable = new DataTable();
@@ -236,10 +244,10 @@ namespace Viper.BusinessLogicLayer
         #region getRegimenIdByName
 
         /// <summary>
-        /// Method to obtain the ID fiscal regime by Name
+        /// Metodo para obtener el ID del regimen fiscal
         /// </summary>
         /// <param name="RegimenName">Regimen Fiscal</param>
-        /// <returns></returns>
+        /// <returns>ID</returns>
         public static int getRegimenIdByName(string RegimenName)
         {
             int RegimenID = 0;
@@ -252,6 +260,7 @@ namespace Viper.BusinessLogicLayer
         #endregion
 
         #region getCompanyIdByName
+
         /// <summary>
         /// Metodo para obtener el ID de la compañia por medio del nombre de la compañia
         /// </summary>
@@ -265,6 +274,7 @@ namespace Viper.BusinessLogicLayer
 
             return CompanyID;
         }
+
         #endregion
 
         #region validateWithDataAnnotations

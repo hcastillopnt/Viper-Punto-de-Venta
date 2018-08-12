@@ -93,5 +93,7 @@ namespace Viper.BusinessEntities
         public String Comment { get; set; }
 
         public virtual ICollection<StateProvince> StatesProvince { get; set; }
+        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<AddressSAT> AddressesSAT { get; set; }
     }
 }

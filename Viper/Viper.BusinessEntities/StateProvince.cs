@@ -67,5 +67,7 @@ namespace Viper.BusinessEntities
         public String VTOT { get; set; }
 
         public virtual ICollection<City> Cities { get; set; }
+        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<AddressSAT> AddressesSAT { get; set; }
     }
 }

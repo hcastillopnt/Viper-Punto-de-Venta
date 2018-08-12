@@ -65,5 +65,8 @@ namespace Viper.BusinessEntities
         [StringLength(10, ErrorMessage = "The field VTOT must have max length of 10 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field VTOT must be a string")]
         public String VTOT { get; set; }
+
+        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<AddressSAT> AddressesSAT { get; set; }
     }
 }

@@ -118,7 +118,7 @@ namespace Viper.DataAccessLayer
                                       select new
                                       {
                                           m.Name,
-                                          m.SubMenu,
+                                          m.Submenu,
                                           m.ControlName,
                                           m.ControlImage,
                                           m.IsActive
@@ -141,7 +141,7 @@ namespace Viper.DataAccessLayer
 
                             //Cargar los datos de la fila
                             row["Name"] = x.Name;
-                            row["SubMenu"] = x.SubMenu;
+                            row["SubMenu"] = x.Submenu;
                             row["ControlName"] = x.ControlName;
                             row["ControlImage"] = x.ControlImage;
                             row["IsActive"] = x.IsActive;
