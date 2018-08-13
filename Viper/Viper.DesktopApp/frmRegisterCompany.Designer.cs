@@ -929,10 +929,10 @@
             this.Vialidad_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Vialidad_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Vialidad_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vialidad_Fiscal.Location = new System.Drawing.Point(193, 3);
+            this.Vialidad_Fiscal.Location = new System.Drawing.Point(194, 3);
             this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
             this.Vialidad_Fiscal.NullText = "CALLE (FISCAL)";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(273, 24);
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(272, 21);
             this.Vialidad_Fiscal.TabIndex = 22;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -943,7 +943,7 @@
             this.lblNombreVialidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreVialidadFiscal.Location = new System.Drawing.Point(3, 0);
             this.lblNombreVialidadFiscal.Name = "lblNombreVialidadFiscal";
-            this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(184, 27);
+            this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(185, 27);
             this.lblNombreVialidadFiscal.TabIndex = 0;
             this.lblNombreVialidadFiscal.Text = "Nombre de Vialidad:";
             // 
@@ -1301,6 +1301,7 @@
             // btnCuentasBanco
             // 
             this.btnCuentasBanco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCuentasBanco.Enabled = false;
             this.btnCuentasBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnCuentasBanco.Image = ((System.Drawing.Image)(resources.GetObject("btnCuentasBanco.Image")));
             this.btnCuentasBanco.Location = new System.Drawing.Point(191, 3);
