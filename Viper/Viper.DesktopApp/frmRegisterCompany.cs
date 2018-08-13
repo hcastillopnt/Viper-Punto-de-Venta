@@ -30,6 +30,7 @@ namespace Viper.DesktopApp
         Address address = null;
         AddressSAT addressSAT = null;
         string RegimenFiscal = String.Empty;
+        bool bandera = false;
 
         public static RadTextBox Regimen_Fiscal;
 
@@ -37,7 +38,7 @@ namespace Viper.DesktopApp
 
         #region Constructor
 
-        public frmRegisterCompany()
+        public frmRegisterCompany(bool typeForm)
         {
             InitializeComponent();
 
@@ -46,6 +47,8 @@ namespace Viper.DesktopApp
             fillDropDownList();
 
             btnSalir.Enabled = true;
+
+            this.bandera = typeForm;
         }
 
         public frmRegisterCompany(int CompanyID)
@@ -617,6 +620,13 @@ namespace Viper.DesktopApp
                 MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 setToDefaultFields();
+
+                if(bandera)
+                {
+                    this.Hide();
+                    frmLogin frm = new frmLogin();
+                    frm.Show();
+                }
             }
             else
             {

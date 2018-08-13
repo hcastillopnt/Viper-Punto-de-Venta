@@ -28,7 +28,7 @@ namespace Viper.DesktopApp
             }
             else
             {
-                Application.Run(new frmRegisterCompany());
+                Application.Run(new frmRegisterCompany(true));
             }
         }
     }
