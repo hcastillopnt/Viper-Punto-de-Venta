@@ -85,34 +85,37 @@ namespace Viper.DataAccessLayer
                                    }).ToList();
 
                     //Get RoleID
-                    var Role = result1.FirstOrDefault().Name;
-
-                    switch (Role)
+                    if (result1.Count > 0)
                     {
-                        //ADMINISTRADOR COMPANY
-                        case "ADMINISTRADOR COMPANY":
+                        var Role = result1.FirstOrDefault().Name;
 
-                            //Guardar los datos recuperados en una fila del DataTable
-                            //Crear una fila nueva
-                            var rowAdmin = dt.NewRow();
+                        switch (Role)
+                        {
+                            //ADMINISTRADOR COMPANY
+                            case "ADMINISTRADOR COMPANY":
 
-                            //Cargar los datos de la fila
-                            rowAdmin["EmployeeIDNumber"] = "XXXXXXXXXXXXX";
-                            rowAdmin["FullName"] = "N/A";
-                            rowAdmin["Department"] = "EXECUTIVE";
-                            rowAdmin["JobTitle"] = "DUEÑO DE NEGOCIO";
-                            rowAdmin["StartTime"] = Convert.ToDateTime("07:00:00");
-                            rowAdmin["EndTime"] = Convert.ToDateTime("23:00:00");
-                            rowAdmin["Subsidiary"] = "N/A";
-                            rowAdmin["CompanyName"] = "";
-                            rowAdmin["Role"] = "ADMINISTRADOR COMPANY";
-                            rowAdmin["IsWelcome"] = true;
-                            rowAdmin["AccessFailed"] = 0;
+                                //Guardar los datos recuperados en una fila del DataTable
+                                //Crear una fila nueva
+                                var rowAdmin = dt.NewRow();
 
-                            //Añadir fila al DataTable
-                            dt.Rows.Add(rowAdmin);
+                                //Cargar los datos de la fila
+                                rowAdmin["EmployeeIDNumber"] = "XXXXXXXXXXXXX";
+                                rowAdmin["FullName"] = "N/A";
+                                rowAdmin["Department"] = "EXECUTIVE";
+                                rowAdmin["JobTitle"] = "DUEÑO DE NEGOCIO";
+                                rowAdmin["StartTime"] = Convert.ToDateTime("07:00:00");
+                                rowAdmin["EndTime"] = Convert.ToDateTime("23:00:00");
+                                rowAdmin["Subsidiary"] = "N/A";
+                                rowAdmin["CompanyName"] = "";
+                                rowAdmin["Role"] = "ADMINISTRADOR COMPANY";
+                                rowAdmin["IsWelcome"] = true;
+                                rowAdmin["AccessFailed"] = 0;
 
-                            break;
+                                //Añadir fila al DataTable
+                                dt.Rows.Add(rowAdmin);
+
+                                break;
+                        }
                     }
                 }
             }

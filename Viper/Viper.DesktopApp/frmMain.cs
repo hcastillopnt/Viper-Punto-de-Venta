@@ -40,11 +40,8 @@ namespace Viper.DesktopApp
 
             isInsertedValuesAdmin = BusinessLogicLayer.MenuBLL.uploadMenuToAdministrator();
 
-            if (isInsertedValuesAdmin)
-            {
-                //Cargar menu de opciones
-                CargarMenuVertical(rol);
-            }
+            //Cargar menu de opciones
+            CargarMenuVertical(rol);
 
             //Colocar nombre del puesto
             lblPuesto.Text = puest.ToUpper();

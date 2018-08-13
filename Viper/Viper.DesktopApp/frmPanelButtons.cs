@@ -18,9 +18,12 @@ namespace Viper.DesktopApp
         string menuSeleccionado = String.Empty;
         string companyName = String.Empty;
         int companyID = 0;
+        string RoleName = String.Empty;
 
         public frmPanelButtons(string menu, string rol)
         {
+            this.RoleName = rol;
+
             //Initialize UI
             InitializeComponent();
 
@@ -50,7 +53,7 @@ namespace Viper.DesktopApp
 
             string name = objButton.Name;
 
-            switch(name)
+            switch (name)
             {
                 //F4 Operaciones
                 //case "btnClientes":
@@ -82,13 +85,13 @@ namespace Viper.DesktopApp
             }
         }
 
-            private void uploadSubmenuItemsToPanel()
+        private void uploadSubmenuItemsToPanel()
         {
             List<Module> modules = new List<Module>();
             DataTable dtModules = new DataTable();
             Module module = null;
 
-            dtModules = BusinessLogicLayer.MenuBLL.CargarSubmenuPorRol("ADMINISTRADOR", menuSeleccionado);
+            dtModules = BusinessLogicLayer.MenuBLL.CargarSubmenuPorRol(RoleName, menuSeleccionado);
 
             if (dtModules.Rows.Count > 0)
             {
