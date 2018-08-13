@@ -206,7 +206,7 @@ namespace Viper.DataAccessLayer
 
             using (ViperDbContext db = new ViperDbContext())
             {
-                items = db.StatesProvince.Where(x => x.CountryRegionId == 159).ToList();
+                items = db.StatesProvince.ToList();
                 items.Add(new StateProvince { Id = -1, Description = "--SELECCIONE--" });
 
                 return items.OrderBy(x => x.Id).ToList();
