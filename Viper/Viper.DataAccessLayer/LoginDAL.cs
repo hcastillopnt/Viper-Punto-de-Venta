@@ -89,6 +89,14 @@ namespace Viper.DataAccessLayer
                     {
                         var Role = result1.FirstOrDefault().Name;
 
+                        var CompanyName = dbCtx.Companies    // your starting point - table in the "from" statement
+                                       .Join(dbCtx.Users, // the source table of the inner join
+                                          c => c.UserId,        // Select the primary key (the first part of the "on" clause in an sql "join" statement)
+                                          u => u.Id,   // Select the foreign key (the second part of the "on" clause)
+                                          (c, u) => new { c.CompanyName, u.LoginID, u.PasswordEncrypted }) // selection
+                                       .Where(x => x.LoginID == usr && x.PasswordEncrypted == pwd)
+                                       .FirstOrDefault().CompanyName;
+
                         switch (Role)
                         {
                             //ADMINISTRADOR COMPANY
@@ -106,7 +114,7 @@ namespace Viper.DataAccessLayer
                                 rowAdmin["StartTime"] = Convert.ToDateTime("07:00:00");
                                 rowAdmin["EndTime"] = Convert.ToDateTime("23:00:00");
                                 rowAdmin["Subsidiary"] = "N/A";
-                                rowAdmin["CompanyName"] = "";
+                                rowAdmin["CompanyName"] = CompanyName;
                                 rowAdmin["Role"] = "ADMINISTRADOR COMPANY";
                                 rowAdmin["IsWelcome"] = true;
                                 rowAdmin["AccessFailed"] = 0;
