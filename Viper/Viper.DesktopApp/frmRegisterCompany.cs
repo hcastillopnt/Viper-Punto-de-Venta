@@ -44,6 +44,8 @@ namespace Viper.DesktopApp
             uploadControlRegimenFiscalByCode();
 
             fillDropDownList();
+
+            btnSalir.Enabled = true;
         }
 
         public frmRegisterCompany(int CompanyID)
@@ -88,6 +90,7 @@ namespace Viper.DesktopApp
             this.btnCancelar.Click += Button_Click;
             this.btnCuentasBanco.Click += Button_Click;
             this.btnImportarDatosFiscales.Click += Button_Click;
+            this.btnSalir.Click += Button_Click;
             this.Entidad_Federativa.SelectedIndexChanged += cboEstado_SelectedIndexChanged;
             this.Entidad_Federativa_Fiscal.SelectedIndexChanged += cboEstadoFiscal_SelectedIndexChanged;
             this.Giro_Comercial.KeyPress += OnlyLetters_KeyPress;
@@ -181,6 +184,10 @@ namespace Viper.DesktopApp
 
                 case "btnCancelar":
                     setToDefaultFields();
+                    break;
+
+                case "btnSalir":
+                    Application.Exit();
                     break;
             }
         }

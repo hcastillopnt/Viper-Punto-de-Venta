@@ -235,6 +235,7 @@
     <Content Include="images\icon\question.png" />
     <Content Include="images\icon\refrescar.png" />
     <Content Include="images\icon\reportes.png" />
+    <Content Include="images\icon\salir.png" />
     <Content Include="images\icon\sub_cajas.png" />
     <Content Include="images\icon\sub_cliente.png" />
     <Content Include="images\icon\sub_compras.png" />
