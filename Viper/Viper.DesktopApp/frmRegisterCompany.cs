@@ -674,12 +674,12 @@ namespace Viper.DesktopApp
             if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
                 company.PhoneNumber = null;
             else
-                company.PhoneNumber = Telefono.Text.Trim();
+                company.PhoneNumber = Telefono.Value.ToString().Trim();
 
             if (string.IsNullOrEmpty(Celular.Text.Trim().ToString()) || Celular.Text.Contains("(___)___-___-____"))
                 company.CellphoneNumber = null;
             else
-                company.CellphoneNumber = Celular.Text.Trim();
+                company.CellphoneNumber = Celular.Value.ToString().Trim();
 
             company.EmailAddress = eMail.Text.Trim();
             company.FiscalName = Nombre_Fiscal.Text.Trim().ToUpper();
