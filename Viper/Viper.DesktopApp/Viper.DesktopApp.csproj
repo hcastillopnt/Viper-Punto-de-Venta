@@ -85,12 +85,6 @@
     <Reference Include="TelerikCommon, Version=2018.2.621.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdminEmployees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminEmployees.Designer.cs">
-      <DependentUpon>frmAdminEmployees.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +129,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilMessages.cs" />
-    <EmbeddedResource Include="frmAdminEmployees.resx">
-      <DependentUpon>frmAdminEmployees.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>

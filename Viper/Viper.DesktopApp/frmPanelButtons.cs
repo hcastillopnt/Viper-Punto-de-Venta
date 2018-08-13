@@ -79,9 +79,9 @@ namespace Viper.DesktopApp
                 //    AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
                 //    break;
 
-                case "btnEmpleados":
-                    AgregarFormularioEnPanel(new frmAdminEmployees());
-                    break;
+                //case "btnEmpleados":
+                //    AgregarFormularioEnPanel(new frmAdminEmployees());
+                //    break;
             }
         }
 
