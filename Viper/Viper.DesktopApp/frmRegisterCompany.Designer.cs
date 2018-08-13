@@ -912,8 +912,8 @@
             // tlpDF_02
             // 
             this.tlpDF_02.ColumnCount = 2;
-            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.03411F));
-            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.96589F));
+            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.72495F));
+            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.27505F));
             this.tlpDF_02.Controls.Add(this.Vialidad_Fiscal, 1, 0);
             this.tlpDF_02.Controls.Add(this.lblNombreVialidadFiscal, 0, 0);
             this.tlpDF_02.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -929,10 +929,10 @@
             this.Vialidad_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Vialidad_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Vialidad_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vialidad_Fiscal.Location = new System.Drawing.Point(171, 3);
+            this.Vialidad_Fiscal.Location = new System.Drawing.Point(193, 3);
             this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
             this.Vialidad_Fiscal.NullText = "CALLE (FISCAL)";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(295, 21);
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(273, 24);
             this.Vialidad_Fiscal.TabIndex = 22;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -943,7 +943,7 @@
             this.lblNombreVialidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreVialidadFiscal.Location = new System.Drawing.Point(3, 0);
             this.lblNombreVialidadFiscal.Name = "lblNombreVialidadFiscal";
-            this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(162, 27);
+            this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(184, 27);
             this.lblNombreVialidadFiscal.TabIndex = 0;
             this.lblNombreVialidadFiscal.Text = "Nombre de Vialidad:";
             // 
@@ -1027,7 +1027,7 @@
             // 
             this.lblEstadoFiscal.AutoSize = true;
             this.lblEstadoFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEstadoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoFiscal.Location = new System.Drawing.Point(3, 132);
             this.lblEstadoFiscal.Name = "lblEstadoFiscal";
             this.lblEstadoFiscal.Size = new System.Drawing.Size(154, 38);
