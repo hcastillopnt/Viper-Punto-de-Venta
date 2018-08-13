@@ -215,7 +215,7 @@
             this.Giro_Comercial.Location = new System.Drawing.Point(154, 3);
             this.Giro_Comercial.Name = "Giro_Comercial";
             this.Giro_Comercial.NullText = "--SELECCIONE--";
-            this.Giro_Comercial.Size = new System.Drawing.Size(595, 30);
+            this.Giro_Comercial.Size = new System.Drawing.Size(595, 28);
             this.Giro_Comercial.TabIndex = 1;
             this.Giro_Comercial.ThemeName = "VisualStudio2012Light";
             // 
@@ -459,7 +459,7 @@
             this.Vialidad.Location = new System.Drawing.Point(185, 3);
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "CALLE";
-            this.Vialidad.Size = new System.Drawing.Size(163, 24);
+            this.Vialidad.Size = new System.Drawing.Size(163, 21);
             this.Vialidad.TabIndex = 5;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -524,7 +524,7 @@
             this.No_Ext.Location = new System.Drawing.Point(97, 3);
             this.No_Ext.Name = "No_Ext";
             this.No_Ext.NullText = "NO. EXT";
-            this.No_Ext.Size = new System.Drawing.Size(81, 24);
+            this.No_Ext.Size = new System.Drawing.Size(81, 21);
             this.No_Ext.TabIndex = 7;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
             // 
@@ -596,7 +596,7 @@
             this.Municipio.Location = new System.Drawing.Point(97, 3);
             this.Municipio.Name = "Municipio";
             this.Municipio.NullText = "--SELECCIONE--";
-            this.Municipio.Size = new System.Drawing.Size(251, 30);
+            this.Municipio.Size = new System.Drawing.Size(251, 21);
             this.Municipio.TabIndex = 11;
             this.Municipio.ThemeName = "VisualStudio2012Light";
             // 
@@ -618,10 +618,13 @@
             this.Codigo_Postal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_Postal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Codigo_Postal.Location = new System.Drawing.Point(153, 69);
+            this.Codigo_Postal.Mask = "00000";
+            this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
             this.Codigo_Postal.Size = new System.Drawing.Size(239, 27);
             this.Codigo_Postal.TabIndex = 6;
             this.Codigo_Postal.TabStop = false;
+            this.Codigo_Postal.Text = "_____";
             this.Codigo_Postal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
             // 
@@ -697,13 +700,13 @@
             this.Telefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Telefono.Location = new System.Drawing.Point(153, 201);
-            this.Telefono.Mask = "(999)000-0000";
+            this.Telefono.Mask = "(99)000-00000";
             this.Telefono.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(239, 30);
             this.Telefono.TabIndex = 13;
             this.Telefono.TabStop = false;
-            this.Telefono.Text = "(___)___-____";
+            this.Telefono.Text = "(__)___-_____";
             this.Telefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Telefono.ThemeName = "VisualStudio2012Light";
             // 
@@ -717,7 +720,7 @@
             this.eMail.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.eMail.Name = "eMail";
             this.eMail.NullText = "EMAIL@EXAMPLE.COM";
-            this.eMail.Size = new System.Drawing.Size(593, 24);
+            this.eMail.Size = new System.Drawing.Size(593, 27);
             this.eMail.TabIndex = 12;
             this.eMail.ThemeName = "VisualStudio2012Light";
             // 
@@ -857,7 +860,7 @@
             this.Colonia_Fiscal.Location = new System.Drawing.Point(163, 102);
             this.Colonia_Fiscal.Name = "Colonia_Fiscal";
             this.Colonia_Fiscal.NullText = "COLONIA (FISCAL)";
-            this.Colonia_Fiscal.Size = new System.Drawing.Size(774, 24);
+            this.Colonia_Fiscal.Size = new System.Drawing.Size(774, 27);
             this.Colonia_Fiscal.TabIndex = 26;
             this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -929,7 +932,7 @@
             this.Vialidad_Fiscal.Location = new System.Drawing.Point(171, 3);
             this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
             this.Vialidad_Fiscal.NullText = "CALLE (FISCAL)";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(295, 24);
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(295, 21);
             this.Vialidad_Fiscal.TabIndex = 22;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -994,7 +997,7 @@
             this.No_Ext_Fiscal.Location = new System.Drawing.Point(120, 3);
             this.No_Ext_Fiscal.Name = "No_Ext_Fiscal";
             this.No_Ext_Fiscal.NullText = "NO. EXT";
-            this.No_Ext_Fiscal.Size = new System.Drawing.Size(111, 24);
+            this.No_Ext_Fiscal.Size = new System.Drawing.Size(111, 21);
             this.No_Ext_Fiscal.TabIndex = 24;
             this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1066,7 +1069,7 @@
             this.Municipio_Fiscal.Location = new System.Drawing.Point(120, 3);
             this.Municipio_Fiscal.Name = "Municipio_Fiscal";
             this.Municipio_Fiscal.NullText = "--SELECCIONE--";
-            this.Municipio_Fiscal.Size = new System.Drawing.Size(346, 30);
+            this.Municipio_Fiscal.Size = new System.Drawing.Size(346, 26);
             this.Municipio_Fiscal.TabIndex = 28;
             this.Municipio_Fiscal.ThemeName = "VisualStudio2012Light";
             // 
@@ -1210,7 +1213,7 @@
             this.Nombre_Fiscal.Location = new System.Drawing.Point(160, 3);
             this.Nombre_Fiscal.Name = "Nombre_Fiscal";
             this.Nombre_Fiscal.NullText = "NOMBRE FISCAL";
-            this.Nombre_Fiscal.Size = new System.Drawing.Size(777, 24);
+            this.Nombre_Fiscal.Size = new System.Drawing.Size(777, 28);
             this.Nombre_Fiscal.TabIndex = 15;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
             // 

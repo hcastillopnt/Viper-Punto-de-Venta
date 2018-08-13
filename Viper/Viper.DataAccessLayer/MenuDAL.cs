@@ -12,6 +12,36 @@ namespace Viper.DataAccessLayer
     public class MenuDAL
     {
         /// <summary>
+        /// Metodo para cargar los menus disponibles para un administrador
+        /// </summary>
+        /// <returns>True/False</returns>
+        public static bool uploadMenuToAdministrator()
+        {
+            bool isExistente = false;
+
+            using (ViperDbContext dbCtx = new ViperDbContext())
+            {
+                isExistente = Database.Exists(dbCtx.Database.Connection);
+
+                if(isExistente)
+                {
+                    isExistente = false;
+
+                    var result = dbCtx.Permissions.ToList().Count > 0;
+
+                    if(!result)
+                    {
+                        dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) SELECT 2, Id FROM Module;");
+
+                        isExistente = dbCtx.SaveChanges() > 0;
+                    }
+                }
+            }
+
+            return isExistente;
+        }
+
+        /// <summary>
         /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
         /// </summary>
         /// <param name="RolName">Nombre del Rol</param>
@@ -41,7 +71,7 @@ namespace Viper.DataAccessLayer
                         var result = (from p in ctx.Permissions
                                       join r in ctx.Roles on p.RoleId equals r.Id
                                       join m in ctx.Modules on p.ModuleId equals m.Id
-                                      where r.Name == "ADMINISTRADOR" && m.Submenu == "NULL"
+                                      where r.Name == RolName && m.Submenu == "NULL"
                                       select new
                                       {
                                           m.Name,
@@ -114,7 +144,7 @@ namespace Viper.DataAccessLayer
                         var result = (from p in ctx.Permissions
                                       join r in ctx.Roles on p.RoleId equals r.Id
                                       join m in ctx.Modules on p.ModuleId equals m.Id
-                                      where r.Name == "ADMINISTRADOR" && m.Menu == Menu && m.Submenu != "NULL"
+                                      where r.Name == RolName && m.Menu == Menu && m.Submenu != "NULL"
                                       select new
                                       {
                                           m.Name,

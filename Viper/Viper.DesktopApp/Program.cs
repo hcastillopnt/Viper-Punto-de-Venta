@@ -17,6 +17,7 @@ namespace Viper.DesktopApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
             bool isExistsCompany = false;
 
             isExistsCompany = BusinessLogicLayer.CompanyBLL.isCompanyRegistered();

@@ -12,9 +12,10 @@ namespace Viper.BusinessEntities
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ViperDbContext : DbContext
     {
-        public ViperDbContext() : base("ViperContext")
+        public ViperDbContext() : base("ViperDbContext")
         {
-            Database.SetInitializer<ViperDbContext>(new MigrateDatabaseToLatestVersion<ViperDbContext, Configuration>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ViperDbContext, BusinessEntities.Migrations.Configuration>());
+            //Database.SetInitializer<ViperDbContext>(new CreateDatabaseIfNotExists<ViperDbContext>());
         }
 
         public DbSet<CountryRegion> CountriesRegion { get; set; }

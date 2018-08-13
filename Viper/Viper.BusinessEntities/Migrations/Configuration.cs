@@ -5662,10 +5662,6 @@ namespace Viper.BusinessEntities.Migrations
 
                 context.Modules.AddRange(defaultModules);
                 context.SaveChanges();
-
-                //Default values of Permission Table
-                int noOfRowInserted = context.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) SELECT 1, Id FROM Module;");
-                context.SaveChanges();
             }
             catch (DbEntityValidationException ex)
             {

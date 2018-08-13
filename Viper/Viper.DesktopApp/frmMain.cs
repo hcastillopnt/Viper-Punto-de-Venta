@@ -36,8 +36,15 @@ namespace Viper.DesktopApp
             //Inicializar el Time para mostrar la hora actual
             timer.Start();
 
-            //Cargar menu de opciones
-            CargarMenuVertical(rol);
+            bool isInsertedValuesAdmin = false;
+
+            isInsertedValuesAdmin = BusinessLogicLayer.MenuBLL.uploadMenuToAdministrator();
+
+            if (isInsertedValuesAdmin)
+            {
+                //Cargar menu de opciones
+                CargarMenuVertical(rol);
+            }
 
             //Colocar nombre del puesto
             lblPuesto.Text = puest.ToUpper();
@@ -84,7 +91,7 @@ namespace Viper.DesktopApp
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
-            if(rol == "ADMINISTRADOR COMPANY")
+            if (rol == "ADMINISTRADOR COMPANY")
             {
                 //Obtenemos el nombre de la compañia
                 string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");

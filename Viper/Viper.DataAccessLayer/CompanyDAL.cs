@@ -62,21 +62,25 @@ namespace Viper.DataAccessLayer
                                         {
                                             isInserted = false;
 
-                                            company.AddressSATId = addressSATID;
-                                            company.AddressId = addressID;
-                                            dbCtx.Companies.Add(company);
+                                            dbCtx.Users.Add(user);
                                             isInserted = dbCtx.SaveChanges() > 0;
 
-                                            var companyId = dbCtx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-
-                                            if (companyId > 0)
+                                            if (isInserted)
                                             {
-                                                dbCtx.Users.Add(user);
-                                                isInserted = dbCtx.SaveChanges() > 0;
+                                                var UserID = dbCtx.Users.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                                if (isInserted == true && string.IsNullOrEmpty(message))
+                                                if (UserID > 0)
                                                 {
-                                                    dbCtxTran.Commit();
+                                                    company.UserId = UserID;
+                                                    company.AddressSATId = addressSATID;
+                                                    company.AddressId = addressID;
+                                                    dbCtx.Companies.Add(company);
+                                                    isInserted = dbCtx.SaveChanges() > 0;
+
+                                                    if (isInserted == true && string.IsNullOrEmpty(message))
+                                                    {
+                                                        dbCtxTran.Commit();
+                                                    }
                                                 }
                                             }
                                         }

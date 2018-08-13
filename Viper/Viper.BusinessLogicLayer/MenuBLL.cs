@@ -10,6 +10,19 @@ namespace Viper.BusinessLogicLayer
     public class MenuBLL
     {
         /// <summary>
+        /// Metodo para cargar los menus disponibles para un administrador
+        /// </summary>
+        /// <returns>True/False</returns>
+        public static bool uploadMenuToAdministrator()
+        {
+            bool isInserted = false;
+
+            isInserted = DataAccessLayer.MenuDAL.uploadMenuToAdministrator();
+
+            return isInserted;
+        }
+
+        /// <summary>
         /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
         /// </summary>
         /// <param name="RolName">Nombre del Rol</param>

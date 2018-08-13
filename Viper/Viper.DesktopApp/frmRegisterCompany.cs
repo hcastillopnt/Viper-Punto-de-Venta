@@ -495,7 +495,7 @@ namespace Viper.DesktopApp
             else
                 address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
             address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
-            address.CountryRegionId = 159;
+            address.CountryRegionId = 1;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
             address.PostalCode = Codigo_Postal.Text.Trim();
@@ -636,7 +636,7 @@ namespace Viper.DesktopApp
             else
                 address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
             address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
-            address.CountryRegionId = 159;
+            address.CountryRegionId = 1;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
             address.PostalCode = Codigo_Postal.Text.Trim();
@@ -655,7 +655,7 @@ namespace Viper.DesktopApp
             else
                 addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim() + ";";
             addressSAT.AddressLine2 = "COLONIA: " + Colonia_Fiscal.Text.Trim() + ";";
-            addressSAT.CountryRegionId = 159;
+            addressSAT.CountryRegionId = 1;
             addressSAT.StateProvinceId = Convert.ToInt32(Entidad_Federativa_Fiscal.SelectedValue);
             addressSAT.CityId = Convert.ToInt32(Municipio_Fiscal.SelectedValue);
             addressSAT.PostalCode = Codigo_Postal_Fiscal.Text.Trim();
