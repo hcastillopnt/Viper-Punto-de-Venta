@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileViper.iOS", "MobileVi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileViper.UWP", "MobileViper\MobileViper.UWP\MobileViper.UWP.csproj", "{714D1DD9-0347-42DE-A6DD-A77DD9D338D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileViper", "MobileViper\MobileViper\MobileViper.csproj", "{A0A359B1-63F7-4E38-81F7-C4F755E7A8AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileViper", "MobileViper\MobileViper\MobileViper.csproj", "{A0A359B1-63F7-4E38-81F7-C4F755E7A8AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudViper.WebAspx", "CloudViper.WebAspx\CloudViper.WebAspx.csproj", "{469005B6-6AF7-4F89-BB4E-776A7C345B0C}"
 EndProject
