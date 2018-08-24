@@ -169,9 +169,9 @@ namespace Viper.DesktopApp
             int height = Screen.PrimaryScreen.Bounds.Height; //Obtiene el alto de la pantalla principal en pixeles.
             int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
 
-            if (width < 1366 && height < 768)
+            if (width < 1366 && height <= 768)
             {
-                MessageBox.Show(new Form { TopMost = true }, "La resolucion de la computadora no es compatible con el Sistema Viper\n Favor de colocar la resolucion minima de 1366 x 768", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(new Form { TopMost = true }, "La resolucion de la computadora no es compatible con el Sistema Viper\nFavor de colocar la resolucion minima de 1366 x 768", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
