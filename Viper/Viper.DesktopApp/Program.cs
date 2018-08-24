@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,18 +19,38 @@ namespace Viper.DesktopApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            String connectionString = ConfigurationManager.ConnectionStrings["ViperDbContext"].ConnectionString;
 
-            bool isExistsCompany = false;
-
-            isExistsCompany = BusinessLogicLayer.CompanyBLL.isCompanyRegistered();
-
-            if (isExistsCompany)
+            if(string.IsNullOrEmpty(connectionString))
             {
-                Application.Run(new frmLogin());
+                MessageBox.Show(new Form { TopMost = true }, "La cadena de conexion no ha sido configurada", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Application.Run(new frmRegisterCompany(true));
+                try
+                {
+                    MySqlConnection connection = new MySqlConnection(connectionString);
+                    connection.Open();
+                    Console.WriteLine("MySQL version: " + connection.ServerVersion);
+                    connection.Close();
+
+                    bool isExistsCompany = false;
+
+                    isExistsCompany = BusinessLogicLayer.CompanyBLL.isCompanyRegistered();
+
+                    if (isExistsCompany)
+                    {
+                        Application.Run(new frmLogin());
+                    }
+                    else
+                    {
+                        Application.Run(new frmRegisterCompany(true));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(new Form { TopMost = true }, ex.Message.ToString(), "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
