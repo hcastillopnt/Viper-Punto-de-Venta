@@ -123,6 +123,33 @@ namespace Viper.DataAccessLayer
                                 dt.Rows.Add(rowAdmin);
 
                                 break;
+
+                            case "BASICO":
+
+                                result2.ToList().ForEach(x =>
+                                {
+                                    //Guardar los datos recuperados en una fila del DataTable
+                                    //Crear una fila nueva
+                                    var rowBasic = dt.NewRow();
+
+                                    //Cargar los datos de la fila
+                                    rowBasic["EmployeeIDNumber"] = x.EmployeeNumber;
+                                    rowBasic["FullName"] = x.FullName;
+                                    rowBasic["Department"] = x.Department;
+                                    rowBasic["JobTitle"] = x.JobTitle;
+                                    rowBasic["StartTime"] = x.StartTime;
+                                    rowBasic["EndTime"] = x.EndTime;
+                                    rowBasic["Subsidiary"] = x.Subsidiary;
+                                    rowBasic["CompanyName"] = CompanyName;
+                                    rowBasic["Role"] = x.Role;
+                                    rowBasic["IsWelcome"] = x.IsWelcome;
+                                    rowBasic["AccessFailed"] = x.AccessFailedCount;
+
+                                    //Añadir fila al DataTable
+                                    dt.Rows.Add(rowBasic);
+                                });
+
+                                break;
                         }
                     }
                 }

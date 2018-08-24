@@ -50,14 +50,17 @@ namespace Viper.DesktopApp
 
                 if (dt != null)
                 {
+                    string employeeIdNumber = dt.Rows[0].Field<String>("EmployeeIDNumber");
                     string fullname = dt.Rows[0].Field<String>("FullName");
-                    string company = dt.Rows[0].Field<String>("CompanyName");
-                    string role = dt.Rows[0].Field<String>("Role");
+                    string department = dt.Rows[0].Field<String>("Department");
                     string jobTitle = dt.Rows[0].Field<String>("JobTitle");
                     DateTime startTime = dt.Rows[0].Field<DateTime>("StartTime");
                     DateTime endTime = dt.Rows[0].Field<DateTime>("EndTime");
-                    int acccessFailed = dt.Rows[0].Field<int>("AccessFailed");
+                    string subsidiary = dt.Rows[0].Field<String>("Subsidiary");
+                    string company = dt.Rows[0].Field<String>("CompanyName");
+                    string role = dt.Rows[0].Field<String>("Role");
                     bool isWelcome = dt.Rows[0].Field<bool>("IsWelcome");
+                    int acccessFailed = dt.Rows[0].Field<int>("AccessFailed");
 
                     //if (acccessFailed < 3 || role == "ADMINISTRADOR")
                     //{
