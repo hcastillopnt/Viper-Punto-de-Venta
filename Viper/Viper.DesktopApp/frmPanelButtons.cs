@@ -72,16 +72,16 @@ namespace Viper.DesktopApp
                     AgregarFormularioEnPanel(new frmRegisterCompany(companyID));
                     break;
 
-                case "btnSucursales":
-                    companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-                    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
+                //case "btnSucursales":
+                //    companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+                //    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
 
-                    AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
+                //    AgregarFormularioEnPanel(new frmAdminSites(companyName, companyID));
+                //    break;
+
+                case "btnEmpleados":
+                    AgregarFormularioEnPanel(new frmAdminEmployees());
                     break;
-
-                    //case "btnEmpleados":
-                    //    AgregarFormularioEnPanel(new frmAdminEmployees());
-                    //    break;
             }
         }
 
