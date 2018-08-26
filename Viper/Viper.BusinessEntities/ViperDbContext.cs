@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Viper.BusinessEntities.Migrations;
 
 namespace Viper.BusinessEntities
 {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ViperDbContext : DbContext
     {
-        public ViperDbContext() : base("ViperDbContext")
+        public ViperDbContext() : base(ViperDbContext.getConnectionStringName())
         {
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ViperDbContext, BusinessEntities.Migrations.Configuration>());
             //Database.SetInitializer<ViperDbContext>(new CreateDatabaseIfNotExists<ViperDbContext>());
+            Database.SetInitializer<ViperDbContext>(new ViperDbInitializer());
         }
 
         public DbSet<CountryRegion> CountriesRegion { get; set; }
@@ -43,6 +44,22 @@ namespace Viper.BusinessEntities
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+
+        private static string getConnectionStringName()
+        {
+            ConnectionStringSettingsCollection connections = ConfigurationManager.ConnectionStrings;
+            String CONNECTIONSTRING = String.Empty;
+
+            if (connections.Count != 0)
+            {
+                foreach (ConnectionStringSettings connection in connections)
+                {
+                    CONNECTIONSTRING = connection.Name;
+                }
+            }
+
+            return CONNECTIONSTRING;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Viper.DesktopApp
         Company company = null;
         Address address = null;
         AddressSAT addressSAT = null;
+        Site site = null;
         string RegimenFiscal = String.Empty;
         bool bandera = false;
 
@@ -78,10 +79,39 @@ namespace Viper.DesktopApp
             this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            this.Size = new Size(1366, 768);
-            this.WindowState = FormWindowState.Maximized;
+
+            if (bandera)
+            {
+                //Establecer resolucion de la ventana
+                int height = Screen.PrimaryScreen.Bounds.Height; //Obtiene el alto de la pantalla principal en pixeles.
+                int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
+
+                if (width < 1366 && height <= 768)
+                {
+                    MessageBox.Show(new Form { TopMost = true }, "La resolucion de la computadora no es compatible con el Sistema Viper\nFavor de colocar la resolucion minima de 1366 x 768", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+                else
+                {
+                    if (width != 1366 && height != 768)
+                    {
+                        this.Size = new Size(1366, 768);
+                        this.WindowState = FormWindowState.Normal;
+                        this.StartPosition = FormStartPosition.CenterScreen;
+                    }
+                    else if (width == 1366 && height == 768)
+                    {
+                        this.Size = new Size(1366, 768);
+                        this.WindowState = FormWindowState.Maximized;
+                    }
+                }
+            }
+            else
+            {
+                this.Size = new Size(1366, 768);
+                this.WindowState = FormWindowState.Maximized;
+            }
 
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
@@ -623,10 +653,47 @@ namespace Viper.DesktopApp
 
                 if(bandera)
                 {
+                    registerSiteDefault();
+
                     this.Hide();
                     frmLogin frm = new frmLogin();
                     frm.Show();
                 }
+            }
+            else
+            {
+                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void registerSiteDefault()
+        {
+            string message = String.Empty;
+
+            if (site == null)
+                site = new Site();
+
+            site.SiteName = "SUCURSAL DEFAULT";
+            site.UniquePhysicalID = "SUC-" + Municipio.SelectedText.ToUpper().Trim().ToString() + "-" + Colonia.Text.ToUpper().Trim().ToString();
+            site.ResponsibleName = "DEFAULT";
+
+            if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
+                site.PhoneNumber = null;
+            else
+                site.PhoneNumber = Telefono.Value.ToString().Trim();
+
+            site.IsActive = true;
+            site.CreatedDate = f;
+            site.CreatedBy = "HECP";
+            site.LastUpdatedDate = f;
+            site.LastUpdatedBy = "HECP";
+
+
+            message = BusinessLogicLayer.SiteBLL.sp_insert_site(site);
+
+            if (String.IsNullOrEmpty(message))
+            {
+                MessageBox.Show(new Form { TopMost = true }, "Sucursal registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

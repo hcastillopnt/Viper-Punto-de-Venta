@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,9 +20,20 @@ namespace Viper.DesktopApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            String connectionString = ConfigurationManager.ConnectionStrings["ViperDbContext"].ConnectionString;
+            ConnectionStringSettingsCollection connections = ConfigurationManager.ConnectionStrings;
+            String connectionName = String.Empty;
 
-            if(string.IsNullOrEmpty(connectionString))
+            if (connections.Count != 0)
+            {
+                foreach (ConnectionStringSettings connection in connections)
+                {
+                    connectionName = connection.Name;
+                }
+            }
+
+            string connectionString = ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
+
+            if (string.IsNullOrEmpty(connectionString))
             {
                 MessageBox.Show(new Form { TopMost = true }, "La cadena de conexion no ha sido configurada", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -49,9 +61,17 @@ namespace Viper.DesktopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(new Form { TopMost = true }, ex.Message.ToString(), "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Thread t = new Thread(new ThreadStart(startForm));
+                    t.Start();
+                    Thread.Sleep(45000);
+                    t.Abort();
                 }
             }
+        }
+
+        private static void startForm()
+        {
+            Application.Run(new frmUploadDataToDataBase());
         }
     }
 }
