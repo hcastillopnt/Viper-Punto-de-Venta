@@ -230,6 +230,7 @@
             this.Nombre_Empresa.Size = new System.Drawing.Size(595, 24);
             this.Nombre_Empresa.TabIndex = 0;
             this.Nombre_Empresa.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Empresa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblGiro
             // 
@@ -311,6 +312,7 @@
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExaminar.ThemeName = "VisualStudio2012Light";
+            this.btnExaminar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosGenerales_Izquierda
             // 
@@ -376,6 +378,7 @@
             this.Tipo_Inmueble.Size = new System.Drawing.Size(239, 27);
             this.Tipo_Inmueble.TabIndex = 0;
             this.Tipo_Inmueble.ThemeName = "VisualStudio2012Light";
+            this.Tipo_Inmueble.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Colonia
             // 
@@ -390,6 +393,7 @@
             this.Colonia.Size = new System.Drawing.Size(595, 27);
             this.Colonia.TabIndex = 0;
             this.Colonia.ThemeName = "VisualStudio2012Light";
+            this.Colonia.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblTipoInmueble
             // 
@@ -435,6 +439,7 @@
             this.Tipo_Vialidad.Size = new System.Drawing.Size(239, 27);
             this.Tipo_Vialidad.TabIndex = 0;
             this.Tipo_Vialidad.ThemeName = "VisualStudio2012Light";
+            this.Tipo_Vialidad.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDG_01
             // 
@@ -462,6 +467,7 @@
             this.Vialidad.Size = new System.Drawing.Size(163, 21);
             this.Vialidad.TabIndex = 0;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
+            this.Vialidad.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNombreVialidad
             // 
@@ -504,6 +510,7 @@
             this.No_Int.Size = new System.Drawing.Size(83, 21);
             this.No_Int.TabIndex = 0;
             this.No_Int.ThemeName = "VisualStudio2012Light";
+            this.No_Int.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoInt
             // 
@@ -527,6 +534,7 @@
             this.No_Ext.Size = new System.Drawing.Size(81, 21);
             this.No_Ext.TabIndex = 0;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
+            this.No_Ext.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoExt
             // 
@@ -572,6 +580,7 @@
             this.Entidad_Federativa.Size = new System.Drawing.Size(239, 27);
             this.Entidad_Federativa.TabIndex = 0;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
+            this.Entidad_Federativa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDG_03
             // 
@@ -599,6 +608,7 @@
             this.Municipio.Size = new System.Drawing.Size(251, 21);
             this.Municipio.TabIndex = 0;
             this.Municipio.ThemeName = "VisualStudio2012Light";
+            this.Municipio.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblLocalidad
             // 
@@ -627,6 +637,7 @@
             this.Codigo_Postal.Text = "_____";
             this.Codigo_Postal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Postal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblEmail
             // 
@@ -692,6 +703,7 @@
             this.Celular.Text = "(___)___-___-____";
             this.Celular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Celular.ThemeName = "VisualStudio2012Light";
+            this.Celular.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Telefono
             // 
@@ -709,6 +721,7 @@
             this.Telefono.Text = "(__)___-_____";
             this.Telefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Telefono.ThemeName = "VisualStudio2012Light";
+            this.Telefono.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // eMail
             // 
@@ -723,6 +736,7 @@
             this.eMail.Size = new System.Drawing.Size(593, 27);
             this.eMail.TabIndex = 0;
             this.eMail.ThemeName = "VisualStudio2012Light";
+            this.eMail.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // panelIzquierdo
             // 
@@ -850,6 +864,7 @@
             this.Tipo_Inmueble_Fiscal.Size = new System.Drawing.Size(299, 27);
             this.Tipo_Inmueble_Fiscal.TabIndex = 0;
             this.Tipo_Inmueble_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Tipo_Inmueble_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Colonia_Fiscal
             // 
@@ -863,6 +878,7 @@
             this.Colonia_Fiscal.Size = new System.Drawing.Size(774, 27);
             this.Colonia_Fiscal.TabIndex = 0;
             this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Colonia_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblTipoInmuebleFiscal
             // 
@@ -908,6 +924,7 @@
             this.Tipo_Vialidad_Fiscal.Size = new System.Drawing.Size(299, 27);
             this.Tipo_Vialidad_Fiscal.TabIndex = 0;
             this.Tipo_Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Tipo_Vialidad_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDF_02
             // 
@@ -935,6 +952,7 @@
             this.Vialidad_Fiscal.Size = new System.Drawing.Size(272, 21);
             this.Vialidad_Fiscal.TabIndex = 0;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Vialidad_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNombreVialidadFiscal
             // 
@@ -977,6 +995,7 @@
             this.No_Int_Fiscal.Size = new System.Drawing.Size(112, 21);
             this.No_Int_Fiscal.TabIndex = 0;
             this.No_Int_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.No_Int_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoIntFiscal
             // 
@@ -1000,6 +1019,7 @@
             this.No_Ext_Fiscal.Size = new System.Drawing.Size(111, 21);
             this.No_Ext_Fiscal.TabIndex = 0;
             this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.No_Ext_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoExtFiscal
             // 
@@ -1045,6 +1065,7 @@
             this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(299, 32);
             this.Entidad_Federativa_Fiscal.TabIndex = 0;
             this.Entidad_Federativa_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Entidad_Federativa_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDF_03
             // 
@@ -1072,6 +1093,7 @@
             this.Municipio_Fiscal.Size = new System.Drawing.Size(346, 26);
             this.Municipio_Fiscal.TabIndex = 0;
             this.Municipio_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Municipio_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblLocalidadFiscal
             // 
@@ -1100,6 +1122,7 @@
             this.Codigo_Postal_Fiscal.Text = "_____";
             this.Codigo_Postal_Fiscal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Postal_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // gbDatosCorporativos
             // 
@@ -1169,6 +1192,7 @@
             this.btnRegimenFiscal.TabStop = false;
             this.btnRegimenFiscal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegimenFiscal.ThemeName = "VisualStudio2012Light";
+            this.btnRegimenFiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // RFC
             // 
@@ -1181,6 +1205,7 @@
             this.RFC.Size = new System.Drawing.Size(777, 28);
             this.RFC.TabIndex = 0;
             this.RFC.ThemeName = "VisualStudio2012Light";
+            this.RFC.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblRegimenFiscal
             // 
@@ -1204,6 +1229,7 @@
             this.CURP.Size = new System.Drawing.Size(777, 28);
             this.CURP.TabIndex = 0;
             this.CURP.ThemeName = "VisualStudio2012Light";
+            this.CURP.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Nombre_Fiscal
             // 
@@ -1216,6 +1242,7 @@
             this.Nombre_Fiscal.Size = new System.Drawing.Size(777, 28);
             this.Nombre_Fiscal.TabIndex = 0;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblRFC
             // 
@@ -1283,6 +1310,7 @@
             this.btnAceptar.Text = "Finalizar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.ThemeName = "VisualStudio2012Light";
+            this.btnAceptar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnCancelar
             // 
@@ -1297,6 +1325,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.ThemeName = "VisualStudio2012Light";
+            this.btnCancelar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnCuentasBanco
             // 
@@ -1311,6 +1340,7 @@
             this.btnCuentasBanco.Text = "Cuentas de \r\nBanco";
             this.btnCuentasBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCuentasBanco.ThemeName = "VisualStudio2012Light";
+            this.btnCuentasBanco.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnImportarDatosFiscales
             // 
@@ -1324,6 +1354,7 @@
             this.btnImportarDatosFiscales.Text = "Importar \r\nDatos Fiscales";
             this.btnImportarDatosFiscales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImportarDatosFiscales.ThemeName = "VisualStudio2012Light";
+            this.btnImportarDatosFiscales.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnSalir
             // 
@@ -1338,6 +1369,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.ThemeName = "VisualStudio2012Light";
+            this.btnSalir.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // frmRegisterCompany
             // 

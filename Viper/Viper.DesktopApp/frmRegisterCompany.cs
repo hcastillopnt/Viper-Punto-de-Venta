@@ -25,6 +25,9 @@ namespace Viper.DesktopApp
         DateTime f = DateTime.Today;
         ComponentResourceManager resources = new ComponentResourceManager(typeof(frmRegisterCompany));
         RadButton objButton = null;
+        RadTextBox objTextbox = null;
+        RadDropDownList objDropDownList = null;
+        RadMaskedEditBox objMaskedEditBox = null;
         String rutaLogotipo = String.Empty;
         Company company = null;
         Address address = null;
@@ -65,6 +68,197 @@ namespace Viper.DesktopApp
 
         #region Events of the controls 
 
+        private void Control_Leave(object sender, EventArgs e)
+        {
+            if (sender is RadTextBox)
+            {
+                objTextbox = (RadTextBox)sender;
+
+                switch (objTextbox.Name)
+                {
+                    //tab 1
+                    case "Nombre_Empresa":
+                        Tipo_Inmueble.Focus();
+                        break;
+
+                    //tab 4
+                    case "Vialidad":
+                        Codigo_Postal.Select();
+                        Codigo_Postal.Focus();
+                        break;
+
+                    //tab 6
+                    case "No_Ext":
+                        No_Int.Focus();
+                        break;
+
+                    //tab 7
+                    case "No_Int":
+                        Colonia.Focus();
+                        break;
+
+                    //tab 8
+                    case "Colonia":
+                        Entidad_Federativa.Focus();
+                        break;
+
+                    //tab 11
+                    case "eMail":
+                        Telefono.Select();
+                        Telefono.Focus();
+                        break;
+
+                    //tab 14
+                    case "Nombre_Fiscal":
+                        RFC.Focus();
+                        break;
+
+                    //tab 15
+                    case "RFC":
+                        CURP.Focus();
+                        break;
+
+                    //tab 16
+                    case "CURP":
+                        btnRegimenFiscal.Focus();
+                        break;
+
+                    //tab 20
+                    case "Vialidad_Fiscal":
+                        Codigo_Postal_Fiscal.Select();
+                        Codigo_Postal_Fiscal.Focus();
+                        break;
+
+                    //tab 22
+                    case "No_Ext_Fiscal":
+                        No_Int_Fiscal.Focus();
+                        break;
+
+                    //tab 23
+                    case "No_Int_Fiscal":
+                        Colonia_Fiscal.Focus();
+                        break;
+
+                    //tab 24
+                    case "Colonia_Fiscal":
+                        Entidad_Federativa_Fiscal.Focus();
+                        break;
+                }
+            }
+            else if (sender is RadDropDownList)
+            {
+                objDropDownList = (RadDropDownList)sender;
+
+                switch (objDropDownList.Name)
+                {
+                    //tab 2
+                    case "Tipo_Inmueble":
+                        Tipo_Vialidad.Focus();
+                        break;
+
+                    //tab 3
+                    case "Tipo_Vialidad":
+                        Vialidad.Focus();
+                        break;
+
+                    //tab 9
+                    case "Entidad_Federativa":
+                        Municipio.Focus();
+                        break;
+
+                    //tab 10
+                    case "Municipio":
+                        eMail.Focus();
+                        break;
+
+                    //tab 18
+                    case "Tipo_Inmueble_Fiscal":
+                        Tipo_Vialidad_Fiscal.Focus();
+                        break;
+
+                    //tab 19
+                    case "Tipo_Vialidad_Fiscal":
+                        Vialidad_Fiscal.Focus();
+                        break;
+
+                    //tab 25
+                    case "Entidad_Federativa_Fiscal":
+                        Municipio_Fiscal.Focus();
+                        break;
+
+                    //tab 26 
+                    case "Municipio_Fiscal":
+                        btnImportarDatosFiscales.Focus();
+                        break;
+                }
+            }
+            else if (sender is RadButton)
+            {
+                objButton = (RadButton)sender;
+
+                switch (objButton.Name)
+                {
+                    //tab 17
+                    case "btnRegimenFiscal":
+                        Tipo_Inmueble_Fiscal.Focus();
+                        break;
+
+                    //tab 27
+                    case "btnImportarDatosFiscales":
+                        btnCuentasBanco.Focus();
+                        break;
+
+                    //tab 28
+                    case "btnCuentasBanco":
+                        btnAceptar.Focus();
+                        break;
+
+                    //tab 29
+                    case "btnAceptar":
+                        btnCancelar.Focus();
+                        break;
+
+                    //tab 30
+                    case "btnCancelar":
+                        btnSalir.Focus();
+                        break;
+
+                    //tab 31
+                    case "btnSalir":
+                        btnExaminar.Focus();
+                        break;
+                }
+            }
+            else if(sender is RadMaskedEditBox)
+            {
+                objMaskedEditBox = (RadMaskedEditBox)sender;
+
+                switch(objMaskedEditBox.Name)
+                {
+                    //tab 5
+                    case "Codigo_Postal":
+                        No_Ext.Focus();
+                        break;
+
+                    //tab 12
+                    case "Telefono":
+                        Celular.Select();
+                        Celular.Focus();
+                        break;
+
+                    //tab 13
+                    case "Celular":
+                        Nombre_Fiscal.Focus();
+                        break;
+
+                    //tab 21
+                    case "Codigo_Postal_Fiscal":
+                        No_Ext_Fiscal.Focus();
+                        break;
+                }
+            }
+        }
+
         public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
         {
             args.Cancel = args.CloseReason == CloseReason.UserClosing;
@@ -81,7 +275,6 @@ namespace Viper.DesktopApp
             this.MinimizeBox = false;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.KeyPreview = true;
-
 
             if (bandera)
             {

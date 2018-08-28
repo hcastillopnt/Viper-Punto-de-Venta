@@ -601,7 +601,6 @@
             this.Vialidad.Size = new System.Drawing.Size(292, 31);
             this.Vialidad.TabIndex = 3;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
-            this.Vialidad.Leave += new System.EventHandler(this.Vialidad_Leave);
             // 
             // lblNombreVialidad
             // 
@@ -644,7 +643,6 @@
             this.Numero_Interior.Size = new System.Drawing.Size(150, 31);
             this.Numero_Interior.TabIndex = 6;
             this.Numero_Interior.ThemeName = "VisualStudio2012Light";
-            this.Numero_Interior.Leave += new System.EventHandler(this.No_Int_Leave);
             // 
             // lblNoInt
             // 
@@ -667,7 +665,6 @@
             this.Numero_Exterior.Size = new System.Drawing.Size(144, 31);
             this.Numero_Exterior.TabIndex = 5;
             this.Numero_Exterior.ThemeName = "VisualStudio2012Light";
-            this.Numero_Exterior.Leave += new System.EventHandler(this.No_Ext_Leave);
             // 
             // lblNoExt
             // 
@@ -713,7 +710,6 @@
             this.cboEstado.Size = new System.Drawing.Size(290, 45);
             this.cboEstado.TabIndex = 8;
             this.cboEstado.ThemeName = "VisualStudio2012Light";
-            this.cboEstado.Leave += new System.EventHandler(this.cboEstado_Leave);
             // 
             // tlp10
             // 
@@ -741,7 +737,6 @@
             this.cboLocalidad.Size = new System.Drawing.Size(325, 28);
             this.cboLocalidad.TabIndex = 9;
             this.cboLocalidad.ThemeName = "VisualStudio2012Light";
-            this.cboLocalidad.Leave += new System.EventHandler(this.cboLocalidad_Leave);
             // 
             // lblLocalidad
             // 
@@ -768,7 +763,6 @@
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
             this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
-            this.Codigo_Postal.Leave += new System.EventHandler(this.Codigo_Postal_Leave);
             // 
             // tlp16
             // 
