@@ -29,8 +29,8 @@ namespace Viper.DesktopApp
             {
                 // Inicializar la Base de Datos
                 new Viper.BusinessEntities.ViperDbInitializer().InitializeDatabase(ctx);
-                this.Hide();
                 Application.Run(new frmRegisterCompany(true));
+                this.Hide();
                 t.Abort();
             }
         }

@@ -341,7 +341,7 @@ namespace Viper.DesktopApp
             int offset = stringInicial.Length;
             int iniciaString = nuevoString.LastIndexOf(stringInicial) + offset;
             int cortar = nuevoString.Length - iniciaString;
-            nuevoString =  nuevoString.Substring(iniciaString, cortar);
+            nuevoString = nuevoString.Substring(iniciaString, cortar);
             return nuevoString;
         }
 
@@ -651,49 +651,23 @@ namespace Viper.DesktopApp
 
                 setToDefaultFields();
 
-                if(bandera)
+                if (bandera)
                 {
-                    registerSiteDefault();
+                    message = BusinessLogicLayer.SiteBLL.sp_insert_site(site);
 
-                    this.Hide();
-                    frmLogin frm = new frmLogin();
-                    frm.Show();
+                    if (String.IsNullOrEmpty(message))
+                    {
+                        //MessageBox.Show(new Form { TopMost = true }, "Sucursal registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Hide();
+                        frmLogin frm = new frmLogin();
+                        frm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void registerSiteDefault()
-        {
-            string message = String.Empty;
-
-            if (site == null)
-                site = new Site();
-
-            site.SiteName = "SUCURSAL DEFAULT";
-            site.UniquePhysicalID = "SUC-" + Municipio.SelectedText.ToUpper().Trim().ToString() + "-" + Colonia.Text.ToUpper().Trim().ToString();
-            site.ResponsibleName = "DEFAULT";
-
-            if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
-                site.PhoneNumber = null;
-            else
-                site.PhoneNumber = Telefono.Value.ToString().Trim();
-
-            site.IsActive = true;
-            site.CreatedDate = f;
-            site.CreatedBy = "HECP";
-            site.LastUpdatedDate = f;
-            site.LastUpdatedBy = "HECP";
-
-
-            message = BusinessLogicLayer.SiteBLL.sp_insert_site(site);
-
-            if (String.IsNullOrEmpty(message))
-            {
-                MessageBox.Show(new Form { TopMost = true }, "Sucursal registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -771,6 +745,54 @@ namespace Viper.DesktopApp
             company.CreatedBy = "HECP";
             company.LastUpdatedDate = f;
             company.LastUpdatedBy = "HECP";
+
+            string message = String.Empty;
+
+            if (site == null)
+                site = new Site();
+
+            site.SiteName = "DEFAULT";
+
+            char[] delimiterChars = { ' ' };
+            string[] arr = Nombre_Empresa.Text.Trim().ToUpper().Split(delimiterChars);
+            string sucKey = String.Empty;
+            string rfc_homoclave = String.Empty;
+            string abrev_stateprovince = String.Empty;
+            string city = String.Empty;
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var i in arr)
+            {
+                if (i.Length > 3)
+                {
+                    sb.Append(i.Substring(0, 3));
+                }
+            }
+
+            if (company.RFC.Length == 13)
+                rfc_homoclave = company.RFC.Substring(10, 3);
+            else if (company.RFC.Length == 12)
+                rfc_homoclave = company.RFC.Substring(9, 3);
+
+            abrev_stateprovince = BusinessLogicLayer.DropDownListHelperBLL.GetAbrevStateProvince(address.StateProvinceId);
+            city = BusinessLogicLayer.DropDownListHelperBLL.GetCityName(address.CityId);
+
+            sucKey = sb.ToString();
+
+            site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince + "-" + city + "-" + Colonia.Text.Trim().ToUpper() + "\\" + site.SiteName;
+            site.ResponsibleName = "DEFAULT";
+
+            if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
+                site.PhoneNumber = null;
+            else
+                site.PhoneNumber = Telefono.Value.ToString().Trim();
+
+            site.IsActive = true;
+            site.CreatedDate = f;
+            site.CreatedBy = "HECP";
+            site.LastUpdatedDate = f;
+            site.LastUpdatedBy = "HECP";
         }
 
         private void savePicture()

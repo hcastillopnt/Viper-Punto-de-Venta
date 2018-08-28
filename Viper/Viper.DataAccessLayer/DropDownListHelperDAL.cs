@@ -215,6 +215,25 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region GetAbrevStateProvince
+
+        /// <summary>
+        /// Metodo para obtener la abreviatura del estado
+        /// </summary>
+        /// <param name="StateID">ID del estado</param>
+        /// <returns>String</returns>
+        public static String GetAbrevStateProvince(int StateID)
+        {
+            using (ViperDbContext db = new ViperDbContext())
+            {
+                var abrev = db.StatesProvince.Where(x => x.Id == StateID).FirstOrDefault().Abrev;
+
+                return abrev;
+            }
+        }
+
+        #endregion
+
         #region GetCityDropDownList
 
         /// <summary>
@@ -235,6 +254,23 @@ namespace Viper.DataAccessLayer
             }
         }
 
+        #endregion
+
+        #region GetCityName
+        /// <summary>
+        /// Metodo para obtener el nombre del municipio
+        /// </summary>
+        /// <param name="cityID">ID Municipio</param>
+        /// <returns>List</returns>
+        public static String GetCityName(int cityID)
+        {
+            using (ViperDbContext db = new ViperDbContext())
+            {
+                var abrev = db.Cities.Where(x => x.Id == cityID).FirstOrDefault().Description;
+
+                return abrev;
+            }
+        }
         #endregion
     }
 }

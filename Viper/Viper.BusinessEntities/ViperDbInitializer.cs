@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Viper.BusinessEntities
 {
-    public class ViperDbInitializer : CreateDatabaseIfNotExists<ViperDbContext>
+    public class ViperDbInitializer : DropCreateDatabaseIfModelChanges<ViperDbContext>
     {
         List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
         List<StateProvince> defaultStatesProvince = new List<StateProvince>();

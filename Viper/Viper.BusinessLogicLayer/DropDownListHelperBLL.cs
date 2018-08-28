@@ -127,6 +127,20 @@ namespace Viper.BusinessLogicLayer
         }
         #endregion
 
+        #region GetAbrevStateProvince
+
+        /// <summary>
+        /// Metodo para obtener la abreviatura del estado
+        /// </summary>
+        /// <param name="StateID">ID del estado</param>
+        /// <returns>String</returns>
+        public static String GetAbrevStateProvince(int StateID)
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetAbrevStateProvince(StateID);
+        }
+
+        #endregion
+
         #region GetCityDropDownList
         /// <summary>
         /// Metodo para obtener los municipios de Mexico
@@ -136,6 +150,18 @@ namespace Viper.BusinessLogicLayer
         public static List<City> GetCityDropDownList(int StateProvinceID)
         {
             return DataAccessLayer.DropDownListHelperDAL.GetCityDropDownList(StateProvinceID);
+        }
+        #endregion
+
+        #region GetCityName
+        /// <summary>
+        /// Metodo para obtener el nombre del municipio
+        /// </summary>
+        /// <param name="cityID">ID Municipio</param>
+        /// <returns>List</returns>
+        public static String GetCityName(int cityID)
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetCityName(cityID);
         }
         #endregion
     }

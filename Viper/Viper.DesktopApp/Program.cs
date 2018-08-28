@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -61,10 +62,22 @@ namespace Viper.DesktopApp
                 }
                 catch (Exception ex)
                 {
-                    Thread t = new Thread(new ThreadStart(startForm));
-                    t.Start();
-                    Thread.Sleep(45000);
-                    t.Abort();
+                    using (BusinessEntities.ViperDbContext dbCtx = new BusinessEntities.ViperDbContext())
+                    {
+                        bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+
+                        if (isDataBaseExist)
+                        {
+                            MessageBox.Show(new Form { TopMost = true }, ex.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            Thread t = new Thread(new ThreadStart(startForm));
+                            t.Start();
+                            Thread.Sleep(45000);
+                            t.Abort();
+                        }
+                    }
                 }
             }
         }
