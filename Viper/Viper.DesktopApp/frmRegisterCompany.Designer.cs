@@ -623,7 +623,6 @@
             // 
             // Codigo_Postal
             // 
-            this.Codigo_Postal.AutoSize = false;
             this.Codigo_Postal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Codigo_Postal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_Postal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -631,7 +630,7 @@
             this.Codigo_Postal.Mask = "00000";
             this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
-            this.Codigo_Postal.Size = new System.Drawing.Size(239, 27);
+            this.Codigo_Postal.Size = new System.Drawing.Size(239, 24);
             this.Codigo_Postal.TabIndex = 0;
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
@@ -689,7 +688,6 @@
             // 
             // Celular
             // 
-            this.Celular.AutoSize = false;
             this.Celular.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Celular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -707,7 +705,6 @@
             // 
             // Telefono
             // 
-            this.Telefono.AutoSize = false;
             this.Telefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Telefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -715,7 +712,7 @@
             this.Telefono.Mask = "(99)000-00000";
             this.Telefono.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(239, 30);
+            this.Telefono.Size = new System.Drawing.Size(239, 24);
             this.Telefono.TabIndex = 0;
             this.Telefono.TabStop = false;
             this.Telefono.Text = "(__)___-_____";
@@ -1108,7 +1105,6 @@
             // 
             // Codigo_Postal_Fiscal
             // 
-            this.Codigo_Postal_Fiscal.AutoSize = false;
             this.Codigo_Postal_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Codigo_Postal_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_Postal_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1116,7 +1112,7 @@
             this.Codigo_Postal_Fiscal.Mask = "00000";
             this.Codigo_Postal_Fiscal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal_Fiscal.Name = "Codigo_Postal_Fiscal";
-            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(299, 27);
+            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(299, 24);
             this.Codigo_Postal_Fiscal.TabIndex = 0;
             this.Codigo_Postal_Fiscal.TabStop = false;
             this.Codigo_Postal_Fiscal.Text = "_____";
