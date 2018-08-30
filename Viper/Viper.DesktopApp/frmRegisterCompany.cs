@@ -53,6 +53,8 @@ namespace Viper.DesktopApp
             btnSalir.Enabled = true;
 
             this.bandera = typeForm;
+
+            btnHabilitarEdicion.Enabled = false;
         }
 
         public frmRegisterCompany(int CompanyID)
@@ -62,6 +64,8 @@ namespace Viper.DesktopApp
             uploadControlRegimenFiscalByCode();
 
             uploadDataCompany(CompanyID);
+
+            btnHabilitarEdicion.Enabled = true;
         }
 
         #endregion
@@ -312,13 +316,6 @@ namespace Viper.DesktopApp
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
             //Establecer los eventos a los controles
-            this.btnRegimenFiscal.Click += Button_Click;
-            this.btnExaminar.Click += Button_Click;
-            this.btnAceptar.Click += Button_Click;
-            this.btnCancelar.Click += Button_Click;
-            this.btnCuentasBanco.Click += Button_Click;
-            this.btnImportarDatosFiscales.Click += Button_Click;
-            this.btnSalir.Click += Button_Click;
             this.Entidad_Federativa.SelectedIndexChanged += cboEstado_SelectedIndexChanged;
             this.Entidad_Federativa_Fiscal.SelectedIndexChanged += cboEstadoFiscal_SelectedIndexChanged;
             this.Giro_Comercial.KeyPress += OnlyLetters_KeyPress;
@@ -393,6 +390,19 @@ namespace Viper.DesktopApp
 
                 case "btnSalir":
                     Application.Exit();
+                    break;
+
+                case "btnHabilitarEdicion":
+                    if (objButton.Text == "Habilitar\r\nEdicion")
+                    {
+                        objButton.Text = "Deshabilitar\r\nEdicion";
+                        active_disable_fields(true);
+                    }
+                    else
+                    {
+                        objButton.Text = "Habilitar\r\nEdicion";
+                        active_disable_fields(false);
+                    }
                     break;
             }
         }
@@ -806,6 +816,102 @@ namespace Viper.DesktopApp
             RegimenFiscal = String.Empty;
 
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
+        }
+
+        private void active_disable_fields(bool typeForm)
+        {
+            if(typeForm == true)
+            {
+                this.Giro_Comercial.Enabled = true;
+                this.Nombre_Empresa.Enabled = true;
+                this.Tipo_Inmueble.Enabled = true;
+                this.Tipo_Vialidad.Enabled = true;
+                this.Vialidad.Enabled = true;
+                this.Codigo_Postal.Enabled = true;
+                this.No_Ext.Enabled = true;
+                this.No_Int.Enabled = true;
+                this.Colonia.Enabled = true;
+                this.Entidad_Federativa.Enabled = true;
+                this.Municipio.Enabled = true;
+                this.eMail.Enabled = true;
+                this.Telefono.Enabled = true;
+                this.Celular.Enabled = true;
+                this.Nombre_Fiscal.Enabled = true;
+                this.RFC.Enabled = true;
+                this.CURP.Enabled = true;
+                Regimen_Fiscal.Enabled = true;
+                this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
+                this.Tipo_Vialidad_Fiscal.SelectedIndex = 0;
+                this.Vialidad_Fiscal.Enabled = true;
+                this.Codigo_Postal_Fiscal.Enabled = true;
+                this.No_Ext_Fiscal.Enabled = true;
+                this.No_Int_Fiscal.Enabled = true;
+                this.Colonia_Fiscal.Enabled = true;
+                this.Entidad_Federativa_Fiscal.Enabled = true;
+                this.Municipio_Fiscal.Enabled = true;
+                this.Tipo_Inmueble_Fiscal.Enabled = true;
+                this.Tipo_Vialidad_Fiscal.Enabled = true;
+                this.Vialidad_Fiscal.Enabled = true;
+                this.No_Ext_Fiscal.Enabled = true;
+                this.No_Int_Fiscal.Enabled = true;
+                this.Codigo_Postal_Fiscal.Enabled = true;
+                this.Colonia_Fiscal.Enabled = true;
+                this.Entidad_Federativa_Fiscal.Enabled = true;
+                this.Municipio_Fiscal.Enabled = true;
+                this.btnImportarDatosFiscales.Enabled = true;
+                this.btnAceptar.Enabled = true;
+                this.btnCancelar.Enabled = true;
+                this.btnCuentasBanco.Enabled = false;
+                this.btnExaminar.Enabled = true;
+                this.btnRegimenFiscal.Enabled = true;
+                this.btnSalir.Enabled = false;
+            }
+            else
+            {
+                this.Giro_Comercial.Enabled = false;
+                this.Nombre_Empresa.Enabled = false;
+                this.Tipo_Inmueble.Enabled = false;
+                this.Tipo_Vialidad.Enabled = false;
+                this.Vialidad.Enabled = false;
+                this.Codigo_Postal.Enabled = false;
+                this.No_Ext.Enabled = false;
+                this.No_Int.Enabled = false;
+                this.Colonia.Enabled = false;
+                this.Entidad_Federativa.Enabled = false;
+                this.Municipio.Enabled = false;
+                this.eMail.Enabled = false;
+                this.Telefono.Enabled = false;
+                this.Celular.Enabled = false;
+                this.Nombre_Fiscal.Enabled = false;
+                this.RFC.Enabled = false;
+                this.CURP.Enabled = false;
+                Regimen_Fiscal.Enabled = false;
+                this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
+                this.Tipo_Vialidad_Fiscal.SelectedIndex = 0;
+                this.Vialidad_Fiscal.Enabled = false;
+                this.Codigo_Postal_Fiscal.Enabled = false;
+                this.No_Ext_Fiscal.Enabled = false;
+                this.No_Int_Fiscal.Enabled = false;
+                this.Colonia_Fiscal.Enabled = false;
+                this.Entidad_Federativa_Fiscal.Enabled = false;
+                this.Municipio_Fiscal.Enabled = false;
+                this.Tipo_Inmueble_Fiscal.Enabled = false;
+                this.Tipo_Vialidad_Fiscal.Enabled = false;
+                this.Vialidad_Fiscal.Enabled = false;
+                this.No_Ext_Fiscal.Enabled = false;
+                this.No_Int_Fiscal.Enabled = false;
+                this.Codigo_Postal_Fiscal.Enabled = false;
+                this.Colonia_Fiscal.Enabled = false;
+                this.Entidad_Federativa_Fiscal.Enabled = false;
+                this.Municipio_Fiscal.Enabled = false;
+                this.btnImportarDatosFiscales.Enabled = false;
+                this.btnAceptar.Enabled = false;
+                this.btnCancelar.Enabled = false;
+                this.btnCuentasBanco.Enabled = false;
+                this.btnExaminar.Enabled = false;
+                this.btnRegimenFiscal.Enabled = false;
+                this.btnSalir.Enabled = false;
+            }
         }
 
         private void registerCompanyInSystem()

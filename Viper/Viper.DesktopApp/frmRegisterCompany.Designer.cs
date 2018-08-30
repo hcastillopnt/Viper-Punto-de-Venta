@@ -112,9 +112,10 @@
             this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
             this.btnAceptar = new Telerik.WinControls.UI.RadButton();
             this.btnCancelar = new Telerik.WinControls.UI.RadButton();
-            this.btnCuentasBanco = new Telerik.WinControls.UI.RadButton();
             this.btnImportarDatosFiscales = new Telerik.WinControls.UI.RadButton();
             this.btnSalir = new Telerik.WinControls.UI.RadButton();
+            this.btnCuentasBanco = new Telerik.WinControls.UI.RadButton();
+            this.btnHabilitarEdicion = new Telerik.WinControls.UI.RadButton();
             this.tlpDatosGenerales_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Giro_Comercial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nombre_Empresa)).BeginInit();
@@ -172,9 +173,10 @@
             this.tlpBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCuentasBanco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImportarDatosFiscales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCuentasBanco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHabilitarEdicion)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpDatosGenerales_1
@@ -215,7 +217,7 @@
             this.Giro_Comercial.Location = new System.Drawing.Point(154, 3);
             this.Giro_Comercial.Name = "Giro_Comercial";
             this.Giro_Comercial.NullText = "--SELECCIONE--";
-            this.Giro_Comercial.Size = new System.Drawing.Size(595, 28);
+            this.Giro_Comercial.Size = new System.Drawing.Size(595, 26);
             this.Giro_Comercial.TabIndex = 0;
             this.Giro_Comercial.ThemeName = "VisualStudio2012Light";
             // 
@@ -276,15 +278,17 @@
             // tlpDatosGenerales_Derecha
             // 
             this.tlpDatosGenerales_Derecha.ColumnCount = 1;
-            this.tlpDatosGenerales_Derecha.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosGenerales_Derecha.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosGenerales_Derecha.Controls.Add(this.btnCuentasBanco, 0, 2);
             this.tlpDatosGenerales_Derecha.Controls.Add(this.picLogotipo, 0, 0);
             this.tlpDatosGenerales_Derecha.Controls.Add(this.btnExaminar, 0, 1);
             this.tlpDatosGenerales_Derecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDatosGenerales_Derecha.Location = new System.Drawing.Point(767, 3);
             this.tlpDatosGenerales_Derecha.Name = "tlpDatosGenerales_Derecha";
-            this.tlpDatosGenerales_Derecha.RowCount = 2;
-            this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.5625F));
-            this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.4375F));
+            this.tlpDatosGenerales_Derecha.RowCount = 3;
+            this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatosGenerales_Derecha.Size = new System.Drawing.Size(170, 310);
             this.tlpDatosGenerales_Derecha.TabIndex = 0;
             // 
@@ -295,7 +299,7 @@
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picLogotipo.Location = new System.Drawing.Point(3, 3);
             this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(164, 153);
+            this.picLogotipo.Size = new System.Drawing.Size(164, 149);
             this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
@@ -304,7 +308,7 @@
             // 
             this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
-            this.btnExaminar.Location = new System.Drawing.Point(3, 162);
+            this.btnExaminar.Location = new System.Drawing.Point(3, 158);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(162, 49);
             this.btnExaminar.TabIndex = 0;
@@ -312,6 +316,7 @@
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExaminar.ThemeName = "VisualStudio2012Light";
+            this.btnExaminar.Click += new System.EventHandler(this.Button_Click);
             this.btnExaminar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosGenerales_Izquierda
@@ -464,7 +469,7 @@
             this.Vialidad.Location = new System.Drawing.Point(185, 3);
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "CALLE";
-            this.Vialidad.Size = new System.Drawing.Size(163, 21);
+            this.Vialidad.Size = new System.Drawing.Size(163, 24);
             this.Vialidad.TabIndex = 0;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
             this.Vialidad.Leave += new System.EventHandler(this.Control_Leave);
@@ -531,7 +536,7 @@
             this.No_Ext.Location = new System.Drawing.Point(97, 3);
             this.No_Ext.Name = "No_Ext";
             this.No_Ext.NullText = "NO. EXT";
-            this.No_Ext.Size = new System.Drawing.Size(81, 21);
+            this.No_Ext.Size = new System.Drawing.Size(81, 24);
             this.No_Ext.TabIndex = 0;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
             this.No_Ext.Leave += new System.EventHandler(this.Control_Leave);
@@ -605,7 +610,7 @@
             this.Municipio.Location = new System.Drawing.Point(97, 3);
             this.Municipio.Name = "Municipio";
             this.Municipio.NullText = "--SELECCIONE--";
-            this.Municipio.Size = new System.Drawing.Size(251, 21);
+            this.Municipio.Size = new System.Drawing.Size(251, 26);
             this.Municipio.TabIndex = 0;
             this.Municipio.ThemeName = "VisualStudio2012Light";
             this.Municipio.Leave += new System.EventHandler(this.Control_Leave);
@@ -630,7 +635,7 @@
             this.Codigo_Postal.Mask = "00000";
             this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
-            this.Codigo_Postal.Size = new System.Drawing.Size(239, 24);
+            this.Codigo_Postal.Size = new System.Drawing.Size(239, 27);
             this.Codigo_Postal.TabIndex = 0;
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
@@ -712,7 +717,7 @@
             this.Telefono.Mask = "(99)000-00000";
             this.Telefono.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(239, 24);
+            this.Telefono.Size = new System.Drawing.Size(239, 30);
             this.Telefono.TabIndex = 0;
             this.Telefono.TabStop = false;
             this.Telefono.Text = "(__)___-_____";
@@ -730,7 +735,7 @@
             this.eMail.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.eMail.Name = "eMail";
             this.eMail.NullText = "EMAIL@EXAMPLE.COM";
-            this.eMail.Size = new System.Drawing.Size(593, 27);
+            this.eMail.Size = new System.Drawing.Size(593, 24);
             this.eMail.TabIndex = 0;
             this.eMail.ThemeName = "VisualStudio2012Light";
             this.eMail.Leave += new System.EventHandler(this.Control_Leave);
@@ -946,7 +951,7 @@
             this.Vialidad_Fiscal.Location = new System.Drawing.Point(194, 3);
             this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
             this.Vialidad_Fiscal.NullText = "CALLE (FISCAL)";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(272, 21);
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(272, 24);
             this.Vialidad_Fiscal.TabIndex = 0;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
             this.Vialidad_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
@@ -1013,7 +1018,7 @@
             this.No_Ext_Fiscal.Location = new System.Drawing.Point(120, 3);
             this.No_Ext_Fiscal.Name = "No_Ext_Fiscal";
             this.No_Ext_Fiscal.NullText = "NO. EXT";
-            this.No_Ext_Fiscal.Size = new System.Drawing.Size(111, 21);
+            this.No_Ext_Fiscal.Size = new System.Drawing.Size(111, 24);
             this.No_Ext_Fiscal.TabIndex = 0;
             this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
             this.No_Ext_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
@@ -1188,6 +1193,7 @@
             this.btnRegimenFiscal.TabStop = false;
             this.btnRegimenFiscal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegimenFiscal.ThemeName = "VisualStudio2012Light";
+            this.btnRegimenFiscal.Click += new System.EventHandler(this.Button_Click);
             this.btnRegimenFiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // RFC
@@ -1235,7 +1241,7 @@
             this.Nombre_Fiscal.Location = new System.Drawing.Point(160, 3);
             this.Nombre_Fiscal.Name = "Nombre_Fiscal";
             this.Nombre_Fiscal.NullText = "NOMBRE FISCAL";
-            this.Nombre_Fiscal.Size = new System.Drawing.Size(777, 28);
+            this.Nombre_Fiscal.Size = new System.Drawing.Size(777, 24);
             this.Nombre_Fiscal.TabIndex = 0;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
             this.Nombre_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
@@ -1283,9 +1289,9 @@
             this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpBotones.Controls.Add(this.btnAceptar, 2, 0);
             this.tlpBotones.Controls.Add(this.btnCancelar, 3, 0);
-            this.tlpBotones.Controls.Add(this.btnCuentasBanco, 1, 0);
             this.tlpBotones.Controls.Add(this.btnImportarDatosFiscales, 0, 0);
             this.tlpBotones.Controls.Add(this.btnSalir, 4, 0);
+            this.tlpBotones.Controls.Add(this.btnHabilitarEdicion, 1, 0);
             this.tlpBotones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpBotones.Location = new System.Drawing.Point(3, 703);
             this.tlpBotones.Name = "tlpBotones";
@@ -1306,6 +1312,7 @@
             this.btnAceptar.Text = "Finalizar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.ThemeName = "VisualStudio2012Light";
+            this.btnAceptar.Click += new System.EventHandler(this.Button_Click);
             this.btnAceptar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnCancelar
@@ -1321,22 +1328,8 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.ThemeName = "VisualStudio2012Light";
+            this.btnCancelar.Click += new System.EventHandler(this.Button_Click);
             this.btnCancelar.Leave += new System.EventHandler(this.Control_Leave);
-            // 
-            // btnCuentasBanco
-            // 
-            this.btnCuentasBanco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCuentasBanco.Enabled = false;
-            this.btnCuentasBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCuentasBanco.Image = ((System.Drawing.Image)(resources.GetObject("btnCuentasBanco.Image")));
-            this.btnCuentasBanco.Location = new System.Drawing.Point(191, 3);
-            this.btnCuentasBanco.Name = "btnCuentasBanco";
-            this.btnCuentasBanco.Size = new System.Drawing.Size(182, 50);
-            this.btnCuentasBanco.TabIndex = 0;
-            this.btnCuentasBanco.Text = "Cuentas de \r\nBanco";
-            this.btnCuentasBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCuentasBanco.ThemeName = "VisualStudio2012Light";
-            this.btnCuentasBanco.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnImportarDatosFiscales
             // 
@@ -1350,6 +1343,7 @@
             this.btnImportarDatosFiscales.Text = "Importar \r\nDatos Fiscales";
             this.btnImportarDatosFiscales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImportarDatosFiscales.ThemeName = "VisualStudio2012Light";
+            this.btnImportarDatosFiscales.Click += new System.EventHandler(this.Button_Click);
             this.btnImportarDatosFiscales.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnSalir
@@ -1365,7 +1359,37 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.ThemeName = "VisualStudio2012Light";
+            this.btnSalir.Click += new System.EventHandler(this.Button_Click);
             this.btnSalir.Leave += new System.EventHandler(this.Control_Leave);
+            // 
+            // btnCuentasBanco
+            // 
+            this.btnCuentasBanco.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCuentasBanco.Enabled = false;
+            this.btnCuentasBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCuentasBanco.Image = ((System.Drawing.Image)(resources.GetObject("btnCuentasBanco.Image")));
+            this.btnCuentasBanco.Location = new System.Drawing.Point(3, 235);
+            this.btnCuentasBanco.Name = "btnCuentasBanco";
+            this.btnCuentasBanco.Size = new System.Drawing.Size(164, 50);
+            this.btnCuentasBanco.TabIndex = 1;
+            this.btnCuentasBanco.Text = "Cuentas de \r\nBanco";
+            this.btnCuentasBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCuentasBanco.ThemeName = "VisualStudio2012Light";
+            this.btnCuentasBanco.Click += new System.EventHandler(this.Button_Click);
+            // 
+            // btnHabilitarEdicion
+            // 
+            this.btnHabilitarEdicion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHabilitarEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHabilitarEdicion.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarEdicion.Image")));
+            this.btnHabilitarEdicion.Location = new System.Drawing.Point(191, 3);
+            this.btnHabilitarEdicion.Name = "btnHabilitarEdicion";
+            this.btnHabilitarEdicion.Size = new System.Drawing.Size(182, 50);
+            this.btnHabilitarEdicion.TabIndex = 1;
+            this.btnHabilitarEdicion.Text = "Habilitar\r\nEdicion";
+            this.btnHabilitarEdicion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHabilitarEdicion.ThemeName = "VisualStudio2012Light";
+            this.btnHabilitarEdicion.Click += new System.EventHandler(this.Button_Click);
             // 
             // frmRegisterCompany
             // 
@@ -1452,9 +1476,10 @@
             this.tlpBotones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCuentasBanco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImportarDatosFiscales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCuentasBanco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHabilitarEdicion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1543,9 +1568,10 @@
         private Telerik.WinControls.UI.RadMaskedEditBox Celular;
         private Telerik.WinControls.UI.RadMaskedEditBox Telefono;
         private Telerik.WinControls.UI.RadTextBox eMail;
-        private Telerik.WinControls.UI.RadButton btnCuentasBanco;
         private Telerik.WinControls.UI.RadButton btnExaminar;
         private Telerik.WinControls.UI.RadButton btnImportarDatosFiscales;
         private Telerik.WinControls.UI.RadButton btnSalir;
+        private Telerik.WinControls.UI.RadButton btnCuentasBanco;
+        private Telerik.WinControls.UI.RadButton btnHabilitarEdicion;
     }
 }
