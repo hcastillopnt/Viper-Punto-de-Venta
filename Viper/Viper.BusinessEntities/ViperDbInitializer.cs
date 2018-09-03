@@ -2560,31 +2560,30 @@ namespace Viper.BusinessEntities
             defaultMaritalsStatus.Add(new MaritalStatus() { Name = "SEPARADO" });
 
             //Default values of Role Table
-            defaultRoles.Add(new Role() { Name = "ADMINISTRADOR SYSTEM", Description = "Allow all the system for testing" });
-            defaultRoles.Add(new Role() { Name = "ADMINISTRADOR COMPANY", Description = "Allow all, among other things to control users, products, managae credentials, ..." });
+            defaultRoles.Add(new Role() { Name = "ADMINISTRADOR", Description = "Allow all, among other things to control users, products, managae credentials, ..." });
             defaultRoles.Add(new Role() { Name = "BASICO", Description = "The employee can make sales, consult reports, make cash cuts" });
             defaultRoles.Add(new Role() { Name = "DOCTOR", Description = "The employee can access module Medical" });
 
             //Default values of Shift Table
-            defaultShifts.Add(new Shift() { Name = "DAY", StartTime = Convert.ToDateTime("08:00:00"), EndTime = Convert.ToDateTime("15:00:00") });
-            defaultShifts.Add(new Shift() { Name = "EVENING", StartTime = Convert.ToDateTime("15:00:00"), EndTime = Convert.ToDateTime("22:00:00") });
+            defaultShifts.Add(new Shift() { Name = "MATUTINO", StartTime = Convert.ToDateTime("08:00:00"), EndTime = Convert.ToDateTime("15:00:00") });
+            defaultShifts.Add(new Shift() { Name = "VESPERTINO", StartTime = Convert.ToDateTime("15:00:00"), EndTime = Convert.ToDateTime("22:00:00") });
             defaultShifts.Add(new Shift() { Name = "ALL DAY", StartTime = Convert.ToDateTime("08:00:00"), EndTime = Convert.ToDateTime("22:00:00") });
 
             //Default values of Department Table
-            defaultDepartments.Add(new Department() { Name = "Executive", GroupName = "Executive General and Administration" });
-            defaultDepartments.Add(new Department() { Name = "Pharmacy", GroupName = "Executive General and Administration" });
-            defaultDepartments.Add(new Department() { Name = "Administration", GroupName = "Executive General and Administration" });
-            defaultDepartments.Add(new Department() { Name = "Sales", GroupName = "Sales & Marketing" });
-            defaultDepartments.Add(new Department() { Name = "Health", GroupName = "Health Services" });
+            defaultDepartments.Add(new Department() { Name = "EJECUTIVO", GroupName = "Executive General and Administration" });
+            defaultDepartments.Add(new Department() { Name = "FARMACIA", GroupName = "Executive General and Administration" });
+            defaultDepartments.Add(new Department() { Name = "ADMINISTRACION", GroupName = "Executive General and Administration" });
+            defaultDepartments.Add(new Department() { Name = "COMPRAS", GroupName = "Sales & Marketing" });
+            defaultDepartments.Add(new Department() { Name = "SALUD", GroupName = "Health Services" });
 
             //Default values of JobTitle Table
             defaultJobsTitle.Add(new JobTitle() { Name = "SOCIO FUNDADOR", DepartmentId = 1 });
             defaultJobsTitle.Add(new JobTitle() { Name = "RESPONSABLE DE SUCURSAL", DepartmentId = 2 });
             defaultJobsTitle.Add(new JobTitle() { Name = "ADMINISTRADOR DE FINANZAS", DepartmentId = 3 });
             defaultJobsTitle.Add(new JobTitle() { Name = "AGENTE DE COMPRAS", DepartmentId = 4 });
-            defaultJobsTitle.Add(new JobTitle() { Name = "VENDEDOR", DepartmentId = 4 });
-            defaultJobsTitle.Add(new JobTitle() { Name = "DOCTOR", DepartmentId = 5 });
-            defaultJobsTitle.Add(new JobTitle() { Name = "ENFERMERO/A", DepartmentId = 5 });
+            defaultJobsTitle.Add(new JobTitle() { Name = "VENDEDOR", DepartmentId = 2 });
+            defaultJobsTitle.Add(new JobTitle() { Name = "DOCTOR", DepartmentId = 2 });
+            defaultJobsTitle.Add(new JobTitle() { Name = "ENFERMERO/A", DepartmentId = 2 });
 
             //<--Migration ViperDbContext_v2-->
             //Default values of RegimenFiscal Table
