@@ -529,9 +529,9 @@ namespace Viper.DesktopApp
 
         private void uploadDataCompany(int CompanyID)
         {
-            company = BusinessLogicLayer.CompanyBLL.getCompanyRegisteredByCompanyID(CompanyID);
-            address = BusinessLogicLayer.CompanyBLL.getCompanyAddressRegisteredByCompanyID(company.AddressId);
-            addressSAT = BusinessLogicLayer.CompanyBLL.getCompanyAddressSATRegisteredByCompanyID(company.AddressSATId);
+            company = BusinessLogicLayer.CompanyBLL.procGetCompanyObjectByCompanyID(CompanyID);
+            address = BusinessLogicLayer.AddressBLL.procGetAddressObjectByAddressId(company.AddressId);
+            addressSAT = BusinessLogicLayer.AddressBLL.procGetAddressSATObjectByAddressId(company.AddressSATId);
 
             this.Tipo_Inmueble.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
             this.Tipo_Inmueble.DisplayMember = "Name";
@@ -577,7 +577,7 @@ namespace Viper.DesktopApp
             this.RFC.Text = company.RFC;
             this.CURP.Text = company.CURP;
 
-            Regimen_Fiscal.Text = BusinessLogicLayer.CompanyBLL.getRegimenFiscalByID(company.RegimenFiscalId);
+            Regimen_Fiscal.Text = BusinessLogicLayer.CompanyBLL.procFindRegimenFiscalByID(company.RegimenFiscalId);
 
             this.Tipo_Vialidad_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
             this.Tipo_Vialidad_Fiscal.DisplayMember = "Name";
@@ -720,7 +720,7 @@ namespace Viper.DesktopApp
             address.LastUpdatedDate = f;
             address.LastUpdatedBy = "HECP";
 
-            message = BusinessLogicLayer.CompanyBLL.validateAddressWithDataAnnotations(address);
+            message = BusinessLogicLayer.AddressBLL.validateEmptyFieldsInForm(address);
 
             if (string.IsNullOrEmpty(message))
             {
@@ -920,7 +920,7 @@ namespace Viper.DesktopApp
 
             recoveryInformationObjectsByUserInterface();
 
-            message = BusinessLogicLayer.CompanyBLL.sp_insert_company(company, address, addressSAT);
+            message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 2);
 
             if (String.IsNullOrEmpty(message))
             {
@@ -932,7 +932,7 @@ namespace Viper.DesktopApp
 
                 if (bandera)
                 {
-                    message = BusinessLogicLayer.SiteBLL.sp_insert_site(site);
+                    message = BusinessLogicLayer.SiteBLL.procInsertSiteToSystem(site);
 
                     if (String.IsNullOrEmpty(message))
                     {
@@ -1017,7 +1017,7 @@ namespace Viper.DesktopApp
             company.CURP = CURP.Text.Trim().ToUpper();
 
             if (!string.IsNullOrEmpty(Regimen_Fiscal.Text.Trim().ToString()))
-                company.RegimenFiscalId = BusinessLogicLayer.CompanyBLL.getRegimenIdByName(Regimen_Fiscal.Text.Trim().ToString());
+                company.RegimenFiscalId = BusinessLogicLayer.CompanyBLL.procGetRegimenFiscalIdByName(Regimen_Fiscal.Text.Trim().ToString());
 
             //company.Logo = ImageToByte(picLogotipo.Image);
             company.CreatedDate = f;

@@ -49,7 +49,7 @@ namespace Viper.DesktopApp
 
                     bool isExistsCompany = false;
 
-                    isExistsCompany = BusinessLogicLayer.CompanyBLL.isCompanyRegistered();
+                    isExistsCompany = BusinessLogicLayer.CompanyBLL.procIsCompanyRegistered();
 
                     if (isExistsCompany)
                     {

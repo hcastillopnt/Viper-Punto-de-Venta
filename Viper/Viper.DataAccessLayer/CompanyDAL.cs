@@ -14,193 +14,114 @@ namespace Viper.DataAccessLayer
 {
     public class CompanyDAL
     {
-        #region sp_insert_company
+        /// <summary>
+        /// A DbContext instance represents a combination of the Unit Of Work and Repository patterns 
+        /// such that it can be used to query from a database and group together changes that will 
+        /// then be written back to the store as a unit. 
+        /// DbContext is conceptually similar to ObjectContext. 
+        /// DbContext is the primary class that is responsible for interacting with the database.
+        /// </summary>
+        private static ViperDbContext dbCtx = new ViperDbContext();
+
+        #region procInsertCompanyToSystem
 
         /// <summary>
-        /// Metodo para registrar los datos generales y fiscales, de los clientes que adquieran Viper Sistema de Punto de Venta para Farmacias
+        /// Metodo para registrar las licencias adquiridas por diferentes negocios,
+        /// para trabajar con el Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
-        /// <param name="company">Objeto Compañia</param>
-        /// <param name="address">Objeto Direccion</param>
-        /// <param name="addressSAT">Objeto Direccion Fiscal</param>
-        /// <param name="user">Objeto Usuario</param>
-        /// <returns>Mensaje (String)</returns>
-        public static string sp_insert_company(Company company, Address address, AddressSAT addressSAT, User user)
+        /// <param name="entityCompany">Entidad Empresa</param>
+        /// <param name="entityAddress">Entidad Direccion</param>
+        /// <param name="entityAddressSAT">Entidad Direccion Fiscal</param>
+        /// <returns>Message</returns>
+        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT)
         {
-            string message = string.Empty;
+            String message = String.Empty;
+
             bool isInserted = false;
 
-            using (ViperDbContext dbCtx = new ViperDbContext())
+            using (var dbCtxTran = dbCtx.Database.BeginTransaction())
             {
-                using (var dbCtxTran = dbCtx.Database.BeginTransaction())
+                try
                 {
-                    try
+                    bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+
+                    if (isDataBaseExist)
                     {
-                        bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+                        dbCtx.Addresses.Add(entityAddress);
 
-                        if (isDataBaseExist)
+                        isInserted = dbCtx.SaveChanges() > 0;
+
+                        if (isInserted)
                         {
-                            dbCtx.Addresses.Add(address);
-                            isInserted = dbCtx.SaveChanges() > 0;
+                            isInserted = false;
 
-                            if (isInserted)
+                            var addressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                            if (addressID > 0)
                             {
                                 isInserted = false;
 
-                                var addressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                                dbCtx.AddressesSAT.Add(entityAddressSAT);
 
-                                if (addressID > 0)
+                                isInserted = dbCtx.SaveChanges() > 0;
+
+                                var addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                if (addressSATID > 0)
                                 {
-                                    isInserted = false;
-                                    dbCtx.AddressesSAT.Add(addressSAT);
-                                    isInserted = dbCtx.SaveChanges() > 0;
-
-                                    var addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-
-                                    if (addressSATID > 0)
+                                    if (isInserted)
                                     {
+                                        isInserted = false;
+
+                                        entityCompany.AddressSATId = addressSATID;
+                                        entityCompany.AddressId = addressID;
+
+                                        dbCtx.Companies.Add(entityCompany);
+
+                                        isInserted = dbCtx.SaveChanges() > 0;
+
                                         if (isInserted)
                                         {
-                                            isInserted = false;
-
-                                            dbCtx.Users.Add(user);
-                                            isInserted = dbCtx.SaveChanges() > 0;
-
-                                            if (isInserted)
-                                            {
-                                                var UserID = dbCtx.Users.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-
-                                                if (UserID > 0)
-                                                {
-                                                    company.UserId = UserID;
-                                                    company.AddressSATId = addressSATID;
-                                                    company.AddressId = addressID;
-                                                    dbCtx.Companies.Add(company);
-                                                    isInserted = dbCtx.SaveChanges() > 0;
-
-                                                    if (isInserted == true && string.IsNullOrEmpty(message))
-                                                    {
-                                                        dbCtxTran.Commit();
-                                                    }
-                                                }
-                                            }
+                                            dbCtxTran.Commit();
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    catch (DbEntityValidationException ex)
-                    {
-                        var errorMessages = ex.EntityValidationErrors
-                                .SelectMany(x => x.ValidationErrors)
-                                .Select(x => x.ErrorMessage);
-                        var fullErrorMessage = string.Join("; ", errorMessages);
-                        var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                        message = exceptionMessage + "\n" + ex.EntityValidationErrors;
-
-                        dbCtxTran.Rollback();
-                    }
-                    catch (DbUpdateConcurrencyException ex)
-                    {
-                        var entity = ex.Entries.Single().GetDatabaseValues();
-
-                        if (entity == null)
-                            message = "The entity being updated is already deleted by another user";
-                        else
-                            message = "The entity being updated has already been updated by another user";
-
-                        dbCtxTran.Rollback();
-                    }
-                    catch (DbUpdateException ex)
-                    {
-                        var exception = HandleDbUpdateException(ex);
-                        message = exception.Message;
-
-                        dbCtxTran.Rollback();
-                    }
-                    finally
-                    {
-                        Console.WriteLine("Ocurrio un error inesperado");
-                    }
                 }
-            }
-
-            return message;
-        }
-
-        #endregion
-
-        #region updatePassword
-
-        /// <summary>
-        /// Metodo para actualizar el password de un cliente que adquirio Viper Sistema de Punto de Venta para Farmacias
-        /// </summary>
-        /// <param name="pwd">Contraseña anterior</param>
-        /// <param name="loginID">Nombre de usuario</param>
-        /// <returns>Mensaje (String)</returns>
-        public static string updatePassword(string pwd, string LoginID)
-        {
-            string message = string.Empty;
-            bool isUpdate = false;
-
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                using (var dbCtxTran = dbCtx.Database.BeginTransaction())
+                catch (DbEntityValidationException ex)
                 {
-                    try
-                    {
-                        bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+                    var errorMessages = ex.EntityValidationErrors
+                            .SelectMany(x => x.ValidationErrors)
+                            .Select(x => x.ErrorMessage);
+                    var fullErrorMessage = string.Join("; ", errorMessages);
+                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                    message = exceptionMessage + "\n" + ex.EntityValidationErrors;
 
-                        if (isDataBaseExist)
-                        {
-                            var entity = dbCtx.Users.Where(x => x.LoginID == LoginID).FirstOrDefault();
+                    dbCtxTran.Rollback();
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    var entityObj = ex.Entries.Single().GetDatabaseValues();
 
-                            entity.PasswordEncrypted = pwd;
+                    if (entityObj == null)
+                        message = "The entity being updated is already deleted by another user";
+                    else
+                        message = "The entity being updated has already been updated by another user";
 
-                            dbCtx.Users.Attach(entity);
-                            dbCtx.Entry(entity).State = EntityState.Modified;
+                    dbCtxTran.Rollback();
+                }
+                catch (DbUpdateException ex)
+                {
+                    var exception = HandleDbUpdateException(ex);
+                    message = exception.Message;
 
-                            isUpdate = dbCtx.SaveChanges() > 0;
-
-                            if (isUpdate == true && string.IsNullOrEmpty(message))
-                            {
-                                dbCtxTran.Commit();
-                            }
-                        }
-                    }
-                    catch (DbEntityValidationException ex)
-                    {
-                        var errorMessages = ex.EntityValidationErrors
-                                .SelectMany(x => x.ValidationErrors)
-                                .Select(x => x.ErrorMessage);
-                        var fullErrorMessage = string.Join("; ", errorMessages);
-                        var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                        message = exceptionMessage + "\n" + ex.EntityValidationErrors;
-
-                        dbCtxTran.Rollback();
-                    }
-                    catch (DbUpdateConcurrencyException ex)
-                    {
-                        var entity = ex.Entries.Single().GetDatabaseValues();
-
-                        if (entity == null)
-                            message = "The entity being updated is already deleted by another user";
-                        else
-                            message = "The entity being updated has already been updated by another user";
-
-                        dbCtxTran.Rollback();
-                    }
-                    catch (DbUpdateException ex)
-                    {
-                        var exception = HandleDbUpdateException(ex);
-                        message = exception.Message;
-
-                        dbCtxTran.Rollback();
-                    }
-                    finally
-                    {
-                        Console.WriteLine("Ocurrio un error inesperado");
-                    }
+                    dbCtxTran.Rollback();
+                }
+                finally
+                {
+                    Console.WriteLine("Ocurrio un error inesperado");
                 }
             }
 
@@ -209,36 +130,48 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region isCompanyRegistered
+        #region procIsCompanyRegistered
 
         /// <summary>
         /// Metodo para saber si existen compañias registradas en la BD
         /// </summary>
-        /// <returns>Existen o No Existen</returns>
-        public static bool isCompanyRegistered()
+        /// <returns>Boolean</returns>
+        public static bool procIsCompanyRegistered()
         {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.Companies.Count() > 0;
+            bool isExistente = false;
+            bool isCompaniesRegistered = false;
 
-                return result;
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                isCompaniesRegistered = dbCtx.Companies.Count() > 0;
             }
+
+            return isCompaniesRegistered;
         }
 
         #endregion
 
-        #region obtainCompanyKeyGeneratedAutomatic
+        #region procObtainCompanyKeyGeneratedAutomatic
 
         /// <summary>
-        /// Metodo para obtener la clave de la compañia para poder loguearse en la app web/app movil
+        /// Metodo para obtener la clave de la empresa generada automaticamente,
+        /// para cada licencia que se vaya a registrar en el sistema viper
         /// </summary>
         /// <returns>Clave</returns>
-        public static string obtainCompanyKeyGeneratedAutomatic()
+        public static string procObtainCompanyKeyGeneratedAutomatic()
         {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                int inc = 0;
+            bool isExistente = false;
 
+            int inc = 0;
+
+            String CompanyKey = String.Empty;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
                 bool isEN = dbCtx.Companies.ToList().Count() > 0;
 
                 if (isEN)
@@ -255,100 +188,81 @@ namespace Viper.DataAccessLayer
                 {
                     inc = 1;
                 }
-
-                return string.Format("EMPOWTK{0:0000}", inc);
             }
+
+            CompanyKey = string.Format("EMPOWTK{0:0000}", inc);
+
+            return CompanyKey;
         }
 
         #endregion
 
-        #region getRegimenFiscalByID
+        #region procFindRegimenFiscalByID
 
         /// <summary>
         /// Metodo para obtener el regimen fiscal en base al ID
         /// </summary>
-        /// <param name="RegimenID">Regimen Fiscal ID</param>
+        /// <param name="RegimenID">ID Regimen Fiscal</param>
         /// <returns>Regimen Fiscal</returns>
-        public static string getRegimenFiscalByID(int RegimenID)
+        public static string procFindRegimenFiscalByID(int RegimenID)
         {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.RegimenesFiscales.Where(x => x.Id == RegimenID).FirstOrDefault().Description;
+            bool isExistente = false;
 
-                return result;
+            String regimenFiscal = String.Empty;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                regimenFiscal = dbCtx.RegimenesFiscales.Where(x => x.Id == RegimenID).FirstOrDefault().Description;
             }
+
+            return regimenFiscal;
         }
 
         #endregion
 
-        #region getCompanyRegisteredByCompanyID
+        #region procGetCompanyObjectByCompanyID
 
         /// <summary>
-        /// Metodo para obtener la informacion de la compañia
+        /// Metodo para obtener los datos de la empresa que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
         /// </summary>
         /// <param name="CompanyID">ID Compañia</param>
-        /// <returns>Objeto Compañia</returns>
-        public static Company getCompanyRegisteredByCompanyID(int CompanyID)
+        /// <returns>Object</returns>
+        public static Company procGetCompanyObjectByCompanyID(int CompanyID)
         {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.Companies.Where(x => x.Id == CompanyID).SingleOrDefault();
+            bool isExistente = false;
 
-                return result;
+            Company company = new Company();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                company = dbCtx.Companies.Where(x => x.Id == CompanyID).SingleOrDefault();
             }
+
+            return company;
         }
 
         #endregion
 
-        #region getCompanyAddressSATRegisteredByID
-
-        /// <summary>
-        /// Metodo para obtener la direccion de la compañia por medio del Id
-        /// </summary>
-        /// <param name="AddressID">ID Direccion</param>
-        /// <returns>Objeto Direccion</returns>
-        public static Address getCompanyAddressRegisteredByCompanyID(int AddressID)
-        {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.Addresses.Where(x => x.Id == AddressID).SingleOrDefault();
-
-                return result;
-            }
-        }
-
-        #endregion
-
-        #region getCompanyAddressSATRegisteredByID
-
-        /// <summary>
-        /// Metodo para obtener la direccion fiscal de la compañia
-        /// </summary>
-        /// <param name="AddressSATID">ID Direccion Fiscal</param>
-        /// <returns>Objeto Direccion Fiscal</returns>
-        public static AddressSAT getCompanyAddressSATRegisteredByCompanyID(int AddressSATID)
-        {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.AddressesSAT.Where(x => x.Id == AddressSATID).SingleOrDefault();
-
-                return result;
-            }
-        }
-
-        #endregion
-
-        #region getCatalogOfRegimenFiscal
+        #region procGetRegimenFiscalToDataTable
 
         /// <summary>
         /// Metodo para obtener los regimenes fiscales existentes en la base de datos
         /// </summary>
-        /// <returns>Tabla con la informacion</returns>
-        public static DataTable getCatalogOfRegimenFiscal()
+        /// <returns>DataTable</returns>
+        public static DataTable procGetRegimenFiscalToDataTable()
         {
+            bool isExistente = false;
+
             DataTable dataTable = new DataTable();
 
-            using (ViperDbContext dbCtx = new ViperDbContext())
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
             {
                 var result = dbCtx.RegimenesFiscales.OrderBy(x => x.Description).ToList();
 
@@ -375,18 +289,22 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region getCatalogOfRegimenFiscalByName
+        #region procGetRegimenFiscalByNameToDataTable
 
         /// <summary>
         /// Metodo para filtrar los regimenes fiscales existentes en la base de datos 
         /// </summary>
         /// <param name="filter">Regimen Fiscal</param>
-        /// <returns>Tabla con la informacion</returns>
-        public static DataTable getCatalogOfRegimenFiscalByName(string filter)
+        /// <returns>DataTable</returns>
+        public static DataTable procGetRegimenFiscalByNameToDataTable(string filter)
         {
+            bool isExistente = false;
+
             DataTable dataTable = new DataTable();
 
-            using (ViperDbContext dbCtx = new ViperDbContext())
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
             {
                 var result = dbCtx.RegimenesFiscales
                 .Where(x => x.Description.Contains(filter))
@@ -416,40 +334,52 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region getRegimenIdByName
+        #region procGetRegimenFiscalIdByName
 
         /// <summary>
         /// Metodo para obtener el ID del regimen fiscal
         /// </summary>
-        /// <param name="RegimenName">Regimen Fiscal</param>
+        /// <param name="RegimenFiscalName">Regimen Fiscal</param>
         /// <returns>ID</returns>
-        public static int getRegimenIdByName(string RegimenName)
+        public static int procGetRegimenFiscalIdByName(string RegimenFiscalName)
         {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                var result = dbCtx.RegimenesFiscales.Where(x => x.Description == RegimenName).FirstOrDefault().Id;
+            bool isExistente = false;
 
-                return result;
+            int RegimenFiscalId = 0;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                RegimenFiscalId = dbCtx.RegimenesFiscales.Where(x => x.Description == RegimenFiscalName).FirstOrDefault().Id;
             }
+
+            return RegimenFiscalId;
         }
 
         #endregion
 
-        #region getCompanyIdByName
+        #region procGetCompanyIdByName
 
         /// <summary>
         /// Metodo para obtener el ID de la compañia por medio del nombre de la compañia
         /// </summary>
         /// <param name="companyName">Nombre de la Compañia</param>
         /// <returns>ID</returns>
-        public static int getCompanyIdByName(string companyName)
+        public static int procGetCompanyIdByName(string companyName)
         {
-            using (ViperDbContext dbCtx = new ViperDbContext())
-            {
-                int result = dbCtx.Companies.Where(x => x.CompanyName == companyName).FirstOrDefault().Id;
+            bool isExistente = false;
 
-                return result;
+            int CompanyId = 0;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                CompanyId = dbCtx.Companies.Where(x => x.CompanyName == companyName).FirstOrDefault().Id;
             }
+
+            return CompanyId;
         }
 
         #endregion

@@ -12,77 +12,77 @@ namespace Viper.DataAccessLayer
     public class MenuDAL
     {
         /// <summary>
+        /// A DbContext instance represents a combination of the Unit Of Work and Repository patterns 
+        /// such that it can be used to query from a database and group together changes that will 
+        /// then be written back to the store as a unit. 
+        /// DbContext is conceptually similar to ObjectContext. 
+        /// DbContext is the primary class that is responsible for interacting with the database.
+        /// </summary>
+        private static ViperDbContext dbCtx = new ViperDbContext();
+
+        #region procUploadMenuToAdministrator
+
+        /// <summary>
         /// Metodo para cargar los menus disponibles para un administrador
         /// </summary>
-        /// <returns>True/False</returns>
-        public static bool uploadMenuToAdministrator()
+        /// <returns>void</returns>
+        public static void procUploadPermissionsToMenuByAdministrator()
         {
             bool isExistente = false;
 
-            using (ViperDbContext dbCtx = new ViperDbContext())
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
             {
-                isExistente = Database.Exists(dbCtx.Database.Connection);
+                isExistente = false;
 
-                if(isExistente)
+                var result = dbCtx.Permissions.ToList().Count > 0;
+
+                if (!result)
                 {
-                    isExistente = false;
+                    dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) SELECT 2, Id FROM Module;");
 
-                    var result = dbCtx.Permissions.ToList().Count > 0;
-
-                    if(!result)
-                    {
-                        dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) SELECT 2, Id FROM Module;");
-
-                        isExistente = dbCtx.SaveChanges() > 0;
-                    }
+                    dbCtx.SaveChanges();
                 }
             }
-
-            return isExistente;
         }
+
+        #endregion
+
+        #region procUploadMenuByRolName
 
         /// <summary>
         /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
         /// </summary>
         /// <param name="RolName">Nombre del Rol</param>
         /// <returns>DataTable</returns>
-        public static DataTable CargarMenuPorRol(string RolName)
+        public static DataTable procUploadMenuByRolName(string RolName)
         {
-            DataTable dt = new DataTable();
             bool isExistente = false;
 
-            using (ViperDbContext ctx = new ViperDbContext())
+            DataTable dt = new DataTable();
+
+            //Validar si la base de datos existe
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
             {
-                //Validar si la base de datos existe
-                isExistente = Database.Exists(ctx.Database.Connection);
+                //Recuperar el menu de opciones
+                var result = (from p in dbCtx.Permissions
+                              join r in dbCtx.Roles on p.RoleId equals r.Id
+                              join m in dbCtx.Modules on p.ModuleId equals m.Id
+                              where r.Name == RolName && m.Submenu == "NULL"
+                              select new
+                              {
+                                  m.Name,
+                                  m.Menu,
+                                  m.ControlName,
+                                  m.ControlImage,
+                                  m.IsActive
+                              }).ToList();
 
-                if (isExistente)
-                {
-                    //Validar si la tabla utilizada existe
-                    isExistente = ctx.Database
-                 .SqlQuery<int?>(@"
-                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Permission' 
-                            OR table_name = 'Role' OR table_name = 'Module'")
-                 .SingleOrDefault() != null;
-
-                    if (isExistente)
-                    {
-                        //Recuperar el menu de opciones
-                        var result = (from p in ctx.Permissions
-                                      join r in ctx.Roles on p.RoleId equals r.Id
-                                      join m in ctx.Modules on p.ModuleId equals m.Id
-                                      where r.Name == RolName && m.Submenu == "NULL"
-                                      select new
-                                      {
-                                          m.Name,
-                                          m.Menu,
-                                          m.ControlName,
-                                          m.ControlImage,
-                                          m.IsActive
-                                      }).ToList();
-
-                        //Crear las columnas del DataTable
-                        dt.Columns.AddRange(new DataColumn[]{
+                //Crear las columnas del DataTable
+                dt.Columns.AddRange(new DataColumn[]{
                                 new DataColumn("Name", typeof(string)),
                                 new DataColumn("Menu", typeof(string)),
                                 new DataColumn("ControlName", typeof(string)),
@@ -90,28 +90,30 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("IsActive", typeof(string))
                             });
 
-                        //Guardar los datos recuperados en una fila del DataTable
-                        result.ToList().ForEach(x =>
-                        {
-                            //Crear una fila nueva
-                            var row = dt.NewRow();
+                //Guardar los datos recuperados en una fila del DataTable
+                result.ToList().ForEach(x =>
+                {
+                    //Crear una fila nueva
+                    var row = dt.NewRow();
 
-                            //Cargar los datos de la fila
-                            row["Name"] = x.Name;
-                            row["Menu"] = x.Menu;
-                            row["ControlName"] = x.ControlName;
-                            row["ControlImage"] = x.ControlImage;
-                            row["IsActive"] = x.IsActive;
+                    //Cargar los datos de la fila
+                    row["Name"] = x.Name;
+                    row["Menu"] = x.Menu;
+                    row["ControlName"] = x.ControlName;
+                    row["ControlImage"] = x.ControlImage;
+                    row["IsActive"] = x.IsActive;
 
-                            //Añadir fila al DataTable
-                            dt.Rows.Add(row);
-                        });
-                    }
-                }
+                    //Añadir fila al DataTable
+                    dt.Rows.Add(row);
+                });
             }
 
             return dt;
         }
+
+        #endregion
+
+        #region procUploadSubmenuByRolName
 
         /// <summary>
         /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
@@ -119,43 +121,33 @@ namespace Viper.DataAccessLayer
         /// <param name="RolName">Nombre del Rol</param>
         /// <param name="Menu">Nombre del Menu</param>
         /// <returns>DataTable</returns>
-        public static DataTable CargarSubmenuPorRol(string RolName, string Menu)
+        public static DataTable procUploadSubmenuByRolName(string RolName, string Menu)
         {
-            DataTable dt = new DataTable();
             bool isExistente = false;
 
-            using (ViperDbContext ctx = new ViperDbContext())
+            DataTable dt = new DataTable();
+
+            //Validar si la base de datos existe
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
             {
-                //Validar si la base de datos existe
-                isExistente = Database.Exists(ctx.Database.Connection);
+                //Recuperar el menu de opciones
+                var result = (from p in dbCtx.Permissions
+                              join r in dbCtx.Roles on p.RoleId equals r.Id
+                              join m in dbCtx.Modules on p.ModuleId equals m.Id
+                              where r.Name == RolName && m.Menu == Menu && m.Submenu != "NULL"
+                              select new
+                              {
+                                  m.Name,
+                                  m.Submenu,
+                                  m.ControlName,
+                                  m.ControlImage,
+                                  m.IsActive
+                              }).ToList();
 
-                if (isExistente)
-                {
-                    //Validar si la tabla utilizada existe
-                    isExistente = ctx.Database
-                 .SqlQuery<int?>(@"
-                         SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'Permission' 
-                            OR table_name = 'Role' OR table_name = 'Module'")
-                 .SingleOrDefault() != null;
-
-                    if (isExistente)
-                    {
-                        //Recuperar el menu de opciones
-                        var result = (from p in ctx.Permissions
-                                      join r in ctx.Roles on p.RoleId equals r.Id
-                                      join m in ctx.Modules on p.ModuleId equals m.Id
-                                      where r.Name == RolName && m.Menu == Menu && m.Submenu != "NULL"
-                                      select new
-                                      {
-                                          m.Name,
-                                          m.Submenu,
-                                          m.ControlName,
-                                          m.ControlImage,
-                                          m.IsActive
-                                      }).ToList();
-
-                        //Crear las columnas del DataTable
-                        dt.Columns.AddRange(new DataColumn[]{
+                //Crear las columnas del DataTable
+                dt.Columns.AddRange(new DataColumn[]{
                                 new DataColumn("Name", typeof(string)),
                                 new DataColumn("SubMenu", typeof(string)),
                                 new DataColumn("ControlName", typeof(string)),
@@ -163,27 +155,27 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("IsActive", typeof(string))
                             });
 
-                        //Guardar los datos recuperados en una fila del DataTable
-                        result.ToList().ForEach(x =>
-                        {
-                            //Crear una fila nueva
-                            var row = dt.NewRow();
+                //Guardar los datos recuperados en una fila del DataTable
+                result.ToList().ForEach(x =>
+                {
+                    //Crear una fila nueva
+                    var row = dt.NewRow();
 
-                            //Cargar los datos de la fila
-                            row["Name"] = x.Name;
-                            row["SubMenu"] = x.Submenu;
-                            row["ControlName"] = x.ControlName;
-                            row["ControlImage"] = x.ControlImage;
-                            row["IsActive"] = x.IsActive;
+                    //Cargar los datos de la fila
+                    row["Name"] = x.Name;
+                    row["SubMenu"] = x.Submenu;
+                    row["ControlName"] = x.ControlName;
+                    row["ControlImage"] = x.ControlImage;
+                    row["IsActive"] = x.IsActive;
 
-                            //Añadir fila al DataTable
-                            dt.Rows.Add(row);
-                        });
-                    }
-                }
+                    //Añadir fila al DataTable
+                    dt.Rows.Add(row);
+                });
             }
 
             return dt;
         }
+
+        #endregion
     }
 }

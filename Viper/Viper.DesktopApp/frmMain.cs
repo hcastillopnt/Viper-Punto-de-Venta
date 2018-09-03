@@ -36,9 +36,8 @@ namespace Viper.DesktopApp
             //Inicializar el Time para mostrar la hora actual
             timer.Start();
 
-            bool isInsertedValuesAdmin = false;
-
-            isInsertedValuesAdmin = BusinessLogicLayer.MenuBLL.uploadMenuToAdministrator();
+            //Cargar los valores predeterminados de la base de datos
+            BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
 
             //Cargar menu de opciones
             CargarMenuVertical(rol);
@@ -109,13 +108,13 @@ namespace Viper.DesktopApp
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
-            if (rol == "ADMINISTRADOR COMPANY")
+            if (rol == "ADMINISTRADOR")
             {
                 //Obtenemos el nombre de la compañia
                 string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
 
                 //Si el usuario logueado es un administrador, mostramos todas las sucursales
-                cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.getSitesByCompany(companyName);
+                cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.procGetSitesByCompanyName(companyName);
                 cboSucursales.ValueMember = "Id";
                 cboSucursales.DisplayMember = "Site";
             }
@@ -125,7 +124,7 @@ namespace Viper.DesktopApp
                 string siteName = frmLogin.dt.Rows[0].Field<String>("Subsidiary");
 
                 //Si el usuario logueado es un empleado, mostramos la sucursal en la que se encuentra registrado
-                cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.findSiteBySiteName(siteName);
+                cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.procFindSiteBySiteName(siteName);
                 cboSucursales.ValueMember = "Id";
                 cboSucursales.DisplayMember = "Site";
 
@@ -211,7 +210,7 @@ namespace Viper.DesktopApp
             DataTable dtModules = new DataTable();
             Module module = null;
 
-            dtModules = BusinessLogicLayer.MenuBLL.CargarMenuPorRol(role);
+            dtModules = BusinessLogicLayer.MenuBLL.procUploadMenuByRolName(role);
 
             foreach (DataRow row in dtModules.Rows)
             {

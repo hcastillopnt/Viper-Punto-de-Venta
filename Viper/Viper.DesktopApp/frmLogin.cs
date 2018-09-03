@@ -46,7 +46,7 @@ namespace Viper.DesktopApp
             }
             else
             {
-                dt = BusinessLogicLayer.LoginBLL.authorize_by_credentials(username, password);
+                dt = BusinessLogicLayer.UserBLL.procAuthorizeByLogin(username, password);
 
                 if (dt != null)
                 {
@@ -121,7 +121,7 @@ namespace Viper.DesktopApp
 
                     switch (role)
                     {
-                        case "ADMINISTRADOR COMPANY":
+                        case "ADMINISTRADOR":
                             frm = new frmMain(role, company, jobTitle);
                             frm.Show();
                             this.Hide();

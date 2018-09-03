@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
@@ -11,7 +10,7 @@ using Viper.BusinessEntities;
 
 namespace Viper.DataAccessLayer
 {
-    public class SiteDAL
+    public class AddressDAL
     {
         /// <summary>
         /// A DbContext instance represents a combination of the Unit Of Work and Repository patterns 
@@ -22,105 +21,15 @@ namespace Viper.DataAccessLayer
         /// </summary>
         private static ViperDbContext dbCtx = new ViperDbContext();
 
-        #region procGetSitesByCompanyName
+        #region procInsertAddressToSystem
 
         /// <summary>
-        /// Metodo para obtener todas las sucursales registradas por medio del nombre de la empresa
-        /// registrada con una licencia adquirida
+        /// Metodo para registrar la direccion de un empleado, un negocio (licencia), un proveedor,
+        /// una sucursal, entre otros objetos en el sistema viper
         /// </summary>
-        /// <param name="CompanyName">Nombre de la Empresa</param>
-        /// <returns>DataTable</returns>
-        public static DataTable procGetSitesByCompanyName(string CompanyName)
-        {
-            bool isExistente = false;
-
-            //Se crea el DataTable
-            DataTable dt = new DataTable();
-
-            //Crear las columnas del DataTable
-            dt.Columns.AddRange(new DataColumn[]{
-                                new DataColumn("Id", typeof(int)),
-                                new DataColumn("Site", typeof(string))
-                            });
-
-            isExistente = Database.Exists(dbCtx.Database.Connection);
-
-            if (isExistente)
-            {
-                var result = (from s in dbCtx.Sites
-                              join c in dbCtx.Companies on s.CompanyId equals c.Id
-                              where c.CompanyName == CompanyName
-                              select new
-                              {
-                                  s.Id,
-                                  Site = s.UniquePhysicalID
-                              }).ToList();
-
-                //Crear una fila nueva
-                var rowBlank = dt.NewRow();
-
-                //Cargar los datos de la fila
-                rowBlank["Id"] = -1;
-                rowBlank["Site"] = "--SELECCIONE--";
-
-                //Añadir fila al DataTable
-                dt.Rows.Add(rowBlank);
-
-                //Guardar los datos recuperados en una fila del DataTable
-                result.ToList().ForEach(x =>
-                {
-                    //Crear una fila nueva
-                    var row = dt.NewRow();
-
-                    //Cargar los datos de la fila
-                    row["Id"] = x.Id;
-                    row["Site"] = x.Site;
-
-                    //Añadir fila al DataTable
-                    dt.Rows.Add(row);
-                });
-            }
-
-            return dt;
-        }
-
-        #endregion
-
-        #region procFindSiteBySiteName
-
-        /// <summary>
-        /// Metodo para obtener la sucursal en la cual se encuentra registrado el usuario
-        /// que se logueo en el sistema viper
-        /// </summary>
-        /// <param name="siteName">Nombre de la sucursal</param>
-        /// <returns>List</returns>
-        public static List<Site> procFindSiteBySiteName(string siteName)
-        {
-            bool isExistente = false;
-
-            List<Site> sites = new List<Site>();
-
-            isExistente = Database.Exists(dbCtx.Database.Connection);
-
-            if (isExistente)
-            {
-                sites = dbCtx.Sites.Where(x => x.SiteName == siteName).ToList();
-            }
-
-            return sites;
-        }
-
-        #endregion
-
-        #region procInsertSiteToSystem
-
-        /// <summary>
-        /// Metodo para registrar los datos de las sucursales que tiene ligadas la empresa
-        /// que adquirio la licencia del sistema viper
-        /// </summary>
-        /// <param name="entity">Entidad Sucursal</param>
+        /// <param name="entity">Entidad Direccion</param>
         /// <returns>Message</returns>
-        public static string procInsertSiteToSystem(Site entity)
+        public static string procInsertAddressToSystem(Address entity)
         {
             String message = String.Empty;
 
@@ -134,7 +43,7 @@ namespace Viper.DataAccessLayer
 
                     if (isDataBaseExist)
                     {
-                        dbCtx.Sites.Add(entity);
+                        dbCtx.Addresses.Add(entity);
 
                         isInserted = dbCtx.SaveChanges() > 0;
 
@@ -180,8 +89,59 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region HandleDbUpdateException
+        #region procGetAddressObjectByAddressId
 
+        /// <summary>
+        /// Metodo para obtener los datos de la direccion que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
+        /// </summary>
+        /// <param name="AddressID">ID Direccion</param>
+        /// <returns>Object</returns>
+        public static Address procGetAddressObjectByAddressId(int AddressID)
+        {
+            bool isExistente = false;
+
+            Address address = new Address();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                address = dbCtx.Addresses.Where(x => x.Id == AddressID).SingleOrDefault();
+            }
+
+            return address;
+        }
+
+        #endregion
+
+        #region procGetAddressSATObjectByAddressId
+
+        /// <summary>
+        /// Metodo para obtener los datos de la direccion fiscal que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
+        /// </summary>
+        /// <param name="AddressSATID">ID Direccion Fiscal</param>
+        /// <returns>Object</returns>
+        public static AddressSAT procGetAddressSATObjectByAddressId(int AddressSATID)
+        {
+            bool isExistente = false;
+
+            AddressSAT addressSAT = new AddressSAT();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                addressSAT = dbCtx.AddressesSAT.Where(x => x.Id == AddressSATID).SingleOrDefault();
+            }
+
+            return addressSAT;
+        }
+
+        #endregion
+
+        #region HandleDbUpdateException
         private static Exception HandleDbUpdateException(DbUpdateException dbu)
         {
             var builder = new StringBuilder("A DbUpdateException was caught while saving changes. ");
@@ -201,7 +161,6 @@ namespace Viper.DataAccessLayer
             string message = builder.ToString();
             return new Exception(message, dbu);
         }
-
         #endregion
     }
 }

@@ -97,10 +97,11 @@ namespace Viper.BusinessLogicLayer
         /// <summary>
         /// Metodo para obtener los puestos que puede tener un empleado
         /// </summary>
+        /// <param name="DepartmentID">ID Departamento</param>
         /// <returns>List</returns>
-        public static List<JobTitle> GetJobTitleDropDownList()
+        public static List<JobTitle> GetJobTitleDropDownList(int DepartmentID)
         {
-            return DataAccessLayer.DropDownListHelperDAL.GetJobTitleDropDownList();
+            return DataAccessLayer.DropDownListHelperDAL.GetJobTitleDropDownList(DepartmentID);
         }
 
         #endregion

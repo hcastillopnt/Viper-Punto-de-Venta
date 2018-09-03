@@ -161,14 +161,15 @@ namespace Viper.DataAccessLayer
         /// <summary>
         /// Metodo para obtener los puestos que puede tener un empleado
         /// </summary>
+        /// <param name="DepartmentID">ID Departamento</param>
         /// <returns>List</returns>
-        public static List<JobTitle> GetJobTitleDropDownList()
+        public static List<JobTitle> GetJobTitleDropDownList(int DepartmentID)
         {
             List<JobTitle> items = new List<JobTitle>();
 
             using (ViperDbContext db = new ViperDbContext())
             {
-                items = db.JobsTitle.ToList();
+                items = db.JobsTitle.Where(x=>x.DepartmentId == DepartmentID).ToList();
                 items.Add(new JobTitle { Id = -1, Name = "--SELECCIONE--" });
 
                 return items.OrderBy(x => x.Id).ToList();

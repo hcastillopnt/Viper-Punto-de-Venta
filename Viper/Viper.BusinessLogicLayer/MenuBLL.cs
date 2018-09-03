@@ -9,32 +9,38 @@ namespace Viper.BusinessLogicLayer
 {
     public class MenuBLL
     {
+        #region procUploadMenuToAdministrator
+
         /// <summary>
         /// Metodo para cargar los menus disponibles para un administrador
         /// </summary>
-        /// <returns>True/False</returns>
-        public static bool uploadMenuToAdministrator()
+        /// <returns>void</returns>
+        public static void procUploadPermissionsToMenuByAdministrator()
         {
-            bool isInserted = false;
-
-            isInserted = DataAccessLayer.MenuDAL.uploadMenuToAdministrator();
-
-            return isInserted;
+            DataAccessLayer.MenuDAL.procUploadPermissionsToMenuByAdministrator();
         }
+
+        #endregion
+
+        #region procUploadMenuByRolName
 
         /// <summary>
         /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
         /// </summary>
         /// <param name="RolName">Nombre del Rol</param>
         /// <returns>DataTable</returns>
-        public static DataTable CargarMenuPorRol(string RolName)
+        public static DataTable procUploadMenuByRolName(string RolName)
         {
             DataTable dt = new DataTable();
 
-            dt = DataAccessLayer.MenuDAL.CargarMenuPorRol(RolName);
+            dt = DataAccessLayer.MenuDAL.procUploadMenuByRolName(RolName);
 
             return dt;
         }
+
+        #endregion
+
+        #region procUploadSubmenuByRolName
 
         /// <summary>
         /// Metodo para cargar las opciones del menu por medio del rol que tenga el usuario logueado
@@ -42,13 +48,15 @@ namespace Viper.BusinessLogicLayer
         /// <param name="RolName">Nombre del Rol</param>
         /// <param name="Menu">Nombre del Menu</param>
         /// <returns>DataTable</returns>
-        public static DataTable CargarSubmenuPorRol(string RolName, string Menu)
+        public static DataTable procUploadSubmenuByRolName(string RolName, string Menu)
         {
             DataTable dt = new DataTable();
 
-            dt = DataAccessLayer.MenuDAL.CargarSubmenuPorRol(RolName, Menu);
+            dt = DataAccessLayer.MenuDAL.procUploadSubmenuByRolName(RolName, Menu);
 
             return dt;
         }
+
+        #endregion
     }
 }

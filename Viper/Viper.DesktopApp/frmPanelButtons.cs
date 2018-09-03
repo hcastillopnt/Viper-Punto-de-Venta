@@ -67,7 +67,7 @@ namespace Viper.DesktopApp
                 //F5 Configuracion
                 case "btnEmpresa":
                     companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-                    companyID = BusinessLogicLayer.CompanyBLL.getCompanyIdByName(companyName);
+                    companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
 
                     AgregarFormularioEnPanel(new frmRegisterCompany(companyID));
                     break;
@@ -91,7 +91,7 @@ namespace Viper.DesktopApp
             DataTable dtModules = new DataTable();
             Module module = null;
 
-            dtModules = BusinessLogicLayer.MenuBLL.CargarSubmenuPorRol(RoleName, menuSeleccionado);
+            dtModules = BusinessLogicLayer.MenuBLL.procUploadSubmenuByRolName(RoleName, menuSeleccionado);
 
             if (dtModules.Rows.Count > 0)
             {

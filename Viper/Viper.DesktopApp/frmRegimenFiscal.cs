@@ -99,7 +99,7 @@ namespace Viper.DesktopApp
         {
             string filter = txtRegimen.Text.Trim().ToString();
 
-            dgvRegimenFiscal.DataSource = BusinessLogicLayer.CompanyBLL.getCatalogOfRegimenFiscalByName(filter);
+            dgvRegimenFiscal.DataSource = BusinessLogicLayer.CompanyBLL.procGetRegimenFiscalByNameToDataTable(filter);
         }
 
         #endregion
@@ -108,7 +108,7 @@ namespace Viper.DesktopApp
 
         private void uploadGridWithRegimenFiscal()
         {
-            dgvRegimenFiscal.DataSource = BusinessLogicLayer.CompanyBLL.getCatalogOfRegimenFiscal();
+            dgvRegimenFiscal.DataSource = BusinessLogicLayer.CompanyBLL.procGetRegimenFiscalToDataTable();
         }
 
         #endregion

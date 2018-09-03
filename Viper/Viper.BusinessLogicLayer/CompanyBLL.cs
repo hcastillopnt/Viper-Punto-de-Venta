@@ -11,101 +11,82 @@ namespace Viper.BusinessLogicLayer
 {
     public class CompanyBLL
     {
-        #region sp_insert_company
+        #region procInsertCompanyToSystem
 
         /// <summary>
-        /// Metodo para registrar los datos generales y fiscales, de los clientes que adquieran Viper Sistema de Punto de Venta para Farmacias
+        /// Metodo para registrar las licencias adquiridas por diferentes negocios,
+        /// para trabajar con el Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
-        /// <param name="company">Objeto Compañia</param>
-        /// <param name="address">Objeto Direccion</param>
-        /// <param name="addressSAT">Objeto Direccion Fiscal</param>
-        /// <returns>Mensaje (String)</returns>
-        public static string sp_insert_company(Company company, Address address, AddressSAT addressSAT)
+        /// <param name="entityCompany">Entidad Empresa</param>
+        /// <param name="entityAddress">Entidad Direccion</param>
+        /// <param name="entityAddressSAT">Entidad Direccion Fiscal</param>
+        /// <param name="RoleID">ID del Rol</param>
+        /// <returns>Message</returns>
+        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, int RoleID)
         {
-            //Variable to recover the messages of mistake produced in the layer of BusinessLogic
-            string message = string.Empty;
+            String message = String.Empty;
 
-            //Create instance of object user
-            User user = new User();
+            ICollection<ValidationResult> results = null;
 
-            //Asign values to object user
-            user.LoginID = company.RFC;
-            user.PasswordEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
-            user.AccessFailedCount = 0;
-            user.IsWelcome = true;
-            user.IsActive = true;
-            user.RoleId = 2;
-            user.CreatedBy = "HECP";
-            user.CreatedDate = DateTime.Now;
-            user.LastUpdatedBy = "HECP";
-            user.LastUpdatedDate = DateTime.Now;
+            String loginID = entityCompany.RFC;
+            String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
 
-            //To validate the entities of the class by means of the DataAnnotations assigned in the layer of BusinessEntities
-            message = validateWithDataAnnotations(company, address, addressSAT, user);
+            message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
 
-            //If it does not contain mistakes, we proceed to realize the following operation
-            if (string.IsNullOrEmpty(message))
+            if (String.IsNullOrEmpty(message))
             {
-                //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
-                message = DataAccessLayer.CompanyDAL.sp_insert_company(company, address, addressSAT, user);
+                int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered();
+
+                entityCompany.UserId = UserID;
+
+                if (!validate(entityCompany, out results))
+                {
+                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                }
+                else
+                {
+                    if (!validate(entityAddress, out results))
+                    {
+                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                    }
+                    else
+                    {
+                        if (!validate(entityAddressSAT, out results))
+                        {
+                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                        }
+                        else
+                        {
+                            message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(entityCompany, entityAddress, entityAddressSAT);
+                        }
+                    }
+                }
             }
 
-            //To return the value of the variable message
             return message;
+
         }
 
         #endregion
 
-        #region updatePassword
-
-        /// <summary>
-        /// Metodo para actualizar el password de un cliente que adquirio Viper Sistema de Punto de Venta para Farmacias
-        /// </summary>
-        /// <param name="pwd">Contraseña anterior</param>
-        /// <param name="loginID">Nombre de usuario</param>
-        /// <returns>Mensaje (String)</returns>
-        public static string updatePassword(string pwd, string loginID)
-        {
-            //Variable to recover the messages of mistake produced in the layer of BusinessLogic
-            string message = string.Empty;
-
-            if (string.IsNullOrEmpty(pwd) && string.IsNullOrEmpty(loginID))
-            {
-                message = "Favor de introducir la contraseña a actualizar";
-            }
-            else
-            {
-                //To encrypt the password by means of the algorithm SHA1
-                string PasswordEncrypted = EncryptionDecryption.EncriptarSHA1(pwd);
-
-                //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
-                message = DataAccessLayer.CompanyDAL.updatePassword(PasswordEncrypted, loginID);
-            }
-
-            //To return the value of the variable message
-            return message;
-        }
-
-        #endregion
-
-        #region isCompanyRegistered
+        #region procIsCompanyRegistered
 
         /// <summary>
         /// Metodo para saber si existen compañias registradas en la BD
         /// </summary>
-        /// <returns>Existen o No Existen</returns>
-        public static bool isCompanyRegistered()
+        /// <returns>Boolean</returns>
+        public static bool procIsCompanyRegistered()
         {
-            bool isExistsCompany = false;
+            bool isCompaniesRegistered = false;
 
-            isExistsCompany = DataAccessLayer.CompanyDAL.isCompanyRegistered();
+            isCompaniesRegistered = DataAccessLayer.CompanyDAL.procIsCompanyRegistered();
 
-            return isExistsCompany;
+            return isCompaniesRegistered;
         }
 
         #endregion
 
-        #region obtainCompanyKeyGeneratedAutomatic
+        #region procObtainCompanyKeyGeneratedAutomatic
 
         /// <summary>
         /// Metodo para obtener la clave de la compañia para poder loguearse en la app web/app movil
@@ -114,10 +95,10 @@ namespace Viper.BusinessLogicLayer
         public static string obtainCompanyKeyGeneratedAutomatic()
         {
             //Variable to recover the key of the company
-            string companyKey = String.Empty;
+            String companyKey = String.Empty;
 
             //To obtain the key of the company by means of the layer DataAccess
-            companyKey = DataAccessLayer.CompanyDAL.obtainCompanyKeyGeneratedAutomatic();
+            companyKey = DataAccessLayer.CompanyDAL.procObtainCompanyKeyGeneratedAutomatic();
 
             //To return the value of the variable companyKey
             return companyKey;
@@ -125,213 +106,110 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
-        #region getRegimenFiscalByID
+        #region procFindRegimenFiscalByID
 
         /// <summary>
         /// Metodo para obtener el regimen fiscal en base al ID
         /// </summary>
-        /// <param name="RegimenID">Regimen Fiscal ID</param>
+        /// <param name="RegimenID">ID Regimen Fiscal</param>
         /// <returns>Regimen Fiscal</returns>
-        public static string getRegimenFiscalByID(int RegimenID)
+        public static string procFindRegimenFiscalByID(int RegimenID)
         {
             string RegimenFiscal = String.Empty;
 
-            RegimenFiscal = DataAccessLayer.CompanyDAL.getRegimenFiscalByID(RegimenID);
+            RegimenFiscal = DataAccessLayer.CompanyDAL.procFindRegimenFiscalByID(RegimenID);
 
             return RegimenFiscal;
         }
 
         #endregion
 
-        #region getCompanyRegisteredByCompanyID
+        #region procGetCompanyObjectByCompanyID
 
         /// <summary>
-        /// Metodo para obtener la informacion de la compañia
+        /// Metodo para obtener los datos de la empresa que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
         /// </summary>
         /// <param name="CompanyID">ID Compañia</param>
-        /// <returns>Objeto Compañia</returns>
-        public static Company getCompanyRegisteredByCompanyID(int CompanyID)
+        /// <returns>Object</returns>
+        public static Company procGetCompanyObjectByCompanyID(int CompanyID)
         {
             Company company = null;
 
-            company = DataAccessLayer.CompanyDAL.getCompanyRegisteredByCompanyID(CompanyID);
+            company = DataAccessLayer.CompanyDAL.procGetCompanyObjectByCompanyID(CompanyID);
 
             return company;
         }
 
         #endregion
 
-        #region getCompanyAddressSATRegisteredByID
-
-        /// <summary>
-        /// Metodo para obtener la direccion de la compañia por medio del Id
-        /// </summary>
-        /// <param name="AddressID">ID Direccion</param>
-        /// <returns>Objeto Direccion</returns>
-        public static Address getCompanyAddressRegisteredByCompanyID(int AddressID)
-        {
-            Address address = null;
-
-            address = DataAccessLayer.CompanyDAL.getCompanyAddressRegisteredByCompanyID(AddressID);
-
-            return address;
-        }
-
-        #endregion
-
-        #region getCompanyAddressSATRegisteredByID
-
-        /// <summary>
-        /// Metodo para obtener la direccion fiscal de la compañia
-        /// </summary>
-        /// <param name="AddressSATID">ID Direccion Fiscal</param>
-        /// <returns>Objeto Direccion Fiscal</returns>
-        public static AddressSAT getCompanyAddressSATRegisteredByCompanyID(int AddressSATID)
-        {
-            AddressSAT addressSAT = null;
-
-            addressSAT = DataAccessLayer.CompanyDAL.getCompanyAddressSATRegisteredByCompanyID(AddressSATID);
-
-            return addressSAT;
-        }
-
-        #endregion
-
-        #region getCatalogOfRegimenFiscal
+        #region procGetRegimenFiscalToDataTable
 
         /// <summary>
         /// Metodo para obtener los regimenes fiscales existentes en la base de datos
         /// </summary>
-        /// <returns>Tabla con la informacion</returns>
-        public static DataTable getCatalogOfRegimenFiscal()
+        /// <returns>DataTable</returns>
+        public static DataTable procGetRegimenFiscalToDataTable()
         {
             DataTable dataTable = null;
 
-            dataTable = DataAccessLayer.CompanyDAL.getCatalogOfRegimenFiscal();
+            dataTable = DataAccessLayer.CompanyDAL.procGetRegimenFiscalToDataTable();
 
             return dataTable;
         }
 
         #endregion
 
-        #region getCatalogOfRegimenFiscalByName
+        #region procGetRegimenFiscalByNameToDataTable
 
         /// <summary>
         /// Metodo para filtrar los regimenes fiscales existentes en la base de datos 
         /// </summary>
         /// <param name="filter">Regimen Fiscal</param>
-        /// <returns>Tabla con la informacion</returns>
-        public static DataTable getCatalogOfRegimenFiscalByName(string filter)
+        /// <returns>DataTable</returns>
+        public static DataTable procGetRegimenFiscalByNameToDataTable(string filter)
         {
             DataTable dataTable = new DataTable();
 
-            dataTable = DataAccessLayer.CompanyDAL.getCatalogOfRegimenFiscalByName(filter);
+            dataTable = DataAccessLayer.CompanyDAL.procGetRegimenFiscalByNameToDataTable(filter);
 
             return dataTable;
         }
 
         #endregion
 
-        #region getRegimenIdByName
+        #region procGetRegimenFiscalIdByName
 
         /// <summary>
         /// Metodo para obtener el ID del regimen fiscal
         /// </summary>
-        /// <param name="RegimenName">Regimen Fiscal</param>
+        /// <param name="RegimenFiscalName">Nombre del Regimen Fiscal</param>
         /// <returns>ID</returns>
-        public static int getRegimenIdByName(string RegimenName)
+        public static int procGetRegimenFiscalIdByName(string RegimenFiscalName)
         {
             int RegimenID = 0;
 
-            RegimenID = DataAccessLayer.CompanyDAL.getRegimenIdByName(RegimenName);
+            RegimenID = DataAccessLayer.CompanyDAL.procGetRegimenFiscalIdByName(RegimenFiscalName);
 
             return RegimenID;
         }
 
         #endregion
 
-        #region getCompanyIdByName
+        #region procGetCompanyIdByName
 
         /// <summary>
         /// Metodo para obtener el ID de la compañia por medio del nombre de la compañia
         /// </summary>
         /// <param name="companyName">Nombre de la Compañia</param>
         /// <returns>ID</returns>
-        public static int getCompanyIdByName(string companyName)
+        public static int procGetCompanyIdByName(string companyName)
         {
             int CompanyID = 0;
 
-            CompanyID = DataAccessLayer.CompanyDAL.getCompanyIdByName(companyName);
+            CompanyID = DataAccessLayer.CompanyDAL.procGetCompanyIdByName(companyName);
 
             return CompanyID;
-        }
-
-        #endregion
-
-        #region validateWithDataAnnotations
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="company"></param>
-        /// <param name="address"></param>
-        /// <param name="addressSAT"></param>
-        /// <returns></returns>
-        public static string validateWithDataAnnotations(Company company, Address address, AddressSAT addressSAT, User user)
-        {
-            ICollection<ValidationResult> results = null;
-            string message = String.Empty;
-
-            if (!validate(company, out results))
-            {
-                message = String.Join("\n", results.Select(o => o.ErrorMessage));
-            }
-            else
-            {
-                if (!validate(address, out results))
-                {
-                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                }
-                else
-                {
-                    if (!validate(addressSAT, out results))
-                    {
-                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                    }
-                    else
-                    {
-                        if (!validate(user, out results))
-                        {
-                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                        }
-                    }
-                }
-            }
-
-            return message;
-        }
-
-        #endregion
-
-        #region validateAddressWithDataAnnotations
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="address"></param>
-        /// <returns></returns>
-        public static string validateAddressWithDataAnnotations(Address address)
-        {
-            ICollection<ValidationResult> results = null;
-            string message = String.Empty;
-
-            if (!validate(address, out results))
-            {
-                message = String.Join("\n", results.Select(o => o.ErrorMessage));
-            }
-
-
-            return message;
         }
 
         #endregion

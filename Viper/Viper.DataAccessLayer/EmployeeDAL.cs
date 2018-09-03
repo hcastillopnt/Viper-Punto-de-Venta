@@ -13,52 +13,59 @@ namespace Viper.DataAccessLayer
     public class EmployeeDAL
     {
         /// <summary>
-        /// DbContext is an important class in Entity Framework API. It is a bridge between your domain or entity classes and the database.
+        /// A DbContext instance represents a combination of the Unit Of Work and Repository patterns 
+        /// such that it can be used to query from a database and group together changes that will 
+        /// then be written back to the store as a unit. 
+        /// DbContext is conceptually similar to ObjectContext. 
+        /// DbContext is the primary class that is responsible for interacting with the database.
         /// </summary>
-        public static ViperDbContext dbCtx = new ViperDbContext();
+        private static ViperDbContext dbCtx = new ViperDbContext();
 
-        #region updatePassword
+        #region procInsertEmployeeToSystem
+
         /// <summary>
-        /// Update password form oompany administrator
+        /// Metodo para registrar los empleados para trabajar con el 
+        /// Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
-        /// <param name="pwd">Password</param>
-        /// <param name="entityID">Entity ID</param>
+        /// <param name="entityAddress">Entidad Direccion</param>
+        /// <param name="entityEmployee">Entidad Empleado</param>
         /// <returns>Message</returns>
-        public static string updatePassword(string pwd, int entityID)
+        public static string procInsertEmployeeToSystem(Address entityAddress, Employee entityEmployee)
         {
-            string message = string.Empty;
-            bool isUpdate = false;
+            String message = String.Empty;
+
+            bool isInserted = false;
 
             using (var dbCtxTran = dbCtx.Database.BeginTransaction())
             {
                 try
                 {
-                    //Validar si la base de datos existe
                     bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
 
                     if (isDataBaseExist)
                     {
-                        //Validar si la tabla utilizada existe
-                        bool isTableExist = dbCtx.Database
-                     .SqlQuery<int?>(@"
-                               SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'User'")
-                     .SingleOrDefault() != null;
+                        dbCtx.Addresses.Add(entityAddress);
 
-                        if (isTableExist)
+                        isInserted = dbCtx.SaveChanges() > 0;
+
+                        if (isInserted)
                         {
-                            var entity = dbCtx.Users.Where(x => x.Id == entityID).FirstOrDefault();
+                            isInserted = false;
 
-                            entity.PasswordEncrypted = pwd;
-                            entity.IsWelcome = false;
+                            var AddressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                            dbCtx.Users.Attach(entity);
-                            dbCtx.Entry(entity).State = EntityState.Modified;
-
-                            isUpdate = dbCtx.SaveChanges() > 0;
-
-                            if (isUpdate == true && string.IsNullOrEmpty(message))
+                            if (AddressID > 0)
                             {
-                                dbCtxTran.Commit();
+                                entityEmployee.AddressId = AddressID;
+
+                                dbCtx.Employees.Add(entityEmployee);
+
+                                isInserted = dbCtx.SaveChanges() > 0;
+
+                                if (isInserted == true)
+                                {
+                                    dbCtxTran.Commit();
+                                }
                             }
                         }
                     }
@@ -76,9 +83,9 @@ namespace Viper.DataAccessLayer
                 }
                 catch (DbUpdateConcurrencyException ex)
                 {
-                    var entity = ex.Entries.Single().GetDatabaseValues();
+                    var entityObj = ex.Entries.Single().GetDatabaseValues();
 
-                    if (entity == null)
+                    if (entityObj == null)
                         message = "The entity being updated is already deleted by another user";
                     else
                         message = "The entity being updated has already been updated by another user";
@@ -96,37 +103,109 @@ namespace Viper.DataAccessLayer
 
             return message;
         }
+
         #endregion
 
-        #region obtainLoginIDGeneratedAutomatic
+        #region procInsertEmployeeHistoryToSystem
 
         /// <summary>
-        /// Method to obtain LoginID generated automatic
+        /// Metodo para registrar el historial de un empleado registrado en el sistema
+        /// viper, guardando el puesto, departamento, sucursal, horario, etc.
         /// </summary>
-        /// <returns></returns>
-        public static string obtainLoginIDGeneratedAutomatic()
+        /// <param name="entity">Entidad Historial del Empleado</param>
+        /// <returns>Message</returns>
+        public static string procInsertEmployeeHistoryToSystem(EmployeeDepartmentHistory entity)
+        {
+            String message = String.Empty;
+
+            bool isInserted = false;
+
+            using (var dbCtxTran = dbCtx.Database.BeginTransaction())
+            {
+                try
+                {
+                    bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+
+                    if (isDataBaseExist)
+                    {
+                        dbCtx.EmployeesDepartmentHistory.Add(entity);
+
+                        isInserted = dbCtx.SaveChanges() > 0;
+
+                        if (isInserted)
+                        {
+                            dbCtxTran.Commit();
+                        }
+                    }
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    var errorMessages = ex.EntityValidationErrors
+                            .SelectMany(x => x.ValidationErrors)
+                            .Select(x => x.ErrorMessage);
+                    var fullErrorMessage = string.Join("; ", errorMessages);
+                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                    message = exceptionMessage + "\n" + ex.EntityValidationErrors;
+
+                    dbCtxTran.Rollback();
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    var entityObj = ex.Entries.Single().GetDatabaseValues();
+
+                    if (entityObj == null)
+                        message = "The entity being updated is already deleted by another user";
+                    else
+                        message = "The entity being updated has already been updated by another user";
+
+                    dbCtxTran.Rollback();
+                }
+                catch (DbUpdateException ex)
+                {
+                    var exception = HandleDbUpdateException(ex);
+                    message = exception.Message;
+
+                    dbCtxTran.Rollback();
+                }
+            }
+
+            return message;
+        }
+
+        #endregion
+
+        #region procObtainEmployeeNumberGeneratedAutomatic
+
+        /// <summary>
+        /// Metodo para obtener el numero de empleado generado automaticamente,
+        /// para cada empleado que se vaya a registrar en el sistema viper
+        /// </summary>
+        /// <returns>Numero de Empleado</returns>
+        public static string procObtainEmployeeNumberGeneratedAutomatic()
         {
             int inc = 0;
+            string numero = String.Empty;
 
             bool isEN = dbCtx.Employees.ToList().Count() > 0;//verificar si hay empleados
 
             if (isEN)
             {
                 //traer ultimo codigo de empleado registrado
-                string clave = dbCtx.Employees.ToList().Last().EmployeeIDNumber;
+                string clave = dbCtx.Employees.ToList().Last().EmployeeNumber;
 
                 //usar metodo substring para sacar numeros del codigo para incrementar
-                string numero = clave.Substring(clave.Length - 4, 4);
-                int numcl = Convert.ToInt32(numero);
-
-                //incrementar
-                inc = numcl + 1;
+                numero = clave.Substring(clave.Length - 4, 4);
             }
             else
             {
                 //igualar a uno en caso de que sea el primero
                 inc = 1;
             }
+
+            int numcl = Convert.ToInt32(numero);
+
+            //incrementar
+            inc = numcl + 1;
 
             return string.Format("VIPER-EMP-{0:0000}", inc);
         }

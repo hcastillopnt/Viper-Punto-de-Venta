@@ -1,41 +1,93 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Viper.BusinessEntities;
 
 namespace Viper.BusinessLogicLayer
 {
     public class EmployeeBLL
     {
-        #region updatePassword
+        #region procRegisterEmployee
+
         /// <summary>
-        /// Update password form oompany administrator
-        /// </summary>
-        /// <param name="pwd">Password</param>
-        /// <param name="entityID">Entity ID</param>
+        /// Metodo para registrar los empleados para trabajar con el 
+        /// Viper Sistema de Punto de Venta para Farmacias
+        /// <param name="entityAddress">Entidad Direccion</param>
+        /// <param name="entityEmployee">Entidad Empleado</param>
+        /// <param name="entityEDH">Entidad Historial del Empleado</param>
+        /// <param name="RoleID">ID del Tipo de Rol</param>
         /// <returns>Message</returns>
-        public static string updatePassword(string pwd, int entityID)
+        public static string procRegisterEmployee(Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH, int RoleID)
         {
-            //Variable to recover the messages of mistake produced in the layer of BusinessLogic
-            string message = string.Empty;
+            String message = String.Empty;
 
-            if (string.IsNullOrEmpty(pwd) && entityID == 0)
+            ICollection<ValidationResult> results = null;
+
+            String loginID = entityEmployee.CURP;
+            String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("12345");
+
+            message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
+
+            if (String.IsNullOrEmpty(message))
             {
-                message = "Favor de introducir la contraseña a actualizar";
-            }
-            else
-            {
-                //To encrypt the password by means of the algorithm SHA1
-                string PasswordEncrypted = EncryptionDecryption.EncriptarSHA1(pwd);
+                int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered();
 
-                //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
-                message = DataAccessLayer.EmployeeDAL.updatePassword(PasswordEncrypted, entityID);
+                entityEmployee.EmployeeNumber = DataAccessLayer.EmployeeDAL.procObtainEmployeeNumberGeneratedAutomatic();
+                entityEmployee.UserId = UserID;
+
+                if (!validate(entityAddress, out results))
+                {
+                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                }
+                else
+                {
+                    if (!validate(entityEmployee, out results))
+                    {
+                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                    }
+                    else
+                    {
+                        message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(entityAddress, entityEmployee);
+
+                        if (String.IsNullOrEmpty(message))
+                        {
+                            if (!validate(entityEDH, out results))
+                            {
+                                message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                            }
+                            else
+                            {
+                                message = DataAccessLayer.EmployeeDAL.procInsertEmployeeHistoryToSystem(entityEDH);
+                            }
+                        }
+                    }
+                }
             }
 
-            //To return the value of the variable message
             return message;
         }
+
+        #endregion
+
+        #region validate<T>
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <param name="results"></param>
+        /// <returns></returns>
+        public static bool validate<T>(T obj, out ICollection<ValidationResult> results)
+        {
+            results = new List<ValidationResult>();
+
+            return Validator.TryValidateObject(obj, new ValidationContext(obj), results, true);
+        }
+
         #endregion
     }
 }

@@ -11,83 +11,72 @@ namespace Viper.BusinessLogicLayer
 {
     public class SiteBLL
     {
-        #region getSitesByCompany
+        #region procGetSitesByCompanyName
+
         /// <summary>
-        /// Metodo para obtener todas las sucursales registradas de tal compañia
+        /// Metodo para obtener todas las sucursales registradas por medio del nombre de la empresa
+        /// registrada con una licencia adquirida
         /// </summary>
-        /// <param name="CompanyName">Company Name</param>
+        /// <param name="CompanyName">Nombre de la Empresa</param>
         /// <returns>DataTable</returns>
-        public static DataTable getSitesByCompany(string CompanyName)
+        public static DataTable procGetSitesByCompanyName(string CompanyName)
         {
             DataTable dt = new DataTable();
 
-            dt = DataAccessLayer.SiteDAL.getSitesByCompany(CompanyName);
+            dt = DataAccessLayer.SiteDAL.procGetSitesByCompanyName(CompanyName);
 
             return dt;
         }
+
         #endregion
 
-        #region findSiteBySiteName
+        #region procFindSiteBySiteName
+
         /// <summary>
-        /// Metodo para obtener la sucursal en la cual se encuentra logueado el usuario
+        /// Metodo para obtener la sucursal en la cual se encuentra registrado el usuario
+        /// que se logueo en el sistema viper
         /// </summary>
-        /// <param name="siteName">Name of Site</param>
+        /// <param name="siteName">Nombre de la sucursal</param>
         /// <returns>List</returns>
-        public static List<Site> findSiteBySiteName(string siteName)
+        public static List<Site> procFindSiteBySiteName(string siteName)
         {
             List<Site> sites = new List<Site>();
 
-            sites = DataAccessLayer.SiteDAL.findSiteBySiteName(siteName);
+            sites = DataAccessLayer.SiteDAL.procFindSiteBySiteName(siteName);
 
             return sites;
         }
+
         #endregion
 
-        #region sp_insert_site
+        #region procInsertSiteToSystem
 
         /// <summary>
-        /// Metodo para registrar los datos generales de la sucursal a registrar
+        /// Metodo para registrar los datos de las sucursales que tiene ligadas la empresa
+        /// que adquirio la licencia del sistema viper
         /// </summary>
-        /// <param name="site">Objeto Sucursal</param>
-        /// <returns>Mensaje (String)</returns>
-        public static string sp_insert_site(Site site)
+        /// <param name="entity">Entidad Sucursal</param>
+        /// <returns>Message</returns>
+        public static string procInsertSiteToSystem(Site entity)
         {
             //Variable to recover the messages of mistake produced in the layer of BusinessLogic
-            string message = string.Empty;
+            String message = String.Empty;
+
+            ICollection<ValidationResult> results = null;
 
             //To validate the entities of the class by means of the DataAnnotations assigned in the layer of BusinessEntities
-            message = validateWithDataAnnotations(site);
-
-            //If it does not contain mistakes, we proceed to realize the following operation
-            if (string.IsNullOrEmpty(message))
-            {
-                //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
-                message = DataAccessLayer.SiteDAL.sp_insert_site(site);
-            }
-
-            //To return the value of the variable message
-            return message;
-        }
-
-        #endregion
-
-        #region validateWithDataAnnotations
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="site"></param>
-        /// <returns></returns>
-        public static string validateWithDataAnnotations(Site site)
-        {
-            ICollection<ValidationResult> results = null;
-            string message = String.Empty;
-
-            if (!validate(site, out results))
+            if (!validate(entity, out results))
             {
                 message = String.Join("\n", results.Select(o => o.ErrorMessage));
             }
+            else
+            {
+                //If it does not contain mistakes, we proceed to realize the following operation
+                //After validating quite the logic of business, one proceeds to realize the record by means of the layer DataAccess
+                message = DataAccessLayer.SiteDAL.procInsertSiteToSystem(entity);
+            }
 
+            //To return the value of the variable message
             return message;
         }
 
