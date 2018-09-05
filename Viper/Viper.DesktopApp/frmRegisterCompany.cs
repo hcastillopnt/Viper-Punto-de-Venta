@@ -775,7 +775,7 @@ namespace Viper.DesktopApp
             this.Tipo_Inmueble.SelectedIndex = 0;
             this.Tipo_Vialidad.SelectedIndex = 0;
             this.Vialidad.Text = String.Empty;
-            this.Codigo_Postal.Text = String.Empty;
+            this.Codigo_Postal.Text = "_____";
             this.No_Ext.Text = String.Empty;
             this.No_Int.Text = String.Empty;
             this.Colonia.Text = String.Empty;
@@ -920,7 +920,7 @@ namespace Viper.DesktopApp
 
             recoveryInformationObjectsByUserInterface();
 
-            message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 2);
+            message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 1, site);
 
             if (String.IsNullOrEmpty(message))
             {
@@ -932,12 +932,8 @@ namespace Viper.DesktopApp
 
                 if (bandera)
                 {
-                    message = BusinessLogicLayer.SiteBLL.procInsertSiteToSystem(site);
-
                     if (String.IsNullOrEmpty(message))
                     {
-                        //MessageBox.Show(new Form { TopMost = true }, "Sucursal registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         this.Hide();
                         frmLogin frm = new frmLogin();
                         frm.Show();

@@ -21,8 +21,9 @@ namespace Viper.BusinessLogicLayer
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <param name="entityAddressSAT">Entidad Direccion Fiscal</param>
         /// <param name="RoleID">ID del Rol</param>
+        /// <param name="entitySite">Entidad Sucursal</param>
         /// <returns>Message</returns>
-        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, int RoleID)
+        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, int RoleID, Site entitySite)
         {
             String message = String.Empty;
 
@@ -57,7 +58,14 @@ namespace Viper.BusinessLogicLayer
                         }
                         else
                         {
-                            message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(entityCompany, entityAddress, entityAddressSAT);
+                            if (!validate(entitySite, out results))
+                            {
+                                message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                            }
+                            else
+                            {
+                                message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(entityCompany, entityAddress, entityAddressSAT, entitySite);
+                            }
                         }
                     }
                 }

@@ -62,21 +62,28 @@ namespace Viper.DesktopApp
                 }
                 catch (Exception ex)
                 {
-                    using (BusinessEntities.ViperDbContext dbCtx = new BusinessEntities.ViperDbContext())
+                    try
                     {
-                        bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
+                        using (BusinessEntities.ViperDbContext dbCtx = new BusinessEntities.ViperDbContext())
+                        {
+                            bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
 
-                        if (isDataBaseExist)
-                        {
-                            MessageBox.Show(new Form { TopMost = true }, ex.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (isDataBaseExist)
+                            {
+                                MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                Thread t = new Thread(new ThreadStart(startForm));
+                                t.Start();
+                                Thread.Sleep(45000);
+                                t.Abort();
+                            }
                         }
-                        else
-                        {
-                            Thread t = new Thread(new ThreadStart(startForm));
-                            t.Start();
-                            Thread.Sleep(45000);
-                            t.Abort();
-                        }
+                    }
+                    catch(Exception ex1)
+                    {
+                        MessageBox.Show(new Form { TopMost = true }, ex1.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

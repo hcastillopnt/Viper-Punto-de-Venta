@@ -32,8 +32,9 @@ namespace Viper.DataAccessLayer
         /// <param name="entityCompany">Entidad Empresa</param>
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <param name="entityAddressSAT">Entidad Direccion Fiscal</param>
+        /// <param name="entitySite">Entidad Sucursal</param>
         /// <returns>Message</returns>
-        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT)
+        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, Site entitySite)
         {
             String message = String.Empty;
 
@@ -65,13 +66,14 @@ namespace Viper.DataAccessLayer
 
                                 isInserted = dbCtx.SaveChanges() > 0;
 
-                                var addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-
-                                if (addressSATID > 0)
+                                if (isInserted)
                                 {
-                                    if (isInserted)
+                                    isInserted = false;
+
+                                    var addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                    if (addressSATID > 0)
                                     {
-                                        isInserted = false;
 
                                         entityCompany.AddressSATId = addressSATID;
                                         entityCompany.AddressId = addressID;
@@ -82,7 +84,24 @@ namespace Viper.DataAccessLayer
 
                                         if (isInserted)
                                         {
-                                            dbCtxTran.Commit();
+                                            isInserted = false;
+
+                                            var CompanyID = dbCtx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                            if (CompanyID > 0)
+                                            {
+                                                entitySite.AddressId = addressID;
+                                                entitySite.CompanyId = CompanyID;
+
+                                                dbCtx.Sites.Add(entitySite);
+
+                                                isInserted = dbCtx.SaveChanges() > 0;
+
+                                                if (isInserted)
+                                                {
+                                                    dbCtxTran.Commit();
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -118,10 +137,6 @@ namespace Viper.DataAccessLayer
                     message = exception.Message;
 
                     dbCtxTran.Rollback();
-                }
-                finally
-                {
-                    Console.WriteLine("Ocurrio un error inesperado");
                 }
             }
 
@@ -380,6 +395,30 @@ namespace Viper.DataAccessLayer
             }
 
             return CompanyId;
+        }
+
+        #endregion
+
+        #region procGetLastIDToCompanyRegistered
+
+        /// <summary>
+        /// Metodo para obtener el ultimo ID de las empresas registradas
+        /// </summary>
+        /// <returns>Id</returns>
+        public static int procGetLastIDToCompanyRegistered()
+        {
+            bool isExistente = false;
+
+            int CompanyID = 0;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                CompanyID = dbCtx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+            }
+
+            return CompanyID;
         }
 
         #endregion
