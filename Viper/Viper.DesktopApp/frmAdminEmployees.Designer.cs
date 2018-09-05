@@ -251,12 +251,13 @@
             this.pvMenuOpciones.Controls.Add(this.pvpDatosGenerales);
             this.pvMenuOpciones.Controls.Add(this.pvpAccesoSistema);
             this.pvMenuOpciones.Controls.Add(this.pvpInformacionEmpleado);
+            this.pvMenuOpciones.DefaultPage = this.pvpDatosGenerales;
             this.pvMenuOpciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pvMenuOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.pvMenuOpciones.ItemSizeMode = ((Telerik.WinControls.UI.PageViewItemSizeMode)((Telerik.WinControls.UI.PageViewItemSizeMode.EqualWidth | Telerik.WinControls.UI.PageViewItemSizeMode.EqualHeight)));
             this.pvMenuOpciones.Location = new System.Drawing.Point(3, 3);
             this.pvMenuOpciones.Name = "pvMenuOpciones";
-            this.pvMenuOpciones.SelectedPage = this.pvpInformacionEmpleado;
+            this.pvMenuOpciones.SelectedPage = this.pvpDatosGenerales;
             this.pvMenuOpciones.Size = new System.Drawing.Size(944, 693);
             this.pvMenuOpciones.TabIndex = 0;
             this.pvMenuOpciones.ThemeName = "VisualStudio2012Light";
