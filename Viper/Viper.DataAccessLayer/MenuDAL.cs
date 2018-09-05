@@ -34,13 +34,11 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                isExistente = false;
-
                 var result = dbCtx.Permissions.ToList().Count > 0;
 
                 if (!result)
                 {
-                    dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) SELECT 2, Id FROM Module;");
+                    dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) SELECT 1, Id FROM Module;");
 
                     dbCtx.SaveChanges();
                 }
