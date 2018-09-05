@@ -64,6 +64,8 @@ namespace Viper.DesktopApp
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     try
                     {
                         using (BusinessEntities.ViperDbContext dbCtx = new BusinessEntities.ViperDbContext())

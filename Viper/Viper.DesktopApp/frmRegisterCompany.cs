@@ -262,11 +262,11 @@ namespace Viper.DesktopApp
                         break;
                 }
             }
-            else if(sender is RadMaskedEditBox)
+            else if (sender is RadMaskedEditBox)
             {
                 objMaskedEditBox = (RadMaskedEditBox)sender;
 
-                switch(objMaskedEditBox.Name)
+                switch (objMaskedEditBox.Name)
                 {
                     //tab 5
                     case "Codigo_Postal":
@@ -855,7 +855,7 @@ namespace Viper.DesktopApp
 
         private void active_disable_fields(bool typeForm)
         {
-            if(typeForm == true)
+            if (typeForm == true)
             {
                 this.Giro_Comercial.Enabled = true;
                 this.Nombre_Empresa.Enabled = true;
@@ -951,37 +951,44 @@ namespace Viper.DesktopApp
 
         private void registerCompanyInSystem()
         {
-            string message = String.Empty;
-
-            recoveryInformationObjectsByUserInterface();
-
-            message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 1, site);
-
-            if (String.IsNullOrEmpty(message))
+            try
             {
-                savePicture();
+                string message = String.Empty;
 
-                MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                recoveryInformationObjectsByUserInterface();
 
-                setToDefaultFields();
+                message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 1, site);
 
-                if (bandera)
+                if (String.IsNullOrEmpty(message))
                 {
-                    if (String.IsNullOrEmpty(message))
+                    savePicture();
+
+                    MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    setToDefaultFields();
+
+                    if (bandera)
                     {
-                        this.Hide();
-                        frmLogin frm = new frmLogin();
-                        frm.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (String.IsNullOrEmpty(message))
+                        {
+                            this.Hide();
+                            frmLogin frm = new frmLogin();
+                            frm.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -723,23 +723,30 @@ namespace Viper.DesktopApp
 
         private void registerEmployeeInSystem()
         {
-            string message = String.Empty;
-
-            recoveryInformationObjectsByUserInterface();
-
-            message = BusinessLogicLayer.EmployeeBLL.procRegisterEmployee(address, employee, employeeDepartmentHistory, Convert.ToInt32(Rol.SelectedValue));
-
-            if (String.IsNullOrEmpty(message))
+            try
             {
-                savePicture();
+                string message = String.Empty;
 
-                MessageBox.Show(new Form { TopMost = true }, "Empleado registrado correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                recoveryInformationObjectsByUserInterface();
 
-                setToDefaultFields();
+                message = BusinessLogicLayer.EmployeeBLL.procRegisterEmployee(address, employee, employeeDepartmentHistory, Convert.ToInt32(Rol.SelectedValue));
+
+                if (String.IsNullOrEmpty(message))
+                {
+                    savePicture();
+
+                    MessageBox.Show(new Form { TopMost = true }, "Empleado registrado correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    setToDefaultFields();
+                }
+                else
+                {
+                    MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
