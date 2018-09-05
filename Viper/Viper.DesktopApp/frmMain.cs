@@ -65,9 +65,6 @@ namespace Viper.DesktopApp
             //Inicializar el Time para mostrar la hora actual
             timer.Start();
 
-            //Cargar los valores predeterminados de la base de datos
-            BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
-
             //Cargar menu de opciones
             CargarMenuVertical(rol);
 

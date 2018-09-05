@@ -1090,7 +1090,8 @@ namespace Viper.DesktopApp
 
             sucKey = sb.ToString();
 
-            site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince + "-" + city + "-" + Colonia.Text.Trim().ToUpper() + "\\" + site.SiteName;
+            //site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince + "-" + city + "-" + Colonia.Text.Trim().ToUpper() + "\\" + site.SiteName;
+            site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince;
             site.ResponsibleName = "DEFAULT";
 
             if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))

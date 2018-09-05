@@ -47,6 +47,8 @@ namespace Viper.DesktopApp
                     Console.WriteLine("MySQL version: " + connection.ServerVersion);
                     connection.Close();
 
+                    BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
+
                     bool isExistsCompany = false;
 
                     isExistsCompany = BusinessLogicLayer.CompanyBLL.procIsCompanyRegistered();
@@ -78,6 +80,7 @@ namespace Viper.DesktopApp
                                 t.Start();
                                 Thread.Sleep(45000);
                                 t.Abort();
+                                BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
                             }
                         }
                     }
