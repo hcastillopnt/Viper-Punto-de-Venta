@@ -1,4 +1,10 @@
-﻿#region using directives
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmRegisterCompany.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
 
 using System;
 using System.Collections.Generic;
@@ -18,9 +24,20 @@ using Viper.BusinessEntities;
 
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE EL DAR DE ALTA NEGOCIOS DENTRO DEL 
+    /// SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE 
+    /// GENERICOS
+    /// </summary>
     public partial class frmRegisterCompany : Form
     {
-        #region Variables and Objects of Class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADAS EN EL FORMULARIO "frmRegisterCompany.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
 
         DateTime f = DateTime.Today;
         ComponentResourceManager resources = new ComponentResourceManager(typeof(frmRegisterCompany));
@@ -39,6 +56,12 @@ namespace Viper.DesktopApp
         public static RadTextBox Regimen_Fiscal;
 
         #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmRegisterCompany.cs"
+         * ---------------------------------------------------------
+         */
 
         #region Constructor
 
@@ -70,7 +93,13 @@ namespace Viper.DesktopApp
 
         #endregion
 
-        #region Events of the controls 
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmRegisterCompany.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
 
         private void Control_Leave(object sender, EventArgs e)
         {
@@ -514,7 +543,13 @@ namespace Viper.DesktopApp
 
         #endregion
 
-        #region Methods of class
+        /*
+         * ---------------------------------------------------------
+         * METODOS UTILIZADOS EN EL FORMULARIO "frmRegisterCompany.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Metodos
 
         private String extractValueOfString(String cadena, String stringInicial, String stringFinal)
         {

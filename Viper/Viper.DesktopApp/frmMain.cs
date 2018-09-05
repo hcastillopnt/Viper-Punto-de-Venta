@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmMain.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,18 +18,40 @@ using System.Runtime.InteropServices;
 using Viper.BusinessEntities;
 using System.IO;
 
+#endregion
+
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE MOSTRAR EL MENU LATERAL DE OPCIONES, CAMBIANDO
+    /// DINAMICAMENTE SEGUN EL ROL DEL USUARIO QUE SE HAYA AUTENTICADO
+    /// EN EL SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE GENERICOS
+    /// </summary>
     public partial class frmMain : Form
     {
-        #region Variables and Objects of Class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADAS EN EL FORMULARIO "frmMain.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
+
         private Button objButton = null;
         string rol;
         string nomcomp;
         string puest;
+
         #endregion
 
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmMain.cs"
+         * ---------------------------------------------------------
+         */
+
         #region Constructor
+
         public frmMain(string rol, string fullname, string puesto)
         {
             //Inicializar variables del constructor
@@ -49,9 +78,17 @@ namespace Viper.DesktopApp
             lblNombre.Text = nomcomp.ToUpper();
 
         }
+
         #endregion
 
-        #region Events of the controls
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmMain.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
+        
         private void timer_Tick(object sender, EventArgs e)
         {
             lblReloj.Text = DateTime.Now.ToLongTimeString();
@@ -188,9 +225,17 @@ namespace Viper.DesktopApp
                     break;
             }
         }
+
         #endregion
 
-        #region Methods of the class
+        /*
+         * ---------------------------------------------------------
+         * METODOS UTILIZADOS EN EL FORMULARIO "frmMain.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Metodos
+
         private void AgregarFormularioEnPanel(object _frmHijo)
         {
             if (this.pnlContenedor.Controls.Count > 0)
@@ -291,6 +336,7 @@ namespace Viper.DesktopApp
                 i++;
             }
         }
+
         #endregion
     }
 }

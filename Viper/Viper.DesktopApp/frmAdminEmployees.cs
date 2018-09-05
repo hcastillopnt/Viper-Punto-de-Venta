@@ -26,6 +26,11 @@ using Viper.BusinessEntities;
 
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE EL DAR DE ALTA EMPLEADOS DENTRO DEL 
+    /// SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE 
+    /// GENERICOS
+    /// </summary>
     public partial class frmAdminEmployees : Form
     {
         /*
@@ -33,6 +38,8 @@ namespace Viper.DesktopApp
          * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
          * ---------------------------------------------------------
          */
+
+        #region Variables, Objetos y Componentes 
 
         ComponentResourceManager resources = new ComponentResourceManager(typeof(frmRegisterCompany));
         FilterInfoCollection DispositivosDeVideo;
@@ -49,11 +56,15 @@ namespace Viper.DesktopApp
         Employee employee = null;
         Address address = null;
 
+        #endregion
+
         /*
          * ---------------------------------------------------------
          * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
          * ---------------------------------------------------------
          */
+
+        #region Constructor
 
         public frmAdminEmployees()
         {
@@ -66,11 +77,15 @@ namespace Viper.DesktopApp
             fillDropDownList();
         }
 
+        #endregion
+
         /*
          * ---------------------------------------------------------
          * EVENTOS UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
          * ---------------------------------------------------------
          */
+
+        #region Eventos
 
         private void frmRegisterEmployee_Load(object sender, EventArgs e)
         {
@@ -451,11 +466,15 @@ namespace Viper.DesktopApp
             }
         }
 
+        #endregion
+
         /*
          * ---------------------------------------------------------
          * METODOS UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
          * ---------------------------------------------------------
          */
+
+        #region Metodos
 
         private void uploadFotografia()
         {
@@ -768,5 +787,7 @@ namespace Viper.DesktopApp
             //this.picEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picEmpleado.ImageLocation = fileNamePath;
         }
+
+        #endregion
     }
 }

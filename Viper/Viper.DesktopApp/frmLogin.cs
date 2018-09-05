@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmLogin.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,17 +17,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+#endregion
+
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE AUTENTICARSE EN EL SISTEMA DE PUNTO DE VENTA
+    /// PARA FARMACIAS CON VENTA DE GENERICOS
+    /// </summary>
     public partial class frmLogin : Form
     {
-        #region Variables and Objects of Class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADAS EN EL FORMULARIO "frmLogin.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
 
         public static DataTable dt = new DataTable();
         frmMain frm = null;
         string msgError = String.Empty;
 
         #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmLogin.cs"
+         * ---------------------------------------------------------
+         */
 
         #region Constructor
         public frmLogin()
@@ -28,7 +54,13 @@ namespace Viper.DesktopApp
         }
         #endregion
 
-        #region Events of the controls
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmLogin.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
 
         public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
         {

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmPanelButtons.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +18,41 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Viper.BusinessEntities;
 
+#endregion
+
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE MOSTRAR EL SUBMENU DE OPCIONES PERTENECIENTES
+    /// AL MENU SELECCIONADO DE LA BARRA LATERAL, LOS CUALES ESTARAN HABILITADOS
+    /// Y/O INHABILITADOS SEGUN EL ROL DEL USUARIO QUE SE HAYA AUTENTICADO EN EL
+    /// SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE GENERICOS
+    /// </summary>
     public partial class frmPanelButtons : Form
     {
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADAS EN EL FORMULARIO "frmPanelButtons.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
+
         private Button objButton = null;
         string menuSeleccionado = String.Empty;
         string companyName = String.Empty;
         int companyID = 0;
         string RoleName = String.Empty;
+
+        #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmPanelButtons.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Constructor
 
         public frmPanelButtons(string menu, string rol)
         {
@@ -34,17 +68,29 @@ namespace Viper.DesktopApp
             uploadSubmenuItemsToPanel();
         }
 
-        private void AgregarFormularioEnPanel(object _frmHijo)
+        #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmPanelButtons.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
+
+        private void frmPanelButtons_Load(object sender, EventArgs e)
         {
-            if (this.pnlContenedor.Controls.Count > 0)
-                this.pnlContenedor.Controls.RemoveAt(0);
-            Form fh = _frmHijo as Form;
-            fh.TopLevel = false;
-            fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;
-            this.pnlContenedor.Controls.Add(fh);
-            this.pnlContenedor.Tag = _frmHijo;
-            fh.Show();
+            //Set default configuration to UI
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            //this.TopMost = true;
+            this.Size = new Size(1366, 768);
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public void Menu_Click(object sender, EventArgs e)
@@ -83,6 +129,29 @@ namespace Viper.DesktopApp
                     AgregarFormularioEnPanel(new frmAdminEmployees());
                     break;
             }
+        }
+
+        #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * METODOS UTILIZADOS EN EL FORMULARIO "frmPanelButtons.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Metodos
+
+        private void AgregarFormularioEnPanel(object _frmHijo)
+        {
+            if (this.pnlContenedor.Controls.Count > 0)
+                this.pnlContenedor.Controls.RemoveAt(0);
+            Form fh = _frmHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.pnlContenedor.Controls.Add(fh);
+            this.pnlContenedor.Tag = _frmHijo;
+            fh.Show();
         }
 
         private void uploadSubmenuItemsToPanel()
@@ -143,19 +212,6 @@ namespace Viper.DesktopApp
             }
         }
 
-        private void frmPanelButtons_Load(object sender, EventArgs e)
-        {
-            //Set default configuration to UI
-            this.AutoSize = true;
-            this.ControlBox = false;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            //this.TopMost = true;
-            this.Size = new Size(1366, 768);
-            this.WindowState = FormWindowState.Maximized;
-        }
+        #endregion
     }
 }

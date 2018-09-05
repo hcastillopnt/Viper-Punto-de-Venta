@@ -1,4 +1,11 @@
-﻿#region using directives
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmRegimenFiscal.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,17 +16,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
+
 #endregion
 
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE MOSTRAR LOS REGIMENES FISCALES EXISTENTES EN LA 
+    /// BASE DE DATOS, PARA PODER SELECCIONAR UNO, Y REGISTRARLO AL MOMENTO
+    /// DE ADQUIRIR UNA LICENCIA Y REGISTRAR LOS DATOS DE LA EMPRESA QUE LA
+    /// ADQUIRIO
+    /// </summary>
     public partial class frmRegimenFiscal : Form
     {
-        #region Variables and Objects of Class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADAS EN EL FORMULARIO "frmRegimenFiscal.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
 
         string cellValue = String.Empty;
 
         #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmRegimenFiscal.cs"
+         * ---------------------------------------------------------
+         */
 
         #region Constructor
 
@@ -30,7 +56,13 @@ namespace Viper.DesktopApp
 
         #endregion
 
-        #region Events of the controls 
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmRegimenFiscal.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos 
 
         private void frmRegimenFiscal_Load(object sender, EventArgs e)
         {
@@ -104,7 +136,13 @@ namespace Viper.DesktopApp
 
         #endregion
 
-        #region Methods of class
+        /*
+         * ---------------------------------------------------------
+         * METODOS UTILIZADOS EN EL FORMULARIO "frmRegimenFiscal.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Metodos
 
         private void uploadGridWithRegimenFiscal()
         {
