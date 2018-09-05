@@ -64,8 +64,6 @@ namespace Viper.DesktopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     try
                     {
                         using (BusinessEntities.ViperDbContext dbCtx = new BusinessEntities.ViperDbContext())
@@ -74,7 +72,7 @@ namespace Viper.DesktopApp
 
                             if (isDataBaseExist)
                             {
-                                MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(new Form { TopMost = true }, ex.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -88,7 +86,7 @@ namespace Viper.DesktopApp
                     }
                     catch(Exception ex1)
                     {
-                        MessageBox.Show(new Form { TopMost = true }, ex1.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(new Form { TopMost = true }, ex1.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

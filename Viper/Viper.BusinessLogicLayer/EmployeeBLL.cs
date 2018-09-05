@@ -60,6 +60,10 @@ namespace Viper.BusinessLogicLayer
                             }
                             else
                             {
+                                int EmployeeID = DataAccessLayer.EmployeeDAL.procGetLastIDToEmployeeRegistered();
+
+                                entityEDH.EmployeeId = EmployeeID;
+
                                 message = DataAccessLayer.EmployeeDAL.procInsertEmployeeHistoryToSystem(entityEDH);
                             }
                         }

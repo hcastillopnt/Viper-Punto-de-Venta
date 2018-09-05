@@ -184,7 +184,8 @@ namespace Viper.DataAccessLayer
         public static string procObtainEmployeeNumberGeneratedAutomatic()
         {
             int inc = 0;
-            string numero = String.Empty;
+            String numero = String.Empty;
+            String EmployeeNumber = String.Empty;
 
             bool isEN = dbCtx.Employees.ToList().Count() > 0;//verificar si hay empleados
 
@@ -195,6 +196,11 @@ namespace Viper.DataAccessLayer
 
                 //usar metodo substring para sacar numeros del codigo para incrementar
                 numero = clave.Substring(clave.Length - 4, 4);
+
+                int numcl = Convert.ToInt32(numero);
+
+                //incrementar
+                inc = numcl + 1;
             }
             else
             {
@@ -202,12 +208,33 @@ namespace Viper.DataAccessLayer
                 inc = 1;
             }
 
-            int numcl = Convert.ToInt32(numero);
+            EmployeeNumber = string.Format("VIPER-EMP-{0:0000}", inc);
 
-            //incrementar
-            inc = numcl + 1;
+            return EmployeeNumber;
+        }
 
-            return string.Format("VIPER-EMP-{0:0000}", inc);
+        #endregion
+
+        #region procGetLastIDToEmployeeRegistered
+
+        /// <summary>
+        /// Metodo para obtener el ultimo ID de los empleados registrados
+        /// </summary>
+        /// <returns>Id</returns>
+        public static int procGetLastIDToEmployeeRegistered()
+        {
+            bool isExistente = false;
+
+            int EmployeeID = 0;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                EmployeeID = dbCtx.Employees.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+            }
+
+            return EmployeeID;
         }
 
         #endregion

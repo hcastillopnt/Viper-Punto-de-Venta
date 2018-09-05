@@ -760,7 +760,7 @@ namespace Viper.DesktopApp
             this.Estado_Civil.SelectedIndex = 0;
             this.RFC.Text = String.Empty;
             this.CURP.Text = String.Empty;
-            this.NSS.Text = String.Empty;
+            this.NSS.Text = "___-__-______";
             this.Tipo_Inmueble.SelectedIndex = 0;
             this.Tipo_Vialidad.SelectedIndex = 0;
             this.Vialidad.Text = String.Empty;
