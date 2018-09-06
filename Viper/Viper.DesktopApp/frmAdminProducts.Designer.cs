@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminProducts));
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelIzq = new Telerik.WinControls.UI.RadPanel();
@@ -141,7 +141,7 @@
             this.gvProducts.MasterTemplate.AllowRowHeaderContextMenu = false;
             this.gvProducts.MasterTemplate.AllowRowResize = false;
             this.gvProducts.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.gvProducts.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gvProducts.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.gvProducts.Name = "gvProducts";
             this.gvProducts.ReadOnly = true;
             this.gvProducts.Size = new System.Drawing.Size(944, 582);
@@ -170,8 +170,9 @@
             // Código_de_barras
             // 
             this.Código_de_barras.AutoSize = false;
+            this.Código_de_barras.BackColor = System.Drawing.SystemColors.Info;
             this.Código_de_barras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Código_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Código_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Código_de_barras.Location = new System.Drawing.Point(91, 3);
             this.Código_de_barras.Name = "Código_de_barras";
             this.Código_de_barras.NullText = "CÓDIGO DE BARRAS";
