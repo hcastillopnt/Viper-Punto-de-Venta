@@ -22,6 +22,19 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
+        #region procUploadPermissionsToMenuByBasic
+
+        /// <summary>
+        /// Metodo para cargar los menus disponibles para un basico
+        /// </summary>
+        /// <returns>void</returns>
+        public static void procUploadPermissionsToMenuByBasic()
+        {
+            DataAccessLayer.MenuDAL.procUploadPermissionsToMenuByBasic();
+        }
+
+        #endregion
+
         #region procUploadMenuByRolName
 
         /// <summary>

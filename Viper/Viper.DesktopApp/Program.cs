@@ -48,6 +48,7 @@ namespace Viper.DesktopApp
                     connection.Close();
 
                     BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
+                    BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByBasic();
 
                     bool isExistsCompany = false;
 

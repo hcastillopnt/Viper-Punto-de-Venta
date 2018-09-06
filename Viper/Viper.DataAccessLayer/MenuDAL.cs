@@ -47,6 +47,35 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region procUploadPermissionsToMenuByBasic
+
+        /// <summary>
+        /// Metodo para cargar los menus disponibles para un basico
+        /// </summary>
+        /// <returns>void</returns>
+        public static void procUploadPermissionsToMenuByBasic()
+        {
+            bool isExistente = false;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                var result = dbCtx.Permissions.ToList().Count > 0;
+
+                if (!result)
+                {
+                    dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) VALUES(2, 1);");
+                    dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) VALUES(2, 3);");
+                    dbCtx.Database.ExecuteSqlCommand("INSERT INTO Permission (RoleId, ModuleId) VALUES(2, 19);");
+
+                    dbCtx.SaveChanges();
+                }
+            }
+        }
+
+        #endregion
+
         #region procUploadMenuByRolName
 
         /// <summary>
