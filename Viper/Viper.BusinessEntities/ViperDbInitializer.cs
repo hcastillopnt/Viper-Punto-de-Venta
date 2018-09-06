@@ -2562,7 +2562,7 @@ namespace Viper.BusinessEntities
             //Default values of Role Table
             defaultRoles.Add(new Role() { Name = "ADMINISTRADOR", Description = "Allow all, among other things to control users, products, managae credentials, ..." });
             defaultRoles.Add(new Role() { Name = "BASICO", Description = "The employee can make sales, consult reports, make cash cuts" });
-            defaultRoles.Add(new Role() { Name = "DOCTOR", Description = "The employee can access module Medical" });
+            //defaultRoles.Add(new Role() { Name = "DOCTOR", Description = "The employee can access module Medical" });
 
             //Default values of Shift Table
             defaultShifts.Add(new Shift() { Name = "MATUTINO", StartTime = Convert.ToDateTime("08:00:00"), EndTime = Convert.ToDateTime("15:00:00") });
@@ -2582,8 +2582,8 @@ namespace Viper.BusinessEntities
             defaultJobsTitle.Add(new JobTitle() { Name = "ADMINISTRADOR DE FINANZAS", DepartmentId = 3 });
             defaultJobsTitle.Add(new JobTitle() { Name = "AGENTE DE COMPRAS", DepartmentId = 4 });
             defaultJobsTitle.Add(new JobTitle() { Name = "VENDEDOR", DepartmentId = 2 });
-            defaultJobsTitle.Add(new JobTitle() { Name = "DOCTOR", DepartmentId = 2 });
-            defaultJobsTitle.Add(new JobTitle() { Name = "ENFERMERO/A", DepartmentId = 2 });
+            //defaultJobsTitle.Add(new JobTitle() { Name = "DOCTOR", DepartmentId = 2 });
+            //defaultJobsTitle.Add(new JobTitle() { Name = "ENFERMERO/A", DepartmentId = 2 });
 
             //<--Migration ViperDbContext_v2-->
             //Default values of RegimenFiscal Table
