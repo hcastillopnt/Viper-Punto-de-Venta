@@ -9,7 +9,7 @@ namespace Viper.BusinessLogicLayer
 {
     public class MenuBLL
     {
-        #region procUploadMenuToAdministrator
+        #region procUploadPermissionsToMenuByAdministrator
 
         /// <summary>
         /// Metodo para cargar los menus disponibles para un administrador

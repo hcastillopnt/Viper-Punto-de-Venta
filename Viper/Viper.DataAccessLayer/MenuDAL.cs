@@ -20,7 +20,7 @@ namespace Viper.DataAccessLayer
         /// </summary>
         private static ViperDbContext dbCtx = new ViperDbContext();
 
-        #region procUploadMenuToAdministrator
+        #region procUploadPermissionsToMenuByAdministrator
 
         /// <summary>
         /// Metodo para cargar los menus disponibles para un administrador
