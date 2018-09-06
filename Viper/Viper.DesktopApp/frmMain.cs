@@ -190,7 +190,7 @@ namespace Viper.DesktopApp
                     break;
 
                 case "btnProductos":
-                    //AgregarFormularioEnPanel(new frmAdminProducts());
+                    AgregarFormularioEnPanel(new frmAdminProducts());
                     break;
 
                 case "btnInventario":

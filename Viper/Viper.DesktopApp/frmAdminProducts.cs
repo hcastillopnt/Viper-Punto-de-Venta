@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmAdminProducts.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,48 +17,71 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+#endregion
+
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE VISUALIZAR TODOS LOS PRODUCTOS REGISTRADOS EN EL 
+    /// SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE GENERICOS
+    /// </summary>
     public partial class frmAdminProducts : Form
     {
-        #region Variables and Objects of Class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADOS EN EL FORMULARIO "frmAdminProducts.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
+
         RadButton objButton = null;
+
         #endregion
 
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmAdminProducts.cs"
+         * ---------------------------------------------------------
+         */
+
         #region Constructor
+
         public frmAdminProducts()
         {
             InitializeComponent();
         }
+
         #endregion
 
-        #region Events of the controls
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmAdminProducts.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
+
         public void Button_Click(Object sender, EventArgs args)
         {
             objButton = (RadButton)sender;
 
-            switch(objButton.Name)
+            switch (objButton.Name)
             {
                 case "btnAgregar":
-                    frmRegisterProduct form = new frmRegisterProduct();
-                    form.ShowDialog();
-                    form.TopMost = true;
                     break;
+
                 case "btnBuscar":
-                    gvProducts.DataSource = null;
-                    gvProducts.DataSource = BusinessLogicLayer.AccesoBDBLL.getProduct(Código_de_barras.Text);
                     break;
+
                 case "btnRecargar":
-                    gvProducts.DataSource = null;
-                    gvProducts.DataSource = BusinessLogicLayer.AccesoBDBLL.getProducts();
                     break;
+
                 case "btnEliminar":
                     break;
+
                 case "btnEditar":
                     break;
-
-
-
             }
         }
 
@@ -62,20 +93,16 @@ namespace Viper.DesktopApp
             this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            //this.TopMost = true;
+            this.KeyPreview = true;
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
-            //this.Icon = new Icon("Resources/application_icon.ico");
 
             this.btnAgregar.KeyPress += Button_Click;
             this.btnEditar.KeyPress += Button_Click;
             this.btnRecargar.KeyPress += Button_Click;
             this.btnEliminar.KeyPress += Button_Click;
             this.btnBuscar.KeyPress += Button_Click;
-            gvProducts.DataSource = null;
-            gvProducts.DataSource= BusinessLogicLayer.AccesoBDBLL.getProducts();
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();
@@ -93,10 +120,8 @@ namespace Viper.DesktopApp
             toolTip1.SetToolTip(this.btnBuscar, "Para buscar los datos de un producto, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnEliminar, "Para eliminar los datos de un producto, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnRecargar, "Para racargar los datos, favor de dar clic en este boton");
-
-            // Set up the ToolTip text for the TextBox and ComboBox Control.
-            toolTip1.SetToolTip(this.Código_de_barras, UtilMessages.BUSCAR_CODIGO_DE_BARRAS);
         }
+
         #endregion
     }
 }

@@ -98,6 +98,12 @@
     <Compile Include="frmAdminEmployees.Designer.cs">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdminProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminProducts.Designer.cs">
+      <DependentUpon>frmAdminProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdminEmployees.resx">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminProducts.resx">
+      <DependentUpon>frmAdminProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
