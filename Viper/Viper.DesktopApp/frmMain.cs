@@ -160,7 +160,7 @@ namespace Viper.DesktopApp
                 //Si el usuario logueado es un empleado, mostramos la sucursal en la que se encuentra registrado
                 cboSucursales.DataSource = BusinessLogicLayer.SiteBLL.procFindSiteBySiteName(siteName);
                 cboSucursales.ValueMember = "Id";
-                cboSucursales.DisplayMember = "Site";
+                cboSucursales.DisplayMember = "UniquePhysicalID";
 
                 cboSucursales.SelectedIndex = 0;
 

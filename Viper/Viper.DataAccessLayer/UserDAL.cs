@@ -98,18 +98,19 @@ namespace Viper.DataAccessLayer
                 {
                     var Role = result1.FirstOrDefault().Name;
 
-                    var CompanyName = dbCtx.Companies    // your starting point - table in the "from" statement
-                                   .Join(dbCtx.Users, // the source table of the inner join
-                                      c => c.UserId,        // Select the primary key (the first part of the "on" clause in an sql "join" statement)
-                                      u => u.Id,   // Select the foreign key (the second part of the "on" clause)
-                                      (c, u) => new { c.CompanyName, u.LoginID, u.PasswordEncrypted }) // selection
-                                   .Where(x => x.LoginID == usr && x.PasswordEncrypted == pwd)
-                                   .FirstOrDefault().CompanyName;
-
                     switch (Role)
                     {
                         //DUEÑO DE NEGOCIO CON PRIVILEGIOS DE ADMINISTRADOR DEL SISTEMA
                         case "ADMINISTRADOR":
+
+                            //Recuperar el nombre de la compañia donde se registro el negocio
+                            var CompanyName_Admin = dbCtx.Companies    // your starting point - table in the "from" statement
+                                   .Join(dbCtx.Users, // the source table of the inner join
+                                      c => c.UserId,        // Select the primary key (the first part of the "on" clause in an sql "join" statement)
+                                      u => u.Id,   // Select the foreign key (the second part of the "on" clause)
+                                      (c, u) => new { c.CompanyName, u.LoginID, u.PasswordEncrypted }) // selection
+                                   .Where(a => a.LoginID == usr && a.PasswordEncrypted == pwd)
+                                   .FirstOrDefault().CompanyName;
 
                             //Guardar los datos recuperados en una fila del DataTable
                             //Crear una fila nueva
@@ -123,7 +124,7 @@ namespace Viper.DataAccessLayer
                             rowAdmin["StartTime"] = Convert.ToDateTime("07:00:00");
                             rowAdmin["EndTime"] = Convert.ToDateTime("23:00:00");
                             rowAdmin["Subsidiary"] = "N/A";
-                            rowAdmin["CompanyName"] = CompanyName;
+                            rowAdmin["CompanyName"] = CompanyName_Admin;
                             rowAdmin["Role"] = "ADMINISTRADOR";
                             rowAdmin["IsWelcome"] = true;
                             rowAdmin["AccessFailed"] = 0;
@@ -138,8 +139,23 @@ namespace Viper.DataAccessLayer
 
                             if (result2.Count > 0)
                             {
+                                //Recuperar el nombre de la compañia donde se registro el empleado
+                                var CompanyName_Basic = (from edh in dbCtx.EmployeesDepartmentHistory
+                                                         join s in dbCtx.Sites on edh.SiteId equals s.Id
+                                                         join c in dbCtx.Companies on s.CompanyId equals c.Id
+                                                         join e in dbCtx.Employees on edh.EmployeeId equals e.Id
+                                                         join u in dbCtx.Users on e.UserId equals u.Id
+                                                         where u.LoginID == usr && u.PasswordEncrypted == pwd
+                                                         select new
+                                                         {
+                                                             c.CompanyName,
+                                                             u.LoginID,
+                                                             u.PasswordEncrypted
+                                                         }).FirstOrDefault().CompanyName;
+
                                 result2.ToList().ForEach(x =>
                                 {
+
                                     //Guardar los datos recuperados en una fila del DataTable
                                     //Crear una fila nueva
                                     var rowBasic = dt.NewRow();
@@ -152,7 +168,7 @@ namespace Viper.DataAccessLayer
                                     rowBasic["StartTime"] = x.StartTime;
                                     rowBasic["EndTime"] = x.EndTime;
                                     rowBasic["Subsidiary"] = x.Subsidiary;
-                                    rowBasic["CompanyName"] = CompanyName;
+                                    rowBasic["CompanyName"] = CompanyName_Basic;
                                     rowBasic["Role"] = x.Role;
                                     rowBasic["IsWelcome"] = x.IsWelcome;
                                     rowBasic["AccessFailed"] = x.AccessFailedCount;
