@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminProducts));
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelIzq = new Telerik.WinControls.UI.RadPanel();
             this.panelDer = new Telerik.WinControls.UI.RadPanel();
             this.tlpCentro = new System.Windows.Forms.TableLayoutPanel();
-            this.gvProducts = new Telerik.WinControls.UI.RadGridView();
             this.tlp02 = new System.Windows.Forms.TableLayoutPanel();
             this.Código_de_barras = new Telerik.WinControls.UI.RadTextBox();
             this.btnBuscar = new Telerik.WinControls.UI.RadButton();
@@ -45,12 +44,12 @@
             this.btnRecargar = new Telerik.WinControls.UI.RadButton();
             this.btnEditar = new Telerik.WinControls.UI.RadButton();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.PanelContainer = new Telerik.WinControls.UI.RadScrollablePanelContainer();
+            this.gvProducts = new Telerik.WinControls.UI.RadGridView();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).BeginInit();
             this.tlpCentro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProducts.MasterTemplate)).BeginInit();
             this.tlp02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Código_de_barras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -60,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProducts.MasterTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -119,35 +120,6 @@
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77F));
             this.tlpCentro.Size = new System.Drawing.Size(950, 762);
             this.tlpCentro.TabIndex = 0;
-            // 
-            // gvProducts
-            // 
-            this.gvProducts.AutoScroll = true;
-            this.gvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvProducts.Location = new System.Drawing.Point(3, 177);
-            // 
-            // 
-            // 
-            this.gvProducts.MasterTemplate.AllowAddNewRow = false;
-            this.gvProducts.MasterTemplate.AllowCellContextMenu = false;
-            this.gvProducts.MasterTemplate.AllowColumnChooser = false;
-            this.gvProducts.MasterTemplate.AllowColumnHeaderContextMenu = false;
-            this.gvProducts.MasterTemplate.AllowColumnReorder = false;
-            this.gvProducts.MasterTemplate.AllowColumnResize = false;
-            this.gvProducts.MasterTemplate.AllowDeleteRow = false;
-            this.gvProducts.MasterTemplate.AllowDragToGroup = false;
-            this.gvProducts.MasterTemplate.AllowEditRow = false;
-            this.gvProducts.MasterTemplate.AllowRowHeaderContextMenu = false;
-            this.gvProducts.MasterTemplate.AllowRowResize = false;
-            this.gvProducts.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.gvProducts.MasterTemplate.ViewDefinition = tableViewDefinition2;
-            this.gvProducts.Name = "gvProducts";
-            this.gvProducts.ReadOnly = true;
-            this.gvProducts.Size = new System.Drawing.Size(944, 582);
-            this.gvProducts.TabIndex = 3;
-            this.gvProducts.TabStop = false;
-            this.gvProducts.ThemeName = "VisualStudio2012Light";
             // 
             // tlp02
             // 
@@ -276,6 +248,39 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.ThemeName = "VisualStudio2012Light";
             // 
+            // PanelContainer
+            // 
+            this.PanelContainer.Size = new System.Drawing.Size(248, 123);
+            // 
+            // gvProducts
+            // 
+            this.gvProducts.AutoScroll = true;
+            this.gvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvProducts.Location = new System.Drawing.Point(3, 177);
+            // 
+            // 
+            // 
+            this.gvProducts.MasterTemplate.AllowAddNewRow = false;
+            this.gvProducts.MasterTemplate.AllowCellContextMenu = false;
+            this.gvProducts.MasterTemplate.AllowColumnChooser = false;
+            this.gvProducts.MasterTemplate.AllowColumnHeaderContextMenu = false;
+            this.gvProducts.MasterTemplate.AllowColumnReorder = false;
+            this.gvProducts.MasterTemplate.AllowColumnResize = false;
+            this.gvProducts.MasterTemplate.AllowDeleteRow = false;
+            this.gvProducts.MasterTemplate.AllowDragToGroup = false;
+            this.gvProducts.MasterTemplate.AllowEditRow = false;
+            this.gvProducts.MasterTemplate.AllowRowHeaderContextMenu = false;
+            this.gvProducts.MasterTemplate.AllowRowResize = false;
+            this.gvProducts.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.gvProducts.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gvProducts.Name = "gvProducts";
+            this.gvProducts.ReadOnly = true;
+            this.gvProducts.Size = new System.Drawing.Size(944, 582);
+            this.gvProducts.TabIndex = 3;
+            this.gvProducts.TabStop = false;
+            this.gvProducts.ThemeName = "VisualStudio2012Light";
+            // 
             // frmAdminProducts
             // 
             this.AutoSize = true;
@@ -295,8 +300,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
             this.tlpCentro.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gvProducts.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).EndInit();
             this.tlp02.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Código_de_barras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
@@ -306,6 +309,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProducts.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +335,6 @@
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.PictureBox picArticulo;
         private Telerik.WinControls.UI.RadGridView gvProducts;
+        private Telerik.WinControls.UI.RadScrollablePanelContainer PanelContainer;
     }
 }
