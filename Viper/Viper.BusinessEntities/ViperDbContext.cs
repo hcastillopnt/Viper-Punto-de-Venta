@@ -40,6 +40,13 @@ namespace Viper.BusinessEntities
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ProductCategory> ProductsCategory { get; set; }
+        public DbSet<ProductSubCategory> ProductsSubCategory { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductInventory> ProductsInventory { get; set; }
+        public DbSet<ProductCostHistory> ProductsCostHistory { get; set; }
+        public DbSet<ProductListPriceHistory> ProductsListPriceHistory { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

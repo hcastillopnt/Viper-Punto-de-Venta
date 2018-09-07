@@ -59,5 +59,6 @@ namespace Viper.BusinessEntities
         public virtual ICollection<Company> Companies { get; set; }
         public virtual ICollection<Site> Sites { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Supplier> Suppliers { get; set; }
     }
 }

@@ -10,6 +10,8 @@ namespace Viper.BusinessEntities
 {
     public class ViperDbInitializer : DropCreateDatabaseIfModelChanges<ViperDbContext>
     {
+        #region Lists to upload data
+
         List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
         List<StateProvince> defaultStatesProvince = new List<StateProvince>();
         List<City> defaultCities = new List<City>();
@@ -24,9 +26,12 @@ namespace Viper.BusinessEntities
         List<RegimenFiscal> defaultRegimenes = new List<RegimenFiscal>();
         List<Module> defaultModules = new List<Module>();
 
+        #endregion
+
         public ViperDbInitializer()
         {
-            #region Carga de informacion a la BD
+            #region Upload data information to DataBase
+
             //<--Migration initial-->
             //Default values of CountryRegion Table
             defaultCountriesRegion.Add(new CountryRegion() { Description = "MEXICO", FIPS104 = "MX", ISO2 = "MX", ISO3 = "MEX", ISON = "484", Internet = "MX", Capital = "MEXICO", MapReference = "NORTH AMERICA", NationalitySingular = "MEXICAN", NationalityPlural = "MEXICANS", Currency = "MEXICAN PESO", CurrencyCode = "MXN", Population = 101879171, Title = "MEXICO", Comment = "" });
@@ -5607,6 +5612,8 @@ namespace Viper.BusinessEntities
         {
             try
             {
+                #region SaveChanges with DbContext
+
                 context.CountriesRegion.AddRange(defaultCountriesRegion);
                 context.SaveChanges();
 
@@ -5645,6 +5652,8 @@ namespace Viper.BusinessEntities
 
                 context.Modules.AddRange(defaultModules);
                 context.SaveChanges();
+
+                #endregion
             }
             catch (DbEntityValidationException ex)
             {
