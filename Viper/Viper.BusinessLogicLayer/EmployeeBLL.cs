@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,25 @@ namespace Viper.BusinessLogicLayer
             }
 
             return message;
+        }
+
+        #endregion
+
+        #region procGetEmployeesToDataTable
+
+        /// <summary>
+        /// Metodo para obtener todos los empleados registrados en el Sistema de Punto de Venta para Farmacias
+        /// con Venta de Genericos
+        /// </summary>
+        /// <param name="CompanyID">Clave Empresa</param>
+        /// <returns>DataTable</returns>
+        public static DataTable procGetEmployeesToDataTable(int CompanyID)
+        {
+            DataTable dataTable = new DataTable();
+
+            dataTable = DataAccessLayer.EmployeeDAL.procGetEmployeesToDataTable(CompanyID);
+
+            return dataTable;
         }
 
         #endregion

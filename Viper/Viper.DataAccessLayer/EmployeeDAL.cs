@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
@@ -102,6 +103,88 @@ namespace Viper.DataAccessLayer
             }
 
             return message;
+        }
+
+        #endregion
+
+        #region procGetEmployeesToDataTable
+
+        /// <summary>
+        /// Metodo para obtener todos los empleados registrados en el Sistema de Punto de Venta para Farmacias
+        /// con Venta de Genericos
+        /// </summary>
+        /// <param name="CompanyID">Clave Empresa</param>
+        /// <returns>DataTable</returns>
+        public static DataTable procGetEmployeesToDataTable(int CompanyID)
+        {
+            bool isExistente = false;
+
+            DataTable dataTable = new DataTable();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                var result = (from e in dbCtx.Employees
+                              join edh in dbCtx.EmployeesDepartmentHistory on e.Id equals edh.EmployeeId
+                              join u in dbCtx.Users on e.UserId equals u.Id
+                              join s in dbCtx.Sites on edh.SiteId equals s.Id
+                              join c in dbCtx.Companies on s.CompanyId equals c.Id
+                              join j in dbCtx.JobsTitle on edh.JobTitleId equals j.Id
+                              join d in dbCtx.Departments on j.DepartmentId equals d.Id
+                              where c.Id == CompanyID
+                              select new
+                              {
+                                  EmployeeNumber = e.EmployeeNumber,
+                                  Fullname = e.FullName,
+                                  PhoneNumber = e.PhoneNumber,
+                                  CellPhone = e.CellphoneNumber,
+                                  IS = e.IS,
+                                  LoginID = u.LoginID,
+                                  Password = u.PasswordEncrypted,
+                                  UniquePhysicalID = s.UniquePhysicalID,
+                                  CompanyKey = c.CompanyKey,
+                                  JobTitle = j.Name,
+                                  Department = d.Name
+                              })
+                              .OrderBy(x => x.Fullname)
+                              .ToList();
+
+                dataTable.Columns.AddRange(new DataColumn[]{
+                new DataColumn("NUMERO_EMPLEADO", typeof(string)),
+                new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
+                new DataColumn("TELEFONO", typeof(string)),
+                new DataColumn("CELULAR", typeof(string)),
+                new DataColumn("IS", typeof(string)),
+                new DataColumn("PUESTO_TRABAJO", typeof(string)),
+                new DataColumn("DEPARTAMENTO", typeof(string)),
+                new DataColumn("NOMBRE_USUARIO", typeof(string)),
+                new DataColumn("CONTRASEÑA", typeof(string)),
+                new DataColumn("CLAVE_SUCURSAL", typeof(string)),
+                new DataColumn("CLAVE_EMPRESA", typeof(string))
+            });
+
+                result.ToList().ForEach(x =>
+                {
+                    var row = dataTable.NewRow();
+
+                    row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
+                    row["NOMBRE_EMPLEADO"] = x.Fullname;
+                    row["TELEFONO"] = x.PhoneNumber;
+                    row["CELULAR"] = x.CellPhone;
+                    row["IS"] = x.IS;
+                    row["PUESTO_TRABAJO"] = x.JobTitle;
+                    row["DEPARTAMENTO"] = x.Department;
+                    row["NOMBRE_USUARIO"] = x.LoginID;
+                    row["CONTRASEÑA"] = "****************";
+                    row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
+                    row["CLAVE_EMPRESA"] = x.CompanyKey;
+
+                    dataTable.Rows.Add(row);
+                });
+            }
+
+            return dataTable;
         }
 
         #endregion
