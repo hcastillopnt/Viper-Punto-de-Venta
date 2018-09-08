@@ -145,6 +145,31 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region procIsCompanyRegisteredToDataBase
+
+        /// <summary>
+        /// Metodo para validar si una empresa ya ha sido registrada en la base de datos
+        /// </summary>
+        /// <param name="companyName">Nombre de la Empresa</param>
+        /// <param name="RFC">RFC registrado ante el SAT</param>
+        /// <returns>Boolean</returns>
+        public static bool procIsCompanyRegisteredToDataBase(string companyName, string RFC)
+        {
+            bool isExistente = false;
+            bool isCompaniesRegistered = false;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                isCompaniesRegistered = dbCtx.Companies.Where(x => x.CompanyName == companyName && x.RFC == RFC).ToList().Count > 0;
+            }
+
+            return isCompaniesRegistered;
+        }
+
+        #endregion
+
         #region procIsCompanyRegistered
 
         /// <summary>
