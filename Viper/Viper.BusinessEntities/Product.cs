@@ -84,6 +84,12 @@ namespace Viper.BusinessEntities
         public int SupplierId { get; set; }
         public Supplier Supplier { get; set; }
 
+        [ForeignKey("Site")]
+        [Required(ErrorMessage = "The field SiteId is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field SiteId must be a number.")]
+        public int SiteId { get; set; }
+        public Site Site { get; set; }
+
         public virtual ICollection<ProductInventory> ProductsInventory { get; }
     }
 }
