@@ -106,6 +106,54 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region procIsRFCExists
+
+        /// <summary>
+        /// Metodo para validar si un RFC ya ha sido registrado anteriormente
+        /// </summary>
+        /// <param name="RFC">RFC registrado ante el SAT</param>
+        /// <returns>Boolean</returns>
+        public static bool procIsRFCExists(string RFC)
+        {
+            bool isExistente = false;
+            bool isRFCExistente = false;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                isRFCExistente = dbCtx.Employees.Where(x => x.RFC == RFC).ToList().Count > 0;
+            }
+
+            return isRFCExistente;
+        }
+
+        #endregion
+
+        #region procIsCURPExists
+
+        /// <summary>
+        /// Metodo para validar si un CURP ya ha sido registrado anteriormente
+        /// </summary>
+        /// <param name="CURP">CURP del empleado registrado</param>
+        /// <returns>Boolean</returns>
+        public static bool procIsCURPExists(string CURP)
+        {
+            bool isExistente = false;
+            bool isCURPExistente = false;
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                isCURPExistente = dbCtx.Employees.Where(x => x.CURP == CURP).ToList().Count > 0;
+            }
+
+            return isCURPExistente;
+        }
+
+        #endregion
+
         #region procInsertEmployeeHistoryToSystem
 
         /// <summary>
