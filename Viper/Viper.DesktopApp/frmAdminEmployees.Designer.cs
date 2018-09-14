@@ -176,7 +176,7 @@
             this.Codigo_Empleado.AutoSize = false;
             this.Codigo_Empleado.BackColor = System.Drawing.SystemColors.Info;
             this.Codigo_Empleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Codigo_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codigo_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Codigo_Empleado.Location = new System.Drawing.Point(3, 3);
             this.Codigo_Empleado.Name = "Codigo_Empleado";
             this.Codigo_Empleado.NullText = "CODIGO DE EMPLEADO";

@@ -38,14 +38,13 @@
             this.tlp02 = new System.Windows.Forms.TableLayoutPanel();
             this.Código_de_barras = new Telerik.WinControls.UI.RadTextBox();
             this.btnBuscar = new Telerik.WinControls.UI.RadButton();
-            this.picArticulo = new System.Windows.Forms.PictureBox();
             this.tlp01 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEliminar = new Telerik.WinControls.UI.RadButton();
             this.btnAgregar = new Telerik.WinControls.UI.RadButton();
             this.btnRecargar = new Telerik.WinControls.UI.RadButton();
+            this.btnEditar = new Telerik.WinControls.UI.RadButton();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.PanelContainer = new Telerik.WinControls.UI.RadScrollablePanelContainer();
-            this.btnEliminar = new Telerik.WinControls.UI.RadButton();
-            this.btnEditar = new Telerik.WinControls.UI.RadButton();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelIzq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).BeginInit();
@@ -55,11 +54,10 @@
             this.tlp02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Código_de_barras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).BeginInit();
             this.tlp01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,9 +140,15 @@
             this.gvProducts.MasterTemplate.AllowRowHeaderContextMenu = false;
             this.gvProducts.MasterTemplate.AllowRowResize = false;
             this.gvProducts.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.gvProducts.MasterTemplate.EnableGrouping = false;
+            this.gvProducts.MasterTemplate.EnableSorting = false;
+            this.gvProducts.MasterTemplate.ShowFilteringRow = false;
             this.gvProducts.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gvProducts.Name = "gvProducts";
             this.gvProducts.ReadOnly = true;
+            this.gvProducts.ShowGroupPanel = false;
+            this.gvProducts.ShowGroupPanelScrollbars = false;
+            this.gvProducts.ShowItemToolTips = false;
             this.gvProducts.Size = new System.Drawing.Size(944, 582);
             this.gvProducts.TabIndex = 3;
             this.gvProducts.TabStop = false;
@@ -152,14 +156,12 @@
             // 
             // tlp02
             // 
-            this.tlp02.ColumnCount = 3;
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.398497F));
+            this.tlp02.ColumnCount = 2;
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.41354F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.06266F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp02.Controls.Add(this.Código_de_barras, 1, 0);
-            this.tlp02.Controls.Add(this.btnBuscar, 2, 0);
-            this.tlp02.Controls.Add(this.picArticulo, 0, 0);
+            this.tlp02.Controls.Add(this.Código_de_barras, 0, 0);
+            this.tlp02.Controls.Add(this.btnBuscar, 1, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp02.Location = new System.Drawing.Point(3, 109);
             this.tlp02.Name = "tlp02";
@@ -173,11 +175,11 @@
             this.Código_de_barras.AutoSize = false;
             this.Código_de_barras.BackColor = System.Drawing.SystemColors.Info;
             this.Código_de_barras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Código_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Código_de_barras.Location = new System.Drawing.Point(91, 3);
+            this.Código_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Código_de_barras.Location = new System.Drawing.Point(3, 3);
             this.Código_de_barras.Name = "Código_de_barras";
             this.Código_de_barras.NullText = "CÓDIGO DE BARRAS";
-            this.Código_de_barras.Size = new System.Drawing.Size(612, 50);
+            this.Código_de_barras.Size = new System.Drawing.Size(676, 50);
             this.Código_de_barras.TabIndex = 1;
             this.Código_de_barras.ThemeName = "VisualStudio2012Light";
             // 
@@ -186,23 +188,13 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(709, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(685, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(232, 56);
+            this.btnBuscar.Size = new System.Drawing.Size(256, 56);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.ThemeName = "VisualStudio2012Light";
-            // 
-            // picArticulo
-            // 
-            this.picArticulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picArticulo.Location = new System.Drawing.Point(3, 3);
-            this.picArticulo.Name = "picArticulo";
-            this.picArticulo.Size = new System.Drawing.Size(82, 56);
-            this.picArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picArticulo.TabIndex = 3;
-            this.picArticulo.TabStop = false;
             // 
             // tlp01
             // 
@@ -223,6 +215,19 @@
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp01.Size = new System.Drawing.Size(944, 62);
             this.tlp01.TabIndex = 2;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(711, 3);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(230, 56);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.ThemeName = "VisualStudio2012Light";
             // 
             // btnAgregar
             // 
@@ -251,26 +256,6 @@
             this.btnRecargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRecargar.ThemeName = "VisualStudio2012Light";
             // 
-            // PanelContainer
-            // 
-            this.PanelContainer.AutoScroll = false;
-            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.None;
-            this.PanelContainer.Location = new System.Drawing.Point(0, 0);
-            this.PanelContainer.Size = new System.Drawing.Size(248, 123);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(711, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(230, 56);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.ThemeName = "VisualStudio2012Light";
-            // 
             // btnEditar
             // 
             this.btnEditar.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -283,6 +268,13 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.ThemeName = "VisualStudio2012Light";
+            // 
+            // PanelContainer
+            // 
+            this.PanelContainer.AutoScroll = false;
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.None;
+            this.PanelContainer.Location = new System.Drawing.Point(0, 0);
+            this.PanelContainer.Size = new System.Drawing.Size(248, 123);
             // 
             // frmAdminProducts
             // 
@@ -308,11 +300,10 @@
             this.tlp02.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Código_de_barras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
             this.tlp01.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -334,7 +325,6 @@
         private Telerik.WinControls.UI.RadPanel panelIzq;
         private Telerik.WinControls.UI.RadPanel panelDer;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
-        private System.Windows.Forms.PictureBox picArticulo;
         private Telerik.WinControls.UI.RadGridView gvProducts;
         private Telerik.WinControls.UI.RadScrollablePanelContainer PanelContainer;
         private Telerik.WinControls.UI.RadButton btnEliminar;
