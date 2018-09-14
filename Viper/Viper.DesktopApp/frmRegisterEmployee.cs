@@ -91,6 +91,7 @@ namespace Viper.DesktopApp
         {
             //Set default configuration to UI
             this.AcceptButton = btnAceptar;
+            this.CancelButton = btnCancelar;
             this.AutoSize = true;
             this.ControlBox = false;
             this.FormBorderStyle = FormBorderStyle.None;
@@ -99,7 +100,6 @@ namespace Viper.DesktopApp
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.KeyPreview = true;
             this.Size = new Size(1366, 768);
-            this.WindowState = FormWindowState.Maximized;
 
             //Establecer el foco en el primer campo
             //this.ActiveControl = Nombre;
@@ -738,6 +738,8 @@ namespace Viper.DesktopApp
                     MessageBox.Show(new Form { TopMost = true }, "Empleado registrado correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     setToDefaultFields();
+
+                    this.Hide();
                 }
                 else
                 {

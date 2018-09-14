@@ -1616,6 +1616,7 @@
             this.btnEliminarIE.Text = "Eliminar";
             this.btnEliminarIE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarIE.ThemeName = "VisualStudio2012Light";
+            this.btnEliminarIE.Click += new System.EventHandler(this.Button_Click);
             this.btnEliminarIE.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpBotones
@@ -1676,7 +1677,7 @@
             this.panelIzq.TabIndex = 0;
             this.panelIzq.TabStop = false;
             // 
-            // frmAdminEmployees
+            // frmRegisterEmployee
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1366, 768);
@@ -1686,10 +1687,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmAdminEmployees";
+            this.Name = "frmRegisterEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmRegisterEmployee_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();

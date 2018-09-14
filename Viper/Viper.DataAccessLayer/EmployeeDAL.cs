@@ -137,11 +137,7 @@ namespace Viper.DataAccessLayer
                               {
                                   EmployeeNumber = e.EmployeeNumber,
                                   Fullname = e.FullName,
-                                  PhoneNumber = e.PhoneNumber,
-                                  CellPhone = e.CellphoneNumber,
-                                  IS = e.IS,
                                   LoginID = u.LoginID,
-                                  Password = u.PasswordEncrypted,
                                   UniquePhysicalID = s.UniquePhysicalID,
                                   CompanyKey = c.CompanyKey,
                                   JobTitle = j.Name,
@@ -153,15 +149,11 @@ namespace Viper.DataAccessLayer
                 dataTable.Columns.AddRange(new DataColumn[]{
                 new DataColumn("NUMERO_EMPLEADO", typeof(string)),
                 new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
-                new DataColumn("TELEFONO", typeof(string)),
-                new DataColumn("CELULAR", typeof(string)),
-                new DataColumn("IS", typeof(string)),
+                new DataColumn("NOMBRE_USUARIO", typeof(string)),
+                new DataColumn("CLAVE_SUCURSAL", typeof(string)),
+                new DataColumn("CLAVE_EMPRESA", typeof(string)),
                 new DataColumn("PUESTO_TRABAJO", typeof(string)),
                 new DataColumn("DEPARTAMENTO", typeof(string)),
-                new DataColumn("NOMBRE_USUARIO", typeof(string)),
-                new DataColumn("CONTRASEÑA", typeof(string)),
-                new DataColumn("CLAVE_SUCURSAL", typeof(string)),
-                new DataColumn("CLAVE_EMPRESA", typeof(string))
             });
 
                 result.ToList().ForEach(x =>
@@ -170,15 +162,11 @@ namespace Viper.DataAccessLayer
 
                     row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
                     row["NOMBRE_EMPLEADO"] = x.Fullname;
-                    row["TELEFONO"] = x.PhoneNumber;
-                    row["CELULAR"] = x.CellPhone;
-                    row["IS"] = x.IS;
-                    row["PUESTO_TRABAJO"] = x.JobTitle;
-                    row["DEPARTAMENTO"] = x.Department;
                     row["NOMBRE_USUARIO"] = x.LoginID;
-                    row["CONTRASEÑA"] = "****************";
                     row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
                     row["CLAVE_EMPRESA"] = x.CompanyKey;
+                    row["PUESTO_TRABAJO"] = x.JobTitle;
+                    row["DEPARTAMENTO"] = x.Department;
 
                     dataTable.Rows.Add(row);
                 });

@@ -310,6 +310,7 @@ namespace Viper.DesktopApp
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.KeyPreview = true;
 
+            //Si no es la primera vez que inicia la aplicacion, se ejecuta el siguiente codigo
             if (bandera)
             {
                 //Establecer resolucion de la ventana
@@ -338,6 +339,7 @@ namespace Viper.DesktopApp
             }
             else
             {
+                //Si se abre la ventana desde dentro de la aplicacion
                 this.Size = new Size(1366, 768);
                 this.WindowState = FormWindowState.Maximized;
             }

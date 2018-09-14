@@ -70,8 +70,8 @@ namespace Viper.DesktopApp
             switch (objButton.Name)
             {
                 case "btnAgregar":
-                    frmAdminEmployees form_Employees = new frmAdminEmployees();
-                    form_Employees.ShowDialog();
+                    frmRegisterEmployee frmRegisterEmployee = new frmRegisterEmployee();
+                    frmRegisterEmployee.ShowDialog();
                     break;
 
                 case "btnBuscar":
@@ -105,12 +105,6 @@ namespace Viper.DesktopApp
             this.KeyPreview = true;
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
-
-            this.btnAgregar.KeyPress += Button_Click;
-            this.btnEditar.KeyPress += Button_Click;
-            this.btnRecargar.KeyPress += Button_Click;
-            this.btnEliminar.KeyPress += Button_Click;
-            this.btnBuscar.KeyPress += Button_Click;
 
             string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
             int companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
