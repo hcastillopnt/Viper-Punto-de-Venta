@@ -61,7 +61,7 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                var result = dbCtx.Permissions.ToList().Count > 0;
+                var result = dbCtx.Permissions.Where(x => x.RoleId == 2).ToList().Count > 0;
 
                 if (!result)
                 {
