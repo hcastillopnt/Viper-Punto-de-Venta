@@ -52,6 +52,7 @@ namespace Viper.DesktopApp
         Site site = null;
         string RegimenFiscal = String.Empty;
         bool bandera = false;
+        bool banderaImagen = false;
 
         public static RadTextBox Regimen_Fiscal;
 
@@ -798,6 +799,7 @@ namespace Viper.DesktopApp
                 String Direccion = BuscarImagen.FileName;
                 picLogotipo.ImageLocation = Direccion;
                 picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+                banderaImagen = true;
             }
         }
 
@@ -961,7 +963,8 @@ namespace Viper.DesktopApp
 
                 if (String.IsNullOrEmpty(message))
                 {
-                    savePicture();
+                    if(banderaImagen)
+                        savePicture();
 
                     MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
