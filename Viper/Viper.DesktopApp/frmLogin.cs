@@ -166,7 +166,7 @@ namespace Viper.DesktopApp
                             break;
                     }
                 }
-                else
+                else if (dt == null || dt.Rows.Count == 0)
                 {
                     MessageBox.Show(new Form { TopMost = true }, "Usuario y/o contraseña no validos, favor de intentarlo nuevamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
