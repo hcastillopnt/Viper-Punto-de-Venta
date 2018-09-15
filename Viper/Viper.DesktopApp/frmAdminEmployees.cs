@@ -35,6 +35,8 @@ namespace Viper.DesktopApp
 
         #region Variables, Objetos y Componentes
 
+        int companyID = 0;
+        String companyName = String.Empty;
         RadButton objButton = null;
         DataTable dtEmployees = new DataTable();
 
@@ -51,6 +53,9 @@ namespace Viper.DesktopApp
         public frmAdminEmployees()
         {
             InitializeComponent();
+
+            companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+            companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
         }
 
         #endregion
@@ -75,12 +80,20 @@ namespace Viper.DesktopApp
                     break;
 
                 case "btnBuscar":
+                    string employeeName = Empleado.Text.Trim().ToString();
+
+                    if(string.IsNullOrEmpty(employeeName))
+                    {
+                        MessageBox.Show(new Form { TopMost = true }, "Favor de introducir el nombre del empleado a buscar", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        gvEmployees.DataSource = null;
+                        gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesByNameToDataTable(companyID, employeeName);
+                    }
                     break;
 
                 case "btnRecargar":
-                    string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-                    int companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
-
                     gvEmployees.DataSource = null;
                     gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID);
                     break;
@@ -106,9 +119,7 @@ namespace Viper.DesktopApp
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
 
-            string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-            int companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
-
+            //Cargar todos los empleados registrados
             gvEmployees.DataSource = null;
             gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID);
 
@@ -128,6 +139,14 @@ namespace Viper.DesktopApp
             toolTip1.SetToolTip(this.btnBuscar, "Para buscar los datos de un producto, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnEliminar, "Para eliminar los datos de un producto, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnRecargar, "Para racargar los datos, favor de dar clic en este boton");
+        }
+
+        private void Empleado_TextChanged(object sender, EventArgs e)
+        {
+            string filter = Empleado.Text.Trim().ToString();
+
+            gvEmployees.DataSource = null;
+            gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesByNameToDataTable(companyID, filter);
         }
 
         #endregion

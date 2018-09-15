@@ -177,6 +177,77 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
+        #region procGetEmployeesByNameToDataTable
+
+        /// <summary>
+        /// Metodo para buscar un empleado registrado en el Sistema de Punto de Venta para Farmacias
+        /// con Venta de Genericos
+        /// </summary>
+        /// <param name="CompanyID">Clave Empresa</param>
+        /// <param name="name">Nombre del Empleado</param>
+        /// <returns>DataTable</returns>
+        public static DataTable procGetEmployeesByNameToDataTable(int CompanyID, string name)
+        {
+            bool isExistente = false;
+
+            DataTable dataTable = new DataTable();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                var result = (from e in dbCtx.Employees
+                              join edh in dbCtx.EmployeesDepartmentHistory on e.Id equals edh.EmployeeId
+                              join u in dbCtx.Users on e.UserId equals u.Id
+                              join s in dbCtx.Sites on edh.SiteId equals s.Id
+                              join c in dbCtx.Companies on s.CompanyId equals c.Id
+                              join j in dbCtx.JobsTitle on edh.JobTitleId equals j.Id
+                              join d in dbCtx.Departments on j.DepartmentId equals d.Id
+                              where c.Id == CompanyID && e.FullName.Contains(name)
+                              select new
+                              {
+                                  EmployeeNumber = e.EmployeeNumber,
+                                  Fullname = e.FullName,
+                                  LoginID = u.LoginID,
+                                  UniquePhysicalID = s.UniquePhysicalID,
+                                  CompanyKey = c.CompanyKey,
+                                  JobTitle = j.Name,
+                                  Department = d.Name
+                              })
+                              .OrderBy(x => x.Fullname)
+                              .ToList();
+
+                dataTable.Columns.AddRange(new DataColumn[]{
+                new DataColumn("NUMERO_EMPLEADO", typeof(string)),
+                new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
+                new DataColumn("NOMBRE_USUARIO", typeof(string)),
+                new DataColumn("CLAVE_SUCURSAL", typeof(string)),
+                new DataColumn("CLAVE_EMPRESA", typeof(string)),
+                new DataColumn("PUESTO_TRABAJO", typeof(string)),
+                new DataColumn("DEPARTAMENTO", typeof(string)),
+            });
+
+                result.ToList().ForEach(x =>
+                {
+                    var row = dataTable.NewRow();
+
+                    row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
+                    row["NOMBRE_EMPLEADO"] = x.Fullname;
+                    row["NOMBRE_USUARIO"] = x.LoginID;
+                    row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
+                    row["CLAVE_EMPRESA"] = x.CompanyKey;
+                    row["PUESTO_TRABAJO"] = x.JobTitle;
+                    row["DEPARTAMENTO"] = x.Department;
+
+                    dataTable.Rows.Add(row);
+                });
+            }
+
+            return dataTable;
+        }
+
+        #endregion
+
         #region procIsRFCExists
 
         /// <summary>

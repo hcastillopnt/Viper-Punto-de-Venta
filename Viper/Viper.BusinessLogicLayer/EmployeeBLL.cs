@@ -118,6 +118,26 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
+        #region procGetEmployeesByNameToDataTable
+
+        /// <summary>
+        /// Metodo para buscar un empleado registrado en el Sistema de Punto de Venta para Farmacias
+        /// con Venta de Genericos
+        /// </summary>
+        /// <param name="CompanyID">Clave Empresa</param>
+        /// <param name="name">Nombre del Empleado</param>
+        /// <returns>DataTable</returns>
+        public static DataTable procGetEmployeesByNameToDataTable(int CompanyID, string name)
+        {
+            DataTable dataTable = new DataTable();
+
+            dataTable = DataAccessLayer.EmployeeDAL.procGetEmployeesByNameToDataTable(CompanyID, name);
+
+            return dataTable;
+        }
+
+        #endregion
+
         #region validate<T>
 
         /// <summary>

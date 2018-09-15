@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminEmployees));
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelIzq = new Telerik.WinControls.UI.RadPanel();
@@ -36,7 +36,7 @@
             this.tlpCentro = new System.Windows.Forms.TableLayoutPanel();
             this.gvEmployees = new Telerik.WinControls.UI.RadGridView();
             this.tlp02 = new System.Windows.Forms.TableLayoutPanel();
-            this.Codigo_Empleado = new Telerik.WinControls.UI.RadTextBox();
+            this.Empleado = new Telerik.WinControls.UI.RadTextBox();
             this.btnBuscar = new Telerik.WinControls.UI.RadButton();
             this.tlp01 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEliminar = new Telerik.WinControls.UI.RadButton();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmployees.MasterTemplate)).BeginInit();
             this.tlp02.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Empleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Empleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.tlp01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
@@ -144,7 +144,7 @@
             this.gvEmployees.MasterTemplate.EnableGrouping = false;
             this.gvEmployees.MasterTemplate.EnableSorting = false;
             this.gvEmployees.MasterTemplate.ShowFilteringRow = false;
-            this.gvEmployees.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gvEmployees.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.gvEmployees.Name = "gvEmployees";
             this.gvEmployees.ReadOnly = true;
             this.gvEmployees.ShowGroupPanel = false;
@@ -161,7 +161,7 @@
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.41354F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.06266F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp02.Controls.Add(this.Codigo_Empleado, 0, 0);
+            this.tlp02.Controls.Add(this.Empleado, 0, 0);
             this.tlp02.Controls.Add(this.btnBuscar, 1, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp02.Location = new System.Drawing.Point(3, 109);
@@ -171,18 +171,19 @@
             this.tlp02.Size = new System.Drawing.Size(944, 62);
             this.tlp02.TabIndex = 1;
             // 
-            // Codigo_Empleado
+            // Empleado
             // 
-            this.Codigo_Empleado.AutoSize = false;
-            this.Codigo_Empleado.BackColor = System.Drawing.SystemColors.Info;
-            this.Codigo_Empleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Codigo_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Empleado.Location = new System.Drawing.Point(3, 3);
-            this.Codigo_Empleado.Name = "Codigo_Empleado";
-            this.Codigo_Empleado.NullText = "CODIGO DE EMPLEADO";
-            this.Codigo_Empleado.Size = new System.Drawing.Size(676, 50);
-            this.Codigo_Empleado.TabIndex = 1;
-            this.Codigo_Empleado.ThemeName = "VisualStudio2012Light";
+            this.Empleado.AutoSize = false;
+            this.Empleado.BackColor = System.Drawing.SystemColors.Info;
+            this.Empleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Empleado.Location = new System.Drawing.Point(3, 3);
+            this.Empleado.Name = "Empleado";
+            this.Empleado.NullText = "EMPLEADO";
+            this.Empleado.Size = new System.Drawing.Size(676, 50);
+            this.Empleado.TabIndex = 1;
+            this.Empleado.ThemeName = "VisualStudio2012Light";
+            this.Empleado.TextChanged += new System.EventHandler(this.Empleado_TextChanged);
             // 
             // btnBuscar
             // 
@@ -221,6 +222,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(711, 3);
@@ -263,6 +265,7 @@
             // btnEditar
             // 
             this.btnEditar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.Location = new System.Drawing.Point(239, 3);
@@ -303,7 +306,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvEmployees.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmployees)).EndInit();
             this.tlp02.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Empleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Empleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.tlp01.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
@@ -322,7 +325,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel tlpCentro;
         private System.Windows.Forms.TableLayoutPanel tlp02;
-        private Telerik.WinControls.UI.RadTextBox Codigo_Empleado;
+        private Telerik.WinControls.UI.RadTextBox Empleado;
         private Telerik.WinControls.UI.RadButton btnBuscar;
         private System.Windows.Forms.TableLayoutPanel tlp01;
         private Telerik.WinControls.UI.RadButton btnAgregar;
