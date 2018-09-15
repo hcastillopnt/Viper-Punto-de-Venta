@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminEmployees));
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelIzq = new Telerik.WinControls.UI.RadPanel();
@@ -144,7 +144,7 @@
             this.gvEmployees.MasterTemplate.EnableGrouping = false;
             this.gvEmployees.MasterTemplate.EnableSorting = false;
             this.gvEmployees.MasterTemplate.ShowFilteringRow = false;
-            this.gvEmployees.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.gvEmployees.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gvEmployees.Name = "gvEmployees";
             this.gvEmployees.ReadOnly = true;
             this.gvEmployees.ShowGroupPanel = false;
@@ -158,8 +158,8 @@
             // tlp02
             // 
             this.tlp02.ColumnCount = 2;
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.41354F));
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.06266F));
+            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp02.Controls.Add(this.Empleado, 0, 0);
             this.tlp02.Controls.Add(this.btnBuscar, 1, 0);
@@ -180,7 +180,7 @@
             this.Empleado.Location = new System.Drawing.Point(3, 3);
             this.Empleado.Name = "Empleado";
             this.Empleado.NullText = "EMPLEADO";
-            this.Empleado.Size = new System.Drawing.Size(676, 50);
+            this.Empleado.Size = new System.Drawing.Size(702, 50);
             this.Empleado.TabIndex = 1;
             this.Empleado.ThemeName = "VisualStudio2012Light";
             this.Empleado.TextChanged += new System.EventHandler(this.Empleado_TextChanged);
@@ -190,9 +190,9 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(685, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(711, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(256, 56);
+            this.btnBuscar.Size = new System.Drawing.Size(230, 56);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

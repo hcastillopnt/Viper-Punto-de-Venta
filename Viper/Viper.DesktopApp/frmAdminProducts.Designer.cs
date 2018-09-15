@@ -157,8 +157,8 @@
             // tlp02
             // 
             this.tlp02.ColumnCount = 2;
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.41354F));
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.06266F));
+            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.10593F));
+            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.89407F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp02.Controls.Add(this.Código_de_barras, 0, 0);
             this.tlp02.Controls.Add(this.btnBuscar, 1, 0);
@@ -179,7 +179,7 @@
             this.Código_de_barras.Location = new System.Drawing.Point(3, 3);
             this.Código_de_barras.Name = "Código_de_barras";
             this.Código_de_barras.NullText = "CÓDIGO DE BARRAS";
-            this.Código_de_barras.Size = new System.Drawing.Size(676, 50);
+            this.Código_de_barras.Size = new System.Drawing.Size(703, 50);
             this.Código_de_barras.TabIndex = 1;
             this.Código_de_barras.ThemeName = "VisualStudio2012Light";
             // 
@@ -188,13 +188,14 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(685, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(712, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(256, 56);
+            this.btnBuscar.Size = new System.Drawing.Size(229, 56);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.ThemeName = "VisualStudio2012Light";
+            this.btnBuscar.Click += new System.EventHandler(this.Button_Click);
             // 
             // tlp01
             // 
@@ -229,6 +230,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.ThemeName = "VisualStudio2012Light";
+            this.btnEliminar.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnAgregar
             // 
@@ -256,6 +258,7 @@
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRecargar.ThemeName = "VisualStudio2012Light";
+            this.btnRecargar.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnEditar
             // 
@@ -270,6 +273,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.ThemeName = "VisualStudio2012Light";
+            this.btnEditar.Click += new System.EventHandler(this.Button_Click);
             // 
             // PanelContainer
             // 

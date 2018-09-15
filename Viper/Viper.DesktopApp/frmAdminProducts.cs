@@ -35,7 +35,10 @@ namespace Viper.DesktopApp
 
         #region Variables, Objetos y Componentes
 
+        int companyID = 0;
+        String companyName = String.Empty;
         RadButton objButton = null;
+        DataTable dtProducts = new DataTable();
 
         #endregion
 
@@ -50,6 +53,9 @@ namespace Viper.DesktopApp
         public frmAdminProducts()
         {
             InitializeComponent();
+
+            companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+            companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
         }
 
         #endregion
@@ -69,6 +75,8 @@ namespace Viper.DesktopApp
             switch (objButton.Name)
             {
                 case "btnAgregar":
+                    frmRegisterProduct frmRegisterProduct = new frmRegisterProduct();
+                    frmRegisterProduct.ShowDialog();
                     break;
 
                 case "btnBuscar":
@@ -97,12 +105,6 @@ namespace Viper.DesktopApp
             this.KeyPreview = true;
             this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
-
-            this.btnAgregar.KeyPress += Button_Click;
-            this.btnEditar.KeyPress += Button_Click;
-            this.btnRecargar.KeyPress += Button_Click;
-            this.btnEliminar.KeyPress += Button_Click;
-            this.btnBuscar.KeyPress += Button_Click;
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();
