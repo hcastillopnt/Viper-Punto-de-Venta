@@ -27,22 +27,6 @@ namespace Viper.DesktopApp
         }
         #endregion
 
-        #region CONTROLAR TAB ORDER
-
-        //TAB DE INVENTARIO MAXIMO AL BOTON AGREGAR PRODUCTO
-        private void Inventario_Maximo_Leave(object sender, EventArgs e)
-        {
-            btnAceptar.Focus();
-        }
-
-        //TAB DE BOTON AGREGAR PRODUCTO A CODIGO DE BARRAS
-
-        private void btnAceptar_Leave(object sender, EventArgs e)
-        {
-            Codigo_de_barras.Focus();
-        }
-        #endregion
-
         #region Events of the controls
         public void Button_Click(Object sender, EventArgs args)
         {
@@ -51,16 +35,8 @@ namespace Viper.DesktopApp
             switch (objButton.Name)
             {
                 case "btnAceptar":
-                    agregarProducto();
                     break;
                 case "btnCancelar":
-                    this.Hide();
-                    break;
-                case "btnEliminar":
-                    break;
-
-                case "btnAgregarImagen":
-                    examinar();
                     break;
             }
         }
@@ -71,30 +47,13 @@ namespace Viper.DesktopApp
             this.AcceptButton = btnAceptar;
             this.CancelButton = btnCancelar;
             this.AutoSize = true;
-            this.ControlBox = true;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            this.Size = new Size(1000, 600);
-            this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
-            this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
-
-            this.btnAceptar.Click += Button_Click;
-            this.btnCancelar.Click += Button_Click;
-            this.btnExaminar.Click += Button_Click;
-            this.btnAgregarImagen.Click += Button_Click;
-            this.Codigo_de_barras.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Clave_Alterna.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Sustancia_Activa.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Descripcion.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.radTextBox1.KeyPress += OnlyNumbers_KeyPress;
-            this.Precio_Venta.KeyPress += OnlyNumbers_KeyPress;
-            this.Localización.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Inv_Minimo.KeyPress += OnlyNumbers_KeyPress;
-            this.Inv_Maximo.KeyPress += OnlyNumbers_KeyPress;
-            this.Existencia.KeyPress += OnlyNumbers_KeyPress;
+            this.KeyPreview = true;
+            this.Size = new Size(1366, 768);
 
             ToolTip toolTip1 = new ToolTip();
 
@@ -108,28 +67,6 @@ namespace Viper.DesktopApp
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(this.btnAceptar, "Para poder agregar un producto , favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnCancelar, "Para poder cancelar el proceso, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnAgregarImagen, "Para agregar la imagen, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnExaminar, "Para seleccionar una imagen del equipo, favor de dar clic en este boton");
-
-            // Set up the ToolTip text for the TextBox and ComboBox Control.
-            // Datos Básicos
-            toolTip1.SetToolTip(this.Codigo_de_barras, UtilMessages.CODIGO_DE_BARRAS_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Clave_Alterna, UtilMessages.CLAVE_ALTERNA_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.lblSustanciaActiva, UtilMessages.SUSTANCIA_ACTIVA_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Servicio, UtilMessages.SERVICIO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Medicamento, UtilMessages.MEDICAMENTO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.radCheckBox1, UtilMessages.ARTICULO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Departamento, UtilMessages.DEPARTAMENTO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Categoría, UtilMessages.CATEGORIA_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Descripcion, UtilMessages.DESCRIPCION_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.radTextBox1, UtilMessages.PRECIO_COSTO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Precio_Venta, UtilMessages.PRECIO_VENTA_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Inv_Maximo, UtilMessages.IVENTARIO_MAXIMO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Inv_Minimo, UtilMessages.IVENTARIO_MINIMO_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Receta, UtilMessages.RECETA_AGREGAR_PRODUCTO);
-            toolTip1.SetToolTip(this.Existencia, UtilMessages.HAY_AGREGAR_PRODUCTO);
-            //Imagen
-            toolTip1.SetToolTip(this.Caracteristicas, UtilMessages.CARACTERISTICAS_AGREGAR_PRODUCTO);
 
         }
 
@@ -204,50 +141,6 @@ namespace Viper.DesktopApp
             }
         }
 
-        #endregion
-
-        #region Methods of the class
-        private void agregarProducto()
-        {
-            Product p = new Product();
-            p.BarCode = Codigo_de_barras.Text;
-            p.AlternateKey = Clave_Alterna.Text;
-            p.ActiveSubstance = Sustancia_Activa.Text;
-            p.InvMin = Convert.ToInt32(Inv_Minimo);
-            p.InvMax = Convert.ToInt32(Inv_Maximo);
-            p.Description = Descripcion.Text;
-            p.StandardCost = Convert.ToDouble(radCheckBox1);
-            p.QuantityPerUnit = Convert.ToInt32(Existencia);
-            p.IsLot = Convert.ToByte(Lote);
-            p.IsRecipe = Convert.ToByte(Receta);
-            p.IsService = Convert.ToByte(Servicio);
-            string message = BusinessLogicLayer.AccesoBDBLL.insertProduct(p);
-            if (message == "")
-            {
-                MessageBox.Show(message);
-            }
-            else
-            {
-                MessageBox.Show("Producto agregado correctamente");
-            }
-
-
-        }
-
-        private void examinar()
-        {
-            OpenFileDialog BuscarImagen = new OpenFileDialog();
-            BuscarImagen.Filter = ".bmp;*.gif;*.jpg;*.png|*.bmp;*.gif;*.jpg;*.png|Imagen Jpg(*.jpg)|*.jpg|Imagen PNG(*.png)|*.png|Imagen Gif(*.gif*)|*.gif";
-            BuscarImagen.FileName = "";
-            BuscarImagen.Title = "Examinar Imagen";
-            if (BuscarImagen.ShowDialog() == DialogResult.OK)
-            {
-                rutaLogotipo = BuscarImagen.FileName;
-                String Direccion = BuscarImagen.FileName;
-                picImagenProducto.ImageLocation = Direccion;
-                picImagenProducto.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-        }
         #endregion
     }
 }
