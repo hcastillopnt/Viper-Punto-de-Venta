@@ -50,7 +50,7 @@
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1366, 768);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1680, 1080);
             this.tlpPrincipal.TabIndex = 0;
             // 
             // cvTotalVentasMes
@@ -64,7 +64,7 @@
             this.cvTotalVentasMes.ShowGrid = false;
             this.cvTotalVentasMes.ShowPanZoom = true;
             this.cvTotalVentasMes.ShowToolTip = true;
-            this.cvTotalVentasMes.Size = new System.Drawing.Size(1360, 252);
+            this.cvTotalVentasMes.Size = new System.Drawing.Size(1674, 356);
             this.cvTotalVentasMes.TabIndex = 0;
             this.cvTotalVentasMes.ThemeName = "VisualStudio2012Light";
             // 
@@ -73,7 +73,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1680, 1080);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

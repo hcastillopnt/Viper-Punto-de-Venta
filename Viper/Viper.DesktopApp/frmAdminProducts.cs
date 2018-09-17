@@ -103,7 +103,6 @@ namespace Viper.DesktopApp
             this.MinimizeBox = false;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.KeyPreview = true;
-            this.Size = new Size(1366, 768);
             this.WindowState = FormWindowState.Maximized;
 
             // Create the ToolTip and associate with the Form container.

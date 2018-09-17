@@ -1,6 +1,6 @@
 ﻿/*
  * ---------------------------------------------------------
- * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmAdminEmployees.cs"
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmRegisterEmployee.cs"
  * ---------------------------------------------------------
  */
 
@@ -35,7 +35,7 @@ namespace Viper.DesktopApp
     {
         /*
          * ---------------------------------------------------------
-         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADOS EN EL FORMULARIO "frmRegisterEmployee.cs"
          * ---------------------------------------------------------
          */
 
@@ -60,7 +60,7 @@ namespace Viper.DesktopApp
 
         /*
          * ---------------------------------------------------------
-         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmRegisterEmployee.cs"
          * ---------------------------------------------------------
          */
 
@@ -81,7 +81,7 @@ namespace Viper.DesktopApp
 
         /*
          * ---------------------------------------------------------
-         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmRegisterEmployee.cs"
          * ---------------------------------------------------------
          */
 
@@ -99,7 +99,6 @@ namespace Viper.DesktopApp
             this.MinimizeBox = false;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.KeyPreview = true;
-            this.Size = new Size(1366, 768);
 
             //Establecer el foco en el primer campo
             //this.ActiveControl = Nombre;
@@ -470,7 +469,7 @@ namespace Viper.DesktopApp
 
         /*
          * ---------------------------------------------------------
-         * METODOS UTILIZADOS EN EL FORMULARIO "frmAdminEmployees.cs"
+         * METODOS UTILIZADOS EN EL FORMULARIO "frmRegisterEmployee.cs"
          * ---------------------------------------------------------
          */
 
