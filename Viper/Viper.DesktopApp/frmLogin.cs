@@ -180,6 +180,17 @@ namespace Viper.DesktopApp
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            //Set default configuration to UI
+            this.AcceptButton = btnIngresar;
+            this.CancelButton = btnSalir;
+            this.AutoSize = true;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+
             //Establecer el foco en el primer campo
             this.ActiveControl = Nombre_de_Usuario;
             this.Nombre_de_Usuario.Focus();
@@ -199,17 +210,8 @@ namespace Viper.DesktopApp
 
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
-
-            //Establecer resolucion de la ventana
-            int height = Screen.PrimaryScreen.Bounds.Height; //Obtiene el alto de la pantalla principal en pixeles.
-            int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
-
-            if (width < 1680 && height <= 1080)
-            {
-                MessageBox.Show(new Form { TopMost = true }, "La resolucion de la computadora no es compatible con el Sistema Viper\nFavor de colocar la resolucion minima de 1680 x 1080", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
-            }
         }
+
         #endregion
     }
 }

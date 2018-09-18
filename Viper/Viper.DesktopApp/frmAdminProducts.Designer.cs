@@ -285,7 +285,7 @@
             // frmAdminProducts
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1680, 1080);
+            this.ClientSize = new System.Drawing.Size(1980, 1000);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

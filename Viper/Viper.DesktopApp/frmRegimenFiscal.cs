@@ -75,9 +75,6 @@ namespace Viper.DesktopApp
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            //this.TopMost = true;
-            this.Size = new Size(800, 400);
-            //this.Icon = new Icon("Resources/application_icon.ico");
 
             btnAceptar.Click += btnAceptar_Click;
             txtRegimen.TextChanged += txtRegimen_TextChanged;
