@@ -62,11 +62,6 @@ namespace Viper.DesktopApp
 
         #region Eventos
 
-        public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
-        {
-            args.Cancel = args.CloseReason == CloseReason.UserClosing;
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string username = Nombre_de_Usuario.Text.Trim().ToString();
@@ -80,7 +75,7 @@ namespace Viper.DesktopApp
             {
                 dt = BusinessLogicLayer.UserBLL.procAuthorizeByLogin(username, password);
 
-                if (dt != null)
+                if (dt != null && dt.Rows.Count>0)
                 {
                     string employeeIdNumber = dt.Rows[0].Field<String>("EmployeeIDNumber");
                     string fullname = dt.Rows[0].Field<String>("FullName");

@@ -377,6 +377,7 @@
             // 
             this.btnVales.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnVales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVales.Enabled = false;
             this.btnVales.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVales.Image = ((System.Drawing.Image)(resources.GetObject("btnVales.Image")));
             this.btnVales.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -392,6 +393,7 @@
             // 
             this.btnTarjeta.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTarjeta.Enabled = false;
             this.btnTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTarjeta.Image = ((System.Drawing.Image)(resources.GetObject("btnTarjeta.Image")));
             this.btnTarjeta.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -620,13 +622,14 @@
             // btnReimprimir
             // 
             this.btnReimprimir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReimprimir.Enabled = false;
             this.btnReimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReimprimir.Location = new System.Drawing.Point(129, 3);
             this.btnReimprimir.Name = "btnReimprimir";
             // 
             // 
             // 
-            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(145, 3, 110, 24);
+            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(129, 3, 110, 24);
             this.btnReimprimir.Size = new System.Drawing.Size(120, 67);
             this.btnReimprimir.TabIndex = 1;
             this.btnReimprimir.Text = "Reimprimir\r\nTicket";
@@ -664,6 +667,7 @@
             // btnINSVarios
             // 
             this.btnINSVarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnINSVarios.Enabled = false;
             this.btnINSVarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINSVarios.Location = new System.Drawing.Point(2, 2);
             this.btnINSVarios.Margin = new System.Windows.Forms.Padding(2);
@@ -677,6 +681,7 @@
             // btnCtrlArtComun
             // 
             this.btnCtrlArtComun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCtrlArtComun.Enabled = false;
             this.btnCtrlArtComun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCtrlArtComun.Location = new System.Drawing.Point(186, 2);
             this.btnCtrlArtComun.Margin = new System.Windows.Forms.Padding(2);
@@ -703,6 +708,7 @@
             // btnMayoreo
             // 
             this.btnMayoreo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMayoreo.Enabled = false;
             this.btnMayoreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMayoreo.Location = new System.Drawing.Point(554, 2);
             this.btnMayoreo.Margin = new System.Windows.Forms.Padding(2);

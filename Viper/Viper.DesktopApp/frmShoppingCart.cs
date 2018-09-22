@@ -90,10 +90,10 @@ namespace Viper.DesktopApp
             gvCarritoCompras.DataSource = dtCarrito;
 
             //this.gvCarritoCompras.Columns["Codigo de Barras"].Width = 150;
-            this.gvCarritoCompras.Columns["Descripcion del Producto"].Width = 450;
+            this.gvCarritoCompras.Columns["Descripcion del Producto"].Width = 300;
             //this.gvCarritoCompras.Columns["Precio Venta"].Width = 80;
-            this.gvCarritoCompras.Columns["Cant"].Width = 50;
-            this.gvCarritoCompras.Columns["Importe"].Width = 80;
+            this.gvCarritoCompras.Columns["Cant"].Width = 80;
+            this.gvCarritoCompras.Columns["Importe"].Width = 150;
             //this.gvCarritoCompras.Columns["IVA (16 %)"].Width = 80;
 
             this.gvCarritoCompras.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
