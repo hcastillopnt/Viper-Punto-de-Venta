@@ -5590,8 +5590,6 @@ namespace Viper.BusinessEntities
             defaultModules.Add(new Module() { Name = "Compras", Menu = "F4 Operaciones", Submenu = "Compras", ControlName = "btnCompras", ControlImage = "sub_compras.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Clientes", Menu = "F4 Operaciones", Submenu = "Clientes", ControlName = "btnClientes", ControlImage = "sub_cliente.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Proveedores", Menu = "F4 Operaciones", Submenu = "Proveedores", ControlName = "btnProveedores", ControlImage = "sub_proveedor.png", IsActive = false });
-            defaultModules.Add(new Module() { Name = "Traspasos Sal", Menu = "F4 Operaciones", Submenu = "Traspasos Sal", ControlName = "btnTraspasosSal", ControlImage = "sub_tras_sal.png", IsActive = false });
-            defaultModules.Add(new Module() { Name = "Traspasos Ent", Menu = "F4 Operaciones", Submenu = "Traspasos Ent", ControlName = "btnTraspasosEnt", ControlImage = "sub_tras_ent.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Traspasos", Menu = "F4 Operaciones", Submenu = "Traspasos", ControlName = "btnTraspasos", ControlImage = "sub_traspasos.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Configuracion", Menu = "F5 Configuracion", Submenu = "NULL", ControlName = "btnConfiguracion", ControlImage = "configuracion.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Empresa", Menu = "F5 Configuracion", Submenu = "Empresa", ControlName = "btnEmpresa", ControlImage = "sub_empresa.png", IsActive = true });
