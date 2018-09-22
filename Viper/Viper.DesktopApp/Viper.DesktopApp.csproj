@@ -266,6 +266,7 @@
     <Content Include="images\icon\configuracion.png" />
     <Content Include="images\icon\corte.png" />
     <Content Include="images\icon\descargar.png" />
+    <Content Include="images\icon\efectivo.png" />
     <Content Include="images\icon\empleado.png" />
     <Content Include="images\icon\error.png" />
     <Content Include="images\icon\estadisticas.png" />
@@ -274,6 +275,7 @@
     <Content Include="images\icon\hospital.png" />
     <Content Include="images\icon\huella_dactilar.png" />
     <Content Include="images\icon\info.png" />
+    <Content Include="images\icon\intercambio.png" />
     <Content Include="images\icon\inventario.png" />
     <Content Include="images\icon\lapiz.png" />
     <Content Include="images\icon\lupa.png" />
@@ -298,7 +300,9 @@
     <Content Include="images\icon\sub_tras_ent.png" />
     <Content Include="images\icon\sub_tras_sal.png" />
     <Content Include="images\icon\sub_usuarios.png" />
+    <Content Include="images\icon\tarjeta.png" />
     <Content Include="images\icon\tiempo.png" />
+    <Content Include="images\icon\vales.png" />
     <Content Include="images\icon\ventas.png" />
     <Content Include="images\icon\warning.png" />
     <Content Include="images\other\application_icon.ico" />

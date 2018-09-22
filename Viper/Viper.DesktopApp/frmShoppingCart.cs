@@ -28,6 +28,7 @@ namespace Viper.DesktopApp
         {
             InitializeComponent();
             cargarColumnasCarritoGrid();
+            formatearColumnas();
         }
 
         private void frmShoppingCart_Load(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace Viper.DesktopApp
                 //new DataColumn("Codigo de Barras", typeof(string)),
                 new DataColumn("Descripcion del Producto", typeof(string)),
                 //new DataColumn("Precio Venta", typeof(string)),
-                new DataColumn("Cant.", typeof(string)),
+                new DataColumn("Cant", typeof(string)),
                 new DataColumn("Importe", typeof(string))
                 //new DataColumn("IVA (16 %)", typeof(string))
             });
@@ -89,9 +90,9 @@ namespace Viper.DesktopApp
             gvCarritoCompras.DataSource = dtCarrito;
 
             //this.gvCarritoCompras.Columns["Codigo de Barras"].Width = 150;
-            this.gvCarritoCompras.Columns["Descripcion del Producto"].Width = 500;
+            this.gvCarritoCompras.Columns["Descripcion del Producto"].Width = 450;
             //this.gvCarritoCompras.Columns["Precio Venta"].Width = 80;
-            this.gvCarritoCompras.Columns["Cant."].Width = 50;
+            this.gvCarritoCompras.Columns["Cant"].Width = 50;
             this.gvCarritoCompras.Columns["Importe"].Width = 80;
             //this.gvCarritoCompras.Columns["IVA (16 %)"].Width = 80;
 
@@ -101,7 +102,7 @@ namespace Viper.DesktopApp
         public void formatearColumnas()
         {
             //Generar array con el nombre de las columnas
-            string[] arrayColumns = new string[] { "Codigo de Barras", "Descripcion del Producto", "Precio Venta", "Cant.", "Importe", "IVA (16 %)" };
+            string[] arrayColumns = new string[] { "Descripcion del Producto", "Cant", "Importe" };
 
             foreach (var i in arrayColumns)
             {
