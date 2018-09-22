@@ -138,7 +138,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnIngresar.Location = new System.Drawing.Point(4, 5);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIngresar.Name = "btnIngresar";
@@ -153,7 +153,7 @@
             this.btnSalir.CausesValidation = false;
             this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnSalir.Location = new System.Drawing.Point(275, 5);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
@@ -201,7 +201,7 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.lblNombreUsuario.Location = new System.Drawing.Point(4, 91);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -214,7 +214,7 @@
             // lblContraseña
             // 
             this.lblContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.SystemColors.Window;
             this.lblContraseña.Location = new System.Drawing.Point(4, 273);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -230,7 +230,7 @@
             this.Nombre_de_Usuario.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Nombre_de_Usuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre_de_Usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Nombre_de_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre_de_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre_de_Usuario.Location = new System.Drawing.Point(4, 187);
             this.Nombre_de_Usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Nombre_de_Usuario.Name = "Nombre_de_Usuario";
@@ -244,7 +244,7 @@
             this.Contraseña.AutoSize = false;
             this.Contraseña.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Contraseña.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contraseña.Location = new System.Drawing.Point(4, 369);
             this.Contraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Contraseña.Name = "Contraseña";

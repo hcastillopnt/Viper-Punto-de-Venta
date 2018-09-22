@@ -44,7 +44,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.tlpContenedorVertical = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpLogotipo = new System.Windows.Forms.TableLayoutPanel();
             this.picLogotipo = new System.Windows.Forms.PictureBox();
             this.cboSucursales = new Telerik.WinControls.UI.RadDropDownList();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.tlp04.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.tlpContenedorVertical.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpLogotipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1958, 54);
+            this.BarraTitulo.Size = new System.Drawing.Size(1924, 54);
             this.BarraTitulo.TabIndex = 0;
             // 
             // tlp01
@@ -89,7 +89,7 @@
             this.tlp01.Name = "tlp01";
             this.tlp01.RowCount = 1;
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp01.Size = new System.Drawing.Size(1958, 54);
+            this.tlp01.Size = new System.Drawing.Size(1924, 54);
             this.tlp01.TabIndex = 0;
             // 
             // tlp02
@@ -104,20 +104,20 @@
             this.tlp02.Controls.Add(this.lblDinero, 1, 0);
             this.tlp02.Controls.Add(this.picDinero, 0, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp02.Location = new System.Drawing.Point(1083, 3);
+            this.tlp02.Location = new System.Drawing.Point(1064, 3);
             this.tlp02.Name = "tlp02";
             this.tlp02.RowCount = 1;
             this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp02.Size = new System.Drawing.Size(872, 48);
+            this.tlp02.Size = new System.Drawing.Size(857, 48);
             this.tlp02.TabIndex = 0;
             // 
             // picReloj
             // 
             this.picReloj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picReloj.Image = ((System.Drawing.Image)(resources.GetObject("picReloj.Image")));
-            this.picReloj.Location = new System.Drawing.Point(472, 3);
+            this.picReloj.Location = new System.Drawing.Point(465, 3);
             this.picReloj.Name = "picReloj";
-            this.picReloj.Size = new System.Drawing.Size(206, 42);
+            this.picReloj.Size = new System.Drawing.Size(198, 42);
             this.picReloj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picReloj.TabIndex = 1;
             this.picReloj.TabStop = false;
@@ -128,7 +128,7 @@
             this.lblReloj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReloj.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblReloj.Location = new System.Drawing.Point(684, 0);
+            this.lblReloj.Location = new System.Drawing.Point(669, 0);
             this.lblReloj.Name = "lblReloj";
             this.lblReloj.Size = new System.Drawing.Size(185, 48);
             this.lblReloj.TabIndex = 0;
@@ -141,7 +141,7 @@
             this.lblDinero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDinero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDinero.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDinero.Location = new System.Drawing.Point(214, 0);
+            this.lblDinero.Location = new System.Drawing.Point(207, 0);
             this.lblDinero.Name = "lblDinero";
             this.lblDinero.Size = new System.Drawing.Size(252, 48);
             this.lblDinero.TabIndex = 2;
@@ -154,7 +154,7 @@
             this.picDinero.Image = ((System.Drawing.Image)(resources.GetObject("picDinero.Image")));
             this.picDinero.Location = new System.Drawing.Point(3, 3);
             this.picDinero.Name = "picDinero";
-            this.picDinero.Size = new System.Drawing.Size(205, 42);
+            this.picDinero.Size = new System.Drawing.Size(198, 42);
             this.picDinero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDinero.TabIndex = 3;
             this.picDinero.TabStop = false;
@@ -237,7 +237,7 @@
             // 
             this.tlpContenedorVertical.ColumnCount = 1;
             this.tlpContenedorVertical.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpContenedorVertical.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tlpContenedorVertical.Controls.Add(this.tlpLogotipo, 0, 0);
             this.tlpContenedorVertical.Controls.Add(this.btnCerrarSesion, 0, 2);
             this.tlpContenedorVertical.Controls.Add(this.tlpMenuVertical, 0, 1);
             this.tlpContenedorVertical.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -250,21 +250,21 @@
             this.tlpContenedorVertical.Size = new System.Drawing.Size(286, 890);
             this.tlpContenedorVertical.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // tlpLogotipo
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.picLogotipo, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cboSucursales, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.53191F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.46808F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 163);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpLogotipo.ColumnCount = 1;
+            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpLogotipo.Controls.Add(this.picLogotipo, 0, 0);
+            this.tlpLogotipo.Controls.Add(this.cboSucursales, 0, 1);
+            this.tlpLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpLogotipo.Location = new System.Drawing.Point(3, 3);
+            this.tlpLogotipo.Name = "tlpLogotipo";
+            this.tlpLogotipo.RowCount = 2;
+            this.tlpLogotipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.53191F));
+            this.tlpLogotipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.46808F));
+            this.tlpLogotipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpLogotipo.Size = new System.Drawing.Size(280, 163);
+            this.tlpLogotipo.TabIndex = 0;
             // 
             // picLogotipo
             // 
@@ -283,11 +283,11 @@
             // 
             this.cboSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboSucursales.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSucursales.Location = new System.Drawing.Point(3, 126);
             this.cboSucursales.Name = "cboSucursales";
             this.cboSucursales.NullText = "--Seleccione--";
-            this.cboSucursales.Size = new System.Drawing.Size(274, 30);
+            this.cboSucursales.Size = new System.Drawing.Size(274, 34);
             this.cboSucursales.TabIndex = 1;
             this.cboSucursales.ThemeName = "VisualStudio2012Light";
             // 
@@ -338,7 +338,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(286, 54);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1672, 890);
+            this.pnlContenedor.Size = new System.Drawing.Size(1638, 890);
             this.pnlContenedor.TabIndex = 2;
             // 
             // timer
@@ -349,7 +349,7 @@
             // 
             this.AutoSize = true;
             this.CancelButton = this.btnCerrarSesion;
-            this.ClientSize = new System.Drawing.Size(1958, 944);
+            this.ClientSize = new System.Drawing.Size(1924, 944);
             this.ControlBox = false;
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.MenuVertical);
@@ -375,8 +375,8 @@
             this.tlp04.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             this.tlpContenedorVertical.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpLogotipo.ResumeLayout(false);
+            this.tlpLogotipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).EndInit();
             this.ResumeLayout(false);
@@ -404,7 +404,7 @@
         private System.Windows.Forms.TableLayoutPanel tlp04;
         private System.Windows.Forms.Label lblDinero;
         private System.Windows.Forms.PictureBox picDinero;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpLogotipo;
         private Telerik.WinControls.UI.RadDropDownList cboSucursales;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }

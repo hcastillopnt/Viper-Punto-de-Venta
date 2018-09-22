@@ -47,7 +47,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.Location = new System.Drawing.Point(542, 624);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -62,10 +62,10 @@
             // 
             this.lblRegimenFiscal.BackColor = System.Drawing.SystemColors.Control;
             this.lblRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegimenFiscal.Location = new System.Drawing.Point(623, 85);
+            this.lblRegimenFiscal.Location = new System.Drawing.Point(589, 85);
             this.lblRegimenFiscal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblRegimenFiscal.Name = "lblRegimenFiscal";
-            this.lblRegimenFiscal.Size = new System.Drawing.Size(323, 54);
+            this.lblRegimenFiscal.Size = new System.Drawing.Size(259, 44);
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal";
             // 
@@ -75,7 +75,7 @@
             this.dgvRegimenFiscal.AutoSizeRows = true;
             this.dgvRegimenFiscal.EnableCustomFiltering = true;
             this.dgvRegimenFiscal.EnableHotTracking = false;
-            this.dgvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dgvRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.dgvRegimenFiscal.Location = new System.Drawing.Point(18, 268);
             this.dgvRegimenFiscal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             // 
@@ -120,23 +120,24 @@
             // lblRegimen
             // 
             this.lblRegimen.AutoSize = true;
-            this.lblRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegimen.Location = new System.Drawing.Point(18, 209);
             this.lblRegimen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegimen.Name = "lblRegimen";
-            this.lblRegimen.Size = new System.Drawing.Size(226, 33);
+            this.lblRegimen.Size = new System.Drawing.Size(306, 46);
             this.lblRegimen.TabIndex = 8;
             this.lblRegimen.Text = "Regimen Fiscal:";
             // 
             // txtRegimen
             // 
+            this.txtRegimen.AutoSize = false;
             this.txtRegimen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegimen.Location = new System.Drawing.Point(246, 209);
+            this.txtRegimen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegimen.Location = new System.Drawing.Point(332, 209);
             this.txtRegimen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRegimen.Name = "txtRegimen";
             this.txtRegimen.NullText = "Escribe la actividad que deseas buscar";
-            this.txtRegimen.Size = new System.Drawing.Size(1159, 33);
+            this.txtRegimen.Size = new System.Drawing.Size(1073, 49);
             this.txtRegimen.TabIndex = 9;
             this.txtRegimen.ThemeName = "VisualStudio2012Light";
             // 

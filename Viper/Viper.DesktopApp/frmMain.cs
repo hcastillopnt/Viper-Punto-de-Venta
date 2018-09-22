@@ -119,6 +119,7 @@ namespace Viper.DesktopApp
             int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
 
             this.Size = new Size(width, height);
+            this.WindowState = FormWindowState.Maximized;
 
             //Set Event to form
             this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
@@ -167,7 +168,7 @@ namespace Viper.DesktopApp
             switch (name)
             {
                 case "btnVentas":
-                    //AgregarFormularioEnPanel(new frmShoppingCart());
+                    AgregarFormularioEnPanel(new frmShoppingCart());
                     break;
 
                 case "btnProductos":
@@ -278,7 +279,7 @@ namespace Viper.DesktopApp
                 btnOption.FlatAppearance.BorderSize = 0;
                 btnOption.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 58, 64);
                 btnOption.FlatStyle = FlatStyle.Flat;
-                btnOption.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                btnOption.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 btnOption.ForeColor = Color.White;
                 btnOption.Image = Image.FromFile(folderPath + item.ControlImage);
                 btnOption.ImageAlign = ContentAlignment.MiddleLeft;

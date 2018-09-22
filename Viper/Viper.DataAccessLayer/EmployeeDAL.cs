@@ -147,26 +147,26 @@ namespace Viper.DataAccessLayer
                               .ToList();
 
                 dataTable.Columns.AddRange(new DataColumn[]{
-                new DataColumn("NUMERO_EMPLEADO", typeof(string)),
-                new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
-                new DataColumn("NOMBRE_USUARIO", typeof(string)),
-                new DataColumn("CLAVE_SUCURSAL", typeof(string)),
-                new DataColumn("CLAVE_EMPRESA", typeof(string)),
-                new DataColumn("PUESTO_TRABAJO", typeof(string)),
-                new DataColumn("DEPARTAMENTO", typeof(string)),
+                //new DataColumn("NUMERO_EMPLEADO", typeof(string)),
+                new DataColumn("NOMBRE_EMPLEADO", typeof(string))
+                //new DataColumn("NOMBRE_USUARIO", typeof(string))
+                //new DataColumn("CLAVE_SUCURSAL", typeof(string)),
+                //new DataColumn("CLAVE_EMPRESA", typeof(string)),
+                //new DataColumn("PUESTO_TRABAJO", typeof(string)),
+                //new DataColumn("DEPARTAMENTO", typeof(string)),
             });
 
                 result.ToList().ForEach(x =>
                 {
                     var row = dataTable.NewRow();
 
-                    row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
+                    //row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
                     row["NOMBRE_EMPLEADO"] = x.Fullname;
-                    row["NOMBRE_USUARIO"] = x.LoginID;
-                    row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
-                    row["CLAVE_EMPRESA"] = x.CompanyKey;
-                    row["PUESTO_TRABAJO"] = x.JobTitle;
-                    row["DEPARTAMENTO"] = x.Department;
+                    //row["NOMBRE_USUARIO"] = x.LoginID;
+                    //row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
+                    //row["CLAVE_EMPRESA"] = x.CompanyKey;
+                    //row["PUESTO_TRABAJO"] = x.JobTitle;
+                    //row["DEPARTAMENTO"] = x.Department;
 
                     dataTable.Rows.Add(row);
                 });
@@ -218,26 +218,26 @@ namespace Viper.DataAccessLayer
                               .ToList();
 
                 dataTable.Columns.AddRange(new DataColumn[]{
-                new DataColumn("NUMERO_EMPLEADO", typeof(string)),
-                new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
-                new DataColumn("NOMBRE_USUARIO", typeof(string)),
-                new DataColumn("CLAVE_SUCURSAL", typeof(string)),
-                new DataColumn("CLAVE_EMPRESA", typeof(string)),
-                new DataColumn("PUESTO_TRABAJO", typeof(string)),
-                new DataColumn("DEPARTAMENTO", typeof(string)),
+            //    new DataColumn("NUMERO_EMPLEADO", typeof(string)),
+                new DataColumn("NOMBRE_EMPLEADO", typeof(string))
+            //    new DataColumn("NOMBRE_USUARIO", typeof(string)),
+            //    new DataColumn("CLAVE_SUCURSAL", typeof(string)),
+            //    new DataColumn("CLAVE_EMPRESA", typeof(string)),
+            //    new DataColumn("PUESTO_TRABAJO", typeof(string)),
+            //    new DataColumn("DEPARTAMENTO", typeof(string)),
             });
 
                 result.ToList().ForEach(x =>
                 {
                     var row = dataTable.NewRow();
 
-                    row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
+                    //row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
                     row["NOMBRE_EMPLEADO"] = x.Fullname;
-                    row["NOMBRE_USUARIO"] = x.LoginID;
-                    row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
-                    row["CLAVE_EMPRESA"] = x.CompanyKey;
-                    row["PUESTO_TRABAJO"] = x.JobTitle;
-                    row["DEPARTAMENTO"] = x.Department;
+                    //row["NOMBRE_USUARIO"] = x.LoginID;
+                    //row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
+                    //row["CLAVE_EMPRESA"] = x.CompanyKey;
+                    //row["PUESTO_TRABAJO"] = x.JobTitle;
+                    //row["DEPARTAMENTO"] = x.Department;
 
                     dataTable.Rows.Add(row);
                 });

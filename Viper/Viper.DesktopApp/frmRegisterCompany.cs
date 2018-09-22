@@ -318,6 +318,7 @@ namespace Viper.DesktopApp
                 int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
 
                 this.Size = new Size(width, height);
+                this.WindowState = FormWindowState.Maximized;
             }
             else
             {

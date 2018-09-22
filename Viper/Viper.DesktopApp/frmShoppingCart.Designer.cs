@@ -28,408 +28,683 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShoppingCart));
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDerecho = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
-            this.radButton3 = new Telerik.WinControls.UI.RadButton();
-            this.radButton4 = new Telerik.WinControls.UI.RadButton();
-            this.radButton5 = new Telerik.WinControls.UI.RadButton();
-            this.radButton6 = new Telerik.WinControls.UI.RadButton();
-            this.radButton7 = new Telerik.WinControls.UI.RadButton();
-            this.radButton8 = new Telerik.WinControls.UI.RadButton();
-            this.radButton9 = new Telerik.WinControls.UI.RadButton();
-            this.radButton10 = new Telerik.WinControls.UI.RadButton();
-            this.radButton11 = new Telerik.WinControls.UI.RadButton();
-            this.radButton12 = new Telerik.WinControls.UI.RadButton();
-            this.radButton13 = new Telerik.WinControls.UI.RadButton();
-            this.radButton14 = new Telerik.WinControls.UI.RadButton();
-            this.radButton15 = new Telerik.WinControls.UI.RadButton();
-            this.radButton16 = new Telerik.WinControls.UI.RadButton();
-            this.radButton17 = new Telerik.WinControls.UI.RadButton();
-            this.radButton18 = new Telerik.WinControls.UI.RadButton();
-            this.radButton19 = new Telerik.WinControls.UI.RadButton();
-            this.radButton20 = new Telerik.WinControls.UI.RadButton();
-            this.radButton21 = new Telerik.WinControls.UI.RadButton();
-            this.radButton22 = new Telerik.WinControls.UI.RadButton();
-            this.radButton23 = new Telerik.WinControls.UI.RadButton();
-            this.radButton24 = new Telerik.WinControls.UI.RadButton();
+            this.tlpCalculadora = new System.Windows.Forms.TableLayoutPanel();
+            this.btn0 = new Telerik.WinControls.UI.RadButton();
+            this.btn00 = new Telerik.WinControls.UI.RadButton();
+            this.btn000 = new Telerik.WinControls.UI.RadButton();
+            this.btn01 = new Telerik.WinControls.UI.RadButton();
+            this.btn02 = new Telerik.WinControls.UI.RadButton();
+            this.btn03 = new Telerik.WinControls.UI.RadButton();
+            this.btn04 = new Telerik.WinControls.UI.RadButton();
+            this.btn05 = new Telerik.WinControls.UI.RadButton();
+            this.btn06 = new Telerik.WinControls.UI.RadButton();
+            this.btn07 = new Telerik.WinControls.UI.RadButton();
+            this.btn08 = new Telerik.WinControls.UI.RadButton();
+            this.btn09 = new Telerik.WinControls.UI.RadButton();
+            this.btnPunto = new Telerik.WinControls.UI.RadButton();
+            this.btnSubtotal = new Telerik.WinControls.UI.RadButton();
+            this.btnCobrar = new Telerik.WinControls.UI.RadButton();
+            this.btnVales = new Telerik.WinControls.UI.RadButton();
+            this.btnTarjeta = new Telerik.WinControls.UI.RadButton();
+            this.btnDolares = new Telerik.WinControls.UI.RadButton();
+            this.btnEfectivo = new Telerik.WinControls.UI.RadButton();
+            this.picImagenes = new System.Windows.Forms.PictureBox();
+            this.tlpServicios = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpIzquierda = new System.Windows.Forms.TableLayoutPanel();
+            this.gvCarritoCompras = new Telerik.WinControls.UI.RadGridView();
+            this.Codigo_Barras = new Telerik.WinControls.UI.RadTextBox();
+            this.lblNumeroCaja = new System.Windows.Forms.Label();
+            this.tlpMenuInferior = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalPagar = new System.Windows.Forms.Label();
+            this.tblAccesosDirectos = new System.Windows.Forms.TableLayoutPanel();
+            this.btnF11EliminarTicket = new Telerik.WinControls.UI.RadButton();
+            this.btnReimprimir = new Telerik.WinControls.UI.RadButton();
+            this.tlpMenuSuperior = new System.Windows.Forms.TableLayoutPanel();
+            this.btnINSVarios = new Telerik.WinControls.UI.RadButton();
+            this.btnCtrlArtComun = new Telerik.WinControls.UI.RadButton();
+            this.btnF10Buscar = new Telerik.WinControls.UI.RadButton();
+            this.btnMayoreo = new Telerik.WinControls.UI.RadButton();
+            this.btnEntradas = new Telerik.WinControls.UI.RadButton();
+            this.btnSalidas = new Telerik.WinControls.UI.RadButton();
+            this.btnDELBorrarArt = new Telerik.WinControls.UI.RadButton();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.tlpPrincipal.SuspendLayout();
             this.tlpDerecho.SuspendLayout();
-            this.tlpBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton24)).BeginInit();
+            this.tlpCalculadora.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn00)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn06)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn07)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn08)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn09)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPunto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSubtotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCobrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTarjeta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDolares)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEfectivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenes)).BeginInit();
+            this.tlpIzquierda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCarritoCompras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCarritoCompras.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Barras)).BeginInit();
+            this.tlpMenuInferior.SuspendLayout();
+            this.tblAccesosDirectos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnF11EliminarTicket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReimprimir)).BeginInit();
+            this.tlpMenuSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnINSVarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCtrlArtComun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnF10Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMayoreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEntradas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDELBorrarArt)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
             // 
             this.tlpPrincipal.ColumnCount = 2;
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPrincipal.Controls.Add(this.tlpDerecho, 1, 0);
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.31655F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.68345F));
+            this.tlpPrincipal.Controls.Add(this.tlpDerecho, 1, 1);
+            this.tlpPrincipal.Controls.Add(this.tlpIzquierda, 0, 1);
+            this.tlpPrincipal.Controls.Add(this.tlpMenuSuperior, 0, 0);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
-            this.tlpPrincipal.RowCount = 1;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1680, 1080);
+            this.tlpPrincipal.RowCount = 2;
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tlpPrincipal.Size = new System.Drawing.Size(1946, 1000);
             this.tlpPrincipal.TabIndex = 0;
             // 
             // tlpDerecho
             // 
             this.tlpDerecho.ColumnCount = 1;
             this.tlpDerecho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDerecho.Controls.Add(this.tlpBotones, 0, 2);
+            this.tlpDerecho.Controls.Add(this.tlpCalculadora, 0, 2);
+            this.tlpDerecho.Controls.Add(this.picImagenes, 0, 0);
+            this.tlpDerecho.Controls.Add(this.tlpServicios, 0, 1);
             this.tlpDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDerecho.Location = new System.Drawing.Point(843, 3);
+            this.tlpDerecho.Location = new System.Drawing.Point(1060, 103);
             this.tlpDerecho.Name = "tlpDerecho";
             this.tlpDerecho.RowCount = 3;
-            this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.56374F));
-            this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.915014F));
-            this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.52125F));
-            this.tlpDerecho.Size = new System.Drawing.Size(834, 1074);
+            this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.03226F));
+            this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.90323F));
+            this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.92426F));
+            this.tlpDerecho.Size = new System.Drawing.Size(883, 894);
             this.tlpDerecho.TabIndex = 0;
             // 
-            // tlpBotones
+            // tlpCalculadora
             // 
-            this.tlpBotones.AutoSize = true;
-            this.tlpBotones.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.tlpBotones.ColumnCount = 5;
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.Controls.Add(this.radButton1, 0, 4);
-            this.tlpBotones.Controls.Add(this.radButton2, 1, 4);
-            this.tlpBotones.Controls.Add(this.radButton3, 2, 4);
-            this.tlpBotones.Controls.Add(this.radButton4, 0, 3);
-            this.tlpBotones.Controls.Add(this.radButton5, 1, 3);
-            this.tlpBotones.Controls.Add(this.radButton6, 2, 3);
-            this.tlpBotones.Controls.Add(this.radButton7, 0, 2);
-            this.tlpBotones.Controls.Add(this.radButton8, 1, 2);
-            this.tlpBotones.Controls.Add(this.radButton9, 2, 2);
-            this.tlpBotones.Controls.Add(this.radButton10, 0, 1);
-            this.tlpBotones.Controls.Add(this.radButton11, 1, 1);
-            this.tlpBotones.Controls.Add(this.radButton12, 2, 1);
-            this.tlpBotones.Controls.Add(this.radButton13, 0, 0);
-            this.tlpBotones.Controls.Add(this.radButton14, 1, 0);
-            this.tlpBotones.Controls.Add(this.radButton15, 2, 0);
-            this.tlpBotones.Controls.Add(this.radButton16, 3, 0);
-            this.tlpBotones.Controls.Add(this.radButton17, 4, 0);
-            this.tlpBotones.Controls.Add(this.radButton18, 3, 1);
-            this.tlpBotones.Controls.Add(this.radButton19, 4, 1);
-            this.tlpBotones.Controls.Add(this.radButton20, 3, 2);
-            this.tlpBotones.Controls.Add(this.radButton21, 4, 2);
-            this.tlpBotones.Controls.Add(this.radButton22, 3, 3);
-            this.tlpBotones.Controls.Add(this.radButton23, 3, 4);
-            this.tlpBotones.Controls.Add(this.radButton24, 4, 3);
-            this.tlpBotones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpBotones.Location = new System.Drawing.Point(3, 297);
-            this.tlpBotones.Name = "tlpBotones";
-            this.tlpBotones.RowCount = 5;
-            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBotones.Size = new System.Drawing.Size(828, 774);
-            this.tlpBotones.TabIndex = 0;
+            this.tlpCalculadora.AutoSize = true;
+            this.tlpCalculadora.ColumnCount = 5;
+            this.tlpCalculadora.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.Controls.Add(this.btn0, 0, 3);
+            this.tlpCalculadora.Controls.Add(this.btn00, 1, 3);
+            this.tlpCalculadora.Controls.Add(this.btn000, 2, 3);
+            this.tlpCalculadora.Controls.Add(this.btn01, 0, 2);
+            this.tlpCalculadora.Controls.Add(this.btn02, 1, 2);
+            this.tlpCalculadora.Controls.Add(this.btn03, 2, 2);
+            this.tlpCalculadora.Controls.Add(this.btn04, 0, 1);
+            this.tlpCalculadora.Controls.Add(this.btn05, 1, 1);
+            this.tlpCalculadora.Controls.Add(this.btn06, 2, 1);
+            this.tlpCalculadora.Controls.Add(this.btn07, 0, 0);
+            this.tlpCalculadora.Controls.Add(this.btn08, 1, 0);
+            this.tlpCalculadora.Controls.Add(this.btn09, 2, 0);
+            this.tlpCalculadora.Controls.Add(this.btnPunto, 3, 0);
+            this.tlpCalculadora.Controls.Add(this.btnSubtotal, 3, 1);
+            this.tlpCalculadora.Controls.Add(this.btnCobrar, 3, 2);
+            this.tlpCalculadora.Controls.Add(this.btnVales, 4, 3);
+            this.tlpCalculadora.Controls.Add(this.btnTarjeta, 4, 2);
+            this.tlpCalculadora.Controls.Add(this.btnDolares, 4, 1);
+            this.tlpCalculadora.Controls.Add(this.btnEfectivo, 4, 0);
+            this.tlpCalculadora.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCalculadora.Location = new System.Drawing.Point(3, 377);
+            this.tlpCalculadora.Name = "tlpCalculadora";
+            this.tlpCalculadora.RowCount = 4;
+            this.tlpCalculadora.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpCalculadora.Size = new System.Drawing.Size(877, 514);
+            this.tlpCalculadora.TabIndex = 0;
             // 
-            // radButton1
+            // btn0
             // 
-            this.radButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton1.Location = new System.Drawing.Point(6, 622);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(156, 146);
-            this.radButton1.TabIndex = 0;
-            this.radButton1.Text = "0";
-            this.radButton1.ThemeName = "VisualStudio2012Light";
+            this.btn0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn0.Location = new System.Drawing.Point(3, 387);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(169, 124);
+            this.btn0.TabIndex = 0;
+            this.btn0.Text = "0";
+            this.btn0.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton2
+            // btn00
             // 
-            this.radButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton2.Location = new System.Drawing.Point(171, 622);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(156, 146);
-            this.radButton2.TabIndex = 1;
-            this.radButton2.Text = "00";
-            this.radButton2.ThemeName = "VisualStudio2012Light";
+            this.btn00.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn00.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn00.Location = new System.Drawing.Point(178, 387);
+            this.btn00.Name = "btn00";
+            this.btn00.Size = new System.Drawing.Size(169, 124);
+            this.btn00.TabIndex = 1;
+            this.btn00.Text = "00";
+            this.btn00.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton3
+            // btn000
             // 
-            this.radButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton3.Location = new System.Drawing.Point(336, 622);
-            this.radButton3.Name = "radButton3";
-            this.radButton3.Size = new System.Drawing.Size(156, 146);
-            this.radButton3.TabIndex = 2;
-            this.radButton3.Text = "000";
-            this.radButton3.ThemeName = "VisualStudio2012Light";
+            this.btn000.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn000.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn000.Location = new System.Drawing.Point(353, 387);
+            this.btn000.Name = "btn000";
+            this.btn000.Size = new System.Drawing.Size(169, 124);
+            this.btn000.TabIndex = 2;
+            this.btn000.Text = "000";
+            this.btn000.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton4
+            // btn01
             // 
-            this.radButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton4.Location = new System.Drawing.Point(6, 468);
-            this.radButton4.Name = "radButton4";
-            this.radButton4.Size = new System.Drawing.Size(156, 145);
-            this.radButton4.TabIndex = 3;
-            this.radButton4.Text = "1";
-            this.radButton4.ThemeName = "VisualStudio2012Light";
+            this.btn01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn01.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn01.Location = new System.Drawing.Point(3, 259);
+            this.btn01.Name = "btn01";
+            this.btn01.Size = new System.Drawing.Size(169, 122);
+            this.btn01.TabIndex = 3;
+            this.btn01.Text = "1";
+            this.btn01.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton5
+            // btn02
             // 
-            this.radButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton5.Location = new System.Drawing.Point(171, 468);
-            this.radButton5.Name = "radButton5";
-            this.radButton5.Size = new System.Drawing.Size(156, 145);
-            this.radButton5.TabIndex = 4;
-            this.radButton5.Text = "2";
-            this.radButton5.ThemeName = "VisualStudio2012Light";
+            this.btn02.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn02.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn02.Location = new System.Drawing.Point(178, 259);
+            this.btn02.Name = "btn02";
+            this.btn02.Size = new System.Drawing.Size(169, 122);
+            this.btn02.TabIndex = 4;
+            this.btn02.Text = "2";
+            this.btn02.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton6
+            // btn03
             // 
-            this.radButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton6.Location = new System.Drawing.Point(336, 468);
-            this.radButton6.Name = "radButton6";
-            this.radButton6.Size = new System.Drawing.Size(156, 145);
-            this.radButton6.TabIndex = 5;
-            this.radButton6.Text = "3";
-            this.radButton6.ThemeName = "VisualStudio2012Light";
+            this.btn03.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn03.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn03.Location = new System.Drawing.Point(353, 259);
+            this.btn03.Name = "btn03";
+            this.btn03.Size = new System.Drawing.Size(169, 122);
+            this.btn03.TabIndex = 5;
+            this.btn03.Text = "3";
+            this.btn03.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton7
+            // btn04
             // 
-            this.radButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton7.Location = new System.Drawing.Point(6, 314);
-            this.radButton7.Name = "radButton7";
-            this.radButton7.Size = new System.Drawing.Size(156, 145);
-            this.radButton7.TabIndex = 6;
-            this.radButton7.Text = "4";
-            this.radButton7.ThemeName = "VisualStudio2012Light";
+            this.btn04.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn04.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn04.Location = new System.Drawing.Point(3, 131);
+            this.btn04.Name = "btn04";
+            this.btn04.Size = new System.Drawing.Size(169, 122);
+            this.btn04.TabIndex = 6;
+            this.btn04.Text = "4";
+            this.btn04.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton8
+            // btn05
             // 
-            this.radButton8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton8.Location = new System.Drawing.Point(171, 314);
-            this.radButton8.Name = "radButton8";
-            this.radButton8.Size = new System.Drawing.Size(156, 145);
-            this.radButton8.TabIndex = 7;
-            this.radButton8.Text = "5";
-            this.radButton8.ThemeName = "VisualStudio2012Light";
+            this.btn05.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn05.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn05.Location = new System.Drawing.Point(178, 131);
+            this.btn05.Name = "btn05";
+            this.btn05.Size = new System.Drawing.Size(169, 122);
+            this.btn05.TabIndex = 7;
+            this.btn05.Text = "5";
+            this.btn05.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton9
+            // btn06
             // 
-            this.radButton9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton9.Location = new System.Drawing.Point(336, 314);
-            this.radButton9.Name = "radButton9";
-            this.radButton9.Size = new System.Drawing.Size(156, 145);
-            this.radButton9.TabIndex = 8;
-            this.radButton9.Text = "6";
-            this.radButton9.ThemeName = "VisualStudio2012Light";
+            this.btn06.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn06.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn06.Location = new System.Drawing.Point(353, 131);
+            this.btn06.Name = "btn06";
+            this.btn06.Size = new System.Drawing.Size(169, 122);
+            this.btn06.TabIndex = 8;
+            this.btn06.Text = "6";
+            this.btn06.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton10
+            // btn07
             // 
-            this.radButton10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton10.Location = new System.Drawing.Point(6, 160);
-            this.radButton10.Name = "radButton10";
-            this.radButton10.Size = new System.Drawing.Size(156, 145);
-            this.radButton10.TabIndex = 9;
-            this.radButton10.Text = "7";
-            this.radButton10.ThemeName = "VisualStudio2012Light";
+            this.btn07.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn07.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn07.Location = new System.Drawing.Point(3, 3);
+            this.btn07.Name = "btn07";
+            this.btn07.Size = new System.Drawing.Size(169, 122);
+            this.btn07.TabIndex = 9;
+            this.btn07.Text = "7";
+            this.btn07.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton11
+            // btn08
             // 
-            this.radButton11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton11.Location = new System.Drawing.Point(171, 160);
-            this.radButton11.Name = "radButton11";
-            this.radButton11.Size = new System.Drawing.Size(156, 145);
-            this.radButton11.TabIndex = 10;
-            this.radButton11.Text = "8";
-            this.radButton11.ThemeName = "VisualStudio2012Light";
+            this.btn08.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn08.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn08.Location = new System.Drawing.Point(178, 3);
+            this.btn08.Name = "btn08";
+            this.btn08.Size = new System.Drawing.Size(169, 122);
+            this.btn08.TabIndex = 10;
+            this.btn08.Text = "8";
+            this.btn08.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton12
+            // btn09
             // 
-            this.radButton12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton12.Location = new System.Drawing.Point(336, 160);
-            this.radButton12.Name = "radButton12";
-            this.radButton12.Size = new System.Drawing.Size(156, 145);
-            this.radButton12.TabIndex = 11;
-            this.radButton12.Text = "9";
-            this.radButton12.ThemeName = "VisualStudio2012Light";
+            this.btn09.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn09.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn09.Location = new System.Drawing.Point(353, 3);
+            this.btn09.Name = "btn09";
+            this.btn09.Size = new System.Drawing.Size(169, 122);
+            this.btn09.TabIndex = 11;
+            this.btn09.Text = "9";
+            this.btn09.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton13
+            // btnPunto
             // 
-            this.radButton13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton13.Location = new System.Drawing.Point(6, 6);
-            this.radButton13.Name = "radButton13";
-            this.radButton13.Size = new System.Drawing.Size(156, 145);
-            this.radButton13.TabIndex = 12;
-            this.radButton13.Text = "radButton13";
-            this.radButton13.ThemeName = "VisualStudio2012Light";
+            this.btnPunto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPunto.Location = new System.Drawing.Point(528, 3);
+            this.btnPunto.Name = "btnPunto";
+            this.btnPunto.Size = new System.Drawing.Size(169, 122);
+            this.btnPunto.TabIndex = 21;
+            this.btnPunto.Text = ".";
+            this.btnPunto.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton14
+            // btnSubtotal
             // 
-            this.radButton14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton14.Location = new System.Drawing.Point(171, 6);
-            this.radButton14.Name = "radButton14";
-            this.radButton14.Size = new System.Drawing.Size(156, 145);
-            this.radButton14.TabIndex = 13;
-            this.radButton14.Text = "radButton14";
-            this.radButton14.ThemeName = "VisualStudio2012Light";
+            this.btnSubtotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubtotal.Location = new System.Drawing.Point(528, 131);
+            this.btnSubtotal.Name = "btnSubtotal";
+            this.btnSubtotal.Size = new System.Drawing.Size(169, 122);
+            this.btnSubtotal.TabIndex = 22;
+            this.btnSubtotal.Text = "SUBTOTAL";
+            this.btnSubtotal.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton15
+            // btnCobrar
             // 
-            this.radButton15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton15.Location = new System.Drawing.Point(336, 6);
-            this.radButton15.Name = "radButton15";
-            this.radButton15.Size = new System.Drawing.Size(156, 145);
-            this.radButton15.TabIndex = 14;
-            this.radButton15.Text = "radButton15";
-            this.radButton15.ThemeName = "VisualStudio2012Light";
+            this.btnCobrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrar.Location = new System.Drawing.Point(528, 259);
+            this.btnCobrar.Name = "btnCobrar";
+            this.tlpCalculadora.SetRowSpan(this.btnCobrar, 2);
+            this.btnCobrar.Size = new System.Drawing.Size(169, 252);
+            this.btnCobrar.TabIndex = 23;
+            this.btnCobrar.Text = "COBRAR";
+            this.btnCobrar.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton16
+            // btnVales
             // 
-            this.radButton16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton16.Location = new System.Drawing.Point(501, 6);
-            this.radButton16.Name = "radButton16";
-            this.radButton16.Size = new System.Drawing.Size(156, 145);
-            this.radButton16.TabIndex = 15;
-            this.radButton16.Text = "radButton16";
-            this.radButton16.ThemeName = "VisualStudio2012Light";
+            this.btnVales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVales.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVales.Location = new System.Drawing.Point(703, 387);
+            this.btnVales.Name = "btnVales";
+            this.btnVales.Size = new System.Drawing.Size(171, 124);
+            this.btnVales.TabIndex = 15;
+            this.btnVales.Text = "Vales";
+            this.btnVales.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton17
+            // btnTarjeta
             // 
-            this.radButton17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton17.Location = new System.Drawing.Point(666, 6);
-            this.radButton17.Name = "radButton17";
-            this.radButton17.Size = new System.Drawing.Size(156, 145);
-            this.radButton17.TabIndex = 16;
-            this.radButton17.Text = "radButton17";
-            this.radButton17.ThemeName = "VisualStudio2012Light";
+            this.btnTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTarjeta.Location = new System.Drawing.Point(703, 259);
+            this.btnTarjeta.Name = "btnTarjeta";
+            this.btnTarjeta.Size = new System.Drawing.Size(171, 122);
+            this.btnTarjeta.TabIndex = 14;
+            this.btnTarjeta.Text = "Tarjeta ";
+            this.btnTarjeta.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton18
+            // btnDolares
             // 
-            this.radButton18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton18.Location = new System.Drawing.Point(501, 160);
-            this.radButton18.Name = "radButton18";
-            this.radButton18.Size = new System.Drawing.Size(156, 145);
-            this.radButton18.TabIndex = 17;
-            this.radButton18.Text = "x";
-            this.radButton18.ThemeName = "VisualStudio2012Light";
+            this.btnDolares.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDolares.Location = new System.Drawing.Point(703, 131);
+            this.btnDolares.Name = "btnDolares";
+            this.btnDolares.Size = new System.Drawing.Size(171, 122);
+            this.btnDolares.TabIndex = 13;
+            this.btnDolares.Text = "Dolares";
+            this.btnDolares.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton19
+            // btnEfectivo
             // 
-            this.radButton19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton19.Location = new System.Drawing.Point(666, 160);
-            this.radButton19.Name = "radButton19";
-            this.radButton19.Size = new System.Drawing.Size(156, 145);
-            this.radButton19.TabIndex = 18;
-            this.radButton19.Text = "BORRAR";
-            this.radButton19.ThemeName = "VisualStudio2012Light";
+            this.btnEfectivo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEfectivo.Location = new System.Drawing.Point(703, 3);
+            this.btnEfectivo.Name = "btnEfectivo";
+            this.btnEfectivo.Size = new System.Drawing.Size(171, 122);
+            this.btnEfectivo.TabIndex = 12;
+            this.btnEfectivo.Text = "Efectivo";
+            this.btnEfectivo.ThemeName = "VisualStudio2012Light";
             // 
-            // radButton20
+            // picImagenes
             // 
-            this.radButton20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton20.Location = new System.Drawing.Point(501, 314);
-            this.radButton20.Name = "radButton20";
-            this.radButton20.Size = new System.Drawing.Size(156, 145);
-            this.radButton20.TabIndex = 19;
-            this.radButton20.Text = "<";
-            this.radButton20.ThemeName = "VisualStudio2012Light";
+            this.picImagenes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picImagenes.Location = new System.Drawing.Point(3, 3);
+            this.picImagenes.Name = "picImagenes";
+            this.picImagenes.Size = new System.Drawing.Size(877, 253);
+            this.picImagenes.TabIndex = 1;
+            this.picImagenes.TabStop = false;
             // 
-            // radButton21
+            // tlpServicios
             // 
-            this.radButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton21.Location = new System.Drawing.Point(666, 314);
-            this.radButton21.Name = "radButton21";
-            this.radButton21.Size = new System.Drawing.Size(156, 145);
-            this.radButton21.TabIndex = 20;
-            this.radButton21.Text = ">";
-            this.radButton21.ThemeName = "VisualStudio2012Light";
+            this.tlpServicios.ColumnCount = 4;
+            this.tlpServicios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpServicios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpServicios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpServicios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpServicios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpServicios.Location = new System.Drawing.Point(3, 262);
+            this.tlpServicios.Name = "tlpServicios";
+            this.tlpServicios.RowCount = 1;
+            this.tlpServicios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpServicios.Size = new System.Drawing.Size(877, 109);
+            this.tlpServicios.TabIndex = 2;
             // 
-            // radButton22
+            // tlpIzquierda
             // 
-            this.radButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton22.Location = new System.Drawing.Point(501, 468);
-            this.radButton22.Name = "radButton22";
-            this.radButton22.Size = new System.Drawing.Size(156, 145);
-            this.radButton22.TabIndex = 21;
-            this.radButton22.Text = ".";
-            this.radButton22.ThemeName = "VisualStudio2012Light";
+            this.tlpIzquierda.ColumnCount = 1;
+            this.tlpIzquierda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpIzquierda.Controls.Add(this.gvCarritoCompras, 0, 2);
+            this.tlpIzquierda.Controls.Add(this.Codigo_Barras, 0, 1);
+            this.tlpIzquierda.Controls.Add(this.lblNumeroCaja, 0, 0);
+            this.tlpIzquierda.Controls.Add(this.tlpMenuInferior, 0, 3);
+            this.tlpIzquierda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpIzquierda.Location = new System.Drawing.Point(3, 103);
+            this.tlpIzquierda.Name = "tlpIzquierda";
+            this.tlpIzquierda.RowCount = 4;
+            this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.116409F));
+            this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.274895F));
+            this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.9038F));
+            this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.87025F));
+            this.tlpIzquierda.Size = new System.Drawing.Size(1051, 894);
+            this.tlpIzquierda.TabIndex = 1;
             // 
-            // radButton23
+            // gvCarritoCompras
             // 
-            this.radButton23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton23.Location = new System.Drawing.Point(501, 622);
-            this.radButton23.Name = "radButton23";
-            this.radButton23.Size = new System.Drawing.Size(156, 146);
-            this.radButton23.TabIndex = 22;
-            this.radButton23.Text = "SUBTOTAL";
-            this.radButton23.ThemeName = "VisualStudio2012Light";
+            this.gvCarritoCompras.AutoScroll = true;
+            this.gvCarritoCompras.AutoSizeRows = true;
+            this.gvCarritoCompras.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvCarritoCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvCarritoCompras.Location = new System.Drawing.Point(3, 157);
             // 
-            // radButton24
             // 
-            this.radButton24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.radButton24.Location = new System.Drawing.Point(666, 468);
-            this.radButton24.Name = "radButton24";
-            this.tlpBotones.SetRowSpan(this.radButton24, 2);
-            this.radButton24.Size = new System.Drawing.Size(156, 300);
-            this.radButton24.TabIndex = 23;
-            this.radButton24.Text = "COBRAR";
-            this.radButton24.ThemeName = "VisualStudio2012Light";
+            // 
+            this.gvCarritoCompras.MasterTemplate.AllowAddNewRow = false;
+            this.gvCarritoCompras.MasterTemplate.AllowCellContextMenu = false;
+            this.gvCarritoCompras.MasterTemplate.AllowColumnChooser = false;
+            this.gvCarritoCompras.MasterTemplate.AllowColumnHeaderContextMenu = false;
+            this.gvCarritoCompras.MasterTemplate.AllowColumnReorder = false;
+            this.gvCarritoCompras.MasterTemplate.AllowColumnResize = false;
+            this.gvCarritoCompras.MasterTemplate.AllowDeleteRow = false;
+            this.gvCarritoCompras.MasterTemplate.AllowDragToGroup = false;
+            this.gvCarritoCompras.MasterTemplate.AllowEditRow = false;
+            this.gvCarritoCompras.MasterTemplate.AllowRowHeaderContextMenu = false;
+            this.gvCarritoCompras.MasterTemplate.AllowRowResize = false;
+            this.gvCarritoCompras.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.gvCarritoCompras.MasterTemplate.EnableGrouping = false;
+            this.gvCarritoCompras.MasterTemplate.EnableSorting = false;
+            this.gvCarritoCompras.MasterTemplate.ShowFilteringRow = false;
+            this.gvCarritoCompras.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gvCarritoCompras.Name = "gvCarritoCompras";
+            this.gvCarritoCompras.ReadOnly = true;
+            this.gvCarritoCompras.ShowGroupPanel = false;
+            this.gvCarritoCompras.ShowGroupPanelScrollbars = false;
+            this.gvCarritoCompras.ShowItemToolTips = false;
+            this.gvCarritoCompras.Size = new System.Drawing.Size(1045, 608);
+            this.gvCarritoCompras.TabIndex = 4;
+            this.gvCarritoCompras.TabStop = false;
+            this.gvCarritoCompras.ThemeName = "VisualStudio2012Light";
+            // 
+            // Codigo_Barras
+            // 
+            this.Codigo_Barras.AutoSize = false;
+            this.Codigo_Barras.BackColor = System.Drawing.Color.Azure;
+            this.Codigo_Barras.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Codigo_Barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Codigo_Barras.Location = new System.Drawing.Point(3, 84);
+            this.Codigo_Barras.Name = "Codigo_Barras";
+            this.Codigo_Barras.NullText = "CODIGO DE PRODUCTO";
+            this.Codigo_Barras.Size = new System.Drawing.Size(1045, 67);
+            this.Codigo_Barras.TabIndex = 0;
+            this.Codigo_Barras.ThemeName = "VisualStudio2012Light";
+            // 
+            // lblNumeroCaja
+            // 
+            this.lblNumeroCaja.AutoSize = true;
+            this.lblNumeroCaja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNumeroCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroCaja.Location = new System.Drawing.Point(3, 0);
+            this.lblNumeroCaja.Name = "lblNumeroCaja";
+            this.lblNumeroCaja.Size = new System.Drawing.Size(1045, 81);
+            this.lblNumeroCaja.TabIndex = 1;
+            this.lblNumeroCaja.Text = "CAJA #";
+            this.lblNumeroCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tlpMenuInferior
+            // 
+            this.tlpMenuInferior.ColumnCount = 3;
+            this.tlpMenuInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.41627F));
+            this.tlpMenuInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.88995F));
+            this.tlpMenuInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.59809F));
+            this.tlpMenuInferior.Controls.Add(this.lblTotal, 0, 0);
+            this.tlpMenuInferior.Controls.Add(this.lblTotalPagar, 0, 0);
+            this.tlpMenuInferior.Controls.Add(this.tblAccesosDirectos, 0, 0);
+            this.tlpMenuInferior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMenuInferior.Location = new System.Drawing.Point(3, 771);
+            this.tlpMenuInferior.Name = "tlpMenuInferior";
+            this.tlpMenuInferior.RowCount = 1;
+            this.tlpMenuInferior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMenuInferior.Size = new System.Drawing.Size(1045, 120);
+            this.tlpMenuInferior.TabIndex = 5;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Azure;
+            this.lblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(676, 0);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(365, 120);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = "$ 0.00";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalPagar
+            // 
+            this.lblTotalPagar.AutoSize = true;
+            this.lblTotalPagar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPagar.Location = new System.Drawing.Point(395, 0);
+            this.lblTotalPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalPagar.Name = "lblTotalPagar";
+            this.lblTotalPagar.Size = new System.Drawing.Size(273, 120);
+            this.lblTotalPagar.TabIndex = 4;
+            this.lblTotalPagar.Text = "Total a Pagar:";
+            this.lblTotalPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tblAccesosDirectos
+            // 
+            this.tblAccesosDirectos.ColumnCount = 2;
+            this.tblAccesosDirectos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblAccesosDirectos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblAccesosDirectos.Controls.Add(this.btnF11EliminarTicket, 0, 0);
+            this.tblAccesosDirectos.Controls.Add(this.btnReimprimir, 1, 0);
+            this.tblAccesosDirectos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblAccesosDirectos.Location = new System.Drawing.Point(4, 5);
+            this.tblAccesosDirectos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tblAccesosDirectos.Name = "tblAccesosDirectos";
+            this.tblAccesosDirectos.RowCount = 1;
+            this.tblAccesosDirectos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblAccesosDirectos.Size = new System.Drawing.Size(383, 110);
+            this.tblAccesosDirectos.TabIndex = 3;
+            // 
+            // btnF11EliminarTicket
+            // 
+            this.btnF11EliminarTicket.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnF11EliminarTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnF11EliminarTicket.Location = new System.Drawing.Point(4, 5);
+            this.btnF11EliminarTicket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnF11EliminarTicket.Name = "btnF11EliminarTicket";
+            // 
+            // 
+            // 
+            this.btnF11EliminarTicket.RootElement.ControlBounds = new System.Drawing.Rectangle(4, 5, 165, 36);
+            this.btnF11EliminarTicket.Size = new System.Drawing.Size(183, 100);
+            this.btnF11EliminarTicket.TabIndex = 0;
+            this.btnF11EliminarTicket.Text = "F11 Eliminar\r\nTicket";
+            this.btnF11EliminarTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnF11EliminarTicket.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnReimprimir
+            // 
+            this.btnReimprimir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReimprimir.Location = new System.Drawing.Point(195, 5);
+            this.btnReimprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReimprimir.Name = "btnReimprimir";
+            // 
+            // 
+            // 
+            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(195, 5, 165, 36);
+            this.btnReimprimir.Size = new System.Drawing.Size(184, 100);
+            this.btnReimprimir.TabIndex = 1;
+            this.btnReimprimir.Text = "Reimprimir\r\nTicket";
+            this.btnReimprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReimprimir.ThemeName = "VisualStudio2012Light";
+            // 
+            // tlpMenuSuperior
+            // 
+            this.tlpMenuSuperior.ColumnCount = 7;
+            this.tlpPrincipal.SetColumnSpan(this.tlpMenuSuperior, 2);
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlpMenuSuperior.Controls.Add(this.btnINSVarios, 0, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnCtrlArtComun, 1, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnF10Buscar, 2, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnMayoreo, 3, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnEntradas, 4, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnSalidas, 5, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnDELBorrarArt, 6, 0);
+            this.tlpMenuSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMenuSuperior.Location = new System.Drawing.Point(3, 3);
+            this.tlpMenuSuperior.Name = "tlpMenuSuperior";
+            this.tlpMenuSuperior.RowCount = 1;
+            this.tlpMenuSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMenuSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpMenuSuperior.Size = new System.Drawing.Size(1940, 94);
+            this.tlpMenuSuperior.TabIndex = 2;
+            // 
+            // btnINSVarios
+            // 
+            this.btnINSVarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnINSVarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnINSVarios.Location = new System.Drawing.Point(3, 3);
+            this.btnINSVarios.Name = "btnINSVarios";
+            this.btnINSVarios.Size = new System.Drawing.Size(271, 88);
+            this.btnINSVarios.TabIndex = 0;
+            this.btnINSVarios.Text = "INS Varios";
+            this.btnINSVarios.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnCtrlArtComun
+            // 
+            this.btnCtrlArtComun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCtrlArtComun.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCtrlArtComun.Location = new System.Drawing.Point(280, 3);
+            this.btnCtrlArtComun.Name = "btnCtrlArtComun";
+            this.btnCtrlArtComun.Size = new System.Drawing.Size(271, 88);
+            this.btnCtrlArtComun.TabIndex = 1;
+            this.btnCtrlArtComun.Text = "CTRL + P\r\nArt. Común";
+            this.btnCtrlArtComun.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnF10Buscar
+            // 
+            this.btnF10Buscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnF10Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnF10Buscar.Location = new System.Drawing.Point(557, 3);
+            this.btnF10Buscar.Name = "btnF10Buscar";
+            this.btnF10Buscar.Size = new System.Drawing.Size(271, 88);
+            this.btnF10Buscar.TabIndex = 2;
+            this.btnF10Buscar.Text = "F10 Buscar";
+            this.btnF10Buscar.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnMayoreo
+            // 
+            this.btnMayoreo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMayoreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMayoreo.Location = new System.Drawing.Point(834, 3);
+            this.btnMayoreo.Name = "btnMayoreo";
+            this.btnMayoreo.Size = new System.Drawing.Size(271, 88);
+            this.btnMayoreo.TabIndex = 3;
+            this.btnMayoreo.Text = "Mayoreo";
+            this.btnMayoreo.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnEntradas
+            // 
+            this.btnEntradas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.Location = new System.Drawing.Point(1111, 3);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Size = new System.Drawing.Size(271, 88);
+            this.btnEntradas.TabIndex = 4;
+            this.btnEntradas.Text = "Entradas";
+            this.btnEntradas.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnSalidas
+            // 
+            this.btnSalidas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalidas.Location = new System.Drawing.Point(1388, 3);
+            this.btnSalidas.Name = "btnSalidas";
+            this.btnSalidas.Size = new System.Drawing.Size(271, 88);
+            this.btnSalidas.TabIndex = 5;
+            this.btnSalidas.Text = "Salidas";
+            this.btnSalidas.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnDELBorrarArt
+            // 
+            this.btnDELBorrarArt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDELBorrarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDELBorrarArt.Location = new System.Drawing.Point(1665, 3);
+            this.btnDELBorrarArt.Name = "btnDELBorrarArt";
+            this.btnDELBorrarArt.Size = new System.Drawing.Size(272, 88);
+            this.btnDELBorrarArt.TabIndex = 6;
+            this.btnDELBorrarArt.Text = "DEL\r\nBorrar Art.";
+            this.btnDELBorrarArt.ThemeName = "VisualStudio2012Light";
             // 
             // frmShoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1980, 1000);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1946, 1000);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -440,34 +715,50 @@
             this.Name = "frmShoppingCart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmShoppingCart";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmShoppingCart_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpDerecho.ResumeLayout(false);
             this.tlpDerecho.PerformLayout();
-            this.tlpBotones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton24)).EndInit();
+            this.tlpCalculadora.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn00)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn06)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn07)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn08)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn09)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPunto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSubtotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCobrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTarjeta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDolares)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEfectivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenes)).EndInit();
+            this.tlpIzquierda.ResumeLayout(false);
+            this.tlpIzquierda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCarritoCompras.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCarritoCompras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Codigo_Barras)).EndInit();
+            this.tlpMenuInferior.ResumeLayout(false);
+            this.tlpMenuInferior.PerformLayout();
+            this.tblAccesosDirectos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnF11EliminarTicket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReimprimir)).EndInit();
+            this.tlpMenuSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnINSVarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCtrlArtComun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnF10Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMayoreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEntradas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDELBorrarArt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,30 +767,46 @@
 
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel tlpDerecho;
-        private System.Windows.Forms.TableLayoutPanel tlpBotones;
-        private Telerik.WinControls.UI.RadButton radButton1;
-        private Telerik.WinControls.UI.RadButton radButton2;
-        private Telerik.WinControls.UI.RadButton radButton3;
-        private Telerik.WinControls.UI.RadButton radButton4;
-        private Telerik.WinControls.UI.RadButton radButton5;
-        private Telerik.WinControls.UI.RadButton radButton6;
-        private Telerik.WinControls.UI.RadButton radButton7;
-        private Telerik.WinControls.UI.RadButton radButton8;
-        private Telerik.WinControls.UI.RadButton radButton9;
-        private Telerik.WinControls.UI.RadButton radButton10;
-        private Telerik.WinControls.UI.RadButton radButton11;
-        private Telerik.WinControls.UI.RadButton radButton12;
-        private Telerik.WinControls.UI.RadButton radButton13;
-        private Telerik.WinControls.UI.RadButton radButton14;
-        private Telerik.WinControls.UI.RadButton radButton15;
-        private Telerik.WinControls.UI.RadButton radButton16;
-        private Telerik.WinControls.UI.RadButton radButton17;
-        private Telerik.WinControls.UI.RadButton radButton18;
-        private Telerik.WinControls.UI.RadButton radButton19;
-        private Telerik.WinControls.UI.RadButton radButton20;
-        private Telerik.WinControls.UI.RadButton radButton21;
-        private Telerik.WinControls.UI.RadButton radButton22;
-        private Telerik.WinControls.UI.RadButton radButton23;
-        private Telerik.WinControls.UI.RadButton radButton24;
+        private System.Windows.Forms.TableLayoutPanel tlpCalculadora;
+        private Telerik.WinControls.UI.RadButton btn0;
+        private Telerik.WinControls.UI.RadButton btn00;
+        private Telerik.WinControls.UI.RadButton btn000;
+        private Telerik.WinControls.UI.RadButton btn01;
+        private Telerik.WinControls.UI.RadButton btn02;
+        private Telerik.WinControls.UI.RadButton btn03;
+        private Telerik.WinControls.UI.RadButton btn04;
+        private Telerik.WinControls.UI.RadButton btn05;
+        private Telerik.WinControls.UI.RadButton btn06;
+        private Telerik.WinControls.UI.RadButton btn07;
+        private Telerik.WinControls.UI.RadButton btn08;
+        private Telerik.WinControls.UI.RadButton btn09;
+        private Telerik.WinControls.UI.RadButton btnEfectivo;
+        private Telerik.WinControls.UI.RadButton btnDolares;
+        private Telerik.WinControls.UI.RadButton btnTarjeta;
+        private Telerik.WinControls.UI.RadButton btnVales;
+        private Telerik.WinControls.UI.RadButton btnPunto;
+        private Telerik.WinControls.UI.RadButton btnSubtotal;
+        private Telerik.WinControls.UI.RadButton btnCobrar;
+        private System.Windows.Forms.TableLayoutPanel tlpIzquierda;
+        private Telerik.WinControls.UI.RadTextBox Codigo_Barras;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
+        private System.Windows.Forms.Label lblNumeroCaja;
+        private System.Windows.Forms.PictureBox picImagenes;
+        private Telerik.WinControls.UI.RadGridView gvCarritoCompras;
+        private System.Windows.Forms.TableLayoutPanel tlpMenuSuperior;
+        private Telerik.WinControls.UI.RadButton btnINSVarios;
+        private Telerik.WinControls.UI.RadButton btnCtrlArtComun;
+        private Telerik.WinControls.UI.RadButton btnF10Buscar;
+        private Telerik.WinControls.UI.RadButton btnMayoreo;
+        private Telerik.WinControls.UI.RadButton btnEntradas;
+        private Telerik.WinControls.UI.RadButton btnSalidas;
+        private Telerik.WinControls.UI.RadButton btnDELBorrarArt;
+        private System.Windows.Forms.TableLayoutPanel tlpMenuInferior;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTotalPagar;
+        private System.Windows.Forms.TableLayoutPanel tblAccesosDirectos;
+        private Telerik.WinControls.UI.RadButton btnF11EliminarTicket;
+        private Telerik.WinControls.UI.RadButton btnReimprimir;
+        private System.Windows.Forms.TableLayoutPanel tlpServicios;
     }
 }

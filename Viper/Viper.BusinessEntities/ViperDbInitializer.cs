@@ -5583,7 +5583,7 @@ namespace Viper.BusinessEntities
             defaultRegimenes.Add(new RegimenFiscal() { Key = "11321", Description = "VIVEROS FORESTALES Y RECOLECCIÃƒâ€œN DE PRODUCTOS FORESTALES", Fisica = true, Moral = false });
 
             //Default values of Module Table
-            defaultModules.Add(new Module() { Name = "Ventas", Menu = "F1 Ventas", Submenu = "NULL", ControlName = "btnVentas", ControlImage = "ventas.png", IsActive = false });
+            defaultModules.Add(new Module() { Name = "Ventas", Menu = "F1 Ventas", Submenu = "NULL", ControlName = "btnVentas", ControlImage = "ventas.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Productos", Menu = "F2 Productos", Submenu = "NULL", ControlName = "btnProductos", ControlImage = "productos.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Inventario", Menu = "F3 Inventario", Submenu = "NULL", ControlName = "btnInventario", ControlImage = "inventario.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Operaciones", Menu = "F4 Operaciones", Submenu = "NULL", ControlName = "btnOperaciones", ControlImage = "procesos.png", IsActive = true });

@@ -251,6 +251,28 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnExaminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        GwAAARsBjfdO5QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOtSURBVFhHxZdt
+        SFNRGMcXBH2q6I32omkR1YeCiqKgF4IiyHC7vky0oAR7AcEvUQSVNHdZWoplRZEloUalmAmVURTpFmnL
+        fElLS21WTtEsndpm29zTc850efWgzt3VgR/cc/ec//O/h/OccyYBgP+K52FBiEaq4DSrxyNArZk7crAY
+        SOShmkUyTlskU2mdCEyAS6bkby/ddXEGS2wqSFA0g4gHR6cZl8Vd0Y+HIlzXPGTkKktsKkjkKm0PEY4q
+        aIGJiMxrtsrDdCYyE3IVv4Ml6C1kBiAwMqWOlZDF9gxDDY4ZRH4j96Uq/u5EYFy2nOM5yTbNdJ8NEDbr
+        npTJOL6DjPUKTvtUFAPDqLLr2pQ3a1snIjSr2hS8J81IcinCNMtEM+AN608WlpJcUmXS/v9j4EShnhrg
+        tLHjGsCVbtt4+oFh8d70sqDo1AqxwEprIrlkKr5WqtLeQSNRTAOk3t2B/gdL+bjAQMi1ik+kv0Sd/Km+
+        pcPU02ez+IM3Dd/qMU8/0iowsObo7RLSP5+nN+D0ADh/Afz6KB6DNipLWkAY346bYJvAQFBMagXpf+3o
+        NoOzF8C4GqB0pnhUbqXJG1u7vpA8aOChx4A6/7MdF0h/UISuhUZ1PWKL+MLbLVQ6Ofe5e50ptUc8Boa2
+        WNh97IaeRjm6GdP4AeD9Xrb4ZPicSKU3xV9+RXKRI95jYFVCzgvyfP3B61c0ymFBeoTYfwA0HGSLT4af
+        z8HlApeC479jri68jUzzGAhUnyUz4Ors7usCeycOmDVWwBf083ARWqGq0UwrDSnAz3TvA4oIXSOeVvYl
+        Uck4z9g677FFfKF6F5U+kfmYVhpuRvHYdRtAyPEK6sScEhpl+wrQjUuBYM5kC3rLlxQqvS4u4zXJhTex
+        Fdj1GKDcfVZlpFEjm7UZp28OW9QbLOXgHHSRa5+F1D8q/z0LhnD0Wgf66Ncb5v9FjLXwUgrgcoChxlTn
+        zsXfGmNgecy5WnwB0J7LFvGF2ggqnXChiFaanEuKw67QQOyZ/Bc0qv4AW8QXvl2i0qv2pVWSXAtD+cXY
+        FRooLquvpFHGtWwRX+h/B7/tzgG8xlkxl2k4OWHYgG3A7nCfFB35uNkcFo/2bCpbXN5QRXLhPSALuwID
+        lsAw3kyC/NnCT+XQ+pcpk3AvFxhISic/rNyXVkXOAX+w4VBGOf16ldY8R50yW2BAEa4JwFOpGAPoZuQv
+        sPabcLfdOTI5NTD8MD9cJxv9Z1Q0Rl3FR8J8+e8AyR95O6NKKeZ0ugAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnCaptura.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -278,28 +300,6 @@
         t3M+XAHhpiCgp+Ps9fFsv3ft9IO2ck/JMYS4gItIp7bg4vWxFDAWrlV4XMdV6iRv+m/GSEaOFxDeNgRn
         Jx1/cGz3GszLXnbIWyYzm+/z0PKv45vRcew8NxGQF3mSt+SL4sQBsn8BpNP/iKrreGsAAAAASUVORK5C
         YII=
-</value>
-  </data>
-  <data name="btnExaminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        GwAAARsBjfdO5QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOtSURBVFhHxZdt
-        SFNRGMcXBH2q6I32omkR1YeCiqKgF4IiyHC7vky0oAR7AcEvUQSVNHdZWoplRZEloUalmAmVURTpFmnL
-        fElLS21WTtEsndpm29zTc850efWgzt3VgR/cc/ec//O/h/OccyYBgP+K52FBiEaq4DSrxyNArZk7crAY
-        SOShmkUyTlskU2mdCEyAS6bkby/ddXEGS2wqSFA0g4gHR6cZl8Vd0Y+HIlzXPGTkKktsKkjkKm0PEY4q
-        aIGJiMxrtsrDdCYyE3IVv4Ml6C1kBiAwMqWOlZDF9gxDDY4ZRH4j96Uq/u5EYFy2nOM5yTbNdJ8NEDbr
-        npTJOL6DjPUKTvtUFAPDqLLr2pQ3a1snIjSr2hS8J81IcinCNMtEM+AN608WlpJcUmXS/v9j4EShnhrg
-        tLHjGsCVbtt4+oFh8d70sqDo1AqxwEprIrlkKr5WqtLeQSNRTAOk3t2B/gdL+bjAQMi1ik+kv0Sd/Km+
-        pcPU02ez+IM3Dd/qMU8/0iowsObo7RLSP5+nN+D0ADh/Afz6KB6DNipLWkAY346bYJvAQFBMagXpf+3o
-        NoOzF8C4GqB0pnhUbqXJG1u7vpA8aOChx4A6/7MdF0h/UISuhUZ1PWKL+MLbLVQ6Ofe5e50ptUc8Boa2
-        WNh97IaeRjm6GdP4AeD9Xrb4ZPicSKU3xV9+RXKRI95jYFVCzgvyfP3B61c0ymFBeoTYfwA0HGSLT4af
-        z8HlApeC479jri68jUzzGAhUnyUz4Ors7usCeycOmDVWwBf083ARWqGq0UwrDSnAz3TvA4oIXSOeVvYl
-        Uck4z9g677FFfKF6F5U+kfmYVhpuRvHYdRtAyPEK6sScEhpl+wrQjUuBYM5kC3rLlxQqvS4u4zXJhTex
-        Fdj1GKDcfVZlpFEjm7UZp28OW9QbLOXgHHSRa5+F1D8q/z0LhnD0Wgf66Ncb5v9FjLXwUgrgcoChxlTn
-        zsXfGmNgecy5WnwB0J7LFvGF2ggqnXChiFaanEuKw67QQOyZ/Bc0qv4AW8QXvl2i0qv2pVWSXAtD+cXY
-        FRooLquvpFHGtWwRX+h/B7/tzgG8xlkxl2k4OWHYgG3A7nCfFB35uNkcFo/2bCpbXN5QRXLhPSALuwID
-        lsAw3kyC/NnCT+XQ+pcpk3AvFxhISic/rNyXVkXOAX+w4VBGOf16ldY8R50yW2BAEa4JwFOpGAPoZuQv
-        sPabcLfdOTI5NTD8MD9cJxv9Z1Q0Rl3FR8J8+e8AyR95O6NKKeZ0ugAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="picHuellaDigitalAS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
