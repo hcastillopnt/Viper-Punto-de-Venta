@@ -178,7 +178,7 @@
             this.Código_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Código_de_barras.Location = new System.Drawing.Point(3, 3);
             this.Código_de_barras.Name = "Código_de_barras";
-            this.Código_de_barras.NullText = "CÓDIGO DE BARRAS";
+            this.Código_de_barras.NullText = "PRODUCTO";
             this.Código_de_barras.Size = new System.Drawing.Size(1007, 77);
             this.Código_de_barras.TabIndex = 1;
             this.Código_de_barras.ThemeName = "VisualStudio2012Light";

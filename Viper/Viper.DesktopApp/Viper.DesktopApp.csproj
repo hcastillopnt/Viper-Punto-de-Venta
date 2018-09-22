@@ -304,6 +304,10 @@
     <Content Include="images\other\application_icon.ico" />
     <Content Include="images\other\application_logo.png" />
     <Content Include="images\other\wallpaper_login1.jpg" />
+    <Content Include="images\promotions\promo_1.png" />
+    <Content Include="images\promotions\promo_2.png" />
+    <Content Include="images\promotions\promo_3.png" />
+    <Content Include="images\promotions\promo_4.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
