@@ -202,9 +202,6 @@ namespace Viper.DesktopApp
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(this.btnIngresar, "Para ingresar , favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnSalir, "Para salir, favor de dar clic a este boton");
-
-            //Set Event to form
-            this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
         }
 
         #endregion

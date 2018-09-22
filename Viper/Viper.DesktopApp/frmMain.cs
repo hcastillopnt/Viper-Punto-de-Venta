@@ -121,9 +121,6 @@ namespace Viper.DesktopApp
             this.Size = new Size(width, height);
             this.WindowState = FormWindowState.Maximized;
 
-            //Set Event to form
-            this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
-
             if (rol == "ADMINISTRADOR")
             {
                 //Obtenemos el nombre de la compañia
@@ -151,11 +148,6 @@ namespace Viper.DesktopApp
             }
 
             AgregarFormularioEnPanel(new frmDashboard());
-        }
-
-        public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
-        {
-            args.Cancel = args.CloseReason == CloseReason.UserClosing;
         }
 
         public void Menu_Click(object sender, EventArgs e)

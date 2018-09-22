@@ -293,11 +293,6 @@ namespace Viper.DesktopApp
             }
         }
 
-        public void frmLogin_FormClosing(object sender, FormClosingEventArgs args)
-        {
-            args.Cancel = args.CloseReason == CloseReason.UserClosing;
-        }
-
         private void frmRegisterCompany_Load(object sender, EventArgs e)
         {
             //Set default configuration to UI
@@ -325,9 +320,6 @@ namespace Viper.DesktopApp
                 //Si se abre la ventana desde dentro de la aplicacion
                 this.WindowState = FormWindowState.Maximized;
             }
-
-            //Set Event to form
-            this.FormClosing += new FormClosingEventHandler(frmLogin_FormClosing);
 
             //Establecer los eventos a los controles
             this.Entidad_Federativa.SelectedIndexChanged += cboEstado_SelectedIndexChanged;
