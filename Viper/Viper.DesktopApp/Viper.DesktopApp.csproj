@@ -98,6 +98,30 @@
     <Compile Include="frmAdminEmployees.Designer.cs">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFindProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindProduct.Designer.cs">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputMoney.Designer.cs">
+      <DependentUpon>frmInputMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModifyInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifyInventory.Designer.cs">
+      <DependentUpon>frmModifyInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutputMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOutputMoney.Designer.cs">
+      <DependentUpon>frmOutputMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegisterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +197,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdminEmployees.resx">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindProduct.resx">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputMoney.resx">
+      <DependentUpon>frmInputMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModifyInventory.resx">
+      <DependentUpon>frmModifyInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOutputMoney.resx">
+      <DependentUpon>frmOutputMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterEmployee.resx">
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>
