@@ -128,7 +128,6 @@
             this.Name = "frmPanelServices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuConfiguration";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpCenter.ResumeLayout(false);
             this.tlpCenter.PerformLayout();
