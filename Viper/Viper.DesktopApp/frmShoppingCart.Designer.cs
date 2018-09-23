@@ -610,7 +610,7 @@
             // 
             // 
             // 
-            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(129, 3, 110, 24);
+            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(136, 3, 110, 24);
             this.btnReimprimir.Size = new System.Drawing.Size(128, 77);
             this.btnReimprimir.TabIndex = 1;
             this.btnReimprimir.Text = "Reimprimir\r\nTicket";
@@ -648,7 +648,6 @@
             // btnServicios
             // 
             this.btnServicios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnServicios.Enabled = false;
             this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicios.Image = ((System.Drawing.Image)(resources.GetObject("btnServicios.Image")));
             this.btnServicios.Location = new System.Drawing.Point(2, 2);
