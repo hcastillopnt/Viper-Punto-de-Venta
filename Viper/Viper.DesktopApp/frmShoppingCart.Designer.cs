@@ -65,9 +65,7 @@
             this.btnReimprimir = new Telerik.WinControls.UI.RadButton();
             this.tlpMenuSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnServicios = new Telerik.WinControls.UI.RadButton();
-            this.btnCtrlArtComun = new Telerik.WinControls.UI.RadButton();
             this.btnF10Buscar = new Telerik.WinControls.UI.RadButton();
-            this.btnMayoreo = new Telerik.WinControls.UI.RadButton();
             this.btnEntradas = new Telerik.WinControls.UI.RadButton();
             this.btnSalidas = new Telerik.WinControls.UI.RadButton();
             this.btnDELBorrarArt = new Telerik.WinControls.UI.RadButton();
@@ -105,9 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnReimprimir)).BeginInit();
             this.tlpMenuSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnServicios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCtrlArtComun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnF10Buscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMayoreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDELBorrarArt)).BeginInit();
@@ -198,6 +194,7 @@
             this.btn0.TabIndex = 0;
             this.btn0.Text = "0";
             this.btn0.ThemeName = "VisualStudio2012Light";
+            this.btn0.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn00
             // 
@@ -210,6 +207,7 @@
             this.btn00.TabIndex = 1;
             this.btn00.Text = "00";
             this.btn00.ThemeName = "VisualStudio2012Light";
+            this.btn00.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn000
             // 
@@ -222,6 +220,7 @@
             this.btn000.TabIndex = 2;
             this.btn000.Text = "000";
             this.btn000.ThemeName = "VisualStudio2012Light";
+            this.btn000.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn01
             // 
@@ -234,6 +233,7 @@
             this.btn01.TabIndex = 3;
             this.btn01.Text = "1";
             this.btn01.ThemeName = "VisualStudio2012Light";
+            this.btn01.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn02
             // 
@@ -246,6 +246,7 @@
             this.btn02.TabIndex = 4;
             this.btn02.Text = "2";
             this.btn02.ThemeName = "VisualStudio2012Light";
+            this.btn02.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn03
             // 
@@ -258,6 +259,7 @@
             this.btn03.TabIndex = 5;
             this.btn03.Text = "3";
             this.btn03.ThemeName = "VisualStudio2012Light";
+            this.btn03.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn04
             // 
@@ -270,6 +272,7 @@
             this.btn04.TabIndex = 6;
             this.btn04.Text = "4";
             this.btn04.ThemeName = "VisualStudio2012Light";
+            this.btn04.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn05
             // 
@@ -282,6 +285,7 @@
             this.btn05.TabIndex = 7;
             this.btn05.Text = "5";
             this.btn05.ThemeName = "VisualStudio2012Light";
+            this.btn05.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn06
             // 
@@ -294,6 +298,7 @@
             this.btn06.TabIndex = 8;
             this.btn06.Text = "6";
             this.btn06.ThemeName = "VisualStudio2012Light";
+            this.btn06.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn07
             // 
@@ -306,6 +311,7 @@
             this.btn07.TabIndex = 9;
             this.btn07.Text = "7";
             this.btn07.ThemeName = "VisualStudio2012Light";
+            this.btn07.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn08
             // 
@@ -318,6 +324,7 @@
             this.btn08.TabIndex = 10;
             this.btn08.Text = "8";
             this.btn08.ThemeName = "VisualStudio2012Light";
+            this.btn08.Click += new System.EventHandler(this.Button_Click);
             // 
             // btn09
             // 
@@ -330,11 +337,12 @@
             this.btn09.TabIndex = 11;
             this.btn09.Text = "9";
             this.btn09.ThemeName = "VisualStudio2012Light";
+            this.btn09.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnPunto
             // 
             this.btnPunto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPunto.Location = new System.Drawing.Point(374, 2);
             this.btnPunto.Margin = new System.Windows.Forms.Padding(2);
             this.btnPunto.Name = "btnPunto";
@@ -342,25 +350,27 @@
             this.btnPunto.TabIndex = 21;
             this.btnPunto.Text = ".";
             this.btnPunto.ThemeName = "VisualStudio2012Light";
+            this.btnPunto.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnSubtotal
             // 
             this.btnSubtotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSubtotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtotal.Location = new System.Drawing.Point(374, 112);
             this.btnSubtotal.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubtotal.Name = "btnSubtotal";
             this.btnSubtotal.Size = new System.Drawing.Size(120, 106);
             this.btnSubtotal.TabIndex = 22;
-            this.btnSubtotal.Text = "SUBTOTAL";
+            this.btnSubtotal.Text = "SUB\r\nTOTAL";
             this.btnSubtotal.ThemeName = "VisualStudio2012Light";
+            this.btnSubtotal.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnCobrar
             // 
             this.btnCobrar.BackColor = System.Drawing.Color.PaleGreen;
             this.btnCobrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCobrar.Location = new System.Drawing.Point(374, 222);
             this.btnCobrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCobrar.Name = "btnCobrar";
@@ -369,6 +379,7 @@
             this.btnCobrar.TabIndex = 23;
             this.btnCobrar.Text = "COBRAR";
             this.btnCobrar.ThemeName = "VisualStudio2012Light";
+            this.btnCobrar.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnVales
             // 
@@ -385,6 +396,7 @@
             this.btnVales.TabIndex = 15;
             this.btnVales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVales.ThemeName = "VisualStudio2012Light";
+            this.btnVales.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnTarjeta
             // 
@@ -401,6 +413,7 @@
             this.btnTarjeta.TabIndex = 14;
             this.btnTarjeta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTarjeta.ThemeName = "VisualStudio2012Light";
+            this.btnTarjeta.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnDolares
             // 
@@ -416,6 +429,7 @@
             this.btnDolares.TabIndex = 13;
             this.btnDolares.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDolares.ThemeName = "VisualStudio2012Light";
+            this.btnDolares.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnEfectivo
             // 
@@ -431,6 +445,7 @@
             this.btnEfectivo.TabIndex = 12;
             this.btnEfectivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEfectivo.ThemeName = "VisualStudio2012Light";
+            this.btnEfectivo.Click += new System.EventHandler(this.Button_Click);
             // 
             // picImagenes
             // 
@@ -587,7 +602,7 @@
             // btnF11EliminarTicket
             // 
             this.btnF11EliminarTicket.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnF11EliminarTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnF11EliminarTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnF11EliminarTicket.Location = new System.Drawing.Point(3, 3);
             this.btnF11EliminarTicket.Name = "btnF11EliminarTicket";
             // 
@@ -599,12 +614,13 @@
             this.btnF11EliminarTicket.Text = "F11 Eliminar\r\nTicket";
             this.btnF11EliminarTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnF11EliminarTicket.ThemeName = "VisualStudio2012Light";
+            this.btnF11EliminarTicket.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnReimprimir
             // 
             this.btnReimprimir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReimprimir.Enabled = false;
-            this.btnReimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReimprimir.Location = new System.Drawing.Point(136, 3);
             this.btnReimprimir.Name = "btnReimprimir";
             // 
@@ -616,25 +632,22 @@
             this.btnReimprimir.Text = "Reimprimir\r\nTicket";
             this.btnReimprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReimprimir.ThemeName = "VisualStudio2012Light";
+            this.btnReimprimir.Click += new System.EventHandler(this.Button_Click);
             // 
             // tlpMenuSuperior
             // 
-            this.tlpMenuSuperior.ColumnCount = 7;
+            this.tlpMenuSuperior.ColumnCount = 5;
             this.tlpPrincipal.SetColumnSpan(this.tlpMenuSuperior, 2);
             this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpMenuSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpMenuSuperior.Controls.Add(this.btnServicios, 0, 0);
-            this.tlpMenuSuperior.Controls.Add(this.btnCtrlArtComun, 1, 0);
-            this.tlpMenuSuperior.Controls.Add(this.btnF10Buscar, 2, 0);
-            this.tlpMenuSuperior.Controls.Add(this.btnMayoreo, 3, 0);
-            this.tlpMenuSuperior.Controls.Add(this.btnEntradas, 4, 0);
-            this.tlpMenuSuperior.Controls.Add(this.btnSalidas, 5, 0);
-            this.tlpMenuSuperior.Controls.Add(this.btnDELBorrarArt, 6, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnF10Buscar, 1, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnEntradas, 2, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnSalidas, 3, 0);
+            this.tlpMenuSuperior.Controls.Add(this.btnDELBorrarArt, 4, 0);
             this.tlpMenuSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMenuSuperior.Location = new System.Drawing.Point(2, 2);
             this.tlpMenuSuperior.Margin = new System.Windows.Forms.Padding(2);
@@ -648,102 +661,77 @@
             // btnServicios
             // 
             this.btnServicios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicios.Image = ((System.Drawing.Image)(resources.GetObject("btnServicios.Image")));
             this.btnServicios.Location = new System.Drawing.Point(2, 2);
             this.btnServicios.Margin = new System.Windows.Forms.Padding(2);
             this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(190, 90);
+            this.btnServicios.Size = new System.Drawing.Size(268, 90);
             this.btnServicios.TabIndex = 0;
             this.btnServicios.Text = "Servicios";
             this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnServicios.ThemeName = "VisualStudio2012Light";
-            // 
-            // btnCtrlArtComun
-            // 
-            this.btnCtrlArtComun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCtrlArtComun.Enabled = false;
-            this.btnCtrlArtComun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCtrlArtComun.Image = ((System.Drawing.Image)(resources.GetObject("btnCtrlArtComun.Image")));
-            this.btnCtrlArtComun.Location = new System.Drawing.Point(196, 2);
-            this.btnCtrlArtComun.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCtrlArtComun.Name = "btnCtrlArtComun";
-            this.btnCtrlArtComun.Size = new System.Drawing.Size(190, 90);
-            this.btnCtrlArtComun.TabIndex = 1;
-            this.btnCtrlArtComun.Text = "CTRL + P\r\nArt. Común";
-            this.btnCtrlArtComun.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCtrlArtComun.ThemeName = "VisualStudio2012Light";
+            this.btnServicios.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnF10Buscar
             // 
             this.btnF10Buscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnF10Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnF10Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnF10Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btnF10Buscar.Image")));
-            this.btnF10Buscar.Location = new System.Drawing.Point(390, 2);
+            this.btnF10Buscar.Location = new System.Drawing.Point(274, 2);
             this.btnF10Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnF10Buscar.Name = "btnF10Buscar";
-            this.btnF10Buscar.Size = new System.Drawing.Size(190, 90);
+            this.btnF10Buscar.Size = new System.Drawing.Size(268, 90);
             this.btnF10Buscar.TabIndex = 2;
             this.btnF10Buscar.Text = "F10 Buscar";
             this.btnF10Buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnF10Buscar.ThemeName = "VisualStudio2012Light";
-            // 
-            // btnMayoreo
-            // 
-            this.btnMayoreo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMayoreo.Enabled = false;
-            this.btnMayoreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMayoreo.Image = ((System.Drawing.Image)(resources.GetObject("btnMayoreo.Image")));
-            this.btnMayoreo.Location = new System.Drawing.Point(584, 2);
-            this.btnMayoreo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMayoreo.Name = "btnMayoreo";
-            this.btnMayoreo.Size = new System.Drawing.Size(190, 90);
-            this.btnMayoreo.TabIndex = 3;
-            this.btnMayoreo.Text = "Mayoreo";
-            this.btnMayoreo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMayoreo.ThemeName = "VisualStudio2012Light";
+            this.btnF10Buscar.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnEntradas
             // 
             this.btnEntradas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntradas.Image = ((System.Drawing.Image)(resources.GetObject("btnEntradas.Image")));
-            this.btnEntradas.Location = new System.Drawing.Point(778, 2);
+            this.btnEntradas.Location = new System.Drawing.Point(546, 2);
             this.btnEntradas.Margin = new System.Windows.Forms.Padding(2);
             this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.Size = new System.Drawing.Size(190, 90);
+            this.btnEntradas.Size = new System.Drawing.Size(268, 90);
             this.btnEntradas.TabIndex = 4;
             this.btnEntradas.Text = "Entradas";
             this.btnEntradas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEntradas.ThemeName = "VisualStudio2012Light";
+            this.btnEntradas.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnSalidas
             // 
             this.btnSalidas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalidas.Image = ((System.Drawing.Image)(resources.GetObject("btnSalidas.Image")));
-            this.btnSalidas.Location = new System.Drawing.Point(972, 2);
+            this.btnSalidas.Location = new System.Drawing.Point(818, 2);
             this.btnSalidas.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalidas.Name = "btnSalidas";
-            this.btnSalidas.Size = new System.Drawing.Size(190, 90);
+            this.btnSalidas.Size = new System.Drawing.Size(268, 90);
             this.btnSalidas.TabIndex = 5;
             this.btnSalidas.Text = "Salidas";
             this.btnSalidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalidas.ThemeName = "VisualStudio2012Light";
+            this.btnSalidas.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnDELBorrarArt
             // 
             this.btnDELBorrarArt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDELBorrarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDELBorrarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDELBorrarArt.Image = ((System.Drawing.Image)(resources.GetObject("btnDELBorrarArt.Image")));
-            this.btnDELBorrarArt.Location = new System.Drawing.Point(1166, 2);
+            this.btnDELBorrarArt.Location = new System.Drawing.Point(1090, 2);
             this.btnDELBorrarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnDELBorrarArt.Name = "btnDELBorrarArt";
-            this.btnDELBorrarArt.Size = new System.Drawing.Size(194, 90);
+            this.btnDELBorrarArt.Size = new System.Drawing.Size(270, 90);
             this.btnDELBorrarArt.TabIndex = 6;
             this.btnDELBorrarArt.Text = "DEL\r\nBorrar Art.";
             this.btnDELBorrarArt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDELBorrarArt.ThemeName = "VisualStudio2012Light";
+            this.btnDELBorrarArt.Click += new System.EventHandler(this.Button_Click);
             // 
             // frmShoppingCart
             // 
@@ -801,9 +789,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnReimprimir)).EndInit();
             this.tlpMenuSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnServicios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCtrlArtComun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnF10Buscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMayoreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEntradas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDELBorrarArt)).EndInit();
@@ -839,9 +825,7 @@
         private Telerik.WinControls.UI.RadGridView gvCarritoCompras;
         private System.Windows.Forms.TableLayoutPanel tlpMenuSuperior;
         private Telerik.WinControls.UI.RadButton btnServicios;
-        private Telerik.WinControls.UI.RadButton btnCtrlArtComun;
         private Telerik.WinControls.UI.RadButton btnF10Buscar;
-        private Telerik.WinControls.UI.RadButton btnMayoreo;
         private Telerik.WinControls.UI.RadButton btnEntradas;
         private Telerik.WinControls.UI.RadButton btnSalidas;
         private Telerik.WinControls.UI.RadButton btnDELBorrarArt;

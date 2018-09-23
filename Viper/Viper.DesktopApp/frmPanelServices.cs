@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Viper.DesktopApp
 {
-    public partial class frmInputMoney : Form
+    public partial class frmPanelServices : Form
     {
-        public frmInputMoney()
+        public frmPanelServices()
         {
             InitializeComponent();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

@@ -53,6 +53,31 @@ namespace Viper.DesktopApp
             thread.Start();
         }
 
+        public void Button_Click(object sender, EventArgs e)
+        {
+            objButton = (RadButton)sender;
+
+            string name = objButton.Name;
+
+            switch (name)
+            {
+                case "btnServicios":
+                    frmPanelServices frmPanelServices = new frmPanelServices();
+                    frmPanelServices.ShowDialog();
+                    break;
+
+                case "btnEntradas":
+                    frmInputMoney frmInputMoney = new frmInputMoney();
+                    frmInputMoney.ShowDialog();
+                    break;
+
+                case "btnSalidas":
+                    frmOutputMoney frmOutputMoney = new frmOutputMoney();
+                    frmOutputMoney.ShowDialog();
+                    break;
+            }
+        }
+
         public void cargarCarruselImagenes()
         {
             string folder = @"\images\promotions\";

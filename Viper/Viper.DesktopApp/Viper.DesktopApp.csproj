@@ -104,6 +104,12 @@
     <Compile Include="frmFindProduct.Designer.cs">
       <DependentUpon>frmFindProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOutputMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOutputMoney.Designer.cs">
+      <DependentUpon>frmOutputMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInputMoney.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +122,11 @@
     <Compile Include="frmModifyInventory.Designer.cs">
       <DependentUpon>frmModifyInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOutputMoney.cs">
+    <Compile Include="frmPanelServices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOutputMoney.Designer.cs">
-      <DependentUpon>frmOutputMoney.cs</DependentUpon>
+    <Compile Include="frmPanelServices.Designer.cs">
+      <DependentUpon>frmPanelServices.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegisterEmployee.cs">
       <SubType>Form</SubType>
@@ -207,14 +213,17 @@
     <EmbeddedResource Include="frmFindProduct.resx">
       <DependentUpon>frmFindProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOutputMoney.resx">
+      <DependentUpon>frmOutputMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInputMoney.resx">
       <DependentUpon>frmInputMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModifyInventory.resx">
       <DependentUpon>frmModifyInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOutputMoney.resx">
-      <DependentUpon>frmOutputMoney.cs</DependentUpon>
+    <EmbeddedResource Include="frmPanelServices.resx">
+      <DependentUpon>frmPanelServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterEmployee.resx">
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>

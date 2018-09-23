@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmPanelButtons
+    partial class frmPanelServices
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPanelButtons));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPanelServices));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tlpCenter = new System.Windows.Forms.TableLayoutPanel();
@@ -54,7 +54,7 @@
             this.tlpPrincipal.RowCount = 2;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.30262F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.60648F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1300, 740);
+            this.tlpPrincipal.Size = new System.Drawing.Size(800, 600);
             this.tlpPrincipal.TabIndex = 0;
             // 
             // tlpCenter
@@ -66,11 +66,11 @@
             this.tlpCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlpCenter.Controls.Add(this.tlpCentro, 1, 0);
             this.tlpCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCenter.Location = new System.Drawing.Point(3, 160);
+            this.tlpCenter.Location = new System.Drawing.Point(3, 130);
             this.tlpCenter.Name = "tlpCenter";
             this.tlpCenter.RowCount = 1;
             this.tlpCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCenter.Size = new System.Drawing.Size(1294, 577);
+            this.tlpCenter.Size = new System.Drawing.Size(794, 467);
             this.tlpCenter.TabIndex = 5;
             // 
             // tlpCentro
@@ -82,14 +82,14 @@
             this.tlpCentro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpCentro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCentro.Location = new System.Drawing.Point(197, 3);
+            this.tlpCentro.Location = new System.Drawing.Point(122, 3);
             this.tlpCentro.Name = "tlpCentro";
             this.tlpCentro.RowCount = 4;
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpCentro.Size = new System.Drawing.Size(899, 571);
+            this.tlpCentro.Size = new System.Drawing.Size(549, 461);
             this.tlpCentro.TabIndex = 0;
             // 
             // picLogotipoApp
@@ -98,7 +98,7 @@
             this.picLogotipoApp.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipoApp.Image")));
             this.picLogotipoApp.Location = new System.Drawing.Point(3, 3);
             this.picLogotipoApp.Name = "picLogotipoApp";
-            this.picLogotipoApp.Size = new System.Drawing.Size(1294, 151);
+            this.picLogotipoApp.Size = new System.Drawing.Size(794, 121);
             this.picLogotipoApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogotipoApp.TabIndex = 2;
             this.picLogotipoApp.TabStop = false;
@@ -111,25 +111,24 @@
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1300, 740);
+            this.pnlContenedor.Size = new System.Drawing.Size(800, 600);
             this.pnlContenedor.TabIndex = 1;
             // 
-            // frmPanelButtons
+            // frmPanelServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 740);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.ControlBox = false;
             this.Controls.Add(this.pnlContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmPanelButtons";
+            this.Name = "frmPanelServices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuConfiguration";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmPanelButtons_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpCenter.ResumeLayout(false);
             this.tlpCenter.PerformLayout();
