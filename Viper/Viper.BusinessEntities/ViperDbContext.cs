@@ -14,9 +14,7 @@ namespace Viper.BusinessEntities
     {
         public ViperDbContext() : base(ViperDbContext.getConnectionStringName())
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ViperDbContext, BusinessEntities.Migrations.Configuration>());
-            //Database.SetInitializer<ViperDbContext>(new CreateDatabaseIfNotExists<ViperDbContext>());
-            Database.SetInitializer<ViperDbContext>(new ViperDbInitializer());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ViperDbContext, BusinessEntities.Migrations.Configuration>());
         }
 
         public DbSet<CountryRegion> CountriesRegion { get; set; }

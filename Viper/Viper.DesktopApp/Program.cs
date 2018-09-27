@@ -65,30 +65,7 @@ namespace Viper.DesktopApp
                 }
                 catch (Exception ex)
                 {
-                    try
-                    {
-                        using (BusinessEntities.ViperDbContext dbCtx = new BusinessEntities.ViperDbContext())
-                        {
-                            bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
-
-                            if (isDataBaseExist)
-                            {
-                                MessageBox.Show(new Form { TopMost = true }, ex.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                Thread t = new Thread(new ThreadStart(startForm));
-                                t.Start();
-                                Thread.Sleep(45000);
-                                t.Abort();
-                                BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
-                            }
-                        }
-                    }
-                    catch (Exception ex1)
-                    {
-                        MessageBox.Show(new Form { TopMost = true }, ex1.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show(new Form { TopMost = true }, ex.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

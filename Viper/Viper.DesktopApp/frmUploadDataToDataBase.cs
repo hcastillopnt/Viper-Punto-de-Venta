@@ -50,8 +50,8 @@ namespace Viper.DesktopApp
         {
             InitializeComponent();
 
-            t = new Thread(new ThreadStart(initializeDatabase));
-            t.Start();
+            //t = new Thread(new ThreadStart(initializeDatabase));
+            //t.Start();
         }
 
         #endregion
@@ -69,10 +69,10 @@ namespace Viper.DesktopApp
             using (var ctx = new Viper.BusinessEntities.ViperDbContext())
             {
                 // Inicializar la Base de Datos
-                new Viper.BusinessEntities.ViperDbInitializer().InitializeDatabase(ctx);
-                Application.Run(new frmRegisterCompany(true));
-                this.Hide();
-                t.Abort();
+                //new Viper.BusinessEntities.ViperDbInitializer().InitializeDatabase(ctx);
+                //Application.Run(new frmRegisterCompany(true));
+                //this.Hide();
+                //t.Abort();
             }
         }
 
