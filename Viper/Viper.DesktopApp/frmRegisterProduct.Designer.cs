@@ -741,9 +741,9 @@
             // pvpDatosAdicionales
             // 
             this.pvpDatosAdicionales.ItemSize = new System.Drawing.SizeF(42F, 237F);
-            this.pvpDatosAdicionales.Location = new System.Drawing.Point(34, 5);
+            this.pvpDatosAdicionales.Location = new System.Drawing.Point(48, 5);
             this.pvpDatosAdicionales.Name = "pvpDatosAdicionales";
-            this.pvpDatosAdicionales.Size = new System.Drawing.Size(911, 752);
+            this.pvpDatosAdicionales.Size = new System.Drawing.Size(897, 752);
             this.pvpDatosAdicionales.Text = "Datos Adicionales";
             // 
             // paneIzq

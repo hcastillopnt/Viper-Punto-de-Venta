@@ -115,9 +115,9 @@
             // 
             this.picReloj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picReloj.Image = ((System.Drawing.Image)(resources.GetObject("picReloj.Image")));
-            this.picReloj.Location = new System.Drawing.Point(324, 3);
+            this.picReloj.Location = new System.Drawing.Point(336, 3);
             this.picReloj.Name = "picReloj";
-            this.picReloj.Size = new System.Drawing.Size(142, 42);
+            this.picReloj.Size = new System.Drawing.Size(70, 42);
             this.picReloj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picReloj.TabIndex = 1;
             this.picReloj.TabStop = false;
@@ -128,9 +128,9 @@
             this.lblReloj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReloj.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblReloj.Location = new System.Drawing.Point(472, 0);
+            this.lblReloj.Location = new System.Drawing.Point(412, 0);
             this.lblReloj.Name = "lblReloj";
-            this.lblReloj.Size = new System.Drawing.Size(125, 48);
+            this.lblReloj.Size = new System.Drawing.Size(185, 48);
             this.lblReloj.TabIndex = 0;
             this.lblReloj.Text = "[Fecha]";
             this.lblReloj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +141,9 @@
             this.lblDinero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDinero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDinero.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDinero.Location = new System.Drawing.Point(150, 0);
+            this.lblDinero.Location = new System.Drawing.Point(78, 0);
             this.lblDinero.Name = "lblDinero";
-            this.lblDinero.Size = new System.Drawing.Size(168, 48);
+            this.lblDinero.Size = new System.Drawing.Size(252, 48);
             this.lblDinero.TabIndex = 2;
             this.lblDinero.Text = "$ 1,000.00";
             this.lblDinero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,7 +154,7 @@
             this.picDinero.Image = ((System.Drawing.Image)(resources.GetObject("picDinero.Image")));
             this.picDinero.Location = new System.Drawing.Point(3, 3);
             this.picDinero.Name = "picDinero";
-            this.picDinero.Size = new System.Drawing.Size(141, 42);
+            this.picDinero.Size = new System.Drawing.Size(69, 42);
             this.picDinero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDinero.TabIndex = 3;
             this.picDinero.TabStop = false;
@@ -270,7 +270,6 @@
             // 
             this.picLogotipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picLogotipo.Location = new System.Drawing.Point(3, 3);
             this.picLogotipo.Name = "picLogotipo";
             this.picLogotipo.Size = new System.Drawing.Size(274, 86);
@@ -287,7 +286,7 @@
             this.cboSucursales.Location = new System.Drawing.Point(3, 95);
             this.cboSucursales.Name = "cboSucursales";
             this.cboSucursales.NullText = "--Seleccione--";
-            this.cboSucursales.Size = new System.Drawing.Size(274, 34);
+            this.cboSucursales.Size = new System.Drawing.Size(274, 24);
             this.cboSucursales.TabIndex = 1;
             this.cboSucursales.ThemeName = "VisualStudio2012Light";
             // 

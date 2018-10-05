@@ -61,19 +61,6 @@ namespace Viper.DesktopApp
 
             //Inicializar la interfaz grafica
             InitializeComponent();
-
-            //Inicializar el Time para mostrar la hora actual
-            timer.Start();
-
-            //Cargar menu de opciones
-            CargarMenuVertical(rol);
-
-            //Colocar nombre del puesto
-            lblPuesto.Text = puest.ToUpper();
-
-            //Colocar nombre de la persona
-            lblNombre.Text = nomcomp.ToUpper();
-
         }
 
         #endregion
@@ -147,7 +134,23 @@ namespace Viper.DesktopApp
                 cboSucursales.Enabled = false;
             }
 
+            //Agregar el Dashboard inicial
             AgregarFormularioEnPanel(new frmDashboard());
+
+            //Inicializar el Time para mostrar la hora actual
+            timer.Start();
+
+            //Cargar menu de opciones
+            CargarMenuVertical(rol);
+
+            //Colocar nombre del puesto
+            lblPuesto.Text = puest.ToUpper();
+
+            //Colocar nombre de la persona
+            lblNombre.Text = nomcomp.ToUpper();
+
+            //Cargar el logotipo de la compañia
+            CargarLogotipo();
         }
 
         public void Menu_Click(object sender, EventArgs e)
@@ -305,6 +308,26 @@ namespace Viper.DesktopApp
 
                 //TabIndex
                 i++;
+            }
+        }
+
+        private void CargarLogotipo()
+        {
+            string folder = @"\images\company_logo\";
+            string appPath = Path.GetDirectoryName(Application.StartupPath);
+            string folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
+
+            if (Directory.Exists(folderToSave))
+            {
+                string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
+                string filename = companyName + ".jpg";
+                string curFile = folderToSave + filename;
+
+                if (File.Exists(curFile))
+                {
+                    this.picLogotipo.Image = Image.FromFile(folderToSave + filename);
+                    this.picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
             }
         }
 
