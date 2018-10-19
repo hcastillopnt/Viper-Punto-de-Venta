@@ -39,10 +39,6 @@ namespace Viper.BusinessEntities
         public int ProductSubCategoryId { get; set; }
         public ProductSubCategory ProductSubCategory { get; set; }
 
-        [Required(ErrorMessage = "The field QuantityPerUnit is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field QuantityPerUnit must be a number.")]
-        public int QuantityPerUnit { get; set; }
-
         public Decimal StandardCost { get; set; }
 
         public Decimal ListPrice { get; set; }

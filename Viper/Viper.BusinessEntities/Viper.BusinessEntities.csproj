@@ -72,6 +72,10 @@
     <Compile Include="Migrations\201809272037202_initial.Designer.cs">
       <DependentUpon>201809272037202_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810190038371_--v1.cs" />
+    <Compile Include="Migrations\201810190038371_--v1.Designer.cs">
+      <DependentUpon>201810190038371_--v1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -109,6 +113,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809272037202_initial.resx">
       <DependentUpon>201809272037202_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810190038371_--v1.resx">
+      <DependentUpon>201810190038371_--v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,5 +22,9 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "The field SiteId must be a number.")]
         public int SiteId { get; set; }
         public Site Site { get; set; }
+
+        [Required(ErrorMessage = "The field UnitsInStock is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field UnitsInStock must be a number.")]
+        public int UnitsInStock { get; set; }
     }
 }

@@ -70,11 +70,9 @@
             this.picMedicamentoSinReceta = new System.Windows.Forms.PictureBox();
             this.picMedicamentoAntibiotico = new System.Windows.Forms.PictureBox();
             this.picOtroProducto = new System.Windows.Forms.PictureBox();
-            this.picServicioOfrecido = new System.Windows.Forms.PictureBox();
             this.lblMedicamentoSinReceta = new System.Windows.Forms.Label();
             this.lblAntibiotico = new System.Windows.Forms.Label();
             this.lblOtroProducto = new System.Windows.Forms.Label();
-            this.lblServiciosOfrecidos = new System.Windows.Forms.Label();
             this.pvpDatosAdicionales = new Telerik.WinControls.UI.RadPageViewPage();
             this.paneIzq = new Telerik.WinControls.UI.RadPanel();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
@@ -113,7 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoSinReceta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoAntibiotico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOtroProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picServicioOfrecido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).BeginInit();
             this.SuspendLayout();
             // 
@@ -620,19 +617,16 @@
             // 
             // tlp01
             // 
-            this.tlp01.ColumnCount = 4;
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp01.ColumnCount = 3;
             this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp01.Controls.Add(this.picMedicamentoSinReceta, 0, 0);
             this.tlp01.Controls.Add(this.picMedicamentoAntibiotico, 1, 0);
             this.tlp01.Controls.Add(this.picOtroProducto, 2, 0);
-            this.tlp01.Controls.Add(this.picServicioOfrecido, 3, 0);
             this.tlp01.Controls.Add(this.lblMedicamentoSinReceta, 0, 1);
             this.tlp01.Controls.Add(this.lblAntibiotico, 1, 1);
             this.tlp01.Controls.Add(this.lblOtroProducto, 2, 1);
-            this.tlp01.Controls.Add(this.lblServiciosOfrecidos, 3, 1);
             this.tlp01.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp01.Location = new System.Drawing.Point(2, 18);
             this.tlp01.Name = "tlp01";
@@ -648,7 +642,7 @@
             this.picMedicamentoSinReceta.Image = ((System.Drawing.Image)(resources.GetObject("picMedicamentoSinReceta.Image")));
             this.picMedicamentoSinReceta.Location = new System.Drawing.Point(3, 3);
             this.picMedicamentoSinReceta.Name = "picMedicamentoSinReceta";
-            this.picMedicamentoSinReceta.Size = new System.Drawing.Size(215, 67);
+            this.picMedicamentoSinReceta.Size = new System.Drawing.Size(289, 67);
             this.picMedicamentoSinReceta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMedicamentoSinReceta.TabIndex = 0;
             this.picMedicamentoSinReceta.TabStop = false;
@@ -658,9 +652,9 @@
             // 
             this.picMedicamentoAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picMedicamentoAntibiotico.Image = ((System.Drawing.Image)(resources.GetObject("picMedicamentoAntibiotico.Image")));
-            this.picMedicamentoAntibiotico.Location = new System.Drawing.Point(224, 3);
+            this.picMedicamentoAntibiotico.Location = new System.Drawing.Point(298, 3);
             this.picMedicamentoAntibiotico.Name = "picMedicamentoAntibiotico";
-            this.picMedicamentoAntibiotico.Size = new System.Drawing.Size(215, 67);
+            this.picMedicamentoAntibiotico.Size = new System.Drawing.Size(289, 67);
             this.picMedicamentoAntibiotico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMedicamentoAntibiotico.TabIndex = 1;
             this.picMedicamentoAntibiotico.TabStop = false;
@@ -670,25 +664,13 @@
             // 
             this.picOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picOtroProducto.Image = ((System.Drawing.Image)(resources.GetObject("picOtroProducto.Image")));
-            this.picOtroProducto.Location = new System.Drawing.Point(445, 3);
+            this.picOtroProducto.Location = new System.Drawing.Point(593, 3);
             this.picOtroProducto.Name = "picOtroProducto";
-            this.picOtroProducto.Size = new System.Drawing.Size(215, 67);
+            this.picOtroProducto.Size = new System.Drawing.Size(291, 67);
             this.picOtroProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picOtroProducto.TabIndex = 2;
             this.picOtroProducto.TabStop = false;
             this.picOtroProducto.Tag = "Otro Producto";
-            // 
-            // picServicioOfrecido
-            // 
-            this.picServicioOfrecido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picServicioOfrecido.Image = ((System.Drawing.Image)(resources.GetObject("picServicioOfrecido.Image")));
-            this.picServicioOfrecido.Location = new System.Drawing.Point(666, 3);
-            this.picServicioOfrecido.Name = "picServicioOfrecido";
-            this.picServicioOfrecido.Size = new System.Drawing.Size(218, 67);
-            this.picServicioOfrecido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picServicioOfrecido.TabIndex = 3;
-            this.picServicioOfrecido.TabStop = false;
-            this.picServicioOfrecido.Tag = "Servicios";
             // 
             // lblMedicamentoSinReceta
             // 
@@ -697,7 +679,7 @@
             this.lblMedicamentoSinReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedicamentoSinReceta.Location = new System.Drawing.Point(3, 73);
             this.lblMedicamentoSinReceta.Name = "lblMedicamentoSinReceta";
-            this.lblMedicamentoSinReceta.Size = new System.Drawing.Size(215, 20);
+            this.lblMedicamentoSinReceta.Size = new System.Drawing.Size(289, 20);
             this.lblMedicamentoSinReceta.TabIndex = 4;
             this.lblMedicamentoSinReceta.Text = "Medicamento Sin Receta";
             this.lblMedicamentoSinReceta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,9 +689,9 @@
             this.lblAntibiotico.AutoSize = true;
             this.lblAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAntibiotico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAntibiotico.Location = new System.Drawing.Point(224, 73);
+            this.lblAntibiotico.Location = new System.Drawing.Point(298, 73);
             this.lblAntibiotico.Name = "lblAntibiotico";
-            this.lblAntibiotico.Size = new System.Drawing.Size(215, 20);
+            this.lblAntibiotico.Size = new System.Drawing.Size(289, 20);
             this.lblAntibiotico.TabIndex = 5;
             this.lblAntibiotico.Text = "Antibiotico";
             this.lblAntibiotico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -719,24 +701,12 @@
             this.lblOtroProducto.AutoSize = true;
             this.lblOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblOtroProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtroProducto.Location = new System.Drawing.Point(445, 73);
+            this.lblOtroProducto.Location = new System.Drawing.Point(593, 73);
             this.lblOtroProducto.Name = "lblOtroProducto";
-            this.lblOtroProducto.Size = new System.Drawing.Size(215, 20);
+            this.lblOtroProducto.Size = new System.Drawing.Size(291, 20);
             this.lblOtroProducto.TabIndex = 6;
             this.lblOtroProducto.Text = "Otro Producto";
             this.lblOtroProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblServiciosOfrecidos
-            // 
-            this.lblServiciosOfrecidos.AutoSize = true;
-            this.lblServiciosOfrecidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblServiciosOfrecidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiciosOfrecidos.Location = new System.Drawing.Point(666, 73);
-            this.lblServiciosOfrecidos.Name = "lblServiciosOfrecidos";
-            this.lblServiciosOfrecidos.Size = new System.Drawing.Size(218, 20);
-            this.lblServiciosOfrecidos.TabIndex = 7;
-            this.lblServiciosOfrecidos.Text = "Servicios Ofrecidos";
-            this.lblServiciosOfrecidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pvpDatosAdicionales
             // 
@@ -812,7 +782,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoSinReceta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoAntibiotico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOtroProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picServicioOfrecido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).EndInit();
             this.ResumeLayout(false);
 
@@ -834,11 +803,9 @@
         private System.Windows.Forms.PictureBox picMedicamentoSinReceta;
         private System.Windows.Forms.PictureBox picMedicamentoAntibiotico;
         private System.Windows.Forms.PictureBox picOtroProducto;
-        private System.Windows.Forms.PictureBox picServicioOfrecido;
         private System.Windows.Forms.Label lblMedicamentoSinReceta;
         private System.Windows.Forms.Label lblAntibiotico;
         private System.Windows.Forms.Label lblOtroProducto;
-        private System.Windows.Forms.Label lblServiciosOfrecidos;
         private Telerik.WinControls.UI.RadGroupBox gbDatosProducto;
         private System.Windows.Forms.TableLayoutPanel tlp02;
         private System.Windows.Forms.Label lblCodigoBarras;
