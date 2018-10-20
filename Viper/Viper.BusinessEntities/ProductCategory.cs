@@ -17,6 +17,6 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text, ErrorMessage = "The field Name must be a string")]
         public String Name { get; set; }
 
-        public virtual ICollection<ProductCategory> ProductCategories { get; set; }
+        public virtual ICollection<ProductSubCategory> ProductsSubCategory { get; set; }
     }
 }

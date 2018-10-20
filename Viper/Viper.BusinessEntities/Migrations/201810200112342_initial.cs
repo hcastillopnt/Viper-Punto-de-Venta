@@ -424,7 +424,6 @@ namespace Viper.BusinessEntities.Migrations
                         Description = c.String(nullable: false, maxLength: 100, unicode: false, storeType: "nvarchar"),
                         Location = c.String(maxLength: 10, unicode: false, storeType: "nvarchar"),
                         ProductSubCategoryId = c.Int(nullable: false),
-                        QuantityPerUnit = c.Int(nullable: false),
                         StandardCost = c.Decimal(nullable: false, precision: 18, scale: 2),
                         ListPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         IVA = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -459,6 +458,7 @@ namespace Viper.BusinessEntities.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         ProductId = c.Int(nullable: false),
                         SiteId = c.Int(nullable: false),
+                        UnitsInStock = c.Int(nullable: false),
                         CreatedDate = c.DateTime(nullable: false, precision: 0),
                         CreatedBy = c.String(unicode: false),
                         LastUpdatedDate = c.DateTime(nullable: false, precision: 0),
@@ -488,11 +488,8 @@ namespace Viper.BusinessEntities.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 40, unicode: false, storeType: "nvarchar"),
-                        ProductCategory_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ProductCategory", t => t.ProductCategory_Id)
-                .Index(t => t.ProductCategory_Id);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Shift",
@@ -576,7 +573,6 @@ namespace Viper.BusinessEntities.Migrations
             DropForeignKey("dbo.Product", "SiteId", "dbo.Site");
             DropForeignKey("dbo.Product", "ProductSubCategoryId", "dbo.ProductSubCategory");
             DropForeignKey("dbo.ProductSubCategory", "ProductCategoryId", "dbo.ProductCategory");
-            DropForeignKey("dbo.ProductCategory", "ProductCategory_Id", "dbo.ProductCategory");
             DropForeignKey("dbo.ProductInventory", "SiteId", "dbo.Site");
             DropForeignKey("dbo.ProductInventory", "ProductId", "dbo.Product");
             DropForeignKey("dbo.Supplier", "AddressSATId", "dbo.AddressSAT");
@@ -622,7 +618,6 @@ namespace Viper.BusinessEntities.Migrations
             DropIndex("dbo.Product", new[] { "SiteId" });
             DropIndex("dbo.Product", new[] { "ProductSubCategoryId" });
             DropIndex("dbo.ProductSubCategory", new[] { "ProductCategoryId" });
-            DropIndex("dbo.ProductCategory", new[] { "ProductCategory_Id" });
             DropIndex("dbo.ProductInventory", new[] { "SiteId" });
             DropIndex("dbo.ProductInventory", new[] { "ProductId" });
             DropIndex("dbo.Supplier", new[] { "AddressSATId" });
