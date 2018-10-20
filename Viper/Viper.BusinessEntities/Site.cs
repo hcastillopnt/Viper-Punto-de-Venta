@@ -48,7 +48,7 @@ namespace Viper.BusinessEntities
         public byte[] Photo;
 
         public virtual ICollection<EmployeeDepartmentHistory> EmployeesDepartmentHistory { get; set; }
-        public virtual ICollection<Supplier> Suppliers { get; set; }
+        //public virtual ICollection<Supplier> Suppliers { get; set; }
         public virtual ICollection<ProductInventory> ProductsInventory { get; }
         public virtual ICollection<Product> Products { get; set; }
     }

@@ -71,15 +71,14 @@ namespace Viper.BusinessEntities
         public int UserId { get; set; }
         public User User { get; set; }
 
-        [ForeignKey("Site")]
-        [Required(ErrorMessage = "The field SiteId is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field SiteId must be a number.")]
-        public int SiteId { get; set; }
-        public Site Site { get; set; }
+        //[ForeignKey("Site")]
+        //[Required(ErrorMessage = "The field SiteId is required")]
+        //[Range(0, int.MaxValue, ErrorMessage = "The field SiteId must be a number.")]
+        //public int SiteId { get; set; }
+        //public Site Site { get; set; }
 
         [Required(ErrorMessage = "The field IsActive is required")]
         public bool IsActive { get; set; }
-
 
         public byte[] Logo { get; set; }
 

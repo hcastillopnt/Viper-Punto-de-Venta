@@ -395,7 +395,6 @@ namespace Viper.BusinessEntities.Migrations
                         CreditLimit = c.Decimal(nullable: false, precision: 18, scale: 2),
                         DaysCredit = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
-                        SiteId = c.Int(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         Logo = c.Binary(),
                         CreatedDate = c.DateTime(nullable: false, precision: 0),
@@ -406,11 +405,9 @@ namespace Viper.BusinessEntities.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Address", t => t.AddressId, cascadeDelete: true)
                 .ForeignKey("dbo.AddressSAT", t => t.AddressSATId, cascadeDelete: true)
-                .ForeignKey("dbo.Site", t => t.SiteId, cascadeDelete: true)
                 .ForeignKey("dbo.User", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.AddressId)
                 .Index(t => t.AddressSATId)
-                .Index(t => t.SiteId)
                 .Index(t => t.UserId);
             
             CreateTable(
@@ -568,7 +565,6 @@ namespace Viper.BusinessEntities.Migrations
             DropForeignKey("dbo.EmployeeDepartmentHistory", "EmployeeId", "dbo.Employee");
             DropForeignKey("dbo.Employee", "UserId", "dbo.User");
             DropForeignKey("dbo.Supplier", "UserId", "dbo.User");
-            DropForeignKey("dbo.Supplier", "SiteId", "dbo.Site");
             DropForeignKey("dbo.Product", "SupplierId", "dbo.Supplier");
             DropForeignKey("dbo.Product", "SiteId", "dbo.Site");
             DropForeignKey("dbo.Product", "ProductSubCategoryId", "dbo.ProductSubCategory");
@@ -613,7 +609,6 @@ namespace Viper.BusinessEntities.Migrations
             DropIndex("dbo.EmployeeDepartmentHistory", new[] { "EmployeeId" });
             DropIndex("dbo.Employee", new[] { "UserId" });
             DropIndex("dbo.Supplier", new[] { "UserId" });
-            DropIndex("dbo.Supplier", new[] { "SiteId" });
             DropIndex("dbo.Product", new[] { "SupplierId" });
             DropIndex("dbo.Product", new[] { "SiteId" });
             DropIndex("dbo.Product", new[] { "ProductSubCategoryId" });
