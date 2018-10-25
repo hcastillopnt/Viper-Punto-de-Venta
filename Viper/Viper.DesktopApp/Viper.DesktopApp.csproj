@@ -110,6 +110,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdminSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminSuppliers.Designer.cs">
+      <DependentUpon>frmAdminSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,12 @@
     <Compile Include="frmRegisterProduct.Designer.cs">
       <DependentUpon>frmRegisterProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegisterSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterSupplier.Designer.cs">
+      <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmServices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +237,9 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminSuppliers.resx">
+      <DependentUpon>frmAdminSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminEmployees.resx">
       <DependentUpon>frmAdminEmployees.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterProduct.resx">
       <DependentUpon>frmRegisterProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterSupplier.resx">
+      <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServices.resx">
       <DependentUpon>frmServices.cs</DependentUpon>

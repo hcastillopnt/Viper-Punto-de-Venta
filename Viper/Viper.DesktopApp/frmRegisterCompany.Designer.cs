@@ -207,6 +207,7 @@
             this.lblNombreEmpresa.Size = new System.Drawing.Size(138, 30);
             this.lblNombreEmpresa.TabIndex = 0;
             this.lblNombreEmpresa.Text = "Nombre:";
+            this.lblNombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Giro_Comercial
             // 
@@ -246,6 +247,7 @@
             this.lblGiro.Size = new System.Drawing.Size(138, 34);
             this.lblGiro.TabIndex = 0;
             this.lblGiro.Text = "Giro:";
+            this.lblGiro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gbDatosGenerales
             // 
@@ -430,6 +432,7 @@
             this.lblTipoInmueble.Size = new System.Drawing.Size(137, 33);
             this.lblTipoInmueble.TabIndex = 0;
             this.lblTipoInmueble.Text = "Tipo de inmueble:";
+            this.lblTipoInmueble.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblColonia
             // 
@@ -441,6 +444,7 @@
             this.lblColonia.Size = new System.Drawing.Size(137, 33);
             this.lblColonia.TabIndex = 0;
             this.lblColonia.Text = "Colonia:";
+            this.lblColonia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTipoVialidad
             // 
@@ -452,6 +456,7 @@
             this.lblTipoVialidad.Size = new System.Drawing.Size(137, 33);
             this.lblTipoVialidad.TabIndex = 0;
             this.lblTipoVialidad.Text = "Tipo de vialidad:";
+            this.lblTipoVialidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tipo_Vialidad
             // 
@@ -505,7 +510,8 @@
             this.lblNombreVialidad.Name = "lblNombreVialidad";
             this.lblNombreVialidad.Size = new System.Drawing.Size(168, 27);
             this.lblNombreVialidad.TabIndex = 0;
-            this.lblNombreVialidad.Text = "Nombre de Vialidad:";
+            this.lblNombreVialidad.Text = "Vialidad:";
+            this.lblNombreVialidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpDG_02
             // 
@@ -575,6 +581,7 @@
             this.lblNoExt.Size = new System.Drawing.Size(84, 27);
             this.lblNoExt.TabIndex = 0;
             this.lblNoExt.Text = "No Ext:";
+            this.lblNoExt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCodigoPostal
             // 
@@ -586,6 +593,7 @@
             this.lblCodigoPostal.Size = new System.Drawing.Size(137, 33);
             this.lblCodigoPostal.TabIndex = 0;
             this.lblCodigoPostal.Text = "Código Postal:";
+            this.lblCodigoPostal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblEstado
             // 
@@ -597,6 +605,7 @@
             this.lblEstado.Size = new System.Drawing.Size(137, 33);
             this.lblEstado.TabIndex = 0;
             this.lblEstado.Text = "Estado:";
+            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Entidad_Federativa
             // 
@@ -651,6 +660,7 @@
             this.lblLocalidad.Size = new System.Drawing.Size(84, 27);
             this.lblLocalidad.TabIndex = 0;
             this.lblLocalidad.Text = "Localidad:";
+            this.lblLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Codigo_Postal
             // 
@@ -680,6 +690,7 @@
             this.lblEmail.Size = new System.Drawing.Size(137, 33);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "eMail:";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTelefono
             // 
@@ -691,6 +702,7 @@
             this.lblTelefono.Size = new System.Drawing.Size(137, 36);
             this.lblTelefono.TabIndex = 0;
             this.lblTelefono.Text = "Telefono:";
+            this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpDG_04
             // 
@@ -717,6 +729,7 @@
             this.lblCelular.Size = new System.Drawing.Size(85, 30);
             this.lblCelular.TabIndex = 0;
             this.lblCelular.Text = "Celular:";
+            this.lblCelular.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Celular
             // 
@@ -924,6 +937,7 @@
             this.lblTipoInmuebleFiscal.Size = new System.Drawing.Size(154, 33);
             this.lblTipoInmuebleFiscal.TabIndex = 0;
             this.lblTipoInmuebleFiscal.Text = "Tipo de inmueble:";
+            this.lblTipoInmuebleFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblColoniaFiscal
             // 
@@ -935,6 +949,7 @@
             this.lblColoniaFiscal.Size = new System.Drawing.Size(154, 33);
             this.lblColoniaFiscal.TabIndex = 0;
             this.lblColoniaFiscal.Text = "Colonia:";
+            this.lblColoniaFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTipoVialidadFiscal
             // 
@@ -946,6 +961,7 @@
             this.lblTipoVialidadFiscal.Size = new System.Drawing.Size(154, 33);
             this.lblTipoVialidadFiscal.TabIndex = 0;
             this.lblTipoVialidadFiscal.Text = "Tipo de vialidad:";
+            this.lblTipoVialidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tipo_Vialidad_Fiscal
             // 
@@ -1000,6 +1016,7 @@
             this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(185, 27);
             this.lblNombreVialidadFiscal.TabIndex = 0;
             this.lblNombreVialidadFiscal.Text = "Nombre de Vialidad:";
+            this.lblNombreVialidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpDF_01
             // 
@@ -1044,6 +1061,7 @@
             this.lblNoIntFiscal.Size = new System.Drawing.Size(111, 27);
             this.lblNoIntFiscal.TabIndex = 0;
             this.lblNoIntFiscal.Text = "No Int:";
+            this.lblNoIntFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // No_Ext_Fiscal
             // 
@@ -1069,6 +1087,7 @@
             this.lblNoExtFiscal.Size = new System.Drawing.Size(111, 27);
             this.lblNoExtFiscal.TabIndex = 0;
             this.lblNoExtFiscal.Text = "No Ext:";
+            this.lblNoExtFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCodigoPostalFiscal
             // 
@@ -1080,6 +1099,7 @@
             this.lblCodigoPostalFiscal.Size = new System.Drawing.Size(154, 33);
             this.lblCodigoPostalFiscal.TabIndex = 0;
             this.lblCodigoPostalFiscal.Text = "Código Postal:";
+            this.lblCodigoPostalFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblEstadoFiscal
             // 
@@ -1091,6 +1111,7 @@
             this.lblEstadoFiscal.Size = new System.Drawing.Size(154, 38);
             this.lblEstadoFiscal.TabIndex = 0;
             this.lblEstadoFiscal.Text = "Estado:";
+            this.lblEstadoFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Entidad_Federativa_Fiscal
             // 
@@ -1145,6 +1166,7 @@
             this.lblLocalidadFiscal.Size = new System.Drawing.Size(111, 32);
             this.lblLocalidadFiscal.TabIndex = 0;
             this.lblLocalidadFiscal.Text = "Localidad:";
+            this.lblLocalidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Codigo_Postal_Fiscal
             // 
@@ -1258,6 +1280,7 @@
             this.lblRegimenFiscal.Size = new System.Drawing.Size(151, 34);
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal:";
+            this.lblRegimenFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CURP
             // 
@@ -1297,6 +1320,7 @@
             this.lblRFC.Size = new System.Drawing.Size(151, 34);
             this.lblRFC.TabIndex = 0;
             this.lblRFC.Text = "R.F.C.:";
+            this.lblRFC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblNombreFiscal
             // 
@@ -1308,6 +1332,7 @@
             this.lblNombreFiscal.Size = new System.Drawing.Size(151, 34);
             this.lblNombreFiscal.TabIndex = 0;
             this.lblNombreFiscal.Text = "Nombre Fiscal:";
+            this.lblNombreFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCURP
             // 
@@ -1319,6 +1344,7 @@
             this.lblCURP.Size = new System.Drawing.Size(151, 34);
             this.lblCURP.TabIndex = 0;
             this.lblCURP.Text = "C.U.R.P.:";
+            this.lblCURP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpBotones
             // 

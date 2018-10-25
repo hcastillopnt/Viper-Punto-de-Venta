@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmAdminSuppliers.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,54 +17,91 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+#endregion
+
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE VISUALIZAR TODOS LOS PROVEEDORES REGISTRADOS EN EL 
+    /// SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE GENERICOS
+    /// </summary>
     public partial class frmAdminSuppliers : Form
     {
-        #region Variables and Objects of Class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADOS EN EL FORMULARIO "frmAdminSuppliers.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes
+
         RadButton objButton = null;
+        DataTable dtSuppliers = new DataTable();
+
         #endregion
 
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmAdminSuppliers.cs"
+         * ---------------------------------------------------------
+         */
+
         #region Constructor
+
         public frmAdminSuppliers()
         {
             InitializeComponent();
         }
+
         #endregion
 
-        #region Events of the controls
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmAdminSuppliers.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
+
         public void Button_Click(Object sender, EventArgs args)
         {
             objButton = (RadButton)sender;
 
             switch (objButton.Name)
             {
-                case "btnRecargar":
-                    dgvCrudProvider.DataSource = null;
-                    dgvCrudProvider.DataSource = BusinessLogicLayer.AccesoBDBLL.getSuppliers();
+                case "btnAgregar":
+                    frmRegisterSupplier frmRegisterSupplier = new frmRegisterSupplier();
+                    frmRegisterSupplier.ShowDialog();
                     break;
 
                 case "btnBuscar":
-                    dgvCrudProvider.DataSource = null;
-                    dgvCrudProvider.DataSource = BusinessLogicLayer.AccesoBDBLL.getSupplier(Clave_Proveedor.Text);
+                    string supplierName = Proveedor.Text.Trim().ToString();
 
+                    if(string.IsNullOrEmpty(supplierName))
+                    {
+                        MessageBox.Show(new Form { TopMost = true }, "Favor de introducir el nombre del proveedor a buscar", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        gvSuppliers.DataSource = null;
+                        gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersByNameToDataTable(supplierName);
+                    }
                     break;
-                case "btnAgregar":
-                    frmRegisterSupplier add = new frmRegisterSupplier();
-                    add.ShowDialog();
-                    add.TopMost = true;
+
+                case "btnRecargar":
+                    gvSuppliers.DataSource = null;
+                    gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable();
                     break;
-                case "btnEditar":
-                    
-                    break;
+
                 case "btnEliminar":
-                    
                     break;
 
-
+                case "btnEditar":
+                    break;
             }
         }
-        private void frmCrudProvider_Load(object sender, EventArgs e)
+
+        private void frmAdminEmployees_Load(object sender, EventArgs e)
         {
             //Set default configuration to UI
             this.AutoSize = true;
@@ -64,20 +109,19 @@ namespace Viper.DesktopApp
             this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
-            //this.TopMost = true;
-            this.Size = new Size(1366, 768);
-            this.WindowState = FormWindowState.Maximized;
-            //this.Icon = new Icon("Resources/application_icon.ico");
+            this.KeyPreview = true;
 
-            this.btnAgregar.Click += Button_Click;
-            this.btnBuscar.Click += Button_Click;
-            this.btnEditar.Click += Button_Click;
-            this.btnEliminar.Click += Button_Click;
-            this.btnRecargar.Click += Button_Click;
-            dgvCrudProvider.DataSource = null;
-            dgvCrudProvider.DataSource = BusinessLogicLayer.AccesoBDBLL.getSuppliers();
+            //Establecer resolucion de la ventana
+            int height = Screen.PrimaryScreen.Bounds.Height; //Obtiene el alto de la pantalla principal en pixeles.
+            int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
+
+            this.Size = new Size(width, height);
+            this.WindowState = FormWindowState.Maximized;
+
+            //Cargar todos los empleados registrados
+            gvSuppliers.DataSource = null;
+            gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable();
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();
@@ -90,15 +134,21 @@ namespace Viper.DesktopApp
             toolTip1.ShowAlways = true;
 
             // Set up the ToolTip text for the Button and Checkbox.
-            toolTip1.SetToolTip(this.btnAgregar, "Para poder agregar a un nuevo proveedor, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnEditar , "Para editar los datos de un proveedor, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnBuscar , "Para buscar los datos de un proveedor, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnEliminar , "Para eliminar los datos de un proveedor, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnAgregar, "Para poder agregar a un nuevo producto, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnEditar, "Para editar los datos de un producto, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnBuscar, "Para buscar los datos de un producto, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnEliminar, "Para eliminar los datos de un producto, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnRecargar, "Para racargar los datos, favor de dar clic en este boton");
-
-            // Set up the ToolTip text for the TextBox and ComboBox Control.
-            toolTip1.SetToolTip(this.Clave_Proveedor , UtilMessages.BUSCAR_CLAVE_PROVEEDOR );
         }
+
+        private void Proveedor_TextChanged(object sender, EventArgs e)
+        {
+            string filter = Proveedor.Text.Trim().ToString();
+
+            gvSuppliers.DataSource = null;
+            gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersByNameToDataTable(filter);
+        }
+
         #endregion
     }
 }

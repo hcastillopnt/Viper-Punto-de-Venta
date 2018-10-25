@@ -110,9 +110,9 @@ namespace Viper.DesktopApp
                 //    AgregarFormularioEnPanel(new frmAdminCustomers());
                 //    break;
 
-                //case "btnProveedores":
-                //    AgregarFormularioEnPanel(new frmAdminSuppliers());
-                //    break;
+                case "btnProveedores":
+                    AgregarFormularioEnPanel(new frmAdminSuppliers());
+                    break;
 
                 //F5 Configuracion
                 case "btnEmpresa":

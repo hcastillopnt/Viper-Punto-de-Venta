@@ -32,13 +32,13 @@
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panelDer = new Telerik.WinControls.UI.RadPanel();
             this.pvAddProduct = new Telerik.WinControls.UI.RadPageView();
-            this.rpvDatosBasicos = new Telerik.WinControls.UI.RadPageViewPage();
+            this.pvpDatosBasicos = new Telerik.WinControls.UI.RadPageViewPage();
             this.tlpDatosBasicos = new System.Windows.Forms.TableLayoutPanel();
-            this.tlp04 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosBasicos_04 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAceptar = new Telerik.WinControls.UI.RadButton();
             this.btnCancelar = new Telerik.WinControls.UI.RadButton();
             this.gbDatosProducto = new Telerik.WinControls.UI.RadGroupBox();
-            this.tlp02 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosBasicos_02 = new System.Windows.Forms.TableLayoutPanel();
             this.lblCodigoBarras = new System.Windows.Forms.Label();
             this.lblClaveAlterna = new System.Windows.Forms.Label();
             this.Codigo_Barras = new Telerik.WinControls.UI.RadTextBox();
@@ -53,41 +53,59 @@
             this.Categoria = new Telerik.WinControls.UI.RadDropDownList();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.Proveedor = new Telerik.WinControls.UI.RadDropDownList();
-            this.gbPrecioVenta = new Telerik.WinControls.UI.RadGroupBox();
-            this.tlp03 = new System.Windows.Forms.TableLayoutPanel();
-            this.tlp04_1B = new System.Windows.Forms.TableLayoutPanel();
+            this.gbTipoProducto = new Telerik.WinControls.UI.RadGroupBox();
+            this.tlpDatosBasicos_01 = new System.Windows.Forms.TableLayoutPanel();
+            this.pvpDatosAdicionales = new Telerik.WinControls.UI.RadPageViewPage();
+            this.tlpDatosAdicionales = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosAdicionales_03 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosAdicionales_03A = new System.Windows.Forms.TableLayoutPanel();
+            this.lblHay = new System.Windows.Forms.Label();
+            this.lblInvMin = new System.Windows.Forms.Label();
+            this.Inventario_Minimo = new Telerik.WinControls.UI.RadTextBox();
+            this.Stock_Actual = new Telerik.WinControls.UI.RadTextBox();
+            this.tlpDatosAdicionales_03B = new System.Windows.Forms.TableLayoutPanel();
+            this.Inventario_Maximo = new Telerik.WinControls.UI.RadTextBox();
+            this.lblInvMax = new System.Windows.Forms.Label();
+            this.lblEnEsteMomento = new System.Windows.Forms.Label();
+            this.tlpDatosBasicos_03 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosAdicionales_02A = new System.Windows.Forms.TableLayoutPanel();
             this.lblUtilidad1 = new System.Windows.Forms.Label();
             this.Precio_Compra_Sin_Impuestos = new Telerik.WinControls.UI.RadTextBox();
             this.chkImpuesto = new Telerik.WinControls.UI.RadCheckBox();
             this.Precio_Compra_Con_Impuestos = new Telerik.WinControls.UI.RadTextBox();
-            this.tlp04_2B = new System.Windows.Forms.TableLayoutPanel();
-            this.lblUtilidadVenta = new System.Windows.Forms.Label();
-            this.lblPrecioVenta2 = new System.Windows.Forms.Label();
+            this.tlpDatosAdicionales_02B = new System.Windows.Forms.TableLayoutPanel();
             this.UtilidadVenta = new Telerik.WinControls.UI.RadTextBox();
             this.Precio_Venta = new Telerik.WinControls.UI.RadTextBox();
-            this.gbTipoProducto = new Telerik.WinControls.UI.RadGroupBox();
-            this.tlp01 = new System.Windows.Forms.TableLayoutPanel();
-            this.picMedicamentoSinReceta = new System.Windows.Forms.PictureBox();
-            this.picMedicamentoAntibiotico = new System.Windows.Forms.PictureBox();
-            this.picOtroProducto = new System.Windows.Forms.PictureBox();
-            this.lblMedicamentoSinReceta = new System.Windows.Forms.Label();
-            this.lblAntibiotico = new System.Windows.Forms.Label();
-            this.lblOtroProducto = new System.Windows.Forms.Label();
-            this.pvpDatosAdicionales = new Telerik.WinControls.UI.RadPageViewPage();
+            this.lblPrecioVenta2 = new System.Windows.Forms.Label();
+            this.lblUtilidadVenta = new System.Windows.Forms.Label();
+            this.tlpDatosAdicionales_01 = new System.Windows.Forms.TableLayoutPanel();
+            this.Utiliza_Inventario = new Telerik.WinControls.UI.RadCheckBox();
+            this.tlpDatosAdicionales_01A = new System.Windows.Forms.TableLayoutPanel();
+            this.picMedicamento = new System.Windows.Forms.PictureBox();
+            this.tlpDatosAdicionales_01B = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExaminar = new Telerik.WinControls.UI.RadButton();
+            this.pvpIndicaciones = new Telerik.WinControls.UI.RadPageViewPage();
+            this.tlpIndicacionesMedicas = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTexto = new System.Windows.Forms.Label();
+            this.Sintoma = new Telerik.WinControls.UI.RadTextBox();
+            this.tlpCuadroClinico = new System.Windows.Forms.TableLayoutPanel();
             this.paneIzq = new Telerik.WinControls.UI.RadPanel();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.btnSinReceta = new Telerik.WinControls.UI.RadButton();
+            this.btnAntibiotico = new Telerik.WinControls.UI.RadButton();
+            this.btnOtroProducto = new Telerik.WinControls.UI.RadButton();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvAddProduct)).BeginInit();
             this.pvAddProduct.SuspendLayout();
-            this.rpvDatosBasicos.SuspendLayout();
+            this.pvpDatosBasicos.SuspendLayout();
             this.tlpDatosBasicos.SuspendLayout();
-            this.tlp04.SuspendLayout();
+            this.tlpDatosBasicos_04.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosProducto)).BeginInit();
             this.gbDatosProducto.SuspendLayout();
-            this.tlp02.SuspendLayout();
+            this.tlpDatosBasicos_02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Codigo_Barras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clave_Alterna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Descripcion)).BeginInit();
@@ -95,23 +113,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.Departamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Categoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Proveedor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbPrecioVenta)).BeginInit();
-            this.gbPrecioVenta.SuspendLayout();
-            this.tlp03.SuspendLayout();
-            this.tlp04_1B.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbTipoProducto)).BeginInit();
+            this.gbTipoProducto.SuspendLayout();
+            this.tlpDatosBasicos_01.SuspendLayout();
+            this.pvpDatosAdicionales.SuspendLayout();
+            this.tlpDatosAdicionales.SuspendLayout();
+            this.tlpDatosAdicionales_03.SuspendLayout();
+            this.tlpDatosAdicionales_03A.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventario_Minimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stock_Actual)).BeginInit();
+            this.tlpDatosAdicionales_03B.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventario_Maximo)).BeginInit();
+            this.tlpDatosBasicos_03.SuspendLayout();
+            this.tlpDatosAdicionales_02A.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Compra_Sin_Impuestos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkImpuesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Compra_Con_Impuestos)).BeginInit();
-            this.tlp04_2B.SuspendLayout();
+            this.tlpDatosAdicionales_02B.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UtilidadVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Venta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbTipoProducto)).BeginInit();
-            this.gbTipoProducto.SuspendLayout();
-            this.tlp01.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoSinReceta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoAntibiotico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picOtroProducto)).BeginInit();
+            this.tlpDatosAdicionales_01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Utiliza_Inventario)).BeginInit();
+            this.tlpDatosAdicionales_01A.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMedicamento)).BeginInit();
+            this.tlpDatosAdicionales_01B.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
+            this.pvpIndicaciones.SuspendLayout();
+            this.tlpIndicacionesMedicas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sintoma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSinReceta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAntibiotico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOtroProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -143,15 +176,16 @@
             // 
             // pvAddProduct
             // 
-            this.pvAddProduct.Controls.Add(this.rpvDatosBasicos);
+            this.pvAddProduct.Controls.Add(this.pvpDatosBasicos);
             this.pvAddProduct.Controls.Add(this.pvpDatosAdicionales);
-            this.pvAddProduct.DefaultPage = this.rpvDatosBasicos;
+            this.pvAddProduct.Controls.Add(this.pvpIndicaciones);
+            this.pvAddProduct.DefaultPage = this.pvpDatosBasicos;
             this.pvAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pvAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pvAddProduct.Location = new System.Drawing.Point(207, 3);
             this.pvAddProduct.Name = "pvAddProduct";
             this.pvAddProduct.PageBackColor = System.Drawing.Color.White;
-            this.pvAddProduct.SelectedPage = this.rpvDatosBasicos;
+            this.pvAddProduct.SelectedPage = this.pvpDatosBasicos;
             this.pvAddProduct.Size = new System.Drawing.Size(950, 762);
             this.pvAddProduct.TabIndex = 0;
             this.pvAddProduct.TabStop = false;
@@ -159,49 +193,47 @@
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pvAddProduct.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pvAddProduct.GetChildAt(0))).StripAlignment = Telerik.WinControls.UI.StripViewAlignment.Left;
             // 
-            // rpvDatosBasicos
+            // pvpDatosBasicos
             // 
-            this.rpvDatosBasicos.Controls.Add(this.tlpDatosBasicos);
-            this.rpvDatosBasicos.ItemSize = new System.Drawing.SizeF(42F, 193F);
-            this.rpvDatosBasicos.Location = new System.Drawing.Point(48, 5);
-            this.rpvDatosBasicos.Name = "rpvDatosBasicos";
-            this.rpvDatosBasicos.Size = new System.Drawing.Size(897, 752);
-            this.rpvDatosBasicos.Text = "Datos Basicos";
+            this.pvpDatosBasicos.Controls.Add(this.tlpDatosBasicos);
+            this.pvpDatosBasicos.ItemSize = new System.Drawing.SizeF(42F, 193F);
+            this.pvpDatosBasicos.Location = new System.Drawing.Point(48, 5);
+            this.pvpDatosBasicos.Name = "pvpDatosBasicos";
+            this.pvpDatosBasicos.Size = new System.Drawing.Size(897, 752);
+            this.pvpDatosBasicos.Text = "Datos Basicos";
             // 
             // tlpDatosBasicos
             // 
             this.tlpDatosBasicos.ColumnCount = 1;
             this.tlpDatosBasicos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDatosBasicos.Controls.Add(this.tlp04, 0, 3);
+            this.tlpDatosBasicos.Controls.Add(this.tlpDatosBasicos_04, 0, 2);
             this.tlpDatosBasicos.Controls.Add(this.gbDatosProducto, 0, 1);
-            this.tlpDatosBasicos.Controls.Add(this.gbPrecioVenta, 0, 2);
             this.tlpDatosBasicos.Controls.Add(this.gbTipoProducto, 0, 0);
             this.tlpDatosBasicos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDatosBasicos.Location = new System.Drawing.Point(0, 0);
             this.tlpDatosBasicos.Name = "tlpDatosBasicos";
-            this.tlpDatosBasicos.RowCount = 4;
-            this.tlpDatosBasicos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.82447F));
-            this.tlpDatosBasicos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.51596F));
-            this.tlpDatosBasicos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.14894F));
+            this.tlpDatosBasicos.RowCount = 3;
+            this.tlpDatosBasicos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.81915F));
+            this.tlpDatosBasicos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.80319F));
             this.tlpDatosBasicos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.293461F));
             this.tlpDatosBasicos.Size = new System.Drawing.Size(897, 752);
             this.tlpDatosBasicos.TabIndex = 4;
             // 
-            // tlp04
+            // tlpDatosBasicos_04
             // 
-            this.tlp04.ColumnCount = 3;
-            this.tlp04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlp04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlp04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlp04.Controls.Add(this.btnAceptar, 1, 0);
-            this.tlp04.Controls.Add(this.btnCancelar, 2, 0);
-            this.tlp04.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp04.Location = new System.Drawing.Point(3, 691);
-            this.tlp04.Name = "tlp04";
-            this.tlp04.RowCount = 1;
-            this.tlp04.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp04.Size = new System.Drawing.Size(891, 58);
-            this.tlp04.TabIndex = 9;
+            this.tlpDatosBasicos_04.ColumnCount = 3;
+            this.tlpDatosBasicos_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpDatosBasicos_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpDatosBasicos_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpDatosBasicos_04.Controls.Add(this.btnAceptar, 1, 0);
+            this.tlpDatosBasicos_04.Controls.Add(this.btnCancelar, 2, 0);
+            this.tlpDatosBasicos_04.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosBasicos_04.Location = new System.Drawing.Point(3, 692);
+            this.tlpDatosBasicos_04.Name = "tlpDatosBasicos_04";
+            this.tlpDatosBasicos_04.RowCount = 1;
+            this.tlpDatosBasicos_04.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosBasicos_04.Size = new System.Drawing.Size(891, 57);
+            this.tlpDatosBasicos_04.TabIndex = 9;
             // 
             // btnAceptar
             // 
@@ -210,7 +242,7 @@
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.Location = new System.Drawing.Point(359, 3);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(261, 52);
+            this.btnAceptar.Size = new System.Drawing.Size(261, 51);
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -224,7 +256,7 @@
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(626, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(262, 52);
+            this.btnCancelar.Size = new System.Drawing.Size(262, 51);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -233,52 +265,52 @@
             // gbDatosProducto
             // 
             this.gbDatosProducto.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbDatosProducto.Controls.Add(this.tlp02);
+            this.gbDatosProducto.Controls.Add(this.tlpDatosBasicos_02);
             this.gbDatosProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDatosProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosProducto.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.gbDatosProducto.HeaderText = "";
-            this.gbDatosProducto.Location = new System.Drawing.Point(3, 122);
+            this.gbDatosProducto.Location = new System.Drawing.Point(3, 137);
             this.gbDatosProducto.Name = "gbDatosProducto";
-            this.gbDatosProducto.Size = new System.Drawing.Size(891, 419);
+            this.gbDatosProducto.Size = new System.Drawing.Size(891, 549);
             this.gbDatosProducto.TabIndex = 11;
             this.gbDatosProducto.ThemeName = "VisualStudio2012Light";
             // 
-            // tlp02
+            // tlpDatosBasicos_02
             // 
-            this.tlp02.ColumnCount = 2;
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp02.Controls.Add(this.lblCodigoBarras, 0, 0);
-            this.tlp02.Controls.Add(this.lblClaveAlterna, 1, 0);
-            this.tlp02.Controls.Add(this.Codigo_Barras, 0, 1);
-            this.tlp02.Controls.Add(this.Clave_Alterna, 1, 1);
-            this.tlp02.Controls.Add(this.lblDescripcion, 0, 2);
-            this.tlp02.Controls.Add(this.Descripcion, 0, 3);
-            this.tlp02.Controls.Add(this.SustanciaActiva, 0, 5);
-            this.tlp02.Controls.Add(this.lblSustanciaActiva, 0, 4);
-            this.tlp02.Controls.Add(this.lblDepartamento, 0, 6);
-            this.tlp02.Controls.Add(this.lblCategoria, 1, 6);
-            this.tlp02.Controls.Add(this.Departamento, 0, 7);
-            this.tlp02.Controls.Add(this.Categoria, 1, 7);
-            this.tlp02.Controls.Add(this.lblProveedor, 0, 8);
-            this.tlp02.Controls.Add(this.Proveedor, 0, 9);
-            this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp02.Location = new System.Drawing.Point(2, 18);
-            this.tlp02.Name = "tlp02";
-            this.tlp02.RowCount = 10;
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlp02.Size = new System.Drawing.Size(887, 399);
-            this.tlp02.TabIndex = 0;
+            this.tlpDatosBasicos_02.ColumnCount = 2;
+            this.tlpDatosBasicos_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosBasicos_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosBasicos_02.Controls.Add(this.lblCodigoBarras, 0, 0);
+            this.tlpDatosBasicos_02.Controls.Add(this.lblClaveAlterna, 1, 0);
+            this.tlpDatosBasicos_02.Controls.Add(this.Codigo_Barras, 0, 1);
+            this.tlpDatosBasicos_02.Controls.Add(this.Clave_Alterna, 1, 1);
+            this.tlpDatosBasicos_02.Controls.Add(this.lblDescripcion, 0, 2);
+            this.tlpDatosBasicos_02.Controls.Add(this.Descripcion, 0, 3);
+            this.tlpDatosBasicos_02.Controls.Add(this.SustanciaActiva, 0, 5);
+            this.tlpDatosBasicos_02.Controls.Add(this.lblSustanciaActiva, 0, 4);
+            this.tlpDatosBasicos_02.Controls.Add(this.lblDepartamento, 0, 6);
+            this.tlpDatosBasicos_02.Controls.Add(this.lblCategoria, 1, 6);
+            this.tlpDatosBasicos_02.Controls.Add(this.Departamento, 0, 7);
+            this.tlpDatosBasicos_02.Controls.Add(this.Categoria, 1, 7);
+            this.tlpDatosBasicos_02.Controls.Add(this.lblProveedor, 0, 8);
+            this.tlpDatosBasicos_02.Controls.Add(this.Proveedor, 0, 9);
+            this.tlpDatosBasicos_02.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosBasicos_02.Location = new System.Drawing.Point(2, 18);
+            this.tlpDatosBasicos_02.Name = "tlpDatosBasicos_02";
+            this.tlpDatosBasicos_02.RowCount = 10;
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpDatosBasicos_02.Size = new System.Drawing.Size(887, 529);
+            this.tlpDatosBasicos_02.TabIndex = 0;
             // 
             // lblCodigoBarras
             // 
@@ -287,7 +319,7 @@
             this.lblCodigoBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoBarras.Location = new System.Drawing.Point(3, 0);
             this.lblCodigoBarras.Name = "lblCodigoBarras";
-            this.lblCodigoBarras.Size = new System.Drawing.Size(437, 39);
+            this.lblCodigoBarras.Size = new System.Drawing.Size(437, 52);
             this.lblCodigoBarras.TabIndex = 0;
             this.lblCodigoBarras.Text = "Codigo de Barras:";
             // 
@@ -298,7 +330,7 @@
             this.lblClaveAlterna.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClaveAlterna.Location = new System.Drawing.Point(446, 0);
             this.lblClaveAlterna.Name = "lblClaveAlterna";
-            this.lblClaveAlterna.Size = new System.Drawing.Size(438, 39);
+            this.lblClaveAlterna.Size = new System.Drawing.Size(438, 52);
             this.lblClaveAlterna.TabIndex = 1;
             this.lblClaveAlterna.Text = "Clave Alterna:";
             // 
@@ -307,9 +339,9 @@
             this.Codigo_Barras.AutoSize = false;
             this.Codigo_Barras.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_Barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Barras.Location = new System.Drawing.Point(3, 42);
+            this.Codigo_Barras.Location = new System.Drawing.Point(3, 55);
             this.Codigo_Barras.Name = "Codigo_Barras";
-            this.Codigo_Barras.Size = new System.Drawing.Size(437, 33);
+            this.Codigo_Barras.Size = new System.Drawing.Size(437, 46);
             this.Codigo_Barras.TabIndex = 2;
             this.Codigo_Barras.ThemeName = "VisualStudio2012Light";
             // 
@@ -317,10 +349,11 @@
             // 
             this.Clave_Alterna.AutoSize = false;
             this.Clave_Alterna.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Clave_Alterna.Enabled = false;
             this.Clave_Alterna.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clave_Alterna.Location = new System.Drawing.Point(446, 42);
+            this.Clave_Alterna.Location = new System.Drawing.Point(446, 55);
             this.Clave_Alterna.Name = "Clave_Alterna";
-            this.Clave_Alterna.Size = new System.Drawing.Size(438, 33);
+            this.Clave_Alterna.Size = new System.Drawing.Size(438, 46);
             this.Clave_Alterna.TabIndex = 3;
             this.Clave_Alterna.ThemeName = "VisualStudio2012Light";
             // 
@@ -329,33 +362,33 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(3, 78);
+            this.lblDescripcion.Location = new System.Drawing.Point(3, 104);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(437, 39);
+            this.lblDescripcion.Size = new System.Drawing.Size(437, 52);
             this.lblDescripcion.TabIndex = 4;
             this.lblDescripcion.Text = "Descripcion:";
             // 
             // Descripcion
             // 
             this.Descripcion.AutoSize = false;
-            this.tlp02.SetColumnSpan(this.Descripcion, 2);
+            this.tlpDatosBasicos_02.SetColumnSpan(this.Descripcion, 2);
             this.Descripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(3, 120);
+            this.Descripcion.Location = new System.Drawing.Point(3, 159);
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(881, 33);
+            this.Descripcion.Size = new System.Drawing.Size(881, 46);
             this.Descripcion.TabIndex = 5;
             this.Descripcion.ThemeName = "VisualStudio2012Light";
             // 
             // SustanciaActiva
             // 
             this.SustanciaActiva.AutoSize = false;
-            this.tlp02.SetColumnSpan(this.SustanciaActiva, 2);
+            this.tlpDatosBasicos_02.SetColumnSpan(this.SustanciaActiva, 2);
             this.SustanciaActiva.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SustanciaActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SustanciaActiva.Location = new System.Drawing.Point(3, 198);
+            this.SustanciaActiva.Location = new System.Drawing.Point(3, 263);
             this.SustanciaActiva.Name = "SustanciaActiva";
-            this.SustanciaActiva.Size = new System.Drawing.Size(881, 33);
+            this.SustanciaActiva.Size = new System.Drawing.Size(881, 46);
             this.SustanciaActiva.TabIndex = 6;
             this.SustanciaActiva.ThemeName = "VisualStudio2012Light";
             // 
@@ -364,9 +397,9 @@
             this.lblSustanciaActiva.AutoSize = true;
             this.lblSustanciaActiva.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSustanciaActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSustanciaActiva.Location = new System.Drawing.Point(3, 156);
+            this.lblSustanciaActiva.Location = new System.Drawing.Point(3, 208);
             this.lblSustanciaActiva.Name = "lblSustanciaActiva";
-            this.lblSustanciaActiva.Size = new System.Drawing.Size(437, 39);
+            this.lblSustanciaActiva.Size = new System.Drawing.Size(437, 52);
             this.lblSustanciaActiva.TabIndex = 7;
             this.lblSustanciaActiva.Text = "Sustancia Activa:";
             // 
@@ -375,9 +408,9 @@
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(3, 234);
+            this.lblDepartamento.Location = new System.Drawing.Point(3, 312);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(437, 39);
+            this.lblDepartamento.Size = new System.Drawing.Size(437, 52);
             this.lblDepartamento.TabIndex = 8;
             this.lblDepartamento.Text = "Departamento:";
             // 
@@ -386,9 +419,9 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(446, 234);
+            this.lblCategoria.Location = new System.Drawing.Point(446, 312);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(438, 39);
+            this.lblCategoria.Size = new System.Drawing.Size(438, 52);
             this.lblCategoria.TabIndex = 9;
             this.lblCategoria.Text = "Categoria:";
             // 
@@ -398,9 +431,9 @@
             this.Departamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Departamento.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Departamento.Location = new System.Drawing.Point(3, 276);
+            this.Departamento.Location = new System.Drawing.Point(3, 367);
             this.Departamento.Name = "Departamento";
-            this.Departamento.Size = new System.Drawing.Size(437, 33);
+            this.Departamento.Size = new System.Drawing.Size(437, 46);
             this.Departamento.TabIndex = 10;
             this.Departamento.ThemeName = "VisualStudio2012Light";
             // 
@@ -410,9 +443,9 @@
             this.Categoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Categoria.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Categoria.Location = new System.Drawing.Point(446, 276);
+            this.Categoria.Location = new System.Drawing.Point(446, 367);
             this.Categoria.Name = "Categoria";
-            this.Categoria.Size = new System.Drawing.Size(438, 33);
+            this.Categoria.Size = new System.Drawing.Size(438, 46);
             this.Categoria.TabIndex = 11;
             this.Categoria.ThemeName = "VisualStudio2012Light";
             // 
@@ -421,9 +454,9 @@
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedor.Location = new System.Drawing.Point(3, 312);
+            this.lblProveedor.Location = new System.Drawing.Point(3, 416);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(437, 39);
+            this.lblProveedor.Size = new System.Drawing.Size(437, 52);
             this.lblProveedor.TabIndex = 12;
             this.lblProveedor.Text = "Proveedor:";
             // 
@@ -433,59 +466,238 @@
             this.Proveedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Proveedor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Proveedor.Location = new System.Drawing.Point(3, 354);
+            this.Proveedor.Location = new System.Drawing.Point(3, 471);
             this.Proveedor.Name = "Proveedor";
-            this.Proveedor.Size = new System.Drawing.Size(437, 42);
+            this.Proveedor.Size = new System.Drawing.Size(437, 55);
             this.Proveedor.TabIndex = 13;
             this.Proveedor.ThemeName = "VisualStudio2012Light";
             // 
-            // gbPrecioVenta
+            // gbTipoProducto
             // 
-            this.gbPrecioVenta.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbPrecioVenta.Controls.Add(this.tlp03);
-            this.gbPrecioVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPrecioVenta.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.gbPrecioVenta.HeaderText = "";
-            this.gbPrecioVenta.Location = new System.Drawing.Point(3, 547);
-            this.gbPrecioVenta.Name = "gbPrecioVenta";
-            this.gbPrecioVenta.Size = new System.Drawing.Size(891, 138);
-            this.gbPrecioVenta.TabIndex = 12;
-            this.gbPrecioVenta.ThemeName = "VisualStudio2012Light";
+            this.gbTipoProducto.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbTipoProducto.Controls.Add(this.tlpDatosBasicos_01);
+            this.gbTipoProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.gbTipoProducto.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
+            this.gbTipoProducto.HeaderText = "";
+            this.gbTipoProducto.Location = new System.Drawing.Point(3, 3);
+            this.gbTipoProducto.Name = "gbTipoProducto";
+            this.gbTipoProducto.Size = new System.Drawing.Size(891, 128);
+            this.gbTipoProducto.TabIndex = 14;
+            this.gbTipoProducto.ThemeName = "VisualStudio2012Light";
             // 
-            // tlp03
+            // tlpDatosBasicos_01
             // 
-            this.tlp03.ColumnCount = 2;
-            this.tlp03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp03.Controls.Add(this.tlp04_1B, 0, 0);
-            this.tlp03.Controls.Add(this.tlp04_2B, 1, 0);
-            this.tlp03.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp03.Location = new System.Drawing.Point(2, 18);
-            this.tlp03.Name = "tlp03";
-            this.tlp03.RowCount = 1;
-            this.tlp03.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.23256F));
-            this.tlp03.Size = new System.Drawing.Size(887, 118);
-            this.tlp03.TabIndex = 0;
+            this.tlpDatosBasicos_01.ColumnCount = 3;
+            this.tlpDatosBasicos_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDatosBasicos_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDatosBasicos_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDatosBasicos_01.Controls.Add(this.btnSinReceta, 0, 0);
+            this.tlpDatosBasicos_01.Controls.Add(this.btnAntibiotico, 1, 0);
+            this.tlpDatosBasicos_01.Controls.Add(this.btnOtroProducto, 2, 0);
+            this.tlpDatosBasicos_01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosBasicos_01.Location = new System.Drawing.Point(2, 18);
+            this.tlpDatosBasicos_01.Name = "tlpDatosBasicos_01";
+            this.tlpDatosBasicos_01.RowCount = 1;
+            this.tlpDatosBasicos_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosBasicos_01.Size = new System.Drawing.Size(887, 108);
+            this.tlpDatosBasicos_01.TabIndex = 10;
             // 
-            // tlp04_1B
+            // pvpDatosAdicionales
             // 
-            this.tlp04_1B.ColumnCount = 2;
-            this.tlp04_1B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp04_1B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp04_1B.Controls.Add(this.lblUtilidad1, 0, 0);
-            this.tlp04_1B.Controls.Add(this.Precio_Compra_Sin_Impuestos, 1, 0);
-            this.tlp04_1B.Controls.Add(this.chkImpuesto, 0, 1);
-            this.tlp04_1B.Controls.Add(this.Precio_Compra_Con_Impuestos, 1, 1);
-            this.tlp04_1B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp04_1B.Location = new System.Drawing.Point(3, 3);
-            this.tlp04_1B.Name = "tlp04_1B";
-            this.tlp04_1B.RowCount = 2;
-            this.tlp04_1B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp04_1B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
-            this.tlp04_1B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp04_1B.Size = new System.Drawing.Size(437, 112);
-            this.tlp04_1B.TabIndex = 0;
+            this.pvpDatosAdicionales.Controls.Add(this.tlpDatosAdicionales);
+            this.pvpDatosAdicionales.ItemSize = new System.Drawing.SizeF(42F, 237F);
+            this.pvpDatosAdicionales.Location = new System.Drawing.Point(48, 5);
+            this.pvpDatosAdicionales.Name = "pvpDatosAdicionales";
+            this.pvpDatosAdicionales.Size = new System.Drawing.Size(897, 752);
+            this.pvpDatosAdicionales.Text = "Datos Adicionales";
+            // 
+            // tlpDatosAdicionales
+            // 
+            this.tlpDatosAdicionales.ColumnCount = 1;
+            this.tlpDatosAdicionales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosAdicionales.Controls.Add(this.tlpDatosAdicionales_03, 0, 2);
+            this.tlpDatosAdicionales.Controls.Add(this.tlpDatosBasicos_03, 0, 1);
+            this.tlpDatosAdicionales.Controls.Add(this.tlpDatosAdicionales_01, 0, 0);
+            this.tlpDatosAdicionales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales.Location = new System.Drawing.Point(0, 0);
+            this.tlpDatosAdicionales.Name = "tlpDatosAdicionales";
+            this.tlpDatosAdicionales.RowCount = 3;
+            this.tlpDatosAdicionales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tlpDatosAdicionales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosAdicionales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDatosAdicionales.Size = new System.Drawing.Size(897, 752);
+            this.tlpDatosAdicionales.TabIndex = 0;
+            // 
+            // tlpDatosAdicionales_03
+            // 
+            this.tlpDatosAdicionales_03.ColumnCount = 2;
+            this.tlpDatosAdicionales_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_03.Controls.Add(this.tlpDatosAdicionales_03A, 0, 0);
+            this.tlpDatosAdicionales_03.Controls.Add(this.tlpDatosAdicionales_03B, 1, 0);
+            this.tlpDatosAdicionales_03.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_03.Location = new System.Drawing.Point(3, 604);
+            this.tlpDatosAdicionales_03.Name = "tlpDatosAdicionales_03";
+            this.tlpDatosAdicionales_03.RowCount = 1;
+            this.tlpDatosAdicionales_03.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosAdicionales_03.Size = new System.Drawing.Size(891, 145);
+            this.tlpDatosAdicionales_03.TabIndex = 2;
+            // 
+            // tlpDatosAdicionales_03A
+            // 
+            this.tlpDatosAdicionales_03A.ColumnCount = 2;
+            this.tlpDatosAdicionales_03A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_03A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_03A.Controls.Add(this.lblHay, 0, 1);
+            this.tlpDatosAdicionales_03A.Controls.Add(this.lblInvMin, 0, 0);
+            this.tlpDatosAdicionales_03A.Controls.Add(this.Inventario_Minimo, 1, 0);
+            this.tlpDatosAdicionales_03A.Controls.Add(this.Stock_Actual, 1, 1);
+            this.tlpDatosAdicionales_03A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_03A.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosAdicionales_03A.Name = "tlpDatosAdicionales_03A";
+            this.tlpDatosAdicionales_03A.RowCount = 2;
+            this.tlpDatosAdicionales_03A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_03A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
+            this.tlpDatosAdicionales_03A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpDatosAdicionales_03A.Size = new System.Drawing.Size(439, 139);
+            this.tlpDatosAdicionales_03A.TabIndex = 0;
+            // 
+            // lblHay
+            // 
+            this.lblHay.AutoSize = true;
+            this.lblHay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblHay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHay.Location = new System.Drawing.Point(3, 69);
+            this.lblHay.Name = "lblHay";
+            this.lblHay.Size = new System.Drawing.Size(213, 70);
+            this.lblHay.TabIndex = 6;
+            this.lblHay.Text = "Hay:";
+            this.lblHay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblInvMin
+            // 
+            this.lblInvMin.AutoSize = true;
+            this.lblInvMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblInvMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvMin.Location = new System.Drawing.Point(3, 0);
+            this.lblInvMin.Name = "lblInvMin";
+            this.lblInvMin.Size = new System.Drawing.Size(213, 69);
+            this.lblInvMin.TabIndex = 1;
+            this.lblInvMin.Text = "Inv. Minimo:";
+            this.lblInvMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Inventario_Minimo
+            // 
+            this.Inventario_Minimo.AutoSize = false;
+            this.Inventario_Minimo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Inventario_Minimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventario_Minimo.Location = new System.Drawing.Point(222, 3);
+            this.Inventario_Minimo.Name = "Inventario_Minimo";
+            this.Inventario_Minimo.Size = new System.Drawing.Size(214, 63);
+            this.Inventario_Minimo.TabIndex = 3;
+            this.Inventario_Minimo.ThemeName = "VisualStudio2012Light";
+            // 
+            // Stock_Actual
+            // 
+            this.Stock_Actual.AutoSize = false;
+            this.Stock_Actual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Stock_Actual.Enabled = false;
+            this.Stock_Actual.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stock_Actual.Location = new System.Drawing.Point(222, 72);
+            this.Stock_Actual.Name = "Stock_Actual";
+            this.Stock_Actual.Size = new System.Drawing.Size(214, 64);
+            this.Stock_Actual.TabIndex = 5;
+            this.Stock_Actual.ThemeName = "VisualStudio2012Light";
+            // 
+            // tlpDatosAdicionales_03B
+            // 
+            this.tlpDatosAdicionales_03B.ColumnCount = 2;
+            this.tlpDatosAdicionales_03B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_03B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_03B.Controls.Add(this.Inventario_Maximo, 1, 0);
+            this.tlpDatosAdicionales_03B.Controls.Add(this.lblInvMax, 0, 0);
+            this.tlpDatosAdicionales_03B.Controls.Add(this.lblEnEsteMomento, 0, 1);
+            this.tlpDatosAdicionales_03B.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_03B.Location = new System.Drawing.Point(448, 3);
+            this.tlpDatosAdicionales_03B.Name = "tlpDatosAdicionales_03B";
+            this.tlpDatosAdicionales_03B.RowCount = 2;
+            this.tlpDatosAdicionales_03B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_03B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
+            this.tlpDatosAdicionales_03B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpDatosAdicionales_03B.Size = new System.Drawing.Size(440, 139);
+            this.tlpDatosAdicionales_03B.TabIndex = 1;
+            // 
+            // Inventario_Maximo
+            // 
+            this.Inventario_Maximo.AutoSize = false;
+            this.Inventario_Maximo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Inventario_Maximo.Enabled = false;
+            this.Inventario_Maximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventario_Maximo.Location = new System.Drawing.Point(223, 3);
+            this.Inventario_Maximo.Name = "Inventario_Maximo";
+            this.Inventario_Maximo.Size = new System.Drawing.Size(214, 63);
+            this.Inventario_Maximo.TabIndex = 4;
+            this.Inventario_Maximo.ThemeName = "VisualStudio2012Light";
+            // 
+            // lblInvMax
+            // 
+            this.lblInvMax.AutoSize = true;
+            this.lblInvMax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblInvMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvMax.Location = new System.Drawing.Point(3, 0);
+            this.lblInvMax.Name = "lblInvMax";
+            this.lblInvMax.Size = new System.Drawing.Size(214, 69);
+            this.lblInvMax.TabIndex = 2;
+            this.lblInvMax.Text = "Inv. Maximo:";
+            this.lblInvMax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblEnEsteMomento
+            // 
+            this.lblEnEsteMomento.AutoSize = true;
+            this.tlpDatosAdicionales_03B.SetColumnSpan(this.lblEnEsteMomento, 2);
+            this.lblEnEsteMomento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEnEsteMomento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnEsteMomento.Location = new System.Drawing.Point(3, 69);
+            this.lblEnEsteMomento.Name = "lblEnEsteMomento";
+            this.lblEnEsteMomento.Size = new System.Drawing.Size(434, 70);
+            this.lblEnEsteMomento.TabIndex = 1;
+            this.lblEnEsteMomento.Text = "en este momento";
+            this.lblEnEsteMomento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tlpDatosBasicos_03
+            // 
+            this.tlpDatosBasicos_03.ColumnCount = 2;
+            this.tlpDatosBasicos_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosBasicos_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosBasicos_03.Controls.Add(this.tlpDatosAdicionales_02A, 0, 0);
+            this.tlpDatosBasicos_03.Controls.Add(this.tlpDatosAdicionales_02B, 1, 0);
+            this.tlpDatosBasicos_03.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosBasicos_03.Location = new System.Drawing.Point(3, 454);
+            this.tlpDatosBasicos_03.Name = "tlpDatosBasicos_03";
+            this.tlpDatosBasicos_03.RowCount = 1;
+            this.tlpDatosBasicos_03.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosBasicos_03.Size = new System.Drawing.Size(891, 144);
+            this.tlpDatosBasicos_03.TabIndex = 1;
+            // 
+            // tlpDatosAdicionales_02A
+            // 
+            this.tlpDatosAdicionales_02A.ColumnCount = 2;
+            this.tlpDatosAdicionales_02A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_02A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_02A.Controls.Add(this.lblUtilidad1, 0, 0);
+            this.tlpDatosAdicionales_02A.Controls.Add(this.Precio_Compra_Sin_Impuestos, 1, 0);
+            this.tlpDatosAdicionales_02A.Controls.Add(this.chkImpuesto, 0, 1);
+            this.tlpDatosAdicionales_02A.Controls.Add(this.Precio_Compra_Con_Impuestos, 1, 1);
+            this.tlpDatosAdicionales_02A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_02A.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosAdicionales_02A.Name = "tlpDatosAdicionales_02A";
+            this.tlpDatosAdicionales_02A.RowCount = 2;
+            this.tlpDatosAdicionales_02A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_02A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
+            this.tlpDatosAdicionales_02A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpDatosAdicionales_02A.Size = new System.Drawing.Size(439, 138);
+            this.tlpDatosAdicionales_02A.TabIndex = 0;
             // 
             // lblUtilidad1
             // 
@@ -494,7 +706,7 @@
             this.lblUtilidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUtilidad1.Location = new System.Drawing.Point(3, 0);
             this.lblUtilidad1.Name = "lblUtilidad1";
-            this.lblUtilidad1.Size = new System.Drawing.Size(212, 55);
+            this.lblUtilidad1.Size = new System.Drawing.Size(213, 68);
             this.lblUtilidad1.TabIndex = 1;
             this.lblUtilidad1.Text = "Precio de Compra:";
             this.lblUtilidad1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -504,9 +716,9 @@
             this.Precio_Compra_Sin_Impuestos.AutoSize = false;
             this.Precio_Compra_Sin_Impuestos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Precio_Compra_Sin_Impuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Precio_Compra_Sin_Impuestos.Location = new System.Drawing.Point(221, 3);
+            this.Precio_Compra_Sin_Impuestos.Location = new System.Drawing.Point(222, 3);
             this.Precio_Compra_Sin_Impuestos.Name = "Precio_Compra_Sin_Impuestos";
-            this.Precio_Compra_Sin_Impuestos.Size = new System.Drawing.Size(213, 49);
+            this.Precio_Compra_Sin_Impuestos.Size = new System.Drawing.Size(214, 62);
             this.Precio_Compra_Sin_Impuestos.TabIndex = 3;
             this.Precio_Compra_Sin_Impuestos.ThemeName = "VisualStudio2012Light";
             // 
@@ -515,11 +727,11 @@
             this.chkImpuesto.AutoSize = false;
             this.chkImpuesto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkImpuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkImpuesto.Location = new System.Drawing.Point(3, 58);
+            this.chkImpuesto.Location = new System.Drawing.Point(3, 71);
             this.chkImpuesto.Name = "chkImpuesto";
-            this.chkImpuesto.Size = new System.Drawing.Size(212, 51);
+            this.chkImpuesto.Size = new System.Drawing.Size(213, 64);
             this.chkImpuesto.TabIndex = 4;
-            this.chkImpuesto.Text = "Impuesto I.V.A. (16 %)";
+            this.chkImpuesto.Text = "Impuesto I.V.A. \r\n(16 %)";
             this.chkImpuesto.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.chkImpuesto.ThemeName = "VisualStudio2012Light";
             // 
@@ -529,63 +741,39 @@
             this.Precio_Compra_Con_Impuestos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Precio_Compra_Con_Impuestos.Enabled = false;
             this.Precio_Compra_Con_Impuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Precio_Compra_Con_Impuestos.Location = new System.Drawing.Point(221, 58);
+            this.Precio_Compra_Con_Impuestos.Location = new System.Drawing.Point(222, 71);
             this.Precio_Compra_Con_Impuestos.Name = "Precio_Compra_Con_Impuestos";
-            this.Precio_Compra_Con_Impuestos.Size = new System.Drawing.Size(213, 51);
+            this.Precio_Compra_Con_Impuestos.Size = new System.Drawing.Size(214, 64);
             this.Precio_Compra_Con_Impuestos.TabIndex = 5;
             this.Precio_Compra_Con_Impuestos.ThemeName = "VisualStudio2012Light";
             // 
-            // tlp04_2B
+            // tlpDatosAdicionales_02B
             // 
-            this.tlp04_2B.ColumnCount = 2;
-            this.tlp04_2B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp04_2B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp04_2B.Controls.Add(this.lblUtilidadVenta, 0, 0);
-            this.tlp04_2B.Controls.Add(this.lblPrecioVenta2, 0, 1);
-            this.tlp04_2B.Controls.Add(this.UtilidadVenta, 1, 0);
-            this.tlp04_2B.Controls.Add(this.Precio_Venta, 1, 1);
-            this.tlp04_2B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp04_2B.Location = new System.Drawing.Point(446, 3);
-            this.tlp04_2B.Name = "tlp04_2B";
-            this.tlp04_2B.RowCount = 2;
-            this.tlp04_2B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp04_2B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
-            this.tlp04_2B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp04_2B.Size = new System.Drawing.Size(438, 112);
-            this.tlp04_2B.TabIndex = 1;
-            // 
-            // lblUtilidadVenta
-            // 
-            this.lblUtilidadVenta.AutoSize = true;
-            this.lblUtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblUtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUtilidadVenta.Location = new System.Drawing.Point(3, 0);
-            this.lblUtilidadVenta.Name = "lblUtilidadVenta";
-            this.lblUtilidadVenta.Size = new System.Drawing.Size(213, 55);
-            this.lblUtilidadVenta.TabIndex = 1;
-            this.lblUtilidadVenta.Text = "% Utilidad:";
-            this.lblUtilidadVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblPrecioVenta2
-            // 
-            this.lblPrecioVenta2.AutoSize = true;
-            this.lblPrecioVenta2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPrecioVenta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioVenta2.Location = new System.Drawing.Point(3, 55);
-            this.lblPrecioVenta2.Name = "lblPrecioVenta2";
-            this.lblPrecioVenta2.Size = new System.Drawing.Size(213, 57);
-            this.lblPrecioVenta2.TabIndex = 2;
-            this.lblPrecioVenta2.Text = "Precio Venta:";
-            this.lblPrecioVenta2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlpDatosAdicionales_02B.ColumnCount = 2;
+            this.tlpDatosAdicionales_02B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_02B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_02B.Controls.Add(this.lblUtilidadVenta, 0, 0);
+            this.tlpDatosAdicionales_02B.Controls.Add(this.lblPrecioVenta2, 0, 1);
+            this.tlpDatosAdicionales_02B.Controls.Add(this.Precio_Venta, 1, 1);
+            this.tlpDatosAdicionales_02B.Controls.Add(this.UtilidadVenta, 1, 0);
+            this.tlpDatosAdicionales_02B.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_02B.Location = new System.Drawing.Point(448, 3);
+            this.tlpDatosAdicionales_02B.Name = "tlpDatosAdicionales_02B";
+            this.tlpDatosAdicionales_02B.RowCount = 2;
+            this.tlpDatosAdicionales_02B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosAdicionales_02B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
+            this.tlpDatosAdicionales_02B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpDatosAdicionales_02B.Size = new System.Drawing.Size(440, 138);
+            this.tlpDatosAdicionales_02B.TabIndex = 1;
             // 
             // UtilidadVenta
             // 
             this.UtilidadVenta.AutoSize = false;
             this.UtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UtilidadVenta.Location = new System.Drawing.Point(222, 3);
+            this.UtilidadVenta.Location = new System.Drawing.Point(223, 3);
             this.UtilidadVenta.Name = "UtilidadVenta";
-            this.UtilidadVenta.Size = new System.Drawing.Size(213, 49);
+            this.UtilidadVenta.Size = new System.Drawing.Size(214, 62);
             this.UtilidadVenta.TabIndex = 3;
             this.UtilidadVenta.ThemeName = "VisualStudio2012Light";
             // 
@@ -595,126 +783,186 @@
             this.Precio_Venta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Precio_Venta.Enabled = false;
             this.Precio_Venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Precio_Venta.Location = new System.Drawing.Point(222, 58);
+            this.Precio_Venta.Location = new System.Drawing.Point(223, 71);
             this.Precio_Venta.Name = "Precio_Venta";
-            this.Precio_Venta.Size = new System.Drawing.Size(213, 51);
+            this.Precio_Venta.Size = new System.Drawing.Size(214, 64);
             this.Precio_Venta.TabIndex = 4;
             this.Precio_Venta.ThemeName = "VisualStudio2012Light";
             // 
-            // gbTipoProducto
+            // lblPrecioVenta2
             // 
-            this.gbTipoProducto.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbTipoProducto.Controls.Add(this.tlp01);
-            this.gbTipoProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.gbTipoProducto.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.gbTipoProducto.HeaderText = "";
-            this.gbTipoProducto.Location = new System.Drawing.Point(3, 3);
-            this.gbTipoProducto.Name = "gbTipoProducto";
-            this.gbTipoProducto.Size = new System.Drawing.Size(891, 113);
-            this.gbTipoProducto.TabIndex = 14;
-            this.gbTipoProducto.ThemeName = "VisualStudio2012Light";
+            this.lblPrecioVenta2.AutoSize = true;
+            this.lblPrecioVenta2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPrecioVenta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioVenta2.Location = new System.Drawing.Point(3, 68);
+            this.lblPrecioVenta2.Name = "lblPrecioVenta2";
+            this.lblPrecioVenta2.Size = new System.Drawing.Size(214, 70);
+            this.lblPrecioVenta2.TabIndex = 2;
+            this.lblPrecioVenta2.Text = "Precio Venta:";
+            this.lblPrecioVenta2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tlp01
+            // lblUtilidadVenta
             // 
-            this.tlp01.ColumnCount = 3;
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp01.Controls.Add(this.picMedicamentoSinReceta, 0, 0);
-            this.tlp01.Controls.Add(this.picMedicamentoAntibiotico, 1, 0);
-            this.tlp01.Controls.Add(this.picOtroProducto, 2, 0);
-            this.tlp01.Controls.Add(this.lblMedicamentoSinReceta, 0, 1);
-            this.tlp01.Controls.Add(this.lblAntibiotico, 1, 1);
-            this.tlp01.Controls.Add(this.lblOtroProducto, 2, 1);
-            this.tlp01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp01.Location = new System.Drawing.Point(2, 18);
-            this.tlp01.Name = "tlp01";
-            this.tlp01.RowCount = 2;
-            this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp01.Size = new System.Drawing.Size(887, 93);
-            this.tlp01.TabIndex = 10;
+            this.lblUtilidadVenta.AutoSize = true;
+            this.lblUtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblUtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUtilidadVenta.Location = new System.Drawing.Point(3, 0);
+            this.lblUtilidadVenta.Name = "lblUtilidadVenta";
+            this.lblUtilidadVenta.Size = new System.Drawing.Size(214, 68);
+            this.lblUtilidadVenta.TabIndex = 1;
+            this.lblUtilidadVenta.Text = "% Utilidad:";
+            this.lblUtilidadVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // picMedicamentoSinReceta
+            // tlpDatosAdicionales_01
             // 
-            this.picMedicamentoSinReceta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picMedicamentoSinReceta.Image = ((System.Drawing.Image)(resources.GetObject("picMedicamentoSinReceta.Image")));
-            this.picMedicamentoSinReceta.Location = new System.Drawing.Point(3, 3);
-            this.picMedicamentoSinReceta.Name = "picMedicamentoSinReceta";
-            this.picMedicamentoSinReceta.Size = new System.Drawing.Size(289, 67);
-            this.picMedicamentoSinReceta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMedicamentoSinReceta.TabIndex = 0;
-            this.picMedicamentoSinReceta.TabStop = false;
-            this.picMedicamentoSinReceta.Tag = "Medicamento Sin Receta";
+            this.tlpDatosAdicionales_01.ColumnCount = 1;
+            this.tlpDatosAdicionales_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosAdicionales_01.Controls.Add(this.Utiliza_Inventario, 0, 2);
+            this.tlpDatosAdicionales_01.Controls.Add(this.tlpDatosAdicionales_01A, 0, 0);
+            this.tlpDatosAdicionales_01.Controls.Add(this.tlpDatosAdicionales_01B, 0, 1);
+            this.tlpDatosAdicionales_01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_01.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosAdicionales_01.Name = "tlpDatosAdicionales_01";
+            this.tlpDatosAdicionales_01.RowCount = 3;
+            this.tlpDatosAdicionales_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.66292F));
+            this.tlpDatosAdicionales_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.1573F));
+            this.tlpDatosAdicionales_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.95506F));
+            this.tlpDatosAdicionales_01.Size = new System.Drawing.Size(891, 445);
+            this.tlpDatosAdicionales_01.TabIndex = 3;
             // 
-            // picMedicamentoAntibiotico
+            // Utiliza_Inventario
             // 
-            this.picMedicamentoAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picMedicamentoAntibiotico.Image = ((System.Drawing.Image)(resources.GetObject("picMedicamentoAntibiotico.Image")));
-            this.picMedicamentoAntibiotico.Location = new System.Drawing.Point(298, 3);
-            this.picMedicamentoAntibiotico.Name = "picMedicamentoAntibiotico";
-            this.picMedicamentoAntibiotico.Size = new System.Drawing.Size(289, 67);
-            this.picMedicamentoAntibiotico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMedicamentoAntibiotico.TabIndex = 1;
-            this.picMedicamentoAntibiotico.TabStop = false;
-            this.picMedicamentoAntibiotico.Tag = "Antibiotico";
+            this.Utiliza_Inventario.AutoSize = false;
+            this.Utiliza_Inventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Utiliza_Inventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Utiliza_Inventario.Location = new System.Drawing.Point(3, 376);
+            this.Utiliza_Inventario.Name = "Utiliza_Inventario";
+            this.Utiliza_Inventario.Size = new System.Drawing.Size(885, 66);
+            this.Utiliza_Inventario.TabIndex = 5;
+            this.Utiliza_Inventario.Text = "Este producto SI utiliza inventario";
+            this.Utiliza_Inventario.ThemeName = "VisualStudio2012Light";
             // 
-            // picOtroProducto
+            // tlpDatosAdicionales_01A
             // 
-            this.picOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picOtroProducto.Image = ((System.Drawing.Image)(resources.GetObject("picOtroProducto.Image")));
-            this.picOtroProducto.Location = new System.Drawing.Point(593, 3);
-            this.picOtroProducto.Name = "picOtroProducto";
-            this.picOtroProducto.Size = new System.Drawing.Size(291, 67);
-            this.picOtroProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picOtroProducto.TabIndex = 2;
-            this.picOtroProducto.TabStop = false;
-            this.picOtroProducto.Tag = "Otro Producto";
+            this.tlpDatosAdicionales_01A.ColumnCount = 3;
+            this.tlpDatosAdicionales_01A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_01A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_01A.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_01A.Controls.Add(this.picMedicamento, 1, 0);
+            this.tlpDatosAdicionales_01A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_01A.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosAdicionales_01A.Name = "tlpDatosAdicionales_01A";
+            this.tlpDatosAdicionales_01A.RowCount = 1;
+            this.tlpDatosAdicionales_01A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosAdicionales_01A.Size = new System.Drawing.Size(885, 304);
+            this.tlpDatosAdicionales_01A.TabIndex = 6;
             // 
-            // lblMedicamentoSinReceta
+            // picMedicamento
             // 
-            this.lblMedicamentoSinReceta.AutoSize = true;
-            this.lblMedicamentoSinReceta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMedicamentoSinReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedicamentoSinReceta.Location = new System.Drawing.Point(3, 73);
-            this.lblMedicamentoSinReceta.Name = "lblMedicamentoSinReceta";
-            this.lblMedicamentoSinReceta.Size = new System.Drawing.Size(289, 20);
-            this.lblMedicamentoSinReceta.TabIndex = 4;
-            this.lblMedicamentoSinReceta.Text = "Medicamento Sin Receta";
-            this.lblMedicamentoSinReceta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.picMedicamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMedicamento.Location = new System.Drawing.Point(298, 3);
+            this.picMedicamento.Name = "picMedicamento";
+            this.picMedicamento.Size = new System.Drawing.Size(289, 298);
+            this.picMedicamento.TabIndex = 0;
+            this.picMedicamento.TabStop = false;
             // 
-            // lblAntibiotico
+            // tlpDatosAdicionales_01B
             // 
-            this.lblAntibiotico.AutoSize = true;
-            this.lblAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAntibiotico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAntibiotico.Location = new System.Drawing.Point(298, 73);
-            this.lblAntibiotico.Name = "lblAntibiotico";
-            this.lblAntibiotico.Size = new System.Drawing.Size(289, 20);
-            this.lblAntibiotico.TabIndex = 5;
-            this.lblAntibiotico.Text = "Antibiotico";
-            this.lblAntibiotico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tlpDatosAdicionales_01B.ColumnCount = 3;
+            this.tlpDatosAdicionales_01B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_01B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_01B.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosAdicionales_01B.Controls.Add(this.btnExaminar, 1, 0);
+            this.tlpDatosAdicionales_01B.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosAdicionales_01B.Location = new System.Drawing.Point(3, 313);
+            this.tlpDatosAdicionales_01B.Name = "tlpDatosAdicionales_01B";
+            this.tlpDatosAdicionales_01B.RowCount = 1;
+            this.tlpDatosAdicionales_01B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosAdicionales_01B.Size = new System.Drawing.Size(885, 57);
+            this.tlpDatosAdicionales_01B.TabIndex = 7;
             // 
-            // lblOtroProducto
+            // btnExaminar
             // 
-            this.lblOtroProducto.AutoSize = true;
-            this.lblOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOtroProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtroProducto.Location = new System.Drawing.Point(593, 73);
-            this.lblOtroProducto.Name = "lblOtroProducto";
-            this.lblOtroProducto.Size = new System.Drawing.Size(291, 20);
-            this.lblOtroProducto.TabIndex = 6;
-            this.lblOtroProducto.Text = "Otro Producto";
-            this.lblOtroProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
+            this.btnExaminar.Location = new System.Drawing.Point(298, 3);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(289, 51);
+            this.btnExaminar.TabIndex = 0;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExaminar.ThemeName = "VisualStudio2012Light";
             // 
-            // pvpDatosAdicionales
+            // pvpIndicaciones
             // 
-            this.pvpDatosAdicionales.ItemSize = new System.Drawing.SizeF(42F, 237F);
-            this.pvpDatosAdicionales.Location = new System.Drawing.Point(48, 5);
-            this.pvpDatosAdicionales.Name = "pvpDatosAdicionales";
-            this.pvpDatosAdicionales.Size = new System.Drawing.Size(897, 752);
-            this.pvpDatosAdicionales.Text = "Datos Adicionales";
+            this.pvpIndicaciones.Controls.Add(this.tlpIndicacionesMedicas);
+            this.pvpIndicaciones.Enabled = false;
+            this.pvpIndicaciones.ItemSize = new System.Drawing.SizeF(42F, 280F);
+            this.pvpIndicaciones.Location = new System.Drawing.Point(48, 5);
+            this.pvpIndicaciones.Name = "pvpIndicaciones";
+            this.pvpIndicaciones.Size = new System.Drawing.Size(897, 752);
+            this.pvpIndicaciones.Text = "Indicaciones Medicas";
+            // 
+            // tlpIndicacionesMedicas
+            // 
+            this.tlpIndicacionesMedicas.ColumnCount = 1;
+            this.tlpIndicacionesMedicas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpIndicacionesMedicas.Controls.Add(this.lblTexto, 0, 0);
+            this.tlpIndicacionesMedicas.Controls.Add(this.Sintoma, 0, 1);
+            this.tlpIndicacionesMedicas.Controls.Add(this.tlpCuadroClinico, 0, 2);
+            this.tlpIndicacionesMedicas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpIndicacionesMedicas.Location = new System.Drawing.Point(0, 0);
+            this.tlpIndicacionesMedicas.Name = "tlpIndicacionesMedicas";
+            this.tlpIndicacionesMedicas.RowCount = 3;
+            this.tlpIndicacionesMedicas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpIndicacionesMedicas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpIndicacionesMedicas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tlpIndicacionesMedicas.Size = new System.Drawing.Size(897, 752);
+            this.tlpIndicacionesMedicas.TabIndex = 0;
+            // 
+            // lblTexto
+            // 
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexto.Location = new System.Drawing.Point(3, 0);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(891, 75);
+            this.lblTexto.TabIndex = 2;
+            this.lblTexto.Text = "Escriba para que sirve el medicamento:";
+            this.lblTexto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Sintoma
+            // 
+            this.Sintoma.AutoSize = false;
+            this.Sintoma.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Sintoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sintoma.Location = new System.Drawing.Point(3, 78);
+            this.Sintoma.Name = "Sintoma";
+            this.Sintoma.Size = new System.Drawing.Size(891, 69);
+            this.Sintoma.TabIndex = 4;
+            this.Sintoma.ThemeName = "VisualStudio2012Light";
+            // 
+            // tlpCuadroClinico
+            // 
+            this.tlpCuadroClinico.ColumnCount = 5;
+            this.tlpCuadroClinico.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCuadroClinico.Location = new System.Drawing.Point(3, 153);
+            this.tlpCuadroClinico.Name = "tlpCuadroClinico";
+            this.tlpCuadroClinico.RowCount = 5;
+            this.tlpCuadroClinico.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCuadroClinico.Size = new System.Drawing.Size(891, 596);
+            this.tlpCuadroClinico.TabIndex = 5;
             // 
             // paneIzq
             // 
@@ -725,6 +973,49 @@
             this.paneIzq.Size = new System.Drawing.Size(198, 762);
             this.paneIzq.TabIndex = 0;
             this.paneIzq.TabStop = false;
+            // 
+            // btnSinReceta
+            // 
+            this.btnSinReceta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSinReceta.Enabled = false;
+            this.btnSinReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnSinReceta.Image = ((System.Drawing.Image)(resources.GetObject("btnSinReceta.Image")));
+            this.btnSinReceta.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSinReceta.Location = new System.Drawing.Point(3, 3);
+            this.btnSinReceta.Name = "btnSinReceta";
+            this.btnSinReceta.Size = new System.Drawing.Size(289, 102);
+            this.btnSinReceta.TabIndex = 0;
+            this.btnSinReceta.Text = "Sin Receta";
+            this.btnSinReceta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSinReceta.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnAntibiotico
+            // 
+            this.btnAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAntibiotico.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnAntibiotico.Image = ((System.Drawing.Image)(resources.GetObject("btnAntibiotico.Image")));
+            this.btnAntibiotico.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAntibiotico.Location = new System.Drawing.Point(298, 3);
+            this.btnAntibiotico.Name = "btnAntibiotico";
+            this.btnAntibiotico.Size = new System.Drawing.Size(289, 102);
+            this.btnAntibiotico.TabIndex = 1;
+            this.btnAntibiotico.Text = "Antibiotico";
+            this.btnAntibiotico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAntibiotico.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnOtroProducto
+            // 
+            this.btnOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOtroProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnOtroProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnOtroProducto.Image")));
+            this.btnOtroProducto.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOtroProducto.Location = new System.Drawing.Point(593, 3);
+            this.btnOtroProducto.Name = "btnOtroProducto";
+            this.btnOtroProducto.Size = new System.Drawing.Size(291, 102);
+            this.btnOtroProducto.TabIndex = 2;
+            this.btnOtroProducto.Text = "Otro Producto";
+            this.btnOtroProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnOtroProducto.ThemeName = "VisualStudio2012Light";
             // 
             // frmRegisterProduct
             // 
@@ -747,15 +1038,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvAddProduct)).EndInit();
             this.pvAddProduct.ResumeLayout(false);
-            this.rpvDatosBasicos.ResumeLayout(false);
+            this.pvpDatosBasicos.ResumeLayout(false);
             this.tlpDatosBasicos.ResumeLayout(false);
-            this.tlp04.ResumeLayout(false);
+            this.tlpDatosBasicos_04.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosProducto)).EndInit();
             this.gbDatosProducto.ResumeLayout(false);
-            this.tlp02.ResumeLayout(false);
-            this.tlp02.PerformLayout();
+            this.tlpDatosBasicos_02.ResumeLayout(false);
+            this.tlpDatosBasicos_02.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Codigo_Barras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clave_Alterna)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Descripcion)).EndInit();
@@ -763,26 +1054,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.Departamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Categoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Proveedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbPrecioVenta)).EndInit();
-            this.gbPrecioVenta.ResumeLayout(false);
-            this.tlp03.ResumeLayout(false);
-            this.tlp04_1B.ResumeLayout(false);
-            this.tlp04_1B.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbTipoProducto)).EndInit();
+            this.gbTipoProducto.ResumeLayout(false);
+            this.tlpDatosBasicos_01.ResumeLayout(false);
+            this.pvpDatosAdicionales.ResumeLayout(false);
+            this.tlpDatosAdicionales.ResumeLayout(false);
+            this.tlpDatosAdicionales_03.ResumeLayout(false);
+            this.tlpDatosAdicionales_03A.ResumeLayout(false);
+            this.tlpDatosAdicionales_03A.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventario_Minimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stock_Actual)).EndInit();
+            this.tlpDatosAdicionales_03B.ResumeLayout(false);
+            this.tlpDatosAdicionales_03B.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventario_Maximo)).EndInit();
+            this.tlpDatosBasicos_03.ResumeLayout(false);
+            this.tlpDatosAdicionales_02A.ResumeLayout(false);
+            this.tlpDatosAdicionales_02A.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Compra_Sin_Impuestos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkImpuesto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Compra_Con_Impuestos)).EndInit();
-            this.tlp04_2B.ResumeLayout(false);
-            this.tlp04_2B.PerformLayout();
+            this.tlpDatosAdicionales_02B.ResumeLayout(false);
+            this.tlpDatosAdicionales_02B.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UtilidadVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Venta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbTipoProducto)).EndInit();
-            this.gbTipoProducto.ResumeLayout(false);
-            this.tlp01.ResumeLayout(false);
-            this.tlp01.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoSinReceta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMedicamentoAntibiotico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picOtroProducto)).EndInit();
+            this.tlpDatosAdicionales_01.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Utiliza_Inventario)).EndInit();
+            this.tlpDatosAdicionales_01A.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMedicamento)).EndInit();
+            this.tlpDatosAdicionales_01B.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
+            this.pvpIndicaciones.ResumeLayout(false);
+            this.tlpIndicacionesMedicas.ResumeLayout(false);
+            this.tlpIndicacionesMedicas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sintoma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSinReceta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAntibiotico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOtroProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -792,22 +1100,16 @@
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private Telerik.WinControls.UI.RadPanel panelDer;
         private Telerik.WinControls.UI.RadPageView pvAddProduct;
-        private Telerik.WinControls.UI.RadPageViewPage rpvDatosBasicos;
+        private Telerik.WinControls.UI.RadPageViewPage pvpDatosBasicos;
         private Telerik.WinControls.UI.RadPanel paneIzq;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.TableLayoutPanel tlpDatosBasicos;
-        private System.Windows.Forms.TableLayoutPanel tlp04;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosBasicos_04;
         private Telerik.WinControls.UI.RadButton btnAceptar;
         private Telerik.WinControls.UI.RadButton btnCancelar;
-        private System.Windows.Forms.TableLayoutPanel tlp01;
-        private System.Windows.Forms.PictureBox picMedicamentoSinReceta;
-        private System.Windows.Forms.PictureBox picMedicamentoAntibiotico;
-        private System.Windows.Forms.PictureBox picOtroProducto;
-        private System.Windows.Forms.Label lblMedicamentoSinReceta;
-        private System.Windows.Forms.Label lblAntibiotico;
-        private System.Windows.Forms.Label lblOtroProducto;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosBasicos_01;
         private Telerik.WinControls.UI.RadGroupBox gbDatosProducto;
-        private System.Windows.Forms.TableLayoutPanel tlp02;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosBasicos_02;
         private System.Windows.Forms.Label lblCodigoBarras;
         private System.Windows.Forms.Label lblClaveAlterna;
         private Telerik.WinControls.UI.RadTextBox Codigo_Barras;
@@ -820,21 +1122,45 @@
         private System.Windows.Forms.Label lblCategoria;
         private Telerik.WinControls.UI.RadDropDownList Departamento;
         private Telerik.WinControls.UI.RadDropDownList Categoria;
-        private Telerik.WinControls.UI.RadGroupBox gbPrecioVenta;
-        private System.Windows.Forms.TableLayoutPanel tlp03;
-        private Telerik.WinControls.UI.RadTextBox Precio_Compra_Sin_Impuestos;
-        private Telerik.WinControls.UI.RadTextBox UtilidadVenta;
-        private Telerik.WinControls.UI.RadTextBox Precio_Venta;
-        private System.Windows.Forms.TableLayoutPanel tlp04_1B;
-        private System.Windows.Forms.Label lblUtilidad1;
-        private System.Windows.Forms.TableLayoutPanel tlp04_2B;
-        private System.Windows.Forms.Label lblUtilidadVenta;
-        private System.Windows.Forms.Label lblPrecioVenta2;
         private System.Windows.Forms.Label lblProveedor;
         private Telerik.WinControls.UI.RadDropDownList Proveedor;
         private Telerik.WinControls.UI.RadGroupBox gbTipoProducto;
+        private Telerik.WinControls.UI.RadPageViewPage pvpDatosAdicionales;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosBasicos_03;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_02A;
+        private System.Windows.Forms.Label lblUtilidad1;
+        private Telerik.WinControls.UI.RadTextBox Precio_Compra_Sin_Impuestos;
         private Telerik.WinControls.UI.RadCheckBox chkImpuesto;
         private Telerik.WinControls.UI.RadTextBox Precio_Compra_Con_Impuestos;
-        private Telerik.WinControls.UI.RadPageViewPage pvpDatosAdicionales;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_02B;
+        private System.Windows.Forms.Label lblUtilidadVenta;
+        private System.Windows.Forms.Label lblPrecioVenta2;
+        private Telerik.WinControls.UI.RadTextBox UtilidadVenta;
+        private Telerik.WinControls.UI.RadTextBox Precio_Venta;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_03;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_03A;
+        private System.Windows.Forms.Label lblHay;
+        private System.Windows.Forms.Label lblInvMin;
+        private Telerik.WinControls.UI.RadTextBox Inventario_Minimo;
+        private Telerik.WinControls.UI.RadTextBox Stock_Actual;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_03B;
+        private Telerik.WinControls.UI.RadTextBox Inventario_Maximo;
+        private System.Windows.Forms.Label lblInvMax;
+        private System.Windows.Forms.Label lblEnEsteMomento;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_01;
+        private Telerik.WinControls.UI.RadCheckBox Utiliza_Inventario;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_01A;
+        private System.Windows.Forms.PictureBox picMedicamento;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosAdicionales_01B;
+        private Telerik.WinControls.UI.RadButton btnExaminar;
+        private Telerik.WinControls.UI.RadPageViewPage pvpIndicaciones;
+        private System.Windows.Forms.TableLayoutPanel tlpIndicacionesMedicas;
+        private System.Windows.Forms.Label lblTexto;
+        private Telerik.WinControls.UI.RadTextBox Sintoma;
+        private System.Windows.Forms.TableLayoutPanel tlpCuadroClinico;
+        private Telerik.WinControls.UI.RadButton btnSinReceta;
+        private Telerik.WinControls.UI.RadButton btnAntibiotico;
+        private Telerik.WinControls.UI.RadButton btnOtroProducto;
     }
 }

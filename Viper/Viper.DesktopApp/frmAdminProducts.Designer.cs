@@ -36,7 +36,7 @@
             this.tlpCentro = new System.Windows.Forms.TableLayoutPanel();
             this.gvProducts = new Telerik.WinControls.UI.RadGridView();
             this.tlp02 = new System.Windows.Forms.TableLayoutPanel();
-            this.Código_de_barras = new Telerik.WinControls.UI.RadTextBox();
+            this.Proveedor = new Telerik.WinControls.UI.RadTextBox();
             this.btnBuscar = new Telerik.WinControls.UI.RadButton();
             this.tlp01 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEliminar = new Telerik.WinControls.UI.RadButton();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts.MasterTemplate)).BeginInit();
             this.tlp02.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Código_de_barras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Proveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.tlp01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
@@ -160,7 +160,7 @@
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.10593F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.89407F));
             this.tlp02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp02.Controls.Add(this.Código_de_barras, 0, 0);
+            this.tlp02.Controls.Add(this.Proveedor, 0, 0);
             this.tlp02.Controls.Add(this.btnBuscar, 1, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp02.Location = new System.Drawing.Point(3, 109);
@@ -170,18 +170,18 @@
             this.tlp02.Size = new System.Drawing.Size(944, 62);
             this.tlp02.TabIndex = 1;
             // 
-            // Código_de_barras
+            // Proveedor
             // 
-            this.Código_de_barras.AutoSize = false;
-            this.Código_de_barras.BackColor = System.Drawing.Color.Azure;
-            this.Código_de_barras.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Código_de_barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Código_de_barras.Location = new System.Drawing.Point(3, 3);
-            this.Código_de_barras.Name = "Código_de_barras";
-            this.Código_de_barras.NullText = "PRODUCTO";
-            this.Código_de_barras.Size = new System.Drawing.Size(702, 56);
-            this.Código_de_barras.TabIndex = 1;
-            this.Código_de_barras.ThemeName = "VisualStudio2012Light";
+            this.Proveedor.AutoSize = false;
+            this.Proveedor.BackColor = System.Drawing.Color.Azure;
+            this.Proveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Proveedor.Location = new System.Drawing.Point(3, 3);
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.NullText = "PROVEEDOR";
+            this.Proveedor.Size = new System.Drawing.Size(702, 56);
+            this.Proveedor.TabIndex = 1;
+            this.Proveedor.ThemeName = "VisualStudio2012Light";
             // 
             // btnBuscar
             // 
@@ -305,7 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).EndInit();
             this.tlp02.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Código_de_barras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Proveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.tlp01.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
@@ -324,7 +324,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel tlpCentro;
         private System.Windows.Forms.TableLayoutPanel tlp02;
-        private Telerik.WinControls.UI.RadTextBox Código_de_barras;
+        private Telerik.WinControls.UI.RadTextBox Proveedor;
         private Telerik.WinControls.UI.RadButton btnBuscar;
         private System.Windows.Forms.TableLayoutPanel tlp01;
         private Telerik.WinControls.UI.RadButton btnAgregar;

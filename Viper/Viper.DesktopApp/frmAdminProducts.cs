@@ -38,7 +38,7 @@ namespace Viper.DesktopApp
         int companyID = 0;
         String companyName = String.Empty;
         RadButton objButton = null;
-        DataTable dtProducts = new DataTable();
+        DataTable dtSuppliers = new DataTable();
 
         #endregion
 
