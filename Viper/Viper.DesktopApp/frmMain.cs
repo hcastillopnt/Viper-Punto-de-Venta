@@ -93,20 +93,23 @@ namespace Viper.DesktopApp
         private void frmMain_Load(object sender, EventArgs e)
         {
             //Set default configuration to UI
+            //this.AcceptButton = btnIngresar;
+            this.CancelButton = btnCerrarSesion;
             this.AutoSize = true;
             this.ControlBox = false;
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
 
-            //Establecer resolucion de la ventana
-            int height = Screen.PrimaryScreen.Bounds.Height; //Obtiene el alto de la pantalla principal en pixeles.
-            int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
-
-            this.Size = new Size(width, height);
-            this.WindowState = FormWindowState.Maximized;
+            //Establecer la resolucion de la ventana
+            //StartPosition was set to FormStartPosition.Manual in the properties window. 
+            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
+            int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
+            this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
+            this.Size = new Size(w, h);
 
             if (rol == "ADMINISTRADOR")
             {

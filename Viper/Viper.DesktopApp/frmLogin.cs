@@ -190,6 +190,14 @@ namespace Viper.DesktopApp
             this.ActiveControl = Nombre_de_Usuario;
             this.Nombre_de_Usuario.Focus();
 
+            //Establecer la resolucion de la ventana
+            //StartPosition was set to FormStartPosition.Manual in the properties window. 
+            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
+            int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
+            this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
+            this.Size = new Size(w, h);
+
             ToolTip toolTip1 = new ToolTip();
 
             // Set up the delays for the ToolTip.

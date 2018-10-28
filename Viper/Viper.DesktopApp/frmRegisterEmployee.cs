@@ -100,16 +100,17 @@ namespace Viper.DesktopApp
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
             this.KeyPreview = true;
 
-            //Establecer resolucion de la ventana
-            int height = Screen.PrimaryScreen.Bounds.Height; //Obtiene el alto de la pantalla principal en pixeles.
-            int width = Screen.PrimaryScreen.Bounds.Width; //Obtiene el ancho de la pantalla principal en pixeles.
-
-            this.Size = new Size(width, height);
-            this.WindowState = FormWindowState.Maximized;
+            //Establecer la resolucion de la ventana
+            //StartPosition was set to FormStartPosition.Manual in the properties window. 
+            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
+            int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
+            this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
+            this.Size = new Size(w, h);
 
             //Establecer el foco en el primer campo
-            //this.ActiveControl = Nombre;
-            //this.Nombre.Focus();
+            this.ActiveControl = Nombre;
+            this.Nombre.Focus();
 
             //Establecer usuario
             this.Password.Text = "123456";
