@@ -27,12 +27,12 @@ namespace Viper.DesktopApp
         public frmShoppingCart()
         {
             InitializeComponent();
-            //cargarCalculadora();
+            cargarCalculadoraConTocuch();
             cargarColumnasCarritoGrid();
             formatearColumnas();
         }
 
-        private void cargarCalculadora()
+        private void cargarCalculadoraConTocuch()
         {
             // 
             // tlpCalculadora
@@ -64,15 +64,14 @@ namespace Viper.DesktopApp
             this.tlpCalculadora.Controls.Add(this.btnDolares, 4, 1);
             this.tlpCalculadora.Controls.Add(this.btnEfectivo, 4, 0);
             this.tlpCalculadora.Dock = DockStyle.Fill;
-            this.tlpCalculadora.Location = new Point(3, 332);
             this.tlpCalculadora.Name = "tlpCalculadora";
             this.tlpCalculadora.RowCount = 4;
             this.tlpCalculadora.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             this.tlpCalculadora.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             this.tlpCalculadora.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             this.tlpCalculadora.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            this.tlpCalculadora.Size = new Size(686, 651);
             this.tlpCalculadora.TabIndex = 0;
+            this.tlpDerecho.Controls.Add(this.tlpCalculadora, 0, 1);
             // 
             // btn0
             // 
@@ -253,7 +252,7 @@ namespace Viper.DesktopApp
             this.btnVales.Dock = DockStyle.Fill;
             this.btnVales.Enabled = false;
             this.btnVales.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.btnVales.Image = Image.FromFile(folderPath + "btnVales.png");
+            this.btnVales.Image = Image.FromFile(folderPath + "vales.png");
             this.btnVales.ImageAlignment = ContentAlignment.MiddleCenter;
             this.btnVales.Location = new Point(551, 489);
             this.btnVales.Name = "btnVales";
@@ -268,7 +267,7 @@ namespace Viper.DesktopApp
             this.btnTarjeta.Dock = DockStyle.Fill;
             this.btnTarjeta.Enabled = false;
             this.btnTarjeta.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.btnTarjeta.Image = Image.FromFile(folderPath + "btnTarjeta.png");
+            this.btnTarjeta.Image = Image.FromFile(folderPath + "tarjeta.png");
             this.btnTarjeta.ImageAlignment = ContentAlignment.MiddleCenter;
             this.btnTarjeta.Location = new Point(551, 327);
             this.btnTarjeta.Name = "btnTarjeta";
@@ -282,7 +281,7 @@ namespace Viper.DesktopApp
             this.btnDolares.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnDolares.Dock = DockStyle.Fill;
             this.btnDolares.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.btnDolares.Image = Image.FromFile(folderPath + "btnDolares.png");
+            this.btnDolares.Image = Image.FromFile(folderPath + "intercambio.png");
             this.btnDolares.ImageAlignment = ContentAlignment.MiddleCenter;
             this.btnDolares.Location = new Point(551, 165);
             this.btnDolares.Name = "btnDolares";
@@ -296,7 +295,7 @@ namespace Viper.DesktopApp
             this.btnEfectivo.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
             this.btnEfectivo.Dock = DockStyle.Fill;
             this.btnEfectivo.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.btnEfectivo.Image = Image.FromFile(folderPath + "btnEfectivo.png");
+            this.btnEfectivo.Image = Image.FromFile(folderPath + "efectivo.png");
             this.btnEfectivo.ImageAlignment = ContentAlignment.MiddleCenter;
             this.btnEfectivo.Location = new Point(551, 3);
             this.btnEfectivo.Name = "btnEfectivo";
@@ -304,10 +303,6 @@ namespace Viper.DesktopApp
             this.btnEfectivo.TabIndex = 12;
             this.btnEfectivo.TextImageRelation = TextImageRelation.ImageBeforeText;
             this.btnEfectivo.ThemeName = "VisualStudio2012Light";
-
-            this.tlpCalculadora.ResumeLayout(false);
-            this.tlpCalculadora.SuspendLayout();
-            this.tlpDerecho.Controls.Add(this.tlpCalculadora, 0, 1);
         }
 
         private void frmShoppingCart_Load(object sender, EventArgs e)
