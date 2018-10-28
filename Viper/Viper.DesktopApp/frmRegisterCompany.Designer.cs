@@ -235,6 +235,7 @@
             this.Nombre_Empresa.Size = new System.Drawing.Size(569, 24);
             this.Nombre_Empresa.TabIndex = 0;
             this.Nombre_Empresa.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.Nombre_Empresa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblGiro
@@ -255,6 +256,7 @@
             this.gbDatosGenerales.Controls.Add(this.tlpDatosGenerales);
             this.gbDatosGenerales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosGenerales.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.gbDatosGenerales.HeaderText = "Datos Generales";
             this.gbDatosGenerales.Location = new System.Drawing.Point(3, 3);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
@@ -420,6 +422,7 @@
             this.Colonia.Size = new System.Drawing.Size(569, 27);
             this.Colonia.TabIndex = 0;
             this.Colonia.ThemeName = "VisualStudio2012Light";
+            this.Colonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.Colonia.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblTipoInmueble
@@ -499,6 +502,7 @@
             this.Vialidad.Size = new System.Drawing.Size(156, 21);
             this.Vialidad.TabIndex = 0;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
+            this.Vialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.Vialidad.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNombreVialidad
@@ -544,6 +548,7 @@
             this.No_Int.Size = new System.Drawing.Size(79, 21);
             this.No_Int.TabIndex = 0;
             this.No_Int.ThemeName = "VisualStudio2012Light";
+            this.No_Int.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.No_Int.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoInt
@@ -569,6 +574,7 @@
             this.No_Ext.Size = new System.Drawing.Size(78, 21);
             this.No_Ext.TabIndex = 0;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
+            this.No_Ext.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.No_Ext.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoExt
@@ -619,6 +625,7 @@
             this.Entidad_Federativa.Size = new System.Drawing.Size(228, 27);
             this.Entidad_Federativa.TabIndex = 0;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
+            this.Entidad_Federativa.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstado_SelectedIndexChanged);
             this.Entidad_Federativa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDG_03
@@ -678,6 +685,7 @@
             this.Codigo_Postal.Text = "_____";
             this.Codigo_Postal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Postal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             this.Codigo_Postal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblEmail
@@ -747,6 +755,7 @@
             this.Celular.Text = "(___)___-___-____";
             this.Celular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Celular.ThemeName = "VisualStudio2012Light";
+            this.Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             this.Celular.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Telefono
@@ -765,6 +774,7 @@
             this.Telefono.Text = "(__)___-_____";
             this.Telefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Telefono.ThemeName = "VisualStudio2012Light";
+            this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             this.Telefono.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // eMail
@@ -781,6 +791,7 @@
             this.eMail.Size = new System.Drawing.Size(567, 27);
             this.eMail.TabIndex = 0;
             this.eMail.ThemeName = "VisualStudio2012Light";
+            this.eMail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.eMail.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // panelIzquierdo
@@ -857,6 +868,7 @@
             this.gbDatosFiscales.Controls.Add(this.tlpDatosFiscales);
             this.gbDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDatosFiscales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosFiscales.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.gbDatosFiscales.HeaderText = "Datos Fiscales";
             this.gbDatosFiscales.Location = new System.Drawing.Point(3, 507);
             this.gbDatosFiscales.Name = "gbDatosFiscales";
@@ -925,6 +937,7 @@
             this.Colonia_Fiscal.Size = new System.Drawing.Size(774, 27);
             this.Colonia_Fiscal.TabIndex = 0;
             this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Colonia_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.Colonia_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblTipoInmuebleFiscal
@@ -1004,6 +1017,7 @@
             this.Vialidad_Fiscal.Size = new System.Drawing.Size(272, 21);
             this.Vialidad_Fiscal.TabIndex = 0;
             this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Vialidad_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.Vialidad_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNombreVialidadFiscal
@@ -1049,6 +1063,7 @@
             this.No_Int_Fiscal.Size = new System.Drawing.Size(112, 21);
             this.No_Int_Fiscal.TabIndex = 0;
             this.No_Int_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.No_Int_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.No_Int_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoIntFiscal
@@ -1075,6 +1090,7 @@
             this.No_Ext_Fiscal.Size = new System.Drawing.Size(111, 21);
             this.No_Ext_Fiscal.TabIndex = 0;
             this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.No_Ext_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.No_Ext_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoExtFiscal
@@ -1125,6 +1141,7 @@
             this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(299, 32);
             this.Entidad_Federativa_Fiscal.TabIndex = 0;
             this.Entidad_Federativa_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Entidad_Federativa_Fiscal.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstadoFiscal_SelectedIndexChanged);
             this.Entidad_Federativa_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDF_03
@@ -1184,6 +1201,7 @@
             this.Codigo_Postal_Fiscal.Text = "_____";
             this.Codigo_Postal_Fiscal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Postal_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             this.Codigo_Postal_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // gbDatosCorporativos
@@ -1192,6 +1210,7 @@
             this.gbDatosCorporativos.Controls.Add(this.tlpDatosCorporativos);
             this.gbDatosCorporativos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDatosCorporativos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosCorporativos.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.gbDatosCorporativos.HeaderText = "Datos Corporativos";
             this.gbDatosCorporativos.Location = new System.Drawing.Point(3, 345);
             this.gbDatosCorporativos.Name = "gbDatosCorporativos";
@@ -1268,6 +1287,7 @@
             this.RFC.Size = new System.Drawing.Size(777, 28);
             this.RFC.TabIndex = 0;
             this.RFC.ThemeName = "VisualStudio2012Light";
+            this.RFC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.RFC.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblRegimenFiscal
@@ -1294,6 +1314,7 @@
             this.CURP.Size = new System.Drawing.Size(777, 28);
             this.CURP.TabIndex = 0;
             this.CURP.ThemeName = "VisualStudio2012Light";
+            this.CURP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.CURP.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Nombre_Fiscal
@@ -1308,6 +1329,7 @@
             this.Nombre_Fiscal.Size = new System.Drawing.Size(777, 28);
             this.Nombre_Fiscal.TabIndex = 0;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             this.Nombre_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblRFC

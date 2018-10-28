@@ -1,8 +1,18 @@
-﻿using System;
+﻿/*
+ * ---------------------------------------------------------
+ * LIBRERIAS UTILIZADAS EN EL FORMULARIO "frmRegisterProduct.cs"
+ * ---------------------------------------------------------
+ */
+
+#region using directives 
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +20,53 @@ using System.Windows.Forms;
 using Telerik.WinControls.UI;
 using Viper.BusinessEntities;
 
+#endregion
+
 namespace Viper.DesktopApp
 {
+    /// <summary>
+    /// CLASE QUE PERMITE EL DAR DE ALTA PRODUCTOS DENTRO DEL 
+    /// SISTEMA DE PUNTO DE VENTA PARA FARMACIAS CON VENTA DE 
+    /// GENERICOS
+    /// </summary>
     public partial class frmRegisterProduct : Form
     {
-        #region Variables and objects of class
+        /*
+         * ---------------------------------------------------------
+         * VARIABLES, OBJETOS, Y COMPONENTES UTILIZADOS EN EL FORMULARIO "frmRegisterProduct.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Variables, Objetos y Componentes 
+
         RadButton objButton = null;
-        String rutaLogotipo = String.Empty;
+        String rutaIcono = String.Empty;
 
         #endregion
 
+        /*
+         * ---------------------------------------------------------
+         * CONSTRUCTORES UTILIZADOS EN EL FORMULARIO "frmRegisterProduct.cs"
+         * ---------------------------------------------------------
+         */
+
         #region Constructor
+
         public frmRegisterProduct()
         {
             InitializeComponent();
         }
+
         #endregion
 
-        #region Events of the controls
+        /*
+         * ---------------------------------------------------------
+         * EVENTOS UTILIZADOS EN EL FORMULARIO "frmRegisterProduct.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Eventos
+
         public void Button_Click(Object sender, EventArgs args)
         {
             objButton = (RadButton)sender;
@@ -37,6 +76,9 @@ namespace Viper.DesktopApp
                 case "btnAceptar":
                     break;
                 case "btnCancelar":
+                    break;
+                case "btnExaminar":
+                    uploadFotografia();
                     break;
             }
         }
@@ -146,6 +188,63 @@ namespace Viper.DesktopApp
                 e.Handled = true;
                 SendKeys.Send("{TAB}");
             }
+        }
+
+        #endregion
+
+        /*
+         * ---------------------------------------------------------
+         * METODOS UTILIZADOS EN EL FORMULARIO "frmRegisterProduct.cs"
+         * ---------------------------------------------------------
+         */
+
+        #region Metodos
+
+        private void uploadFotografia()
+        {
+            OpenFileDialog BuscarImagen = new OpenFileDialog();
+            BuscarImagen.Filter = ".bmp;*.gif;*.jpg;*.png|*.bmp;*.gif;*.jpg;*.png|Imagen Jpg(*.jpg)|*.jpg|Imagen PNG(*.png)|*.png|Imagen Gif(*.gif*)|*.gif";
+            BuscarImagen.FileName = "";
+            BuscarImagen.Title = "Examinar Imagen";
+            if (BuscarImagen.ShowDialog() == DialogResult.OK)
+            {
+                rutaIcono = BuscarImagen.FileName;
+                String Direccion = BuscarImagen.FileName;
+                picMedicamento.ImageLocation = Direccion;
+                picMedicamento.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void savePicture()
+        {
+            bool isNullOrEmpty = picMedicamento == null || picMedicamento.Image == null;
+
+            if (!isNullOrEmpty)
+            {
+                string folder = @"\images\product_pictures\";
+                string appPath = Path.GetDirectoryName(Application.StartupPath);
+                string folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
+
+                if (Directory.Exists(folderToSave) == false)
+                {
+                    Directory.CreateDirectory(folderToSave);
+                }
+
+                string barCode = Codigo_Barras.Text.Trim().ToString();
+                string filename = barCode + ".jpg";
+
+                picMedicamento.Image.Save(folderToSave + filename, ImageFormat.Jpeg);
+            }
+            else
+            {
+                MessageBox.Show(new Form { TopMost = true }, "La imagen del producto no se ha podido almacenar correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static byte[] ImageToByte(Image img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
 
         #endregion

@@ -130,6 +130,7 @@ namespace Viper.DesktopApp
             toolTip1.SetToolTip(this.btnCaptura, "Para iniciar la camara, favor de dar clic a este boton");
             toolTip1.SetToolTip(this.btnExaminar, "Para buscar el logotipo de su negocio almacenado en su pc, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnEliminarIE, "Para eliminar, favor de dar cli a este boton");
+            toolTip1.SetToolTip(this.btnCancelar, "Para cancelar la operacion y volver al formulario inicial, favor de dar clic a este boton");
         }
 
         private void OnlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
@@ -520,7 +521,7 @@ namespace Viper.DesktopApp
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, "El logotipo no se ha podido almacenar correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(new Form { TopMost = true }, "La fotografia del empleado no se ha podido almacenar correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

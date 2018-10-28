@@ -322,28 +322,6 @@ namespace Viper.DesktopApp
                 this.WindowState = FormWindowState.Maximized;
             }
 
-            //Establecer los eventos a los controles
-            this.Entidad_Federativa.SelectedIndexChanged += cboEstado_SelectedIndexChanged;
-            this.Entidad_Federativa_Fiscal.SelectedIndexChanged += cboEstadoFiscal_SelectedIndexChanged;
-            this.Giro_Comercial.KeyPress += OnlyLetters_KeyPress;
-            this.Nombre_Empresa.KeyPress += OnlyLetters_KeyPress;
-            this.Vialidad.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Codigo_Postal.KeyPress += OnlyNumbers_KeyPress;
-            this.No_Ext.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.No_Int.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Colonia.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Telefono.KeyPress += OnlyNumbers_KeyPress;
-            this.Celular.KeyPress += OnlyNumbers_KeyPress;
-            this.Nombre_Fiscal.KeyPress += OnlyLetters_KeyPress;
-            this.RFC.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.CURP.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            Regimen_Fiscal.KeyPress += OnlyLetters_KeyPress;
-            this.Vialidad_Fiscal.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Codigo_Postal_Fiscal.KeyPress += OnlyNumbers_KeyPress;
-            this.No_Ext_Fiscal.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.No_Int_Fiscal.KeyPress += OnlyLettersAndNumbers_KeyPress;
-            this.Colonia_Fiscal.KeyPress += OnlyLettersAndNumbers_KeyPress;
-
             //Establecer el foco en el primer campo
             this.ActiveControl = Nombre_Empresa;
             this.Nombre_Empresa.Focus();
@@ -360,7 +338,7 @@ namespace Viper.DesktopApp
 
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(this.btnAceptar, "Para poder guardar los datos de la compañia registrada y sus datos fiscales, favor de dar clic en este boton");
-            toolTip1.SetToolTip(this.btnCancelar, "Para limpiar el formulario, favor de dar clic en este boton");
+            toolTip1.SetToolTip(this.btnCancelar, "Para cancelar la operacion y volver al formulario inicial, favor de dar clic a este boton");
             toolTip1.SetToolTip(this.btnCuentasBanco, "Para añadir alguna cuenta de banco ligada a su negocio, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnImportarDatosFiscales, "Para copiar los datos proporcionado en la parte superior como fiscales, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnRegimenFiscal, "Para seleccionar el regimen fiscal correspondiente a su giro de negocio, favor de dar clic en este boton");

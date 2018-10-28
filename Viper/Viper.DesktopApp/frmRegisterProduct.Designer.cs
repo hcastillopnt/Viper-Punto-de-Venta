@@ -55,6 +55,9 @@
             this.Proveedor = new Telerik.WinControls.UI.RadDropDownList();
             this.gbTipoProducto = new Telerik.WinControls.UI.RadGroupBox();
             this.tlpDatosBasicos_01 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSinReceta = new Telerik.WinControls.UI.RadButton();
+            this.btnAntibiotico = new Telerik.WinControls.UI.RadButton();
+            this.btnOtroProducto = new Telerik.WinControls.UI.RadButton();
             this.pvpDatosAdicionales = new Telerik.WinControls.UI.RadPageViewPage();
             this.tlpDatosAdicionales = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDatosAdicionales_03 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,10 +77,10 @@
             this.chkImpuesto = new Telerik.WinControls.UI.RadCheckBox();
             this.Precio_Compra_Con_Impuestos = new Telerik.WinControls.UI.RadTextBox();
             this.tlpDatosAdicionales_02B = new System.Windows.Forms.TableLayoutPanel();
-            this.UtilidadVenta = new Telerik.WinControls.UI.RadTextBox();
-            this.Precio_Venta = new Telerik.WinControls.UI.RadTextBox();
-            this.lblPrecioVenta2 = new System.Windows.Forms.Label();
             this.lblUtilidadVenta = new System.Windows.Forms.Label();
+            this.lblPrecioVenta2 = new System.Windows.Forms.Label();
+            this.Precio_Venta = new Telerik.WinControls.UI.RadTextBox();
+            this.UtilidadVenta = new Telerik.WinControls.UI.RadTextBox();
             this.tlpDatosAdicionales_01 = new System.Windows.Forms.TableLayoutPanel();
             this.Utiliza_Inventario = new Telerik.WinControls.UI.RadCheckBox();
             this.tlpDatosAdicionales_01A = new System.Windows.Forms.TableLayoutPanel();
@@ -91,9 +94,6 @@
             this.tlpCuadroClinico = new System.Windows.Forms.TableLayoutPanel();
             this.paneIzq = new Telerik.WinControls.UI.RadPanel();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.btnSinReceta = new Telerik.WinControls.UI.RadButton();
-            this.btnAntibiotico = new Telerik.WinControls.UI.RadButton();
-            this.btnOtroProducto = new Telerik.WinControls.UI.RadButton();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvAddProduct)).BeginInit();
@@ -116,6 +116,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbTipoProducto)).BeginInit();
             this.gbTipoProducto.SuspendLayout();
             this.tlpDatosBasicos_01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSinReceta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAntibiotico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOtroProducto)).BeginInit();
             this.pvpDatosAdicionales.SuspendLayout();
             this.tlpDatosAdicionales.SuspendLayout();
             this.tlpDatosAdicionales_03.SuspendLayout();
@@ -130,8 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkImpuesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Compra_Con_Impuestos)).BeginInit();
             this.tlpDatosAdicionales_02B.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UtilidadVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Venta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UtilidadVenta)).BeginInit();
             this.tlpDatosAdicionales_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Utiliza_Inventario)).BeginInit();
             this.tlpDatosAdicionales_01A.SuspendLayout();
@@ -142,9 +145,6 @@
             this.tlpIndicacionesMedicas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sintoma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSinReceta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAntibiotico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOtroProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -344,6 +344,7 @@
             this.Codigo_Barras.Size = new System.Drawing.Size(437, 46);
             this.Codigo_Barras.TabIndex = 2;
             this.Codigo_Barras.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Barras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // Clave_Alterna
             // 
@@ -356,6 +357,7 @@
             this.Clave_Alterna.Size = new System.Drawing.Size(438, 46);
             this.Clave_Alterna.TabIndex = 3;
             this.Clave_Alterna.ThemeName = "VisualStudio2012Light";
+            this.Clave_Alterna.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblDescripcion
             // 
@@ -379,6 +381,7 @@
             this.Descripcion.Size = new System.Drawing.Size(881, 46);
             this.Descripcion.TabIndex = 5;
             this.Descripcion.ThemeName = "VisualStudio2012Light";
+            this.Descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // SustanciaActiva
             // 
@@ -391,6 +394,7 @@
             this.SustanciaActiva.Size = new System.Drawing.Size(881, 46);
             this.SustanciaActiva.TabIndex = 6;
             this.SustanciaActiva.ThemeName = "VisualStudio2012Light";
+            this.SustanciaActiva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblSustanciaActiva
             // 
@@ -503,6 +507,49 @@
             this.tlpDatosBasicos_01.Size = new System.Drawing.Size(887, 108);
             this.tlpDatosBasicos_01.TabIndex = 10;
             // 
+            // btnSinReceta
+            // 
+            this.btnSinReceta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSinReceta.Enabled = false;
+            this.btnSinReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnSinReceta.Image = ((System.Drawing.Image)(resources.GetObject("btnSinReceta.Image")));
+            this.btnSinReceta.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSinReceta.Location = new System.Drawing.Point(3, 3);
+            this.btnSinReceta.Name = "btnSinReceta";
+            this.btnSinReceta.Size = new System.Drawing.Size(289, 102);
+            this.btnSinReceta.TabIndex = 0;
+            this.btnSinReceta.Text = "Sin Receta";
+            this.btnSinReceta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSinReceta.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnAntibiotico
+            // 
+            this.btnAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAntibiotico.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnAntibiotico.Image = ((System.Drawing.Image)(resources.GetObject("btnAntibiotico.Image")));
+            this.btnAntibiotico.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAntibiotico.Location = new System.Drawing.Point(298, 3);
+            this.btnAntibiotico.Name = "btnAntibiotico";
+            this.btnAntibiotico.Size = new System.Drawing.Size(289, 102);
+            this.btnAntibiotico.TabIndex = 1;
+            this.btnAntibiotico.Text = "Antibiotico";
+            this.btnAntibiotico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAntibiotico.ThemeName = "VisualStudio2012Light";
+            // 
+            // btnOtroProducto
+            // 
+            this.btnOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOtroProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnOtroProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnOtroProducto.Image")));
+            this.btnOtroProducto.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOtroProducto.Location = new System.Drawing.Point(593, 3);
+            this.btnOtroProducto.Name = "btnOtroProducto";
+            this.btnOtroProducto.Size = new System.Drawing.Size(291, 102);
+            this.btnOtroProducto.TabIndex = 2;
+            this.btnOtroProducto.Text = "Otro Producto";
+            this.btnOtroProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnOtroProducto.ThemeName = "VisualStudio2012Light";
+            // 
             // pvpDatosAdicionales
             // 
             this.pvpDatosAdicionales.Controls.Add(this.tlpDatosAdicionales);
@@ -597,6 +644,7 @@
             this.Inventario_Minimo.Size = new System.Drawing.Size(214, 63);
             this.Inventario_Minimo.TabIndex = 3;
             this.Inventario_Minimo.ThemeName = "VisualStudio2012Light";
+            this.Inventario_Minimo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // Stock_Actual
             // 
@@ -609,6 +657,7 @@
             this.Stock_Actual.Size = new System.Drawing.Size(214, 64);
             this.Stock_Actual.TabIndex = 5;
             this.Stock_Actual.ThemeName = "VisualStudio2012Light";
+            this.Stock_Actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tlpDatosAdicionales_03B
             // 
@@ -639,6 +688,7 @@
             this.Inventario_Maximo.Size = new System.Drawing.Size(214, 63);
             this.Inventario_Maximo.TabIndex = 4;
             this.Inventario_Maximo.ThemeName = "VisualStudio2012Light";
+            this.Inventario_Maximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // lblInvMax
             // 
@@ -721,6 +771,7 @@
             this.Precio_Compra_Sin_Impuestos.Size = new System.Drawing.Size(214, 62);
             this.Precio_Compra_Sin_Impuestos.TabIndex = 3;
             this.Precio_Compra_Sin_Impuestos.ThemeName = "VisualStudio2012Light";
+            this.Precio_Compra_Sin_Impuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // chkImpuesto
             // 
@@ -746,6 +797,7 @@
             this.Precio_Compra_Con_Impuestos.Size = new System.Drawing.Size(214, 64);
             this.Precio_Compra_Con_Impuestos.TabIndex = 5;
             this.Precio_Compra_Con_Impuestos.ThemeName = "VisualStudio2012Light";
+            this.Precio_Compra_Con_Impuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tlpDatosAdicionales_02B
             // 
@@ -766,28 +818,17 @@
             this.tlpDatosAdicionales_02B.Size = new System.Drawing.Size(440, 138);
             this.tlpDatosAdicionales_02B.TabIndex = 1;
             // 
-            // UtilidadVenta
+            // lblUtilidadVenta
             // 
-            this.UtilidadVenta.AutoSize = false;
-            this.UtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UtilidadVenta.Location = new System.Drawing.Point(223, 3);
-            this.UtilidadVenta.Name = "UtilidadVenta";
-            this.UtilidadVenta.Size = new System.Drawing.Size(214, 62);
-            this.UtilidadVenta.TabIndex = 3;
-            this.UtilidadVenta.ThemeName = "VisualStudio2012Light";
-            // 
-            // Precio_Venta
-            // 
-            this.Precio_Venta.AutoSize = false;
-            this.Precio_Venta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Precio_Venta.Enabled = false;
-            this.Precio_Venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Precio_Venta.Location = new System.Drawing.Point(223, 71);
-            this.Precio_Venta.Name = "Precio_Venta";
-            this.Precio_Venta.Size = new System.Drawing.Size(214, 64);
-            this.Precio_Venta.TabIndex = 4;
-            this.Precio_Venta.ThemeName = "VisualStudio2012Light";
+            this.lblUtilidadVenta.AutoSize = true;
+            this.lblUtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblUtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUtilidadVenta.Location = new System.Drawing.Point(3, 0);
+            this.lblUtilidadVenta.Name = "lblUtilidadVenta";
+            this.lblUtilidadVenta.Size = new System.Drawing.Size(214, 68);
+            this.lblUtilidadVenta.TabIndex = 1;
+            this.lblUtilidadVenta.Text = "% Utilidad:";
+            this.lblUtilidadVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblPrecioVenta2
             // 
@@ -801,17 +842,30 @@
             this.lblPrecioVenta2.Text = "Precio Venta:";
             this.lblPrecioVenta2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblUtilidadVenta
+            // Precio_Venta
             // 
-            this.lblUtilidadVenta.AutoSize = true;
-            this.lblUtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblUtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUtilidadVenta.Location = new System.Drawing.Point(3, 0);
-            this.lblUtilidadVenta.Name = "lblUtilidadVenta";
-            this.lblUtilidadVenta.Size = new System.Drawing.Size(214, 68);
-            this.lblUtilidadVenta.TabIndex = 1;
-            this.lblUtilidadVenta.Text = "% Utilidad:";
-            this.lblUtilidadVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Precio_Venta.AutoSize = false;
+            this.Precio_Venta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Precio_Venta.Enabled = false;
+            this.Precio_Venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Precio_Venta.Location = new System.Drawing.Point(223, 71);
+            this.Precio_Venta.Name = "Precio_Venta";
+            this.Precio_Venta.Size = new System.Drawing.Size(214, 64);
+            this.Precio_Venta.TabIndex = 4;
+            this.Precio_Venta.ThemeName = "VisualStudio2012Light";
+            this.Precio_Venta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
+            // 
+            // UtilidadVenta
+            // 
+            this.UtilidadVenta.AutoSize = false;
+            this.UtilidadVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UtilidadVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UtilidadVenta.Location = new System.Drawing.Point(223, 3);
+            this.UtilidadVenta.Name = "UtilidadVenta";
+            this.UtilidadVenta.Size = new System.Drawing.Size(214, 62);
+            this.UtilidadVenta.TabIndex = 3;
+            this.UtilidadVenta.ThemeName = "VisualStudio2012Light";
+            this.UtilidadVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tlpDatosAdicionales_01
             // 
@@ -860,9 +914,11 @@
             // picMedicamento
             // 
             this.picMedicamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMedicamento.Image = ((System.Drawing.Image)(resources.GetObject("picMedicamento.Image")));
             this.picMedicamento.Location = new System.Drawing.Point(298, 3);
             this.picMedicamento.Name = "picMedicamento";
             this.picMedicamento.Size = new System.Drawing.Size(289, 298);
+            this.picMedicamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMedicamento.TabIndex = 0;
             this.picMedicamento.TabStop = false;
             // 
@@ -974,49 +1030,6 @@
             this.paneIzq.TabIndex = 0;
             this.paneIzq.TabStop = false;
             // 
-            // btnSinReceta
-            // 
-            this.btnSinReceta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSinReceta.Enabled = false;
-            this.btnSinReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnSinReceta.Image = ((System.Drawing.Image)(resources.GetObject("btnSinReceta.Image")));
-            this.btnSinReceta.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSinReceta.Location = new System.Drawing.Point(3, 3);
-            this.btnSinReceta.Name = "btnSinReceta";
-            this.btnSinReceta.Size = new System.Drawing.Size(289, 102);
-            this.btnSinReceta.TabIndex = 0;
-            this.btnSinReceta.Text = "Sin Receta";
-            this.btnSinReceta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSinReceta.ThemeName = "VisualStudio2012Light";
-            // 
-            // btnAntibiotico
-            // 
-            this.btnAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAntibiotico.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnAntibiotico.Image = ((System.Drawing.Image)(resources.GetObject("btnAntibiotico.Image")));
-            this.btnAntibiotico.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAntibiotico.Location = new System.Drawing.Point(298, 3);
-            this.btnAntibiotico.Name = "btnAntibiotico";
-            this.btnAntibiotico.Size = new System.Drawing.Size(289, 102);
-            this.btnAntibiotico.TabIndex = 1;
-            this.btnAntibiotico.Text = "Antibiotico";
-            this.btnAntibiotico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAntibiotico.ThemeName = "VisualStudio2012Light";
-            // 
-            // btnOtroProducto
-            // 
-            this.btnOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOtroProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnOtroProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnOtroProducto.Image")));
-            this.btnOtroProducto.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnOtroProducto.Location = new System.Drawing.Point(593, 3);
-            this.btnOtroProducto.Name = "btnOtroProducto";
-            this.btnOtroProducto.Size = new System.Drawing.Size(291, 102);
-            this.btnOtroProducto.TabIndex = 2;
-            this.btnOtroProducto.Text = "Otro Producto";
-            this.btnOtroProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnOtroProducto.ThemeName = "VisualStudio2012Light";
-            // 
             // frmRegisterProduct
             // 
             this.AcceptButton = this.btnAceptar;
@@ -1057,6 +1070,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbTipoProducto)).EndInit();
             this.gbTipoProducto.ResumeLayout(false);
             this.tlpDatosBasicos_01.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSinReceta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAntibiotico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOtroProducto)).EndInit();
             this.pvpDatosAdicionales.ResumeLayout(false);
             this.tlpDatosAdicionales.ResumeLayout(false);
             this.tlpDatosAdicionales_03.ResumeLayout(false);
@@ -1075,8 +1091,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Compra_Con_Impuestos)).EndInit();
             this.tlpDatosAdicionales_02B.ResumeLayout(false);
             this.tlpDatosAdicionales_02B.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UtilidadVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precio_Venta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UtilidadVenta)).EndInit();
             this.tlpDatosAdicionales_01.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Utiliza_Inventario)).EndInit();
             this.tlpDatosAdicionales_01A.ResumeLayout(false);
@@ -1088,9 +1104,6 @@
             this.tlpIndicacionesMedicas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sintoma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSinReceta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAntibiotico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOtroProducto)).EndInit();
             this.ResumeLayout(false);
 
         }

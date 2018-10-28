@@ -34,12 +34,18 @@
             this.pvAddSupplier = new Telerik.WinControls.UI.RadPageView();
             this.pvpDatosGenerales = new Telerik.WinControls.UI.RadPageViewPage();
             this.tlpDatosGenerales = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosGenerales_04 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAceptar = new Telerik.WinControls.UI.RadButton();
+            this.btnCancelar = new Telerik.WinControls.UI.RadButton();
+            this.pnlCentro = new Telerik.WinControls.UI.RadPanel();
             this.gbDatosGenerales = new Telerik.WinControls.UI.RadGroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosFiscales_01 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDatosGenerales_Derecha = new System.Windows.Forms.TableLayoutPanel();
             this.picLogotipo = new System.Windows.Forms.PictureBox();
+            this.btnExaminar = new Telerik.WinControls.UI.RadButton();
             this.tlpDatosGenerales_Izquierda = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDatosGenerales_2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCuentaBanco = new System.Windows.Forms.Label();
             this.Tipo_Inmueble = new Telerik.WinControls.UI.RadDropDownList();
             this.Colonia = new Telerik.WinControls.UI.RadTextBox();
             this.lblTipoInmueble = new System.Windows.Forms.Label();
@@ -68,30 +74,16 @@
             this.Celular = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.Telefono = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.eMail = new Telerik.WinControls.UI.RadTextBox();
+            this.Cuenta_Banco = new Telerik.WinControls.UI.RadTextBox();
             this.tlpDatosGenerales_1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNombreEmpresa = new System.Windows.Forms.Label();
             this.Giro_Comercial = new Telerik.WinControls.UI.RadDropDownList();
             this.Nombre_Empresa = new Telerik.WinControls.UI.RadTextBox();
             this.lblGiro = new System.Windows.Forms.Label();
-            this.tlpDatosGenerales_04 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAceptar = new Telerik.WinControls.UI.RadButton();
-            this.btnCancelar = new Telerik.WinControls.UI.RadButton();
-            this.paneIzq = new Telerik.WinControls.UI.RadPanel();
-            this.pnlCentro = new Telerik.WinControls.UI.RadPanel();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.pvpDatosFiscales = new Telerik.WinControls.UI.RadPageViewPage();
             this.tlpSAT = new System.Windows.Forms.TableLayoutPanel();
-            this.gbDatosCorporativos = new Telerik.WinControls.UI.RadGroupBox();
-            this.tlpDatosCorporativos = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpDC_01 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnRegimenFiscal = new Telerik.WinControls.UI.RadButton();
-            this.RFC = new Telerik.WinControls.UI.RadTextBox();
-            this.lblRegimenFiscal = new System.Windows.Forms.Label();
-            this.Nombre_Fiscal = new Telerik.WinControls.UI.RadTextBox();
-            this.lblRFC = new System.Windows.Forms.Label();
-            this.lblNombreFiscal = new System.Windows.Forms.Label();
             this.gbDatosFiscales = new Telerik.WinControls.UI.RadGroupBox();
-            this.tlpDatosFiscales = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDatosFiscales_02 = new System.Windows.Forms.TableLayoutPanel();
             this.Tipo_Inmueble_Fiscal = new Telerik.WinControls.UI.RadDropDownList();
             this.Colonia_Fiscal = new Telerik.WinControls.UI.RadTextBox();
             this.lblTipoInmuebleFiscal = new System.Windows.Forms.Label();
@@ -113,19 +105,36 @@
             this.Municipio_Fiscal = new Telerik.WinControls.UI.RadDropDownList();
             this.lblLocalidadFiscal = new System.Windows.Forms.Label();
             this.Codigo_Postal_Fiscal = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.lblCuentaBanco = new System.Windows.Forms.Label();
-            this.Cuenta_Banco = new Telerik.WinControls.UI.RadTextBox();
+            this.gbDatosCorporativos = new Telerik.WinControls.UI.RadGroupBox();
+            this.tlpDatosCorporativos = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDC_01 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRegimenFiscal = new Telerik.WinControls.UI.RadButton();
+            this.RFC = new Telerik.WinControls.UI.RadTextBox();
+            this.lblRegimenFiscal = new System.Windows.Forms.Label();
+            this.Nombre_Fiscal = new Telerik.WinControls.UI.RadTextBox();
+            this.lblRFC = new System.Windows.Forms.Label();
+            this.lblNombreFiscal = new System.Windows.Forms.Label();
+            this.paneIzq = new Telerik.WinControls.UI.RadPanel();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.tlpDatosFiscales_03_Botones = new System.Windows.Forms.TableLayoutPanel();
+            this.btnImportarDatosFiscales = new Telerik.WinControls.UI.RadButton();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvAddSupplier)).BeginInit();
             this.pvAddSupplier.SuspendLayout();
             this.pvpDatosGenerales.SuspendLayout();
             this.tlpDatosGenerales.SuspendLayout();
+            this.tlpDatosGenerales_04.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlCentro)).BeginInit();
+            this.pnlCentro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosGenerales)).BeginInit();
             this.gbDatosGenerales.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpDatosFiscales_01.SuspendLayout();
             this.tlpDatosGenerales_Derecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
             this.tlpDatosGenerales_Izquierda.SuspendLayout();
             this.tlpDatosGenerales_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tipo_Inmueble)).BeginInit();
@@ -144,28 +153,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Celular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Telefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cuenta_Banco)).BeginInit();
             this.tlpDatosGenerales_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Giro_Comercial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nombre_Empresa)).BeginInit();
-            this.tlpDatosGenerales_04.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlCentro)).BeginInit();
-            this.pnlCentro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             this.pvpDatosFiscales.SuspendLayout();
             this.tlpSAT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).BeginInit();
-            this.gbDatosCorporativos.SuspendLayout();
-            this.tlpDatosCorporativos.SuspendLayout();
-            this.tlpDC_01.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRegimenFiscal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RFC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Nombre_Fiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosFiscales)).BeginInit();
             this.gbDatosFiscales.SuspendLayout();
-            this.tlpDatosFiscales.SuspendLayout();
+            this.tlpDatosFiscales_02.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tipo_Inmueble_Fiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Colonia_Fiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tipo_Vialidad_Fiscal)).BeginInit();
@@ -178,7 +174,16 @@
             this.tlpDF_03.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Municipio_Fiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Codigo_Postal_Fiscal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cuenta_Banco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).BeginInit();
+            this.gbDatosCorporativos.SuspendLayout();
+            this.tlpDatosCorporativos.SuspendLayout();
+            this.tlpDC_01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegimenFiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RFC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nombre_Fiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).BeginInit();
+            this.tlpDatosFiscales_03_Botones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImportarDatosFiscales)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -192,19 +197,21 @@
             this.tlpPrincipal.Controls.Add(this.paneIzq, 0, 0);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 1;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1344, 712);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1366, 768);
             this.tlpPrincipal.TabIndex = 2;
             // 
             // panelDer
             // 
             this.panelDer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelDer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDer.Location = new System.Drawing.Point(1144, 3);
+            this.panelDer.Location = new System.Drawing.Point(1162, 2);
+            this.panelDer.Margin = new System.Windows.Forms.Padding(2);
             this.panelDer.Name = "panelDer";
-            this.panelDer.Size = new System.Drawing.Size(197, 706);
+            this.panelDer.Size = new System.Drawing.Size(202, 764);
             this.panelDer.TabIndex = 0;
             this.panelDer.TabStop = false;
             // 
@@ -214,12 +221,13 @@
             this.pvAddSupplier.Controls.Add(this.pvpDatosFiscales);
             this.pvAddSupplier.DefaultPage = this.pvpDatosGenerales;
             this.pvAddSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pvAddSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pvAddSupplier.Location = new System.Drawing.Point(204, 3);
+            this.pvAddSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pvAddSupplier.Location = new System.Drawing.Point(206, 2);
+            this.pvAddSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.pvAddSupplier.Name = "pvAddSupplier";
             this.pvAddSupplier.PageBackColor = System.Drawing.Color.White;
             this.pvAddSupplier.SelectedPage = this.pvpDatosGenerales;
-            this.pvAddSupplier.Size = new System.Drawing.Size(934, 706);
+            this.pvAddSupplier.Size = new System.Drawing.Size(952, 764);
             this.pvAddSupplier.TabIndex = 0;
             this.pvAddSupplier.TabStop = false;
             this.pvAddSupplier.ThemeName = "VisualStudio2012Light";
@@ -229,10 +237,11 @@
             // pvpDatosGenerales
             // 
             this.pvpDatosGenerales.Controls.Add(this.tlpDatosGenerales);
-            this.pvpDatosGenerales.ItemSize = new System.Drawing.SizeF(42F, 223F);
-            this.pvpDatosGenerales.Location = new System.Drawing.Point(48, 5);
+            this.pvpDatosGenerales.ItemSize = new System.Drawing.SizeF(35F, 180F);
+            this.pvpDatosGenerales.Location = new System.Drawing.Point(41, 5);
+            this.pvpDatosGenerales.Margin = new System.Windows.Forms.Padding(2);
             this.pvpDatosGenerales.Name = "pvpDatosGenerales";
-            this.pvpDatosGenerales.Size = new System.Drawing.Size(881, 696);
+            this.pvpDatosGenerales.Size = new System.Drawing.Size(906, 754);
             this.pvpDatosGenerales.Text = "Datos Generales";
             // 
             // tlpDatosGenerales
@@ -243,57 +252,122 @@
             this.tlpDatosGenerales.Controls.Add(this.pnlCentro, 0, 0);
             this.tlpDatosGenerales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDatosGenerales.Location = new System.Drawing.Point(0, 0);
+            this.tlpDatosGenerales.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDatosGenerales.Name = "tlpDatosGenerales";
             this.tlpDatosGenerales.RowCount = 2;
             this.tlpDatosGenerales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.80319F));
             this.tlpDatosGenerales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.293461F));
-            this.tlpDatosGenerales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpDatosGenerales.Size = new System.Drawing.Size(881, 696);
+            this.tlpDatosGenerales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tlpDatosGenerales.Size = new System.Drawing.Size(906, 754);
             this.tlpDatosGenerales.TabIndex = 4;
+            // 
+            // tlpDatosGenerales_04
+            // 
+            this.tlpDatosGenerales_04.ColumnCount = 3;
+            this.tlpDatosGenerales_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpDatosGenerales_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpDatosGenerales_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpDatosGenerales_04.Controls.Add(this.btnAceptar, 1, 0);
+            this.tlpDatosGenerales_04.Controls.Add(this.btnCancelar, 2, 0);
+            this.tlpDatosGenerales_04.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosGenerales_04.Location = new System.Drawing.Point(2, 679);
+            this.tlpDatosGenerales_04.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDatosGenerales_04.Name = "tlpDatosGenerales_04";
+            this.tlpDatosGenerales_04.RowCount = 1;
+            this.tlpDatosGenerales_04.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosGenerales_04.Size = new System.Drawing.Size(902, 73);
+            this.tlpDatosGenerales_04.TabIndex = 9;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.Location = new System.Drawing.Point(362, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(266, 69);
+            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAceptar.ThemeName = "VisualStudio2012Light";
+            this.btnAceptar.Click += new System.EventHandler(this.Button_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(632, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(268, 69);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.ThemeName = "VisualStudio2012Light";
+            this.btnCancelar.Click += new System.EventHandler(this.Button_Click);
+            // 
+            // pnlCentro
+            // 
+            this.pnlCentro.Controls.Add(this.gbDatosGenerales);
+            this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCentro.Location = new System.Drawing.Point(2, 2);
+            this.pnlCentro.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCentro.Name = "pnlCentro";
+            this.pnlCentro.Size = new System.Drawing.Size(902, 673);
+            this.pnlCentro.TabIndex = 11;
+            this.pnlCentro.ThemeName = "VisualStudio2012Light";
             // 
             // gbDatosGenerales
             // 
             this.gbDatosGenerales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbDatosGenerales.Controls.Add(this.tableLayoutPanel1);
+            this.gbDatosGenerales.Controls.Add(this.tlpDatosFiscales_01);
             this.gbDatosGenerales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosGenerales.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.gbDatosGenerales.HeaderText = "Datos Generales";
             this.gbDatosGenerales.Location = new System.Drawing.Point(0, 0);
+            this.gbDatosGenerales.Margin = new System.Windows.Forms.Padding(2);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(875, 619);
+            this.gbDatosGenerales.Padding = new System.Windows.Forms.Padding(1, 12, 1, 1);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(902, 673);
             this.gbDatosGenerales.TabIndex = 10;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
             this.gbDatosGenerales.ThemeName = "VisualStudio2012Light";
             // 
-            // tableLayoutPanel1
+            // tlpDatosFiscales_01
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.86033F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.13967F));
-            this.tableLayoutPanel1.Controls.Add(this.tlpDatosGenerales_Derecha, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tlpDatosGenerales_Izquierda, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 18);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(871, 599);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpDatosFiscales_01.ColumnCount = 2;
+            this.tlpDatosFiscales_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.86033F));
+            this.tlpDatosFiscales_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.13967F));
+            this.tlpDatosFiscales_01.Controls.Add(this.tlpDatosGenerales_Derecha, 1, 0);
+            this.tlpDatosFiscales_01.Controls.Add(this.tlpDatosGenerales_Izquierda, 0, 0);
+            this.tlpDatosFiscales_01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosFiscales_01.Location = new System.Drawing.Point(1, 12);
+            this.tlpDatosFiscales_01.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDatosFiscales_01.Name = "tlpDatosFiscales_01";
+            this.tlpDatosFiscales_01.RowCount = 1;
+            this.tlpDatosFiscales_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDatosFiscales_01.Size = new System.Drawing.Size(900, 660);
+            this.tlpDatosFiscales_01.TabIndex = 0;
             // 
             // tlpDatosGenerales_Derecha
             // 
             this.tlpDatosGenerales_Derecha.ColumnCount = 1;
             this.tlpDatosGenerales_Derecha.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDatosGenerales_Derecha.Controls.Add(this.picLogotipo, 0, 0);
-            this.tlpDatosGenerales_Derecha.Controls.Add(this.radButton1, 0, 1);
+            this.tlpDatosGenerales_Derecha.Controls.Add(this.btnExaminar, 0, 1);
             this.tlpDatosGenerales_Derecha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosGenerales_Derecha.Location = new System.Drawing.Point(681, 3);
+            this.tlpDatosGenerales_Derecha.Location = new System.Drawing.Point(702, 2);
+            this.tlpDatosGenerales_Derecha.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDatosGenerales_Derecha.Name = "tlpDatosGenerales_Derecha";
             this.tlpDatosGenerales_Derecha.RowCount = 2;
             this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.31872F));
             this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.68128F));
-            this.tlpDatosGenerales_Derecha.Size = new System.Drawing.Size(187, 593);
+            this.tlpDatosGenerales_Derecha.Size = new System.Drawing.Size(196, 656);
             this.tlpDatosGenerales_Derecha.TabIndex = 0;
             // 
             // picLogotipo
@@ -301,12 +375,29 @@
             this.picLogotipo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
-            this.picLogotipo.Location = new System.Drawing.Point(3, 3);
+            this.picLogotipo.Location = new System.Drawing.Point(2, 2);
+            this.picLogotipo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(181, 155);
-            this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLogotipo.Size = new System.Drawing.Size(192, 175);
+            this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
+            this.btnExaminar.Location = new System.Drawing.Point(2, 181);
+            this.btnExaminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(192, 44);
+            this.btnExaminar.TabIndex = 2;
+            this.btnExaminar.TabStop = false;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExaminar.ThemeName = "VisualStudio2012Light";
+            this.btnExaminar.Click += new System.EventHandler(this.Button_Click);
             // 
             // tlpDatosGenerales_Izquierda
             // 
@@ -315,12 +406,13 @@
             this.tlpDatosGenerales_Izquierda.Controls.Add(this.tlpDatosGenerales_2, 0, 1);
             this.tlpDatosGenerales_Izquierda.Controls.Add(this.tlpDatosGenerales_1, 0, 0);
             this.tlpDatosGenerales_Izquierda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosGenerales_Izquierda.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosGenerales_Izquierda.Location = new System.Drawing.Point(2, 2);
+            this.tlpDatosGenerales_Izquierda.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDatosGenerales_Izquierda.Name = "tlpDatosGenerales_Izquierda";
             this.tlpDatosGenerales_Izquierda.RowCount = 2;
             this.tlpDatosGenerales_Izquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.70658F));
             this.tlpDatosGenerales_Izquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.29343F));
-            this.tlpDatosGenerales_Izquierda.Size = new System.Drawing.Size(672, 593);
+            this.tlpDatosGenerales_Izquierda.Size = new System.Drawing.Size(696, 656);
             this.tlpDatosGenerales_Izquierda.TabIndex = 0;
             // 
             // tlpDatosGenerales_2
@@ -350,7 +442,8 @@
             this.tlpDatosGenerales_2.Controls.Add(this.eMail, 1, 5);
             this.tlpDatosGenerales_2.Controls.Add(this.Cuenta_Banco, 1, 7);
             this.tlpDatosGenerales_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosGenerales_2.Location = new System.Drawing.Point(3, 108);
+            this.tlpDatosGenerales_2.Location = new System.Drawing.Point(2, 118);
+            this.tlpDatosGenerales_2.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDatosGenerales_2.Name = "tlpDatosGenerales_2";
             this.tlpDatosGenerales_2.RowCount = 8;
             this.tlpDatosGenerales_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
@@ -361,19 +454,34 @@
             this.tlpDatosGenerales_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
             this.tlpDatosGenerales_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49953F));
             this.tlpDatosGenerales_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50328F));
-            this.tlpDatosGenerales_2.Size = new System.Drawing.Size(666, 482);
+            this.tlpDatosGenerales_2.Size = new System.Drawing.Size(692, 536);
             this.tlpDatosGenerales_2.TabIndex = 0;
+            // 
+            // lblCuentaBanco
+            // 
+            this.lblCuentaBanco.AutoSize = true;
+            this.lblCuentaBanco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCuentaBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuentaBanco.Location = new System.Drawing.Point(2, 462);
+            this.lblCuentaBanco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCuentaBanco.Name = "lblCuentaBanco";
+            this.lblCuentaBanco.Size = new System.Drawing.Size(134, 74);
+            this.lblCuentaBanco.TabIndex = 1;
+            this.lblCuentaBanco.Text = "Cuenta de Banco:";
+            this.lblCuentaBanco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tipo_Inmueble
             // 
             this.Tipo_Inmueble.AutoSize = false;
             this.Tipo_Inmueble.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tipo_Inmueble.DropDownHeight = 71;
             this.Tipo_Inmueble.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Tipo_Inmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Inmueble.Location = new System.Drawing.Point(136, 3);
+            this.Tipo_Inmueble.Location = new System.Drawing.Point(140, 2);
+            this.Tipo_Inmueble.Margin = new System.Windows.Forms.Padding(2);
             this.Tipo_Inmueble.Name = "Tipo_Inmueble";
             this.Tipo_Inmueble.NullText = "--SELECCIONE--";
-            this.Tipo_Inmueble.Size = new System.Drawing.Size(189, 54);
+            this.Tipo_Inmueble.Size = new System.Drawing.Size(199, 62);
             this.Tipo_Inmueble.TabIndex = 0;
             this.Tipo_Inmueble.ThemeName = "VisualStudio2012Light";
             // 
@@ -384,22 +492,24 @@
             this.tlpDatosGenerales_2.SetColumnSpan(this.Colonia, 2);
             this.Colonia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Colonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Colonia.Location = new System.Drawing.Point(136, 183);
-            this.Colonia.Margin = new System.Windows.Forms.Padding(3, 3, 4, 3);
+            this.Colonia.Location = new System.Drawing.Point(140, 200);
+            this.Colonia.Margin = new System.Windows.Forms.Padding(2, 2, 3, 2);
             this.Colonia.Name = "Colonia";
             this.Colonia.NullText = "COLONIA";
-            this.Colonia.Size = new System.Drawing.Size(526, 54);
+            this.Colonia.Size = new System.Drawing.Size(549, 62);
             this.Colonia.TabIndex = 0;
             this.Colonia.ThemeName = "VisualStudio2012Light";
+            this.Colonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblTipoInmueble
             // 
             this.lblTipoInmueble.AutoSize = true;
             this.lblTipoInmueble.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTipoInmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoInmueble.Location = new System.Drawing.Point(3, 0);
+            this.lblTipoInmueble.Location = new System.Drawing.Point(2, 0);
+            this.lblTipoInmueble.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTipoInmueble.Name = "lblTipoInmueble";
-            this.lblTipoInmueble.Size = new System.Drawing.Size(127, 60);
+            this.lblTipoInmueble.Size = new System.Drawing.Size(134, 66);
             this.lblTipoInmueble.TabIndex = 0;
             this.lblTipoInmueble.Text = "Tipo de inmueble:";
             this.lblTipoInmueble.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,9 +519,10 @@
             this.lblColonia.AutoSize = true;
             this.lblColonia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColonia.Location = new System.Drawing.Point(3, 180);
+            this.lblColonia.Location = new System.Drawing.Point(2, 198);
+            this.lblColonia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblColonia.Name = "lblColonia";
-            this.lblColonia.Size = new System.Drawing.Size(127, 60);
+            this.lblColonia.Size = new System.Drawing.Size(134, 66);
             this.lblColonia.TabIndex = 0;
             this.lblColonia.Text = "Colonia:";
             this.lblColonia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,9 +532,10 @@
             this.lblTipoVialidad.AutoSize = true;
             this.lblTipoVialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTipoVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoVialidad.Location = new System.Drawing.Point(3, 60);
+            this.lblTipoVialidad.Location = new System.Drawing.Point(2, 66);
+            this.lblTipoVialidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTipoVialidad.Name = "lblTipoVialidad";
-            this.lblTipoVialidad.Size = new System.Drawing.Size(127, 60);
+            this.lblTipoVialidad.Size = new System.Drawing.Size(134, 66);
             this.lblTipoVialidad.TabIndex = 0;
             this.lblTipoVialidad.Text = "Tipo de vialidad:";
             this.lblTipoVialidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -432,12 +544,14 @@
             // 
             this.Tipo_Vialidad.AutoSize = false;
             this.Tipo_Vialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tipo_Vialidad.DropDownHeight = 71;
             this.Tipo_Vialidad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Tipo_Vialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Vialidad.Location = new System.Drawing.Point(136, 63);
+            this.Tipo_Vialidad.Location = new System.Drawing.Point(140, 68);
+            this.Tipo_Vialidad.Margin = new System.Windows.Forms.Padding(2);
             this.Tipo_Vialidad.Name = "Tipo_Vialidad";
             this.Tipo_Vialidad.NullText = "--SELECCIONE--";
-            this.Tipo_Vialidad.Size = new System.Drawing.Size(189, 54);
+            this.Tipo_Vialidad.Size = new System.Drawing.Size(199, 62);
             this.Tipo_Vialidad.TabIndex = 0;
             this.Tipo_Vialidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -449,11 +563,12 @@
             this.tlpDG_01.Controls.Add(this.Vialidad, 1, 0);
             this.tlpDG_01.Controls.Add(this.lblNombreVialidad, 0, 0);
             this.tlpDG_01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDG_01.Location = new System.Drawing.Point(331, 63);
+            this.tlpDG_01.Location = new System.Drawing.Point(343, 68);
+            this.tlpDG_01.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDG_01.Name = "tlpDG_01";
             this.tlpDG_01.RowCount = 1;
             this.tlpDG_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDG_01.Size = new System.Drawing.Size(332, 54);
+            this.tlpDG_01.Size = new System.Drawing.Size(347, 62);
             this.tlpDG_01.TabIndex = 0;
             // 
             // Vialidad
@@ -462,21 +577,24 @@
             this.Vialidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Vialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Vialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vialidad.Location = new System.Drawing.Point(147, 3);
+            this.Vialidad.Location = new System.Drawing.Point(153, 2);
+            this.Vialidad.Margin = new System.Windows.Forms.Padding(2);
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "CALLE";
-            this.Vialidad.Size = new System.Drawing.Size(182, 48);
+            this.Vialidad.Size = new System.Drawing.Size(192, 58);
             this.Vialidad.TabIndex = 0;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
+            this.Vialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblNombreVialidad
             // 
             this.lblNombreVialidad.AutoSize = true;
             this.lblNombreVialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreVialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreVialidad.Location = new System.Drawing.Point(3, 0);
+            this.lblNombreVialidad.Location = new System.Drawing.Point(2, 0);
+            this.lblNombreVialidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreVialidad.Name = "lblNombreVialidad";
-            this.lblNombreVialidad.Size = new System.Drawing.Size(138, 54);
+            this.lblNombreVialidad.Size = new System.Drawing.Size(147, 62);
             this.lblNombreVialidad.TabIndex = 0;
             this.lblNombreVialidad.Text = "Vialidad:";
             this.lblNombreVialidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -493,11 +611,12 @@
             this.tlpDG_02.Controls.Add(this.No_Ext, 1, 0);
             this.tlpDG_02.Controls.Add(this.lblNoExt, 0, 0);
             this.tlpDG_02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDG_02.Location = new System.Drawing.Point(331, 123);
+            this.tlpDG_02.Location = new System.Drawing.Point(343, 134);
+            this.tlpDG_02.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDG_02.Name = "tlpDG_02";
             this.tlpDG_02.RowCount = 1;
             this.tlpDG_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDG_02.Size = new System.Drawing.Size(332, 54);
+            this.tlpDG_02.Size = new System.Drawing.Size(347, 62);
             this.tlpDG_02.TabIndex = 0;
             // 
             // No_Int
@@ -506,21 +625,24 @@
             this.No_Int.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.No_Int.Dock = System.Windows.Forms.DockStyle.Fill;
             this.No_Int.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No_Int.Location = new System.Drawing.Point(251, 3);
+            this.No_Int.Location = new System.Drawing.Point(261, 2);
+            this.No_Int.Margin = new System.Windows.Forms.Padding(2);
             this.No_Int.Name = "No_Int";
             this.No_Int.NullText = "NO. INT";
-            this.No_Int.Size = new System.Drawing.Size(78, 48);
+            this.No_Int.Size = new System.Drawing.Size(84, 58);
             this.No_Int.TabIndex = 0;
             this.No_Int.ThemeName = "VisualStudio2012Light";
+            this.No_Int.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblNoInt
             // 
             this.lblNoInt.AutoSize = true;
             this.lblNoInt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNoInt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoInt.Location = new System.Drawing.Point(175, 0);
+            this.lblNoInt.Location = new System.Drawing.Point(181, 0);
+            this.lblNoInt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoInt.Name = "lblNoInt";
-            this.lblNoInt.Size = new System.Drawing.Size(70, 54);
+            this.lblNoInt.Size = new System.Drawing.Size(76, 62);
             this.lblNoInt.TabIndex = 0;
             this.lblNoInt.Text = "No \r\nInt:";
             this.lblNoInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -531,21 +653,24 @@
             this.No_Ext.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.No_Ext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.No_Ext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No_Ext.Location = new System.Drawing.Point(92, 3);
+            this.No_Ext.Location = new System.Drawing.Point(95, 2);
+            this.No_Ext.Margin = new System.Windows.Forms.Padding(2);
             this.No_Ext.Name = "No_Ext";
             this.No_Ext.NullText = "NO. EXT";
-            this.No_Ext.Size = new System.Drawing.Size(77, 48);
+            this.No_Ext.Size = new System.Drawing.Size(82, 58);
             this.No_Ext.TabIndex = 0;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
+            this.No_Ext.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblNoExt
             // 
             this.lblNoExt.AutoSize = true;
             this.lblNoExt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNoExt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoExt.Location = new System.Drawing.Point(3, 0);
+            this.lblNoExt.Location = new System.Drawing.Point(2, 0);
+            this.lblNoExt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoExt.Name = "lblNoExt";
-            this.lblNoExt.Size = new System.Drawing.Size(83, 54);
+            this.lblNoExt.Size = new System.Drawing.Size(89, 62);
             this.lblNoExt.TabIndex = 0;
             this.lblNoExt.Text = "No \r\nExt:";
             this.lblNoExt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -555,9 +680,10 @@
             this.lblCodigoPostal.AutoSize = true;
             this.lblCodigoPostal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCodigoPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPostal.Location = new System.Drawing.Point(3, 120);
+            this.lblCodigoPostal.Location = new System.Drawing.Point(2, 132);
+            this.lblCodigoPostal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoPostal.Name = "lblCodigoPostal";
-            this.lblCodigoPostal.Size = new System.Drawing.Size(127, 60);
+            this.lblCodigoPostal.Size = new System.Drawing.Size(134, 66);
             this.lblCodigoPostal.TabIndex = 0;
             this.lblCodigoPostal.Text = "Código Postal:";
             this.lblCodigoPostal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -567,9 +693,10 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(3, 240);
+            this.lblEstado.Location = new System.Drawing.Point(2, 264);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(127, 60);
+            this.lblEstado.Size = new System.Drawing.Size(134, 66);
             this.lblEstado.TabIndex = 0;
             this.lblEstado.Text = "Estado:";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -578,12 +705,14 @@
             // 
             this.Entidad_Federativa.AutoSize = false;
             this.Entidad_Federativa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Entidad_Federativa.DropDownHeight = 71;
             this.Entidad_Federativa.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Entidad_Federativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Entidad_Federativa.Location = new System.Drawing.Point(136, 243);
+            this.Entidad_Federativa.Location = new System.Drawing.Point(140, 266);
+            this.Entidad_Federativa.Margin = new System.Windows.Forms.Padding(2);
             this.Entidad_Federativa.Name = "Entidad_Federativa";
             this.Entidad_Federativa.NullText = "--SELECCIONE--";
-            this.Entidad_Federativa.Size = new System.Drawing.Size(189, 54);
+            this.Entidad_Federativa.Size = new System.Drawing.Size(199, 62);
             this.Entidad_Federativa.TabIndex = 0;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
             // 
@@ -595,23 +724,26 @@
             this.tlpDG_03.Controls.Add(this.Municipio, 1, 0);
             this.tlpDG_03.Controls.Add(this.lblLocalidad, 0, 0);
             this.tlpDG_03.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDG_03.Location = new System.Drawing.Point(331, 243);
+            this.tlpDG_03.Location = new System.Drawing.Point(343, 266);
+            this.tlpDG_03.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDG_03.Name = "tlpDG_03";
             this.tlpDG_03.RowCount = 1;
             this.tlpDG_03.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDG_03.Size = new System.Drawing.Size(332, 54);
+            this.tlpDG_03.Size = new System.Drawing.Size(347, 62);
             this.tlpDG_03.TabIndex = 0;
             // 
             // Municipio
             // 
             this.Municipio.AutoSize = false;
             this.Municipio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Municipio.DropDownHeight = 71;
             this.Municipio.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Municipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Municipio.Location = new System.Drawing.Point(132, 3);
+            this.Municipio.Location = new System.Drawing.Point(136, 2);
+            this.Municipio.Margin = new System.Windows.Forms.Padding(2);
             this.Municipio.Name = "Municipio";
             this.Municipio.NullText = "--SELECCIONE--";
-            this.Municipio.Size = new System.Drawing.Size(197, 48);
+            this.Municipio.Size = new System.Drawing.Size(209, 58);
             this.Municipio.TabIndex = 0;
             this.Municipio.ThemeName = "VisualStudio2012Light";
             // 
@@ -620,9 +752,10 @@
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.Location = new System.Drawing.Point(3, 0);
+            this.lblLocalidad.Location = new System.Drawing.Point(2, 0);
+            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(123, 54);
+            this.lblLocalidad.Size = new System.Drawing.Size(130, 62);
             this.lblLocalidad.TabIndex = 0;
             this.lblLocalidad.Text = "Localidad:";
             this.lblLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -633,25 +766,28 @@
             this.Codigo_Postal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Codigo_Postal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_Postal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Postal.Location = new System.Drawing.Point(136, 123);
+            this.Codigo_Postal.Location = new System.Drawing.Point(140, 134);
+            this.Codigo_Postal.Margin = new System.Windows.Forms.Padding(2);
             this.Codigo_Postal.Mask = "00000";
             this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
-            this.Codigo_Postal.Size = new System.Drawing.Size(189, 54);
+            this.Codigo_Postal.Size = new System.Drawing.Size(199, 62);
             this.Codigo_Postal.TabIndex = 0;
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
             this.Codigo_Postal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Postal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(3, 300);
+            this.lblEmail.Location = new System.Drawing.Point(2, 330);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(127, 60);
+            this.lblEmail.Size = new System.Drawing.Size(134, 66);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "eMail:";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -661,9 +797,10 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(3, 360);
+            this.lblTelefono.Location = new System.Drawing.Point(2, 396);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(127, 60);
+            this.lblTelefono.Size = new System.Drawing.Size(134, 66);
             this.lblTelefono.TabIndex = 0;
             this.lblTelefono.Text = "Telefono:";
             this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -676,11 +813,12 @@
             this.tlpDG_04.Controls.Add(this.lblCelular, 0, 0);
             this.tlpDG_04.Controls.Add(this.Celular, 1, 0);
             this.tlpDG_04.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDG_04.Location = new System.Drawing.Point(331, 363);
+            this.tlpDG_04.Location = new System.Drawing.Point(343, 398);
+            this.tlpDG_04.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDG_04.Name = "tlpDG_04";
             this.tlpDG_04.RowCount = 1;
             this.tlpDG_04.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDG_04.Size = new System.Drawing.Size(332, 54);
+            this.tlpDG_04.Size = new System.Drawing.Size(347, 62);
             this.tlpDG_04.TabIndex = 0;
             // 
             // lblCelular
@@ -688,9 +826,10 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.Location = new System.Drawing.Point(3, 0);
+            this.lblCelular.Location = new System.Drawing.Point(2, 0);
+            this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(126, 54);
+            this.lblCelular.Size = new System.Drawing.Size(133, 62);
             this.lblCelular.TabIndex = 0;
             this.lblCelular.Text = "Celular:";
             this.lblCelular.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -701,16 +840,18 @@
             this.Celular.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Celular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Celular.Location = new System.Drawing.Point(135, 3);
+            this.Celular.Location = new System.Drawing.Point(139, 2);
+            this.Celular.Margin = new System.Windows.Forms.Padding(2);
             this.Celular.Mask = "(000)000-000-0000";
             this.Celular.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Celular.Name = "Celular";
-            this.Celular.Size = new System.Drawing.Size(194, 48);
+            this.Celular.Size = new System.Drawing.Size(206, 58);
             this.Celular.TabIndex = 0;
             this.Celular.TabStop = false;
             this.Celular.Text = "(___)___-___-____";
             this.Celular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Celular.ThemeName = "VisualStudio2012Light";
+            this.Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // Telefono
             // 
@@ -718,16 +859,18 @@
             this.Telefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Telefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(136, 363);
+            this.Telefono.Location = new System.Drawing.Point(140, 398);
+            this.Telefono.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono.Mask = "(99)000-00000";
             this.Telefono.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(189, 54);
+            this.Telefono.Size = new System.Drawing.Size(199, 62);
             this.Telefono.TabIndex = 0;
             this.Telefono.TabStop = false;
             this.Telefono.Text = "(__)___-_____";
             this.Telefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Telefono.ThemeName = "VisualStudio2012Light";
+            this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // eMail
             // 
@@ -736,13 +879,29 @@
             this.tlpDatosGenerales_2.SetColumnSpan(this.eMail, 2);
             this.eMail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eMail.Location = new System.Drawing.Point(136, 303);
-            this.eMail.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.eMail.Location = new System.Drawing.Point(140, 332);
+            this.eMail.Margin = new System.Windows.Forms.Padding(2, 2, 4, 2);
             this.eMail.Name = "eMail";
             this.eMail.NullText = "EMAIL@EXAMPLE.COM";
-            this.eMail.Size = new System.Drawing.Size(524, 54);
+            this.eMail.Size = new System.Drawing.Size(548, 62);
             this.eMail.TabIndex = 0;
             this.eMail.ThemeName = "VisualStudio2012Light";
+            this.eMail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            // 
+            // Cuenta_Banco
+            // 
+            this.Cuenta_Banco.AutoSize = false;
+            this.tlpDatosGenerales_2.SetColumnSpan(this.Cuenta_Banco, 2);
+            this.Cuenta_Banco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Cuenta_Banco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cuenta_Banco.Location = new System.Drawing.Point(140, 464);
+            this.Cuenta_Banco.Margin = new System.Windows.Forms.Padding(2);
+            this.Cuenta_Banco.Name = "Cuenta_Banco";
+            this.Cuenta_Banco.NullText = "CUENTA DE BANCO (CLABE INTERBANCARIA)";
+            this.Cuenta_Banco.Size = new System.Drawing.Size(550, 70);
+            this.Cuenta_Banco.TabIndex = 2;
+            this.Cuenta_Banco.ThemeName = "VisualStudio2012Light";
+            this.Cuenta_Banco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tlpDatosGenerales_1
             // 
@@ -754,12 +913,13 @@
             this.tlpDatosGenerales_1.Controls.Add(this.Nombre_Empresa, 1, 1);
             this.tlpDatosGenerales_1.Controls.Add(this.lblGiro, 0, 0);
             this.tlpDatosGenerales_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosGenerales_1.Location = new System.Drawing.Point(3, 3);
+            this.tlpDatosGenerales_1.Location = new System.Drawing.Point(2, 2);
+            this.tlpDatosGenerales_1.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDatosGenerales_1.Name = "tlpDatosGenerales_1";
             this.tlpDatosGenerales_1.RowCount = 2;
             this.tlpDatosGenerales_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDatosGenerales_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDatosGenerales_1.Size = new System.Drawing.Size(666, 99);
+            this.tlpDatosGenerales_1.Size = new System.Drawing.Size(692, 112);
             this.tlpDatosGenerales_1.TabIndex = 0;
             // 
             // lblNombreEmpresa
@@ -767,9 +927,10 @@
             this.lblNombreEmpresa.AutoSize = true;
             this.lblNombreEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(3, 49);
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(2, 56);
+            this.lblNombreEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
-            this.lblNombreEmpresa.Size = new System.Drawing.Size(128, 50);
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(135, 56);
             this.lblNombreEmpresa.TabIndex = 0;
             this.lblNombreEmpresa.Text = "Nombre:";
             this.lblNombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -778,13 +939,15 @@
             // 
             this.Giro_Comercial.AutoSize = false;
             this.Giro_Comercial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Giro_Comercial.DropDownHeight = 71;
             this.Giro_Comercial.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.Giro_Comercial.Enabled = false;
             this.Giro_Comercial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Giro_Comercial.Location = new System.Drawing.Point(137, 3);
+            this.Giro_Comercial.Location = new System.Drawing.Point(141, 2);
+            this.Giro_Comercial.Margin = new System.Windows.Forms.Padding(2);
             this.Giro_Comercial.Name = "Giro_Comercial";
             this.Giro_Comercial.NullText = "--SELECCIONE--";
-            this.Giro_Comercial.Size = new System.Drawing.Size(526, 43);
+            this.Giro_Comercial.Size = new System.Drawing.Size(549, 52);
             this.Giro_Comercial.TabIndex = 0;
             this.Giro_Comercial.ThemeName = "VisualStudio2012Light";
             // 
@@ -794,124 +957,416 @@
             this.Nombre_Empresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre_Empresa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nombre_Empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre_Empresa.Location = new System.Drawing.Point(137, 52);
+            this.Nombre_Empresa.Location = new System.Drawing.Point(141, 58);
+            this.Nombre_Empresa.Margin = new System.Windows.Forms.Padding(2);
             this.Nombre_Empresa.Name = "Nombre_Empresa";
             this.Nombre_Empresa.NullText = "NOMBRE COMERCIAL DEL PROVEEDOR";
-            this.Nombre_Empresa.Size = new System.Drawing.Size(526, 44);
+            this.Nombre_Empresa.Size = new System.Drawing.Size(549, 52);
             this.Nombre_Empresa.TabIndex = 0;
             this.Nombre_Empresa.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblGiro
             // 
             this.lblGiro.AutoSize = true;
             this.lblGiro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiro.Location = new System.Drawing.Point(3, 0);
+            this.lblGiro.Location = new System.Drawing.Point(2, 0);
+            this.lblGiro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiro.Name = "lblGiro";
-            this.lblGiro.Size = new System.Drawing.Size(128, 49);
+            this.lblGiro.Size = new System.Drawing.Size(135, 56);
             this.lblGiro.TabIndex = 0;
             this.lblGiro.Text = "Giro:";
             this.lblGiro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tlpDatosGenerales_04
-            // 
-            this.tlpDatosGenerales_04.ColumnCount = 3;
-            this.tlpDatosGenerales_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlpDatosGenerales_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpDatosGenerales_04.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tlpDatosGenerales_04.Controls.Add(this.btnAceptar, 1, 0);
-            this.tlpDatosGenerales_04.Controls.Add(this.btnCancelar, 2, 0);
-            this.tlpDatosGenerales_04.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosGenerales_04.Location = new System.Drawing.Point(3, 628);
-            this.tlpDatosGenerales_04.Name = "tlpDatosGenerales_04";
-            this.tlpDatosGenerales_04.RowCount = 1;
-            this.tlpDatosGenerales_04.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDatosGenerales_04.Size = new System.Drawing.Size(875, 65);
-            this.tlpDatosGenerales_04.TabIndex = 9;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.Location = new System.Drawing.Point(353, 3);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(256, 59);
-            this.btnAceptar.TabIndex = 0;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAceptar.ThemeName = "VisualStudio2012Light";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(615, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(257, 59);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.ThemeName = "VisualStudio2012Light";
-            // 
-            // paneIzq
-            // 
-            this.paneIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.paneIzq.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneIzq.Location = new System.Drawing.Point(3, 3);
-            this.paneIzq.Name = "paneIzq";
-            this.paneIzq.Size = new System.Drawing.Size(195, 706);
-            this.paneIzq.TabIndex = 0;
-            this.paneIzq.TabStop = false;
-            // 
-            // pnlCentro
-            // 
-            this.pnlCentro.Controls.Add(this.gbDatosGenerales);
-            this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCentro.Location = new System.Drawing.Point(3, 3);
-            this.pnlCentro.Name = "pnlCentro";
-            this.pnlCentro.Size = new System.Drawing.Size(875, 619);
-            this.pnlCentro.TabIndex = 11;
-            this.pnlCentro.ThemeName = "VisualStudio2012Light";
-            // 
-            // radButton1
-            // 
-            this.radButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radButton1.Image = ((System.Drawing.Image)(resources.GetObject("radButton1.Image")));
-            this.radButton1.Location = new System.Drawing.Point(3, 164);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(181, 68);
-            this.radButton1.TabIndex = 2;
-            this.radButton1.TabStop = false;
-            this.radButton1.Text = "Examinar";
-            this.radButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.radButton1.ThemeName = "VisualStudio2012Light";
-            // 
             // pvpDatosFiscales
             // 
             this.pvpDatosFiscales.Controls.Add(this.tlpSAT);
-            this.pvpDatosFiscales.ItemSize = new System.Drawing.SizeF(42F, 276F);
-            this.pvpDatosFiscales.Location = new System.Drawing.Point(48, 5);
+            this.pvpDatosFiscales.ItemSize = new System.Drawing.SizeF(35F, 223F);
+            this.pvpDatosFiscales.Location = new System.Drawing.Point(41, 5);
+            this.pvpDatosFiscales.Margin = new System.Windows.Forms.Padding(2);
             this.pvpDatosFiscales.Name = "pvpDatosFiscales";
-            this.pvpDatosFiscales.Size = new System.Drawing.Size(881, 696);
+            this.pvpDatosFiscales.Size = new System.Drawing.Size(906, 754);
             this.pvpDatosFiscales.Text = "Datos Fiscales (SAT)";
             // 
             // tlpSAT
             // 
             this.tlpSAT.ColumnCount = 1;
-            this.tlpSAT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpSAT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSAT.Controls.Add(this.tlpDatosFiscales_03_Botones, 0, 2);
             this.tlpSAT.Controls.Add(this.gbDatosFiscales, 0, 1);
             this.tlpSAT.Controls.Add(this.gbDatosCorporativos, 0, 0);
-            this.tlpSAT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpSAT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpSAT.Location = new System.Drawing.Point(0, 0);
+            this.tlpSAT.Margin = new System.Windows.Forms.Padding(2);
             this.tlpSAT.Name = "tlpSAT";
-            this.tlpSAT.RowCount = 2;
-            this.tlpSAT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.1954F));
-            this.tlpSAT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.8046F));
-            this.tlpSAT.Size = new System.Drawing.Size(881, 606);
+            this.tlpSAT.RowCount = 3;
+            this.tlpSAT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpSAT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tlpSAT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpSAT.Size = new System.Drawing.Size(906, 754);
             this.tlpSAT.TabIndex = 0;
+            // 
+            // gbDatosFiscales
+            // 
+            this.gbDatosFiscales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbDatosFiscales.Controls.Add(this.tlpDatosFiscales_02);
+            this.gbDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbDatosFiscales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosFiscales.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
+            this.gbDatosFiscales.HeaderText = "Datos Fiscales";
+            this.gbDatosFiscales.Location = new System.Drawing.Point(2, 228);
+            this.gbDatosFiscales.Margin = new System.Windows.Forms.Padding(2);
+            this.gbDatosFiscales.Name = "gbDatosFiscales";
+            this.gbDatosFiscales.Padding = new System.Windows.Forms.Padding(1, 12, 1, 1);
+            this.gbDatosFiscales.Size = new System.Drawing.Size(902, 448);
+            this.gbDatosFiscales.TabIndex = 2;
+            this.gbDatosFiscales.TabStop = false;
+            this.gbDatosFiscales.Text = "Datos Fiscales";
+            this.gbDatosFiscales.ThemeName = "VisualStudio2012Light";
+            // 
+            // tlpDatosFiscales_02
+            // 
+            this.tlpDatosFiscales_02.ColumnCount = 3;
+            this.tlpDatosFiscales_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.00451F));
+            this.tlpDatosFiscales_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.43243F));
+            this.tlpDatosFiscales_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.37513F));
+            this.tlpDatosFiscales_02.Controls.Add(this.Tipo_Inmueble_Fiscal, 1, 0);
+            this.tlpDatosFiscales_02.Controls.Add(this.Colonia_Fiscal, 1, 3);
+            this.tlpDatosFiscales_02.Controls.Add(this.lblTipoInmuebleFiscal, 0, 0);
+            this.tlpDatosFiscales_02.Controls.Add(this.lblColoniaFiscal, 0, 3);
+            this.tlpDatosFiscales_02.Controls.Add(this.lblTipoVialidadFiscal, 0, 1);
+            this.tlpDatosFiscales_02.Controls.Add(this.Tipo_Vialidad_Fiscal, 1, 1);
+            this.tlpDatosFiscales_02.Controls.Add(this.tlpDF_02, 2, 1);
+            this.tlpDatosFiscales_02.Controls.Add(this.tlpDF_01, 2, 2);
+            this.tlpDatosFiscales_02.Controls.Add(this.lblCodigoPostalFiscal, 0, 2);
+            this.tlpDatosFiscales_02.Controls.Add(this.lblEstadoFiscal, 0, 4);
+            this.tlpDatosFiscales_02.Controls.Add(this.Entidad_Federativa_Fiscal, 1, 4);
+            this.tlpDatosFiscales_02.Controls.Add(this.tlpDF_03, 2, 4);
+            this.tlpDatosFiscales_02.Controls.Add(this.Codigo_Postal_Fiscal, 1, 2);
+            this.tlpDatosFiscales_02.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosFiscales_02.Location = new System.Drawing.Point(1, 12);
+            this.tlpDatosFiscales_02.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDatosFiscales_02.Name = "tlpDatosFiscales_02";
+            this.tlpDatosFiscales_02.RowCount = 5;
+            this.tlpDatosFiscales_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpDatosFiscales_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpDatosFiscales_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpDatosFiscales_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpDatosFiscales_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpDatosFiscales_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tlpDatosFiscales_02.Size = new System.Drawing.Size(900, 435);
+            this.tlpDatosFiscales_02.TabIndex = 0;
+            // 
+            // Tipo_Inmueble_Fiscal
+            // 
+            this.Tipo_Inmueble_Fiscal.AutoSize = false;
+            this.Tipo_Inmueble_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tipo_Inmueble_Fiscal.DropDownHeight = 71;
+            this.Tipo_Inmueble_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.Tipo_Inmueble_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo_Inmueble_Fiscal.Location = new System.Drawing.Point(155, 2);
+            this.Tipo_Inmueble_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Tipo_Inmueble_Fiscal.Name = "Tipo_Inmueble_Fiscal";
+            this.Tipo_Inmueble_Fiscal.NullText = "--SELECCIONE--";
+            this.Tipo_Inmueble_Fiscal.Size = new System.Drawing.Size(288, 82);
+            this.Tipo_Inmueble_Fiscal.TabIndex = 0;
+            this.Tipo_Inmueble_Fiscal.ThemeName = "VisualStudio2012Light";
+            // 
+            // Colonia_Fiscal
+            // 
+            this.Colonia_Fiscal.AutoSize = false;
+            this.Colonia_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tlpDatosFiscales_02.SetColumnSpan(this.Colonia_Fiscal, 2);
+            this.Colonia_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Colonia_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Colonia_Fiscal.Location = new System.Drawing.Point(155, 260);
+            this.Colonia_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Colonia_Fiscal.Name = "Colonia_Fiscal";
+            this.Colonia_Fiscal.NullText = "COLONIA (FISCAL)";
+            this.Colonia_Fiscal.Size = new System.Drawing.Size(743, 82);
+            this.Colonia_Fiscal.TabIndex = 0;
+            this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Colonia_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            // 
+            // lblTipoInmuebleFiscal
+            // 
+            this.lblTipoInmuebleFiscal.AutoSize = true;
+            this.lblTipoInmuebleFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTipoInmuebleFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoInmuebleFiscal.Location = new System.Drawing.Point(2, 0);
+            this.lblTipoInmuebleFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipoInmuebleFiscal.Name = "lblTipoInmuebleFiscal";
+            this.lblTipoInmuebleFiscal.Size = new System.Drawing.Size(149, 86);
+            this.lblTipoInmuebleFiscal.TabIndex = 0;
+            this.lblTipoInmuebleFiscal.Text = "Tipo de inmueble:";
+            this.lblTipoInmuebleFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblColoniaFiscal
+            // 
+            this.lblColoniaFiscal.AutoSize = true;
+            this.lblColoniaFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblColoniaFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColoniaFiscal.Location = new System.Drawing.Point(2, 258);
+            this.lblColoniaFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblColoniaFiscal.Name = "lblColoniaFiscal";
+            this.lblColoniaFiscal.Size = new System.Drawing.Size(149, 86);
+            this.lblColoniaFiscal.TabIndex = 0;
+            this.lblColoniaFiscal.Text = "Colonia:";
+            this.lblColoniaFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTipoVialidadFiscal
+            // 
+            this.lblTipoVialidadFiscal.AutoSize = true;
+            this.lblTipoVialidadFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTipoVialidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoVialidadFiscal.Location = new System.Drawing.Point(2, 86);
+            this.lblTipoVialidadFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipoVialidadFiscal.Name = "lblTipoVialidadFiscal";
+            this.lblTipoVialidadFiscal.Size = new System.Drawing.Size(149, 86);
+            this.lblTipoVialidadFiscal.TabIndex = 0;
+            this.lblTipoVialidadFiscal.Text = "Tipo de vialidad:";
+            this.lblTipoVialidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Tipo_Vialidad_Fiscal
+            // 
+            this.Tipo_Vialidad_Fiscal.AutoSize = false;
+            this.Tipo_Vialidad_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tipo_Vialidad_Fiscal.DropDownHeight = 71;
+            this.Tipo_Vialidad_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.Tipo_Vialidad_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo_Vialidad_Fiscal.Location = new System.Drawing.Point(155, 88);
+            this.Tipo_Vialidad_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Tipo_Vialidad_Fiscal.Name = "Tipo_Vialidad_Fiscal";
+            this.Tipo_Vialidad_Fiscal.NullText = "--SELECCIONE--";
+            this.Tipo_Vialidad_Fiscal.Size = new System.Drawing.Size(288, 82);
+            this.Tipo_Vialidad_Fiscal.TabIndex = 0;
+            this.Tipo_Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
+            // 
+            // tlpDF_02
+            // 
+            this.tlpDF_02.ColumnCount = 2;
+            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.18433F));
+            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.81567F));
+            this.tlpDF_02.Controls.Add(this.Vialidad_Fiscal, 1, 0);
+            this.tlpDF_02.Controls.Add(this.lblNombreVialidadFiscal, 0, 0);
+            this.tlpDF_02.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDF_02.Location = new System.Drawing.Point(447, 88);
+            this.tlpDF_02.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDF_02.Name = "tlpDF_02";
+            this.tlpDF_02.RowCount = 1;
+            this.tlpDF_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDF_02.Size = new System.Drawing.Size(451, 82);
+            this.tlpDF_02.TabIndex = 0;
+            // 
+            // Vialidad_Fiscal
+            // 
+            this.Vialidad_Fiscal.AutoSize = false;
+            this.Vialidad_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.Vialidad_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Vialidad_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vialidad_Fiscal.Location = new System.Drawing.Point(138, 2);
+            this.Vialidad_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
+            this.Vialidad_Fiscal.NullText = "CALLE (FISCAL)";
+            this.Vialidad_Fiscal.Size = new System.Drawing.Size(311, 78);
+            this.Vialidad_Fiscal.TabIndex = 0;
+            this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Vialidad_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            // 
+            // lblNombreVialidadFiscal
+            // 
+            this.lblNombreVialidadFiscal.AutoSize = true;
+            this.lblNombreVialidadFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNombreVialidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreVialidadFiscal.Location = new System.Drawing.Point(2, 0);
+            this.lblNombreVialidadFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreVialidadFiscal.Name = "lblNombreVialidadFiscal";
+            this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(132, 82);
+            this.lblNombreVialidadFiscal.TabIndex = 0;
+            this.lblNombreVialidadFiscal.Text = "Vialidad:";
+            this.lblNombreVialidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tlpDF_01
+            // 
+            this.tlpDF_01.ColumnCount = 4;
+            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.18433F));
+            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.96313F));
+            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.50691F));
+            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpDF_01.Controls.Add(this.No_Int_Fiscal, 3, 0);
+            this.tlpDF_01.Controls.Add(this.lblNoIntFiscal, 2, 0);
+            this.tlpDF_01.Controls.Add(this.No_Ext_Fiscal, 1, 0);
+            this.tlpDF_01.Controls.Add(this.lblNoExtFiscal, 0, 0);
+            this.tlpDF_01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDF_01.Location = new System.Drawing.Point(447, 174);
+            this.tlpDF_01.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDF_01.Name = "tlpDF_01";
+            this.tlpDF_01.RowCount = 1;
+            this.tlpDF_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDF_01.Size = new System.Drawing.Size(451, 82);
+            this.tlpDF_01.TabIndex = 0;
+            // 
+            // No_Int_Fiscal
+            // 
+            this.No_Int_Fiscal.AutoSize = false;
+            this.No_Int_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.No_Int_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.No_Int_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.No_Int_Fiscal.Location = new System.Drawing.Point(338, 2);
+            this.No_Int_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.No_Int_Fiscal.Name = "No_Int_Fiscal";
+            this.No_Int_Fiscal.NullText = "NO. INT";
+            this.No_Int_Fiscal.Size = new System.Drawing.Size(111, 78);
+            this.No_Int_Fiscal.TabIndex = 0;
+            this.No_Int_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.No_Int_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            // 
+            // lblNoIntFiscal
+            // 
+            this.lblNoIntFiscal.AutoSize = true;
+            this.lblNoIntFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNoIntFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoIntFiscal.Location = new System.Drawing.Point(246, 0);
+            this.lblNoIntFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoIntFiscal.Name = "lblNoIntFiscal";
+            this.lblNoIntFiscal.Size = new System.Drawing.Size(88, 82);
+            this.lblNoIntFiscal.TabIndex = 0;
+            this.lblNoIntFiscal.Text = "No Int:";
+            this.lblNoIntFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // No_Ext_Fiscal
+            // 
+            this.No_Ext_Fiscal.AutoSize = false;
+            this.No_Ext_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.No_Ext_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.No_Ext_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.No_Ext_Fiscal.Location = new System.Drawing.Point(138, 2);
+            this.No_Ext_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.No_Ext_Fiscal.Name = "No_Ext_Fiscal";
+            this.No_Ext_Fiscal.NullText = "NO. EXT";
+            this.No_Ext_Fiscal.Size = new System.Drawing.Size(104, 78);
+            this.No_Ext_Fiscal.TabIndex = 0;
+            this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.No_Ext_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            // 
+            // lblNoExtFiscal
+            // 
+            this.lblNoExtFiscal.AutoSize = true;
+            this.lblNoExtFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNoExtFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoExtFiscal.Location = new System.Drawing.Point(2, 0);
+            this.lblNoExtFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoExtFiscal.Name = "lblNoExtFiscal";
+            this.lblNoExtFiscal.Size = new System.Drawing.Size(132, 82);
+            this.lblNoExtFiscal.TabIndex = 0;
+            this.lblNoExtFiscal.Text = "No Ext:";
+            this.lblNoExtFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCodigoPostalFiscal
+            // 
+            this.lblCodigoPostalFiscal.AutoSize = true;
+            this.lblCodigoPostalFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCodigoPostalFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPostalFiscal.Location = new System.Drawing.Point(2, 172);
+            this.lblCodigoPostalFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigoPostalFiscal.Name = "lblCodigoPostalFiscal";
+            this.lblCodigoPostalFiscal.Size = new System.Drawing.Size(149, 86);
+            this.lblCodigoPostalFiscal.TabIndex = 0;
+            this.lblCodigoPostalFiscal.Text = "Código Postal:";
+            this.lblCodigoPostalFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblEstadoFiscal
+            // 
+            this.lblEstadoFiscal.AutoSize = true;
+            this.lblEstadoFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEstadoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoFiscal.Location = new System.Drawing.Point(2, 344);
+            this.lblEstadoFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstadoFiscal.Name = "lblEstadoFiscal";
+            this.lblEstadoFiscal.Size = new System.Drawing.Size(149, 91);
+            this.lblEstadoFiscal.TabIndex = 0;
+            this.lblEstadoFiscal.Text = "Estado:";
+            this.lblEstadoFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Entidad_Federativa_Fiscal
+            // 
+            this.Entidad_Federativa_Fiscal.AutoSize = false;
+            this.Entidad_Federativa_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Entidad_Federativa_Fiscal.DropDownHeight = 71;
+            this.Entidad_Federativa_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.Entidad_Federativa_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Entidad_Federativa_Fiscal.Location = new System.Drawing.Point(155, 346);
+            this.Entidad_Federativa_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Entidad_Federativa_Fiscal.Name = "Entidad_Federativa_Fiscal";
+            this.Entidad_Federativa_Fiscal.NullText = "--SELECCIONE--";
+            this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(288, 87);
+            this.Entidad_Federativa_Fiscal.TabIndex = 0;
+            this.Entidad_Federativa_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Entidad_Federativa_Fiscal.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstado_SelectedIndexChanged);
+            // 
+            // tlpDF_03
+            // 
+            this.tlpDF_03.ColumnCount = 2;
+            this.tlpDF_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.64516F));
+            this.tlpDF_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.35484F));
+            this.tlpDF_03.Controls.Add(this.Municipio_Fiscal, 1, 0);
+            this.tlpDF_03.Controls.Add(this.lblLocalidadFiscal, 0, 0);
+            this.tlpDF_03.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDF_03.Location = new System.Drawing.Point(447, 346);
+            this.tlpDF_03.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDF_03.Name = "tlpDF_03";
+            this.tlpDF_03.RowCount = 1;
+            this.tlpDF_03.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDF_03.Size = new System.Drawing.Size(451, 87);
+            this.tlpDF_03.TabIndex = 0;
+            // 
+            // Municipio_Fiscal
+            // 
+            this.Municipio_Fiscal.AutoSize = false;
+            this.Municipio_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Municipio_Fiscal.DropDownHeight = 71;
+            this.Municipio_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.Municipio_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Municipio_Fiscal.Location = new System.Drawing.Point(140, 2);
+            this.Municipio_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Municipio_Fiscal.Name = "Municipio_Fiscal";
+            this.Municipio_Fiscal.NullText = "--SELECCIONE--";
+            this.Municipio_Fiscal.Size = new System.Drawing.Size(309, 83);
+            this.Municipio_Fiscal.TabIndex = 0;
+            this.Municipio_Fiscal.ThemeName = "VisualStudio2012Light";
+            // 
+            // lblLocalidadFiscal
+            // 
+            this.lblLocalidadFiscal.AutoSize = true;
+            this.lblLocalidadFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLocalidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidadFiscal.Location = new System.Drawing.Point(2, 0);
+            this.lblLocalidadFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocalidadFiscal.Name = "lblLocalidadFiscal";
+            this.lblLocalidadFiscal.Size = new System.Drawing.Size(134, 87);
+            this.lblLocalidadFiscal.TabIndex = 0;
+            this.lblLocalidadFiscal.Text = "Localidad:";
+            this.lblLocalidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Codigo_Postal_Fiscal
+            // 
+            this.Codigo_Postal_Fiscal.AutoSize = false;
+            this.Codigo_Postal_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.Codigo_Postal_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Codigo_Postal_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codigo_Postal_Fiscal.Location = new System.Drawing.Point(155, 174);
+            this.Codigo_Postal_Fiscal.Margin = new System.Windows.Forms.Padding(2);
+            this.Codigo_Postal_Fiscal.Mask = "00000";
+            this.Codigo_Postal_Fiscal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
+            this.Codigo_Postal_Fiscal.Name = "Codigo_Postal_Fiscal";
+            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(288, 82);
+            this.Codigo_Postal_Fiscal.TabIndex = 0;
+            this.Codigo_Postal_Fiscal.TabStop = false;
+            this.Codigo_Postal_Fiscal.Text = "_____";
+            this.Codigo_Postal_Fiscal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.Codigo_Postal_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Codigo_Postal_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // gbDatosCorporativos
             // 
@@ -919,10 +1374,13 @@
             this.gbDatosCorporativos.Controls.Add(this.tlpDatosCorporativos);
             this.gbDatosCorporativos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDatosCorporativos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosCorporativos.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.gbDatosCorporativos.HeaderText = "Datos Corporativos";
-            this.gbDatosCorporativos.Location = new System.Drawing.Point(3, 3);
+            this.gbDatosCorporativos.Location = new System.Drawing.Point(2, 2);
+            this.gbDatosCorporativos.Margin = new System.Windows.Forms.Padding(2);
             this.gbDatosCorporativos.Name = "gbDatosCorporativos";
-            this.gbDatosCorporativos.Size = new System.Drawing.Size(875, 201);
+            this.gbDatosCorporativos.Padding = new System.Windows.Forms.Padding(1, 12, 1, 1);
+            this.gbDatosCorporativos.Size = new System.Drawing.Size(902, 222);
             this.gbDatosCorporativos.TabIndex = 1;
             this.gbDatosCorporativos.TabStop = false;
             this.gbDatosCorporativos.Text = "Datos Corporativos";
@@ -940,29 +1398,31 @@
             this.tlpDatosCorporativos.Controls.Add(this.lblRFC, 0, 1);
             this.tlpDatosCorporativos.Controls.Add(this.lblNombreFiscal, 0, 0);
             this.tlpDatosCorporativos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosCorporativos.Location = new System.Drawing.Point(2, 18);
+            this.tlpDatosCorporativos.Location = new System.Drawing.Point(1, 12);
+            this.tlpDatosCorporativos.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDatosCorporativos.Name = "tlpDatosCorporativos";
             this.tlpDatosCorporativos.RowCount = 3;
             this.tlpDatosCorporativos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatosCorporativos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatosCorporativos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDatosCorporativos.Size = new System.Drawing.Size(871, 181);
+            this.tlpDatosCorporativos.Size = new System.Drawing.Size(900, 209);
             this.tlpDatosCorporativos.TabIndex = 0;
             // 
             // tlpDC_01
             // 
             this.tlpDC_01.ColumnCount = 2;
             this.tlpDC_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.39458F));
-            this.tlpDC_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tlpDC_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tlpDC_01.Controls.Add(this.btnRegimenFiscal, 1, 0);
             this.tlpDC_01.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDC_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlpDC_01.Location = new System.Drawing.Point(149, 123);
+            this.tlpDC_01.Location = new System.Drawing.Point(153, 140);
+            this.tlpDC_01.Margin = new System.Windows.Forms.Padding(2);
             this.tlpDC_01.Name = "tlpDC_01";
             this.tlpDC_01.RowCount = 1;
             this.tlpDC_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDC_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDC_01.Size = new System.Drawing.Size(719, 55);
+            this.tlpDC_01.Size = new System.Drawing.Size(745, 67);
             this.tlpDC_01.TabIndex = 0;
             // 
             // btnRegimenFiscal
@@ -970,13 +1430,15 @@
             this.btnRegimenFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRegimenFiscal.Image = ((System.Drawing.Image)(resources.GetObject("btnRegimenFiscal.Image")));
             this.btnRegimenFiscal.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegimenFiscal.Location = new System.Drawing.Point(643, 3);
+            this.btnRegimenFiscal.Location = new System.Drawing.Point(694, 2);
+            this.btnRegimenFiscal.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegimenFiscal.Name = "btnRegimenFiscal";
-            this.btnRegimenFiscal.Size = new System.Drawing.Size(73, 49);
+            this.btnRegimenFiscal.Size = new System.Drawing.Size(49, 63);
             this.btnRegimenFiscal.TabIndex = 0;
             this.btnRegimenFiscal.TabStop = false;
             this.btnRegimenFiscal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegimenFiscal.ThemeName = "VisualStudio2012Light";
+            this.btnRegimenFiscal.Click += new System.EventHandler(this.Button_Click);
             // 
             // RFC
             // 
@@ -984,21 +1446,24 @@
             this.RFC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.RFC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RFC.Location = new System.Drawing.Point(149, 63);
+            this.RFC.Location = new System.Drawing.Point(153, 71);
+            this.RFC.Margin = new System.Windows.Forms.Padding(2);
             this.RFC.Name = "RFC";
             this.RFC.NullText = "R.F.C.  (FISCAL)";
-            this.RFC.Size = new System.Drawing.Size(719, 54);
+            this.RFC.Size = new System.Drawing.Size(745, 65);
             this.RFC.TabIndex = 0;
             this.RFC.ThemeName = "VisualStudio2012Light";
+            this.RFC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblRegimenFiscal
             // 
             this.lblRegimenFiscal.AutoSize = true;
             this.lblRegimenFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblRegimenFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegimenFiscal.Location = new System.Drawing.Point(3, 120);
+            this.lblRegimenFiscal.Location = new System.Drawing.Point(2, 138);
+            this.lblRegimenFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegimenFiscal.Name = "lblRegimenFiscal";
-            this.lblRegimenFiscal.Size = new System.Drawing.Size(140, 61);
+            this.lblRegimenFiscal.Size = new System.Drawing.Size(147, 71);
             this.lblRegimenFiscal.TabIndex = 0;
             this.lblRegimenFiscal.Text = "Régimen Fiscal:";
             this.lblRegimenFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1009,21 +1474,24 @@
             this.Nombre_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Nombre_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre_Fiscal.Location = new System.Drawing.Point(149, 3);
+            this.Nombre_Fiscal.Location = new System.Drawing.Point(153, 2);
+            this.Nombre_Fiscal.Margin = new System.Windows.Forms.Padding(2);
             this.Nombre_Fiscal.Name = "Nombre_Fiscal";
             this.Nombre_Fiscal.NullText = "NOMBRE FISCAL";
-            this.Nombre_Fiscal.Size = new System.Drawing.Size(719, 54);
+            this.Nombre_Fiscal.Size = new System.Drawing.Size(745, 65);
             this.Nombre_Fiscal.TabIndex = 0;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Fiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
             // 
             // lblRFC
             // 
             this.lblRFC.AutoSize = true;
             this.lblRFC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRFC.Location = new System.Drawing.Point(3, 60);
+            this.lblRFC.Location = new System.Drawing.Point(2, 69);
+            this.lblRFC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRFC.Name = "lblRFC";
-            this.lblRFC.Size = new System.Drawing.Size(140, 60);
+            this.lblRFC.Size = new System.Drawing.Size(147, 69);
             this.lblRFC.TabIndex = 0;
             this.lblRFC.Text = "R.F.C.:";
             this.lblRFC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1033,391 +1501,90 @@
             this.lblNombreFiscal.AutoSize = true;
             this.lblNombreFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreFiscal.Location = new System.Drawing.Point(3, 0);
+            this.lblNombreFiscal.Location = new System.Drawing.Point(2, 0);
+            this.lblNombreFiscal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreFiscal.Name = "lblNombreFiscal";
-            this.lblNombreFiscal.Size = new System.Drawing.Size(140, 60);
+            this.lblNombreFiscal.Size = new System.Drawing.Size(147, 69);
             this.lblNombreFiscal.TabIndex = 0;
             this.lblNombreFiscal.Text = "Nombre Fiscal:";
             this.lblNombreFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // gbDatosFiscales
+            // paneIzq
             // 
-            this.gbDatosFiscales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbDatosFiscales.Controls.Add(this.tlpDatosFiscales);
-            this.gbDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbDatosFiscales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosFiscales.HeaderText = "Datos Fiscales";
-            this.gbDatosFiscales.Location = new System.Drawing.Point(3, 210);
-            this.gbDatosFiscales.Name = "gbDatosFiscales";
-            this.gbDatosFiscales.Size = new System.Drawing.Size(875, 393);
-            this.gbDatosFiscales.TabIndex = 2;
-            this.gbDatosFiscales.TabStop = false;
-            this.gbDatosFiscales.Text = "Datos Fiscales";
-            this.gbDatosFiscales.ThemeName = "VisualStudio2012Light";
+            this.paneIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.paneIzq.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneIzq.Location = new System.Drawing.Point(2, 2);
+            this.paneIzq.Margin = new System.Windows.Forms.Padding(2);
+            this.paneIzq.Name = "paneIzq";
+            this.paneIzq.Size = new System.Drawing.Size(200, 764);
+            this.paneIzq.TabIndex = 0;
+            this.paneIzq.TabStop = false;
             // 
-            // tlpDatosFiscales
+            // tlpDatosFiscales_03_Botones
             // 
-            this.tlpDatosFiscales.ColumnCount = 3;
-            this.tlpDatosFiscales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.00451F));
-            this.tlpDatosFiscales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.43243F));
-            this.tlpDatosFiscales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.37513F));
-            this.tlpDatosFiscales.Controls.Add(this.Tipo_Inmueble_Fiscal, 1, 0);
-            this.tlpDatosFiscales.Controls.Add(this.Colonia_Fiscal, 1, 3);
-            this.tlpDatosFiscales.Controls.Add(this.lblTipoInmuebleFiscal, 0, 0);
-            this.tlpDatosFiscales.Controls.Add(this.lblColoniaFiscal, 0, 3);
-            this.tlpDatosFiscales.Controls.Add(this.lblTipoVialidadFiscal, 0, 1);
-            this.tlpDatosFiscales.Controls.Add(this.Tipo_Vialidad_Fiscal, 1, 1);
-            this.tlpDatosFiscales.Controls.Add(this.tlpDF_02, 2, 1);
-            this.tlpDatosFiscales.Controls.Add(this.tlpDF_01, 2, 2);
-            this.tlpDatosFiscales.Controls.Add(this.lblCodigoPostalFiscal, 0, 2);
-            this.tlpDatosFiscales.Controls.Add(this.lblEstadoFiscal, 0, 4);
-            this.tlpDatosFiscales.Controls.Add(this.Entidad_Federativa_Fiscal, 1, 4);
-            this.tlpDatosFiscales.Controls.Add(this.tlpDF_03, 2, 4);
-            this.tlpDatosFiscales.Controls.Add(this.Codigo_Postal_Fiscal, 1, 2);
-            this.tlpDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatosFiscales.Location = new System.Drawing.Point(2, 18);
-            this.tlpDatosFiscales.Name = "tlpDatosFiscales";
-            this.tlpDatosFiscales.RowCount = 5;
-            this.tlpDatosFiscales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpDatosFiscales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpDatosFiscales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpDatosFiscales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpDatosFiscales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpDatosFiscales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpDatosFiscales.Size = new System.Drawing.Size(871, 373);
-            this.tlpDatosFiscales.TabIndex = 0;
+            this.tlpDatosFiscales_03_Botones.ColumnCount = 3;
+            this.tlpDatosFiscales_03_Botones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosFiscales_03_Botones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosFiscales_03_Botones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpDatosFiscales_03_Botones.Controls.Add(this.btnImportarDatosFiscales, 1, 0);
+            this.tlpDatosFiscales_03_Botones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDatosFiscales_03_Botones.Location = new System.Drawing.Point(2, 680);
+            this.tlpDatosFiscales_03_Botones.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpDatosFiscales_03_Botones.Name = "tlpDatosFiscales_03_Botones";
+            this.tlpDatosFiscales_03_Botones.RowCount = 1;
+            this.tlpDatosFiscales_03_Botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDatosFiscales_03_Botones.Size = new System.Drawing.Size(902, 72);
+            this.tlpDatosFiscales_03_Botones.TabIndex = 11;
             // 
-            // Tipo_Inmueble_Fiscal
+            // btnImportarDatosFiscales
             // 
-            this.Tipo_Inmueble_Fiscal.AutoSize = false;
-            this.Tipo_Inmueble_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tipo_Inmueble_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Tipo_Inmueble_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Inmueble_Fiscal.Location = new System.Drawing.Point(151, 3);
-            this.Tipo_Inmueble_Fiscal.Name = "Tipo_Inmueble_Fiscal";
-            this.Tipo_Inmueble_Fiscal.NullText = "--SELECCIONE--";
-            this.Tipo_Inmueble_Fiscal.Size = new System.Drawing.Size(277, 68);
-            this.Tipo_Inmueble_Fiscal.TabIndex = 0;
-            this.Tipo_Inmueble_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // Colonia_Fiscal
-            // 
-            this.Colonia_Fiscal.AutoSize = false;
-            this.Colonia_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tlpDatosFiscales.SetColumnSpan(this.Colonia_Fiscal, 2);
-            this.Colonia_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Colonia_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Colonia_Fiscal.Location = new System.Drawing.Point(151, 225);
-            this.Colonia_Fiscal.Name = "Colonia_Fiscal";
-            this.Colonia_Fiscal.NullText = "COLONIA (FISCAL)";
-            this.Colonia_Fiscal.Size = new System.Drawing.Size(717, 68);
-            this.Colonia_Fiscal.TabIndex = 0;
-            this.Colonia_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // lblTipoInmuebleFiscal
-            // 
-            this.lblTipoInmuebleFiscal.AutoSize = true;
-            this.lblTipoInmuebleFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTipoInmuebleFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoInmuebleFiscal.Location = new System.Drawing.Point(3, 0);
-            this.lblTipoInmuebleFiscal.Name = "lblTipoInmuebleFiscal";
-            this.lblTipoInmuebleFiscal.Size = new System.Drawing.Size(142, 74);
-            this.lblTipoInmuebleFiscal.TabIndex = 0;
-            this.lblTipoInmuebleFiscal.Text = "Tipo de inmueble:";
-            this.lblTipoInmuebleFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblColoniaFiscal
-            // 
-            this.lblColoniaFiscal.AutoSize = true;
-            this.lblColoniaFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblColoniaFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColoniaFiscal.Location = new System.Drawing.Point(3, 222);
-            this.lblColoniaFiscal.Name = "lblColoniaFiscal";
-            this.lblColoniaFiscal.Size = new System.Drawing.Size(142, 74);
-            this.lblColoniaFiscal.TabIndex = 0;
-            this.lblColoniaFiscal.Text = "Colonia:";
-            this.lblColoniaFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTipoVialidadFiscal
-            // 
-            this.lblTipoVialidadFiscal.AutoSize = true;
-            this.lblTipoVialidadFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTipoVialidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoVialidadFiscal.Location = new System.Drawing.Point(3, 74);
-            this.lblTipoVialidadFiscal.Name = "lblTipoVialidadFiscal";
-            this.lblTipoVialidadFiscal.Size = new System.Drawing.Size(142, 74);
-            this.lblTipoVialidadFiscal.TabIndex = 0;
-            this.lblTipoVialidadFiscal.Text = "Tipo de vialidad:";
-            this.lblTipoVialidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Tipo_Vialidad_Fiscal
-            // 
-            this.Tipo_Vialidad_Fiscal.AutoSize = false;
-            this.Tipo_Vialidad_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tipo_Vialidad_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Tipo_Vialidad_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Vialidad_Fiscal.Location = new System.Drawing.Point(151, 77);
-            this.Tipo_Vialidad_Fiscal.Name = "Tipo_Vialidad_Fiscal";
-            this.Tipo_Vialidad_Fiscal.NullText = "--SELECCIONE--";
-            this.Tipo_Vialidad_Fiscal.Size = new System.Drawing.Size(277, 68);
-            this.Tipo_Vialidad_Fiscal.TabIndex = 0;
-            this.Tipo_Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // tlpDF_02
-            // 
-            this.tlpDF_02.ColumnCount = 2;
-            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.18433F));
-            this.tlpDF_02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.81567F));
-            this.tlpDF_02.Controls.Add(this.Vialidad_Fiscal, 1, 0);
-            this.tlpDF_02.Controls.Add(this.lblNombreVialidadFiscal, 0, 0);
-            this.tlpDF_02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDF_02.Location = new System.Drawing.Point(434, 77);
-            this.tlpDF_02.Name = "tlpDF_02";
-            this.tlpDF_02.RowCount = 1;
-            this.tlpDF_02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDF_02.Size = new System.Drawing.Size(434, 68);
-            this.tlpDF_02.TabIndex = 0;
-            // 
-            // Vialidad_Fiscal
-            // 
-            this.Vialidad_Fiscal.AutoSize = false;
-            this.Vialidad_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Vialidad_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Vialidad_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vialidad_Fiscal.Location = new System.Drawing.Point(134, 3);
-            this.Vialidad_Fiscal.Name = "Vialidad_Fiscal";
-            this.Vialidad_Fiscal.NullText = "CALLE (FISCAL)";
-            this.Vialidad_Fiscal.Size = new System.Drawing.Size(297, 62);
-            this.Vialidad_Fiscal.TabIndex = 0;
-            this.Vialidad_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // lblNombreVialidadFiscal
-            // 
-            this.lblNombreVialidadFiscal.AutoSize = true;
-            this.lblNombreVialidadFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreVialidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreVialidadFiscal.Location = new System.Drawing.Point(3, 0);
-            this.lblNombreVialidadFiscal.Name = "lblNombreVialidadFiscal";
-            this.lblNombreVialidadFiscal.Size = new System.Drawing.Size(125, 68);
-            this.lblNombreVialidadFiscal.TabIndex = 0;
-            this.lblNombreVialidadFiscal.Text = "Vialidad:";
-            this.lblNombreVialidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tlpDF_01
-            // 
-            this.tlpDF_01.ColumnCount = 4;
-            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.18433F));
-            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.96313F));
-            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.50691F));
-            this.tlpDF_01.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpDF_01.Controls.Add(this.No_Int_Fiscal, 3, 0);
-            this.tlpDF_01.Controls.Add(this.lblNoIntFiscal, 2, 0);
-            this.tlpDF_01.Controls.Add(this.No_Ext_Fiscal, 1, 0);
-            this.tlpDF_01.Controls.Add(this.lblNoExtFiscal, 0, 0);
-            this.tlpDF_01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDF_01.Location = new System.Drawing.Point(434, 151);
-            this.tlpDF_01.Name = "tlpDF_01";
-            this.tlpDF_01.RowCount = 1;
-            this.tlpDF_01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDF_01.Size = new System.Drawing.Size(434, 68);
-            this.tlpDF_01.TabIndex = 0;
-            // 
-            // No_Int_Fiscal
-            // 
-            this.No_Int_Fiscal.AutoSize = false;
-            this.No_Int_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.No_Int_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.No_Int_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No_Int_Fiscal.Location = new System.Drawing.Point(327, 3);
-            this.No_Int_Fiscal.Name = "No_Int_Fiscal";
-            this.No_Int_Fiscal.NullText = "NO. INT";
-            this.No_Int_Fiscal.Size = new System.Drawing.Size(104, 62);
-            this.No_Int_Fiscal.TabIndex = 0;
-            this.No_Int_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // lblNoIntFiscal
-            // 
-            this.lblNoIntFiscal.AutoSize = true;
-            this.lblNoIntFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNoIntFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoIntFiscal.Location = new System.Drawing.Point(238, 0);
-            this.lblNoIntFiscal.Name = "lblNoIntFiscal";
-            this.lblNoIntFiscal.Size = new System.Drawing.Size(83, 68);
-            this.lblNoIntFiscal.TabIndex = 0;
-            this.lblNoIntFiscal.Text = "No Int:";
-            this.lblNoIntFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // No_Ext_Fiscal
-            // 
-            this.No_Ext_Fiscal.AutoSize = false;
-            this.No_Ext_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.No_Ext_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.No_Ext_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No_Ext_Fiscal.Location = new System.Drawing.Point(134, 3);
-            this.No_Ext_Fiscal.Name = "No_Ext_Fiscal";
-            this.No_Ext_Fiscal.NullText = "NO. EXT";
-            this.No_Ext_Fiscal.Size = new System.Drawing.Size(98, 62);
-            this.No_Ext_Fiscal.TabIndex = 0;
-            this.No_Ext_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // lblNoExtFiscal
-            // 
-            this.lblNoExtFiscal.AutoSize = true;
-            this.lblNoExtFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNoExtFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoExtFiscal.Location = new System.Drawing.Point(3, 0);
-            this.lblNoExtFiscal.Name = "lblNoExtFiscal";
-            this.lblNoExtFiscal.Size = new System.Drawing.Size(125, 68);
-            this.lblNoExtFiscal.TabIndex = 0;
-            this.lblNoExtFiscal.Text = "No Ext:";
-            this.lblNoExtFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCodigoPostalFiscal
-            // 
-            this.lblCodigoPostalFiscal.AutoSize = true;
-            this.lblCodigoPostalFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCodigoPostalFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPostalFiscal.Location = new System.Drawing.Point(3, 148);
-            this.lblCodigoPostalFiscal.Name = "lblCodigoPostalFiscal";
-            this.lblCodigoPostalFiscal.Size = new System.Drawing.Size(142, 74);
-            this.lblCodigoPostalFiscal.TabIndex = 0;
-            this.lblCodigoPostalFiscal.Text = "Código Postal:";
-            this.lblCodigoPostalFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblEstadoFiscal
-            // 
-            this.lblEstadoFiscal.AutoSize = true;
-            this.lblEstadoFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEstadoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoFiscal.Location = new System.Drawing.Point(3, 296);
-            this.lblEstadoFiscal.Name = "lblEstadoFiscal";
-            this.lblEstadoFiscal.Size = new System.Drawing.Size(142, 77);
-            this.lblEstadoFiscal.TabIndex = 0;
-            this.lblEstadoFiscal.Text = "Estado:";
-            this.lblEstadoFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Entidad_Federativa_Fiscal
-            // 
-            this.Entidad_Federativa_Fiscal.AutoSize = false;
-            this.Entidad_Federativa_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Entidad_Federativa_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Entidad_Federativa_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Entidad_Federativa_Fiscal.Location = new System.Drawing.Point(151, 299);
-            this.Entidad_Federativa_Fiscal.Name = "Entidad_Federativa_Fiscal";
-            this.Entidad_Federativa_Fiscal.NullText = "--SELECCIONE--";
-            this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(277, 71);
-            this.Entidad_Federativa_Fiscal.TabIndex = 0;
-            this.Entidad_Federativa_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // tlpDF_03
-            // 
-            this.tlpDF_03.ColumnCount = 2;
-            this.tlpDF_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.64516F));
-            this.tlpDF_03.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.35484F));
-            this.tlpDF_03.Controls.Add(this.Municipio_Fiscal, 1, 0);
-            this.tlpDF_03.Controls.Add(this.lblLocalidadFiscal, 0, 0);
-            this.tlpDF_03.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDF_03.Location = new System.Drawing.Point(434, 299);
-            this.tlpDF_03.Name = "tlpDF_03";
-            this.tlpDF_03.RowCount = 1;
-            this.tlpDF_03.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDF_03.Size = new System.Drawing.Size(434, 71);
-            this.tlpDF_03.TabIndex = 0;
-            // 
-            // Municipio_Fiscal
-            // 
-            this.Municipio_Fiscal.AutoSize = false;
-            this.Municipio_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Municipio_Fiscal.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.Municipio_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Municipio_Fiscal.Location = new System.Drawing.Point(135, 3);
-            this.Municipio_Fiscal.Name = "Municipio_Fiscal";
-            this.Municipio_Fiscal.NullText = "--SELECCIONE--";
-            this.Municipio_Fiscal.Size = new System.Drawing.Size(296, 65);
-            this.Municipio_Fiscal.TabIndex = 0;
-            this.Municipio_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // lblLocalidadFiscal
-            // 
-            this.lblLocalidadFiscal.AutoSize = true;
-            this.lblLocalidadFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLocalidadFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidadFiscal.Location = new System.Drawing.Point(3, 0);
-            this.lblLocalidadFiscal.Name = "lblLocalidadFiscal";
-            this.lblLocalidadFiscal.Size = new System.Drawing.Size(126, 71);
-            this.lblLocalidadFiscal.TabIndex = 0;
-            this.lblLocalidadFiscal.Text = "Localidad:";
-            this.lblLocalidadFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Codigo_Postal_Fiscal
-            // 
-            this.Codigo_Postal_Fiscal.AutoSize = false;
-            this.Codigo_Postal_Fiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Codigo_Postal_Fiscal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Codigo_Postal_Fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo_Postal_Fiscal.Location = new System.Drawing.Point(151, 151);
-            this.Codigo_Postal_Fiscal.Mask = "00000";
-            this.Codigo_Postal_Fiscal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
-            this.Codigo_Postal_Fiscal.Name = "Codigo_Postal_Fiscal";
-            this.Codigo_Postal_Fiscal.Size = new System.Drawing.Size(277, 68);
-            this.Codigo_Postal_Fiscal.TabIndex = 0;
-            this.Codigo_Postal_Fiscal.TabStop = false;
-            this.Codigo_Postal_Fiscal.Text = "_____";
-            this.Codigo_Postal_Fiscal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.Codigo_Postal_Fiscal.ThemeName = "VisualStudio2012Light";
-            // 
-            // lblCuentaBanco
-            // 
-            this.lblCuentaBanco.AutoSize = true;
-            this.lblCuentaBanco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCuentaBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuentaBanco.Location = new System.Drawing.Point(3, 420);
-            this.lblCuentaBanco.Name = "lblCuentaBanco";
-            this.lblCuentaBanco.Size = new System.Drawing.Size(127, 62);
-            this.lblCuentaBanco.TabIndex = 1;
-            this.lblCuentaBanco.Text = "Cuenta de Banco:";
-            this.lblCuentaBanco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Cuenta_Banco
-            // 
-            this.Cuenta_Banco.AutoSize = false;
-            this.tlpDatosGenerales_2.SetColumnSpan(this.Cuenta_Banco, 2);
-            this.Cuenta_Banco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cuenta_Banco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cuenta_Banco.Location = new System.Drawing.Point(136, 423);
-            this.Cuenta_Banco.Name = "Cuenta_Banco";
-            this.Cuenta_Banco.NullText = "CUENTA DE BANCO (CLABE INTERBANCARIA)";
-            this.Cuenta_Banco.Size = new System.Drawing.Size(527, 56);
-            this.Cuenta_Banco.TabIndex = 2;
-            this.Cuenta_Banco.ThemeName = "VisualStudio2012Light";
+            this.btnImportarDatosFiscales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnImportarDatosFiscales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarDatosFiscales.Image = ((System.Drawing.Image)(resources.GetObject("btnImportarDatosFiscales.Image")));
+            this.btnImportarDatosFiscales.Location = new System.Drawing.Point(302, 2);
+            this.btnImportarDatosFiscales.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImportarDatosFiscales.Name = "btnImportarDatosFiscales";
+            this.btnImportarDatosFiscales.Size = new System.Drawing.Size(296, 68);
+            this.btnImportarDatosFiscales.TabIndex = 1;
+            this.btnImportarDatosFiscales.Text = "Importar \r\nDatos";
+            this.btnImportarDatosFiscales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImportarDatosFiscales.ThemeName = "VisualStudio2012Light";
             // 
             // frmRegisterSupplier
             // 
             this.AcceptButton = this.btnAceptar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRegisterSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions";
+            this.Load += new System.EventHandler(this.frmRegisterSupplier_Load);
             this.tlpPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelDer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvAddSupplier)).EndInit();
             this.pvAddSupplier.ResumeLayout(false);
             this.pvpDatosGenerales.ResumeLayout(false);
             this.tlpDatosGenerales.ResumeLayout(false);
+            this.tlpDatosGenerales_04.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlCentro)).EndInit();
+            this.pnlCentro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosGenerales)).EndInit();
             this.gbDatosGenerales.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpDatosFiscales_01.ResumeLayout(false);
             this.tlpDatosGenerales_Derecha.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
             this.tlpDatosGenerales_Izquierda.ResumeLayout(false);
             this.tlpDatosGenerales_2.ResumeLayout(false);
             this.tlpDatosGenerales_2.PerformLayout();
@@ -1441,31 +1608,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Celular)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Telefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cuenta_Banco)).EndInit();
             this.tlpDatosGenerales_1.ResumeLayout(false);
             this.tlpDatosGenerales_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Giro_Comercial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nombre_Empresa)).EndInit();
-            this.tlpDatosGenerales_04.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlCentro)).EndInit();
-            this.pnlCentro.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             this.pvpDatosFiscales.ResumeLayout(false);
             this.tlpSAT.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).EndInit();
-            this.gbDatosCorporativos.ResumeLayout(false);
-            this.tlpDatosCorporativos.ResumeLayout(false);
-            this.tlpDatosCorporativos.PerformLayout();
-            this.tlpDC_01.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRegimenFiscal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RFC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Nombre_Fiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosFiscales)).EndInit();
             this.gbDatosFiscales.ResumeLayout(false);
-            this.tlpDatosFiscales.ResumeLayout(false);
-            this.tlpDatosFiscales.PerformLayout();
+            this.tlpDatosFiscales_02.ResumeLayout(false);
+            this.tlpDatosFiscales_02.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tipo_Inmueble_Fiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Colonia_Fiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tipo_Vialidad_Fiscal)).EndInit();
@@ -1481,7 +1634,17 @@
             this.tlpDF_03.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Municipio_Fiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Codigo_Postal_Fiscal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cuenta_Banco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbDatosCorporativos)).EndInit();
+            this.gbDatosCorporativos.ResumeLayout(false);
+            this.tlpDatosCorporativos.ResumeLayout(false);
+            this.tlpDatosCorporativos.PerformLayout();
+            this.tlpDC_01.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegimenFiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RFC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nombre_Fiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paneIzq)).EndInit();
+            this.tlpDatosFiscales_03_Botones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnImportarDatosFiscales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1498,7 +1661,7 @@
         private Telerik.WinControls.UI.RadButton btnAceptar;
         private Telerik.WinControls.UI.RadButton btnCancelar;
         private Telerik.WinControls.UI.RadGroupBox gbDatosGenerales;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosFiscales_01;
         private System.Windows.Forms.TableLayoutPanel tlpDatosGenerales_Derecha;
         private System.Windows.Forms.PictureBox picLogotipo;
         private System.Windows.Forms.TableLayoutPanel tlpDatosGenerales_Izquierda;
@@ -1537,7 +1700,7 @@
         private Telerik.WinControls.UI.RadTextBox Nombre_Empresa;
         private System.Windows.Forms.Label lblGiro;
         private Telerik.WinControls.UI.RadPanel pnlCentro;
-        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadButton btnExaminar;
         private Telerik.WinControls.UI.RadPageViewPage pvpDatosFiscales;
         private System.Windows.Forms.TableLayoutPanel tlpSAT;
         private Telerik.WinControls.UI.RadGroupBox gbDatosCorporativos;
@@ -1550,7 +1713,7 @@
         private System.Windows.Forms.Label lblRFC;
         private System.Windows.Forms.Label lblNombreFiscal;
         private Telerik.WinControls.UI.RadGroupBox gbDatosFiscales;
-        private System.Windows.Forms.TableLayoutPanel tlpDatosFiscales;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosFiscales_02;
         private Telerik.WinControls.UI.RadDropDownList Tipo_Inmueble_Fiscal;
         private Telerik.WinControls.UI.RadTextBox Colonia_Fiscal;
         private System.Windows.Forms.Label lblTipoInmuebleFiscal;
@@ -1574,5 +1737,8 @@
         private Telerik.WinControls.UI.RadMaskedEditBox Codigo_Postal_Fiscal;
         private System.Windows.Forms.Label lblCuentaBanco;
         private Telerik.WinControls.UI.RadTextBox Cuenta_Banco;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
+        private System.Windows.Forms.TableLayoutPanel tlpDatosFiscales_03_Botones;
+        private Telerik.WinControls.UI.RadButton btnImportarDatosFiscales;
     }
 }

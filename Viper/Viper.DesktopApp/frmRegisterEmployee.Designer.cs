@@ -320,12 +320,14 @@
             this.gbDatosPersonales.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gbDatosPersonales.Controls.Add(this.tlpDatosPersonales);
             this.gbDatosPersonales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbDatosPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gbDatosPersonales.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.gbDatosPersonales.HeaderText = "";
+            this.gbDatosPersonales.HeaderText = "Datos Generales";
             this.gbDatosPersonales.Location = new System.Drawing.Point(3, 3);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
             this.gbDatosPersonales.Size = new System.Drawing.Size(891, 271);
             this.gbDatosPersonales.TabIndex = 1;
+            this.gbDatosPersonales.Text = "Datos Generales";
             this.gbDatosPersonales.ThemeName = "VisualStudio2012Light";
             // 
             // tlpDatosPersonales
@@ -702,12 +704,14 @@
             this.gbDatosDomicilio.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.gbDatosDomicilio.Controls.Add(this.tlpDatosDomicilio);
             this.gbDatosDomicilio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbDatosDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gbDatosDomicilio.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.gbDatosDomicilio.HeaderText = "";
+            this.gbDatosDomicilio.HeaderText = "Domicilio Actual";
             this.gbDatosDomicilio.Location = new System.Drawing.Point(3, 280);
             this.gbDatosDomicilio.Name = "gbDatosDomicilio";
             this.gbDatosDomicilio.Size = new System.Drawing.Size(891, 407);
             this.gbDatosDomicilio.TabIndex = 2;
+            this.gbDatosDomicilio.Text = "Domicilio Actual";
             this.gbDatosDomicilio.ThemeName = "VisualStudio2012Light";
             // 
             // tlpDatosDomicilio
