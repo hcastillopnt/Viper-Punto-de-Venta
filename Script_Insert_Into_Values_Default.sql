@@ -12,3 +12,6 @@ VALUES (1,'CAPH930421PM4','Mgq71kVNtNqdFwsiQhe1dw==',NULL,NULL,1,0,1,1,'2018-10-
 
 INSERT INTO `company` (`Id`,`CompanyName`,`CompanyKey`,`AddressId`,`AddressSATId`,`RegimenFiscalId`,`PhoneNumber`,`CellphoneNumber`,`EmailAddress`,`FiscalName`,`RFC`,`CURP`,`ApiKey`,`BusinessActivity`,`UserId`,`Logo`,`CreatedDate`,`CreatedBy`,`LastUpdatedDate`,`LastUpdatedBy`) 
 VALUES (1,'FARMACIA FARMANYL','EMPOWTK0001',1,1,1856,'8121650892','0448120127009','HORACIO.CASTILLOPNT@GMAIL.COM','HORACIO ENRIQUE CASTILLO PUENTE','CAPH930421PM4','CAPH930421HNLSNR01',NULL,'FARMACIA',1,NULL,'2018-10-19 00:00:00','HECP','2018-10-19 00:00:00','HECP');
+
+INSERT INTO `site` (`Id`,`CompanyId`,`SiteName`,`UniquePhysicalID`,`AddressId`,`ResponsibleName`,`PhoneNumber`,`IsActive`,`CreatedDate`,`CreatedBy`,`LastUpdatedDate`,`LastUpdatedBy`) 
+VALUES (1,1,'SUCURSAL-DEFAULT','OWTK-SUC-DEF',1,'HORACIO ENRIQUE CASTILLO PUENTE', '8120127009', true,'2018-10-19 20:31:50','HECP','2018-10-19 20:31:50','HECP');
