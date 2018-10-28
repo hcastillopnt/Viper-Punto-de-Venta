@@ -2572,6 +2572,7 @@ namespace Viper.BusinessEntities.Migrations
             //Default values of Role Table
             defaultRoles.Add(new Role() { Name = "ADMINISTRADOR", Description = "Allow all, among other things to control users, products, managae credentials, ..." });
             defaultRoles.Add(new Role() { Name = "BASICO", Description = "The employee can make sales, consult reports, make cash cuts" });
+            defaultRoles.Add(new Role() { Name = "PROVEEDOR", Description = "The supplier can view products with low inventory to be able to replenish, send quotes to customers" });
             //defaultRoles.Add(new Role() { Name = "DOCTOR", Description = "The employee can access module Medical" });
 
             //Default values of Shift Table
