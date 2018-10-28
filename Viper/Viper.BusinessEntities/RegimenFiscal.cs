@@ -29,5 +29,6 @@ namespace Viper.BusinessEntities
         public bool Moral { get; set; }
 
         public virtual ICollection<Company> Companies { get; set; }
+        public virtual ICollection<Supplier> Suppliers { get; set; }
     }
 }

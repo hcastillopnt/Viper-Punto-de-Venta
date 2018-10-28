@@ -21,10 +21,10 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text, ErrorMessage = "The field SupplierKey must be a string")]
         public String SupplierKey { get; set; }
 
-        [Required(ErrorMessage = "The field ContactName is required")]
-        [StringLength(100, ErrorMessage = "The field ContactName must have max length of 100 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field ContactName must be a string")]
-        public String ContactName { get; set; }
+        //[Required(ErrorMessage = "The field ContactName is required")]
+        //[StringLength(100, ErrorMessage = "The field ContactName must have max length of 100 characters")]
+        //[DataType(DataType.Text, ErrorMessage = "The field ContactName must be a string")]
+        //public String ContactName { get; set; }
 
         [ForeignKey("Address")]
         [Required(ErrorMessage = "The field AddressId is required")]
@@ -37,6 +37,12 @@ namespace Viper.BusinessEntities
         [Range(0, int.MaxValue, ErrorMessage = "The field AddressSATId must be a number.")]
         public int AddressSATId { get; set; }
         public AddressSAT AddressSAT { get; set; }
+
+        [ForeignKey("RegimenFiscal")]
+        [Required(ErrorMessage = "The field RegimenFiscalId is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field RegimenFiscalId must be a number.")]
+        public int RegimenFiscalId { get; set; }
+        public RegimenFiscal RegimenFiscal { get; set; }
 
         [StringLength(10, ErrorMessage = "The field PhoneNumber must have max length of 10 characters")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "The field PhoneNumber must be a PhoneNumber valid")]
@@ -55,15 +61,19 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Text, ErrorMessage = "The field R.F.C. must be a string")]
         public String RFC { get; set; }
 
-        [StringLength(18, ErrorMessage = "The field C.U.R.P. must have max length of 18 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field C.U.R.P. must be a string")]
-        public String CURP { get; set; }
+        [StringLength(50, ErrorMessage = "The field FiscalName must have max length of 50 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field FiscalName must be a string")]
+        public String FiscalName { get; set; }
 
-        [DataType(DataType.Currency, ErrorMessage = "The field CreditLimit must be a money")]
-        public Decimal CreditLimit { get; set; }
+        //[DataType(DataType.Currency, ErrorMessage = "The field CreditLimit must be a money")]
+        //public Decimal CreditLimit { get; set; }
 
-        [Range(0, int.MaxValue, ErrorMessage = "The field DaysCredit must be a number.")]
-        public int DaysCredit { get; set; }
+        //[Range(0, int.MaxValue, ErrorMessage = "The field DaysCredit must be a number.")]
+        //public int DaysCredit { get; set; }
+
+        [StringLength(30, ErrorMessage = "The field BusinessActivity must have max length of 30 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field BusinessActivity must be a string")]
+        public String BusinessActivity { get; set; }
 
         [ForeignKey("User")]
         [Required(ErrorMessage = "The field UserId is required")]
