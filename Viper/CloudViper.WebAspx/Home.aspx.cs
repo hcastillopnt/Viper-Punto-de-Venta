@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CloudViper.WebAspx
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class _Default : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
