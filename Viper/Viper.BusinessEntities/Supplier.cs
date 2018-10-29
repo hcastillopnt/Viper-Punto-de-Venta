@@ -32,17 +32,17 @@ namespace Viper.BusinessEntities
         public int AddressId { get; set; }
         public Address Address { get; set; }
 
-        [ForeignKey("AddressSAT")]
-        [Required(ErrorMessage = "The field AddressSATId is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field AddressSATId must be a number.")]
-        public int AddressSATId { get; set; }
-        public AddressSAT AddressSAT { get; set; }
+        //[ForeignKey("AddressSAT")]
+        //[Required(ErrorMessage = "The field AddressSATId is required")]
+        //[Range(0, int.MaxValue, ErrorMessage = "The field AddressSATId must be a number.")]
+        //public int AddressSATId { get; set; }
+        //public AddressSAT AddressSAT { get; set; }
 
-        [ForeignKey("RegimenFiscal")]
-        [Required(ErrorMessage = "The field RegimenFiscalId is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field RegimenFiscalId must be a number.")]
-        public int RegimenFiscalId { get; set; }
-        public RegimenFiscal RegimenFiscal { get; set; }
+        //[ForeignKey("RegimenFiscal")]
+        //[Required(ErrorMessage = "The field RegimenFiscalId is required")]
+        //[Range(0, int.MaxValue, ErrorMessage = "The field RegimenFiscalId must be a number.")]
+        //public int RegimenFiscalId { get; set; }
+        //public RegimenFiscal RegimenFiscal { get; set; }
 
         [StringLength(10, ErrorMessage = "The field PhoneNumber must have max length of 10 characters")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "The field PhoneNumber must be a PhoneNumber valid")]
@@ -60,10 +60,6 @@ namespace Viper.BusinessEntities
         [StringLength(13, ErrorMessage = "The field R.F.C. must have max length of 13 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field R.F.C. must be a string")]
         public String RFC { get; set; }
-
-        [StringLength(50, ErrorMessage = "The field FiscalName must have max length of 50 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field FiscalName must be a string")]
-        public String FiscalName { get; set; }
 
         //[DataType(DataType.Currency, ErrorMessage = "The field CreditLimit must be a money")]
         //public Decimal CreditLimit { get; set; }

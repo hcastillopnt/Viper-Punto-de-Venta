@@ -7,13 +7,13 @@ namespace Viper.BusinessEntities.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
-    public sealed partial class version_1 : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(version_1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810282253079_--version_1"; }
+            get { return "201810290034141_initial"; }
         }
         
         string IMigrationMetadata.Source

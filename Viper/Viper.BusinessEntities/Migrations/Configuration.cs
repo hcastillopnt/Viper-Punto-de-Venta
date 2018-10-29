@@ -15,8 +15,10 @@ namespace Viper.BusinessEntities.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Viper.BusinessEntities.ViperDbContext context)
+        private void uploadDataToDatabaseDefault()
         {
+            ViperDbContext context = new ViperDbContext();
+
             #region Lists to upload data
 
             List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
@@ -5675,7 +5677,10 @@ namespace Viper.BusinessEntities.Migrations
                     sb.ToString(), ex
                 );
             }
+        }
 
+        protected override void Seed(Viper.BusinessEntities.ViperDbContext context)
+        {
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
@@ -5688,6 +5693,8 @@ namespace Viper.BusinessEntities.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            uploadDataToDatabaseDefault();
         }
     }
 }

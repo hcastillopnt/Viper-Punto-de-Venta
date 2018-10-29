@@ -384,16 +384,12 @@ namespace Viper.BusinessEntities.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         SupplierName = c.String(nullable: false, maxLength: 50, unicode: false, storeType: "nvarchar"),
                         SupplierKey = c.String(nullable: false, maxLength: 30, unicode: false, storeType: "nvarchar"),
-                        ContactName = c.String(nullable: false, maxLength: 100, unicode: false, storeType: "nvarchar"),
                         AddressId = c.Int(nullable: false),
-                        AddressSATId = c.Int(nullable: false),
                         PhoneNumber = c.String(maxLength: 10, unicode: false, storeType: "nvarchar"),
                         CellphoneNumber = c.String(maxLength: 13, unicode: false, storeType: "nvarchar"),
                         EmailAddress = c.String(maxLength: 50, unicode: false, storeType: "nvarchar"),
                         RFC = c.String(nullable: false, maxLength: 13, unicode: false, storeType: "nvarchar"),
-                        CURP = c.String(maxLength: 18, unicode: false, storeType: "nvarchar"),
-                        CreditLimit = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        DaysCredit = c.Int(nullable: false),
+                        BusinessActivity = c.String(maxLength: 30, unicode: false, storeType: "nvarchar"),
                         UserId = c.Int(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         Logo = c.Binary(),
@@ -404,10 +400,8 @@ namespace Viper.BusinessEntities.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Address", t => t.AddressId, cascadeDelete: true)
-                .ForeignKey("dbo.AddressSAT", t => t.AddressSATId, cascadeDelete: true)
                 .ForeignKey("dbo.User", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.AddressId)
-                .Index(t => t.AddressSATId)
                 .Index(t => t.UserId);
             
             CreateTable(
@@ -571,7 +565,6 @@ namespace Viper.BusinessEntities.Migrations
             DropForeignKey("dbo.ProductSubCategory", "ProductCategoryId", "dbo.ProductCategory");
             DropForeignKey("dbo.ProductInventory", "SiteId", "dbo.Site");
             DropForeignKey("dbo.ProductInventory", "ProductId", "dbo.Product");
-            DropForeignKey("dbo.Supplier", "AddressSATId", "dbo.AddressSAT");
             DropForeignKey("dbo.Supplier", "AddressId", "dbo.Address");
             DropForeignKey("dbo.User", "RoleId", "dbo.Role");
             DropForeignKey("dbo.Permission", "RoleId", "dbo.Role");
@@ -615,7 +608,6 @@ namespace Viper.BusinessEntities.Migrations
             DropIndex("dbo.ProductSubCategory", new[] { "ProductCategoryId" });
             DropIndex("dbo.ProductInventory", new[] { "SiteId" });
             DropIndex("dbo.ProductInventory", new[] { "ProductId" });
-            DropIndex("dbo.Supplier", new[] { "AddressSATId" });
             DropIndex("dbo.Supplier", new[] { "AddressId" });
             DropIndex("dbo.User", new[] { "RoleId" });
             DropIndex("dbo.Permission", new[] { "RoleId" });
