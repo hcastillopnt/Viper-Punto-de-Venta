@@ -908,45 +908,38 @@ namespace Viper.DesktopApp
 
         private void registerCompanyInSystem()
         {
-            try
+            string message = String.Empty;
+
+            recoveryInformationObjectsByUserInterface();
+
+            message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 1, site);
+
+            if (String.IsNullOrEmpty(message))
             {
-                string message = String.Empty;
+                if (banderaImagen)
+                    savePicture();
 
-                recoveryInformationObjectsByUserInterface();
+                MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                message = BusinessLogicLayer.CompanyBLL.procInsertCompanyToSystem(company, address, addressSAT, 1, site);
+                setToDefaultFields();
 
-                if (String.IsNullOrEmpty(message))
+                if (bandera)
                 {
-                    if(banderaImagen)
-                        savePicture();
-
-                    MessageBox.Show(new Form { TopMost = true }, "Empresa registrada correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    setToDefaultFields();
-
-                    if (bandera)
+                    if (String.IsNullOrEmpty(message))
                     {
-                        if (String.IsNullOrEmpty(message))
-                        {
-                            this.Hide();
-                            frmLogin frm = new frmLogin();
-                            frm.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        this.Hide();
+                        frmLogin frm = new frmLogin();
+                        frm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                else
-                {
-                    MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

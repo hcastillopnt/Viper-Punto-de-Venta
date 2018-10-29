@@ -276,8 +276,9 @@ namespace Viper.DataAccessLayer
         /// <summary>
         /// Metodo para obtener el ultimo ID de los usuarios registrados
         /// </summary>
+        /// <param name="RFC">RFC Registrado</param>
         /// <returns>Id</returns>
-        public static int procGetLastIDToUserRegistered()
+        public static int procGetLastIDToUserRegistered(string RFC)
         {
             bool isExistente = false;
 
@@ -287,7 +288,11 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                UserID = dbCtx.Users.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                UserID = dbCtx.Users
+                    .Where(x=>x.LoginID == RFC)
+                    .OrderByDescending(x => x.Id)
+                    .FirstOrDefault()
+                    .Id;
             }
 
             return UserID;

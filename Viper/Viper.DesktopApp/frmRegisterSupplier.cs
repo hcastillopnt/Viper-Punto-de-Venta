@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +44,8 @@ namespace Viper.DesktopApp
         DateTime f = DateTime.Today;
         Supplier supplier = null;
         Address address = null;
-        AddressSAT addressSAT = null;
+
+        public static RadTextBox Regimen_Fiscal;
 
         #endregion
 
@@ -56,6 +59,8 @@ namespace Viper.DesktopApp
         public frmRegisterSupplier()
         {
             InitializeComponent();
+
+            fillDropDownList();
         }
 
         #endregion
@@ -113,22 +118,12 @@ namespace Viper.DesktopApp
 
             switch (objButton.Name)
             {
-                case "btnRegimenFiscal":
-                    frmRegimenFiscal form = new frmRegimenFiscal();
-                    form.ShowDialog();
-                    form.TopMost = true;
-                    break;
-
-                case "btnImportarDatosFiscales":
-                    importFiscalData();
-                    break;
-
                 case "btnExaminar":
                     uploadLogotipo();
                     break;
 
                 case "btnAceptar":
-                    //registerCompanyInSystem();
+                    registerSupplierInSystem();
                     break;
 
                 case "btnCancelar":
@@ -235,10 +230,86 @@ namespace Viper.DesktopApp
 
         #region Metodos
 
-        private void importFiscalData()
+        private void uploadLogotipo()
         {
-            string message = String.Empty;
+            OpenFileDialog BuscarImagen = new OpenFileDialog();
+            BuscarImagen.Filter = ".bmp;*.gif;*.jpg;*.png|*.bmp;*.gif;*.jpg;*.png|Imagen Jpg(*.jpg)|*.jpg|Imagen PNG(*.png)|*.png|Imagen Gif(*.gif*)|*.gif";
+            BuscarImagen.FileName = "";
+            BuscarImagen.Title = "Examinar Imagen";
+            if (BuscarImagen.ShowDialog() == DialogResult.OK)
+            {
+                rutaLogotipo = BuscarImagen.FileName;
+                String Direccion = BuscarImagen.FileName;
+                picLogotipo.ImageLocation = Direccion;
+                picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
 
+        private void setToDefaultFields()
+        {
+            this.Giro_Comercial.Items.Add("--SELECCIONE--");
+            this.Giro_Comercial.Items.Add("DISTRIBUIDORA DE MEDICAMENTOS");
+            this.Giro_Comercial.Items.Add("ABARROTES");
+            this.Giro_Comercial.Items.Add("SALUD Y BELLEZA");
+            this.Giro_Comercial.Items.Add("CUIDADO DERMATOLOGICO");
+            this.Giro_Comercial.Items.Add("LIMPIEZA DEL HOGAR");
+
+            this.Giro_Comercial.SelectedIndex = 0;
+
+            this.Tipo_Inmueble.SelectedIndex = 0;
+            this.Tipo_Vialidad.SelectedIndex = 0;
+            this.Vialidad.Text = String.Empty;
+            this.Codigo_Postal.Text = "_____";
+            this.No_Ext.Text = String.Empty;
+            this.No_Int.Text = String.Empty;
+            this.Colonia.Text = String.Empty;
+            this.Entidad_Federativa.SelectedIndex = 0;
+            this.Municipio.SelectedIndex = 0;
+            this.eMail.Text = String.Empty;
+            this.Telefono.Text = "(__)___-_____";
+            this.Celular.Text = "(___)___-___-____";
+            this.Nombre_Fiscal.Text = String.Empty;
+            this.RFC.Text = String.Empty;
+
+            supplier = null;
+            address = null;
+
+            rutaLogotipo = String.Empty;
+
+            this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
+        }
+
+        private void fillDropDownList()
+        {
+            this.Tipo_Inmueble.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
+            this.Tipo_Inmueble.DisplayMember = "Name";
+            this.Tipo_Inmueble.ValueMember = "Id";
+            this.Tipo_Inmueble.SelectedIndex = 0;
+
+            this.Tipo_Vialidad.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
+            this.Tipo_Vialidad.DisplayMember = "Name";
+            this.Tipo_Vialidad.ValueMember = "Id";
+            this.Tipo_Vialidad.SelectedIndex = 0;
+
+            this.Entidad_Federativa.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList(); ;
+            this.Entidad_Federativa.DisplayMember = "Description";
+            this.Entidad_Federativa.ValueMember = "Id";
+            this.Entidad_Federativa.SelectedIndex = 0;
+
+            this.Giro_Comercial.Items.Add("--SELECCIONE--");
+            this.Giro_Comercial.Items.Add("DISTRIBUIDORA DE MEDICAMENTOS");
+            this.Giro_Comercial.Items.Add("ABARROTES");
+            this.Giro_Comercial.Items.Add("SALUD Y BELLEZA");
+            this.Giro_Comercial.Items.Add("CUIDADO DERMATOLOGICO");
+            this.Giro_Comercial.Items.Add("LIMPIEZA DEL HOGAR");
+
+            this.Giro_Comercial.SelectedIndex = 0;
+
+            this.Municipio.SelectedIndex = 0;
+        }
+
+        private void recoveryInformationObjectsByUserInterface()
+        {
             if (address == null)
                 address = new Address();
 
@@ -258,135 +329,110 @@ namespace Viper.DesktopApp
             address.LastUpdatedDate = f;
             address.LastUpdatedBy = "HECP";
 
-            message = BusinessLogicLayer.AddressBLL.validateEmptyFieldsInForm(address);
+            if (supplier == null)
+                supplier = new Supplier();
 
-            if (string.IsNullOrEmpty(message))
+            if (Giro_Comercial.SelectedIndex > 0)
+                supplier.BusinessActivity = Giro_Comercial.SelectedItem.ToString();
+
+            supplier.SupplierName = Nombre_Fiscal.Text.Trim().ToUpper().ToString();
+
+            if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
+                supplier.PhoneNumber = null;
+            else
+                supplier.PhoneNumber = Telefono.Value.ToString().Trim();
+
+            if (string.IsNullOrEmpty(Celular.Text.Trim().ToString()) || Celular.Text.Contains("(___)___-___-____"))
+                supplier.CellphoneNumber = null;
+            else
+                supplier.CellphoneNumber = Celular.Value.ToString().Trim();
+
+            supplier.EmailAddress = eMail.Text.Trim();
+            supplier.RFC = RFC.Text.Trim().ToUpper();
+
+            char[] delimiterChars = { ' ' };
+            string[] arr = Nombre_Fiscal.Text.Trim().ToUpper().Split(delimiterChars);
+            string provKey = String.Empty;
+            string rfc_homoclave = String.Empty;
+            string abrev_stateprovince = String.Empty;
+            string city = String.Empty;
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var i in arr)
             {
-                this.Tipo_Inmueble_Fiscal.SelectedValue = address.AddressTypeId;
-                this.Tipo_Vialidad_Fiscal.SelectedValue = address.RoadTypeId;
-                this.Vialidad_Fiscal.Text = Vialidad.Text.Trim().ToString();
-                this.No_Ext_Fiscal.Text = No_Ext.Text.Trim().ToString();
-                this.No_Int_Fiscal.Text = No_Int.Text.Trim().ToString();
-                this.Codigo_Postal_Fiscal.Text = Codigo_Postal.Text.Trim().ToString();
-                this.Colonia_Fiscal.Text = Colonia.Text.Trim().ToString();
-                this.Entidad_Federativa_Fiscal.SelectedValue = address.StateProvinceId;
-                this.Municipio_Fiscal.SelectedValue = address.CityId;
+                if (i.Length > 3)
+                {
+                    sb.Append(i.Substring(0, 3));
+                }
+            }
 
-                this.Tipo_Inmueble_Fiscal.Enabled = false;
-                this.Tipo_Vialidad_Fiscal.Enabled = false;
-                this.Vialidad_Fiscal.Enabled = false;
-                this.No_Ext_Fiscal.Enabled = false;
-                this.No_Int_Fiscal.Enabled = false;
-                this.Codigo_Postal_Fiscal.Enabled = false;
-                this.Colonia_Fiscal.Enabled = false;
-                this.Entidad_Federativa_Fiscal.Enabled = false;
-                this.Municipio_Fiscal.Enabled = false;
-                this.btnImportarDatosFiscales.Enabled = false;
+            if (supplier.RFC.Length == 13)
+                rfc_homoclave = supplier.RFC.Substring(10, 3);
+            else if (supplier.RFC.Length == 12)
+                rfc_homoclave = supplier.RFC.Substring(9, 3);
+
+            abrev_stateprovince = BusinessLogicLayer.DropDownListHelperBLL.GetAbrevStateProvince(address.StateProvinceId);
+            city = BusinessLogicLayer.DropDownListHelperBLL.GetCityName(address.CityId);
+
+            provKey = sb.ToString();
+
+            supplier.SupplierKey = "OWTK-" + provKey + rfc_homoclave + abrev_stateprovince;
+
+            supplier.CreatedDate = f;
+            supplier.CreatedBy = "HECP";
+            supplier.LastUpdatedDate = f;
+            supplier.LastUpdatedBy = "HECP";
+        }
+
+        private void savePicture()
+        {
+            bool isNullOrEmpty = picLogotipo == null || picLogotipo.Image == null;
+
+            if (!isNullOrEmpty)
+            {
+                string folder = @"\images\company_logo\";
+                string appPath = Path.GetDirectoryName(Application.StartupPath);
+                string folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
+
+                if (Directory.Exists(folderToSave) == false)
+                {
+                    Directory.CreateDirectory(folderToSave);
+                }
+
+                string companyName = Nombre_Fiscal.Text.Trim().ToString();
+                string filename = companyName + ".jpg";
+
+                picLogotipo.Image.Save(folderToSave + filename, ImageFormat.Jpeg);
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, "El sistema no puede importar la informacion, favor de completar los campos anteriores", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(new Form { TopMost = true }, "El logotipo no se ha podido almacenar correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void uploadLogotipo()
+        private void registerSupplierInSystem()
         {
-            OpenFileDialog BuscarImagen = new OpenFileDialog();
-            BuscarImagen.Filter = ".bmp;*.gif;*.jpg;*.png|*.bmp;*.gif;*.jpg;*.png|Imagen Jpg(*.jpg)|*.jpg|Imagen PNG(*.png)|*.png|Imagen Gif(*.gif*)|*.gif";
-            BuscarImagen.FileName = "";
-            BuscarImagen.Title = "Examinar Imagen";
-            if (BuscarImagen.ShowDialog() == DialogResult.OK)
+            string message = String.Empty;
+
+            recoveryInformationObjectsByUserInterface();
+
+            message = BusinessLogicLayer.SupplierBLL.procInsertSupplierToSystem(supplier, address, 3);
+
+            if (String.IsNullOrEmpty(message))
             {
-                rutaLogotipo = BuscarImagen.FileName;
-                String Direccion = BuscarImagen.FileName;
-                picLogotipo.ImageLocation = Direccion;
-                picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
+                savePicture();
+
+                MessageBox.Show(new Form { TopMost = true }, "Proveedor registrado correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                setToDefaultFields();
+            }
+            else
+            {
+                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void setToDefaultFields()
-        {
-            this.Nombre_Empresa.Text = String.Empty;
-            this.Tipo_Inmueble.SelectedIndex = 0;
-            this.Tipo_Vialidad.SelectedIndex = 0;
-            this.Vialidad.Text = String.Empty;
-            this.Codigo_Postal.Text = "_____";
-            this.No_Ext.Text = String.Empty;
-            this.No_Int.Text = String.Empty;
-            this.Colonia.Text = String.Empty;
-            this.Entidad_Federativa.SelectedIndex = 0;
-            this.Municipio.SelectedIndex = 0;
-            this.eMail.Text = String.Empty;
-            this.Telefono.Text = "(__)___-_____";
-            this.Celular.Text = "(___)___-___-____";
-            this.Nombre_Fiscal.Text = String.Empty;
-            this.RFC.Text = String.Empty;
-            //Regimen_Fiscal.Text = String.Empty;
-            this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
-            this.Tipo_Vialidad_Fiscal.SelectedIndex = 0;
-            this.Vialidad_Fiscal.Text = String.Empty;
-            this.Codigo_Postal_Fiscal.Text = "_____";
-            this.No_Ext_Fiscal.Text = String.Empty;
-            this.No_Int_Fiscal.Text = String.Empty;
-            this.Colonia_Fiscal.Text = String.Empty;
-            this.Entidad_Federativa_Fiscal.SelectedIndex = 0;
-            this.Municipio_Fiscal.SelectedIndex = 0;
-            this.Tipo_Inmueble_Fiscal.Enabled = true;
-            this.Tipo_Vialidad_Fiscal.Enabled = true;
-            this.Vialidad_Fiscal.Enabled = true;
-            this.No_Ext_Fiscal.Enabled = true;
-            this.No_Int_Fiscal.Enabled = true;
-            this.Codigo_Postal_Fiscal.Enabled = true;
-            this.Colonia_Fiscal.Enabled = true;
-            this.Entidad_Federativa_Fiscal.Enabled = true;
-            this.Municipio_Fiscal.Enabled = true;
-            this.btnImportarDatosFiscales.Enabled = true;
-
-            supplier = null;
-            address = null;
-            addressSAT = null;
-
-            rutaLogotipo = String.Empty;
-            //RegimenFiscal = String.Empty;
-
-            this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
-        }
-
-        private void fillDropDownList()
-        {
-            this.Tipo_Inmueble.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
-            this.Tipo_Inmueble.DisplayMember = "Name";
-            this.Tipo_Inmueble.ValueMember = "Id";
-            this.Tipo_Inmueble.SelectedIndex = 0;
-
-            this.Tipo_Inmueble_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
-            this.Tipo_Inmueble_Fiscal.DisplayMember = "Name";
-            this.Tipo_Inmueble_Fiscal.ValueMember = "Id";
-            this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
-
-            this.Tipo_Vialidad.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
-            this.Tipo_Vialidad.DisplayMember = "Name";
-            this.Tipo_Vialidad.ValueMember = "Id";
-            this.Tipo_Vialidad.SelectedIndex = 0;
-
-            this.Tipo_Vialidad_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetRoadTypeDropDownList();
-            this.Tipo_Vialidad_Fiscal.DisplayMember = "Name";
-            this.Tipo_Vialidad_Fiscal.ValueMember = "Id";
-            this.Tipo_Vialidad_Fiscal.SelectedIndex = 0;
-
-            this.Entidad_Federativa.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList(); ;
-            this.Entidad_Federativa.DisplayMember = "Description";
-            this.Entidad_Federativa.ValueMember = "Id";
-            this.Entidad_Federativa.SelectedIndex = 0;
-
-            this.Entidad_Federativa_Fiscal.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetStateProvinceDropDownList();
-            this.Entidad_Federativa_Fiscal.DisplayMember = "Description";
-            this.Entidad_Federativa_Fiscal.ValueMember = "Id";
-            this.Entidad_Federativa_Fiscal.SelectedIndex = 0;
-
-            this.Municipio.SelectedIndex = 0;
-            this.Municipio_Fiscal.SelectedIndex = 0;
-        }
         #endregion
     }
 }

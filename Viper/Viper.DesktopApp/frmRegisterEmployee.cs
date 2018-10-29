@@ -446,7 +446,7 @@ namespace Viper.DesktopApp
         {
             objButton = (RadButton)sender;
 
-            switch(objButton.Name)
+            switch (objButton.Name)
             {
                 case "btnAceptar":
                     registerEmployeeInSystem();
@@ -731,32 +731,25 @@ namespace Viper.DesktopApp
 
         private void registerEmployeeInSystem()
         {
-            try
+            string message = String.Empty;
+
+            recoveryInformationObjectsByUserInterface();
+
+            message = BusinessLogicLayer.EmployeeBLL.procRegisterEmployee(address, employee, employeeDepartmentHistory, Convert.ToInt32(Rol.SelectedValue));
+
+            if (String.IsNullOrEmpty(message))
             {
-                string message = String.Empty;
+                savePicture();
 
-                recoveryInformationObjectsByUserInterface();
+                MessageBox.Show(new Form { TopMost = true }, "Empleado registrado correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                message = BusinessLogicLayer.EmployeeBLL.procRegisterEmployee(address, employee, employeeDepartmentHistory, Convert.ToInt32(Rol.SelectedValue));
+                setToDefaultFields();
 
-                if (String.IsNullOrEmpty(message))
-                {
-                    savePicture();
-
-                    MessageBox.Show(new Form { TopMost = true }, "Empleado registrado correctamente", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    setToDefaultFields();
-
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                this.Hide();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(new Form { TopMost = true }, ex.InnerException.Message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

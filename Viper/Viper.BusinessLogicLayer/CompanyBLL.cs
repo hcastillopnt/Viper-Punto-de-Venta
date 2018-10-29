@@ -26,61 +26,66 @@ namespace Viper.BusinessLogicLayer
         public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, int RoleID, Site entitySite)
         {
             String message = String.Empty;
-
-            ICollection<ValidationResult> results = null;
-
             String companyName = entityCompany.CompanyName;
             String RFC = entityCompany.RFC;
+            ICollection<ValidationResult> results = null;
 
-            bool isCompanyRegistered = DataAccessLayer.CompanyDAL.procIsCompanyRegisteredToDataBase(companyName, RFC);
-
-            if (isCompanyRegistered)
+            try
             {
-                message = "Los datos de la licencia que intenta registrar ya existen en nuestra base de datos, favor de verificar los datos";
-            }
-            else
-            {
-                String loginID = entityCompany.RFC;
-                String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
+                bool isCompanyRegistered = DataAccessLayer.CompanyDAL.procIsCompanyRegisteredToDataBase(companyName, RFC);
 
-                message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
-
-                if (String.IsNullOrEmpty(message))
+                if (isCompanyRegistered)
                 {
-                    int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered();
+                    message = "Los datos de la licencia que intenta registrar ya existen en nuestra base de datos, favor de verificar los datos";
+                }
+                else
+                {
+                    String loginID = entityCompany.RFC;
+                    String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
 
-                    entityCompany.UserId = UserID;
+                    message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
 
-                    if (!validate(entityCompany, out results))
+                    if (String.IsNullOrEmpty(message))
                     {
-                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                    }
-                    else
-                    {
-                        if (!validate(entityAddress, out results))
+                        int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered(loginID);
+
+                        entityCompany.UserId = UserID;
+
+                        if (!validate(entityCompany, out results))
                         {
                             message = String.Join("\n", results.Select(o => o.ErrorMessage));
                         }
                         else
                         {
-                            if (!validate(entityAddressSAT, out results))
+                            if (!validate(entityAddress, out results))
                             {
                                 message = String.Join("\n", results.Select(o => o.ErrorMessage));
                             }
                             else
                             {
-                                if (!validate(entitySite, out results))
+                                if (!validate(entityAddressSAT, out results))
                                 {
                                     message = String.Join("\n", results.Select(o => o.ErrorMessage));
                                 }
                                 else
                                 {
-                                    message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(entityCompany, entityAddress, entityAddressSAT, entitySite);
+                                    if (!validate(entitySite, out results))
+                                    {
+                                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                                    }
+                                    else
+                                    {
+                                        message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(entityCompany, entityAddress, entityAddressSAT, entitySite);
+                                    }
                                 }
                             }
                         }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                message = ex.Message;
             }
 
             return message;

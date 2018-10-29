@@ -24,74 +24,78 @@ namespace Viper.BusinessLogicLayer
         public static string procRegisterEmployee(Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH, int RoleID)
         {
             String message = String.Empty;
-
-            ICollection<ValidationResult> results = null;
-
             String loginID = entityEmployee.CURP;
             String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("12345");
-
             String CURP = entityEmployee.CURP;
+            ICollection<ValidationResult> results = null;
 
-            bool isExistente = DataAccessLayer.EmployeeDAL.procIsCURPExists(CURP);
-
-            if (isExistente)
+            try
             {
-                message = "Se ha denegado el registro, por duplicidad debido en el C.U.R.P. que se intenta que registrar";
-            }
-            else
-            {
-                String RFC = entityEmployee.RFC;
-
-                isExistente = DataAccessLayer.EmployeeDAL.procIsRFCExists(RFC);
+                bool isExistente = DataAccessLayer.EmployeeDAL.procIsCURPExists(CURP);
 
                 if (isExistente)
                 {
-                    message = "Se ha denegado el registro, por duplicidad debido en el R.F.C que se intenta que registrar";
+                    message = "Se ha denegado el registro, por duplicidad debido en el C.U.R.P. que se intenta que registrar";
                 }
                 else
                 {
-                    message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
+                    String RFC = entityEmployee.RFC;
 
-                    if (String.IsNullOrEmpty(message))
+                    isExistente = DataAccessLayer.EmployeeDAL.procIsRFCExists(RFC);
+
+                    if (isExistente)
                     {
-                        int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered();
+                        message = "Se ha denegado el registro, por duplicidad debido en el R.F.C que se intenta que registrar";
+                    }
+                    else
+                    {
+                        message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
 
-                        entityEmployee.EmployeeNumber = DataAccessLayer.EmployeeDAL.procObtainEmployeeNumberGeneratedAutomatic();
-                        entityEmployee.UserId = UserID;
+                        if (String.IsNullOrEmpty(message))
+                        {
+                            int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered(loginID);
 
-                        if (!validate(entityAddress, out results))
-                        {
-                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                        }
-                        else
-                        {
-                            if (!validate(entityEmployee, out results))
+                            entityEmployee.EmployeeNumber = DataAccessLayer.EmployeeDAL.procObtainEmployeeNumberGeneratedAutomatic();
+                            entityEmployee.UserId = UserID;
+
+                            if (!validate(entityAddress, out results))
                             {
                                 message = String.Join("\n", results.Select(o => o.ErrorMessage));
                             }
                             else
                             {
-                                message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(entityAddress, entityEmployee);
-
-                                if (String.IsNullOrEmpty(message))
+                                if (!validate(entityEmployee, out results))
                                 {
-                                    if (!validate(entityEDH, out results))
-                                    {
-                                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                                    }
-                                    else
-                                    {
-                                        int EmployeeID = DataAccessLayer.EmployeeDAL.procGetLastIDToEmployeeRegistered();
+                                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                                }
+                                else
+                                {
+                                    message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(entityAddress, entityEmployee);
 
-                                        entityEDH.EmployeeId = EmployeeID;
+                                    if (String.IsNullOrEmpty(message))
+                                    {
+                                        if (!validate(entityEDH, out results))
+                                        {
+                                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                                        }
+                                        else
+                                        {
+                                            int EmployeeID = DataAccessLayer.EmployeeDAL.procGetLastIDToEmployeeRegistered();
 
-                                        message = DataAccessLayer.EmployeeDAL.procInsertEmployeeHistoryToSystem(entityEDH);
+                                            entityEDH.EmployeeId = EmployeeID;
+
+                                            message = DataAccessLayer.EmployeeDAL.procInsertEmployeeHistoryToSystem(entityEDH);
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                message = ex.Message;
             }
 
             return message;
