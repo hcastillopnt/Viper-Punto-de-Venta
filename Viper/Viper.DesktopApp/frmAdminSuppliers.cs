@@ -36,7 +36,6 @@ namespace Viper.DesktopApp
         #region Variables, Objetos y Componentes
 
         RadButton objButton = null;
-        DataTable dtSuppliers = new DataTable();
 
         #endregion
 
@@ -126,7 +125,7 @@ namespace Viper.DesktopApp
             gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable();
 
             //Ajustar contenido de las celdas
-            if (dtSuppliers.Rows.Count > 0)
+            if (gvSuppliers.Rows.Count > 0)
             {
                 gvSuppliers.AutoSizeRows = true;
                 gvSuppliers.Columns[0].WrapText = true;

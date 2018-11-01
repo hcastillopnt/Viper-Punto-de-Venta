@@ -38,7 +38,6 @@ namespace Viper.DesktopApp
         int companyID = 0;
         String companyName = String.Empty;
         RadButton objButton = null;
-        DataTable dtEmployees = new DataTable();
 
         #endregion
 
@@ -131,7 +130,7 @@ namespace Viper.DesktopApp
             gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID);
 
             //Ajustar contenido de las celdas
-            if (dtEmployees.Rows.Count > 0)
+            if (gvEmployees.Rows.Count > 0)
             {
                 gvEmployees.AutoSizeRows = true;
                 gvEmployees.Columns[0].WrapText = true;

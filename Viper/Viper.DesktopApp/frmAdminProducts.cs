@@ -38,7 +38,6 @@ namespace Viper.DesktopApp
         int companyID = 0;
         String companyName = String.Empty;
         RadButton objButton = null;
-        DataTable dtSuppliers = new DataTable();
 
         #endregion
 
@@ -114,7 +113,7 @@ namespace Viper.DesktopApp
             this.WindowState = FormWindowState.Maximized;
 
             //Ajustar contenido de las celdas
-            if (dtSuppliers.Rows.Count > 0)
+            if (gvProducts.Rows.Count > 0)
             {
                 gvProducts.AutoSizeRows = true;
                 gvProducts.Columns[0].WrapText = true;
