@@ -113,6 +113,10 @@ namespace Viper.DesktopApp
             this.Size = new Size(w, h);
             this.WindowState = FormWindowState.Maximized;
 
+            //Ajustar contenido de las celdas
+            gvProducts.AutoSizeRows = true;
+            gvProducts.Columns[0].WrapText = true;
+
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();
 
