@@ -41,6 +41,9 @@ namespace Viper.DesktopApp
         ComponentResourceManager resources = new ComponentResourceManager(typeof(frmRegisterSupplier));
         string rutaLogotipo = String.Empty;
         RadButton objButton = null;
+        RadTextBox objTextbox = null;
+        RadDropDownList objDropDownList = null;
+        RadMaskedEditBox objMaskedEditBox = null;
         DateTime f = DateTime.Today;
         Supplier supplier = null;
         Address address = null;
@@ -132,7 +135,7 @@ namespace Viper.DesktopApp
             }
         }
 
-        private void cboEstado_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void EntidadFederativa_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             this.Municipio.Items.Clear();
 
@@ -217,6 +220,146 @@ namespace Viper.DesktopApp
             {
                 e.Handled = true;
                 SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void Control_Leave(object sender, EventArgs e)
+        {
+            if (sender is RadTextBox)
+            {
+                objTextbox = (RadTextBox)sender;
+
+                switch (objTextbox.Name)
+                {
+                    //tab 2
+                    case "Nombre_Fiscal":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        RFC.Focus();
+                        break;
+
+                    //tab 3
+                    case "RFC":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Tipo_Inmueble.Focus();
+                        break;
+
+                    //tab 6
+                    case "Vialidad":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Codigo_Postal.Focus();
+                        break;
+
+                    //tab 8
+                    case "No_Ext":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        No_Int.Focus();
+                        break;
+
+                    //tab 9
+                    case "No_Int":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Colonia.Focus();
+                        break;
+
+                    //tab 10
+                    case "Colonia":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Entidad_Federativa.Focus();
+                        break;
+
+                    //tab 13
+                    case "eMail":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Telefono.Focus();
+                        break;
+
+                    //tab 16
+                    case "Cuenta_Banco":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        btnExaminar.Focus();
+                        break;
+                }
+            }
+            else if (sender is RadMaskedEditBox)
+            {
+                objMaskedEditBox = (RadMaskedEditBox)sender;
+
+                switch (objMaskedEditBox.Name)
+                {
+                    //tab 7
+                    case "Codigo_Postal":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        No_Ext.Focus();
+                        break;
+
+                    //tab 14
+                    case "Telefono":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Celular.Focus();
+                        break;
+
+                    //tab 15
+                    case "Celular":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Cuenta_Banco.Focus();
+                        break;
+                }
+            }
+            else if (sender is RadDropDownList)
+            {
+                objDropDownList = (RadDropDownList)sender;
+
+                switch (objDropDownList.Name)
+                {
+                    //tab 1
+                    case "Giro_Comercial":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Nombre_Fiscal.Focus();
+                        break;
+
+                    //tab 4
+                    case "Tipo_Inmueble":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Tipo_Vialidad.Focus();
+                        break;
+
+                    //tab 5
+                    case "Tipo_Vialidad":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Vialidad.Focus();
+                        break;
+
+                    //tab 11
+                    case "Entidad_Federativa":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        Municipio.Focus();
+                        break;
+
+                    //tab 12
+                    case "Municipio":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        eMail.Focus();
+                        break;
+                }
+            }
+            else if (sender is RadButton)
+            {
+                objButton = (RadButton)sender;
+
+                switch (objButton.Name)
+                {
+                    //tab 17
+                    case "btnExaminar":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        btnAceptar.Focus();
+                        break;
+
+                    //tab 18
+                    case "btnAceptar":
+                        pvAddSupplier.SelectedPage = pvpDatosGenerales;
+                        btnCancelar.Focus();
+                        break;
+                }
             }
         }
 
@@ -400,7 +543,7 @@ namespace Viper.DesktopApp
                     Directory.CreateDirectory(folderToSave);
                 }
 
-                string companyName = Nombre_Fiscal.Text.Trim().ToString();
+                string companyName = supplier.SupplierKey;
                 string filename = companyName + ".jpg";
 
                 picLogotipo.Image.Save(folderToSave + filename, ImageFormat.Jpeg);

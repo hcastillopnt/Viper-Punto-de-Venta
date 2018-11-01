@@ -153,7 +153,7 @@
             this.panelDer.Margin = new System.Windows.Forms.Padding(2);
             this.panelDer.Name = "panelDer";
             this.panelDer.Size = new System.Drawing.Size(191, 736);
-            this.panelDer.TabIndex = 0;
+            this.panelDer.TabIndex = 2;
             this.panelDer.TabStop = false;
             // 
             // pvAddSupplier
@@ -168,7 +168,7 @@
             this.pvAddSupplier.PageBackColor = System.Drawing.Color.White;
             this.pvAddSupplier.SelectedPage = this.pvpDatosGenerales;
             this.pvAddSupplier.Size = new System.Drawing.Size(906, 736);
-            this.pvAddSupplier.TabIndex = 0;
+            this.pvAddSupplier.TabIndex = 1;
             this.pvAddSupplier.TabStop = false;
             this.pvAddSupplier.ThemeName = "VisualStudio2012Light";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pvAddSupplier.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
@@ -226,11 +226,12 @@
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(252, 66);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 17;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.ThemeName = "VisualStudio2012Light";
             this.btnAceptar.Click += new System.EventHandler(this.Button_Click);
+            this.btnAceptar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnCancelar
             // 
@@ -242,11 +243,12 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(254, 66);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.ThemeName = "VisualStudio2012Light";
             this.btnCancelar.Click += new System.EventHandler(this.Button_Click);
+            this.btnCancelar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // pnlCentro
             // 
@@ -272,7 +274,7 @@
             this.gbDatosGenerales.Name = "gbDatosGenerales";
             this.gbDatosGenerales.Padding = new System.Windows.Forms.Padding(1, 12, 1, 1);
             this.gbDatosGenerales.Size = new System.Drawing.Size(856, 648);
-            this.gbDatosGenerales.TabIndex = 10;
+            this.gbDatosGenerales.TabIndex = 0;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
             this.gbDatosGenerales.ThemeName = "VisualStudio2012Light";
@@ -331,12 +333,13 @@
             this.btnExaminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(182, 44);
-            this.btnExaminar.TabIndex = 2;
+            this.btnExaminar.TabIndex = 16;
             this.btnExaminar.TabStop = false;
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExaminar.ThemeName = "VisualStudio2012Light";
             this.btnExaminar.Click += new System.EventHandler(this.Button_Click);
+            this.btnExaminar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosGenerales_Izquierda
             // 
@@ -421,8 +424,9 @@
             this.Tipo_Inmueble.Name = "Tipo_Inmueble";
             this.Tipo_Inmueble.NullText = "--SELECCIONE--";
             this.Tipo_Inmueble.Size = new System.Drawing.Size(188, 50);
-            this.Tipo_Inmueble.TabIndex = 0;
+            this.Tipo_Inmueble.TabIndex = 18;
             this.Tipo_Inmueble.ThemeName = "VisualStudio2012Light";
+            this.Tipo_Inmueble.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Colonia
             // 
@@ -436,8 +440,9 @@
             this.Colonia.Name = "Colonia";
             this.Colonia.NullText = "COLONIA";
             this.Colonia.Size = new System.Drawing.Size(520, 50);
-            this.Colonia.TabIndex = 0;
+            this.Colonia.TabIndex = 4;
             this.Colonia.ThemeName = "VisualStudio2012Light";
+            this.Colonia.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblTipoInmueble
             // 
@@ -490,8 +495,9 @@
             this.Tipo_Vialidad.Name = "Tipo_Vialidad";
             this.Tipo_Vialidad.NullText = "--SELECCIONE--";
             this.Tipo_Vialidad.Size = new System.Drawing.Size(188, 50);
-            this.Tipo_Vialidad.TabIndex = 0;
+            this.Tipo_Vialidad.TabIndex = 1;
             this.Tipo_Vialidad.ThemeName = "VisualStudio2012Light";
+            this.Tipo_Vialidad.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDG_01
             // 
@@ -520,9 +526,10 @@
             this.Vialidad.Name = "Vialidad";
             this.Vialidad.NullText = "CALLE";
             this.Vialidad.Size = new System.Drawing.Size(182, 46);
-            this.Vialidad.TabIndex = 0;
+            this.Vialidad.TabIndex = 1;
             this.Vialidad.ThemeName = "VisualStudio2012Light";
             this.Vialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            this.Vialidad.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNombreVialidad
             // 
@@ -568,9 +575,10 @@
             this.No_Int.Name = "No_Int";
             this.No_Int.NullText = "NO. INT";
             this.No_Int.Size = new System.Drawing.Size(79, 46);
-            this.No_Int.TabIndex = 0;
+            this.No_Int.TabIndex = 3;
             this.No_Int.ThemeName = "VisualStudio2012Light";
             this.No_Int.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            this.No_Int.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoInt
             // 
@@ -581,7 +589,7 @@
             this.lblNoInt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoInt.Name = "lblNoInt";
             this.lblNoInt.Size = new System.Drawing.Size(72, 50);
-            this.lblNoInt.TabIndex = 0;
+            this.lblNoInt.TabIndex = 2;
             this.lblNoInt.Text = "No \r\nInt:";
             this.lblNoInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -596,9 +604,10 @@
             this.No_Ext.Name = "No_Ext";
             this.No_Ext.NullText = "NO. EXT";
             this.No_Ext.Size = new System.Drawing.Size(78, 46);
-            this.No_Ext.TabIndex = 0;
+            this.No_Ext.TabIndex = 1;
             this.No_Ext.ThemeName = "VisualStudio2012Light";
             this.No_Ext.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
+            this.No_Ext.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblNoExt
             // 
@@ -651,9 +660,10 @@
             this.Entidad_Federativa.Name = "Entidad_Federativa";
             this.Entidad_Federativa.NullText = "--SELECCIONE--";
             this.Entidad_Federativa.Size = new System.Drawing.Size(188, 50);
-            this.Entidad_Federativa.TabIndex = 0;
+            this.Entidad_Federativa.TabIndex = 5;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
-            this.Entidad_Federativa.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstado_SelectedIndexChanged);
+            this.Entidad_Federativa.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.EntidadFederativa_SelectedIndexChanged);
+            this.Entidad_Federativa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDG_03
             // 
@@ -683,8 +693,9 @@
             this.Municipio.Name = "Municipio";
             this.Municipio.NullText = "--SELECCIONE--";
             this.Municipio.Size = new System.Drawing.Size(198, 46);
-            this.Municipio.TabIndex = 0;
+            this.Municipio.TabIndex = 1;
             this.Municipio.ThemeName = "VisualStudio2012Light";
+            this.Municipio.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblLocalidad
             // 
@@ -711,12 +722,13 @@
             this.Codigo_Postal.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Codigo_Postal.Name = "Codigo_Postal";
             this.Codigo_Postal.Size = new System.Drawing.Size(188, 50);
-            this.Codigo_Postal.TabIndex = 0;
+            this.Codigo_Postal.TabIndex = 3;
             this.Codigo_Postal.TabStop = false;
             this.Codigo_Postal.Text = "_____";
             this.Codigo_Postal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Codigo_Postal.ThemeName = "VisualStudio2012Light";
             this.Codigo_Postal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
+            this.Codigo_Postal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblEmail
             // 
@@ -785,12 +797,13 @@
             this.Celular.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Celular.Name = "Celular";
             this.Celular.Size = new System.Drawing.Size(195, 46);
-            this.Celular.TabIndex = 0;
+            this.Celular.TabIndex = 1;
             this.Celular.TabStop = false;
             this.Celular.Text = "(___)___-___-____";
             this.Celular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Celular.ThemeName = "VisualStudio2012Light";
             this.Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
+            this.Celular.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Telefono
             // 
@@ -804,12 +817,13 @@
             this.Telefono.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(188, 50);
-            this.Telefono.TabIndex = 0;
+            this.Telefono.TabIndex = 7;
             this.Telefono.TabStop = false;
             this.Telefono.Text = "(__)___-_____";
             this.Telefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.Telefono.ThemeName = "VisualStudio2012Light";
             this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
+            this.Telefono.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // eMail
             // 
@@ -823,8 +837,9 @@
             this.eMail.Name = "eMail";
             this.eMail.NullText = "EMAIL@EXAMPLE.COM";
             this.eMail.Size = new System.Drawing.Size(519, 50);
-            this.eMail.TabIndex = 0;
+            this.eMail.TabIndex = 6;
             this.eMail.ThemeName = "VisualStudio2012Light";
+            this.eMail.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Cuenta_Banco
             // 
@@ -837,9 +852,10 @@
             this.Cuenta_Banco.Name = "Cuenta_Banco";
             this.Cuenta_Banco.NullText = "CUENTA DE BANCO (CLABE INTERBANCARIA)";
             this.Cuenta_Banco.Size = new System.Drawing.Size(521, 58);
-            this.Cuenta_Banco.TabIndex = 2;
+            this.Cuenta_Banco.TabIndex = 8;
             this.Cuenta_Banco.ThemeName = "VisualStudio2012Light";
             this.Cuenta_Banco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
+            this.Cuenta_Banco.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosGenerales_1
             // 
@@ -914,8 +930,9 @@
             this.Nombre_Fiscal.Name = "Nombre_Fiscal";
             this.Nombre_Fiscal.NullText = "NOMBRE FISCAL";
             this.Nombre_Fiscal.Size = new System.Drawing.Size(520, 52);
-            this.Nombre_Fiscal.TabIndex = 3;
+            this.Nombre_Fiscal.TabIndex = 1;
             this.Nombre_Fiscal.ThemeName = "VisualStudio2012Light";
+            this.Nombre_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // RFC
             // 
@@ -929,8 +946,9 @@
             this.RFC.Name = "RFC";
             this.RFC.NullText = "R.F.C.  (FISCAL)";
             this.RFC.Size = new System.Drawing.Size(520, 53);
-            this.RFC.TabIndex = 4;
+            this.RFC.TabIndex = 2;
             this.RFC.ThemeName = "VisualStudio2012Light";
+            this.RFC.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Giro_Comercial
             // 
@@ -946,6 +964,7 @@
             this.Giro_Comercial.Size = new System.Drawing.Size(520, 52);
             this.Giro_Comercial.TabIndex = 0;
             this.Giro_Comercial.ThemeName = "VisualStudio2012Light";
+            this.Giro_Comercial.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // paneIzq
             // 
