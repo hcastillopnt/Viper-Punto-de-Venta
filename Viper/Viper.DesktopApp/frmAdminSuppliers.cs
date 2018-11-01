@@ -126,8 +126,11 @@ namespace Viper.DesktopApp
             gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable();
 
             //Ajustar contenido de las celdas
-            gvSuppliers.AutoSizeRows = true;
-            gvSuppliers.Columns[0].WrapText = true;
+            if (dtSuppliers.Rows.Count > 0)
+            {
+                gvSuppliers.AutoSizeRows = true;
+                gvSuppliers.Columns[0].WrapText = true;
+            }
 
             // Create the ToolTip and associate with the Form container.
             ToolTip toolTip1 = new ToolTip();
