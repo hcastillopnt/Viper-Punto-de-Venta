@@ -1079,7 +1079,7 @@ namespace Viper.DesktopApp
                     Directory.CreateDirectory(folderToSave);
                 }
 
-                string companyName = Nombre_Empresa.Text.Trim().ToString();
+                string companyName = company.CompanyKey;
                 string filename = companyName + ".jpg";
 
                 picLogotipo.Image.Save(folderToSave + filename, ImageFormat.Jpeg);
