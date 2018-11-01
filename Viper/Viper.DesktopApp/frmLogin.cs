@@ -85,6 +85,7 @@ namespace Viper.DesktopApp
                     DateTime endTime = dt.Rows[0].Field<DateTime>("EndTime");
                     string subsidiary = dt.Rows[0].Field<String>("Subsidiary");
                     string company = dt.Rows[0].Field<String>("CompanyName");
+                    string companyKey = dt.Rows[0].Field<String>("CompanyKey");
                     string role = dt.Rows[0].Field<String>("Role");
                     bool isWelcome = dt.Rows[0].Field<bool>("IsWelcome");
                     int acccessFailed = dt.Rows[0].Field<int>("AccessFailed");

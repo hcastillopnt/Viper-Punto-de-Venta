@@ -332,8 +332,8 @@ namespace Viper.DesktopApp
 
             if (Directory.Exists(folderToSave))
             {
-                string companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
-                string filename = companyName + ".jpg";
+                string companyKey = frmLogin.dt.Rows[0].Field<String>("CompanyKey");
+                string filename = companyKey + ".jpg";
                 string curFile = folderToSave + filename;
 
                 if (File.Exists(curFile))
