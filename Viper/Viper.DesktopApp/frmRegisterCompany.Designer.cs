@@ -624,7 +624,7 @@
             this.Entidad_Federativa.Size = new System.Drawing.Size(217, 25);
             this.Entidad_Federativa.TabIndex = 0;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
-            this.Entidad_Federativa.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstado_SelectedIndexChanged);
+            this.Entidad_Federativa.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.EntidadFederativa_SelectedIndexChanged);
             this.Entidad_Federativa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDG_03
@@ -1139,7 +1139,7 @@
             this.Entidad_Federativa_Fiscal.Size = new System.Drawing.Size(284, 29);
             this.Entidad_Federativa_Fiscal.TabIndex = 0;
             this.Entidad_Federativa_Fiscal.ThemeName = "VisualStudio2012Light";
-            this.Entidad_Federativa_Fiscal.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cboEstadoFiscal_SelectedIndexChanged);
+            this.Entidad_Federativa_Fiscal.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Entidad_FederativaFiscal_SelectedIndexChanged);
             this.Entidad_Federativa_Fiscal.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDF_03

@@ -392,7 +392,7 @@ namespace Viper.DesktopApp
             }
         }
 
-        private void cboEstado_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void EntidadFederativa_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             Municipio.Items.Clear();
 
@@ -409,7 +409,7 @@ namespace Viper.DesktopApp
             }
         }
 
-        private void cboEstadoFiscal_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void Entidad_FederativaFiscal_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             Municipio_Fiscal.Items.Clear();
 

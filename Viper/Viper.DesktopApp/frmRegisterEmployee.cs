@@ -227,7 +227,7 @@ namespace Viper.DesktopApp
             }
         }
 
-        private void cboEstado_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void EntidadFederativa_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             this.Municipio.Items.Clear();
 
