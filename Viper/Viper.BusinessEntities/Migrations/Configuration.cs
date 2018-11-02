@@ -5593,7 +5593,7 @@ namespace Viper.BusinessEntities.Migrations
             //Default values of Module Table
             defaultModules.Add(new Module() { Name = "Ventas", Menu = "F1 Ventas", Submenu = "NULL", ControlName = "btnVentas", ControlImage = "ventas.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Productos", Menu = "F2 Productos", Submenu = "NULL", ControlName = "btnProductos", ControlImage = "productos.png", IsActive = true });
-            defaultModules.Add(new Module() { Name = "Inventario", Menu = "F3 Inventario", Submenu = "NULL", ControlName = "btnInventario", ControlImage = "inventario.png", IsActive = false });
+            defaultModules.Add(new Module() { Name = "Inventario", Menu = "F3 Inventario", Submenu = "NULL", ControlName = "btnInventario", ControlImage = "inventario.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Operaciones", Menu = "F4 Operaciones", Submenu = "NULL", ControlName = "btnOperaciones", ControlImage = "procesos.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Compras", Menu = "F4 Operaciones", Submenu = "Compras", ControlName = "btnCompras", ControlImage = "sub_compras.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Clientes", Menu = "F4 Operaciones", Submenu = "Clientes", ControlName = "btnClientes", ControlImage = "sub_cliente.png", IsActive = false });
@@ -5606,8 +5606,8 @@ namespace Viper.BusinessEntities.Migrations
             defaultModules.Add(new Module() { Name = "Usuarios", Menu = "F5 Configuracion", Submenu = "Usuarios", ControlName = "btnUsuarios", ControlImage = "sub_usuarios.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Empleados", Menu = "F5 Configuracion", Submenu = "Empleados", ControlName = "btnEmpleados", ControlImage = "sub_empleado.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Cajas", Menu = "F5 Configuracion", Submenu = "Cajas", ControlName = "btnCajas", ControlImage = "sub_cajas.png", IsActive = false });
-            defaultModules.Add(new Module() { Name = "Servicios", Menu = "F5 Configuracion", Submenu = "Servicios", ControlName = "btnServicios", ControlImage = "sub_servicios.png", IsActive = false });
-            defaultModules.Add(new Module() { Name = "Corte", Menu = "F6 Corte", Submenu = "NULL", ControlName = "btnCorte", ControlImage = "corte.png", IsActive = false });
+            defaultModules.Add(new Module() { Name = "Servicios", Menu = "F5 Configuracion", Submenu = "Servicios", ControlName = "btnServicios", ControlImage = "sub_servicios.png", IsActive = true });
+            defaultModules.Add(new Module() { Name = "Corte", Menu = "F6 Corte", Submenu = "NULL", ControlName = "btnCorte", ControlImage = "corte.png", IsActive = true });
             defaultModules.Add(new Module() { Name = "Reportes", Menu = "F7 Reportes", Submenu = "NULL", ControlName = "btnReportes", ControlImage = "reportes.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Estadisticas", Menu = "F7 Estadisticas", Submenu = "NULL", ControlName = "btnEstadisticas", ControlImage = "estadisticas.png", IsActive = false });
             defaultModules.Add(new Module() { Name = "Medico", Menu = "F9 Medico", Submenu = "NULL", ControlName = "btnMedico", ControlImage = "medico.png", IsActive = false });
