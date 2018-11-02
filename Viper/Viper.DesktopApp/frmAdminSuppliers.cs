@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,9 @@ namespace Viper.DesktopApp
         #region Variables, Objetos y Componentes
 
         RadButton objButton = null;
+        string folder = String.Empty;
+        string appPath = String.Empty;
+        string folderToSave = String.Empty;
 
         #endregion
 
@@ -50,6 +54,10 @@ namespace Viper.DesktopApp
         public frmAdminSuppliers()
         {
             InitializeComponent();
+
+            folder = @"\images\company_logo\";
+            appPath = Path.GetDirectoryName(Application.StartupPath);
+            folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
         }
 
         #endregion
@@ -83,13 +91,25 @@ namespace Viper.DesktopApp
                     else
                     {
                         gvSuppliers.DataSource = null;
-                        gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersByNameToDataTable(supplierName);
+                        gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersByNameToDataTable(supplierName, folderToSave);
+
+                        if (gvSuppliers.Rows.Count > 0)
+                        {
+                            gvSuppliers.AutoSizeRows = true;
+                            gvSuppliers.Columns[0].WrapText = true;
+                        }
                     }
                     break;
 
                 case "btnRecargar":
                     gvSuppliers.DataSource = null;
-                    gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable();
+                    gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable(folderToSave);
+
+                    if (gvSuppliers.Rows.Count > 0)
+                    {
+                        gvSuppliers.AutoSizeRows = true;
+                        gvSuppliers.Columns[0].WrapText = true;
+                    }
                     break;
 
                 case "btnEliminar":
@@ -122,7 +142,7 @@ namespace Viper.DesktopApp
 
             //Cargar todos los empleados registrados
             gvSuppliers.DataSource = null;
-            gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable();
+            gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersToDataTable(folderToSave);
 
             //Ajustar contenido de las celdas
             if (gvSuppliers.Rows.Count > 0)
@@ -154,7 +174,7 @@ namespace Viper.DesktopApp
             string filter = Proveedor.Text.Trim().ToString();
 
             gvSuppliers.DataSource = null;
-            gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersByNameToDataTable(filter);
+            gvSuppliers.DataSource = BusinessLogicLayer.SupplierBLL.procGetSuppliersByNameToDataTable(filter, folderToSave);
         }
 
         #endregion

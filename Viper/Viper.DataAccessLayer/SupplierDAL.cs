@@ -4,6 +4,10 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,8 +117,9 @@ namespace Viper.DataAccessLayer
         /// Metodo para obtener todos los proveedores registrados en el Sistema de Punto de Venta para Farmacias
         /// con Venta de Genericos
         /// </summary>
+        /// <param name="folder">Folder donde se almacenan los logotipos de los proveedores</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetSuppliersToDataTable()
+        public static DataTable procGetSuppliersToDataTable(string folder)
         {
             bool isExistente = false;
 
@@ -127,9 +132,9 @@ namespace Viper.DataAccessLayer
                 var result = (from s in dbCtx.Suppliers
                               select new
                               {
+                                  s.SupplierKey,
                                   s.SupplierName,
-                                  s.PhoneNumber,
-                                  s.RFC
+                                  s.PhoneNumber
                               })
                               .OrderBy(x => x.SupplierName)
                               .ToList();
@@ -137,8 +142,11 @@ namespace Viper.DataAccessLayer
                 dataTable.Columns.AddRange(new DataColumn[]{
                 new DataColumn("PROVEEDOR", typeof(string)),
                 new DataColumn("TELEFONO", typeof(string)),
-                new DataColumn("RFC", typeof(string))
+                new DataColumn("LOGOTIPO", typeof(byte[]))
             });
+
+                Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
+                img = Resize(img, 100, 50);
 
                 result.ToList().ForEach(x =>
                 {
@@ -146,7 +154,7 @@ namespace Viper.DataAccessLayer
 
                     row["PROVEEDOR"] = x.SupplierName;
                     row["TELEFONO"] = x.PhoneNumber;
-                    row["RFC"] = x.RFC;
+                    row["LOGOTIPO"] = imageToByteArray(img);
 
                     dataTable.Rows.Add(row);
                 });
@@ -164,8 +172,9 @@ namespace Viper.DataAccessLayer
         /// con Venta de Genericos
         /// </summary>
         /// <param name="name">Proveedor</param>
+        /// <param name="folder">Folder donde se almacenan los logotipos de los proveedores</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetSuppliersByNameToDataTable(string name)
+        public static DataTable procGetSuppliersByNameToDataTable(string name, string folder)
         {
             bool isExistente = false;
 
@@ -179,9 +188,9 @@ namespace Viper.DataAccessLayer
                               where s.SupplierName.Contains(name)
                               select new
                               {
+                                  s.SupplierKey,
                                   s.SupplierName,
-                                  s.PhoneNumber,
-                                  s.RFC
+                                  s.PhoneNumber
                               })
                               .OrderBy(x => x.SupplierName)
                               .ToList();
@@ -189,8 +198,11 @@ namespace Viper.DataAccessLayer
                 dataTable.Columns.AddRange(new DataColumn[]{
                 new DataColumn("PROVEEDOR", typeof(string)),
                 new DataColumn("TELEFONO", typeof(string)),
-                new DataColumn("RFC", typeof(string))
+                new DataColumn("LOGOTIPO", typeof(byte[]))
             });
+
+                Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
+                img = Resize(img, 100, 50);
 
                 result.ToList().ForEach(x =>
                 {
@@ -198,13 +210,62 @@ namespace Viper.DataAccessLayer
 
                     row["PROVEEDOR"] = x.SupplierName;
                     row["TELEFONO"] = x.PhoneNumber;
-                    row["RFC"] = x.RFC;
+                    row["LOGOTIPO"] = imageToByteArray(img);
 
                     dataTable.Rows.Add(row);
                 });
             }
 
             return dataTable;
+        }
+
+        #endregion
+
+        #region imageToByteArray
+
+        public static byte[] imageToByteArray(System.Drawing.Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
+        }
+
+        #endregion
+
+        #region Resize
+
+        private static Image Resize(Image Imagen, int Ancho, int Alto, int resolucion)
+        {
+            //Bitmap sera donde trabajaremos los cambios
+            using (Bitmap imagenBitmap = new Bitmap(Ancho, Alto, PixelFormat.Format32bppRgb))
+            {
+                imagenBitmap.SetResolution(resolucion, resolucion);
+                //Hacemos los cambios a ImagenBitmap usando a ImagenGraphics y la Imagen Original(Imagen)
+                //ImagenBitmap se comporta como un objeto de referenciado
+                using (Graphics imagenGraphics = Graphics.FromImage(imagenBitmap))
+                {
+                    imagenGraphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    imagenGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    imagenGraphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                    imagenGraphics.DrawImage(Imagen, new Rectangle(0, 0, Ancho, Alto), new Rectangle(0, 0, Imagen.Width, Imagen.Height), GraphicsUnit.Pixel);
+                    //todos los cambios hechos en imagenBitmap lo llevaremos un Image(Imagen) con nuevos datos a travez de un MemoryStream
+                    MemoryStream imagenMemoryStream = new MemoryStream();
+                    imagenBitmap.Save(imagenMemoryStream, ImageFormat.Jpeg);
+                    Imagen = Image.FromStream(imagenMemoryStream);
+                }
+            }
+            return Imagen;
+        }
+
+        private static Image Resize(Image image, int SizeHorizontalPercent, int SizeVerticalPercent)
+        {
+            //Obntenemos el ancho y el alto a partir del porcentaje de tamaño solicitado
+            int anchoDestino = image.Width * SizeHorizontalPercent / 100;
+            int altoDestino = image.Height * SizeVerticalPercent / 100;
+            //Obtenemos la resolucion original 
+            int resolucion = Convert.ToInt32(image.HorizontalResolution);
+
+            return Resize(image, anchoDestino, altoDestino, resolucion);
         }
 
         #endregion

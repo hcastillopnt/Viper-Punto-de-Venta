@@ -71,12 +71,13 @@ namespace Viper.BusinessLogicLayer
         /// Metodo para obtener todos los proveedores registrados en el Sistema de Punto de Venta para Farmacias
         /// con Venta de Genericos
         /// </summary>
+        /// <param name="folder">Folder donde se almacenan los logotipos de los proveedores</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetSuppliersToDataTable()
+        public static DataTable procGetSuppliersToDataTable(string folder)
         {
             DataTable dataTable = new DataTable();
 
-            dataTable = DataAccessLayer.SupplierDAL.procGetSuppliersToDataTable();
+            dataTable = DataAccessLayer.SupplierDAL.procGetSuppliersToDataTable(folder);
 
             return dataTable;
         }
@@ -90,12 +91,13 @@ namespace Viper.BusinessLogicLayer
         /// con Venta de Genericos
         /// </summary>
         /// <param name="name">Proveedor</param>
+        /// <param name="folder">Folder donde se almacenan los logotipos de los proveedores</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetSuppliersByNameToDataTable(string name)
+        public static DataTable procGetSuppliersByNameToDataTable(string name, string folder)
         {
             DataTable dataTable = new DataTable();
 
-            dataTable = DataAccessLayer.SupplierDAL.procGetSuppliersByNameToDataTable(name);
+            dataTable = DataAccessLayer.SupplierDAL.procGetSuppliersByNameToDataTable(name, folder);
 
             return dataTable;
         }
