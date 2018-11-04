@@ -76,7 +76,7 @@
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 1;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1300, 740);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1366, 768);
             this.tlpPrincipal.TabIndex = 2;
             // 
             // panelIzq
@@ -85,7 +85,7 @@
             this.panelIzq.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelIzq.Location = new System.Drawing.Point(3, 3);
             this.panelIzq.Name = "panelIzq";
-            this.panelIzq.Size = new System.Drawing.Size(189, 734);
+            this.panelIzq.Size = new System.Drawing.Size(198, 762);
             this.panelIzq.TabIndex = 0;
             this.panelIzq.TabStop = false;
             this.panelIzq.ThemeName = "VisualStudio2012Light";
@@ -94,9 +94,9 @@
             // 
             this.panelDer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelDer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDer.Location = new System.Drawing.Point(1108, 3);
+            this.panelDer.Location = new System.Drawing.Point(1163, 3);
             this.panelDer.Name = "panelDer";
-            this.panelDer.Size = new System.Drawing.Size(189, 734);
+            this.panelDer.Size = new System.Drawing.Size(200, 762);
             this.panelDer.TabIndex = 0;
             this.panelDer.TabStop = false;
             this.panelDer.ThemeName = "VisualStudio2012Light";
@@ -109,14 +109,14 @@
             this.tlpCentro.Controls.Add(this.tlp02, 0, 2);
             this.tlpCentro.Controls.Add(this.tlp01, 0, 1);
             this.tlpCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCentro.Location = new System.Drawing.Point(198, 3);
+            this.tlpCentro.Location = new System.Drawing.Point(207, 3);
             this.tlpCentro.Name = "tlpCentro";
             this.tlpCentro.RowCount = 4;
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77F));
-            this.tlpCentro.Size = new System.Drawing.Size(904, 734);
+            this.tlpCentro.Size = new System.Drawing.Size(950, 762);
             this.tlpCentro.TabIndex = 0;
             // 
             // gvProducts
@@ -124,7 +124,7 @@
             this.gvProducts.AutoScroll = true;
             this.gvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvProducts.Location = new System.Drawing.Point(3, 171);
+            this.gvProducts.Location = new System.Drawing.Point(3, 177);
             // 
             // 
             // 
@@ -149,7 +149,7 @@
             this.gvProducts.ShowGroupPanel = false;
             this.gvProducts.ShowGroupPanelScrollbars = false;
             this.gvProducts.ShowItemToolTips = false;
-            this.gvProducts.Size = new System.Drawing.Size(898, 560);
+            this.gvProducts.Size = new System.Drawing.Size(944, 582);
             this.gvProducts.TabIndex = 3;
             this.gvProducts.TabStop = false;
             this.gvProducts.ThemeName = "VisualStudio2012Light";
@@ -163,11 +163,11 @@
             this.tlp02.Controls.Add(this.Proveedor, 0, 0);
             this.tlp02.Controls.Add(this.btnBuscar, 1, 0);
             this.tlp02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp02.Location = new System.Drawing.Point(3, 105);
+            this.tlp02.Location = new System.Drawing.Point(3, 109);
             this.tlp02.Name = "tlp02";
             this.tlp02.RowCount = 1;
             this.tlp02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp02.Size = new System.Drawing.Size(898, 60);
+            this.tlp02.Size = new System.Drawing.Size(944, 62);
             this.tlp02.TabIndex = 1;
             // 
             // Proveedor
@@ -179,7 +179,7 @@
             this.Proveedor.Location = new System.Drawing.Point(3, 3);
             this.Proveedor.Name = "Proveedor";
             this.Proveedor.NullText = "PROVEEDOR";
-            this.Proveedor.Size = new System.Drawing.Size(668, 54);
+            this.Proveedor.Size = new System.Drawing.Size(702, 56);
             this.Proveedor.TabIndex = 1;
             this.Proveedor.ThemeName = "VisualStudio2012Light";
             // 
@@ -188,9 +188,9 @@
             this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(677, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(711, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(218, 54);
+            this.btnBuscar.Size = new System.Drawing.Size(230, 56);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -210,11 +210,11 @@
             this.tlp01.Controls.Add(this.btnRecargar, 2, 0);
             this.tlp01.Controls.Add(this.btnEditar, 1, 0);
             this.tlp01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp01.Location = new System.Drawing.Point(3, 39);
+            this.tlp01.Location = new System.Drawing.Point(3, 41);
             this.tlp01.Name = "tlp01";
             this.tlp01.RowCount = 1;
             this.tlp01.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp01.Size = new System.Drawing.Size(898, 60);
+            this.tlp01.Size = new System.Drawing.Size(944, 62);
             this.tlp01.TabIndex = 2;
             // 
             // btnEliminar
@@ -223,9 +223,9 @@
             this.btnEliminar.Enabled = false;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(675, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(711, 3);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(220, 54);
+            this.btnEliminar.Size = new System.Drawing.Size(230, 56);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,7 +239,7 @@
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(3, 3);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(218, 54);
+            this.btnAgregar.Size = new System.Drawing.Size(230, 56);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -251,9 +251,9 @@
             this.btnRecargar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRecargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecargar.Image = ((System.Drawing.Image)(resources.GetObject("btnRecargar.Image")));
-            this.btnRecargar.Location = new System.Drawing.Point(451, 3);
+            this.btnRecargar.Location = new System.Drawing.Point(475, 3);
             this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(218, 54);
+            this.btnRecargar.Size = new System.Drawing.Size(230, 56);
             this.btnRecargar.TabIndex = 3;
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,9 +266,9 @@
             this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(227, 3);
+            this.btnEditar.Location = new System.Drawing.Point(239, 3);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(218, 54);
+            this.btnEditar.Size = new System.Drawing.Size(230, 56);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -286,7 +286,7 @@
             // 
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1300, 740);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -44,7 +44,7 @@
             this.tlpPrincipal.Controls.Add(this.cvTotalVentasMes, 0, 0);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 3;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -58,19 +58,19 @@
             this.cvTotalVentasMes.AreaDesign = cartesianArea1;
             this.tlpPrincipal.SetColumnSpan(this.cvTotalVentasMes, 2);
             this.cvTotalVentasMes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cvTotalVentasMes.Location = new System.Drawing.Point(2, 1);
-            this.cvTotalVentasMes.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cvTotalVentasMes.Location = new System.Drawing.Point(3, 2);
+            this.cvTotalVentasMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cvTotalVentasMes.Name = "cvTotalVentasMes";
             this.cvTotalVentasMes.ShowGrid = false;
             this.cvTotalVentasMes.ShowPanZoom = true;
             this.cvTotalVentasMes.ShowToolTip = true;
-            this.cvTotalVentasMes.Size = new System.Drawing.Size(1362, 254);
+            this.cvTotalVentasMes.Size = new System.Drawing.Size(1360, 252);
             this.cvTotalVentasMes.TabIndex = 0;
             this.cvTotalVentasMes.ThemeName = "VisualStudio2012Light";
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
@@ -78,7 +78,7 @@
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDashboard";

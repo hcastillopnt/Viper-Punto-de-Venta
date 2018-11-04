@@ -39,8 +39,13 @@ namespace Viper.DesktopApp
 
         #region Variables, Objetos y Componentes 
 
-        RadButton objButton = null;
         String rutaIcono = String.Empty;
+        RadButton objButton = null;
+        RadTextBox objTextbox = null;
+        RadDropDownList objDropDownList = null;
+        DateTime f = DateTime.Today;
+        Product product = null;
+        ProductInventory productInventory = null;
 
         #endregion
 
@@ -55,6 +60,8 @@ namespace Viper.DesktopApp
         public frmRegisterProduct()
         {
             InitializeComponent();
+
+            fillDropDownList();
         }
 
         #endregion
@@ -66,22 +73,6 @@ namespace Viper.DesktopApp
          */
 
         #region Eventos
-
-        public void Button_Click(Object sender, EventArgs args)
-        {
-            objButton = (RadButton)sender;
-
-            switch (objButton.Name)
-            {
-                case "btnAceptar":
-                    break;
-                case "btnCancelar":
-                    break;
-                case "btnExaminar":
-                    uploadFotografia();
-                    break;
-            }
-        }
 
         private void frmAddProduct_Load(object sender, EventArgs e)
         {
@@ -104,6 +95,10 @@ namespace Viper.DesktopApp
             this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
             this.Size = new Size(w, h);
 
+            //Establecer el foco en el primer campo
+            this.ActiveControl = Codigo_Barras;
+            this.Codigo_Barras.Focus();
+
             ToolTip toolTip1 = new ToolTip();
 
             // Set up the delays for the ToolTip.
@@ -117,6 +112,22 @@ namespace Viper.DesktopApp
             toolTip1.SetToolTip(this.btnAceptar, "Para poder agregar un producto , favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnCancelar, "Para poder cancelar el proceso, favor de dar clic en este boton");
 
+        }
+
+        public void Button_Click(Object sender, EventArgs args)
+        {
+            objButton = (RadButton)sender;
+
+            switch (objButton.Name)
+            {
+                case "btnAceptar":
+                    break;
+                case "btnCancelar":
+                    break;
+                case "btnExaminar":
+                    uploadFotografia();
+                    break;
+            }
         }
 
         private void OnlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
@@ -190,6 +201,23 @@ namespace Viper.DesktopApp
             }
         }
 
+        private void Departamento_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            Categoria.Items.Clear();
+
+            if (Categoria.SelectedIndex > 0)
+            {
+                this.Categoria.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetProductSubCategoryDropDownList(Convert.ToInt32(Departamento.SelectedValue));
+                this.Categoria.DisplayMember = "Name";
+                this.Categoria.ValueMember = "Id";
+                this.Categoria.SelectedIndex = 0;
+            }
+            else
+            {
+                Categoria.Items.Add("--SELECCIONE--");
+            }
+        }
+
         #endregion
 
         /*
@@ -245,6 +273,19 @@ namespace Viper.DesktopApp
         {
             ImageConverter converter = new ImageConverter();
             return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
+
+        private void fillDropDownList()
+        {
+            this.Categoria.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetProductCategoryDropDownList();
+            this.Categoria.DisplayMember = "Name";
+            this.Categoria.ValueMember = "Id";
+            this.Categoria.SelectedIndex = 0;
+
+            this.Proveedor.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetSupplierDropDownList();
+            this.Proveedor.DisplayMember = "SupplierName";
+            this.Proveedor.ValueMember = "Id";
+            this.Proveedor.SelectedIndex = 0;
         }
 
         #endregion
