@@ -165,5 +165,45 @@ namespace Viper.BusinessLogicLayer
             return DataAccessLayer.DropDownListHelperDAL.GetCityName(cityID);
         }
         #endregion
+
+        #region GetProductCategoryDropDownList
+
+        /// <summary>
+        /// Metodo para obtener las categorias a las que pueden pertenecer un producto
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<ProductCategory> GetProductCategoryDropDownList()
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetProductCategoryDropDownList();
+        }
+
+        #endregion
+
+        #region GetProductSubCategoryDropDownList
+
+        /// <summary>
+        /// Metodo para obtener las subcategorias correspondientes a una categoria
+        /// </summary>
+        /// <param name="ProductCategoryID">ID Categoria</param>
+        /// <returns>List</returns>
+        public static List<ProductSubCategory> GetProductSubCategoryDropDownList(int ProductCategoryID)
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetProductSubCategoryDropDownList(ProductCategoryID);
+        }
+
+        #endregion
+
+        #region GetSupplierDropDownList
+
+        /// <summary>
+        /// Metodo para obtener los proveedores registrados en la base de datos
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<Supplier> GetSupplierDropDownList()
+        {
+            return DataAccessLayer.DropDownListHelperDAL.GetSupplierDropDownList();
+        }
+
+        #endregion
     }
 }

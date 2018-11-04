@@ -273,5 +273,69 @@ namespace Viper.DataAccessLayer
             }
         }
         #endregion
+
+        #region GetProductCategoryDropDownList
+
+        /// <summary>
+        /// Metodo para obtener las categorias a las que pueden pertenecer un producto
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<ProductCategory> GetProductCategoryDropDownList()
+        {
+            List<ProductCategory> items = new List<ProductCategory>();
+
+            using (ViperDbContext db = new ViperDbContext())
+            {
+                items = db.ProductsCategory.ToList();
+                items.Add(new ProductCategory { Id = -1, Name = "--SELECCIONE--" });
+
+                return items.OrderBy(x => x.Name).ToList();
+            }
+        }
+
+        #endregion
+
+        #region GetProductSubCategoryDropDownList
+
+        /// <summary>
+        /// Metodo para obtener las subcategorias correspondientes a una categoria
+        /// </summary>
+        /// <param name="ProductCategoryID">ID Categoria</param>
+        /// <returns>List</returns>
+        public static List<ProductSubCategory> GetProductSubCategoryDropDownList(int ProductCategoryID)
+        {
+            List<ProductSubCategory> items = new List<ProductSubCategory>();
+
+            using (ViperDbContext db = new ViperDbContext())
+            {
+                items = db.ProductsSubCategory.Where(x => x.ProductCategoryId == ProductCategoryID).ToList();
+                items.Add(new ProductSubCategory { Id = -1, Name = "--SELECCIONE--" });
+
+                return items.OrderBy(x => x.Name).ToList();
+            }
+        }
+
+        #endregion
+
+        #region GetSupplierDropDownList
+
+        /// <summary>
+        /// Metodo para obtener los proveedores registrados en la base de datos
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<Supplier> GetSupplierDropDownList()
+        {
+            List<Supplier> items = new List<Supplier>();
+
+            using (ViperDbContext db = new ViperDbContext())
+            {
+                items = db.Suppliers.ToList();
+                items.Add(new Supplier { Id = -1, SupplierName = "--SELECCIONE--" });
+
+                return items.OrderBy(x => x.SupplierName).ToList();
+            }
+        }
+
+        #endregion
     }
 }
