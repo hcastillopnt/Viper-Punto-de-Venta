@@ -1,6 +1,6 @@
 ﻿namespace Viper.DesktopApp
 {
-    partial class frmUploadDataToDataBase
+    partial class frmLoadingStart
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUploadDataToDataBase));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoadingStart));
             this.picLogotipoApp = new System.Windows.Forms.PictureBox();
             this.picLogotipoCompany = new System.Windows.Forms.PictureBox();
             this.lblMensaje = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tlpCargaDatos = new System.Windows.Forms.TableLayoutPanel();
             this.tlpLogotipo = new System.Windows.Forms.TableLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipoApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipoCompany)).BeginInit();
             this.tlpPrincipal.SuspendLayout();
@@ -47,9 +49,9 @@
             // 
             this.picLogotipoApp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogotipoApp.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipoApp.Image")));
-            this.picLogotipoApp.Location = new System.Drawing.Point(3, 272);
+            this.picLogotipoApp.Location = new System.Drawing.Point(3, 229);
             this.picLogotipoApp.Name = "picLogotipoApp";
-            this.picLogotipoApp.Size = new System.Drawing.Size(1360, 365);
+            this.picLogotipoApp.Size = new System.Drawing.Size(1360, 408);
             this.picLogotipoApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogotipoApp.TabIndex = 0;
             this.picLogotipoApp.TabStop = false;
@@ -58,9 +60,9 @@
             // 
             this.picLogotipoCompany.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogotipoCompany.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipoCompany.Image")));
-            this.picLogotipoCompany.Location = new System.Drawing.Point(909, 3);
+            this.picLogotipoCompany.Location = new System.Drawing.Point(1023, 3);
             this.picLogotipoCompany.Name = "picLogotipoCompany";
-            this.picLogotipoCompany.Size = new System.Drawing.Size(448, 257);
+            this.picLogotipoCompany.Size = new System.Drawing.Size(334, 214);
             this.picLogotipoCompany.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogotipoCompany.TabIndex = 1;
             this.picLogotipoCompany.TabStop = false;
@@ -81,7 +83,6 @@
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressBar1.Location = new System.Drawing.Point(3, 64);
-            this.progressBar1.MarqueeAnimationSpeed = 50;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(1354, 55);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -98,8 +99,8 @@
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 3;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.02604F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.30729F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.42708F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.90625F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.53646F));
             this.tlpPrincipal.Size = new System.Drawing.Size(1366, 768);
             this.tlpPrincipal.TabIndex = 5;
@@ -122,19 +123,24 @@
             // tlpLogotipo
             // 
             this.tlpLogotipo.ColumnCount = 3;
-            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpLogotipo.Controls.Add(this.picLogotipoCompany, 2, 0);
             this.tlpLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpLogotipo.Location = new System.Drawing.Point(3, 3);
             this.tlpLogotipo.Name = "tlpLogotipo";
             this.tlpLogotipo.RowCount = 1;
             this.tlpLogotipo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpLogotipo.Size = new System.Drawing.Size(1360, 263);
+            this.tlpLogotipo.Size = new System.Drawing.Size(1360, 220);
             this.tlpLogotipo.TabIndex = 2;
             // 
-            // frmUploadDataToDataBase
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // frmLoadingStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +151,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmUploadDataToDataBase";
+            this.Name = "frmLoadingStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUploadDataToDataBase";
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipoApp)).EndInit();
@@ -167,5 +173,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel tlpCargaDatos;
         private System.Windows.Forms.TableLayoutPanel tlpLogotipo;
+        private System.Windows.Forms.Timer timer1;
     }
 }
