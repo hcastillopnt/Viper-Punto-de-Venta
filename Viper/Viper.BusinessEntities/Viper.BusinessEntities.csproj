@@ -68,9 +68,9 @@
     <Compile Include="Gender.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="MaritalStatus.cs" />
-    <Compile Include="Migrations\201810290034141_initial.cs" />
-    <Compile Include="Migrations\201810290034141_initial.Designer.cs">
-      <DependentUpon>201810290034141_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201811130033172_initial.cs" />
+    <Compile Include="Migrations\201811130033172_initial.Designer.cs">
+      <DependentUpon>201811130033172_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
@@ -107,8 +107,8 @@
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810290034141_initial.resx">
-      <DependentUpon>201810290034141_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811130033172_initial.resx">
+      <DependentUpon>201811130033172_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

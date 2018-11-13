@@ -13,7 +13,7 @@ namespace Viper.BusinessEntities.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201810290034141_initial"; }
+            get { return "201811130033172_initial"; }
         }
         
         string IMigrationMetadata.Source

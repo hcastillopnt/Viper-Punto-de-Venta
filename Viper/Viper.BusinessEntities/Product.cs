@@ -43,11 +43,6 @@ namespace Viper.BusinessEntities
 
         public Decimal ListPrice { get; set; }
 
-        public Decimal IVA { get; set; }
-
-        [Required(ErrorMessage = "The field IsService is required")]
-        public Boolean IsService { get; set; }
-
         [Required(ErrorMessage = "The field IsUseInStock is required")]
         public Boolean IsUseInStock { get; set; }
 
@@ -63,8 +58,7 @@ namespace Viper.BusinessEntities
         [Required(ErrorMessage = "The field IsActive is required")]
         public Boolean IsActive { get; set; }
 
-        [DataType(DataType.Date)]
-        public DateTime DiscontinuedDate { get; set; }
+        public string DiscontinuedDate { get; set; }
 
         [Required(ErrorMessage = "The field InvMin is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field InvMin must be a number.")]
