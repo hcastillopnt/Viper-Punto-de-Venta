@@ -110,12 +110,13 @@ namespace Viper.BusinessLogicLayer
         /// con Venta de Genericos
         /// </summary>
         /// <param name="CompanyID">Clave Empresa</param>
+        /// <param name="folder">Folder donde se almacenan los logotipos de los proveedores</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetEmployeesToDataTable(int CompanyID)
+        public static DataTable procGetEmployeesToDataTable(int CompanyID, string folder)
         {
             DataTable dataTable = new DataTable();
 
-            dataTable = DataAccessLayer.EmployeeDAL.procGetEmployeesToDataTable(CompanyID);
+            dataTable = DataAccessLayer.EmployeeDAL.procGetEmployeesToDataTable(CompanyID, folder);
 
             return dataTable;
         }
@@ -130,12 +131,13 @@ namespace Viper.BusinessLogicLayer
         /// </summary>
         /// <param name="CompanyID">Clave Empresa</param>
         /// <param name="name">Nombre del Empleado</param>
+        /// <param name="folder">Folder donde se almacenan los logotipos de los proveedores</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetEmployeesByNameToDataTable(int CompanyID, string name)
+        public static DataTable procGetEmployeesByNameToDataTable(int CompanyID, string name, string folder)
         {
             DataTable dataTable = new DataTable();
 
-            dataTable = DataAccessLayer.EmployeeDAL.procGetEmployeesByNameToDataTable(CompanyID, name);
+            dataTable = DataAccessLayer.EmployeeDAL.procGetEmployeesByNameToDataTable(CompanyID, name, folder);
 
             return dataTable;
         }

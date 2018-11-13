@@ -4,6 +4,10 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -114,8 +118,9 @@ namespace Viper.DataAccessLayer
         /// con Venta de Genericos
         /// </summary>
         /// <param name="CompanyID">Clave Empresa</param>
+        /// <param name="folder">Folder donde se almacenan las fotos de perfil de los empleados</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetEmployeesToDataTable(int CompanyID)
+        public static DataTable procGetEmployeesToDataTable(int CompanyID, string folder)
         {
             bool isExistente = false;
 
@@ -125,51 +130,48 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                var result = (from e in dbCtx.Employees
-                              join edh in dbCtx.EmployeesDepartmentHistory on e.Id equals edh.EmployeeId
-                              join u in dbCtx.Users on e.UserId equals u.Id
-                              join s in dbCtx.Sites on edh.SiteId equals s.Id
-                              join c in dbCtx.Companies on s.CompanyId equals c.Id
-                              join j in dbCtx.JobsTitle on edh.JobTitleId equals j.Id
-                              join d in dbCtx.Departments on j.DepartmentId equals d.Id
-                              where c.Id == CompanyID
-                              select new
-                              {
-                                  EmployeeNumber = e.EmployeeNumber,
-                                  Fullname = e.FullName,
-                                  LoginID = u.LoginID,
-                                  UniquePhysicalID = s.UniquePhysicalID,
-                                  CompanyKey = c.CompanyKey,
-                                  JobTitle = j.Name,
-                                  Department = d.Name
-                              })
-                              .OrderBy(x => x.Fullname)
-                              .ToList();
+                int rows = dbCtx.Employees.Count();
 
-                dataTable.Columns.AddRange(new DataColumn[]{
-                //new DataColumn("NUMERO_EMPLEADO", typeof(string)),
-                new DataColumn("NOMBRE_EMPLEADO", typeof(string))
-                //new DataColumn("NOMBRE_USUARIO", typeof(string))
-                //new DataColumn("CLAVE_SUCURSAL", typeof(string)),
-                //new DataColumn("CLAVE_EMPRESA", typeof(string)),
-                //new DataColumn("PUESTO_TRABAJO", typeof(string)),
-                //new DataColumn("DEPARTAMENTO", typeof(string)),
+                if (rows > 0)
+                {
+                    var result = (from e in dbCtx.Employees
+                                  join edh in dbCtx.EmployeesDepartmentHistory on e.Id equals edh.EmployeeId
+                                  join u in dbCtx.Users on e.UserId equals u.Id
+                                  join s in dbCtx.Sites on edh.SiteId equals s.Id
+                                  join c in dbCtx.Companies on s.CompanyId equals c.Id
+                                  join j in dbCtx.JobsTitle on edh.JobTitleId equals j.Id
+                                  join d in dbCtx.Departments on j.DepartmentId equals d.Id
+                                  where c.Id == CompanyID
+                                  select new
+                                  {
+                                      e.EmployeeNumber,
+                                      e.FullName,
+                                      e.PhoneNumber
+
+                                  })
+                                  .OrderBy(x => x.FullName)
+                                  .ToList();
+
+                    dataTable.Columns.AddRange(new DataColumn[]{
+                new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
+                new DataColumn("TELEFONO", typeof(string)),
+                new DataColumn("LOGOTIPO", typeof(byte[]))
             });
 
-                result.ToList().ForEach(x =>
-                {
-                    var row = dataTable.NewRow();
+                    Image img = Image.FromFile(@folder + result.FirstOrDefault().EmployeeNumber + ".jpg");
+                    img = Resize(img, 100, 50);
 
-                    //row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
-                    row["NOMBRE_EMPLEADO"] = x.Fullname;
-                    //row["NOMBRE_USUARIO"] = x.LoginID;
-                    //row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
-                    //row["CLAVE_EMPRESA"] = x.CompanyKey;
-                    //row["PUESTO_TRABAJO"] = x.JobTitle;
-                    //row["DEPARTAMENTO"] = x.Department;
+                    result.ToList().ForEach(x =>
+                    {
+                        var row = dataTable.NewRow();
 
-                    dataTable.Rows.Add(row);
-                });
+                        row["NOMBRE_EMPLEADO"] = x.FullName;
+                        row["TELEFONO"] = x.PhoneNumber;
+                        row["LOGOTIPO"] = imageToByteArray(img);
+
+                        dataTable.Rows.Add(row);
+                    });
+                }
             }
 
             return dataTable;
@@ -185,8 +187,9 @@ namespace Viper.DataAccessLayer
         /// </summary>
         /// <param name="CompanyID">Clave Empresa</param>
         /// <param name="name">Nombre del Empleado</param>
+        /// <param name="folder">Folder donde se almacenan las fotos de perfil de los empleados</param>
         /// <returns>DataTable</returns>
-        public static DataTable procGetEmployeesByNameToDataTable(int CompanyID, string name)
+        public static DataTable procGetEmployeesByNameToDataTable(int CompanyID, string name, string folder)
         {
             bool isExistente = false;
 
@@ -196,51 +199,48 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                var result = (from e in dbCtx.Employees
-                              join edh in dbCtx.EmployeesDepartmentHistory on e.Id equals edh.EmployeeId
-                              join u in dbCtx.Users on e.UserId equals u.Id
-                              join s in dbCtx.Sites on edh.SiteId equals s.Id
-                              join c in dbCtx.Companies on s.CompanyId equals c.Id
-                              join j in dbCtx.JobsTitle on edh.JobTitleId equals j.Id
-                              join d in dbCtx.Departments on j.DepartmentId equals d.Id
-                              where c.Id == CompanyID && e.FullName.Contains(name)
-                              select new
-                              {
-                                  EmployeeNumber = e.EmployeeNumber,
-                                  Fullname = e.FullName,
-                                  LoginID = u.LoginID,
-                                  UniquePhysicalID = s.UniquePhysicalID,
-                                  CompanyKey = c.CompanyKey,
-                                  JobTitle = j.Name,
-                                  Department = d.Name
-                              })
-                              .OrderBy(x => x.Fullname)
+                int rows = dbCtx.Employees.Count();
+
+                if (rows > 0)
+                {
+                    var result = (from e in dbCtx.Employees
+                                  join edh in dbCtx.EmployeesDepartmentHistory on e.Id equals edh.EmployeeId
+                                  join u in dbCtx.Users on e.UserId equals u.Id
+                                  join s in dbCtx.Sites on edh.SiteId equals s.Id
+                                  join c in dbCtx.Companies on s.CompanyId equals c.Id
+                                  join j in dbCtx.JobsTitle on edh.JobTitleId equals j.Id
+                                  join d in dbCtx.Departments on j.DepartmentId equals d.Id
+                                  where c.Id == CompanyID && e.FullName.Contains(name)
+                                  select new
+                                  {
+                                      e.EmployeeNumber,
+                                      e.FullName,
+                                      e.PhoneNumber
+
+                                  })
+                              .OrderBy(x => x.FullName)
                               .ToList();
 
-                dataTable.Columns.AddRange(new DataColumn[]{
-            //    new DataColumn("NUMERO_EMPLEADO", typeof(string)),
-                new DataColumn("NOMBRE_EMPLEADO", typeof(string))
-            //    new DataColumn("NOMBRE_USUARIO", typeof(string)),
-            //    new DataColumn("CLAVE_SUCURSAL", typeof(string)),
-            //    new DataColumn("CLAVE_EMPRESA", typeof(string)),
-            //    new DataColumn("PUESTO_TRABAJO", typeof(string)),
-            //    new DataColumn("DEPARTAMENTO", typeof(string)),
+                    dataTable.Columns.AddRange(new DataColumn[]{
+                new DataColumn("NOMBRE_EMPLEADO", typeof(string)),
+                new DataColumn("TELEFONO", typeof(string)),
+                new DataColumn("LOGOTIPO", typeof(byte[]))
             });
 
-                result.ToList().ForEach(x =>
-                {
-                    var row = dataTable.NewRow();
+                    Image img = Image.FromFile(@folder + result.FirstOrDefault().EmployeeNumber + ".jpg");
+                    img = Resize(img, 100, 50);
 
-                    //row["NUMERO_EMPLEADO"] = x.EmployeeNumber;
-                    row["NOMBRE_EMPLEADO"] = x.Fullname;
-                    //row["NOMBRE_USUARIO"] = x.LoginID;
-                    //row["CLAVE_SUCURSAL"] = x.UniquePhysicalID;
-                    //row["CLAVE_EMPRESA"] = x.CompanyKey;
-                    //row["PUESTO_TRABAJO"] = x.JobTitle;
-                    //row["DEPARTAMENTO"] = x.Department;
+                    result.ToList().ForEach(x =>
+                    {
+                        var row = dataTable.NewRow();
 
-                    dataTable.Rows.Add(row);
-                });
+                        row["NOMBRE_EMPLEADO"] = x.FullName;
+                        row["TELEFONO"] = x.PhoneNumber;
+                        row["LOGOTIPO"] = imageToByteArray(img);
+
+                        dataTable.Rows.Add(row);
+                    });
+                }
             }
 
             return dataTable;
@@ -425,6 +425,55 @@ namespace Viper.DataAccessLayer
             }
 
             return EmployeeID;
+        }
+
+        #endregion
+
+        #region imageToByteArray
+
+        public static byte[] imageToByteArray(System.Drawing.Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
+        }
+
+        #endregion
+
+        #region Resize
+
+        private static Image Resize(Image Imagen, int Ancho, int Alto, int resolucion)
+        {
+            //Bitmap sera donde trabajaremos los cambios
+            using (Bitmap imagenBitmap = new Bitmap(Ancho, Alto, PixelFormat.Format32bppRgb))
+            {
+                imagenBitmap.SetResolution(resolucion, resolucion);
+                //Hacemos los cambios a ImagenBitmap usando a ImagenGraphics y la Imagen Original(Imagen)
+                //ImagenBitmap se comporta como un objeto de referenciado
+                using (Graphics imagenGraphics = Graphics.FromImage(imagenBitmap))
+                {
+                    imagenGraphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    imagenGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    imagenGraphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                    imagenGraphics.DrawImage(Imagen, new Rectangle(0, 0, Ancho, Alto), new Rectangle(0, 0, Imagen.Width, Imagen.Height), GraphicsUnit.Pixel);
+                    //todos los cambios hechos en imagenBitmap lo llevaremos un Image(Imagen) con nuevos datos a travez de un MemoryStream
+                    MemoryStream imagenMemoryStream = new MemoryStream();
+                    imagenBitmap.Save(imagenMemoryStream, ImageFormat.Jpeg);
+                    Imagen = Image.FromStream(imagenMemoryStream);
+                }
+            }
+            return Imagen;
+        }
+
+        private static Image Resize(Image image, int SizeHorizontalPercent, int SizeVerticalPercent)
+        {
+            //Obntenemos el ancho y el alto a partir del porcentaje de tamaño solicitado
+            int anchoDestino = image.Width * SizeHorizontalPercent / 100;
+            int altoDestino = image.Height * SizeVerticalPercent / 100;
+            //Obtenemos la resolucion original 
+            int resolucion = Convert.ToInt32(image.HorizontalResolution);
+
+            return Resize(image, anchoDestino, altoDestino, resolucion);
         }
 
         #endregion

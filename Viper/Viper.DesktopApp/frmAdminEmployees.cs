@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,9 @@ namespace Viper.DesktopApp
         #region Variables, Objetos y Componentes
 
         int companyID = 0;
+        string folder = String.Empty;
+        string appPath = String.Empty;
+        string folderToSave = String.Empty;
         String companyName = String.Empty;
         RadButton objButton = null;
 
@@ -55,6 +59,10 @@ namespace Viper.DesktopApp
 
             companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
             companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
+
+            folder = @"\images\profile_pictures\";
+            appPath = Path.GetDirectoryName(Application.StartupPath);
+            folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
         }
 
         #endregion
@@ -88,13 +96,13 @@ namespace Viper.DesktopApp
                     else
                     {
                         gvEmployees.DataSource = null;
-                        gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesByNameToDataTable(companyID, employeeName);
+                        gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesByNameToDataTable(companyID, employeeName, folder);
                     }
                     break;
 
                 case "btnRecargar":
                     gvEmployees.DataSource = null;
-                    gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID);
+                    gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID, folder);
                     break;
 
                 case "btnEliminar":
@@ -127,7 +135,7 @@ namespace Viper.DesktopApp
 
             //Cargar todos los empleados registrados
             gvEmployees.DataSource = null;
-            gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID);
+            gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesToDataTable(companyID, folder);
 
             //Ajustar contenido de las celdas
             if (gvEmployees.Rows.Count > 0)
@@ -159,7 +167,7 @@ namespace Viper.DesktopApp
             string filter = Empleado.Text.Trim().ToString();
 
             gvEmployees.DataSource = null;
-            gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesByNameToDataTable(companyID, filter);
+            gvEmployees.DataSource = BusinessLogicLayer.EmployeeBLL.procGetEmployeesByNameToDataTable(companyID, filter, folder);
         }
 
         #endregion
