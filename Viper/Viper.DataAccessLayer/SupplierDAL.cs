@@ -129,35 +129,40 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                var result = (from s in dbCtx.Suppliers
-                              select new
-                              {
-                                  s.SupplierKey,
-                                  s.SupplierName,
-                                  s.PhoneNumber
-                              })
-                              .OrderBy(x => x.SupplierName)
-                              .ToList();
+                int rows = dbCtx.Suppliers.Count();
 
-                dataTable.Columns.AddRange(new DataColumn[]{
+                if (rows > 0)
+                {
+                    var result = (from s in dbCtx.Suppliers
+                                  select new
+                                  {
+                                      s.SupplierKey,
+                                      s.SupplierName,
+                                      s.PhoneNumber
+                                  })
+                                  .OrderBy(x => x.SupplierName)
+                                  .ToList();
+
+                    dataTable.Columns.AddRange(new DataColumn[]{
                 new DataColumn("PROVEEDOR", typeof(string)),
                 new DataColumn("TELEFONO", typeof(string)),
                 new DataColumn("LOGOTIPO", typeof(byte[]))
             });
 
-                Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
-                img = Resize(img, 100, 50);
+                    Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
+                    img = Resize(img, 100, 50);
 
-                result.ToList().ForEach(x =>
-                {
-                    var row = dataTable.NewRow();
+                    result.ToList().ForEach(x =>
+                    {
+                        var row = dataTable.NewRow();
 
-                    row["PROVEEDOR"] = x.SupplierName;
-                    row["TELEFONO"] = x.PhoneNumber;
-                    row["LOGOTIPO"] = imageToByteArray(img);
+                        row["PROVEEDOR"] = x.SupplierName;
+                        row["TELEFONO"] = x.PhoneNumber;
+                        row["LOGOTIPO"] = imageToByteArray(img);
 
-                    dataTable.Rows.Add(row);
-                });
+                        dataTable.Rows.Add(row);
+                    });
+                }
             }
 
             return dataTable;
@@ -184,36 +189,41 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                var result = (from s in dbCtx.Suppliers
-                              where s.SupplierName.Contains(name)
-                              select new
-                              {
-                                  s.SupplierKey,
-                                  s.SupplierName,
-                                  s.PhoneNumber
-                              })
+                int rows = dbCtx.Suppliers.Count();
+
+                if (rows > 0)
+                {
+                    var result = (from s in dbCtx.Suppliers
+                                  where s.SupplierName.Contains(name)
+                                  select new
+                                  {
+                                      s.SupplierKey,
+                                      s.SupplierName,
+                                      s.PhoneNumber
+                                  })
                               .OrderBy(x => x.SupplierName)
                               .ToList();
 
-                dataTable.Columns.AddRange(new DataColumn[]{
+                    dataTable.Columns.AddRange(new DataColumn[]{
                 new DataColumn("PROVEEDOR", typeof(string)),
                 new DataColumn("TELEFONO", typeof(string)),
                 new DataColumn("LOGOTIPO", typeof(byte[]))
             });
 
-                Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
-                img = Resize(img, 100, 50);
+                    Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
+                    img = Resize(img, 100, 50);
 
-                result.ToList().ForEach(x =>
-                {
-                    var row = dataTable.NewRow();
+                    result.ToList().ForEach(x =>
+                    {
+                        var row = dataTable.NewRow();
 
-                    row["PROVEEDOR"] = x.SupplierName;
-                    row["TELEFONO"] = x.PhoneNumber;
-                    row["LOGOTIPO"] = imageToByteArray(img);
+                        row["PROVEEDOR"] = x.SupplierName;
+                        row["TELEFONO"] = x.PhoneNumber;
+                        row["LOGOTIPO"] = imageToByteArray(img);
 
-                    dataTable.Rows.Add(row);
-                });
+                        dataTable.Rows.Add(row);
+                    });
+                }
             }
 
             return dataTable;
