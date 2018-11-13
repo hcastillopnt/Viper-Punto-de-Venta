@@ -53,7 +53,7 @@ namespace Viper.BusinessLogicLayer
 
                         if (String.IsNullOrEmpty(message))
                         {
-                            int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered(loginID);
+                            int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegisteredByCURP(loginID);
 
                             entityEmployee.EmployeeNumber = DataAccessLayer.EmployeeDAL.procObtainEmployeeNumberGeneratedAutomatic();
                             entityEmployee.UserId = UserID;
@@ -80,7 +80,7 @@ namespace Viper.BusinessLogicLayer
                                         }
                                         else
                                         {
-                                            int EmployeeID = DataAccessLayer.EmployeeDAL.procGetLastIDToEmployeeRegistered();
+                                            int EmployeeID = DataAccessLayer.EmployeeDAL.procGetLastIDToEmployeeRegisteredByCURP(entityEmployee.CURP);
 
                                             entityEDH.EmployeeId = EmployeeID;
 

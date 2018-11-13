@@ -33,7 +33,7 @@ namespace Viper.BusinessLogicLayer
 
                 if (String.IsNullOrEmpty(message))
                 {
-                    int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegistered(loginID);
+                    int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegisteredByRFC(loginID);
 
                     entitySupplier.UserId = UserID;
 

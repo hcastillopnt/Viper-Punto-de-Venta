@@ -405,13 +405,14 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region procGetLastIDToEmployeeRegistered
+        #region procGetLastIDToEmployeeRegisteredByCURP
 
         /// <summary>
         /// Metodo para obtener el ultimo ID de los empleados registrados
         /// </summary>
-        /// <returns>Id</returns>
-        public static int procGetLastIDToEmployeeRegistered()
+        /// <param name="CURP">Clave Única de Registro de Población</param>
+        /// <returns>EmployeeID</returns>
+        public static int procGetLastIDToEmployeeRegisteredByCURP(string CURP)
         {
             bool isExistente = false;
 
@@ -421,7 +422,7 @@ namespace Viper.DataAccessLayer
 
             if (isExistente)
             {
-                EmployeeID = dbCtx.Employees.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                EmployeeID = dbCtx.Employees.Where(x => x.CURP == CURP).OrderByDescending(x => x.Id).FirstOrDefault().Id;
             }
 
             return EmployeeID;
