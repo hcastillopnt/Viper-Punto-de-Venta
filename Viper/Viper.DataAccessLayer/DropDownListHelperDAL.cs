@@ -289,7 +289,7 @@ namespace Viper.DataAccessLayer
                 items = db.ProductsCategory.ToList();
                 items.Add(new ProductCategory { Id = -1, Name = "--SELECCIONE--" });
 
-                return items.OrderBy(x => x.Name).ToList();
+                return items.OrderBy(x => x.Id).ToList();
             }
         }
 
@@ -311,7 +311,7 @@ namespace Viper.DataAccessLayer
                 items = db.ProductsSubCategory.Where(x => x.ProductCategoryId == ProductCategoryID).ToList();
                 items.Add(new ProductSubCategory { Id = -1, Name = "--SELECCIONE--" });
 
-                return items.OrderBy(x => x.Name).ToList();
+                return items.OrderBy(x => x.Id).ToList();
             }
         }
 
@@ -332,7 +332,7 @@ namespace Viper.DataAccessLayer
                 items = db.Suppliers.ToList();
                 items.Add(new Supplier { Id = -1, SupplierName = "--SELECCIONE--" });
 
-                return items.OrderBy(x => x.SupplierName).ToList();
+                return items.OrderBy(x => x.Id).ToList();
             }
         }
 
