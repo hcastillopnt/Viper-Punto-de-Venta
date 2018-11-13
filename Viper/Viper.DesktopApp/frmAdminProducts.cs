@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,10 @@ namespace Viper.DesktopApp
         #region Variables, Objetos y Componentes
 
         int companyID = 0;
+        int siteID = 0;
+        string folder = String.Empty;
+        string appPath = String.Empty;
+        string folderToSave = String.Empty;
         String companyName = String.Empty;
         RadButton objButton = null;
 
@@ -49,12 +54,18 @@ namespace Viper.DesktopApp
 
         #region Constructor
 
-        public frmAdminProducts()
+        public frmAdminProducts(int SiteID)
         {
             InitializeComponent();
 
             companyName = frmLogin.dt.Rows[0].Field<String>("CompanyName");
             companyID = BusinessLogicLayer.CompanyBLL.procGetCompanyIdByName(companyName);
+
+            this.siteID = SiteID;
+
+            folder = @"\images\product_pictures\";
+            appPath = Path.GetDirectoryName(Application.StartupPath);
+            folderToSave = appPath.Substring(0, appPath.Length - 4) + folder;
         }
 
         #endregion

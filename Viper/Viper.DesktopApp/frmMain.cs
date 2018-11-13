@@ -185,7 +185,10 @@ namespace Viper.DesktopApp
                     break;
 
                 case "btnProductos":
-                    AgregarFormularioEnPanel(new frmAdminProducts());
+                    if (cboSucursales.SelectedIndex > 0)
+                        AgregarFormularioEnPanel(new frmAdminProducts(Convert.ToInt32(cboSucursales.SelectedValue)));
+                    else
+                        MessageBox.Show(new Form { TopMost = true }, "Favor de seleccionar una sucursal para dar de alta el producto en ella", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
 
                 case "btnInventario":
