@@ -44,7 +44,7 @@ namespace Viper.DesktopApp
         RadTextBox objTextbox = null;
         RadDropDownList objDropDownList = null;
         RadMaskedEditBox objMaskedEditBox = null;
-        DateTime f = DateTime.Today;
+        DateTime f = DateTime.Now;
         Supplier supplier = null;
         Address address = null;
 

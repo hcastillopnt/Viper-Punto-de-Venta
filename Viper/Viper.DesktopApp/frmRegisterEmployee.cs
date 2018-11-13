@@ -51,7 +51,7 @@ namespace Viper.DesktopApp
         RadDropDownList objDropDownList = null;
         RadMaskedEditBox objMaskedEditBox = null;
         RadDateTimePicker objDateTimePicker = null;
-        DateTime f = DateTime.Today;
+        DateTime f = DateTime.Now;
         EmployeeDepartmentHistory employeeDepartmentHistory = null;
         Employee employee = null;
         Address address = null;

@@ -39,7 +39,7 @@ namespace Viper.DesktopApp
 
         #region Variables, Objetos y Componentes
 
-        DateTime f = DateTime.Today;
+        DateTime f = DateTime.Now;
         ComponentResourceManager resources = new ComponentResourceManager(typeof(frmRegisterCompany));
         RadButton objButton = null;
         RadTextBox objTextbox = null;
