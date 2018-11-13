@@ -118,6 +118,7 @@
             this.tlpPrincipal.Controls.Add(this.tlpMenuSuperior, 0, 0);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 2;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.39783F));
@@ -131,21 +132,23 @@
             this.tlpDerecho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDerecho.Controls.Add(this.picImagenes, 0, 0);
             this.tlpDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDerecho.Location = new System.Drawing.Point(879, 82);
+            this.tlpDerecho.Location = new System.Drawing.Point(879, 81);
+            this.tlpDerecho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpDerecho.Name = "tlpDerecho";
             this.tlpDerecho.RowCount = 2;
             this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDerecho.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDerecho.Size = new System.Drawing.Size(484, 683);
+            this.tlpDerecho.Size = new System.Drawing.Size(484, 685);
             this.tlpDerecho.TabIndex = 0;
             // 
             // picImagenes
             // 
             this.picImagenes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picImagenes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picImagenes.Location = new System.Drawing.Point(3, 3);
+            this.picImagenes.Location = new System.Drawing.Point(3, 2);
+            this.picImagenes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picImagenes.Name = "picImagenes";
-            this.picImagenes.Size = new System.Drawing.Size(478, 335);
+            this.picImagenes.Size = new System.Drawing.Size(478, 338);
             this.picImagenes.TabIndex = 1;
             this.picImagenes.TabStop = false;
             // 
@@ -158,14 +161,15 @@
             this.tlpIzquierda.Controls.Add(this.lblNumeroCaja, 0, 0);
             this.tlpIzquierda.Controls.Add(this.tlpMenuInferior, 0, 3);
             this.tlpIzquierda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpIzquierda.Location = new System.Drawing.Point(3, 82);
+            this.tlpIzquierda.Location = new System.Drawing.Point(3, 81);
+            this.tlpIzquierda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpIzquierda.Name = "tlpIzquierda";
             this.tlpIzquierda.RowCount = 4;
             this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.116409F));
             this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.274895F));
             this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.9038F));
             this.tlpIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.87025F));
-            this.tlpIzquierda.Size = new System.Drawing.Size(870, 683);
+            this.tlpIzquierda.Size = new System.Drawing.Size(870, 685);
             this.tlpIzquierda.TabIndex = 1;
             // 
             // gvCarritoCompras
@@ -174,7 +178,8 @@
             this.gvCarritoCompras.AutoSizeRows = true;
             this.gvCarritoCompras.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvCarritoCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvCarritoCompras.Location = new System.Drawing.Point(3, 121);
+            this.gvCarritoCompras.Location = new System.Drawing.Point(3, 120);
+            this.gvCarritoCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             // 
             // 
             // 
@@ -199,7 +204,7 @@
             this.gvCarritoCompras.ShowGroupPanel = false;
             this.gvCarritoCompras.ShowGroupPanelScrollbars = false;
             this.gvCarritoCompras.ShowItemToolTips = false;
-            this.gvCarritoCompras.Size = new System.Drawing.Size(864, 463);
+            this.gvCarritoCompras.Size = new System.Drawing.Size(864, 467);
             this.gvCarritoCompras.TabIndex = 4;
             this.gvCarritoCompras.TabStop = false;
             this.gvCarritoCompras.ThemeName = "VisualStudio2012Light";
@@ -210,10 +215,11 @@
             this.Codigo_Barras.BackColor = System.Drawing.Color.Azure;
             this.Codigo_Barras.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Codigo_Barras.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.Codigo_Barras.Location = new System.Drawing.Point(3, 65);
+            this.Codigo_Barras.Location = new System.Drawing.Point(3, 64);
+            this.Codigo_Barras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Codigo_Barras.Name = "Codigo_Barras";
             this.Codigo_Barras.NullText = "CODIGO DE PRODUCTO";
-            this.Codigo_Barras.Size = new System.Drawing.Size(864, 50);
+            this.Codigo_Barras.Size = new System.Drawing.Size(864, 52);
             this.Codigo_Barras.TabIndex = 0;
             this.Codigo_Barras.ThemeName = "VisualStudio2012Light";
             // 
@@ -239,11 +245,12 @@
             this.tlpMenuInferior.Controls.Add(this.lblTotalPagar, 0, 0);
             this.tlpMenuInferior.Controls.Add(this.tblAccesosDirectos, 0, 0);
             this.tlpMenuInferior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMenuInferior.Location = new System.Drawing.Point(3, 590);
+            this.tlpMenuInferior.Location = new System.Drawing.Point(3, 591);
+            this.tlpMenuInferior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpMenuInferior.Name = "tlpMenuInferior";
             this.tlpMenuInferior.RowCount = 1;
             this.tlpMenuInferior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenuInferior.Size = new System.Drawing.Size(864, 90);
+            this.tlpMenuInferior.Size = new System.Drawing.Size(864, 92);
             this.tlpMenuInferior.TabIndex = 5;
             // 
             // lblTotal
@@ -255,7 +262,7 @@
             this.lblTotal.Location = new System.Drawing.Point(559, 0);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(301, 90);
+            this.lblTotal.Size = new System.Drawing.Size(301, 92);
             this.lblTotal.TabIndex = 5;
             this.lblTotal.Text = "$ 0.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,7 +275,7 @@
             this.lblTotalPagar.Location = new System.Drawing.Point(327, 0);
             this.lblTotalPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPagar.Name = "lblTotalPagar";
-            this.lblTotalPagar.Size = new System.Drawing.Size(224, 90);
+            this.lblTotalPagar.Size = new System.Drawing.Size(224, 92);
             this.lblTotalPagar.TabIndex = 4;
             this.lblTotalPagar.Text = "Total a \r\nPagar:";
             this.lblTotalPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -281,26 +288,26 @@
             this.tblAccesosDirectos.Controls.Add(this.btnF11EliminarTicket, 0, 0);
             this.tblAccesosDirectos.Controls.Add(this.btnReimprimir, 1, 0);
             this.tblAccesosDirectos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblAccesosDirectos.Location = new System.Drawing.Point(4, 5);
-            this.tblAccesosDirectos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tblAccesosDirectos.Location = new System.Drawing.Point(4, 4);
+            this.tblAccesosDirectos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tblAccesosDirectos.Name = "tblAccesosDirectos";
             this.tblAccesosDirectos.RowCount = 1;
             this.tblAccesosDirectos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblAccesosDirectos.Size = new System.Drawing.Size(315, 80);
+            this.tblAccesosDirectos.Size = new System.Drawing.Size(315, 84);
             this.tblAccesosDirectos.TabIndex = 3;
             // 
             // btnF11EliminarTicket
             // 
             this.btnF11EliminarTicket.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnF11EliminarTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnF11EliminarTicket.Location = new System.Drawing.Point(4, 5);
-            this.btnF11EliminarTicket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnF11EliminarTicket.Location = new System.Drawing.Point(4, 4);
+            this.btnF11EliminarTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnF11EliminarTicket.Name = "btnF11EliminarTicket";
             // 
             // 
             // 
-            this.btnF11EliminarTicket.RootElement.ControlBounds = new System.Drawing.Rectangle(3, 3, 165, 36);
-            this.btnF11EliminarTicket.Size = new System.Drawing.Size(149, 70);
+            this.btnF11EliminarTicket.RootElement.ControlBounds = new System.Drawing.Rectangle(4, 5, 137, 30);
+            this.btnF11EliminarTicket.Size = new System.Drawing.Size(149, 76);
             this.btnF11EliminarTicket.TabIndex = 0;
             this.btnF11EliminarTicket.Text = "F11 Eliminar\r\nTicket";
             this.btnF11EliminarTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -312,14 +319,14 @@
             this.btnReimprimir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReimprimir.Enabled = false;
             this.btnReimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReimprimir.Location = new System.Drawing.Point(161, 5);
-            this.btnReimprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReimprimir.Location = new System.Drawing.Point(161, 4);
+            this.btnReimprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReimprimir.Name = "btnReimprimir";
             // 
             // 
             // 
-            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(102, 3, 165, 36);
-            this.btnReimprimir.Size = new System.Drawing.Size(150, 70);
+            this.btnReimprimir.RootElement.ControlBounds = new System.Drawing.Rectangle(161, 5, 137, 30);
+            this.btnReimprimir.Size = new System.Drawing.Size(150, 76);
             this.btnReimprimir.TabIndex = 1;
             this.btnReimprimir.Text = "Reimprimir\r\nTicket";
             this.btnReimprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -341,12 +348,13 @@
             this.tlpMenuSuperior.Controls.Add(this.btnSalidas, 3, 0);
             this.tlpMenuSuperior.Controls.Add(this.btnDELBorrarArt, 4, 0);
             this.tlpMenuSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMenuSuperior.Location = new System.Drawing.Point(3, 3);
+            this.tlpMenuSuperior.Location = new System.Drawing.Point(3, 2);
+            this.tlpMenuSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpMenuSuperior.Name = "tlpMenuSuperior";
             this.tlpMenuSuperior.RowCount = 1;
             this.tlpMenuSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenuSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tlpMenuSuperior.Size = new System.Drawing.Size(1360, 73);
+            this.tlpMenuSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tlpMenuSuperior.Size = new System.Drawing.Size(1360, 75);
             this.tlpMenuSuperior.TabIndex = 2;
             // 
             // btnServicios
@@ -354,9 +362,10 @@
             this.btnServicios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicios.Image = ((System.Drawing.Image)(resources.GetObject("btnServicios.Image")));
-            this.btnServicios.Location = new System.Drawing.Point(3, 3);
+            this.btnServicios.Location = new System.Drawing.Point(3, 2);
+            this.btnServicios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(266, 67);
+            this.btnServicios.Size = new System.Drawing.Size(266, 71);
             this.btnServicios.TabIndex = 0;
             this.btnServicios.Text = "Servicios";
             this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -368,9 +377,10 @@
             this.btnF10Buscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnF10Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnF10Buscar.Image = ((System.Drawing.Image)(resources.GetObject("btnF10Buscar.Image")));
-            this.btnF10Buscar.Location = new System.Drawing.Point(275, 3);
+            this.btnF10Buscar.Location = new System.Drawing.Point(275, 2);
+            this.btnF10Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnF10Buscar.Name = "btnF10Buscar";
-            this.btnF10Buscar.Size = new System.Drawing.Size(266, 67);
+            this.btnF10Buscar.Size = new System.Drawing.Size(266, 71);
             this.btnF10Buscar.TabIndex = 2;
             this.btnF10Buscar.Text = "F10 Buscar";
             this.btnF10Buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -382,9 +392,10 @@
             this.btnEntradas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntradas.Image = ((System.Drawing.Image)(resources.GetObject("btnEntradas.Image")));
-            this.btnEntradas.Location = new System.Drawing.Point(547, 3);
+            this.btnEntradas.Location = new System.Drawing.Point(547, 2);
+            this.btnEntradas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.Size = new System.Drawing.Size(266, 67);
+            this.btnEntradas.Size = new System.Drawing.Size(266, 71);
             this.btnEntradas.TabIndex = 4;
             this.btnEntradas.Text = "Entradas";
             this.btnEntradas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -396,9 +407,10 @@
             this.btnSalidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalidas.Image = ((System.Drawing.Image)(resources.GetObject("btnSalidas.Image")));
-            this.btnSalidas.Location = new System.Drawing.Point(819, 3);
+            this.btnSalidas.Location = new System.Drawing.Point(819, 2);
+            this.btnSalidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalidas.Name = "btnSalidas";
-            this.btnSalidas.Size = new System.Drawing.Size(266, 67);
+            this.btnSalidas.Size = new System.Drawing.Size(266, 71);
             this.btnSalidas.TabIndex = 5;
             this.btnSalidas.Text = "Salidas";
             this.btnSalidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -410,9 +422,10 @@
             this.btnDELBorrarArt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDELBorrarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDELBorrarArt.Image = ((System.Drawing.Image)(resources.GetObject("btnDELBorrarArt.Image")));
-            this.btnDELBorrarArt.Location = new System.Drawing.Point(1091, 3);
+            this.btnDELBorrarArt.Location = new System.Drawing.Point(1091, 2);
+            this.btnDELBorrarArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDELBorrarArt.Name = "btnDELBorrarArt";
-            this.btnDELBorrarArt.Size = new System.Drawing.Size(266, 67);
+            this.btnDELBorrarArt.Size = new System.Drawing.Size(266, 71);
             this.btnDELBorrarArt.TabIndex = 6;
             this.btnDELBorrarArt.Text = "DEL\r\nBorrar Art.";
             this.btnDELBorrarArt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -561,7 +574,7 @@
             // 
             // frmShoppingCart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1366, 768);
@@ -570,6 +583,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmShoppingCart";
