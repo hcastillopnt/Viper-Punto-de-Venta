@@ -46,7 +46,6 @@
             this.tlpContenedorVertical = new System.Windows.Forms.TableLayoutPanel();
             this.tlpLogotipo = new System.Windows.Forms.TableLayoutPanel();
             this.picLogotipo = new System.Windows.Forms.PictureBox();
-            this.cboSucursales = new Telerik.WinControls.UI.RadDropDownList();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.tlpMenuVertical = new System.Windows.Forms.TableLayoutPanel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
@@ -64,7 +63,6 @@
             this.tlpContenedorVertical.SuspendLayout();
             this.tlpLogotipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -255,7 +253,6 @@
             this.tlpLogotipo.ColumnCount = 1;
             this.tlpLogotipo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpLogotipo.Controls.Add(this.picLogotipo, 0, 0);
-            this.tlpLogotipo.Controls.Add(this.cboSucursales, 0, 1);
             this.tlpLogotipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpLogotipo.Location = new System.Drawing.Point(3, 3);
             this.tlpLogotipo.Name = "tlpLogotipo";
@@ -277,18 +274,6 @@
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
             this.picLogotipo.Click += new System.EventHandler(this.picLogotipo_Click);
-            // 
-            // cboSucursales
-            // 
-            this.cboSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboSucursales.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSucursales.Location = new System.Drawing.Point(3, 92);
-            this.cboSucursales.Name = "cboSucursales";
-            this.cboSucursales.NullText = "--Seleccione--";
-            this.cboSucursales.Size = new System.Drawing.Size(274, 46);
-            this.cboSucursales.TabIndex = 1;
-            this.cboSucursales.ThemeName = "VisualStudio2012Light";
             // 
             // btnCerrarSesion
             // 
@@ -377,7 +362,6 @@
             this.tlpLogotipo.ResumeLayout(false);
             this.tlpLogotipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboSucursales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,7 +388,6 @@
         private System.Windows.Forms.Label lblDinero;
         private System.Windows.Forms.PictureBox picDinero;
         private System.Windows.Forms.TableLayoutPanel tlpLogotipo;
-        private Telerik.WinControls.UI.RadDropDownList cboSucursales;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }

@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Viper.BusinessEntities;
 using System.IO;
+using Telerik.WinControls.UI;
 
 #endregion
 
@@ -37,6 +38,7 @@ namespace Viper.DesktopApp
 
         #region Variables, Objetos y Componentes
 
+        public static RadDropDownList cboSucursales;
         private Button objButton = null;
         string rol;
         string nomcomp;
@@ -61,6 +63,9 @@ namespace Viper.DesktopApp
 
             //Inicializar la interfaz grafica
             InitializeComponent();
+
+            //Cargar combobox de sucursales
+            uploadControlSucursales();
         }
 
         #endregion
@@ -342,6 +347,27 @@ namespace Viper.DesktopApp
                     this.picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
+        }
+
+        private void uploadControlSucursales()
+        {
+            cboSucursales = new Telerik.WinControls.UI.RadDropDownList();
+
+            ((System.ComponentModel.ISupportInitialize)(cboSucursales)).BeginInit();
+
+            this.tlpLogotipo.Controls.Add(cboSucursales, 0, 1);
+
+            cboSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
+            cboSucursales.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            cboSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cboSucursales.Location = new System.Drawing.Point(3, 92);
+            cboSucursales.Name = "cboSucursales";
+            cboSucursales.NullText = "--Seleccione--";
+            cboSucursales.Size = new System.Drawing.Size(274, 46);
+            cboSucursales.TabIndex = 1;
+            cboSucursales.ThemeName = "VisualStudio2012Light";
+
+            ((System.ComponentModel.ISupportInitialize)(cboSucursales)).EndInit();
         }
 
         #endregion
