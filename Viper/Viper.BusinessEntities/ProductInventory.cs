@@ -9,8 +9,11 @@ using Viper.BusinessEntities.Common;
 
 namespace Viper.BusinessEntities
 {
-    public class ProductInventory : AuditableEntity<ProductInventory>
+    public class ProductInventory
     {
+        [Key]
+        public int Id { get; set; }
+
         [ForeignKey("Product")]
         [Required(ErrorMessage = "The field ProductId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field ProductId must be a number.")]
