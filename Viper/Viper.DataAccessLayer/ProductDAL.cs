@@ -117,13 +117,9 @@ namespace Viper.DataAccessLayer
                             ProductId = ProductID,
                             UnitsInStock = UnitsInStock,
                             SiteId = SiteID,
-                            CreatedBy = "HECP",
-                            CreatedDate = DateTime.Now,
-                            LastUpdatedBy = "HECP",
-                            LastUpdatedDate = DateTime.Now
                         };
 
-                        dbCtx.ProductsInventory.Add(productInventory);
+                        dbCtx.Entry(productInventory).State = productInventory.Id == 0 ? EntityState.Added : EntityState.Modified;
 
                         isInserted = dbCtx.SaveChanges() > 0;
 
@@ -200,7 +196,7 @@ namespace Viper.DataAccessLayer
                         productCostHistory.SiteId = siteID;
                         productCostHistory.StantardCost = standardCost;
                         productCostHistory.StartDate = DateTime.Now;
-                        productCostHistory.EndDate = DateTime.Now.AddMonths(1);
+                        //productCostHistory.EndDate = DateTime.Now.AddMonths(1);
 
                         dbCtx.ProductsCostHistory.Add(productCostHistory);
 
@@ -214,7 +210,7 @@ namespace Viper.DataAccessLayer
                             productListPriceHistory.SiteId = siteID;
                             productListPriceHistory.ListPrice = listPrice;
                             productListPriceHistory.StartDate = DateTime.Now;
-                            productListPriceHistory.EndDate = DateTime.Now.AddMonths(1);
+                            //productListPriceHistory.EndDate = DateTime.Now.AddMonths(1);
 
                             dbCtx.ProductsListPriceHistory.Add(productListPriceHistory);
 

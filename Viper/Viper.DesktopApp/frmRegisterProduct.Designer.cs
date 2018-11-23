@@ -252,7 +252,6 @@
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.ThemeName = "VisualStudio2012Light";
             this.btnAceptar.Click += new System.EventHandler(this.Button_Click);
-            this.btnAceptar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnCancelar
             // 
@@ -268,7 +267,6 @@
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.ThemeName = "VisualStudio2012Light";
             this.btnCancelar.Click += new System.EventHandler(this.Button_Click);
-            this.btnCancelar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // gbDatosProducto
             // 
@@ -371,7 +369,6 @@
             this.Codigo_Barras.TabIndex = 2;
             this.Codigo_Barras.ThemeName = "VisualStudio2012Light";
             this.Codigo_Barras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
-            this.Codigo_Barras.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Clave_Alterna
             // 
@@ -386,7 +383,6 @@
             this.Clave_Alterna.TabIndex = 3;
             this.Clave_Alterna.ThemeName = "VisualStudio2012Light";
             this.Clave_Alterna.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
-            this.Clave_Alterna.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblDescripcion
             // 
@@ -413,7 +409,6 @@
             this.Descripcion.TabIndex = 5;
             this.Descripcion.ThemeName = "VisualStudio2012Light";
             this.Descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
-            this.Descripcion.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Sustancia_Activa
             // 
@@ -428,7 +423,6 @@
             this.Sustancia_Activa.TabIndex = 6;
             this.Sustancia_Activa.ThemeName = "VisualStudio2012Light";
             this.Sustancia_Activa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLettersAndNumbers_KeyPress);
-            this.Sustancia_Activa.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblSustanciaActiva
             // 
@@ -478,7 +472,6 @@
             this.Departamento.TabIndex = 10;
             this.Departamento.ThemeName = "VisualStudio2012Light";
             this.Departamento.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Departamento_SelectedIndexChanged);
-            this.Departamento.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Categoria
             // 
@@ -491,7 +484,6 @@
             this.Categoria.Size = new System.Drawing.Size(441, 42);
             this.Categoria.TabIndex = 11;
             this.Categoria.ThemeName = "VisualStudio2012Light";
-            this.Categoria.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblProveedor
             // 
@@ -517,7 +509,6 @@
             this.Proveedor.Size = new System.Drawing.Size(888, 42);
             this.Proveedor.TabIndex = 13;
             this.Proveedor.ThemeName = "VisualStudio2012Light";
-            this.Proveedor.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Ubicacion
             // 
@@ -530,7 +521,6 @@
             this.Ubicacion.Size = new System.Drawing.Size(441, 43);
             this.Ubicacion.TabIndex = 15;
             this.Ubicacion.ThemeName = "VisualStudio2012Light";
-            this.Ubicacion.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // gbTipoProducto
             // 
@@ -565,6 +555,7 @@
             // 
             // btnSinReceta
             // 
+            this.btnSinReceta.CausesValidation = false;
             this.btnSinReceta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSinReceta.Enabled = false;
             this.btnSinReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
@@ -578,10 +569,10 @@
             this.btnSinReceta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSinReceta.ThemeName = "VisualStudio2012Light";
             this.btnSinReceta.Click += new System.EventHandler(this.Button_Click);
-            this.btnSinReceta.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnAntibiotico
             // 
+            this.btnAntibiotico.CausesValidation = false;
             this.btnAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAntibiotico.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnAntibiotico.Image = ((System.Drawing.Image)(resources.GetObject("btnAntibiotico.Image")));
@@ -594,10 +585,10 @@
             this.btnAntibiotico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAntibiotico.ThemeName = "VisualStudio2012Light";
             this.btnAntibiotico.Click += new System.EventHandler(this.Button_Click);
-            this.btnAntibiotico.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // btnOtroProducto
             // 
+            this.btnOtroProducto.CausesValidation = false;
             this.btnOtroProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOtroProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btnOtroProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnOtroProducto.Image")));
@@ -610,7 +601,6 @@
             this.btnOtroProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOtroProducto.ThemeName = "VisualStudio2012Light";
             this.btnOtroProducto.Click += new System.EventHandler(this.Button_Click);
-            this.btnOtroProducto.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // pvpDatosAdicionales
             // 
@@ -708,7 +698,6 @@
             this.Inventario_Minimo.TabIndex = 3;
             this.Inventario_Minimo.ThemeName = "VisualStudio2012Light";
             this.Inventario_Minimo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
-            this.Inventario_Minimo.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Stock_Actual
             // 
@@ -722,7 +711,6 @@
             this.Stock_Actual.TabIndex = 5;
             this.Stock_Actual.ThemeName = "VisualStudio2012Light";
             this.Stock_Actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
-            this.Stock_Actual.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosAdicionales_03B
             // 
@@ -754,7 +742,6 @@
             this.Inventario_Maximo.TabIndex = 4;
             this.Inventario_Maximo.ThemeName = "VisualStudio2012Light";
             this.Inventario_Maximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
-            this.Inventario_Maximo.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblInvMax
             // 
@@ -839,7 +826,6 @@
             this.Precio_Compra_Sin_Impuestos.TabIndex = 3;
             this.Precio_Compra_Sin_Impuestos.ThemeName = "VisualStudio2012Light";
             this.Precio_Compra_Sin_Impuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbersToDecimal_KeyPress);
-            this.Precio_Compra_Sin_Impuestos.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // chkImpuestoCompra
             // 
@@ -854,7 +840,6 @@
             this.chkImpuestoCompra.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.chkImpuestoCompra.ThemeName = "VisualStudio2012Light";
             this.chkImpuestoCompra.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.chkImpuestoCompra_ToggleStateChanged);
-            this.chkImpuestoCompra.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Precio_Compra_Con_Impuestos
             // 
@@ -869,7 +854,6 @@
             this.Precio_Compra_Con_Impuestos.TabIndex = 5;
             this.Precio_Compra_Con_Impuestos.ThemeName = "VisualStudio2012Light";
             this.Precio_Compra_Con_Impuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbersToDecimal_KeyPress);
-            this.Precio_Compra_Con_Impuestos.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosAdicionales_02B
             // 
@@ -903,7 +887,6 @@
             this.chkImpuestoVenta.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.chkImpuestoVenta.ThemeName = "VisualStudio2012Light";
             this.chkImpuestoVenta.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.chkImpuestoVenta_ToggleStateChanged);
-            this.chkImpuestoVenta.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // Precio_Venta_Con_Impuestos
             // 
@@ -918,7 +901,6 @@
             this.Precio_Venta_Con_Impuestos.TabIndex = 7;
             this.Precio_Venta_Con_Impuestos.ThemeName = "VisualStudio2012Light";
             this.Precio_Venta_Con_Impuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbersToDecimal_KeyPress);
-            this.Precio_Venta_Con_Impuestos.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // lblPrecioVenta
             // 
@@ -944,7 +926,6 @@
             this.Precio_Venta_Sin_Impuestos.TabIndex = 4;
             this.Precio_Venta_Sin_Impuestos.ThemeName = "VisualStudio2012Light";
             this.Precio_Venta_Sin_Impuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbersToDecimal_KeyPress);
-            this.Precio_Venta_Sin_Impuestos.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosAdicionales_01
             // 
@@ -974,7 +955,6 @@
             this.chkUtilizaInventario.TabIndex = 5;
             this.chkUtilizaInventario.Text = "Este producto SI utiliza inventario";
             this.chkUtilizaInventario.ThemeName = "VisualStudio2012Light";
-            this.chkUtilizaInventario.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // tlpDatosAdicionales_01A
             // 
@@ -1030,7 +1010,6 @@
             this.btnExaminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExaminar.ThemeName = "VisualStudio2012Light";
             this.btnExaminar.Click += new System.EventHandler(this.Button_Click);
-            this.btnExaminar.Leave += new System.EventHandler(this.Control_Leave);
             // 
             // pvpIndicaciones
             // 
