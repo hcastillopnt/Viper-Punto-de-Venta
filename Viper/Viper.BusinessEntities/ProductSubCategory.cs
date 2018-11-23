@@ -20,7 +20,7 @@ namespace Viper.BusinessEntities
         public ProductCategory ProductCategory { get; set; }
 
         [Required(ErrorMessage = "The field Name is required")]
-        [StringLength(40, ErrorMessage = "The field Name must have max length of 40 characters")]
+        [StringLength(200, ErrorMessage = "The field Name must have max length of 40 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field Name must be a string")]
         public String Name { get; set; }
 
