@@ -28,7 +28,7 @@ LIMIT 0, 50000
 
 -- Date: 2018-10-28 18:29
 */
-INSERT INTO `company` (`Id`,`CompanyName`,`CompanyKey`,`AddressId`,`AddressSATId`,`RegimenFiscalId`,`PhoneNumber`,`CellphoneNumber`,`EmailAddress`,`FiscalName`,`RFC`,`CURP`,`ApiKey`,`BusinessActivity`,`UserId`,`Logo`,`CreatedDate`,`CreatedBy`,`LastUpdatedDate`,`LastUpdatedBy`) VALUES (1,'SUPER FARMACIAS FARMANYL','EMPOWTK0001',1,1,1856,'8121650892','8120127009','PATRICIA.PEREZARN@OUTLOOK.COM','HORACIO ENRIQUE CASTILLO PUENTE','CAPH930421PM4','CAPH930421HNLSNR01',NULL,'FARMACIA',1,NULL,'2018-10-28 00:00:00','HECP','2018-10-28 00:00:00','HECP');
+INSERT INTO `company` (`Id`,`CompanyName`,`CompanyKey`,`AddressId`,`AddressSATId`,`RegimenFiscalId`,`PhoneNumber`,`CellphoneNumber`,`EmailAddress`,`FiscalName`,`RFC`,`CURP`,`ApiKey`,`BusinessActivity`,`UserId`,`Logo`,`CreatedDate`,`CreatedBy`,`LastUpdatedDate`,`LastUpdatedBy`) VALUES (1,'SUPER FARMACIAS FARMANYL','EMPOWTK0001',1,1,1,'8121650892','8120127009','PATRICIA.PEREZARN@OUTLOOK.COM','HORACIO ENRIQUE CASTILLO PUENTE','CAPH930421PM4','CAPH930421HNLSNR01',NULL,'FARMACIA',1,NULL,'2018-10-28 00:00:00','HECP','2018-10-28 00:00:00','HECP');
 
 /*
 -- Query: SELECT * FROM viper_developments.site
