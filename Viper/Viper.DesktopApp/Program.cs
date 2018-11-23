@@ -30,6 +30,7 @@ namespace Viper.DesktopApp
             }
 
             string connectionString = ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
+            Console.WriteLine("ConnectionString: " + connectionString);
 
             if (string.IsNullOrEmpty(connectionString))
             {
