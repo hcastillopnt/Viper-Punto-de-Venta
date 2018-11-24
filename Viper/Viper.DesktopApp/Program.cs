@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -40,10 +41,22 @@ namespace Viper.DesktopApp
             {
                 try
                 {
-                    MySqlConnection connection = new MySqlConnection(connectionString);
-                    connection.Open();
-                    Console.WriteLine("MySQL version: " + connection.ServerVersion);
-                    connection.Close();
+                    if(connectionString.Contains("Data Source"))
+                    {
+                        //MSSQLSERVER
+                        SqlConnection sqlConn = new SqlConnection(connectionString);
+                        sqlConn.Open();
+                        Console.WriteLine("MSSQLSERVER version: " + sqlConn.ServerVersion);
+                        sqlConn.Close();
+                    }
+                    else if(connectionString.Contains("Server"))
+                    {
+                        //MYSQLSERVER
+                        MySqlConnection mysqlConn = new MySqlConnection(connectionString);
+                        mysqlConn.Open();
+                        Console.WriteLine("MySQL version: " + mysqlConn.ServerVersion);
+                        mysqlConn.Close();
+                    }
 
                     BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByAdministrator();
                     BusinessLogicLayer.MenuBLL.procUploadPermissionsToMenuByBasic();

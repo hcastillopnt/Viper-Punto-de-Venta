@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace Viper.BusinessEntities
 {
-    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
+    //[DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ViperDbContext : DbContext
     {
         public ViperDbContext() : base(ViperDbContext.getConnectionStringName())
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ViperDbContext, BusinessEntities.Migrations.Configuration>());
         }
 
         public DbSet<CountryRegion> CountriesRegion { get; set; }
@@ -49,6 +48,7 @@ namespace Viper.BusinessEntities
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
         private static string getConnectionStringName()
