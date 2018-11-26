@@ -24,6 +24,7 @@ namespace Viper.BusinessLogicLayer
         public static string procRegisterProduct(Product entityProduct, int UnitsInStock, int SiteID)
         {
             String message = String.Empty;
+
             ICollection<ValidationResult> results = null;
 
             if (!validate(entityProduct, out results))
