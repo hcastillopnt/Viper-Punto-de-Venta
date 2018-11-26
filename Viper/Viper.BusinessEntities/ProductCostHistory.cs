@@ -31,6 +31,6 @@ namespace Viper.BusinessEntities
         [Required(ErrorMessage = "The field StartDate is required")]
         public DateTime StartDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 }

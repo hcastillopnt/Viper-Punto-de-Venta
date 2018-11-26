@@ -2838,7 +2838,7 @@ namespace Viper.BusinessEntities.Migrations
 
         protected override void Seed(Viper.BusinessEntities.ViperDbContext context)
         {
-            uploadDataToDatabaseDefault();
+            //uploadDataToDatabaseDefault();
         }
     }
 }
