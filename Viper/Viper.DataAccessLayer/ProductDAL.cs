@@ -28,8 +28,10 @@ namespace Viper.DataAccessLayer
         /// Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
         /// <param name="entityProduct">Entidad Producto</param>
-        /// <returns>Message</returns>
-        public static string procInsertProductToSystem(Product entityProduct)
+        /// <param name="SiteID">ID Sucursal</param>
+        /// <param name="UnitsInStock">Unidades en Stock</param>
+        /// <returns></returns>
+        public static string procInsertProductToSystem(Product entityProduct, int SiteID, int UnitsInStock)
         {
             String message = String.Empty;
 
@@ -47,178 +49,54 @@ namespace Viper.DataAccessLayer
 
                         isInserted = dbCtx.SaveChanges() > 0;
 
-                        if (isInserted == true)
-                        {
-                            dbCtxTran.Commit();
-                        }
-                    }
-                }
-                catch (DbEntityValidationException ex)
-                {
-                    var errorMessages = ex.EntityValidationErrors
-                            .SelectMany(x => x.ValidationErrors)
-                            .Select(x => x.ErrorMessage);
-                    var fullErrorMessage = string.Join("; ", errorMessages);
-                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                    message = exceptionMessage + "\n" + ex.EntityValidationErrors;
-
-                    dbCtxTran.Rollback();
-                }
-                catch (DbUpdateConcurrencyException ex)
-                {
-                    var entityObj = ex.Entries.Single().GetDatabaseValues();
-
-                    if (entityObj == null)
-                        message = "The entity being updated is already deleted by another user";
-                    else
-                        message = "The entity being updated has already been updated by another user";
-
-                    dbCtxTran.Rollback();
-                }
-                catch (DbUpdateException ex)
-                {
-                    var exception = HandleDbUpdateException(ex);
-                    message = exception.Message;
-
-                    dbCtxTran.Rollback();
-                }
-            }
-
-            return message;
-        }
-
-        #endregion
-
-        #region procInsertProductInventoryToSystem
-
-        /// <summary>
-        /// Metodo para registrar los inventarios de los productos para vender con el 
-        /// Viper Sistema de Punto de Venta para Farmacias
-        /// </summary>
-        /// <param name="UnitsInStock">Stock Actual</param>
-        /// <param name="SiteID">ID Sucursal</param>
-        /// <returns>Message</returns>
-        public static string procInsertProductInventoryToSystem(int ProductID, int UnitsInStock, int SiteID)
-        {
-            String message = String.Empty;
-
-            bool isInserted = false;
-
-            using (var dbCtxTran = dbCtx.Database.BeginTransaction())
-            {
-                try
-                {
-                    bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
-
-                    if (isDataBaseExist)
-                    {
-                        ProductInventory productInventory = new ProductInventory()
-                        {
-                            ProductId = ProductID,
-                            UnitsInStock = UnitsInStock,
-                            SiteId = SiteID,
-                        };
-
-                        dbCtx.Entry(productInventory).State = productInventory.Id == 0 ? EntityState.Added : EntityState.Modified;
-
-                        isInserted = dbCtx.SaveChanges() > 0;
-
-                        if (isInserted == true)
-                        {
-                            dbCtxTran.Commit();
-                        }
-                    }
-                }
-                catch (DbEntityValidationException ex)
-                {
-                    var errorMessages = ex.EntityValidationErrors
-                            .SelectMany(x => x.ValidationErrors)
-                            .Select(x => x.ErrorMessage);
-                    var fullErrorMessage = string.Join("; ", errorMessages);
-                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                    message = exceptionMessage + "\n" + ex.EntityValidationErrors;
-
-                    dbCtxTran.Rollback();
-                }
-                catch (DbUpdateConcurrencyException ex)
-                {
-                    var entityObj = ex.Entries.Single().GetDatabaseValues();
-
-                    if (entityObj == null)
-                        message = "The entity being updated is already deleted by another user";
-                    else
-                        message = "The entity being updated has already been updated by another user";
-
-                    dbCtxTran.Rollback();
-                }
-                catch (DbUpdateException ex)
-                {
-                    var exception = HandleDbUpdateException(ex);
-                    message = exception.Message;
-
-                    dbCtxTran.Rollback();
-                }
-            }
-
-            return message;
-        }
-
-        #endregion
-
-        #region procInsertProductToSystem
-
-        /// <summary>
-        /// Metodo para registrar los productos para vender con el 
-        /// Viper Sistema de Punto de Venta para Farmacias
-        /// </summary>
-        /// <param name="listPrice">Precio de Venta</param>
-        /// <param name="standardCost">Precio de Compra</param>
-        /// <param name="productID">ID Producto</param>
-        /// <param name="siteID">ID Sucursal</param>
-        /// <returns></returns>
-        public static string procInsertProductHistoryToSystem(decimal listPrice, decimal standardCost, int productID, int siteID)
-        {
-            String message = String.Empty;
-
-            bool isInserted = false;
-
-            using (var dbCtxTran = dbCtx.Database.BeginTransaction())
-            {
-                try
-                {
-                    bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
-
-                    if (isDataBaseExist)
-                    {
-                        ProductCostHistory productCostHistory = new ProductCostHistory();
-
-                        productCostHistory.ProductId = productID;
-                        productCostHistory.SiteId = siteID;
-                        productCostHistory.StantardCost = standardCost;
-                        productCostHistory.StartDate = DateTime.Now;
-                        //productCostHistory.EndDate = DateTime.Now.AddMonths(1);
-
-                        dbCtx.ProductsCostHistory.Add(productCostHistory);
-
-                        isInserted = dbCtx.SaveChanges() > 0;
-
                         if (isInserted)
                         {
-                            ProductListPriceHistory productListPriceHistory = new ProductListPriceHistory();
+                            int ProductID = dbCtx.Products.Where(x => x.BarCode == entityProduct.BarCode).OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                            productListPriceHistory.ProductId = productID;
-                            productListPriceHistory.SiteId = siteID;
-                            productListPriceHistory.ListPrice = listPrice;
-                            productListPriceHistory.StartDate = DateTime.Now;
-                            //productListPriceHistory.EndDate = DateTime.Now.AddMonths(1);
+                            ProductCostHistory productCostHistory = new ProductCostHistory()
+                            {
+                                ProductId = ProductID,
+                                SiteId = SiteID,
+                                StantardCost = entityProduct.StandardCost,
+                                StartDate = DateTime.Now
+                            };
 
-                            dbCtx.ProductsListPriceHistory.Add(productListPriceHistory);
+                            dbCtx.ProductsCostHistory.Add(productCostHistory);
 
                             isInserted = dbCtx.SaveChanges() > 0;
 
-                            if (isInserted == true)
+                            if (isInserted)
                             {
-                                dbCtxTran.Commit();
+                                ProductListPriceHistory productListPriceHistory = new ProductListPriceHistory()
+                                {
+                                    ProductId = ProductID,
+                                    SiteId = SiteID,
+                                    ListPrice = entityProduct.ListPrice,
+                                    StartDate = DateTime.Now
+                                };
+
+                                dbCtx.ProductsListPriceHistory.Add(productListPriceHistory);
+
+                                isInserted = dbCtx.SaveChanges() > 0;
+
+                                if (isInserted)
+                                {
+                                    ProductInventory productInventory = new ProductInventory()
+                                    {
+                                        ProductId = ProductID,
+                                        UnitsInStock = UnitsInStock,
+                                        SiteId = SiteID,
+                                    };
+
+                                    dbCtx.ProductsInventory.Add(productInventory);
+
+                                    isInserted = dbCtx.SaveChanges() > 0;
+
+                                    if (isInserted == true)
+                                    {
+                                        dbCtxTran.Commit();
+                                    }
+                                }
                             }
                         }
                     }
@@ -252,33 +130,15 @@ namespace Viper.DataAccessLayer
 
                     dbCtxTran.Rollback();
                 }
+                catch(Exception ex)
+                {
+                    message = ex.Message;
+
+                    dbCtxTran.Rollback();
+                }
             }
 
             return message;
-        }
-
-        #endregion
-
-        #region procGetLastIDToEmployeeRegistered
-
-        /// <summary>
-        /// Metodo para obtener el ultimo ID de los productos registrados
-        /// </summary>
-        /// <returns>Id</returns>
-        public static int procGetLastIDToProductRegistered()
-        {
-            bool isExistente = false;
-
-            int ProductID = 0;
-
-            isExistente = Database.Exists(dbCtx.Database.Connection);
-
-            if (isExistente)
-            {
-                ProductID = dbCtx.Products.OrderByDescending(x => x.Id).FirstOrDefault().Id;
-            }
-
-            return ProductID;
         }
 
         #endregion

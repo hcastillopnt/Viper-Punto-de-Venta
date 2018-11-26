@@ -26,32 +26,16 @@ namespace Viper.BusinessLogicLayer
             String message = String.Empty;
             ICollection<ValidationResult> results = null;
 
-            try
+            if (!validate(entityProduct, out results))
             {
-                if (!validate(entityProduct, out results))
-                {
-                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                }
-                else
-                {
-                    message = DataAccessLayer.ProductDAL.procInsertProductToSystem(entityProduct);
-
-                    if (string.IsNullOrEmpty(message))
-                    {
-                        int ProductID = DataAccessLayer.ProductDAL.procGetLastIDToProductRegistered();
-
-                        message = DataAccessLayer.ProductDAL.procInsertProductHistoryToSystem(entityProduct.ListPrice, entityProduct.StandardCost, ProductID, SiteID);
-
-                        if (string.IsNullOrEmpty(message))
-                        {
-                            message = DataAccessLayer.ProductDAL.procInsertProductInventoryToSystem(ProductID, UnitsInStock, SiteID);
-                        }
-                    }
-                }
+                message = String.Join("\n", results.Select(o => o.ErrorMessage));
             }
-            catch (Exception ex)
+            else
             {
-                message = ex.Message;
+                if (string.IsNullOrEmpty(message))
+                {
+                    message = DataAccessLayer.ProductDAL.procInsertProductToSystem(entityProduct, UnitsInStock, SiteID);
+                }
             }
 
             return message;

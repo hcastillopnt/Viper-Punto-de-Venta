@@ -407,13 +407,20 @@ namespace Viper.DesktopApp
 
             if (chkImpuestoCompra.Checked)
             {
-                product.StandardCost = Convert.ToDecimal(Precio_Compra_Sin_Impuestos.Text.Trim().ToString());
-                product.ListPrice = Convert.ToDecimal(Precio_Venta_Sin_Impuestos.Text.Trim().ToString());
+                product.StandardCost = Convert.ToDecimal(Precio_Compra_Con_Impuestos.Text.Trim().ToString());
             }
             else
             {
-                product.StandardCost = Convert.ToDecimal(Precio_Compra_Con_Impuestos.Text.Trim().ToString());
+                product.StandardCost = Convert.ToDecimal(Precio_Compra_Sin_Impuestos.Text.Trim().ToString());
+            }
+
+            if(chkImpuestoVenta.Checked)
+            {
                 product.ListPrice = Convert.ToDecimal(Precio_Venta_Con_Impuestos.Text.Trim().ToString());
+            }
+            else
+            {
+                product.ListPrice = Convert.ToDecimal(Precio_Venta_Sin_Impuestos.Text.Trim().ToString());
             }
 
             product.IsUseInStock = chkUtilizaInventario.Checked;
@@ -455,6 +462,10 @@ namespace Viper.DesktopApp
             this.Inventario_Minimo.Text = String.Empty;
             this.Inventario_Maximo.Text = String.Empty;
             this.Proveedor.SelectedIndex = 0;
+            this.Precio_Compra_Con_Impuestos.Text = String.Empty;
+            this.Precio_Compra_Sin_Impuestos.Text = String.Empty;
+            this.Precio_Venta_Con_Impuestos.Text = String.Empty;
+            this.Precio_Venta_Sin_Impuestos.Text = String.Empty;
 
             string folder = @"\images\icon\";
             string appPath = Path.GetDirectoryName(Application.StartupPath);
