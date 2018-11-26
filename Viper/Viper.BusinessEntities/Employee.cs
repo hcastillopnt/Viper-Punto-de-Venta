@@ -99,8 +99,7 @@ namespace Viper.BusinessEntities
         [DataType(DataType.Date, ErrorMessage = "The field StartDate must be a Date")]
         public DateTime StartDate { get; set; }
 
-        [DataType(DataType.Date, ErrorMessage = "The field StartDate must be a Date")]
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         [Required(ErrorMessage = "The field IsActive is required")]
         public bool IsActive { get; set; }

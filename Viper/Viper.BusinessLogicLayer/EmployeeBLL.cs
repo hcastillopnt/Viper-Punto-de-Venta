@@ -21,81 +21,58 @@ namespace Viper.BusinessLogicLayer
         /// <param name="entityEDH">Entidad Historial del Empleado</param>
         /// <param name="RoleID">ID del Tipo de Rol</param>
         /// <returns>Message</returns>
-        public static string procRegisterEmployee(Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH, int RoleID)
+        public static string procInsertEmployeeToSystem(Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH, int RoleID)
         {
             String message = String.Empty;
             String loginID = entityEmployee.CURP;
             String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("12345");
             String CURP = entityEmployee.CURP;
+            String RFC = entityEmployee.RFC;
+
             ICollection<ValidationResult> results = null;
 
-            try
+            bool isExistente = DataAccessLayer.EmployeeDAL.procIsCURPExists(CURP);
+
+            if (isExistente)
             {
-                bool isExistente = DataAccessLayer.EmployeeDAL.procIsCURPExists(CURP);
+                message = "Se ha denegado el registro, por duplicidad debido en el C.U.R.P. que se intenta que registrar";
+            }
+            else
+            {
+                isExistente = DataAccessLayer.EmployeeDAL.procIsRFCExists(RFC);
 
                 if (isExistente)
                 {
-                    message = "Se ha denegado el registro, por duplicidad debido en el C.U.R.P. que se intenta que registrar";
+                    message = "Se ha denegado el registro, por duplicidad debido en el R.F.C que se intenta que registrar";
                 }
                 else
                 {
-                    String RFC = entityEmployee.RFC;
-
-                    isExistente = DataAccessLayer.EmployeeDAL.procIsRFCExists(RFC);
-
-                    if (isExistente)
+                    if (String.IsNullOrEmpty(message))
                     {
-                        message = "Se ha denegado el registro, por duplicidad debido en el R.F.C que se intenta que registrar";
-                    }
-                    else
-                    {
-                        message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
-
-                        if (String.IsNullOrEmpty(message))
+                        if (!validate(entityAddress, out results))
                         {
-                            int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegisteredByCURP(loginID);
-
-                            entityEmployee.EmployeeNumber = DataAccessLayer.EmployeeDAL.procObtainEmployeeNumberGeneratedAutomatic();
-                            entityEmployee.UserId = UserID;
-
-                            if (!validate(entityAddress, out results))
+                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                        }
+                        else
+                        {
+                            if (!validate(entityEmployee, out results))
                             {
                                 message = String.Join("\n", results.Select(o => o.ErrorMessage));
                             }
                             else
                             {
-                                if (!validate(entityEmployee, out results))
+                                if (!validate(entityEDH, out results))
                                 {
                                     message = String.Join("\n", results.Select(o => o.ErrorMessage));
                                 }
                                 else
                                 {
-                                    message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(entityAddress, entityEmployee);
-
-                                    if (String.IsNullOrEmpty(message))
-                                    {
-                                        if (!validate(entityEDH, out results))
-                                        {
-                                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                                        }
-                                        else
-                                        {
-                                            int EmployeeID = DataAccessLayer.EmployeeDAL.procGetLastIDToEmployeeRegisteredByCURP(entityEmployee.CURP);
-
-                                            entityEDH.EmployeeId = EmployeeID;
-
-                                            message = DataAccessLayer.EmployeeDAL.procInsertEmployeeHistoryToSystem(entityEDH);
-                                        }
-                                    }
+                                    message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(loginID, pwdEncrypted, RoleID, entityAddress, entityEmployee, entityEDH);
                                 }
                             }
                         }
                     }
                 }
-            }
-            catch(Exception ex)
-            {
-                message = ex.Message;
             }
 
             return message;
