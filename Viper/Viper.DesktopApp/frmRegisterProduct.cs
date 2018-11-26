@@ -254,7 +254,7 @@ namespace Viper.DesktopApp
 
         private void chkImpuestoCompra_ToggleStateChanged(object sender, StateChangedEventArgs args)
         {
-            if(chkImpuestoCompra.Checked)
+            if (chkImpuestoCompra.Checked)
             {
                 decimal totalCompra = 0.0M;
                 decimal standardCost = 0.0M;
@@ -263,7 +263,7 @@ namespace Viper.DesktopApp
                 standardCost = Convert.ToDecimal(Precio_Compra_Sin_Impuestos.Text.Trim().ToString());
                 iva = standardCost * 0.16M;
 
-                totalCompra = Math.Truncate((standardCost +iva) * 10000 / (100 + 18)) / 100;
+                totalCompra = Decimal.Round((standardCost + iva),2);
 
                 Precio_Compra_Con_Impuestos.Text = totalCompra.ToString();
             }
@@ -284,7 +284,7 @@ namespace Viper.DesktopApp
                 listPrice = Convert.ToDecimal(Precio_Venta_Sin_Impuestos.Text.Trim().ToString());
                 iva = listPrice * 0.16M;
 
-                totalVenta = Math.Truncate((listPrice + iva) * 10000 / (100 + 18)) / 100;
+                totalVenta = Decimal.Round((listPrice + iva),2);
 
                 Precio_Venta_Con_Impuestos.Text = totalVenta.ToString();
             }

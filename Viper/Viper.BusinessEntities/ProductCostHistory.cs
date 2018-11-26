@@ -29,10 +29,8 @@ namespace Viper.BusinessEntities
         public Decimal StantardCost { get; set; }
 
         [Required(ErrorMessage = "The field StartDate is required")]
-        [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
 
-        [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
     }
 }
