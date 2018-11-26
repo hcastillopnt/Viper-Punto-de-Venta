@@ -751,8 +751,7 @@ namespace Viper.DesktopApp
             if (BuscarImagen.ShowDialog() == DialogResult.OK)
             {
                 rutaLogotipo = BuscarImagen.FileName;
-                String Direccion = BuscarImagen.FileName;
-                picLogotipo.ImageLocation = Direccion;
+                picLogotipo.ImageLocation = rutaLogotipo;
                 picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
                 banderaImagen = true;
             }

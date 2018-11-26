@@ -201,7 +201,7 @@ namespace Viper.DataAccessLayer
 
                     if (isDataBaseExist)
                     {
-                        var entity = new User
+                        User user = new User()
                         {
                             LoginID = loginID,
                             PasswordEncrypted = passwordEncrypted,
@@ -215,7 +215,7 @@ namespace Viper.DataAccessLayer
                             LastUpdatedDate = DateTime.Now
                         };
 
-                        dbCtx.Users.Add(entity);
+                        dbCtx.Users.Add(user);
 
                         isInserted = dbCtx.SaveChanges() > 0;
 

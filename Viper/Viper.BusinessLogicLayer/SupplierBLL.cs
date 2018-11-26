@@ -20,43 +20,28 @@ namespace Viper.BusinessLogicLayer
         /// <param name="entitySupplier">Entidad Sucursal</param>
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <returns>Message</returns>
-        public static string procInsertSupplierToSystem(Supplier entitySupplier, Address entityAddress, int RoleID)
+        public static string procInsertSupplierToSystem(Supplier entitySupplier, Address entityAddress, int roleID)
         {
             String message = String.Empty;
             String loginID = entitySupplier.RFC;
             String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
+
             ICollection<ValidationResult> results = null;
 
-            try
+            if (!validate(entitySupplier, out results))
             {
-                message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
-
-                if (String.IsNullOrEmpty(message))
-                {
-                    int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegisteredByRFC(loginID);
-
-                    entitySupplier.UserId = UserID;
-
-                    if (!validate(entitySupplier, out results))
-                    {
-                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                    }
-                    else
-                    {
-                        if (!validate(entityAddress, out results))
-                        {
-                            message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                        }
-                        else
-                        {
-                            message = DataAccessLayer.SupplierDAL.procInsertSupplierToSystem(entitySupplier, entityAddress);
-                        }
-                    }
-                }
+                message = String.Join("\n", results.Select(o => o.ErrorMessage));
             }
-            catch(Exception ex)
+            else
             {
-                message = ex.Message;
+                if (!validate(entityAddress, out results))
+                {
+                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                }
+                else
+                {
+                    message = DataAccessLayer.SupplierDAL.procInsertSupplierToSystem(loginID, pwdEncrypted, roleID, entitySupplier, entityAddress);
+                }
             }
 
             return message;

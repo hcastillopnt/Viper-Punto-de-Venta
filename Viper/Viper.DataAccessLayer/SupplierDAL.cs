@@ -32,10 +32,11 @@ namespace Viper.DataAccessLayer
         /// Metodo para registrar los distintos proveedores de medicamento y otros,
         /// para trabajar con el Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
+        /// <param name="loginID">Nombre de Usuario (R.F.C.)</param>
         /// <param name="entitySupplier">Entidad Sucursal</param>
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <returns>Message</returns>
-        public static string procInsertSupplierToSystem(Supplier entitySupplier, Address entityAddress)
+        public static string procInsertSupplierToSystem(string loginID, string pwdEncrypted, int roleID,  Supplier entitySupplier, Address entityAddress)
         {
             String message = String.Empty;
 
@@ -49,27 +50,49 @@ namespace Viper.DataAccessLayer
 
                     if (isDataBaseExist)
                     {
-                        dbCtx.Addresses.Add(entityAddress);
+                        User user = new User()
+                        {
+                            LoginID = loginID,
+                            PasswordEncrypted = pwdEncrypted,
+                            RoleId = roleID,
+                            AccessFailedCount = 0,
+                            IsWelcome = true,
+                            IsActive = true,
+                            CreatedBy = "HECP",
+                            CreatedDate = DateTime.Now,
+                            LastUpdatedBy = "HECP",
+                            LastUpdatedDate = DateTime.Now
+                        };
+
+                        dbCtx.Users.Add(user);
 
                         isInserted = dbCtx.SaveChanges() > 0;
 
                         if (isInserted)
                         {
-                            isInserted = false;
+                            dbCtx.Addresses.Add(entityAddress);
 
-                            var addressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                            isInserted = dbCtx.SaveChanges() > 0;
 
-                            if (addressID > 0)
+                            if (isInserted)
                             {
-                                entitySupplier.AddressId = addressID;
+                                int addressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                dbCtx.Suppliers.Add(entitySupplier);
-
-                                isInserted = dbCtx.SaveChanges() > 0;
-
-                                if (isInserted)
+                                if (addressID > 0)
                                 {
-                                    dbCtxTran.Commit();
+                                    int UserID = dbCtx.Users.Where(x => x.LoginID == loginID).OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                    entitySupplier.UserId = UserID;
+                                    entitySupplier.AddressId = addressID;
+
+                                    dbCtx.Suppliers.Add(entitySupplier);
+
+                                    isInserted = dbCtx.SaveChanges() > 0;
+
+                                    if (isInserted)
+                                    {
+                                        dbCtxTran.Commit();
+                                    }
                                 }
                             }
                         }
@@ -103,6 +126,10 @@ namespace Viper.DataAccessLayer
                     message = exception.Message;
 
                     dbCtxTran.Rollback();
+                }
+                catch(Exception ex)
+                {
+                    message = ex.Message;
                 }
             }
 
@@ -148,17 +175,15 @@ namespace Viper.DataAccessLayer
                 new DataColumn("TELEFONO", typeof(string)),
                 new DataColumn("LOGOTIPO", typeof(byte[]))
             });
-
-                    Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
-                    img = Resize(img, 100, 50);
-
                     result.ToList().ForEach(x =>
                     {
                         var row = dataTable.NewRow();
 
+                        string fileURL = @folder + x.SupplierKey + ".jpg";
+
                         row["PROVEEDOR"] = x.SupplierName;
                         row["TELEFONO"] = x.PhoneNumber;
-                        row["LOGOTIPO"] = imageToByteArray(img);
+                        row["LOGOTIPO"] = imageToByteArray(ScaleImage(Image.FromFile(fileURL), 200, 100));
 
                         dataTable.Rows.Add(row);
                     });
@@ -210,16 +235,15 @@ namespace Viper.DataAccessLayer
                 new DataColumn("LOGOTIPO", typeof(byte[]))
             });
 
-                    Image img = Image.FromFile(@folder + result.FirstOrDefault().SupplierKey + ".jpg");
-                    img = Resize(img, 100, 50);
-
                     result.ToList().ForEach(x =>
                     {
                         var row = dataTable.NewRow();
 
+                        string fileURL = @folder + x.SupplierKey + ".jpg";
+
                         row["PROVEEDOR"] = x.SupplierName;
                         row["TELEFONO"] = x.PhoneNumber;
-                        row["LOGOTIPO"] = imageToByteArray(img);
+                        row["LOGOTIPO"] = imageToByteArray(ScaleImage(Image.FromFile(fileURL), 200, 100));
 
                         dataTable.Rows.Add(row);
                     });
@@ -242,40 +266,23 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region Resize
+        #region ScaleImage
 
-        private static Image Resize(Image Imagen, int Ancho, int Alto, int resolucion)
+        public static Image ScaleImage(Image image, int maxWidth, int maxHeight)
         {
-            //Bitmap sera donde trabajaremos los cambios
-            using (Bitmap imagenBitmap = new Bitmap(Ancho, Alto, PixelFormat.Format32bppRgb))
-            {
-                imagenBitmap.SetResolution(resolucion, resolucion);
-                //Hacemos los cambios a ImagenBitmap usando a ImagenGraphics y la Imagen Original(Imagen)
-                //ImagenBitmap se comporta como un objeto de referenciado
-                using (Graphics imagenGraphics = Graphics.FromImage(imagenBitmap))
-                {
-                    imagenGraphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    imagenGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                    imagenGraphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
-                    imagenGraphics.DrawImage(Imagen, new Rectangle(0, 0, Ancho, Alto), new Rectangle(0, 0, Imagen.Width, Imagen.Height), GraphicsUnit.Pixel);
-                    //todos los cambios hechos en imagenBitmap lo llevaremos un Image(Imagen) con nuevos datos a travez de un MemoryStream
-                    MemoryStream imagenMemoryStream = new MemoryStream();
-                    imagenBitmap.Save(imagenMemoryStream, ImageFormat.Jpeg);
-                    Imagen = Image.FromStream(imagenMemoryStream);
-                }
-            }
-            return Imagen;
-        }
+            var ratioX = (double)maxWidth / image.Width;
+            var ratioY = (double)maxHeight / image.Height;
+            var ratio = Math.Min(ratioX, ratioY);
 
-        private static Image Resize(Image image, int SizeHorizontalPercent, int SizeVerticalPercent)
-        {
-            //Obntenemos el ancho y el alto a partir del porcentaje de tamaño solicitado
-            int anchoDestino = image.Width * SizeHorizontalPercent / 100;
-            int altoDestino = image.Height * SizeVerticalPercent / 100;
-            //Obtenemos la resolucion original 
-            int resolucion = Convert.ToInt32(image.HorizontalResolution);
+            var newWidth = (int)(image.Width * ratio);
+            var newHeight = (int)(image.Height * ratio);
 
-            return Resize(image, anchoDestino, altoDestino, resolucion);
+            var newImage = new Bitmap(newWidth, newHeight);
+
+            using (var graphics = Graphics.FromImage(newImage))
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+
+            return newImage;
         }
 
         #endregion

@@ -382,8 +382,7 @@ namespace Viper.DesktopApp
             if (BuscarImagen.ShowDialog() == DialogResult.OK)
             {
                 rutaLogotipo = BuscarImagen.FileName;
-                String Direccion = BuscarImagen.FileName;
-                picLogotipo.ImageLocation = Direccion;
+                picLogotipo.ImageLocation = rutaLogotipo;
                 picLogotipo.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
@@ -526,6 +525,10 @@ namespace Viper.DesktopApp
             supplier.CreatedBy = "HECP";
             supplier.LastUpdatedDate = f;
             supplier.LastUpdatedBy = "HECP";
+
+            //Valores automaticos
+            supplier.AddressId = 0;
+            supplier.UserId = 0;
         }
 
         private void savePicture()

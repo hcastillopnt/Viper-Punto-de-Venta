@@ -32,10 +32,15 @@ namespace Viper.DataAccessLayer
         /// Metodo para registrar los empleados para trabajar con el 
         /// Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
-        /// <param name="entityAddress">Entidad Direccion</param>
-        /// <param name="entityEmployee">Entidad Empleado</param>
+        /// <param name="loginID">Nombre de Usuario (C.U.R.P.)</param>
+        /// <param name="pwdEncrypted">Contraseña Encriptada con SHA1</param>
+        /// <param name="roleID">Tipo de Usuario</param>
+        /// <param name="entityAddress">Entidad de Direccion del Empleado</param>
+        /// <param name="entityEmployee">Entidad de Empleado</param>
+        /// <param name="entityEDH">Entidad del Historial del Empleado</param>
         /// <returns>Message</returns>
-        public static string procInsertEmployeeToSystem(Address entityAddress, Employee entityEmployee)
+        public static string procInsertEmployeeToSystem(string loginID, string pwdEncrypted, int roleID, 
+            Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH)
         {
             String message = String.Empty;
 
@@ -49,27 +54,61 @@ namespace Viper.DataAccessLayer
 
                     if (isDataBaseExist)
                     {
-                        dbCtx.Addresses.Add(entityAddress);
+                        User user = new User()
+                        {
+                            LoginID = loginID,
+                            PasswordEncrypted = pwdEncrypted,
+                            RoleId = roleID,
+                            AccessFailedCount = 0,
+                            IsWelcome = true,
+                            IsActive = true,
+                            CreatedBy = "HECP",
+                            CreatedDate = DateTime.Now,
+                            LastUpdatedBy = "HECP",
+                            LastUpdatedDate = DateTime.Now
+                        };
+
+                        dbCtx.Users.Add(user);
 
                         isInserted = dbCtx.SaveChanges() > 0;
 
                         if (isInserted)
                         {
-                            isInserted = false;
+                            dbCtx.Addresses.Add(entityAddress);
 
-                            var AddressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                            isInserted = dbCtx.SaveChanges() > 0;
 
-                            if (AddressID > 0)
+                            if (isInserted)
                             {
-                                entityEmployee.AddressId = AddressID;
+                                int AddressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                dbCtx.Employees.Add(entityEmployee);
-
-                                isInserted = dbCtx.SaveChanges() > 0;
-
-                                if (isInserted == true)
+                                if (AddressID > 0)
                                 {
-                                    dbCtxTran.Commit();
+                                    int UserID = dbCtx.Users.Where(x => x.LoginID == loginID).OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                    entityEmployee.EmployeeNumber = procObtainEmployeeNumberGeneratedAutomatic();
+                                    entityEmployee.UserId = UserID;
+                                    entityEmployee.AddressId = AddressID;
+
+                                    dbCtx.Employees.Add(entityEmployee);
+
+                                    isInserted = dbCtx.SaveChanges() > 0;
+
+                                    if (isInserted)
+                                    {
+                                        int EmployeeID = dbCtx.Employees.Where(x => x.CURP == entityEmployee.CURP).OrderByDescending(x => x.Id).FirstOrDefault().Id;
+
+                                        entityEDH.EmployeeId = EmployeeID;
+
+                                        dbCtx.EmployeesDepartmentHistory.Add(entityEDH);
+
+                                        isInserted = dbCtx.SaveChanges() > 0;
+
+                                        if (isInserted)
+                                        {
+                                            dbCtxTran.Commit();
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -103,6 +142,10 @@ namespace Viper.DataAccessLayer
                     message = exception.Message;
 
                     dbCtxTran.Rollback();
+                }
+                catch(Exception ex)
+                {
+                    message = ex.Message;
                 }
             }
 
@@ -296,74 +339,6 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region procInsertEmployeeHistoryToSystem
-
-        /// <summary>
-        /// Metodo para registrar el historial de un empleado registrado en el sistema
-        /// viper, guardando el puesto, departamento, sucursal, horario, etc.
-        /// </summary>
-        /// <param name="entity">Entidad Historial del Empleado</param>
-        /// <returns>Message</returns>
-        public static string procInsertEmployeeHistoryToSystem(EmployeeDepartmentHistory entity)
-        {
-            String message = String.Empty;
-
-            bool isInserted = false;
-
-            using (var dbCtxTran = dbCtx.Database.BeginTransaction())
-            {
-                try
-                {
-                    bool isDataBaseExist = Database.Exists(dbCtx.Database.Connection);
-
-                    if (isDataBaseExist)
-                    {
-                        dbCtx.EmployeesDepartmentHistory.Add(entity);
-
-                        isInserted = dbCtx.SaveChanges() > 0;
-
-                        if (isInserted)
-                        {
-                            dbCtxTran.Commit();
-                        }
-                    }
-                }
-                catch (DbEntityValidationException ex)
-                {
-                    var errorMessages = ex.EntityValidationErrors
-                            .SelectMany(x => x.ValidationErrors)
-                            .Select(x => x.ErrorMessage);
-                    var fullErrorMessage = string.Join("; ", errorMessages);
-                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                    message = exceptionMessage + "\n" + ex.EntityValidationErrors;
-
-                    dbCtxTran.Rollback();
-                }
-                catch (DbUpdateConcurrencyException ex)
-                {
-                    var entityObj = ex.Entries.Single().GetDatabaseValues();
-
-                    if (entityObj == null)
-                        message = "The entity being updated is already deleted by another user";
-                    else
-                        message = "The entity being updated has already been updated by another user";
-
-                    dbCtxTran.Rollback();
-                }
-                catch (DbUpdateException ex)
-                {
-                    var exception = HandleDbUpdateException(ex);
-                    message = exception.Message;
-
-                    dbCtxTran.Rollback();
-                }
-            }
-
-            return message;
-        }
-
-        #endregion
-
         #region procObtainEmployeeNumberGeneratedAutomatic
 
         /// <summary>
@@ -401,31 +376,6 @@ namespace Viper.DataAccessLayer
             EmployeeNumber = string.Format("VIPER-EMP-{0:0000}", inc);
 
             return EmployeeNumber;
-        }
-
-        #endregion
-
-        #region procGetLastIDToEmployeeRegisteredByCURP
-
-        /// <summary>
-        /// Metodo para obtener el ultimo ID de los empleados registrados
-        /// </summary>
-        /// <param name="CURP">Clave Única de Registro de Población</param>
-        /// <returns>EmployeeID</returns>
-        public static int procGetLastIDToEmployeeRegisteredByCURP(string CURP)
-        {
-            bool isExistente = false;
-
-            int EmployeeID = 0;
-
-            isExistente = Database.Exists(dbCtx.Database.Connection);
-
-            if (isExistente)
-            {
-                EmployeeID = dbCtx.Employees.Where(x => x.CURP == CURP).OrderByDescending(x => x.Id).FirstOrDefault().Id;
-            }
-
-            return EmployeeID;
         }
 
         #endregion

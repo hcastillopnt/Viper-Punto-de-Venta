@@ -585,6 +585,7 @@
             this.CURP.Size = new System.Drawing.Size(204, 40);
             this.CURP.TabIndex = 8;
             this.CURP.ThemeName = "VisualStudio2012Light";
+            this.CURP.TextChanged += new System.EventHandler(this.CURP_TextChanged);
             // 
             // lblNSS
             // 
@@ -974,6 +975,7 @@
             this.Entidad_Federativa.Size = new System.Drawing.Size(235, 49);
             this.Entidad_Federativa.TabIndex = 0;
             this.Entidad_Federativa.ThemeName = "VisualStudio2012Light";
+            this.Entidad_Federativa.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.EntidadFederativa_SelectedIndexChanged);
             // 
             // tlpDG_03
             // 
@@ -1528,6 +1530,7 @@
             this.Departamento.Size = new System.Drawing.Size(368, 56);
             this.Departamento.TabIndex = 7;
             this.Departamento.ThemeName = "VisualStudio2012Light";
+            this.Departamento.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.Departamento_SelectedIndexChanged);
             // 
             // Puesto
             // 

@@ -244,199 +244,6 @@ namespace Viper.DesktopApp
             }
         }
 
-        private void Control_Leave(object sender, EventArgs e)
-        {
-            if (sender is RadTextBox)
-            {
-                objTextbox = (RadTextBox)sender;
-
-                switch (objTextbox.Name)
-                {
-                    //tab 1
-                    case "Nombre":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Fecha_de_Nacimiento.Focus();
-                        break;
-
-                    //tab 3
-                    case "Apellido_Paterno":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Apellido_Materno.Focus();
-                        break;
-
-                    //tab 4
-                    case "Apellido_Materno":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Genero.Focus();
-                        break;
-
-                    //tab 7
-                    case "RFC":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        CURP.Focus();
-                        break;
-
-                    //tab 8
-                    case "CURP":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        NSS.Select();
-                        NSS.Focus();
-                        break;
-
-                    //tab 12
-                    case "Vialidad":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Codigo_Postal.Select();
-                        Codigo_Postal.Focus();
-                        break;
-
-                    //tab 14
-                    case "No_Ext":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        No_Int.Focus();
-                        break;
-
-                    //tab 15
-                    case "No_Int":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Colonia.Focus();
-                        break;
-
-                    //tab 16
-                    case "Colonia":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Entidad_Federativa.Focus();
-                        break;
-
-                    //tab 19
-                    case "eMail":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Telefono.Select();
-                        Telefono.Focus();
-                        break;
-                }
-            }
-            else if (sender is RadMaskedEditBox)
-            {
-                objMaskedEditBox = (RadMaskedEditBox)sender;
-
-                switch (objMaskedEditBox.Name)
-                {
-                    //tab 2
-                    case "Fecha_de_Nacimiento":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Apellido_Paterno.Focus();
-                        break;
-
-                    //tab 9
-                    case "NSS":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Tipo_Inmueble.Focus();
-                        break;
-
-                    //tab 13
-                    case "Codigo_Postal":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        No_Ext.Focus();
-                        break;
-
-                    //tab 20
-                    case "Telefono":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Celular.Select();
-                        Celular.Focus();
-                        break;
-
-                    //tab 21
-                    case "Celular":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        cboCamara.Focus();
-                        break;
-                }
-            }
-            else if (sender is RadDropDownList)
-            {
-                objDropDownList = (RadDropDownList)sender;
-
-                switch (objDropDownList.Name)
-                {
-                    //tab 5
-                    case "Genero":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Estado_Civil.Focus();
-                        break;
-
-                    //tab 6
-                    case "Estado_Civil":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        RFC.Focus();
-                        break;
-
-                    //tab 10
-                    case "Tipo_Inmueble":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Tipo_Vialidad.Focus();
-                        break;
-
-                    //tab 11
-                    case "Tipo_Vialidad":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Vialidad.Focus();
-                        break;
-
-                    //tab 17
-                    case "Entidad_Federativa":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        Municipio.Focus();
-                        break;
-
-                    //tab 18
-                    case "Municipio":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        eMail.Focus();
-                        break;
-
-                    //tab 22
-                    case "cboCamara":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        btnCaptura.Focus();
-                        break;
-                }
-            }
-            else if (sender is RadButton)
-            {
-                objButton = (RadButton)sender;
-
-                switch (objButton.Name)
-                {
-                    //tab 23
-                    case "btnCaptura":
-                        pvMenuOpciones.SelectedPage = pvpDatosGenerales;
-                        btnExaminar.Focus();
-                        break;
-                }
-            }
-            else if (sender is RadTimePicker)
-            {
-                objDateTimePicker = (RadDateTimePicker)sender;
-
-                switch (objDateTimePicker.Name)
-                {
-                    //tab 30
-                    case "Fecha_Inicio_Labores":
-                        pvMenuOpciones.SelectedPage = pvpInformacionEmpleado;
-                        Fecha_Fin_Labores.Focus();
-                        break;
-
-                    //tab 31
-                    case "Fecha_Fin_Labores":
-                        pvMenuOpciones.SelectedPage = pvpInformacionEmpleado;
-                        btnEliminarIE.Focus();
-                        break;
-                }
-            }
-        }
-
         private void CURP_TextChanged(object sender, EventArgs e)
         {
             this.Usuario.Text = CURP.Text.Trim().ToUpper().ToString();
@@ -493,8 +300,7 @@ namespace Viper.DesktopApp
             if (BuscarImagen.ShowDialog() == DialogResult.OK)
             {
                 rutaFoto = BuscarImagen.FileName;
-                String Direccion = BuscarImagen.FileName;
-                picEmpleado.ImageLocation = Direccion;
+                picEmpleado.ImageLocation = rutaFoto;
                 picEmpleado.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
@@ -727,6 +533,11 @@ namespace Viper.DesktopApp
             employeeDepartmentHistory.LastUpdatedDate = f;
             employeeDepartmentHistory.LastUpdatedBy = "HECP";
 
+            //Valores automaticos
+            employeeDepartmentHistory.EmployeeId = 0;
+            employee.AddressId = 0;
+            employee.EmployeeNumber = "DEFAULT";
+            employee.UserId = 0;
         }
 
         private void registerEmployeeInSystem()
@@ -735,7 +546,7 @@ namespace Viper.DesktopApp
 
             recoveryInformationObjectsByUserInterface();
 
-            message = BusinessLogicLayer.EmployeeBLL.procRegisterEmployee(address, employee, employeeDepartmentHistory, Convert.ToInt32(Rol.SelectedValue));
+            message = BusinessLogicLayer.EmployeeBLL.procInsertEmployeeToSystem(address, employee, employeeDepartmentHistory, Convert.ToInt32(Rol.SelectedValue));
 
             if (String.IsNullOrEmpty(message))
             {

@@ -313,8 +313,7 @@ namespace Viper.DesktopApp
             if (BuscarImagen.ShowDialog() == DialogResult.OK)
             {
                 rutaIcono = BuscarImagen.FileName;
-                String Direccion = BuscarImagen.FileName;
-                picMedicamento.ImageLocation = Direccion;
+                picMedicamento.ImageLocation = rutaIcono;
                 picMedicamento.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
