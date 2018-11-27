@@ -20,72 +20,55 @@ namespace Viper.BusinessLogicLayer
         /// <param name="entityCompany">Entidad Empresa</param>
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <param name="entityAddressSAT">Entidad Direccion Fiscal</param>
-        /// <param name="RoleID">ID del Rol</param>
+        /// <param name="roleID">ID del Rol</param>
         /// <param name="entitySite">Entidad Sucursal</param>
         /// <returns>Message</returns>
-        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, int RoleID, Site entitySite)
+        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, int roleID, Site entitySite)
         {
             String message = String.Empty;
             String companyName = entityCompany.CompanyName;
             String RFC = entityCompany.RFC;
+            String loginID = entityCompany.RFC;
+            String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
             ICollection<ValidationResult> results = null;
 
-            try
-            {
-                bool isCompanyRegistered = DataAccessLayer.CompanyDAL.procIsCompanyRegisteredToDataBase(companyName, RFC);
+            bool isCompanyRegistered = DataAccessLayer.CompanyDAL.procIsCompanyRegisteredToDataBase(companyName, RFC);
 
-                if (isCompanyRegistered)
+            if (isCompanyRegistered)
+            {
+                message = "Los datos de la licencia que intenta registrar ya existen en nuestra base de datos, favor de verificar los datos";
+            }
+            else
+            {
+                if (!validate(entityCompany, out results))
                 {
-                    message = "Los datos de la licencia que intenta registrar ya existen en nuestra base de datos, favor de verificar los datos";
+                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
                 }
                 else
                 {
-                    String loginID = entityCompany.RFC;
-                    String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("admin");
-
-                    message = DataAccessLayer.UserDAL.procInsertUserToSystem(loginID, pwdEncrypted, RoleID);
-
-                    if (String.IsNullOrEmpty(message))
+                    if (!validate(entityAddress, out results))
                     {
-                        int UserID = DataAccessLayer.UserDAL.procGetLastIDToUserRegisteredByRFC(loginID);
-
-                        entityCompany.UserId = UserID;
-
-                        if (!validate(entityCompany, out results))
+                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
+                    }
+                    else
+                    {
+                        if (!validate(entityAddressSAT, out results))
                         {
                             message = String.Join("\n", results.Select(o => o.ErrorMessage));
                         }
                         else
                         {
-                            if (!validate(entityAddress, out results))
+                            if (!validate(entitySite, out results))
                             {
                                 message = String.Join("\n", results.Select(o => o.ErrorMessage));
                             }
                             else
                             {
-                                if (!validate(entityAddressSAT, out results))
-                                {
-                                    message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                                }
-                                else
-                                {
-                                    if (!validate(entitySite, out results))
-                                    {
-                                        message = String.Join("\n", results.Select(o => o.ErrorMessage));
-                                    }
-                                    else
-                                    {
-                                        message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(entityCompany, entityAddress, entityAddressSAT, entitySite);
-                                    }
-                                }
+                                message = DataAccessLayer.CompanyDAL.procInsertCompanyToSystem(loginID, pwdEncrypted, roleID, entityCompany, entityAddress, entityAddressSAT, entitySite);
                             }
                         }
                     }
                 }
-            }
-            catch(Exception ex)
-            {
-                message = ex.Message;
             }
 
             return message;

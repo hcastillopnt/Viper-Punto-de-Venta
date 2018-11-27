@@ -146,6 +146,8 @@ namespace Viper.DataAccessLayer
                 catch(Exception ex)
                 {
                     message = ex.Message;
+
+                    dbCtxTran.Rollback();
                 }
             }
 

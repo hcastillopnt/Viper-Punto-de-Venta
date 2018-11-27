@@ -29,12 +29,15 @@ namespace Viper.DataAccessLayer
         /// Metodo para registrar las licencias adquiridas por diferentes negocios,
         /// para trabajar con el Viper Sistema de Punto de Venta para Farmacias
         /// </summary>
+        /// <param name="loginID">Nombre de Usuario (R.F.C.)</param>
+        /// <param name="pwdEncrypted">Contraseña encriptada con SHA1</param>
+        /// <param name="roleID">Rol ID</param>
         /// <param name="entityCompany">Entidad Empresa</param>
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <param name="entityAddressSAT">Entidad Direccion Fiscal</param>
         /// <param name="entitySite">Entidad Sucursal</param>
         /// <returns>Message</returns>
-        public static string procInsertCompanyToSystem(Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, Site entitySite)
+        public static string procInsertCompanyToSystem(string loginID, string pwdEncrypted, int roleID, Company entityCompany, Address entityAddress, AddressSAT entityAddressSAT, Site entitySite)
         {
             String message = String.Empty;
 
@@ -48,58 +51,73 @@ namespace Viper.DataAccessLayer
 
                     if (isDataBaseExist)
                     {
-                        dbCtx.Addresses.Add(entityAddress);
+                        User user = new User()
+                        {
+                            LoginID = loginID,
+                            PasswordEncrypted = pwdEncrypted,
+                            RoleId = roleID,
+                            AccessFailedCount = 0,
+                            IsWelcome = true,
+                            IsActive = true,
+                            CreatedBy = "HECP",
+                            CreatedDate = DateTime.Now,
+                            LastUpdatedBy = "HECP",
+                            LastUpdatedDate = DateTime.Now
+                        };
+
+                        dbCtx.Users.Add(user);
 
                         isInserted = dbCtx.SaveChanges() > 0;
 
                         if (isInserted)
                         {
-                            isInserted = false;
+                            dbCtx.Addresses.Add(entityAddress);
 
-                            var addressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                            isInserted = dbCtx.SaveChanges() > 0;
 
-                            if (addressID > 0)
+                            if (isInserted)
                             {
-                                isInserted = false;
+                                int addressID = dbCtx.Addresses.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                dbCtx.AddressesSAT.Add(entityAddressSAT);
-
-                                isInserted = dbCtx.SaveChanges() > 0;
-
-                                if (isInserted)
+                                if (addressID > 0)
                                 {
-                                    isInserted = false;
+                                    dbCtx.AddressesSAT.Add(entityAddressSAT);
 
-                                    var addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                                    isInserted = dbCtx.SaveChanges() > 0;
 
-                                    if (addressSATID > 0)
+                                    if (isInserted)
                                     {
+                                        int addressSATID = dbCtx.AddressesSAT.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                        entityCompany.AddressSATId = addressSATID;
-                                        entityCompany.AddressId = addressID;
-
-                                        dbCtx.Companies.Add(entityCompany);
-
-                                        isInserted = dbCtx.SaveChanges() > 0;
-
-                                        if (isInserted)
+                                        if (addressSATID > 0)
                                         {
-                                            isInserted = false;
+                                            int UserID = dbCtx.Users.Where(x => x.LoginID == loginID).OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                            var CompanyID = dbCtx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
+                                            entityCompany.UserId = UserID;
+                                            entityCompany.AddressSATId = addressSATID;
+                                            entityCompany.AddressId = addressID;
 
-                                            if (CompanyID > 0)
+                                            dbCtx.Companies.Add(entityCompany);
+
+                                            isInserted = dbCtx.SaveChanges() > 0;
+
+                                            if (isInserted)
                                             {
-                                                entitySite.AddressId = addressID;
-                                                entitySite.CompanyId = CompanyID;
+                                                int CompanyID = dbCtx.Companies.OrderByDescending(x => x.Id).FirstOrDefault().Id;
 
-                                                dbCtx.Sites.Add(entitySite);
-
-                                                isInserted = dbCtx.SaveChanges() > 0;
-
-                                                if (isInserted)
+                                                if (CompanyID > 0)
                                                 {
-                                                    dbCtxTran.Commit();
+                                                    entitySite.AddressId = addressID;
+                                                    entitySite.CompanyId = CompanyID;
+
+                                                    dbCtx.Sites.Add(entitySite);
+
+                                                    isInserted = dbCtx.SaveChanges() > 0;
+
+                                                    if (isInserted)
+                                                    {
+                                                        dbCtxTran.Commit();
+                                                    }
                                                 }
                                             }
                                         }
@@ -135,6 +153,12 @@ namespace Viper.DataAccessLayer
                 {
                     var exception = HandleDbUpdateException(ex);
                     message = exception.Message;
+
+                    dbCtxTran.Rollback();
+                }
+                catch(Exception ex)
+                {
+                    message = ex.Message;
 
                     dbCtxTran.Rollback();
                 }

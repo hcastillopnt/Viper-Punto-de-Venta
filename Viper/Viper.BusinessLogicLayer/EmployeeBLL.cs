@@ -11,7 +11,7 @@ namespace Viper.BusinessLogicLayer
 {
     public class EmployeeBLL
     {
-        #region procRegisterEmployee
+        #region procInsertEmployeeToSystem
 
         /// <summary>
         /// Metodo para registrar los empleados para trabajar con el 
@@ -19,15 +19,15 @@ namespace Viper.BusinessLogicLayer
         /// <param name="entityAddress">Entidad Direccion</param>
         /// <param name="entityEmployee">Entidad Empleado</param>
         /// <param name="entityEDH">Entidad Historial del Empleado</param>
-        /// <param name="RoleID">ID del Tipo de Rol</param>
+        /// <param name="roleID">ID del Tipo de Rol</param>
         /// <returns>Message</returns>
-        public static string procInsertEmployeeToSystem(Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH, int RoleID)
+        public static string procInsertEmployeeToSystem(Address entityAddress, Employee entityEmployee, EmployeeDepartmentHistory entityEDH, int roleID)
         {
             String message = String.Empty;
-            String loginID = entityEmployee.CURP;
-            String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("12345");
             String CURP = entityEmployee.CURP;
             String RFC = entityEmployee.RFC;
+            String loginID = entityEmployee.CURP;
+            String pwdEncrypted = EncryptionDecryption.EncriptarSHA1("12345");
 
             ICollection<ValidationResult> results = null;
 
@@ -67,7 +67,7 @@ namespace Viper.BusinessLogicLayer
                                 }
                                 else
                                 {
-                                    message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(loginID, pwdEncrypted, RoleID, entityAddress, entityEmployee, entityEDH);
+                                    message = DataAccessLayer.EmployeeDAL.procInsertEmployeeToSystem(loginID, pwdEncrypted, roleID, entityAddress, entityEmployee, entityEDH);
                                 }
                             }
                         }

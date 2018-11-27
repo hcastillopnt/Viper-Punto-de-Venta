@@ -261,56 +261,6 @@ namespace Viper.DataAccessLayer
 
         #endregion
 
-        #region procGetLastIDToUserRegisteredByRFC
-
-        /// <summary>
-        /// Metodo para obtener el ultimo ID de los usuarios registrados
-        /// </summary>
-        /// <param name="RFC">Registro Federal de Contribuyentes</param>
-        /// <returns>UserID</returns>
-        public static int procGetLastIDToUserRegisteredByRFC(string RFC)
-        {
-            bool isExistente = false;
-
-            int UserID = 0;
-
-            isExistente = Database.Exists(dbCtx.Database.Connection);
-
-            if (isExistente)
-            {
-                UserID = dbCtx.Users.Where(x => x.LoginID == RFC).OrderByDescending(x => x.Id).FirstOrDefault().Id;
-            }
-
-            return UserID;
-        }
-
-        #endregion
-
-        #region procGetLastIDToUserRegisteredByCURP
-
-        /// <summary>
-        /// Metodo para obtener el ultimo ID de los usuarios registrados
-        /// </summary>
-        /// <param name="CURP">Clave Única de Registro de Población</param>
-        /// <returns>UserID</returns>
-        public static int procGetLastIDToUserRegisteredByCURP(string CURP)
-        {
-            bool isExistente = false;
-
-            int UserID = 0;
-
-            isExistente = Database.Exists(dbCtx.Database.Connection);
-
-            if (isExistente)
-            {
-                UserID = dbCtx.Users.Where(x => x.LoginID == CURP).OrderByDescending(x => x.Id).FirstOrDefault().Id;
-            }
-
-            return UserID;
-        }
-
-        #endregion
-
         #region HandleDbUpdateException
         private static Exception HandleDbUpdateException(DbUpdateException dbu)
         {
