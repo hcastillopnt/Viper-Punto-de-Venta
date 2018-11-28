@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressBLL.cs" />
     <Compile Include="CompanyBLL.cs" />
     <Compile Include="DropDownListHelperBLL.cs" />
     <Compile Include="EmployeeBLL.cs" />

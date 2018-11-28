@@ -222,6 +222,44 @@ namespace Viper.BusinessLogicLayer
 
         #endregion
 
+        #region procGetAddressCompanyObjectByAddressId
+
+        /// <summary>
+        /// Metodo para obtener los datos de la direccion que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
+        /// </summary>
+        /// <param name="AddressID">ID Direccion</param>
+        /// <returns>Object</returns>
+        public static Address procGetAddressCompanyObjectByAddressId(int AddressID)
+        {
+            Address address = null;
+
+            address = DataAccessLayer.CompanyDAL.procGetAddressCompanyObjectByAddressId(AddressID);
+
+            return address;
+        }
+
+        #endregion
+
+        #region procGetAddressSATCompanyObjectByAddressId
+
+        /// <summary>
+        /// Metodo para obtener los datos de la direccion fiscal que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
+        /// </summary>
+        /// <param name="AddressSATID">ID Direccion Fiscal</param>
+        /// <returns>Object</returns>
+        public static AddressSAT procGetAddressSATCompanyObjectByAddressId(int AddressSATID)
+        {
+            AddressSAT addressSAT = null;
+
+            addressSAT = DataAccessLayer.CompanyDAL.procGetAddressSATCompanyObjectByAddressId(AddressSATID);
+
+            return addressSAT;
+        }
+
+        #endregion
+
         #region validate<T>
 
         /// <summary>

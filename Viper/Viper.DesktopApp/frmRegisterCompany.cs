@@ -521,8 +521,8 @@ namespace Viper.DesktopApp
         private void uploadDataCompany(int CompanyID)
         {
             company = BusinessLogicLayer.CompanyBLL.procGetCompanyObjectByCompanyID(CompanyID);
-            address = BusinessLogicLayer.AddressBLL.procGetAddressObjectByAddressId(company.AddressId);
-            addressSAT = BusinessLogicLayer.AddressBLL.procGetAddressSATObjectByAddressId(company.AddressSATId);
+            address = BusinessLogicLayer.CompanyBLL.procGetAddressCompanyObjectByAddressId(company.AddressId);
+            addressSAT = BusinessLogicLayer.CompanyBLL.procGetAddressSATCompanyObjectByAddressId(company.AddressSATId);
 
             this.Tipo_Inmueble.DataSource = BusinessLogicLayer.DropDownListHelperBLL.GetAddressTypeDropDownList();
             this.Tipo_Inmueble.DisplayMember = "Name";

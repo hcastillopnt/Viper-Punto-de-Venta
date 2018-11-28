@@ -156,7 +156,7 @@ namespace Viper.DataAccessLayer
 
                     dbCtxTran.Rollback();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     message = ex.Message;
 
@@ -468,6 +468,58 @@ namespace Viper.DataAccessLayer
             }
 
             return CompanyID;
+        }
+
+        #endregion
+
+        #region procGetAddressCompanyObjectByAddressId
+
+        /// <summary>
+        /// Metodo para obtener los datos de la direccion que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
+        /// </summary>
+        /// <param name="AddressID">ID Direccion</param>
+        /// <returns>Object</returns>
+        public static Address procGetAddressCompanyObjectByAddressId(int AddressID)
+        {
+            bool isExistente = false;
+
+            Address address = new Address();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                address = dbCtx.Addresses.Where(x => x.Id == AddressID).SingleOrDefault();
+            }
+
+            return address;
+        }
+
+        #endregion
+
+        #region procGetAddressSATCompanyObjectByAddressId
+
+        /// <summary>
+        /// Metodo para obtener los datos de la direccion fiscal que adquirio la licencia 
+        /// del Sistema de Punto de Venta para Farmacias Viper
+        /// </summary>
+        /// <param name="AddressSATID">ID Direccion Fiscal</param>
+        /// <returns>Object</returns>
+        public static AddressSAT procGetAddressSATCompanyObjectByAddressId(int AddressSATID)
+        {
+            bool isExistente = false;
+
+            AddressSAT addressSAT = new AddressSAT();
+
+            isExistente = Database.Exists(dbCtx.Database.Connection);
+
+            if (isExistente)
+            {
+                addressSAT = dbCtx.AddressesSAT.Where(x => x.Id == AddressSATID).SingleOrDefault();
+            }
+
+            return addressSAT;
         }
 
         #endregion

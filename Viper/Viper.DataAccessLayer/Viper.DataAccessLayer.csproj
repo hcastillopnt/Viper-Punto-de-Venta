@@ -61,7 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressDAL.cs" />
     <Compile Include="CompanyDAL.cs" />
     <Compile Include="DropDownListHelperDAL.cs" />
     <Compile Include="EmployeeDAL.cs" />
