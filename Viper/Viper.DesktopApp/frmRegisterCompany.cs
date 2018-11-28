@@ -690,8 +690,6 @@ namespace Viper.DesktopApp
 
         private void importFiscalData()
         {
-            string message = String.Empty;
-
             if (address == null)
                 address = new Address();
 
@@ -711,35 +709,26 @@ namespace Viper.DesktopApp
             address.LastUpdatedDate = f;
             address.LastUpdatedBy = "HECP";
 
-            message = BusinessLogicLayer.AddressBLL.validateEmptyFieldsInForm(address);
+            this.Tipo_Inmueble_Fiscal.SelectedValue = address.AddressTypeId;
+            this.Tipo_Vialidad_Fiscal.SelectedValue = address.RoadTypeId;
+            this.Vialidad_Fiscal.Text = Vialidad.Text.Trim().ToString();
+            this.No_Ext_Fiscal.Text = No_Ext.Text.Trim().ToString();
+            this.No_Int_Fiscal.Text = No_Int.Text.Trim().ToString();
+            this.Codigo_Postal_Fiscal.Text = Codigo_Postal.Text.Trim().ToString();
+            this.Colonia_Fiscal.Text = Colonia.Text.Trim().ToString();
+            this.Entidad_Federativa_Fiscal.SelectedValue = address.StateProvinceId;
+            this.Municipio_Fiscal.SelectedValue = address.CityId;
 
-            if (string.IsNullOrEmpty(message))
-            {
-                this.Tipo_Inmueble_Fiscal.SelectedValue = address.AddressTypeId;
-                this.Tipo_Vialidad_Fiscal.SelectedValue = address.RoadTypeId;
-                this.Vialidad_Fiscal.Text = Vialidad.Text.Trim().ToString();
-                this.No_Ext_Fiscal.Text = No_Ext.Text.Trim().ToString();
-                this.No_Int_Fiscal.Text = No_Int.Text.Trim().ToString();
-                this.Codigo_Postal_Fiscal.Text = Codigo_Postal.Text.Trim().ToString();
-                this.Colonia_Fiscal.Text = Colonia.Text.Trim().ToString();
-                this.Entidad_Federativa_Fiscal.SelectedValue = address.StateProvinceId;
-                this.Municipio_Fiscal.SelectedValue = address.CityId;
-
-                this.Tipo_Inmueble_Fiscal.Enabled = false;
-                this.Tipo_Vialidad_Fiscal.Enabled = false;
-                this.Vialidad_Fiscal.Enabled = false;
-                this.No_Ext_Fiscal.Enabled = false;
-                this.No_Int_Fiscal.Enabled = false;
-                this.Codigo_Postal_Fiscal.Enabled = false;
-                this.Colonia_Fiscal.Enabled = false;
-                this.Entidad_Federativa_Fiscal.Enabled = false;
-                this.Municipio_Fiscal.Enabled = false;
-                this.btnImportarDatosFiscales.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show(new Form { TopMost = true }, "El sistema no puede importar la informacion, favor de completar los campos anteriores", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            this.Tipo_Inmueble_Fiscal.Enabled = false;
+            this.Tipo_Vialidad_Fiscal.Enabled = false;
+            this.Vialidad_Fiscal.Enabled = false;
+            this.No_Ext_Fiscal.Enabled = false;
+            this.No_Int_Fiscal.Enabled = false;
+            this.Codigo_Postal_Fiscal.Enabled = false;
+            this.Colonia_Fiscal.Enabled = false;
+            this.Entidad_Federativa_Fiscal.Enabled = false;
+            this.Municipio_Fiscal.Enabled = false;
+            this.btnImportarDatosFiscales.Enabled = false;
         }
 
         private void uploadLogotipo()
