@@ -62,12 +62,12 @@
             this.tlpPrincipal.Controls.Add(this.picLogotipoApp, 0, 0);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 2;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.30262F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.60648F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1366, 768);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1152, 768);
             this.tlpPrincipal.TabIndex = 1;
             // 
             // tlpCenter
@@ -77,12 +77,12 @@
             this.tlpCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tlpCenter.Controls.Add(this.tlpCentro, 0, 0);
             this.tlpCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCenter.Location = new System.Drawing.Point(4, 168);
-            this.tlpCenter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpCenter.Location = new System.Drawing.Point(4, 167);
+            this.tlpCenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpCenter.Name = "tlpCenter";
             this.tlpCenter.RowCount = 1;
             this.tlpCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCenter.Size = new System.Drawing.Size(1358, 595);
+            this.tlpCenter.Size = new System.Drawing.Size(1144, 597);
             this.tlpCenter.TabIndex = 5;
             // 
             // tlpCentro
@@ -102,8 +102,8 @@
             this.tlpCentro.Controls.Add(this.btnGuardar, 0, 5);
             this.tlpCentro.Controls.Add(this.btnCancelar, 1, 5);
             this.tlpCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCentro.Location = new System.Drawing.Point(4, 5);
-            this.tlpCentro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpCentro.Location = new System.Drawing.Point(4, 4);
+            this.tlpCentro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpCentro.Name = "tlpCentro";
             this.tlpCentro.RowCount = 6;
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -112,7 +112,7 @@
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCentro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCentro.Size = new System.Drawing.Size(1350, 585);
+            this.tlpCentro.Size = new System.Drawing.Size(1136, 589);
             this.tlpCentro.TabIndex = 0;
             // 
             // lblTitulo
@@ -125,7 +125,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(4, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(802, 97);
+            this.lblTitulo.Size = new System.Drawing.Size(672, 98);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "SALIDA DE EFECTIVO";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,10 +135,10 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(4, 97);
+            this.lblCantidad.Location = new System.Drawing.Point(4, 98);
             this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(397, 97);
+            this.lblCantidad.Size = new System.Drawing.Size(332, 98);
             this.lblCantidad.TabIndex = 3;
             this.lblCantidad.Text = "Cantidad:";
             this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,10 +148,10 @@
             this.lblComentarios.AutoSize = true;
             this.lblComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentarios.Location = new System.Drawing.Point(4, 291);
+            this.lblComentarios.Location = new System.Drawing.Point(4, 294);
             this.lblComentarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(397, 97);
+            this.lblComentarios.Size = new System.Drawing.Size(332, 98);
             this.lblComentarios.TabIndex = 4;
             this.lblComentarios.Text = "Comentarios:";
             this.lblComentarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,11 +161,11 @@
             this.Cantidad.AutoSize = false;
             this.Cantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantidad.Location = new System.Drawing.Point(4, 199);
-            this.Cantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Cantidad.Location = new System.Drawing.Point(4, 200);
+            this.Cantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.NullText = "$ 0.00";
-            this.Cantidad.Size = new System.Drawing.Size(397, 87);
+            this.Cantidad.Size = new System.Drawing.Size(332, 90);
             this.Cantidad.TabIndex = 5;
             this.Cantidad.ThemeName = "VisualStudio2012Light";
             // 
@@ -176,13 +176,13 @@
             this.tlpCentro.SetColumnSpan(this.Comentarios, 2);
             this.Comentarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Comentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Comentarios.Location = new System.Drawing.Point(4, 393);
-            this.Comentarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Comentarios.Location = new System.Drawing.Point(4, 396);
+            this.Comentarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Comentarios.Multiline = true;
             this.Comentarios.Name = "Comentarios";
             this.Comentarios.NullText = "Escriba una razon o proveedor";
             this.Comentarios.ShowNullText = true;
-            this.Comentarios.Size = new System.Drawing.Size(802, 87);
+            this.Comentarios.Size = new System.Drawing.Size(672, 90);
             this.Comentarios.TabIndex = 6;
             this.Comentarios.ThemeName = "VisualStudio2012Light";
             // 
@@ -191,15 +191,15 @@
             this.tlpCentro.SetColumnSpan(this.lstSalidasEfectivo, 2);
             this.lstSalidasEfectivo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstSalidasEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstSalidasEfectivo.GroupIndent = 38;
-            this.lstSalidasEfectivo.GroupItemSize = new System.Drawing.Size(300, 31);
-            this.lstSalidasEfectivo.HeaderHeight = 53.84615F;
-            this.lstSalidasEfectivo.ItemSize = new System.Drawing.Size(300, 31);
-            this.lstSalidasEfectivo.Location = new System.Drawing.Point(814, 5);
-            this.lstSalidasEfectivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstSalidasEfectivo.GroupIndent = 34;
+            this.lstSalidasEfectivo.GroupItemSize = new System.Drawing.Size(267, 25);
+            this.lstSalidasEfectivo.HeaderHeight = 43.07692F;
+            this.lstSalidasEfectivo.ItemSize = new System.Drawing.Size(267, 25);
+            this.lstSalidasEfectivo.Location = new System.Drawing.Point(684, 4);
+            this.lstSalidasEfectivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstSalidasEfectivo.Name = "lstSalidasEfectivo";
             this.tlpCentro.SetRowSpan(this.lstSalidasEfectivo, 6);
-            this.lstSalidasEfectivo.Size = new System.Drawing.Size(532, 575);
+            this.lstSalidasEfectivo.Size = new System.Drawing.Size(448, 581);
             this.lstSalidasEfectivo.TabIndex = 7;
             this.lstSalidasEfectivo.ThemeName = "VisualStudio2012Light";
             // 
@@ -208,10 +208,10 @@
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(4, 490);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(4, 494);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(397, 90);
+            this.btnGuardar.Size = new System.Drawing.Size(332, 91);
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -223,10 +223,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Red;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(409, 490);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelar.Location = new System.Drawing.Point(344, 494);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(397, 90);
+            this.btnCancelar.Size = new System.Drawing.Size(332, 91);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -237,24 +237,24 @@
             // 
             this.picLogotipoApp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogotipoApp.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipoApp.Image")));
-            this.picLogotipoApp.Location = new System.Drawing.Point(4, 5);
-            this.picLogotipoApp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picLogotipoApp.Location = new System.Drawing.Point(4, 4);
+            this.picLogotipoApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogotipoApp.Name = "picLogotipoApp";
-            this.picLogotipoApp.Size = new System.Drawing.Size(1358, 153);
+            this.picLogotipoApp.Size = new System.Drawing.Size(1144, 155);
             this.picLogotipoApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogotipoApp.TabIndex = 2;
             this.picLogotipoApp.TabStop = false;
             // 
             // frmOutputMoney
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1152, 768);
             this.ControlBox = false;
             this.Controls.Add(this.tlpPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmOutputMoney";

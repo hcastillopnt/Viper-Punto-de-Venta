@@ -37,7 +37,6 @@
             this.gbDatosGenerales = new Telerik.WinControls.UI.RadGroupBox();
             this.tlpDatosGenerales = new System.Windows.Forms.TableLayoutPanel();
             this.tlpDatosGenerales_Derecha = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCuentasBanco = new Telerik.WinControls.UI.RadButton();
             this.picLogotipo = new System.Windows.Forms.PictureBox();
             this.btnExaminar = new Telerik.WinControls.UI.RadButton();
             this.tlpDatosGenerales_Izquierda = new System.Windows.Forms.TableLayoutPanel();
@@ -123,7 +122,6 @@
             this.gbDatosGenerales.SuspendLayout();
             this.tlpDatosGenerales.SuspendLayout();
             this.tlpDatosGenerales_Derecha.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCuentasBanco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).BeginInit();
             this.tlpDatosGenerales_Izquierda.SuspendLayout();
@@ -285,33 +283,16 @@
             // 
             this.tlpDatosGenerales_Derecha.ColumnCount = 1;
             this.tlpDatosGenerales_Derecha.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDatosGenerales_Derecha.Controls.Add(this.btnCuentasBanco, 0, 2);
             this.tlpDatosGenerales_Derecha.Controls.Add(this.picLogotipo, 0, 0);
             this.tlpDatosGenerales_Derecha.Controls.Add(this.btnExaminar, 0, 1);
             this.tlpDatosGenerales_Derecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDatosGenerales_Derecha.Location = new System.Drawing.Point(734, 3);
             this.tlpDatosGenerales_Derecha.Name = "tlpDatosGenerales_Derecha";
-            this.tlpDatosGenerales_Derecha.RowCount = 3;
+            this.tlpDatosGenerales_Derecha.RowCount = 2;
             this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatosGenerales_Derecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpDatosGenerales_Derecha.Size = new System.Drawing.Size(203, 310);
             this.tlpDatosGenerales_Derecha.TabIndex = 0;
-            // 
-            // btnCuentasBanco
-            // 
-            this.btnCuentasBanco.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCuentasBanco.Enabled = false;
-            this.btnCuentasBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuentasBanco.Image = ((System.Drawing.Image)(resources.GetObject("btnCuentasBanco.Image")));
-            this.btnCuentasBanco.Location = new System.Drawing.Point(3, 235);
-            this.btnCuentasBanco.Name = "btnCuentasBanco";
-            this.btnCuentasBanco.Size = new System.Drawing.Size(197, 69);
-            this.btnCuentasBanco.TabIndex = 1;
-            this.btnCuentasBanco.Text = "Cuentas \r\nde Banco";
-            this.btnCuentasBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCuentasBanco.ThemeName = "VisualStudio2012Light";
-            this.btnCuentasBanco.Click += new System.EventHandler(this.Button_Click);
             // 
             // picLogotipo
             // 
@@ -320,7 +301,7 @@
             this.picLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("picLogotipo.Image")));
             this.picLogotipo.Location = new System.Drawing.Point(3, 3);
             this.picLogotipo.Name = "picLogotipo";
-            this.picLogotipo.Size = new System.Drawing.Size(197, 149);
+            this.picLogotipo.Size = new System.Drawing.Size(197, 200);
             this.picLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLogotipo.TabIndex = 0;
             this.picLogotipo.TabStop = false;
@@ -330,7 +311,7 @@
             this.btnExaminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("btnExaminar.Image")));
-            this.btnExaminar.Location = new System.Drawing.Point(3, 158);
+            this.btnExaminar.Location = new System.Drawing.Point(3, 209);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(197, 68);
             this.btnExaminar.TabIndex = 0;
@@ -1490,7 +1471,6 @@
             this.gbDatosGenerales.ResumeLayout(false);
             this.tlpDatosGenerales.ResumeLayout(false);
             this.tlpDatosGenerales_Derecha.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnCuentasBanco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExaminar)).EndInit();
             this.tlpDatosGenerales_Izquierda.ResumeLayout(false);
@@ -1645,7 +1625,6 @@
         private Telerik.WinControls.UI.RadButton btnExaminar;
         private Telerik.WinControls.UI.RadButton btnImportarDatosFiscales;
         private Telerik.WinControls.UI.RadButton btnSalir;
-        private Telerik.WinControls.UI.RadButton btnCuentasBanco;
         private Telerik.WinControls.UI.RadButton btnHabilitarEdicion;
     }
 }
