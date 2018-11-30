@@ -239,11 +239,6 @@ namespace Viper.DesktopApp
 
                     //tab 27
                     case "btnImportarDatosFiscales":
-                        btnCuentasBanco.Focus();
-                        break;
-
-                    //tab 28
-                    case "btnCuentasBanco":
                         btnAceptar.Focus();
                         break;
 
@@ -339,7 +334,6 @@ namespace Viper.DesktopApp
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(this.btnAceptar, "Para poder guardar los datos de la compañia registrada y sus datos fiscales, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnCancelar, "Para cancelar la operacion y volver al formulario inicial, favor de dar clic a este boton");
-            toolTip1.SetToolTip(this.btnCuentasBanco, "Para añadir alguna cuenta de banco ligada a su negocio, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnImportarDatosFiscales, "Para copiar los datos proporcionado en la parte superior como fiscales, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnRegimenFiscal, "Para seleccionar el regimen fiscal correspondiente a su giro de negocio, favor de dar clic en este boton");
             toolTip1.SetToolTip(this.btnExaminar, "Para buscar el logotipo de su negocio almacenado en su pc, favor de dar clic en este boton");
@@ -841,7 +835,6 @@ namespace Viper.DesktopApp
                 this.btnImportarDatosFiscales.Enabled = true;
                 this.btnAceptar.Enabled = true;
                 this.btnCancelar.Enabled = true;
-                this.btnCuentasBanco.Enabled = false;
                 this.btnExaminar.Enabled = true;
                 this.btnRegimenFiscal.Enabled = true;
                 this.btnSalir.Enabled = false;
@@ -887,7 +880,6 @@ namespace Viper.DesktopApp
                 this.btnImportarDatosFiscales.Enabled = false;
                 this.btnAceptar.Enabled = false;
                 this.btnCancelar.Enabled = false;
-                this.btnCuentasBanco.Enabled = false;
                 this.btnExaminar.Enabled = false;
                 this.btnRegimenFiscal.Enabled = false;
                 this.btnSalir.Enabled = false;
