@@ -797,7 +797,6 @@ namespace Viper.DesktopApp
             if (typeForm == true)
             {
                 this.Giro_Comercial.Enabled = true;
-                this.Nombre_Empresa.Enabled = true;
                 this.Tipo_Inmueble.Enabled = true;
                 this.Tipo_Vialidad.Enabled = true;
                 this.Vialidad.Enabled = true;
@@ -811,7 +810,6 @@ namespace Viper.DesktopApp
                 this.Telefono.Enabled = true;
                 this.Celular.Enabled = true;
                 this.Nombre_Fiscal.Enabled = true;
-                this.RFC.Enabled = true;
                 this.CURP.Enabled = true;
                 Regimen_Fiscal.Enabled = true;
                 this.Tipo_Inmueble_Fiscal.SelectedIndex = 0;
@@ -919,7 +917,13 @@ namespace Viper.DesktopApp
             }
             else
             {
-                MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (message.Substring(0, 9).Equals("Los datos"))
+                    MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                    if(message.Substring(0, 9).Equals("The field"))
+                        MessageBox.Show(new Form { TopMost = true }, "Algunos Campo se Encuentran Vacios Favor de Verificar", "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else
+                        MessageBox.Show(new Form { TopMost = true }, message, "Sistema de Punto de Venta Viper-OwalTek Innovation Solutions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1023,14 +1027,20 @@ namespace Viper.DesktopApp
             else if (company.RFC.Length == 12)
                 rfc_homoclave = company.RFC.Substring(9, 3);
 
-            abrev_stateprovince = BusinessLogicLayer.DropDownListHelperBLL.GetAbrevStateProvince(address.StateProvinceId);
-            city = BusinessLogicLayer.DropDownListHelperBLL.GetCityName(address.CityId);
+            if(address.StateProvinceId > 0)
+                abrev_stateprovince = BusinessLogicLayer.DropDownListHelperBLL.GetAbrevStateProvince(address.StateProvinceId);
+            
+            if(address.CityId > 0)
+                city = BusinessLogicLayer.DropDownListHelperBLL.GetCityName(address.CityId);
 
             sucKey = sb.ToString();
 
-            //site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince + "-" + city + "-" + Colonia.Text.Trim().ToUpper() + "\\" + site.SiteName;
-            site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince;
-            site.ResponsibleName = "DEFAULT";
+            if (abrev_stateprovince != "" && city != "")
+            {
+                //site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince + "-" + city + "-" + Colonia.Text.Trim().ToUpper() + "\\" + site.SiteName;
+                site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince;
+                site.ResponsibleName = "DEFAULT";
+            }
 
             if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
                 site.PhoneNumber = null;
