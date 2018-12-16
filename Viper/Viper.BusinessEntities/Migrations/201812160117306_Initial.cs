@@ -3,7 +3,7 @@ namespace Viper.BusinessEntities.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -14,8 +14,10 @@ namespace Viper.BusinessEntities.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         RoadTypeId = c.Int(nullable: false),
                         AddressTypeId = c.Int(nullable: false),
-                        AddressLine1 = c.String(nullable: false, maxLength: 100),
-                        AddressLine2 = c.String(nullable: false, maxLength: 100),
+                        Street = c.String(nullable: false, maxLength: 20),
+                        No_Int = c.String(),
+                        No_Ext = c.String(nullable: false),
+                        Colony = c.String(nullable: false, maxLength: 40),
                         CountryRegionId = c.Int(nullable: false),
                         StateProvinceId = c.Int(nullable: false),
                         CityId = c.Int(nullable: false),
@@ -53,8 +55,10 @@ namespace Viper.BusinessEntities.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         RoadTypeId = c.Int(nullable: false),
                         AddressTypeId = c.Int(nullable: false),
-                        AddressLine1 = c.String(nullable: false, maxLength: 100),
-                        AddressLine2 = c.String(nullable: false, maxLength: 100),
+                        Street = c.String(nullable: false, maxLength: 20),
+                        No_Int = c.String(),
+                        No_Ext = c.String(nullable: false),
+                        Colony = c.String(nullable: false, maxLength: 40),
                         CountryRegionId = c.Int(nullable: false),
                         StateProvinceId = c.Int(nullable: false),
                         CityId = c.Int(nullable: false),
@@ -282,7 +286,7 @@ namespace Viper.BusinessEntities.Migrations
                         Photo = c.Binary(),
                         FingerPrint = c.Binary(),
                         StartDate = c.DateTime(nullable: false),
-                        EndDate = c.DateTime(nullable: false),
+                        EndDate = c.DateTime(),
                         IsActive = c.Boolean(nullable: false),
                         CreatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.String(),
@@ -505,7 +509,7 @@ namespace Viper.BusinessEntities.Migrations
                         SiteId = c.Int(nullable: false),
                         StantardCost = c.Decimal(nullable: false, precision: 18, scale: 2),
                         StartDate = c.DateTime(nullable: false),
-                        EndDate = c.DateTime(nullable: false),
+                        EndDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Product", t => t.ProductId)
@@ -522,7 +526,7 @@ namespace Viper.BusinessEntities.Migrations
                         SiteId = c.Int(nullable: false),
                         ListPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         StartDate = c.DateTime(nullable: false),
-                        EndDate = c.DateTime(nullable: false),
+                        EndDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Product", t => t.ProductId)

@@ -499,7 +499,7 @@ namespace Viper.DesktopApp
          * ---------------------------------------------------------
          */
 
-        #region Metodos
+                    #region Metodos
 
         private String extractValueOfString(String cadena, String stringInicial, String stringFinal)
         {
@@ -541,18 +541,12 @@ namespace Viper.DesktopApp
             this.Tipo_Inmueble.SelectedValue = address.AddressTypeId;
             this.Tipo_Vialidad.SelectedValue = address.RoadTypeId;
             this.Codigo_Postal.Text = address.PostalCode;
-            if (address.AddressLine1.Contains("NO. INT: "))
-            {
-                this.Vialidad.Text = extractValueOfString(address.AddressLine1, "CALLE: ", ", NO. EXT:");
-                this.No_Ext.Text = extractValueOfString(address.AddressLine1, "NO. EXT: ", ",");
-                this.No_Int.Text = extractValueOfString(address.AddressLine1, "NO. INT: ", ";");
-            }
-            else
-            {
-                this.Vialidad.Text = extractValueOfString(address.AddressLine1, "CALLE: ", ",");
-                this.No_Ext.Text = extractValueOfString(address.AddressLine1, "NO. EXT: ", ";");
-            }
-            this.Colonia.Text = extractValueOfString(address.AddressLine2, "COLONIA: ", ";");
+
+            this.Vialidad.Text = address.Street.ToString();
+            this.No_Ext.Text = address.No_Ext.ToString();
+            this.No_Int.Text = address.No_Int.ToString();
+            this.Colonia.Text = address.Colony.ToString();
+
             this.Entidad_Federativa.SelectedValue = address.StateProvinceId;
             this.Municipio.SelectedValue = address.CityId;
             this.eMail.Text = company.EmailAddress;
@@ -583,18 +577,12 @@ namespace Viper.DesktopApp
             this.Municipio_Fiscal.ValueMember = "Id";
 
             this.Codigo_Postal_Fiscal.Text = addressSAT.PostalCode;
-            if (addressSAT.AddressLine1.Contains("NO. INT: "))
-            {
-                this.Vialidad_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "CALLE: ", ", NO. EXT:");
-                this.No_Ext_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "NO. EXT: ", ",");
-                this.No_Int_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "NO. INT: ", ";");
-            }
-            else
-            {
-                this.Vialidad_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "CALLE: ", ",");
-                this.No_Ext_Fiscal.Text = extractValueOfString(addressSAT.AddressLine1, "NO. EXT: ", ";");
-            }
-            this.Colonia_Fiscal.Text = extractValueOfString(addressSAT.AddressLine2, "COLONIA: ", ";");
+
+            this.Vialidad_Fiscal.Text = addressSAT.Street.ToString();
+            this.No_Ext_Fiscal.Text = addressSAT.No_Ext.ToString();
+            this.No_Int_Fiscal.Text = addressSAT.No_Int.ToString();
+            this.Colonia_Fiscal.Text = addressSAT.Colony.ToString();
+
             this.Entidad_Federativa_Fiscal.SelectedValue = addressSAT.StateProvinceId;
             this.Municipio_Fiscal.SelectedValue = addressSAT.CityId;
 
@@ -690,10 +678,25 @@ namespace Viper.DesktopApp
             address.RoadTypeId = Convert.ToInt32(Tipo_Vialidad.SelectedValue);
             address.AddressTypeId = Convert.ToInt32(Tipo_Inmueble.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int.Text.Trim().ToString()))
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad.Text.Trim().ToString()))
+                    address.Street = Vialidad.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext.Text.Trim().ToString()))
+                    address.No_Ext = No_Ext.Text.Trim().ToString();
+
+                address.No_Int = No_Int.Text.Trim().ToString();
+            }
             else
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
-            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad.Text.Trim().ToString()))
+                    address.Street = Vialidad.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext.Text.Trim().ToString()))
+                    address.No_Ext = No_Ext.Text.Trim().ToString();
+            }
+
+            if(!string.IsNullOrEmpty(Colonia.Text.Trim().ToString()))
+                address.Colony = Colonia.Text.Trim().ToString();
+
             address.CountryRegionId = 1;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
@@ -885,7 +888,8 @@ namespace Viper.DesktopApp
         }
 
         private void registerCompanyInSystem()
-        {
+        
+{
             string message = String.Empty;
 
             recoveryInformationObjectsByUserInterface();
@@ -935,14 +939,34 @@ namespace Viper.DesktopApp
             address.RoadTypeId = Convert.ToInt32(Tipo_Vialidad.SelectedValue);
             address.AddressTypeId = Convert.ToInt32(Tipo_Inmueble.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int.Text.Trim().ToString()))
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad.Text.Trim().ToString()))
+                    address.Street = Vialidad.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext.Text.Trim().ToString()))
+                    address.No_Ext = No_Ext.Text.Trim().ToString();
+
+                address.No_Int = No_Int.Text.Trim().ToString();
+            }
             else
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
-            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad.Text.Trim().ToString()))
+                    address.Street = Vialidad.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext.Text.Trim().ToString()))
+                    address.No_Ext = No_Ext.Text.Trim().ToString();
+            }
+
+            if (!string.IsNullOrEmpty(Colonia.Text.Trim().ToString()))
+                address.Colony = Colonia.Text.Trim().ToString();
+
             address.CountryRegionId = 1;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);
-            address.PostalCode = Codigo_Postal.Text.Trim();
+
+            if (string.IsNullOrEmpty(Codigo_Postal.Text.Trim().ToString()) || Codigo_Postal.Text.Contains("_____"))
+                address.PostalCode = null;
+            else
+                address.PostalCode = Codigo_Postal.Text.Trim().ToString();
+
             address.CreatedDate = f;
             address.CreatedBy = "HECP";
             address.LastUpdatedDate = f;
@@ -954,14 +978,34 @@ namespace Viper.DesktopApp
             addressSAT.RoadTypeId = Convert.ToInt32(Tipo_Vialidad_Fiscal.SelectedValue);
             addressSAT.AddressTypeId = Convert.ToInt32(Tipo_Inmueble_Fiscal.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int_Fiscal.Text.Trim().ToString()))
-                addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim() + ", NO. INT:" + No_Int_Fiscal.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad_Fiscal.Text.Trim().ToString()))
+                    addressSAT.Street = Vialidad_Fiscal.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext_Fiscal.Text.Trim().ToString()))
+                    addressSAT.No_Ext = No_Ext_Fiscal.Text.Trim().ToString();
+
+                addressSAT.No_Int = No_Int_Fiscal.Text.Trim().ToString();
+            }
             else
-                addressSAT.AddressLine1 = "CALLE: " + Vialidad_Fiscal.Text.Trim() + ", NO. EXT: " + No_Ext_Fiscal.Text.Trim() + ";";
-            addressSAT.AddressLine2 = "COLONIA: " + Colonia_Fiscal.Text.Trim() + ";";
+            {
+                if(!string.IsNullOrEmpty(Vialidad_Fiscal.Text.Trim().ToString()))
+                    addressSAT.Street = Vialidad_Fiscal.Text.Trim().ToString();
+                if(!string.IsNullOrEmpty(No_Ext_Fiscal.Text.Trim().ToString()))
+                    addressSAT.No_Ext = No_Ext_Fiscal.Text.Trim().ToString();
+            }
+
+            if(!string.IsNullOrEmpty(Colonia_Fiscal.Text.Trim().ToString()))
+                addressSAT.Colony = Colonia_Fiscal.Text.Trim().ToString();
+
             addressSAT.CountryRegionId = 1;
             addressSAT.StateProvinceId = Convert.ToInt32(Entidad_Federativa_Fiscal.SelectedValue);
             addressSAT.CityId = Convert.ToInt32(Municipio_Fiscal.SelectedValue);
-            addressSAT.PostalCode = Codigo_Postal_Fiscal.Text.Trim();
+
+            if (string.IsNullOrEmpty(Codigo_Postal_Fiscal.Text.Trim().ToString()) || Codigo_Postal_Fiscal.Text.Contains("_____"))
+                addressSAT.PostalCode = null;
+            else
+                addressSAT.PostalCode = Codigo_Postal_Fiscal.Text.Trim().ToString();
+
             addressSAT.CreatedDate = f;
             addressSAT.CreatedBy = "HECP";
             addressSAT.LastUpdatedDate = f;
@@ -971,7 +1015,9 @@ namespace Viper.DesktopApp
                 company = new Company();
 
             company.BusinessActivity = Giro_Comercial.SelectedItem.ToString();
-            company.CompanyName = Nombre_Empresa.Text.Trim().ToUpper();
+            if (!string.IsNullOrEmpty(Nombre_Empresa.Text.Trim().ToString()))
+                company.CompanyName = Nombre_Empresa.Text.Trim().ToUpper();
+
             company.CompanyKey = BusinessLogicLayer.CompanyBLL.obtainCompanyKeyGeneratedAutomatic();
 
             if (string.IsNullOrEmpty(Telefono.Text.Trim().ToString()) || Telefono.Text.Contains("(__)___-_____"))
@@ -984,10 +1030,17 @@ namespace Viper.DesktopApp
             else
                 company.CellphoneNumber = Celular.Value.ToString().Trim();
 
-            company.EmailAddress = eMail.Text.Trim();
-            company.FiscalName = Nombre_Fiscal.Text.Trim().ToUpper();
-            company.RFC = RFC.Text.Trim().ToUpper();
-            company.CURP = CURP.Text.Trim().ToUpper();
+            if(!string.IsNullOrEmpty(eMail.Text.Trim().ToString()))
+                company.EmailAddress = eMail.Text.Trim();
+
+            if(!string.IsNullOrEmpty(Nombre_Fiscal.Text.Trim().ToString()))
+                company.FiscalName = Nombre_Fiscal.Text.Trim().ToUpper();
+
+            if(!string.IsNullOrEmpty(RFC.Text.Trim().ToString()))
+                company.RFC = RFC.Text.Trim().ToUpper();
+
+            if(!string.IsNullOrEmpty(CURP.Text.Trim().ToString()))
+                company.CURP = CURP.Text.Trim().ToUpper();
 
             if (!string.IsNullOrEmpty(Regimen_Fiscal.Text.Trim().ToString()))
                 company.RegimenFiscalId = BusinessLogicLayer.CompanyBLL.procGetRegimenFiscalIdByName(Regimen_Fiscal.Text.Trim().ToString());
@@ -1022,10 +1075,13 @@ namespace Viper.DesktopApp
                 }
             }
 
-            if (company.RFC.Length == 13)
-                rfc_homoclave = company.RFC.Substring(10, 3);
-            else if (company.RFC.Length == 12)
-                rfc_homoclave = company.RFC.Substring(9, 3);
+            if (company.RFC != null)
+            {
+                if (company.RFC.Length == 13)
+                    rfc_homoclave = company.RFC.Substring(10, 3);
+                else if (company.RFC.Length == 12)
+                    rfc_homoclave = company.RFC.Substring(9, 3);
+            }
 
             if(address.StateProvinceId > 0)
                 abrev_stateprovince = BusinessLogicLayer.DropDownListHelperBLL.GetAbrevStateProvince(address.StateProvinceId);
@@ -1035,7 +1091,7 @@ namespace Viper.DesktopApp
 
             sucKey = sb.ToString();
 
-            if (abrev_stateprovince != "" && city != "")
+            if (!string.IsNullOrEmpty(abrev_stateprovince) && !string.IsNullOrEmpty(city))
             {
                 //site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince + "-" + city + "-" + Colonia.Text.Trim().ToUpper() + "\\" + site.SiteName;
                 site.UniquePhysicalID = "OWTK-" + sucKey + rfc_homoclave + abrev_stateprovince;

@@ -458,10 +458,25 @@ namespace Viper.DesktopApp
             address.RoadTypeId = Convert.ToInt32(Tipo_Vialidad.SelectedValue);
             address.AddressTypeId = Convert.ToInt32(Tipo_Inmueble.SelectedValue);
             if (!string.IsNullOrEmpty(No_Int.Text.Trim().ToString()))
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ", NO. INT:" + No_Int.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad.Text.Trim().ToString()))
+                    address.Street = Vialidad.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext.Text.Trim().ToString()))
+                    address.No_Ext = No_Ext.Text.Trim().ToString();
+
+                address.No_Int = No_Int.Text.Trim().ToString();
+            }
             else
-                address.AddressLine1 = "CALLE: " + Vialidad.Text.Trim() + ", NO. EXT: " + No_Ext.Text.Trim() + ";";
-            address.AddressLine2 = "COLONIA: " + Colonia.Text.Trim() + ";";
+            {
+                if (!string.IsNullOrEmpty(Vialidad.Text.Trim().ToString()))
+                    address.Street = Vialidad.Text.Trim().ToString();
+                if (!string.IsNullOrEmpty(No_Ext.Text.Trim().ToString()))
+                    address.No_Ext = No_Ext.Text.Trim().ToString();
+            }
+
+            if(!string.IsNullOrEmpty(Colonia.Text.Trim().ToString()))
+                address.Colony = Colonia.Text.Trim().ToString();
+
             address.CountryRegionId = 1;
             address.StateProvinceId = Convert.ToInt32(Entidad_Federativa.SelectedValue);
             address.CityId = Convert.ToInt32(Municipio.SelectedValue);

@@ -23,15 +23,22 @@ namespace Viper.BusinessEntities
         public int AddressTypeId { get; set; }
         public AddressType AddressType { get; set; }
 
-        [Required(ErrorMessage = "The field AddressLine1 is required")]
-        [StringLength(100, ErrorMessage = "The field AddressLine1 must have max length of 100 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field AddressLine1 must be a string")]
-        public String AddressLine1 { get; set; }
+        [Required(ErrorMessage = "The field Street is required")]
+        [StringLength(20, ErrorMessage = "The field Street must have max length of 20 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field Street must be a string")]
+        public string Street { get; set; }
 
-        [Required(ErrorMessage = "The field AddressLine2 is required")]
-        [StringLength(100, ErrorMessage = "The field AddressLine2 must have max length of 100 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field AddressLine2 must be a string")]
-        public String AddressLine2 { get; set; }
+        [Range(0, int.MaxValue, ErrorMessage = "The field InteriorNumber must be a number")]
+        public string No_Int { get; set; }
+
+        [Required(ErrorMessage = "The field ExteriorNumber is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field ExteriorNumber must be a number")]
+        public string No_Ext { get; set; }
+
+        [Required(ErrorMessage = "The field Colony is required")]
+        [StringLength(40, ErrorMessage = "The field Colony must have max length of 40 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field Colony must be a string")]
+        public string Colony { get; set; }
 
         [ForeignKey("CountryRegion")]
         [Required(ErrorMessage = "The field CountryRegionId is required")]

@@ -68,17 +68,9 @@
     <Compile Include="Gender.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="MaritalStatus.cs" />
-    <Compile Include="Migrations\201811260633206_initial.cs" />
-    <Compile Include="Migrations\201811260633206_initial.Designer.cs">
-      <DependentUpon>201811260633206_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811260642518_version-1.cs" />
-    <Compile Include="Migrations\201811260642518_version-1.Designer.cs">
-      <DependentUpon>201811260642518_version-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811261816537_version-2.cs" />
-    <Compile Include="Migrations\201811261816537_version-2.Designer.cs">
-      <DependentUpon>201811261816537_version-2.cs</DependentUpon>
+    <Compile Include="Migrations\201812160117306_Initial.cs" />
+    <Compile Include="Migrations\201812160117306_Initial.Designer.cs">
+      <DependentUpon>201812160117306_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
@@ -115,14 +107,8 @@
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811260633206_initial.resx">
-      <DependentUpon>201811260633206_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811260642518_version-1.resx">
-      <DependentUpon>201811260642518_version-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811261816537_version-2.resx">
-      <DependentUpon>201811261816537_version-2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812160117306_Initial.resx">
+      <DependentUpon>201812160117306_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
