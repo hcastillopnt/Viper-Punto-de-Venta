@@ -33,8 +33,6 @@ namespace Viper.DataAccessLayer
         /// <returns>DataTable</returns>
         public static DataTable procAuthorizeByLogin(string usr, string pwd)
         {
-            bool isExistente = false;
-
             //Se crea el DataTable
             DataTable dt = new DataTable();
 
@@ -54,85 +52,82 @@ namespace Viper.DataAccessLayer
                                 new DataColumn("AccessFailed",typeof(int))
                             });
 
-            isExistente = Database.Exists(dbCtx.Database.Connection);
+            //Variable para almacenar la validacion de la base de datos existente
+            bool isDatabaseExists = Database.Exists(dbCtx.Database.Connection);
 
-            if (isExistente)
+            //Si la base de datos existe se procedera a crear la sentencia sql/linq para obtener la informacion solicitada
+            if (isDatabaseExists)
             {
-                var result1 = (from u in dbCtx.Users
-                               join rl in dbCtx.Roles on u.RoleId equals rl.Id
-                               where
-                                u.LoginID == usr && u.PasswordEncrypted == pwd
-                               select new
-                               {
-                                   u.LoginID,
-                                   u.PasswordEncrypted,
-                                   rl.Name
-                               }).ToList();
+                //Se crea una sentencia sql/linq para recuperar el perfil del usuario el cual contiene (nombre de usuario, contraseña encriptada 
+                //y tipo de perfil) relacionado al usuario logueado
+                var userProfile = dbCtx.Users    // your starting point - table in the "from" statement
+                       .Join(dbCtx.Roles, // the source table of the inner join
+                          u => u.RoleId,        // Select the primary key (the first part of the "on" clause in an sql "join" statement)
+                          r => r.Id,   // Select the foreign key (the second part of the "on" clause)
+                          (u, r) => new {
+                              u.LoginID,
+                              u.PasswordEncrypted,
+                              r.Name,
+                              u.IsWelcome,
+                              u.AccessFailedCount,
+                              u.IsActive
+                          }) // selection
+                       .Where(u => u.LoginID == usr && u.PasswordEncrypted == pwd && u.IsActive == true)
+                       .ToList();
 
-                var result2 = (from edh in dbCtx.EmployeesDepartmentHistory
-                               join d in dbCtx.Departments on edh.DepartmentId equals d.Id
-                               join e in dbCtx.Employees on edh.EmployeeId equals e.Id
-                               join u in dbCtx.Users on e.UserId equals u.Id
-                               join jt in dbCtx.JobsTitle on edh.JobTitleId equals jt.Id
-                               join s in dbCtx.Shifts on edh.ShiftId equals s.Id
-                               join st in dbCtx.Sites on edh.SiteId equals st.Id
-                               join c in dbCtx.Companies on st.CompanyId equals c.Id
-                               join r in dbCtx.Roles on u.RoleId equals r.Id
-                               where
-                                u.LoginID == usr && u.PasswordEncrypted == pwd
-                               select new
-                               {
-                                   e.EmployeeNumber,
-                                   e.FullName,
-                                   Department = d.Name,
-                                   JobTitle = jt.Name,
-                                   s.StartTime,
-                                   s.EndTime,
-                                   Subsidiary = st.SiteName,
-                                   c.CompanyName,
-                                   c.CompanyKey,
-                                   Role = r.Name,
-                                   u.IsWelcome,
-                                   u.AccessFailedCount
-                               }).ToList();
-
-                if (result1.Count > 0)
+                //Si la consulta a la base de datos, donde se recupera el perfil del usuario existe, se procedera a obtenerla informacion de este mismo
+                if (userProfile.Count > 0)
                 {
-                    var Role = result1.FirstOrDefault().Name;
+                    //Se recupera el tipo de perfil al que pertenece el usuario logueado
+                    var userRole = userProfile.FirstOrDefault().Name;
 
-                    switch (Role)
+                    switch (userRole)
                     {
                         //DUEÑO DE NEGOCIO CON PRIVILEGIOS DE ADMINISTRADOR DEL SISTEMA
                         case "ADMINISTRADOR":
 
-                            //Recuperar el nombre de la compañia donde se registro el negocio
-                            var CompanyData = dbCtx.Companies    // your starting point - table in the "from" statement
-                                   .Join(dbCtx.Users, // the source table of the inner join
-                                      c => c.UserId,        // Select the primary key (the first part of the "on" clause in an sql "join" statement)
-                                      u => u.Id,   // Select the foreign key (the second part of the "on" clause)
-                                      (c, u) => new { c.CompanyName, c.CompanyKey, u.LoginID, u.PasswordEncrypted }) // selection
-                                   .Where(a => a.LoginID == usr && a.PasswordEncrypted == pwd)
-                                   .ToList();
+                            //Se recupera informacion importante para loguearse como administrador del sistema, al que pertenece el usuario logueado
+                            var adminLogin = dbCtx.Companies
+                                .Join(dbCtx.Users,
+                                      c => c.UserId,
+                                      u => u.Id,
+                                      (c, u) => new { c, u })
+                                .Join(dbCtx.Roles,
+                                      ur => ur.u.RoleId,
+                                      rl => rl.Id,
+                                      (ur, rl) => new { ur, rl })
+                                .Select(x => new
+                                {
+                                    x.ur.c.CompanyName,
+                                    x.ur.c.CompanyKey,
+                                    x.ur.u.LoginID,
+                                    x.ur.u.PasswordEncrypted,
+                                    x.ur.u.IsWelcome,
+                                    x.ur.u.AccessFailedCount,
+                                    x.rl.Name
+                                    // other assignments
+                                }) // selection
+                                .Where(x => x.LoginID == usr && x.PasswordEncrypted == pwd)
+                                .ToList();
 
-                            //Guardar los datos recuperados en una fila del DataTable
-                            //Crear una fila nueva
+                            //Crear una fila nueva en el DataTable
                             var rowAdmin = dt.NewRow();
 
                             //Cargar los datos de la fila
-                            rowAdmin["EmployeeIDNumber"] = "XXXXXXXXXXXXX";
-                            rowAdmin["FullName"] = "N/A";
+                            rowAdmin["EmployeeIDNumber"] = "N/A";
+                            rowAdmin["FullName"] = adminLogin.FirstOrDefault().CompanyName;
                             rowAdmin["Department"] = "EJECUTIVO";
                             rowAdmin["JobTitle"] = "DUEÑO DE NEGOCIO";
-                            rowAdmin["StartTime"] = Convert.ToDateTime("07:00:00");
-                            rowAdmin["EndTime"] = Convert.ToDateTime("23:00:00");
+                            rowAdmin["StartTime"] = Convert.ToDateTime("08:00:00");
+                            rowAdmin["EndTime"] = Convert.ToDateTime("22:00:00");
                             rowAdmin["Subsidiary"] = "N/A";
-                            rowAdmin["CompanyName"] = CompanyData.FirstOrDefault().CompanyName;
-                            rowAdmin["CompanyKey"] = CompanyData.FirstOrDefault().CompanyKey;
-                            rowAdmin["Role"] = "ADMINISTRADOR";
-                            rowAdmin["IsWelcome"] = true;
-                            rowAdmin["AccessFailed"] = 0;
+                            rowAdmin["CompanyName"] = adminLogin.FirstOrDefault().CompanyName;
+                            rowAdmin["CompanyKey"] = adminLogin.FirstOrDefault().CompanyKey;
+                            rowAdmin["Role"] = adminLogin.FirstOrDefault().Name;
+                            rowAdmin["IsWelcome"] = adminLogin.FirstOrDefault().IsWelcome;
+                            rowAdmin["AccessFailed"] = adminLogin.FirstOrDefault().AccessFailedCount;
 
-                            //Añadir fila al DataTable
+                            //Añadir la fila precargada al DataTable
                             dt.Rows.Add(rowAdmin);
 
                             break;
@@ -140,9 +135,39 @@ namespace Viper.DataAccessLayer
                         //EMPLEADO CON PRIVILEGIOS BASICOS PARA ATENDER LA FARMACIA
                         case "BASICO":
 
-                            if (result2.Count > 0)
+                            //Se crea una sentencia sql/linq para recuperar la informacion relacionada al usuario logueado
+                            var userData = (from edh in dbCtx.EmployeesDepartmentHistory
+                                            join d in dbCtx.Departments on edh.DepartmentId equals d.Id
+                                            join e in dbCtx.Employees on edh.EmployeeId equals e.Id
+                                            join u in dbCtx.Users on e.UserId equals u.Id
+                                            join jt in dbCtx.JobsTitle on edh.JobTitleId equals jt.Id
+                                            join s in dbCtx.Shifts on edh.ShiftId equals s.Id
+                                            join st in dbCtx.Sites on edh.SiteId equals st.Id
+                                            join c in dbCtx.Companies on st.CompanyId equals c.Id
+                                            join r in dbCtx.Roles on u.RoleId equals r.Id
+                                            where
+                                             u.LoginID == usr && u.PasswordEncrypted == pwd
+                                            select new
+                                            {
+                                                e.EmployeeNumber,
+                                                e.FullName,
+                                                Department = d.Name,
+                                                JobTitle = jt.Name,
+                                                s.StartTime,
+                                                s.EndTime,
+                                                Subsidiary = st.SiteName,
+                                                c.CompanyName,
+                                                c.CompanyKey,
+                                                Role = r.Name,
+                                                u.IsWelcome,
+                                                u.AccessFailedCount
+                                            }).ToList();
+
+                            //Si la consulta a la base de datos, donde se recupera la informacion del usuario existe, se procedera a cargar 
+                            //la informacion en la estructura DataTable
+                            if (userData.Count > 0)
                             {
-                                result2.ToList().ForEach(x =>
+                                userData.ToList().ForEach(x =>
                                 {
 
                                     //Guardar los datos recuperados en una fila del DataTable
@@ -163,7 +188,7 @@ namespace Viper.DataAccessLayer
                                     rowBasic["IsWelcome"] = x.IsWelcome;
                                     rowBasic["AccessFailed"] = x.AccessFailedCount;
 
-                                    //Añadir fila al DataTable
+                                    //Añadir la fila precargada al DataTable
                                     dt.Rows.Add(rowBasic);
                                 });
                             }
@@ -173,6 +198,7 @@ namespace Viper.DataAccessLayer
                 }
             }
 
+            //Regresa la estructura DataTable, precargada con la informacion solicitada segun el perfil de usuario con el que se logueo en el sistema
             return dt;
         }
 
